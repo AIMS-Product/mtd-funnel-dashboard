@@ -11,7 +11,7 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 3438,
+      "leads_created": 3448,
       "booked": 483,
       "showed": 254,
       "qualified": 213,
@@ -19,7 +19,7 @@
       "revenue": 347521.0
     },
     "EXTERNAL": {
-      "leads_created": 106,
+      "leads_created": 110,
       "booked": 96,
       "showed": 66,
       "qualified": 65,
@@ -27,7 +27,7 @@
       "revenue": 41682.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 224,
+      "leads_created": 210,
       "booked": 16,
       "showed": 7,
       "qualified": 6,
@@ -36,10 +36,22 @@
     }
   },
   "funnels": {
+    "YouTube": {
+      "leads_created": 67,
+      "booked": 54,
+      "book_pct": 80.6,
+      "showed": 43,
+      "show_pct": 79.6,
+      "qualified": 33,
+      "qual_pct": 61.1,
+      "closed": 12,
+      "cw_pct": 22.2,
+      "revenue": 93867.0
+    },
     "Instagram": {
-      "leads_created": 95,
+      "leads_created": 99,
       "booked": 84,
-      "book_pct": 88.4,
+      "book_pct": 84.8,
       "showed": 56,
       "show_pct": 66.7,
       "qualified": 56,
@@ -73,9 +85,9 @@
       "revenue": 81370.0
     },
     "Website": {
-      "leads_created": 90,
+      "leads_created": 100,
       "booked": 93,
-      "book_pct": 103.3,
+      "book_pct": 93.0,
       "showed": 54,
       "show_pct": 58.1,
       "qualified": 49,
@@ -85,9 +97,9 @@
       "revenue": 82158.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 224,
+      "leads_created": 210,
       "booked": 16,
-      "book_pct": 7.1,
+      "book_pct": 7.6,
       "showed": 7,
       "show_pct": 43.8,
       "qualified": 6,
@@ -95,18 +107,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "YouTube": {
-      "leads_created": 67,
-      "booked": 54,
-      "book_pct": 80.6,
-      "showed": 43,
-      "show_pct": 79.6,
-      "qualified": 33,
-      "qual_pct": 61.1,
-      "closed": 12,
-      "cw_pct": 22.2,
-      "revenue": 93867.0
     },
     "Linkedin": {
       "leads_created": 6,
