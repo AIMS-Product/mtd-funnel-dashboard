@@ -4,7 +4,7 @@
   "grand": {
     "leads_created": 3044,
     "booked": 599,
-    "showed": 326,
+    "showed": 327,
     "qualified": 284,
     "closed": 53,
     "revenue": 388015.0
@@ -13,7 +13,7 @@
     "IN-HOUSE": {
       "leads_created": 2718,
       "booked": 484,
-      "showed": 253,
+      "showed": 254,
       "qualified": 212,
       "closed": 47,
       "revenue": 346333.0
@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "Website": {
+      "leads_created": 90,
+      "booked": 94,
+      "book_pct": 104.4,
+      "showed": 55,
+      "show_pct": 58.5,
+      "qualified": 49,
+      "qual_pct": 52.1,
+      "closed": 10,
+      "cw_pct": 10.6,
+      "revenue": 80970.0
+    },
     "Internal Webinar": {
       "leads_created": 2021,
       "booked": 59,
@@ -52,25 +64,25 @@
       "leads_created": 68,
       "booked": 54,
       "book_pct": 79.4,
-      "showed": 42,
-      "show_pct": 77.8,
+      "showed": 43,
+      "show_pct": 79.6,
       "qualified": 32,
       "qual_pct": 59.3,
       "closed": 12,
       "cw_pct": 22.2,
       "revenue": 93867.0
     },
-    "Website": {
-      "leads_created": 90,
-      "booked": 94,
-      "book_pct": 104.4,
-      "showed": 55,
-      "show_pct": 58.5,
-      "qualified": 49,
-      "qual_pct": 52.1,
-      "closed": 10,
-      "cw_pct": 10.6,
-      "revenue": 80970.0
+    "Instagram": {
+      "leads_created": 93,
+      "booked": 84,
+      "book_pct": 90.3,
+      "showed": 54,
+      "show_pct": 64.3,
+      "qualified": 54,
+      "qual_pct": 64.3,
+      "closed": 4,
+      "cw_pct": 4.8,
+      "revenue": 29988.0
     },
     "Reactivation Scrapers": {
       "leads_created": 141,
@@ -95,18 +107,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Instagram": {
-      "leads_created": 93,
-      "booked": 84,
-      "book_pct": 90.3,
-      "showed": 54,
-      "show_pct": 64.3,
-      "qualified": 54,
-      "qual_pct": 64.3,
-      "closed": 4,
-      "cw_pct": 4.8,
-      "revenue": 29988.0
     },
     "Reactivation Email": {
       "leads_created": 0,
