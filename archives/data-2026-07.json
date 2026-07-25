@@ -2,10 +2,10 @@
   "month_key": "2026-07",
   "month_label": "July 2026",
   "grand": {
-    "leads_created": 3803,
+    "leads_created": 3805,
     "booked": 607,
-    "showed": 339,
-    "qualified": 294,
+    "showed": 340,
+    "qualified": 295,
     "closed": 61,
     "revenue": 426966.0
   },
@@ -13,8 +13,8 @@
     "IN-HOUSE": {
       "leads_created": 3465,
       "booked": 491,
-      "showed": 262,
-      "qualified": 218,
+      "showed": 263,
+      "qualified": 219,
       "closed": 52,
       "revenue": 361393.0
     },
@@ -27,7 +27,7 @@
       "revenue": 65573.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 212,
+      "leads_created": 214,
       "booked": 16,
       "showed": 7,
       "qualified": 6,
@@ -36,18 +36,6 @@
     }
   },
   "funnels": {
-    "Website": {
-      "leads_created": 100,
-      "booked": 94,
-      "book_pct": 94.0,
-      "showed": 54,
-      "show_pct": 57.4,
-      "qualified": 50,
-      "qual_pct": 53.2,
-      "closed": 12,
-      "cw_pct": 12.8,
-      "revenue": 88155.0
-    },
     "Reactivation Scrapers": {
       "leads_created": 146,
       "booked": 207,
@@ -72,6 +60,30 @@
       "cw_pct": 12.7,
       "revenue": 70047.0
     },
+    "Website": {
+      "leads_created": 100,
+      "booked": 94,
+      "book_pct": 94.0,
+      "showed": 55,
+      "show_pct": 58.5,
+      "qualified": 51,
+      "qual_pct": 54.3,
+      "closed": 12,
+      "cw_pct": 12.8,
+      "revenue": 88155.0
+    },
+    "YouTube": {
+      "leads_created": 73,
+      "booked": 54,
+      "book_pct": 74.0,
+      "showed": 45,
+      "show_pct": 83.3,
+      "qualified": 34,
+      "qual_pct": 63.0,
+      "closed": 12,
+      "cw_pct": 22.2,
+      "revenue": 93867.0
+    },
     "Instagram": {
       "leads_created": 111,
       "booked": 85,
@@ -95,18 +107,6 @@
       "closed": 1,
       "cw_pct": 1.9,
       "revenue": 1188.0
-    },
-    "YouTube": {
-      "leads_created": 73,
-      "booked": 54,
-      "book_pct": 74.0,
-      "showed": 45,
-      "show_pct": 83.3,
-      "qualified": 34,
-      "qual_pct": 63.0,
-      "closed": 12,
-      "cw_pct": 22.2,
-      "revenue": 93867.0
     },
     "Reactivation Email": {
       "leads_created": 0,
@@ -169,7 +169,7 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 212,
+      "leads_created": 214,
       "booked": 16,
       "book_pct": 7.5,
       "showed": 7,
