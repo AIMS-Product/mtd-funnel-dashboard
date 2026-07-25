@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "Website": {
+      "leads_created": 100,
+      "booked": 94,
+      "book_pct": 94.0,
+      "showed": 54,
+      "show_pct": 57.4,
+      "qualified": 50,
+      "qual_pct": 53.2,
+      "closed": 12,
+      "cw_pct": 12.8,
+      "revenue": 88155.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 146,
       "booked": 207,
@@ -71,18 +83,6 @@
       "closed": 7,
       "cw_pct": 8.2,
       "revenue": 53879.0
-    },
-    "Website": {
-      "leads_created": 100,
-      "booked": 94,
-      "book_pct": 94.0,
-      "showed": 54,
-      "show_pct": 57.4,
-      "qualified": 50,
-      "qual_pct": 53.2,
-      "closed": 12,
-      "cw_pct": 12.8,
-      "revenue": 88155.0
     },
     "Meta Ads": {
       "leads_created": 383,
