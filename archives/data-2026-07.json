@@ -2,7 +2,7 @@
   "month_key": "2026-07",
   "month_label": "July 2026",
   "grand": {
-    "leads_created": 3829,
+    "leads_created": 3830,
     "booked": 621,
     "showed": 349,
     "qualified": 301,
@@ -27,7 +27,7 @@
       "revenue": 65573.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 221,
+      "leads_created": 222,
       "booked": 21,
       "showed": 8,
       "qualified": 7,
@@ -36,6 +36,30 @@
     }
   },
   "funnels": {
+    "Unknown (Needs Review)": {
+      "leads_created": 222,
+      "booked": 21,
+      "book_pct": 9.5,
+      "showed": 8,
+      "show_pct": 38.1,
+      "qualified": 7,
+      "qual_pct": 33.3,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Sales Reactivation": {
+      "leads_created": 1,
+      "booked": 4,
+      "book_pct": 400.0,
+      "showed": 4,
+      "show_pct": 100.0,
+      "qualified": 4,
+      "qual_pct": 100.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Instagram": {
       "leads_created": 115,
       "booked": 87,
@@ -71,30 +95,6 @@
       "closed": 12,
       "cw_pct": 12.4,
       "revenue": 88155.0
-    },
-    "Unknown (Needs Review)": {
-      "leads_created": 221,
-      "booked": 21,
-      "book_pct": 9.5,
-      "showed": 8,
-      "show_pct": 38.1,
-      "qualified": 7,
-      "qual_pct": 33.3,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Sales Reactivation": {
-      "leads_created": 1,
-      "booked": 4,
-      "book_pct": 400.0,
-      "showed": 4,
-      "show_pct": 100.0,
-      "qualified": 4,
-      "qual_pct": 100.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "Reactivation Scrapers": {
       "leads_created": 146,
