@@ -4,8 +4,8 @@
   "grand": {
     "leads_created": 3868,
     "booked": 659,
-    "showed": 357,
-    "qualified": 307,
+    "showed": 358,
+    "qualified": 308,
     "closed": 67,
     "revenue": 484848.0
   },
@@ -13,8 +13,8 @@
     "IN-HOUSE": {
       "leads_created": 3499,
       "booked": 521,
-      "showed": 272,
-      "qualified": 226,
+      "showed": 273,
+      "qualified": 227,
       "closed": 58,
       "revenue": 419275.0
     },
@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "Instagram": {
+      "leads_created": 121,
+      "booked": 100,
+      "book_pct": 82.6,
+      "showed": 61,
+      "show_pct": 61.0,
+      "qualified": 61,
+      "qual_pct": 61.0,
+      "closed": 7,
+      "cw_pct": 7.0,
+      "revenue": 53879.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 148,
       "booked": 216,
@@ -47,6 +59,18 @@
       "closed": 18,
       "cw_pct": 8.3,
       "revenue": 101239.0
+    },
+    "YouTube": {
+      "leads_created": 77,
+      "booked": 59,
+      "book_pct": 76.6,
+      "showed": 49,
+      "show_pct": 83.1,
+      "qualified": 38,
+      "qual_pct": 64.4,
+      "closed": 14,
+      "cw_pct": 23.7,
+      "revenue": 115761.0
     },
     "Website": {
       "leads_created": 100,
@@ -61,7 +85,7 @@
       "revenue": 112149.0
     },
     "Internal Webinar": {
-      "leads_created": 2743,
+      "leads_created": 2742,
       "booked": 66,
       "book_pct": 2.4,
       "showed": 29,
@@ -71,30 +95,6 @@
       "closed": 8,
       "cw_pct": 12.1,
       "revenue": 70047.0
-    },
-    "Instagram": {
-      "leads_created": 121,
-      "booked": 100,
-      "book_pct": 82.6,
-      "showed": 61,
-      "show_pct": 61.0,
-      "qualified": 61,
-      "qual_pct": 61.0,
-      "closed": 7,
-      "cw_pct": 7.0,
-      "revenue": 53879.0
-    },
-    "YouTube": {
-      "leads_created": 77,
-      "booked": 59,
-      "book_pct": 76.6,
-      "showed": 48,
-      "show_pct": 81.4,
-      "qualified": 37,
-      "qual_pct": 62.7,
-      "closed": 14,
-      "cw_pct": 23.7,
-      "revenue": 115761.0
     },
     "Anthony X": {
       "leads_created": 3,
@@ -133,7 +133,7 @@
       "revenue": 0.0
     },
     "Meta Ads": {
-      "leads_created": 411,
+      "leads_created": 412,
       "booked": 56,
       "book_pct": 13.6,
       "showed": 22,
