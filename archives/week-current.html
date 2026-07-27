@@ -391,7 +391,7 @@
       <option value="/archives/week-current.html" selected>Jul 27–27 ▶</option></select></div>
     </div>
     <span class="snapshot-label"><span class="archive-badge">Week View</span></span>
-    July 27, 2026 at 04:38 PM PT<br>
+    July 27, 2026 at 04:52 PM PT<br>
     Source · Close CRM
   </div>
 </div>
@@ -468,8 +468,8 @@
   </div>
   <div class="kpi" style="--kpi-accent:#d97706; --kpi-color:#d97706;">
     <div class="label">Closed Won</div>
-    <div class="value">1</div>
-    <div class="kpi-sub">2.6% booked→close · 6.7% qual→close</div>
+    <div class="value">2</div>
+    <div class="kpi-sub">5.3% booked→close · 13.3% qual→close</div>
     <div class="kpi-split">
       <div class="kpi-split-item">
         <div class="split-label">External</div>
@@ -478,15 +478,15 @@
       </div>
       <div class="kpi-split-item">
         <div class="split-label">In-House</div>
-        <div class="split-value">1</div>
-        <div class="split-rate">4.2% b→c</div>
+        <div class="split-value">2</div>
+        <div class="split-rate">8.3% b→c</div>
       </div>
     </div>
   </div>
   <div class="kpi" style="--kpi-accent:#0e9f6e; --kpi-color:#0e9f6e;">
     <div class="label">Closed Revenue</div>
     <div class="value">$14,997</div>
-    <div class="kpi-sub">$14,997 avg deal</div>
+    <div class="kpi-sub">$7,498 avg deal</div>
     <div class="kpi-split">
       <div class="kpi-split-item">
         <div class="split-label">External</div>
@@ -496,7 +496,7 @@
       <div class="kpi-split-item">
         <div class="split-label">In-House</div>
         <div class="split-value">$14,997</div>
-        <div class="split-rate">$14,997 avg</div>
+        <div class="split-rate">$7,498 avg</div>
       </div>
     </div>
   </div>
@@ -732,6 +732,56 @@
       <td class="col-num">—</td>
     </tr>
 
+    <tr class="funnel-row" data-section="in_house" onclick="toggleUTM('wwws')" data-fid="wwws">
+      <td class="col-name">
+        <span class="chevron" id="chev-wwws">›</span>WWWS
+      </td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace pace-muted">—</td>
+      <td class="col-goal">0% (1)</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pct ">—</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('wwws')" title="Click to see package breakdown">$0 <span class="pkg-chevron" id="pkgchev-wwws">›</span></td>
+      <td class="col-num">$0</td>
+    </tr>
+
+    <tr class="pkg-row" data-parent="wwws" style="display:none">
+      <td class="col-name col-pkg">↳ Unknown</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct"></td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">$0</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="wwws">
+      <td class="col-name col-utm">↳ Unattributed</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pct ">—</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">$0</td>
+    </tr>
+
     <tr class="funnel-row" data-section="in_house" onclick="toggleUTM('reactivation_scrapers')" data-fid="reactivation_scrapers">
       <td class="col-name">
         <span class="chevron" id="chev-reactivation_scrapers">›</span>Reactivation Scrapers
@@ -923,6 +973,22 @@
     </tr>
 
     <tr class="utm-row" data-parent="instagram">
+      <td class="col-name col-utm">↳ 1683614393</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="instagram">
       <td class="col-name col-utm">↳ 1182451678</td>
       <td class="col-num">—</td>
       <td class="col-num">1</td>
@@ -964,22 +1030,6 @@
       <td class="col-pct bad">0.0%</td>
       <td class="col-num">—</td>
       <td class="col-pct bad">0.0%</td>
-      <td class="col-num">—</td>
-      <td class="col-pct bad">0.0%</td>
-      <td class="col-rev">$0</td>
-      <td class="col-num">—</td>
-    </tr>
-
-    <tr class="utm-row" data-parent="instagram">
-      <td class="col-name col-utm">↳ 1683614393</td>
-      <td class="col-num">—</td>
-      <td class="col-num">1</td>
-      <td class="col-pace"></td>
-      <td class="col-goal"></td>
-      <td class="col-num">1</td>
-      <td class="col-pct good">100.0%</td>
-      <td class="col-num">1</td>
-      <td class="col-pct good">100.0%</td>
       <td class="col-num">—</td>
       <td class="col-pct bad">0.0%</td>
       <td class="col-rev">$0</td>
@@ -1148,10 +1198,10 @@
       <td class="col-pct bad">39.5%</td>
       <td class="col-num">15</td>
       <td class="col-pct bad">39.5%</td>
-      <td class="col-num">1</td>
-      <td class="col-pct bad">2.6%</td>
+      <td class="col-num">2</td>
+      <td class="col-pct bad">5.3%</td>
       <td class="col-rev">$14,997</td>
-      <td class="col-num">$14,997</td>
+      <td class="col-num">$7,498</td>
     </tr>
     </tbody>
   </table>
