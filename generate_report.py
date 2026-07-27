@@ -18,6 +18,7 @@ CF_FIRST_SALES = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
 CF_FUNNEL_NAME = "cf_xqDQE8fkPsWa0RNEve7hcaxKblCe6489XeZGRDzyPdX"
 CF_SHOW_UP     = "cf_OPyvpU45RdvjLqfm8V1VWwNxrGKogEH2IBJmfCj0Uhq"
 CF_QUALIFIED   = "cf_ZDx7NBQaDzV1yYrFcBMzt6cIYj81dAcswpNN0CQzCPS"
+CF_SALES_CYCLE = "cf_27NpVa3rplytwPB6uJB4YJxC1qztWgOsiLM2hZUhicq"
 PIPE_SALES     = "pipe_78hyBUVS7IKikGEmstObu1"
 STAT_WON       = "stat_WnFc0uhjcjV0cc3bVzdFVqDz7av6rbsOmOvHUsO6s03"
 
@@ -34,12 +35,12 @@ EXCLUDED_WON_USER_IDS = {
 EXCLUDED_FROM_TOTALS_FUNNELS = {"LTF - Quiz Funnel"}
 
 FUNNEL_GROUPS = [
-    ("EXTERNAL", ["Low Ticket Funnel", "Instagram", "X", "Linkedin", "LTF - Quiz Funnel"]),
     ("IN-HOUSE",  ["YouTube", "Meta Ads", "VSL", "Website", "Internal Webinar",
                    "Mike Newsletter", "Side Hustle Nation", "WWWS", "Tik Tok",
                    "Anthony IG", "Passivepreneurs", "Reactivation Email",
-                   "Reactivation Scrapers", "Referred", "LinkedIn Ads",
-                   "Google Ads", "YouTube Ads"]),
+                   "Reactivation Scrapers", "Sales Reactivation", "Referred",
+                   "LinkedIn Ads", "Google Ads", "YouTube Ads", "LTF - In-House"]),
+    ("EXTERNAL", ["Low Ticket Funnel", "Instagram", "X", "Linkedin", "LTF - Quiz Funnel"]),
 ]
 FUNNEL_ORDER = [f for _, funnels in FUNNEL_GROUPS for f in funnels]
 
@@ -150,17 +151,27 @@ def aggregate(start_date, end_date, goals):
         lid = opp.get("lead_id")
         if lid not in lead_cache:
             try:
-                lead_cache[lid] = get_funnel_name(
-                    close_get(f"lead/{lid}/", {"_fields": f"id,custom.{CF_FUNNEL_NAME}"})
-                )
+                lead_resp = close_get(f"lead/{lid}/", {
+                    "_fields": f"id,custom.{CF_FUNNEL_NAME},custom.{CF_SALES_CYCLE}"
+                })
+                lead_cache[lid] = lead_resp
             except Exception:
-                lead_cache[lid] = "No Attribution"
-        funnel = lead_cache[lid]
+                lead_cache[lid] = {}
+        lead_obj = lead_cache[lid] if isinstance(lead_cache[lid], dict) else {}
+        funnel = get_funnel_name(lead_obj) if lead_obj else "No Attribution"
         if funnel not in funnel_data:
             funnel_data[funnel] = {"booked": 0, "showed": 0, "qualified": 0,
                                    "closed": 0, "revenue": 0.0}
         funnel_data[funnel]["closed"]  += 1
         funnel_data[funnel]["revenue"] += (opp.get("value") or 0) / 100
+        # Track sales cycle days (numeric field on lead)
+        sc_raw = lead_obj.get(f"custom.{CF_SALES_CYCLE}") if lead_obj else None
+        if sc_raw is not None:
+            try:
+                funnel_data[funnel]["sales_cycle_sum"]   = funnel_data[funnel].get("sales_cycle_sum", 0) + float(sc_raw)
+                funnel_data[funnel]["sales_cycle_count"] = funnel_data[funnel].get("sales_cycle_count", 0) + 1
+            except (ValueError, TypeError):
+                pass
 
     # Build ordered funnel rows
     all_funnels = list(FUNNEL_ORDER) + [f for f in funnel_data if f not in FUNNEL_ORDER]
@@ -186,6 +197,10 @@ def aggregate(start_date, end_date, goals):
         on_pace  = round((t["booked"] / days_elapsed) * period_days) if days_elapsed and t["booked"] else ""
         goal_pct = f"{round(t['booked'] / goal * 100)}% ({goal})" if goal else ""
 
+        sc_sum   = t.get("sales_cycle_sum", 0)
+        sc_count = t.get("sales_cycle_count", 0)
+        avg_sc   = f"{sc_sum / sc_count:.1f}" if sc_count else ""
+
         rows.append({
             "group":       group_map.get(funnel, "UNCATEGORIZED"),
             "funnel":      funnel,
@@ -201,6 +216,7 @@ def aggregate(start_date, end_date, goals):
             "cw_pct":      pct(t["closed"], t["booked"]),
             "revenue":     fmt_currency(t["revenue"]),
             "rev_per_close": fmt_currency(t["revenue"] / t["closed"]) if t["closed"] else "",
+            "avg_sales_cycle": avg_sc,
         })
 
         if not excluded:
@@ -266,7 +282,8 @@ def write_csv(start_date, end_date, grand, group_totals, rows, end_date_obj=None
         w.writerow(["Group", "Funnel", "Excluded From Totals",
                     "Booked", "On Pace", "Goal %",
                     "Showed", "Show %", "Qualified", "Qual %",
-                    "Closed", "CW %", "Revenue", "Rev/Close"])
+                    "Closed", "CW %", "Revenue", "Rev/Close",
+                    "Avg Sales Cycle (Days)"])
 
         for row in rows:
             w.writerow([
@@ -274,9 +291,14 @@ def write_csv(start_date, end_date, grand, group_totals, rows, end_date_obj=None
                 row["booked"], row["on_pace"], row["goal_pct"],
                 row["showed"], row["show_pct"], row["qualified"], row["qual_pct"],
                 row["closed"], row["cw_pct"], row["revenue"], row["rev_per_close"],
+                row.get("avg_sales_cycle", ""),
             ])
 
         # Total row
+        # Grand avg sales cycle across all funnels
+        grand_sc_sum   = sum(r.get("sales_cycle_sum", 0) for r in [funnel_data.get(r["funnel"], {}) for r in rows])
+        grand_sc_count = sum(r.get("sales_cycle_count", 0) for r in [funnel_data.get(r["funnel"], {}) for r in rows])
+        grand_avg_sc   = f"{grand_sc_sum / grand_sc_count:.1f}" if grand_sc_count else ""
         w.writerow([
             "TOTAL", "TOTAL", "",
             grand["booked"], "", "",
@@ -285,6 +307,7 @@ def write_csv(start_date, end_date, grand, group_totals, rows, end_date_obj=None
             grand["closed"], pct(grand["closed"], grand["booked"]),
             fmt_currency(grand["revenue"]),
             fmt_currency(grand["revenue"] / grand["closed"]) if grand["closed"] else "",
+            grand_avg_sc,
         ])
 
     print(f"\nWritten: {fname}", flush=True)
