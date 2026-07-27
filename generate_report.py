@@ -295,9 +295,11 @@ def write_csv(start_date, end_date, grand, group_totals, rows, end_date_obj=None
             ])
 
         # Total row
-        # Grand avg sales cycle across all funnels
-        grand_sc_sum   = sum(r.get("sales_cycle_sum", 0) for r in [funnel_data.get(r["funnel"], {}) for r in rows])
-        grand_sc_count = sum(r.get("sales_cycle_count", 0) for r in [funnel_data.get(r["funnel"], {}) for r in rows])
+        # Grand avg sales cycle — computed from per-funnel rows
+        grand_sc_sum   = sum(float(r["avg_sales_cycle"]) * int(r["closed"] or 0)
+                             for r in rows if r.get("avg_sales_cycle") and r.get("closed"))
+        grand_sc_count = sum(int(r["closed"] or 0)
+                             for r in rows if r.get("avg_sales_cycle") and r.get("closed"))
         grand_avg_sc   = f"{grand_sc_sum / grand_sc_count:.1f}" if grand_sc_count else ""
         w.writerow([
             "TOTAL", "TOTAL", "",
