@@ -37,9 +37,12 @@ CF_UTM_CAMPAIGN = "cf_jnbd0xzUY3tuxzxiGxBs2hONuExeXMvAoTUM2R64Lq3"  # utm_campai
 CF_UTM_CONTENT      = "cf_R7o66i0XPycLQHlxOLbIqk6c6j3oB8CzxF3e3apI1hn"  # utm_content (contact)
 CF_FIRST_SALES_CALL = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"  # First Sales Call Booked Date (lead)
 CF_FIRST_SALES    = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"            # First Sales Call Booked Date (lead)
+CF_SETTER_NAME    = "cf_vz6kNiu4ItFxRA8Y9HKlWIoQMq3TsdaQqKekQ2YuxVk"           # Reactivation - Setter Name (lead)
 
 # Funnels that use utm_content instead of utm_campaign for sub-breakdown
 UTM_CONTENT_FUNNELS = {"Internal Webinar"}
+# Funnels that use Setter Name field instead of UTM for sub-breakdown
+SETTER_NAME_FUNNELS = {"Reactivation Scrapers"}
 
 CLOSED_WON_STATUS_ID    = "stat_0oW3iRpVp9z5DJq0cuwI1HgR0XhHAhykEPPIq4TFsxd"
 WEEKLY_FEATURE_START    = "2026-04"  # Weeks only available for this month and later
@@ -157,7 +160,8 @@ def fetch_lead(lead_id):
                    f"custom.{CF_FUNNEL_NAME},"
                    f"custom.{CF_SHOW_UP},"
                    f"custom.{CF_QUALIFIED},"
-                   f"custom.{CF_PROGRAM_TIER}"
+                   f"custom.{CF_PROGRAM_TIER},"
+                   f"custom.{CF_SETTER_NAME}"
     })
 
 
@@ -253,7 +257,8 @@ def fetch_leads_by_booked_date(start_date, end_date):
                         f"custom.{CF_FUNNEL_NAME},"
                         f"custom.{CF_SHOW_UP},"
                         f"custom.{CF_QUALIFIED},"
-                        f"custom.{CF_PROGRAM_TIER}"),
+                        f"custom.{CF_PROGRAM_TIER},"
+                        f"custom.{CF_SETTER_NAME}"),
             "_limit":  200,
             "_skip":   skip,
         })
@@ -332,6 +337,10 @@ def aggregate_data(start_date, end_date, month_label,
         if lead.get("status_id") in EXCLUDED_LEAD_STATUS_IDS:
             continue
         funnel = get_funnel_name(lead)
+        # Only track leads_created for known funnels — new leads often have no funnel
+        # set yet, which would inflate "Unknown (Needs Review)" with unprocessed leads
+        if funnel not in FUNNEL_ORDER:
+            continue
         leads_created_by_funnel[funnel] = leads_created_by_funnel.get(funnel, 0) + 1
 
     # Fetch booked leads via First Sales Call Booked Date field
@@ -352,7 +361,14 @@ def aggregate_data(start_date, end_date, month_label,
         if lid not in utm_cache:
             utm_cache[lid] = fetch_utm_data(lid)
         utm_campaign, utm_content = utm_cache[lid]
-        utm = (utm_content or "Unattributed") if funnel in UTM_CONTENT_FUNNELS               else (utm_campaign or "Unattributed")
+        if funnel in SETTER_NAME_FUNNELS:
+            setter_raw = lead.get(f"custom.{CF_SETTER_NAME}")
+            if isinstance(setter_raw, list): setter_raw = setter_raw[0] if setter_raw else None
+            utm = str(setter_raw).strip() if setter_raw else "Unattributed"
+        elif funnel in UTM_CONTENT_FUNNELS:
+            utm = utm_content or "Unattributed"
+        else:
+            utm = utm_campaign or "Unattributed"
         meeting_rows.append({"funnel": funnel, "show_up": show_up,
                               "qualified": qualified, "utm_campaign": utm})
 
@@ -374,7 +390,14 @@ def aggregate_data(start_date, end_date, month_label,
         if lid not in utm_cache:
             utm_cache[lid] = fetch_utm_data(lid)
         utm_campaign, utm_content = utm_cache[lid]
-        utm = (utm_content or "Unattributed") if funnel in UTM_CONTENT_FUNNELS               else (utm_campaign or "Unattributed")
+        if funnel in SETTER_NAME_FUNNELS:
+            setter_raw = lead.get(f"custom.{CF_SETTER_NAME}")
+            if isinstance(setter_raw, list): setter_raw = setter_raw[0] if setter_raw else None
+            utm = str(setter_raw).strip() if setter_raw else "Unattributed"
+        elif funnel in UTM_CONTENT_FUNNELS:
+            utm = utm_content or "Unattributed"
+        else:
+            utm = utm_campaign or "Unattributed"
         closed_rows.append({"funnel": funnel, "value": value, "utm_campaign": utm})
         # Track program tier breakdown — field is on LEAD, not opportunity
         tier_raw = lead.get(f"custom.{CF_PROGRAM_TIER}")
