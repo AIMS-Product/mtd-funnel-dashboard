@@ -4,18 +4,18 @@
   "grand": {
     "leads_created": 3857,
     "booked": 659,
-    "showed": 351,
-    "qualified": 303,
-    "closed": 66,
+    "showed": 352,
+    "qualified": 304,
+    "closed": 67,
     "revenue": 469851.0
   },
   "groups": {
     "IN-HOUSE": {
       "leads_created": 3492,
       "booked": 521,
-      "showed": 270,
-      "qualified": 224,
-      "closed": 57,
+      "showed": 271,
+      "qualified": 225,
+      "closed": 58,
       "revenue": 404278.0
     },
     "EXTERNAL": {
@@ -36,16 +36,28 @@
     }
   },
   "funnels": {
+    "Website": {
+      "leads_created": 100,
+      "booked": 103,
+      "book_pct": 103.0,
+      "showed": 58,
+      "show_pct": 56.3,
+      "qualified": 52,
+      "qual_pct": 50.5,
+      "closed": 14,
+      "cw_pct": 13.6,
+      "revenue": 112149.0
+    },
     "YouTube": {
       "leads_created": 77,
       "booked": 59,
       "book_pct": 76.6,
-      "showed": 46,
-      "show_pct": 78.0,
-      "qualified": 35,
-      "qual_pct": 59.3,
-      "closed": 13,
-      "cw_pct": 22.0,
+      "showed": 47,
+      "show_pct": 79.7,
+      "qualified": 36,
+      "qual_pct": 61.0,
+      "closed": 14,
+      "cw_pct": 23.7,
       "revenue": 100764.0
     },
     "LTF - In-House": {
@@ -107,18 +119,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Website": {
-      "leads_created": 100,
-      "booked": 103,
-      "book_pct": 103.0,
-      "showed": 58,
-      "show_pct": 56.3,
-      "qualified": 52,
-      "qual_pct": 50.5,
-      "closed": 14,
-      "cw_pct": 13.6,
-      "revenue": 112149.0
     },
     "Anthony X": {
       "leads_created": 3,
