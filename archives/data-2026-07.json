@@ -2,7 +2,7 @@
   "month_key": "2026-07",
   "month_label": "July 2026",
   "grand": {
-    "leads_created": 3841,
+    "leads_created": 3842,
     "booked": 646,
     "showed": 357,
     "qualified": 306,
@@ -19,7 +19,7 @@
       "revenue": 419275.0
     },
     "EXTERNAL": {
-      "leads_created": 133,
+      "leads_created": 134,
       "booked": 114,
       "showed": 73,
       "qualified": 71,
@@ -36,10 +36,22 @@
     }
   },
   "funnels": {
+    "Meta Ads": {
+      "leads_created": 408,
+      "booked": 52,
+      "book_pct": 12.7,
+      "showed": 20,
+      "show_pct": 38.5,
+      "qualified": 17,
+      "qual_pct": 32.7,
+      "closed": 1,
+      "cw_pct": 1.9,
+      "revenue": 1188.0
+    },
     "Instagram": {
-      "leads_created": 118,
+      "leads_created": 119,
       "booked": 100,
-      "book_pct": 84.7,
+      "book_pct": 84.0,
       "showed": 63,
       "show_pct": 63.0,
       "qualified": 62,
@@ -107,18 +119,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Meta Ads": {
-      "leads_created": 408,
-      "booked": 52,
-      "book_pct": 12.7,
-      "showed": 20,
-      "show_pct": 38.5,
-      "qualified": 17,
-      "qual_pct": 32.7,
-      "closed": 1,
-      "cw_pct": 1.9,
-      "revenue": 1188.0
     },
     "LTF - In-House": {
       "leads_created": 4,
