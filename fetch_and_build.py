@@ -1207,8 +1207,7 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
   <div class="kpi" style="--kpi-accent:#0e9f6e; --kpi-color:#0e9f6e;">
     <div class="label">Closed Revenue</div>
     <div class="value">{fmt_currency(g_rev)}</div>
-    <div class="kpi-sub">{rev_per_close(g_rev, g_cl)} avg deal</div>
-    {f'<div style="margin-top:5px;"><span style="font-size:10px; color:#7bc4a0; font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">VendHub</span> <span style="font-size:13px; font-weight:700; color:#7bc4a0; margin-left:4px;">{fmt_currency(g_vh_rev)}</span></div>' if g_vh_rev else ""}
+    <div class="kpi-sub">{rev_per_close(g_rev, g_cl)} avg deal{f'  ·  <span style="color:#7bc4a0; font-weight:600;">VendHub {fmt_currency(g_vh_rev)}</span>' if g_vh_rev else ""}</div>
     <div class="kpi-split">
       <div class="kpi-split-item">
         <div class="split-label">External</div>
