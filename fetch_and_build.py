@@ -33,6 +33,14 @@ CF_FUNNEL_NAME  = "cf_xqDQE8fkPsWa0RNEve7hcaxKblCe6489XeZGRDzyPdX"  # Funnel Nam
 CF_SHOW_UP      = "cf_OPyvpU45RdvjLqfm8V1VWwNxrGKogEH2IBJmfCj0Uhq"  # First Call Show Up (opp)
 CF_QUALIFIED    = "cf_ZDx7NBQaDzV1yYrFcBMzt6cIYj81dAcswpNN0CQzCPS"  # Qualified (opp)
 CF_PROGRAM_TIER = "cf_XvdC8hcwyfkoOFn6ElNdGEWbd567Th65m4spLuugYm3"           # Program Tier Purchased (opp)
+CF_VENDHUB_PLAN = "cf_Y3lcmlnhjmmCCfDgWfoNbA7gXZgvTX7fCcvNNxD9TSp"           # VendHub Plan (N) (lead)
+
+# Program Tier values that are VendHub-only deals (no standard package)
+VENDHUB_ONLY_TIERS = {
+    "VendHub - Basic $1,188",
+    "VendHub - Pro $2,999",
+    "Vendhub Renewal- $1,200",
+}
 CF_UTM_CAMPAIGN = "cf_jnbd0xzUY3tuxzxiGxBs2hONuExeXMvAoTUM2R64Lq3"  # utm_campaign (contact)
 CF_UTM_CONTENT      = "cf_R7o66i0XPycLQHlxOLbIqk6c6j3oB8CzxF3e3apI1hn"  # utm_content (contact)
 CF_FIRST_SALES_CALL = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"  # First Sales Call Booked Date (lead)
@@ -161,6 +169,7 @@ def fetch_lead(lead_id):
                    f"custom.{CF_SHOW_UP},"
                    f"custom.{CF_QUALIFIED},"
                    f"custom.{CF_PROGRAM_TIER},"
+                   f"custom.{CF_VENDHUB_PLAN},"
                    f"custom.{CF_SETTER_NAME}"
     })
 
@@ -258,6 +267,7 @@ def fetch_leads_by_booked_date(start_date, end_date):
                         f"custom.{CF_SHOW_UP},"
                         f"custom.{CF_QUALIFIED},"
                         f"custom.{CF_PROGRAM_TIER},"
+                        f"custom.{CF_VENDHUB_PLAN},"
                         f"custom.{CF_SETTER_NAME}"),
             "_limit":  200,
             "_skip":   skip,
@@ -375,7 +385,8 @@ def aggregate_data(start_date, end_date, month_label,
     print(f"  Booked rows after status filter: {len(meeting_rows)}", flush=True)
 
     closed_rows    = []
-    tier_by_funnel = {}
+    tier_by_funnel   = {}
+    vendhub_revenue  = 0.0
     for opp in won_opps:
         lid = opp["lead_id"]
         if lid not in lead_cache:
@@ -402,11 +413,19 @@ def aggregate_data(start_date, end_date, month_label,
         # Track program tier breakdown — field is on LEAD, not opportunity
         tier_raw = lead.get(f"custom.{CF_PROGRAM_TIER}")
         if isinstance(tier_raw, list): tier_raw = tier_raw[0] if tier_raw else None
-        tier = str(tier_raw).strip() if tier_raw else "Unknown"
+        tier_str = str(tier_raw).strip() if tier_raw else "Unknown"
+        # Append VendHub Plan if present
+        vh_raw = lead.get(f"custom.{CF_VENDHUB_PLAN}")
+        if isinstance(vh_raw, list): vh_raw = vh_raw[0] if vh_raw else None
+        vh_str = str(vh_raw).strip() if vh_raw else ""
+        tier = f"{tier_str}  ·  {vh_str}" if vh_str else tier_str
         tier_by_funnel.setdefault(funnel, {})
         tier_by_funnel[funnel].setdefault(tier, {"count": 0, "revenue": 0.0})
         tier_by_funnel[funnel][tier]["count"]   += 1
         tier_by_funnel[funnel][tier]["revenue"] += value
+        # Track VendHub-only revenue for the KPI tile
+        if tier_str in VENDHUB_ONLY_TIERS:
+            vendhub_revenue = vendhub_revenue + value
 
     print(f"  Closed-won rows: {len(closed_rows)}", flush=True)
 
@@ -466,7 +485,8 @@ def aggregate_data(start_date, end_date, month_label,
     data = {
         "funnel_data":   funnel_data,
         "funnel_totals": funnel_totals,
-        "tier_by_funnel": tier_by_funnel,
+        "tier_by_funnel":  tier_by_funnel,
+        "vendhub_revenue": vendhub_revenue,
         "grand":         grand,
         "group_totals":  group_totals,
         "generated_at":  now_pac.strftime("%B %d, %Y at %I:%M %p PT"),
@@ -702,7 +722,8 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
                                      goals, day_of_month, days_in_month,
                                      tier_by_funnel)
 
-    g_lc  = grand.get("leads_created", 0)
+    g_lc    = grand.get("leads_created", 0)
+    g_vh_rev = data.get("vendhub_revenue", 0.0)
     g_bo  = grand["booked"]
     g_sh  = grand["showed"]
     g_qu  = grand["qualified"]
@@ -1199,6 +1220,7 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
         <div class="split-rate">{rev_per_close(inh["revenue"], inh["closed"])} avg</div>
       </div>
     </div>
+    {f'<div style="margin-top:8px; padding-top:8px; border-top:1px solid rgba(255,255,255,0.15);"><span style="font-size:11px; color:#7bc4a0; font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">VendHub Sales</span> <span style="font-size:15px; font-weight:700; color:#7bc4a0; margin-left:6px;">{fmt_currency(g_vh_rev)}</span></div>' if g_vh_rev else ""}
   </div>
 </div>
 
