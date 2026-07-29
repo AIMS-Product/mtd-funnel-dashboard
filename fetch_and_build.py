@@ -1208,6 +1208,7 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     <div class="label">Closed Revenue</div>
     <div class="value">{fmt_currency(g_rev)}</div>
     <div class="kpi-sub">{rev_per_close(g_rev, g_cl)} avg deal</div>
+    {f'<div style="margin-top:5px;"><span style="font-size:10px; color:#7bc4a0; font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">VendHub</span> <span style="font-size:13px; font-weight:700; color:#7bc4a0; margin-left:4px;">{fmt_currency(g_vh_rev)}</span></div>' if g_vh_rev else ""}
     <div class="kpi-split">
       <div class="kpi-split-item">
         <div class="split-label">External</div>
@@ -1220,7 +1221,6 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
         <div class="split-rate">{rev_per_close(inh["revenue"], inh["closed"])} avg</div>
       </div>
     </div>
-    {f'<div style="margin-top:8px; padding-top:8px; border-top:1px solid rgba(255,255,255,0.15);"><span style="font-size:11px; color:#7bc4a0; font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">VendHub Sales</span> <span style="font-size:15px; font-weight:700; color:#7bc4a0; margin-left:6px;">{fmt_currency(g_vh_rev)}</span></div>' if g_vh_rev else ""}
   </div>
 </div>
 
