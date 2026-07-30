@@ -35,11 +35,18 @@ CF_QUALIFIED    = "cf_ZDx7NBQaDzV1yYrFcBMzt6cIYj81dAcswpNN0CQzCPS"  # Qualified 
 CF_PROGRAM_TIER = "cf_XvdC8hcwyfkoOFn6ElNdGEWbd567Th65m4spLuugYm3"           # Program Tier Purchased (opp)
 CF_VENDHUB_PLAN = "cf_Y3lcmlnhjmmCCfDgWfoNbA7gXZgvTX7fCcvNNxD9TSp"           # VendHub Plan (N) (lead)
 
-# Program Tier values that are VendHub-only deals (no standard package)
+# Program Tier values that are VendHub-only deals (full value = ARR)
 VENDHUB_ONLY_TIERS = {
     "VendHub - Basic $1,188",
     "VendHub - Pro $2,999",
     "Vendhub Renewal- $1,200",
+}
+
+# ARR portion contributed by standard package tiers
+ARR_BY_TIER = {
+    "Bronze - $5,997":  1200.0,
+    "Silver - $8,997":  2998.0,
+    "Scale - $14,997":  2998.0,
 }
 CF_UTM_CAMPAIGN = "cf_jnbd0xzUY3tuxzxiGxBs2hONuExeXMvAoTUM2R64Lq3"  # utm_campaign (contact)
 CF_UTM_CONTENT      = "cf_R7o66i0XPycLQHlxOLbIqk6c6j3oB8CzxF3e3apI1hn"  # utm_content (contact)
@@ -423,9 +430,11 @@ def aggregate_data(start_date, end_date, month_label,
         tier_by_funnel[funnel].setdefault(tier, {"count": 0, "revenue": 0.0})
         tier_by_funnel[funnel][tier]["count"]   += 1
         tier_by_funnel[funnel][tier]["revenue"] += value
-        # Track VendHub-only revenue for the KPI tile
+        # Accumulate ARR: VendHub-only deals = full value; standard packages = partial
         if tier_str in VENDHUB_ONLY_TIERS:
             vendhub_revenue = vendhub_revenue + value
+        elif tier_str in ARR_BY_TIER:
+            vendhub_revenue = vendhub_revenue + ARR_BY_TIER[tier_str]
 
     print(f"  Closed-won rows: {len(closed_rows)}", flush=True)
 
@@ -1207,7 +1216,7 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
   <div class="kpi" style="--kpi-accent:#0e9f6e; --kpi-color:#0e9f6e;">
     <div class="label">Closed Revenue</div>
     <div class="value">{fmt_currency(g_rev)}</div>
-    <div class="kpi-sub">{rev_per_close(g_rev, g_cl)} avg deal{f'  ·  <span style="color:#7bc4a0; font-weight:600;">VendHub {fmt_currency(g_vh_rev)}</span>' if g_vh_rev else ""}</div>
+    <div class="kpi-sub">{rev_per_close(g_rev, g_cl)} avg deal{f'  ·  <span style="color:#7bc4a0; font-weight:600;">ARR {fmt_currency(g_vh_rev)}</span>  <span style="color:#7bc4a0; opacity:0.75; font-size:11px;">MRR {fmt_currency(g_vh_rev / 12)}</span>' if g_vh_rev else ""}</div>
     <div class="kpi-split">
       <div class="kpi-split-item">
         <div class="split-label">External</div>
