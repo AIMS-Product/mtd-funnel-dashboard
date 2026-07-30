@@ -2,9 +2,9 @@
   "month_key": "2026-07",
   "month_label": "July 2026",
   "grand": {
-    "leads_created": 4768,
+    "leads_created": 4769,
     "booked": 711,
-    "showed": 418,
+    "showed": 419,
     "qualified": 365,
     "closed": 78,
     "revenue": 576018.0
@@ -13,7 +13,7 @@
     "IN-HOUSE": {
       "leads_created": 4326,
       "booked": 562,
-      "showed": 314,
+      "showed": 315,
       "qualified": 267,
       "closed": 65,
       "revenue": 473557.0
@@ -27,7 +27,7 @@
       "revenue": 102461.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 295,
+      "leads_created": 296,
       "booked": 19,
       "showed": 8,
       "qualified": 7,
@@ -36,68 +36,8 @@
     }
   },
   "funnels": {
-    "Internal Webinar": {
-      "leads_created": 3493,
-      "booked": 66,
-      "book_pct": 1.9,
-      "showed": 31,
-      "show_pct": 47.0,
-      "qualified": 30,
-      "qual_pct": 45.5,
-      "closed": 11,
-      "cw_pct": 16.7,
-      "revenue": 93138.0
-    },
-    "Reactivation Scrapers": {
-      "leads_created": 158,
-      "booked": 236,
-      "book_pct": 149.4,
-      "showed": 121,
-      "show_pct": 51.3,
-      "qualified": 99,
-      "qual_pct": 41.9,
-      "closed": 23,
-      "cw_pct": 9.7,
-      "revenue": 131421.0
-    },
-    "Instagram": {
-      "leads_created": 132,
-      "booked": 113,
-      "book_pct": 85.6,
-      "showed": 81,
-      "show_pct": 71.7,
-      "qualified": 78,
-      "qual_pct": 69.0,
-      "closed": 10,
-      "cw_pct": 8.8,
-      "revenue": 75770.0
-    },
-    "Website": {
-      "leads_created": 111,
-      "booked": 117,
-      "book_pct": 105.4,
-      "showed": 69,
-      "show_pct": 59.0,
-      "qualified": 62,
-      "qual_pct": 53.0,
-      "closed": 14,
-      "cw_pct": 12.0,
-      "revenue": 112149.0
-    },
-    "Meta Ads": {
-      "leads_created": 445,
-      "booked": 56,
-      "book_pct": 12.6,
-      "showed": 22,
-      "show_pct": 39.3,
-      "qualified": 18,
-      "qual_pct": 32.1,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Unknown (Needs Review)": {
-      "leads_created": 295,
+      "leads_created": 296,
       "booked": 19,
       "book_pct": 6.4,
       "showed": 8,
@@ -120,17 +60,29 @@
       "cw_pct": 19.7,
       "revenue": 111961.0
     },
-    "Sales Reactivation": {
-      "leads_created": 1,
-      "booked": 4,
-      "book_pct": 400.0,
-      "showed": 4,
-      "show_pct": 100.0,
-      "qualified": 4,
-      "qual_pct": 100.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
+    "Reactivation Scrapers": {
+      "leads_created": 158,
+      "booked": 236,
+      "book_pct": 149.4,
+      "showed": 122,
+      "show_pct": 51.7,
+      "qualified": 99,
+      "qual_pct": 41.9,
+      "closed": 23,
+      "cw_pct": 9.7,
+      "revenue": 131421.0
+    },
+    "Website": {
+      "leads_created": 111,
+      "booked": 117,
+      "book_pct": 105.4,
+      "showed": 69,
+      "show_pct": 59.0,
+      "qualified": 62,
+      "qual_pct": 53.0,
+      "closed": 14,
+      "cw_pct": 12.0,
+      "revenue": 112149.0
     },
     "LTF - In-House": {
       "leads_created": 5,
@@ -143,6 +95,54 @@
       "closed": 3,
       "cw_pct": 30.0,
       "revenue": 18891.0
+    },
+    "Internal Webinar": {
+      "leads_created": 3493,
+      "booked": 66,
+      "book_pct": 1.9,
+      "showed": 31,
+      "show_pct": 47.0,
+      "qualified": 30,
+      "qual_pct": 45.5,
+      "closed": 11,
+      "cw_pct": 16.7,
+      "revenue": 93138.0
+    },
+    "Instagram": {
+      "leads_created": 132,
+      "booked": 113,
+      "book_pct": 85.6,
+      "showed": 81,
+      "show_pct": 71.7,
+      "qualified": 78,
+      "qual_pct": 69.0,
+      "closed": 10,
+      "cw_pct": 8.8,
+      "revenue": 75770.0
+    },
+    "Meta Ads": {
+      "leads_created": 445,
+      "booked": 56,
+      "book_pct": 12.6,
+      "showed": 22,
+      "show_pct": 39.3,
+      "qualified": 18,
+      "qual_pct": 32.1,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Sales Reactivation": {
+      "leads_created": 1,
+      "booked": 4,
+      "book_pct": 400.0,
+      "showed": 4,
+      "show_pct": 100.0,
+      "qualified": 4,
+      "qual_pct": 100.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "Anthony X": {
       "leads_created": 0,
