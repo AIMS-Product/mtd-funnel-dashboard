@@ -2,7 +2,7 @@
   "month_key": "2026-07",
   "month_label": "July 2026",
   "grand": {
-    "leads_created": 3993,
+    "leads_created": 3994,
     "booked": 702,
     "showed": 401,
     "qualified": 349,
@@ -27,7 +27,7 @@
       "revenue": 102461.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 294,
+      "leads_created": 295,
       "booked": 20,
       "showed": 8,
       "qualified": 7,
@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "Unknown (Needs Review)": {
+      "leads_created": 295,
+      "booked": 20,
+      "book_pct": 6.8,
+      "showed": 8,
+      "show_pct": 40.0,
+      "qualified": 7,
+      "qual_pct": 35.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 154,
       "booked": 232,
@@ -47,6 +59,18 @@
       "closed": 22,
       "cw_pct": 9.5,
       "revenue": 125121.0
+    },
+    "Reactivation Email": {
+      "leads_created": 0,
+      "booked": 1,
+      "book_pct": 0,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "YouTube": {
       "leads_created": 94,
@@ -120,18 +144,6 @@
       "cw_pct": 12.5,
       "revenue": 70047.0
     },
-    "Unknown (Needs Review)": {
-      "leads_created": 294,
-      "booked": 20,
-      "book_pct": 6.8,
-      "showed": 8,
-      "show_pct": 40.0,
-      "qualified": 7,
-      "qual_pct": 35.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Mike Newsletter": {
       "leads_created": 0,
       "booked": 1,
@@ -140,18 +152,6 @@
       "show_pct": 100.0,
       "qualified": 1,
       "qual_pct": 100.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Reactivation Email": {
-      "leads_created": 0,
-      "booked": 1,
-      "book_pct": 0,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0.0,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
