@@ -3,7 +3,7 @@
   "month_label": "July 2026",
   "grand": {
     "leads_created": 4770,
-    "booked": 711,
+    "booked": 712,
     "showed": 420,
     "qualified": 366,
     "closed": 78,
@@ -20,7 +20,7 @@
     },
     "EXTERNAL": {
       "leads_created": 147,
-      "booked": 127,
+      "booked": 128,
       "showed": 93,
       "qualified": 88,
       "closed": 13,
@@ -36,6 +36,30 @@
     }
   },
   "funnels": {
+    "Instagram": {
+      "leads_created": 132,
+      "booked": 114,
+      "book_pct": 86.4,
+      "showed": 81,
+      "show_pct": 71.1,
+      "qualified": 78,
+      "qual_pct": 68.4,
+      "closed": 10,
+      "cw_pct": 8.8,
+      "revenue": 75770.0
+    },
+    "Meta Ads": {
+      "leads_created": 445,
+      "booked": 56,
+      "book_pct": 12.6,
+      "showed": 22,
+      "show_pct": 39.3,
+      "qualified": 18,
+      "qual_pct": 32.1,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Website": {
       "leads_created": 111,
       "booked": 117,
@@ -60,18 +84,6 @@
       "cw_pct": 10.2,
       "revenue": 139518.0
     },
-    "Instagram": {
-      "leads_created": 132,
-      "booked": 113,
-      "book_pct": 85.6,
-      "showed": 81,
-      "show_pct": 71.7,
-      "qualified": 78,
-      "qual_pct": 69.0,
-      "closed": 10,
-      "cw_pct": 8.8,
-      "revenue": 75770.0
-    },
     "LTF - In-House": {
       "leads_created": 5,
       "booked": 10,
@@ -85,7 +97,7 @@
       "revenue": 18891.0
     },
     "Internal Webinar": {
-      "leads_created": 3495,
+      "leads_created": 3493,
       "booked": 66,
       "book_pct": 1.9,
       "showed": 31,
@@ -107,18 +119,6 @@
       "closed": 13,
       "cw_pct": 19.7,
       "revenue": 111961.0
-    },
-    "Meta Ads": {
-      "leads_created": 444,
-      "booked": 56,
-      "book_pct": 12.6,
-      "showed": 22,
-      "show_pct": 39.3,
-      "qualified": 18,
-      "qual_pct": 32.1,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "Anthony X": {
       "leads_created": 0,
@@ -217,9 +217,9 @@
       "revenue": 0.0
     },
     "Google Ads": {
-      "leads_created": 4,
+      "leads_created": 5,
       "booked": 3,
-      "book_pct": 75.0,
+      "book_pct": 60.0,
       "showed": 3,
       "show_pct": 100.0,
       "qualified": 2,
