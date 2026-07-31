@@ -2,7 +2,7 @@
   "month_key": "2026-07",
   "month_label": "July 2026",
   "grand": {
-    "leads_created": 4773,
+    "leads_created": 4769,
     "booked": 711,
     "showed": 420,
     "qualified": 366,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 4329,
+      "leads_created": 4327,
       "booked": 562,
       "showed": 315,
       "qualified": 267,
@@ -27,7 +27,7 @@
       "revenue": 102461.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 297,
+      "leads_created": 295,
       "booked": 19,
       "showed": 9,
       "qualified": 8,
@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "Reactivation Scrapers": {
+      "leads_created": 160,
+      "booked": 236,
+      "book_pct": 147.5,
+      "showed": 122,
+      "show_pct": 51.7,
+      "qualified": 99,
+      "qual_pct": 41.9,
+      "closed": 24,
+      "cw_pct": 10.2,
+      "revenue": 139518.0
+    },
     "Website": {
       "leads_created": 111,
       "booked": 117,
@@ -60,18 +72,6 @@
       "cw_pct": 8.8,
       "revenue": 75770.0
     },
-    "Reactivation Scrapers": {
-      "leads_created": 160,
-      "booked": 236,
-      "book_pct": 147.5,
-      "showed": 122,
-      "show_pct": 51.7,
-      "qualified": 99,
-      "qual_pct": 41.9,
-      "closed": 24,
-      "cw_pct": 10.2,
-      "revenue": 139518.0
-    },
     "LTF - In-House": {
       "leads_created": 5,
       "booked": 10,
@@ -85,7 +85,7 @@
       "revenue": 18891.0
     },
     "Internal Webinar": {
-      "leads_created": 3494,
+      "leads_created": 3493,
       "booked": 66,
       "book_pct": 1.9,
       "showed": 31,
@@ -133,7 +133,7 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 297,
+      "leads_created": 295,
       "booked": 19,
       "book_pct": 6.4,
       "showed": 9,
@@ -205,9 +205,9 @@
       "revenue": 0.0
     },
     "VSL": {
-      "leads_created": 8,
+      "leads_created": 7,
       "booked": 2,
-      "book_pct": 25.0,
+      "book_pct": 28.6,
       "showed": 0,
       "show_pct": 0.0,
       "qualified": 0,
