@@ -85,6 +85,24 @@ def fmt_ordinal(d):
     suffix = {1:"st",2:"nd",3:"rd"}.get(d.day % 10 if d.day not in (11,12,13) else 0, "th")
     return d.strftime(f"%B {d.day}{suffix}, %Y")
 
+def _to_date(v):
+    """Parse a Close date or datetime value into a date. Datetimes are converted
+    to Pacific before taking the calendar day; date-only values are used as-is."""
+    if isinstance(v, list):
+        v = v[0] if v else None
+    if not v:
+        return None
+    s = str(v)
+    try:
+        if "T" in s:
+            dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
+            if dt.tzinfo:
+                dt = dt.astimezone(PACIFIC)
+            return dt.date()
+        return datetime.strptime(s[:10], "%Y-%m-%d").date()
+    except (ValueError, TypeError):
+        return None
+
 # ── Fetchers ──────────────────────────────────────────────────────────────────
 def fetch_booked_leads(start_date, end_date):
     start_str = start_date.strftime("%Y-%m-%d")
@@ -143,6 +161,8 @@ def aggregate(start_date, end_date, goals):
 
     seen_deals = set()
     lead_cache = {}
+    sc_missing = 0   # won deals with no parseable booked/close date (skipped from cycle avg)
+    sc_neg     = 0   # won deals where close precedes the first booked call (skipped)
     for opp in won_opps:
         if opp.get("user_id") in EXCLUDED_WON_USER_IDS: continue
         key = f"opp:{opp['id']}"
@@ -152,7 +172,7 @@ def aggregate(start_date, end_date, goals):
         if lid not in lead_cache:
             try:
                 lead_resp = close_get(f"lead/{lid}/", {
-                    "_fields": f"id,custom.{CF_FUNNEL_NAME},custom.{CF_SALES_CYCLE}"
+                    "_fields": f"id,custom.{CF_FUNNEL_NAME},custom.{CF_FIRST_SALES}"
                 })
                 lead_cache[lid] = lead_resp
             except Exception:
@@ -164,14 +184,23 @@ def aggregate(start_date, end_date, goals):
                                    "closed": 0, "revenue": 0.0}
         funnel_data[funnel]["closed"]  += 1
         funnel_data[funnel]["revenue"] += (opp.get("value") or 0) / 100
-        # Track sales cycle days (numeric field on lead)
-        sc_raw = lead_obj.get(f"custom.{CF_SALES_CYCLE}") if lead_obj else None
-        if sc_raw is not None:
-            try:
-                funnel_data[funnel]["sales_cycle_sum"]   = funnel_data[funnel].get("sales_cycle_sum", 0) + float(sc_raw)
+        # Sales cycle = days between First Sales Call Booked Date (lead) and date_won (opp)
+        won_d    = _to_date(opp.get("date_won"))
+        booked_d = _to_date(lead_obj.get(f"custom.{CF_FIRST_SALES}")) if lead_obj else None
+        if won_d and booked_d:
+            delta = (won_d - booked_d).days
+            if delta >= 0:
+                funnel_data[funnel]["sales_cycle_sum"]   = funnel_data[funnel].get("sales_cycle_sum", 0) + delta
                 funnel_data[funnel]["sales_cycle_count"] = funnel_data[funnel].get("sales_cycle_count", 0) + 1
-            except (ValueError, TypeError):
-                pass
+            else:
+                # Close recorded before the first booked call — data anomaly; skip.
+                # To keep these as same-day instead, use: delta = max(0, delta)
+                sc_neg += 1
+        else:
+            sc_missing += 1
+
+    print(f"  Sales cycle: {sc_missing} won deal(s) missing a date (skipped), "
+          f"{sc_neg} with close before booked call (skipped)", flush=True)
 
     # Build ordered funnel rows
     all_funnels = list(FUNNEL_ORDER) + [f for f in funnel_data if f not in FUNNEL_ORDER]
@@ -217,6 +246,7 @@ def aggregate(start_date, end_date, goals):
             "revenue":     fmt_currency(t["revenue"]),
             "rev_per_close": fmt_currency(t["revenue"] / t["closed"]) if t["closed"] else "",
             "avg_sales_cycle": avg_sc,
+            "sc_sum": sc_sum, "sc_count": sc_count,
         })
 
         if not excluded:
@@ -295,11 +325,9 @@ def write_csv(start_date, end_date, grand, group_totals, rows, end_date_obj=None
             ])
 
         # Total row
-        # Grand avg sales cycle — computed from per-funnel rows
-        grand_sc_sum   = sum(float(r["avg_sales_cycle"]) * int(r["closed"] or 0)
-                             for r in rows if r.get("avg_sales_cycle") and r.get("closed"))
-        grand_sc_count = sum(int(r["closed"] or 0)
-                             for r in rows if r.get("avg_sales_cycle") and r.get("closed"))
+        # Grand avg sales cycle — from raw per-deal sums (excludes excluded funnels)
+        grand_sc_sum   = sum(r.get("sc_sum", 0)   for r in rows if not r["excluded_from_totals"])
+        grand_sc_count = sum(r.get("sc_count", 0) for r in rows if not r["excluded_from_totals"])
         grand_avg_sc   = f"{grand_sc_sum / grand_sc_count:.1f}" if grand_sc_count else ""
         w.writerow([
             "TOTAL", "TOTAL", "",
