@@ -6,8 +6,8 @@
     "booked": 742,
     "showed": 435,
     "qualified": 382,
-    "closed": 83,
-    "revenue": 617303.0
+    "closed": 84,
+    "revenue": 623300.0
   },
   "groups": {
     "IN-HOUSE": {
@@ -15,8 +15,8 @@
       "booked": 586,
       "showed": 324,
       "qualified": 278,
-      "closed": 69,
-      "revenue": 507945.0
+      "closed": 70,
+      "revenue": 513942.0
     },
     "EXTERNAL": {
       "leads_created": 151,
@@ -36,17 +36,17 @@
     }
   },
   "funnels": {
-    "Instagram": {
-      "leads_created": 136,
-      "booked": 117,
-      "book_pct": 86.0,
-      "showed": 85,
-      "show_pct": 72.6,
-      "qualified": 82,
-      "qual_pct": 70.1,
-      "closed": 11,
-      "cw_pct": 9.4,
-      "revenue": 81767.0
+    "Website": {
+      "leads_created": 114,
+      "booked": 120,
+      "book_pct": 105.3,
+      "showed": 71,
+      "show_pct": 59.2,
+      "qualified": 64,
+      "qual_pct": 53.3,
+      "closed": 16,
+      "cw_pct": 13.3,
+      "revenue": 130643.0
     },
     "YouTube": {
       "leads_created": 106,
@@ -72,6 +72,18 @@
       "cw_pct": 10.5,
       "revenue": 151512.0
     },
+    "Instagram": {
+      "leads_created": 136,
+      "booked": 117,
+      "book_pct": 86.0,
+      "showed": 85,
+      "show_pct": 72.6,
+      "qualified": 82,
+      "qual_pct": 70.1,
+      "closed": 11,
+      "cw_pct": 9.4,
+      "revenue": 81767.0
+    },
     "Meta Ads": {
       "leads_created": 458,
       "booked": 60,
@@ -83,18 +95,6 @@
       "closed": 1,
       "cw_pct": 1.7,
       "revenue": 8997.0
-    },
-    "Website": {
-      "leads_created": 114,
-      "booked": 120,
-      "book_pct": 105.3,
-      "showed": 71,
-      "show_pct": 59.2,
-      "qualified": 64,
-      "qual_pct": 53.3,
-      "closed": 15,
-      "cw_pct": 12.5,
-      "revenue": 124646.0
     },
     "Internal Webinar": {
       "leads_created": 3492,
