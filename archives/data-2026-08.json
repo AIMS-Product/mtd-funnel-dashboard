@@ -11,7 +11,7 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 0,
+      "leads_created": 1,
       "booked": 9,
       "showed": 0,
       "qualified": 0,
@@ -27,7 +27,7 @@
       "revenue": 0.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 1,
+      "leads_created": 0,
       "booked": 2,
       "showed": 0,
       "qualified": 0,
@@ -37,9 +37,9 @@
   },
   "funnels": {
     "Unknown (Needs Review)": {
-      "leads_created": 1,
+      "leads_created": 0,
       "booked": 2,
-      "book_pct": 200.0,
+      "book_pct": 0,
       "showed": 0,
       "show_pct": 0.0,
       "qualified": 0,
@@ -106,6 +106,18 @@
       "qual_pct": 0.0,
       "closed": 0,
       "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Meta Ads": {
+      "leads_created": 1,
+      "booked": 0,
+      "book_pct": 0.0,
+      "showed": 0,
+      "show_pct": 0,
+      "qualified": 0,
+      "qual_pct": 0,
+      "closed": 0,
+      "cw_pct": 0,
       "revenue": 0.0
     }
   }
