@@ -6,8 +6,8 @@
     "booked": 11,
     "showed": 1,
     "qualified": 1,
-    "closed": 0,
-    "revenue": 0.0
+    "closed": 1,
+    "revenue": 5997.0
   },
   "groups": {
     "IN-HOUSE": {
@@ -23,8 +23,8 @@
       "booked": 3,
       "showed": 1,
       "qualified": 1,
-      "closed": 0,
-      "revenue": 0.0
+      "closed": 1,
+      "revenue": 5997.0
     },
     "UNCATEGORIZED": {
       "leads_created": 3,
@@ -36,18 +36,6 @@
     }
   },
   "funnels": {
-    "Internal Webinar": {
-      "leads_created": 0,
-      "booked": 1,
-      "book_pct": 0,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Instagram": {
       "leads_created": 1,
       "booked": 3,
@@ -56,6 +44,18 @@
       "show_pct": 33.3,
       "qualified": 1,
       "qual_pct": 33.3,
+      "closed": 1,
+      "cw_pct": 33.3,
+      "revenue": 5997.0
+    },
+    "Internal Webinar": {
+      "leads_created": 0,
+      "booked": 1,
+      "book_pct": 0,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0.0,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
