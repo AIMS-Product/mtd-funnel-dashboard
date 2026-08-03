@@ -2,7 +2,7 @@ name: Update MTD Funnel Dashboard
 
 # Triggered externally by cron-job.org POSTing to the workflow_dispatch endpoint.
 # Set up a cron-job.org job to hit:
-#   POST https://api.github.com/repos/YOUR_USERNAME/mtd-funnel-dashboard/actions/workflows/update.yml/dispatches
+#   POST https://api.github.com/repos/stephenolivas/mtd-funnel-dashboard/actions/workflows/update.yml/dispatches
 # with body: {"ref":"main"}
 # and Authorization header: Bearer YOUR_GITHUB_PAT
 on:
@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     permissions:
       contents: write
 
@@ -29,6 +29,35 @@ jobs:
 
       - name: Install dependencies
         run: pip install requests
+
+      - name: Auto-archive previous month if missing
+        env:
+          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+        run: |
+          python3 -u - << 'PYEOF'
+          import subprocess, sys
+          from datetime import date, timedelta
+          from pathlib import Path
+
+          today = date.today()
+          if today.day != 1:
+              print("Not the 1st — skipping auto-archive check.")
+              sys.exit(0)
+
+          prev = (today.replace(day=1) - timedelta(days=1))
+          prev_month = prev.strftime("%Y-%m")
+          archive_path = Path("archives") / f"{prev_month}.html"
+
+          if archive_path.exists():
+              print(f"Archive already exists: {archive_path} — skipping.")
+              sys.exit(0)
+
+          print(f"=== Auto-archiving missing month: {prev_month} ===")
+          result = subprocess.run(
+              ["python3", "-u", "fetch_and_build.py", "--month", prev_month],
+              check=True
+          )
+          PYEOF
 
       - name: Run dashboard script
         env:
