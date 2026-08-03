@@ -8,6 +8,10 @@ name: Update MTD Funnel Dashboard
 on:
   workflow_dispatch:
 
+concurrency:
+  group: mtd-funnel-build
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
