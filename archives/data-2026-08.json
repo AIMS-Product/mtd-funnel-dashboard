@@ -4,18 +4,18 @@
   "grand": {
     "leads_created": 407,
     "booked": 58,
-    "showed": 29,
+    "showed": 30,
     "qualified": 30,
-    "closed": 4,
+    "closed": 5,
     "revenue": 30988.0
   },
   "groups": {
     "IN-HOUSE": {
       "leads_created": 268,
       "booked": 42,
-      "showed": 23,
+      "showed": 24,
       "qualified": 23,
-      "closed": 3,
+      "closed": 4,
       "revenue": 23991.0
     },
     "EXTERNAL": {
@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "Reactivation Scrapers": {
+      "leads_created": 6,
+      "booked": 23,
+      "book_pct": 383.3,
+      "showed": 11,
+      "show_pct": 47.8,
+      "qualified": 10,
+      "qual_pct": 43.5,
+      "closed": 3,
+      "cw_pct": 13.0,
+      "revenue": 14994.0
+    },
     "Unknown (Needs Review)": {
       "leads_created": 135,
       "booked": 3,
@@ -71,18 +83,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Reactivation Scrapers": {
-      "leads_created": 6,
-      "booked": 23,
-      "book_pct": 383.3,
-      "showed": 10,
-      "show_pct": 43.5,
-      "qualified": 10,
-      "qual_pct": 43.5,
-      "closed": 2,
-      "cw_pct": 8.7,
-      "revenue": 14994.0
     },
     "YouTube": {
       "leads_created": 16,
