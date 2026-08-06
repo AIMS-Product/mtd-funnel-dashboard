@@ -5,7 +5,7 @@
     "leads_created": 526,
     "booked": 93,
     "showed": 47,
-    "qualified": 40,
+    "qualified": 41,
     "closed": 7,
     "revenue": 60979.0
   },
@@ -14,7 +14,7 @@
       "leads_created": 304,
       "booked": 72,
       "showed": 38,
-      "qualified": 31,
+      "qualified": 32,
       "closed": 6,
       "revenue": 53982.0
     },
@@ -36,14 +36,26 @@
     }
   },
   "funnels": {
+    "YouTube": {
+      "leads_created": 22,
+      "booked": 13,
+      "book_pct": 59.1,
+      "showed": 9,
+      "show_pct": 69.2,
+      "qualified": 8,
+      "qual_pct": 61.5,
+      "closed": 1,
+      "cw_pct": 7.7,
+      "revenue": 8997.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 12,
       "booked": 39,
       "book_pct": 325.0,
       "showed": 19,
       "show_pct": 48.7,
-      "qualified": 13,
-      "qual_pct": 33.3,
+      "qualified": 14,
+      "qual_pct": 35.9,
       "closed": 3,
       "cw_pct": 7.7,
       "revenue": 29991.0
@@ -107,18 +119,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "YouTube": {
-      "leads_created": 22,
-      "booked": 13,
-      "book_pct": 59.1,
-      "showed": 9,
-      "show_pct": 69.2,
-      "qualified": 8,
-      "qual_pct": 61.5,
-      "closed": 1,
-      "cw_pct": 7.7,
-      "revenue": 8997.0
     },
     "Meta Ads": {
       "leads_created": 259,
