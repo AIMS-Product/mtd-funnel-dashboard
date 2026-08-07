@@ -2,7 +2,7 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 632,
+    "leads_created": 633,
     "booked": 120,
     "showed": 69,
     "qualified": 63,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 346,
+      "leads_created": 347,
       "booked": 90,
       "showed": 55,
       "qualified": 48,
@@ -47,6 +47,18 @@
       "closed": 3,
       "cw_pct": 5.9,
       "revenue": 29991.0
+    },
+    "Internal Webinar": {
+      "leads_created": 0,
+      "booked": 5,
+      "book_pct": 0,
+      "showed": 2,
+      "show_pct": 40.0,
+      "qualified": 2,
+      "qual_pct": 40.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "Unknown (Needs Review)": {
       "leads_created": 275,
@@ -85,25 +97,13 @@
       "revenue": 21891.0
     },
     "Google Ads": {
-      "leads_created": 11,
+      "leads_created": 12,
       "booked": 6,
-      "book_pct": 54.5,
+      "book_pct": 50.0,
       "showed": 5,
       "show_pct": 83.3,
       "qualified": 4,
       "qual_pct": 66.7,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Internal Webinar": {
-      "leads_created": 0,
-      "booked": 5,
-      "book_pct": 0,
-      "showed": 2,
-      "show_pct": 40.0,
-      "qualified": 2,
-      "qual_pct": 40.0,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
