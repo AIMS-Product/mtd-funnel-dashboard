@@ -2,7 +2,7 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 603,
+    "leads_created": 609,
     "booked": 120,
     "showed": 57,
     "qualified": 55,
@@ -27,7 +27,7 @@
       "revenue": 6997.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 252,
+      "leads_created": 258,
       "booked": 12,
       "showed": 4,
       "qualified": 3,
@@ -37,9 +37,9 @@
   },
   "funnels": {
     "Unknown (Needs Review)": {
-      "leads_created": 252,
+      "leads_created": 258,
       "booked": 12,
-      "book_pct": 4.8,
+      "book_pct": 4.7,
       "showed": 4,
       "show_pct": 33.3,
       "qualified": 3,
@@ -59,6 +59,30 @@
       "closed": 3,
       "cw_pct": 5.9,
       "revenue": 29991.0
+    },
+    "Website": {
+      "leads_created": 1,
+      "booked": 4,
+      "book_pct": 400.0,
+      "showed": 3,
+      "show_pct": 75.0,
+      "qualified": 3,
+      "qual_pct": 75.0,
+      "closed": 2,
+      "cw_pct": 50.0,
+      "revenue": 14994.0
+    },
+    "YouTube": {
+      "leads_created": 23,
+      "booked": 14,
+      "book_pct": 60.9,
+      "showed": 12,
+      "show_pct": 85.7,
+      "qualified": 10,
+      "qual_pct": 71.4,
+      "closed": 3,
+      "cw_pct": 21.4,
+      "revenue": 21891.0
     },
     "WWWS": {
       "leads_created": 0,
@@ -108,18 +132,6 @@
       "cw_pct": 0.0,
       "revenue": 0.0
     },
-    "YouTube": {
-      "leads_created": 23,
-      "booked": 14,
-      "book_pct": 60.9,
-      "showed": 12,
-      "show_pct": 85.7,
-      "qualified": 10,
-      "qual_pct": 71.4,
-      "closed": 3,
-      "cw_pct": 21.4,
-      "revenue": 21891.0
-    },
     "Anthony IG": {
       "leads_created": 1,
       "booked": 1,
@@ -143,18 +155,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Website": {
-      "leads_created": 1,
-      "booked": 4,
-      "book_pct": 400.0,
-      "showed": 3,
-      "show_pct": 75.0,
-      "qualified": 3,
-      "qual_pct": 75.0,
-      "closed": 2,
-      "cw_pct": 50.0,
-      "revenue": 14994.0
     },
     "LTF - In-House": {
       "leads_created": 1,
