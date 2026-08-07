@@ -2,9 +2,9 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 602,
+    "leads_created": 604,
     "booked": 117,
-    "showed": 54,
+    "showed": 55,
     "qualified": 51,
     "closed": 9,
     "revenue": 73873.0
@@ -13,7 +13,7 @@
     "IN-HOUSE": {
       "leads_created": 338,
       "booked": 89,
-      "showed": 44,
+      "showed": 45,
       "qualified": 41,
       "closed": 8,
       "revenue": 66876.0
@@ -27,7 +27,7 @@
       "revenue": 6997.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 253,
+      "leads_created": 255,
       "booked": 11,
       "showed": 4,
       "qualified": 2,
@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "Unknown (Needs Review)": {
+      "leads_created": 255,
+      "booked": 11,
+      "book_pct": 4.3,
+      "showed": 4,
+      "show_pct": 36.4,
+      "qualified": 2,
+      "qual_pct": 18.2,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Instagram": {
       "leads_created": 8,
       "booked": 17,
@@ -48,17 +60,17 @@
       "cw_pct": 5.9,
       "revenue": 6997.0
     },
-    "Unknown (Needs Review)": {
-      "leads_created": 253,
-      "booked": 11,
-      "book_pct": 4.3,
-      "showed": 4,
-      "show_pct": 36.4,
-      "qualified": 2,
-      "qual_pct": 18.2,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
+    "Reactivation Scrapers": {
+      "leads_created": 17,
+      "booked": 49,
+      "book_pct": 288.2,
+      "showed": 22,
+      "show_pct": 44.9,
+      "qualified": 19,
+      "qual_pct": 38.8,
+      "closed": 3,
+      "cw_pct": 6.1,
+      "revenue": 29991.0
     },
     "YouTube": {
       "leads_created": 23,
@@ -83,18 +95,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Reactivation Scrapers": {
-      "leads_created": 17,
-      "booked": 49,
-      "book_pct": 288.2,
-      "showed": 21,
-      "show_pct": 42.9,
-      "qualified": 19,
-      "qual_pct": 38.8,
-      "closed": 3,
-      "cw_pct": 6.1,
-      "revenue": 29991.0
     },
     "Meta Ads": {
       "leads_created": 281,
