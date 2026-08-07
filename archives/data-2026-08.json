@@ -11,7 +11,7 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 334,
+      "leads_created": 335,
       "booked": 88,
       "showed": 44,
       "qualified": 41,
@@ -27,7 +27,7 @@
       "revenue": 6997.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 251,
+      "leads_created": 250,
       "booked": 11,
       "showed": 3,
       "qualified": 2,
@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "WWWS": {
+      "leads_created": 0,
+      "booked": 1,
+      "book_pct": 0,
+      "showed": 1,
+      "show_pct": 100.0,
+      "qualified": 1,
+      "qual_pct": 100.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Instagram": {
       "leads_created": 8,
       "booked": 17,
@@ -97,25 +109,13 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 251,
+      "leads_created": 250,
       "booked": 11,
       "book_pct": 4.4,
       "showed": 3,
       "show_pct": 27.3,
       "qualified": 2,
       "qual_pct": 18.2,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "WWWS": {
-      "leads_created": 0,
-      "booked": 1,
-      "book_pct": 0,
-      "showed": 1,
-      "show_pct": 100.0,
-      "qualified": 1,
-      "qual_pct": 100.0,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
@@ -133,7 +133,7 @@
       "revenue": 0.0
     },
     "Meta Ads": {
-      "leads_created": 278,
+      "leads_created": 279,
       "booked": 7,
       "book_pct": 2.5,
       "showed": 2,
