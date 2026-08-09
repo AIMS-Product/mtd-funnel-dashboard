@@ -2,7 +2,7 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 691,
+    "leads_created": 690,
     "booked": 138,
     "showed": 73,
     "qualified": 67,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 375,
+      "leads_created": 377,
       "booked": 101,
       "showed": 56,
       "qualified": 50,
@@ -27,7 +27,7 @@
       "revenue": 6997.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 304,
+      "leads_created": 301,
       "booked": 15,
       "showed": 7,
       "qualified": 6,
@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "Unknown (Needs Review)": {
+      "leads_created": 301,
+      "booked": 15,
+      "book_pct": 5.0,
+      "showed": 7,
+      "show_pct": 46.7,
+      "qualified": 6,
+      "qual_pct": 40.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 23,
       "booked": 60,
@@ -48,20 +60,8 @@
       "cw_pct": 6.7,
       "revenue": 35988.0
     },
-    "Unknown (Needs Review)": {
-      "leads_created": 304,
-      "booked": 15,
-      "book_pct": 4.9,
-      "showed": 7,
-      "show_pct": 46.7,
-      "qualified": 6,
-      "qual_pct": 40.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Meta Ads": {
-      "leads_created": 303,
+      "leads_created": 304,
       "booked": 7,
       "book_pct": 2.3,
       "showed": 2,
@@ -133,9 +133,9 @@
       "revenue": 0.0
     },
     "Google Ads": {
-      "leads_created": 13,
+      "leads_created": 14,
       "booked": 6,
-      "book_pct": 46.2,
+      "book_pct": 42.9,
       "showed": 5,
       "show_pct": 83.3,
       "qualified": 4,
