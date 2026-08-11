@@ -2,8 +2,8 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 1066,
-    "booked": 178,
+    "leads_created": 1067,
+    "booked": 179,
     "showed": 91,
     "qualified": 81,
     "closed": 15,
@@ -11,10 +11,10 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 663,
-      "booked": 145,
-      "showed": 78,
-      "qualified": 67,
+      "leads_created": 669,
+      "booked": 151,
+      "showed": 80,
+      "qualified": 68,
       "closed": 13,
       "revenue": 91058.0
     },
@@ -27,10 +27,10 @@
       "revenue": 9997.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 385,
-      "booked": 8,
-      "showed": 3,
-      "qualified": 3,
+      "leads_created": 380,
+      "booked": 3,
+      "showed": 1,
+      "qualified": 2,
       "closed": 0,
       "revenue": 0.0
     }
@@ -48,6 +48,54 @@
       "cw_pct": 4.9,
       "revenue": 35988.0
     },
+    "Website": {
+      "leads_created": 14,
+      "booked": 16,
+      "book_pct": 114.3,
+      "showed": 12,
+      "show_pct": 75.0,
+      "qualified": 10,
+      "qual_pct": 62.5,
+      "closed": 5,
+      "cw_pct": 31.2,
+      "revenue": 28179.0
+    },
+    "YouTube": {
+      "leads_created": 40,
+      "booked": 22,
+      "book_pct": 55.0,
+      "showed": 16,
+      "show_pct": 72.7,
+      "qualified": 12,
+      "qual_pct": 54.5,
+      "closed": 4,
+      "cw_pct": 18.2,
+      "revenue": 26891.0
+    },
+    "Internal Webinar": {
+      "leads_created": 237,
+      "booked": 8,
+      "book_pct": 3.4,
+      "showed": 4,
+      "show_pct": 50.0,
+      "qualified": 3,
+      "qual_pct": 37.5,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Meta Ads": {
+      "leads_created": 326,
+      "booked": 10,
+      "book_pct": 3.1,
+      "showed": 3,
+      "show_pct": 30.0,
+      "qualified": 3,
+      "qual_pct": 30.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Google Ads": {
       "leads_created": 17,
       "booked": 9,
@@ -56,42 +104,6 @@
       "show_pct": 66.7,
       "qualified": 6,
       "qual_pct": 66.7,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Website": {
-      "leads_created": 11,
-      "booked": 13,
-      "book_pct": 118.2,
-      "showed": 10,
-      "show_pct": 76.9,
-      "qualified": 9,
-      "qual_pct": 69.2,
-      "closed": 5,
-      "cw_pct": 38.5,
-      "revenue": 28179.0
-    },
-    "YouTube": {
-      "leads_created": 39,
-      "booked": 21,
-      "book_pct": 53.8,
-      "showed": 16,
-      "show_pct": 76.2,
-      "qualified": 12,
-      "qual_pct": 57.1,
-      "closed": 4,
-      "cw_pct": 19.0,
-      "revenue": 26891.0
-    },
-    "Meta Ads": {
-      "leads_created": 325,
-      "booked": 9,
-      "book_pct": 2.8,
-      "showed": 3,
-      "show_pct": 33.3,
-      "qualified": 3,
-      "qual_pct": 33.3,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
@@ -107,30 +119,6 @@
       "closed": 2,
       "cw_pct": 8.3,
       "revenue": 9997.0
-    },
-    "Unknown (Needs Review)": {
-      "leads_created": 385,
-      "booked": 8,
-      "book_pct": 2.1,
-      "showed": 3,
-      "show_pct": 37.5,
-      "qualified": 3,
-      "qual_pct": 37.5,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Internal Webinar": {
-      "leads_created": 236,
-      "booked": 7,
-      "book_pct": 3.0,
-      "showed": 4,
-      "show_pct": 57.1,
-      "qualified": 3,
-      "qual_pct": 42.9,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "WWWS": {
       "leads_created": 0,
@@ -164,6 +152,18 @@
       "show_pct": 0.0,
       "qualified": 1,
       "qual_pct": 100.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Unknown (Needs Review)": {
+      "leads_created": 380,
+      "booked": 3,
+      "book_pct": 0.8,
+      "showed": 1,
+      "show_pct": 33.3,
+      "qualified": 2,
+      "qual_pct": 66.7,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
