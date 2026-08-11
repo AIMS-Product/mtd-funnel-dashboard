@@ -2,7 +2,7 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 844,
+    "leads_created": 850,
     "booked": 165,
     "showed": 91,
     "qualified": 80,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 481,
+      "leads_created": 487,
       "booked": 129,
       "showed": 74,
       "qualified": 63,
@@ -36,6 +36,30 @@
     }
   },
   "funnels": {
+    "YouTube": {
+      "leads_created": 37,
+      "booked": 18,
+      "book_pct": 48.6,
+      "showed": 15,
+      "show_pct": 83.3,
+      "qualified": 11,
+      "qual_pct": 61.1,
+      "closed": 4,
+      "cw_pct": 22.2,
+      "revenue": 26891.0
+    },
+    "WWWS": {
+      "leads_created": 0,
+      "booked": 2,
+      "book_pct": 0,
+      "showed": 2,
+      "show_pct": 100.0,
+      "qualified": 2,
+      "qual_pct": 100.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 30,
       "booked": 73,
@@ -49,9 +73,9 @@
       "revenue": 35988.0
     },
     "Internal Webinar": {
-      "leads_created": 64,
+      "leads_created": 70,
       "booked": 7,
-      "book_pct": 10.9,
+      "book_pct": 10.0,
       "showed": 4,
       "show_pct": 57.1,
       "qualified": 3,
@@ -59,18 +83,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "YouTube": {
-      "leads_created": 37,
-      "booked": 18,
-      "book_pct": 48.6,
-      "showed": 15,
-      "show_pct": 83.3,
-      "qualified": 11,
-      "qual_pct": 61.1,
-      "closed": 4,
-      "cw_pct": 22.2,
-      "revenue": 26891.0
     },
     "Google Ads": {
       "leads_created": 17,
@@ -131,18 +143,6 @@
       "closed": 4,
       "cw_pct": 50.0,
       "revenue": 26991.0
-    },
-    "WWWS": {
-      "leads_created": 0,
-      "booked": 2,
-      "book_pct": 0,
-      "showed": 2,
-      "show_pct": 100.0,
-      "qualified": 2,
-      "qual_pct": 100.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "Side Hustle Nation": {
       "leads_created": 0,
