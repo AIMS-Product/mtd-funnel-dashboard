@@ -6,8 +6,8 @@
     "booked": 177,
     "showed": 93,
     "qualified": 83,
-    "closed": 16,
-    "revenue": 110052.0
+    "closed": 17,
+    "revenue": 114052.0
   },
   "groups": {
     "IN-HOUSE": {
@@ -31,8 +31,8 @@
       "booked": 3,
       "showed": 1,
       "qualified": 2,
-      "closed": 0,
-      "revenue": 0.0
+      "closed": 1,
+      "revenue": 4000.0
     }
   },
   "funnels": {
@@ -47,6 +47,18 @@
       "closed": 5,
       "cw_pct": 6.2,
       "revenue": 44985.0
+    },
+    "YouTube": {
+      "leads_created": 40,
+      "booked": 21,
+      "book_pct": 52.5,
+      "showed": 16,
+      "show_pct": 76.2,
+      "qualified": 12,
+      "qual_pct": 57.1,
+      "closed": 4,
+      "cw_pct": 19.0,
+      "revenue": 26891.0
     },
     "Instagram": {
       "leads_created": 15,
@@ -71,18 +83,6 @@
       "closed": 5,
       "cw_pct": 31.2,
       "revenue": 28179.0
-    },
-    "YouTube": {
-      "leads_created": 40,
-      "booked": 21,
-      "book_pct": 52.5,
-      "showed": 16,
-      "show_pct": 76.2,
-      "qualified": 12,
-      "qual_pct": 57.1,
-      "closed": 4,
-      "cw_pct": 19.0,
-      "revenue": 26891.0
     },
     "Google Ads": {
       "leads_created": 17,
@@ -164,9 +164,9 @@
       "show_pct": 33.3,
       "qualified": 2,
       "qual_pct": 66.7,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
+      "closed": 1,
+      "cw_pct": 33.3,
+      "revenue": 4000.0
     },
     "Linkedin": {
       "leads_created": 2,
