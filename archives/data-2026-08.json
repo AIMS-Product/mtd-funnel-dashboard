@@ -4,17 +4,17 @@
   "grand": {
     "leads_created": 1064,
     "booked": 177,
-    "showed": 91,
-    "qualified": 81,
+    "showed": 92,
+    "qualified": 82,
     "closed": 16,
     "revenue": 110052.0
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 670,
+      "leads_created": 673,
       "booked": 149,
-      "showed": 80,
-      "qualified": 68,
+      "showed": 81,
+      "qualified": 69,
       "closed": 14,
       "revenue": 100055.0
     },
@@ -27,7 +27,7 @@
       "revenue": 9997.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 376,
+      "leads_created": 373,
       "booked": 3,
       "showed": 1,
       "qualified": 2,
@@ -36,22 +36,10 @@
     }
   },
   "funnels": {
-    "Reactivation Scrapers": {
-      "leads_created": 34,
-      "booked": 81,
-      "book_pct": 238.2,
-      "showed": 37,
-      "show_pct": 45.7,
-      "qualified": 31,
-      "qual_pct": 38.3,
-      "closed": 5,
-      "cw_pct": 6.2,
-      "revenue": 44985.0
-    },
     "YouTube": {
-      "leads_created": 40,
+      "leads_created": 41,
       "booked": 21,
-      "book_pct": 52.5,
+      "book_pct": 51.2,
       "showed": 16,
       "show_pct": 76.2,
       "qualified": 12,
@@ -59,6 +47,18 @@
       "closed": 4,
       "cw_pct": 19.0,
       "revenue": 26891.0
+    },
+    "Reactivation Scrapers": {
+      "leads_created": 34,
+      "booked": 81,
+      "book_pct": 238.2,
+      "showed": 38,
+      "show_pct": 46.9,
+      "qualified": 32,
+      "qual_pct": 39.5,
+      "closed": 5,
+      "cw_pct": 6.2,
+      "revenue": 44985.0
     },
     "Website": {
       "leads_created": 14,
@@ -97,9 +97,9 @@
       "revenue": 0.0
     },
     "Meta Ads": {
-      "leads_created": 327,
+      "leads_created": 329,
       "booked": 10,
-      "book_pct": 3.1,
+      "book_pct": 3.0,
       "showed": 3,
       "show_pct": 30.0,
       "qualified": 3,
@@ -157,7 +157,7 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 376,
+      "leads_created": 373,
       "booked": 3,
       "book_pct": 0.8,
       "showed": 1,
