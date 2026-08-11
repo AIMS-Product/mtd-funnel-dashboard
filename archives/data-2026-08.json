@@ -2,7 +2,7 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 838,
+    "leads_created": 841,
     "booked": 165,
     "showed": 91,
     "qualified": 80,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 472,
+      "leads_created": 478,
       "booked": 129,
       "showed": 74,
       "qualified": 63,
@@ -27,7 +27,7 @@
       "revenue": 9997.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 351,
+      "leads_created": 348,
       "booked": 14,
       "showed": 7,
       "qualified": 6,
@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 61,
+      "booked": 7,
+      "book_pct": 11.5,
+      "showed": 4,
+      "show_pct": 57.1,
+      "qualified": 3,
+      "qual_pct": 42.9,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 30,
       "booked": 73,
@@ -49,9 +61,9 @@
       "revenue": 35988.0
     },
     "YouTube": {
-      "leads_created": 36,
+      "leads_created": 37,
       "booked": 18,
-      "book_pct": 50.0,
+      "book_pct": 48.6,
       "showed": 15,
       "show_pct": 83.3,
       "qualified": 11,
@@ -59,18 +71,6 @@
       "closed": 4,
       "cw_pct": 22.2,
       "revenue": 26891.0
-    },
-    "Internal Webinar": {
-      "leads_created": 59,
-      "booked": 7,
-      "book_pct": 11.9,
-      "showed": 4,
-      "show_pct": 57.1,
-      "qualified": 3,
-      "qual_pct": 42.9,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "Google Ads": {
       "leads_created": 17,
@@ -97,7 +97,7 @@
       "revenue": 9997.0
     },
     "Meta Ads": {
-      "leads_created": 319,
+      "leads_created": 321,
       "booked": 9,
       "book_pct": 2.8,
       "showed": 3,
@@ -109,7 +109,7 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 351,
+      "leads_created": 348,
       "booked": 14,
       "book_pct": 4.0,
       "showed": 7,
@@ -181,9 +181,9 @@
       "revenue": 0.0
     },
     "Anthony IG": {
-      "leads_created": 1,
+      "leads_created": 2,
       "booked": 1,
-      "book_pct": 100.0,
+      "book_pct": 50.0,
       "showed": 0,
       "show_pct": 0.0,
       "qualified": 0,
