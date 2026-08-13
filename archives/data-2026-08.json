@@ -11,7 +11,7 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 1198,
+      "leads_created": 1199,
       "booked": 194,
       "showed": 106,
       "qualified": 86,
@@ -27,7 +27,7 @@
       "revenue": 9997.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 421,
+      "leads_created": 420,
       "booked": 10,
       "showed": 5,
       "qualified": 6,
@@ -36,29 +36,29 @@
     }
   },
   "funnels": {
-    "Reactivation Scrapers": {
-      "leads_created": 38,
-      "booked": 96,
-      "book_pct": 252.6,
-      "showed": 47,
-      "show_pct": 49.0,
-      "qualified": 40,
-      "qual_pct": 41.7,
-      "closed": 5,
-      "cw_pct": 5.2,
-      "revenue": 44985.0
+    "Google Ads": {
+      "leads_created": 26,
+      "booked": 11,
+      "book_pct": 42.3,
+      "showed": 6,
+      "show_pct": 54.5,
+      "qualified": 5,
+      "qual_pct": 45.5,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
-    "Instagram": {
-      "leads_created": 18,
-      "booked": 27,
-      "book_pct": 150.0,
-      "showed": 13,
-      "show_pct": 48.1,
-      "qualified": 13,
-      "qual_pct": 48.1,
-      "closed": 2,
-      "cw_pct": 7.4,
-      "revenue": 9997.0
+    "Meta Ads": {
+      "leads_created": 336,
+      "booked": 14,
+      "book_pct": 4.2,
+      "showed": 5,
+      "show_pct": 35.7,
+      "qualified": 5,
+      "qual_pct": 35.7,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "YouTube": {
       "leads_created": 43,
@@ -72,8 +72,56 @@
       "cw_pct": 20.8,
       "revenue": 33788.0
     },
+    "Reactivation Scrapers": {
+      "leads_created": 41,
+      "booked": 98,
+      "book_pct": 239.0,
+      "showed": 48,
+      "show_pct": 49.0,
+      "qualified": 40,
+      "qual_pct": 40.8,
+      "closed": 5,
+      "cw_pct": 5.1,
+      "revenue": 44985.0
+    },
+    "Internal Webinar": {
+      "leads_created": 735,
+      "booked": 25,
+      "book_pct": 3.4,
+      "showed": 16,
+      "show_pct": 64.0,
+      "qualified": 10,
+      "qual_pct": 40.0,
+      "closed": 1,
+      "cw_pct": 4.0,
+      "revenue": 8997.0
+    },
+    "Instagram": {
+      "leads_created": 18,
+      "booked": 27,
+      "book_pct": 150.0,
+      "showed": 13,
+      "show_pct": 48.1,
+      "qualified": 13,
+      "qual_pct": 48.1,
+      "closed": 2,
+      "cw_pct": 7.4,
+      "revenue": 9997.0
+    },
+    "Linkedin": {
+      "leads_created": 3,
+      "booked": 2,
+      "book_pct": 66.7,
+      "showed": 1,
+      "show_pct": 50.0,
+      "qualified": 0,
+      "qual_pct": 0.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Unknown (Needs Review)": {
-      "leads_created": 421,
+      "leads_created": 420,
       "booked": 10,
       "book_pct": 2.4,
       "showed": 5,
@@ -96,30 +144,6 @@
       "cw_pct": 0.0,
       "revenue": 0.0
     },
-    "Internal Webinar": {
-      "leads_created": 738,
-      "booked": 27,
-      "book_pct": 3.7,
-      "showed": 17,
-      "show_pct": 63.0,
-      "qualified": 10,
-      "qual_pct": 37.0,
-      "closed": 1,
-      "cw_pct": 3.7,
-      "revenue": 8997.0
-    },
-    "Google Ads": {
-      "leads_created": 25,
-      "booked": 11,
-      "book_pct": 44.0,
-      "showed": 6,
-      "show_pct": 54.5,
-      "qualified": 5,
-      "qual_pct": 45.5,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Website": {
       "leads_created": 14,
       "booked": 17,
@@ -131,30 +155,6 @@
       "closed": 6,
       "cw_pct": 35.3,
       "revenue": 34176.0
-    },
-    "Meta Ads": {
-      "leads_created": 336,
-      "booked": 14,
-      "book_pct": 4.2,
-      "showed": 5,
-      "show_pct": 35.7,
-      "qualified": 5,
-      "qual_pct": 35.7,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Linkedin": {
-      "leads_created": 3,
-      "booked": 2,
-      "book_pct": 66.7,
-      "showed": 1,
-      "show_pct": 50.0,
-      "qualified": 0,
-      "qual_pct": 0.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "X": {
       "leads_created": 1,
