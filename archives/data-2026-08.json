@@ -3,18 +3,18 @@
   "month_label": "August 2026",
   "grand": {
     "leads_created": 1138,
-    "booked": 234,
-    "showed": 116,
-    "qualified": 98,
+    "booked": 233,
+    "showed": 117,
+    "qualified": 99,
     "closed": 20,
     "revenue": 140043.0
   },
   "groups": {
     "IN-HOUSE": {
       "leads_created": 692,
-      "booked": 194,
-      "showed": 100,
-      "qualified": 81,
+      "booked": 193,
+      "showed": 101,
+      "qualified": 82,
       "closed": 16,
       "revenue": 115049.0
     },
@@ -36,18 +36,6 @@
     }
   },
   "funnels": {
-    "Internal Webinar": {
-      "leads_created": 227,
-      "booked": 22,
-      "book_pct": 9.7,
-      "showed": 11,
-      "show_pct": 50.0,
-      "qualified": 6,
-      "qual_pct": 27.3,
-      "closed": 1,
-      "cw_pct": 4.5,
-      "revenue": 8997.0
-    },
     "Meta Ads": {
       "leads_created": 341,
       "booked": 15,
@@ -60,18 +48,6 @@
       "cw_pct": 0.0,
       "revenue": 0.0
     },
-    "YouTube": {
-      "leads_created": 45,
-      "booked": 25,
-      "book_pct": 55.6,
-      "showed": 17,
-      "show_pct": 68.0,
-      "qualified": 13,
-      "qual_pct": 52.0,
-      "closed": 4,
-      "cw_pct": 16.0,
-      "revenue": 26891.0
-    },
     "Reactivation Scrapers": {
       "leads_created": 38,
       "booked": 98,
@@ -83,6 +59,42 @@
       "closed": 5,
       "cw_pct": 5.1,
       "revenue": 44985.0
+    },
+    "Internal Webinar": {
+      "leads_created": 227,
+      "booked": 21,
+      "book_pct": 9.3,
+      "showed": 11,
+      "show_pct": 52.4,
+      "qualified": 6,
+      "qual_pct": 28.6,
+      "closed": 1,
+      "cw_pct": 4.8,
+      "revenue": 8997.0
+    },
+    "Unknown (Needs Review)": {
+      "leads_created": 425,
+      "booked": 10,
+      "book_pct": 2.4,
+      "showed": 2,
+      "show_pct": 20.0,
+      "qualified": 3,
+      "qual_pct": 30.0,
+      "closed": 2,
+      "cw_pct": 20.0,
+      "revenue": 14997.0
+    },
+    "YouTube": {
+      "leads_created": 45,
+      "booked": 25,
+      "book_pct": 55.6,
+      "showed": 18,
+      "show_pct": 72.0,
+      "qualified": 14,
+      "qual_pct": 56.0,
+      "closed": 4,
+      "cw_pct": 16.0,
+      "revenue": 26891.0
     },
     "X": {
       "leads_created": 1,
@@ -107,18 +119,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Unknown (Needs Review)": {
-      "leads_created": 425,
-      "booked": 10,
-      "book_pct": 2.4,
-      "showed": 2,
-      "show_pct": 20.0,
-      "qualified": 3,
-      "qual_pct": 30.0,
-      "closed": 2,
-      "cw_pct": 20.0,
-      "revenue": 14997.0
     },
     "Side Hustle Nation": {
       "leads_created": 0,
