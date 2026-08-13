@@ -4,7 +4,7 @@
   "grand": {
     "leads_created": 1130,
     "booked": 235,
-    "showed": 113,
+    "showed": 115,
     "qualified": 96,
     "closed": 20,
     "revenue": 140043.0
@@ -13,7 +13,7 @@
     "IN-HOUSE": {
       "leads_created": 691,
       "booked": 193,
-      "showed": 98,
+      "showed": 99,
       "qualified": 80,
       "closed": 16,
       "revenue": 115049.0
@@ -29,7 +29,7 @@
     "UNCATEGORIZED": {
       "leads_created": 418,
       "booked": 12,
-      "showed": 1,
+      "showed": 2,
       "qualified": 2,
       "closed": 2,
       "revenue": 14997.0
@@ -48,6 +48,30 @@
       "cw_pct": 5.1,
       "revenue": 44985.0
     },
+    "Unknown (Needs Review)": {
+      "leads_created": 418,
+      "booked": 12,
+      "book_pct": 2.9,
+      "showed": 2,
+      "show_pct": 16.7,
+      "qualified": 2,
+      "qual_pct": 16.7,
+      "closed": 2,
+      "cw_pct": 16.7,
+      "revenue": 14997.0
+    },
+    "Google Ads": {
+      "leads_created": 23,
+      "booked": 12,
+      "book_pct": 52.2,
+      "showed": 7,
+      "show_pct": 58.3,
+      "qualified": 6,
+      "qual_pct": 50.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Website": {
       "leads_created": 14,
       "booked": 17,
@@ -59,30 +83,6 @@
       "closed": 6,
       "cw_pct": 35.3,
       "revenue": 34176.0
-    },
-    "Google Ads": {
-      "leads_created": 23,
-      "booked": 12,
-      "book_pct": 52.2,
-      "showed": 6,
-      "show_pct": 50.0,
-      "qualified": 6,
-      "qual_pct": 50.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Unknown (Needs Review)": {
-      "leads_created": 418,
-      "booked": 12,
-      "book_pct": 2.9,
-      "showed": 1,
-      "show_pct": 8.3,
-      "qualified": 2,
-      "qual_pct": 16.7,
-      "closed": 2,
-      "cw_pct": 16.7,
-      "revenue": 14997.0
     },
     "YouTube": {
       "leads_created": 44,
