@@ -2,7 +2,7 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 1671,
+    "leads_created": 1675,
     "booked": 232,
     "showed": 128,
     "qualified": 106,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 1223,
+      "leads_created": 1225,
       "booked": 192,
       "showed": 107,
       "qualified": 86,
@@ -27,7 +27,7 @@
       "revenue": 9997.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 425,
+      "leads_created": 427,
       "booked": 10,
       "showed": 6,
       "qualified": 6,
@@ -36,8 +36,32 @@
     }
   },
   "funnels": {
+    "Google Ads": {
+      "leads_created": 27,
+      "booked": 11,
+      "book_pct": 40.7,
+      "showed": 6,
+      "show_pct": 54.5,
+      "qualified": 5,
+      "qual_pct": 45.5,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Side Hustle Nation": {
+      "leads_created": 0,
+      "booked": 1,
+      "book_pct": 0,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Internal Webinar": {
-      "leads_created": 753,
+      "leads_created": 756,
       "booked": 24,
       "book_pct": 3.2,
       "showed": 16,
@@ -49,9 +73,9 @@
       "revenue": 8997.0
     },
     "Reactivation Scrapers": {
-      "leads_created": 43,
+      "leads_created": 42,
       "booked": 96,
-      "book_pct": 223.3,
+      "book_pct": 228.6,
       "showed": 47,
       "show_pct": 49.0,
       "qualified": 39,
@@ -84,30 +108,6 @@
       "cw_pct": 38.9,
       "revenue": 40173.0
     },
-    "Google Ads": {
-      "leads_created": 27,
-      "booked": 11,
-      "book_pct": 40.7,
-      "showed": 6,
-      "show_pct": 54.5,
-      "qualified": 5,
-      "qual_pct": 45.5,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Side Hustle Nation": {
-      "leads_created": 0,
-      "booked": 1,
-      "book_pct": 0,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Instagram": {
       "leads_created": 19,
       "booked": 27,
@@ -133,9 +133,9 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 425,
+      "leads_created": 427,
       "booked": 10,
-      "book_pct": 2.4,
+      "book_pct": 2.3,
       "showed": 6,
       "show_pct": 60.0,
       "qualified": 6,
