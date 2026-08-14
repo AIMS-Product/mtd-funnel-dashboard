@@ -2,21 +2,21 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 1699,
+    "leads_created": 1701,
     "booked": 254,
     "showed": 128,
     "qualified": 106,
-    "closed": 22,
-    "revenue": 152937.0
+    "closed": 23,
+    "revenue": 158934.0
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 1247,
+      "leads_created": 1248,
       "booked": 211,
       "showed": 107,
       "qualified": 86,
-      "closed": 18,
-      "revenue": 127943.0
+      "closed": 19,
+      "revenue": 133940.0
     },
     "EXTERNAL": {
       "leads_created": 25,
@@ -27,7 +27,7 @@
       "revenue": 9997.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 427,
+      "leads_created": 428,
       "booked": 12,
       "showed": 6,
       "qualified": 6,
@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 776,
+      "booked": 26,
+      "book_pct": 3.4,
+      "showed": 16,
+      "show_pct": 61.5,
+      "qualified": 9,
+      "qual_pct": 34.6,
+      "closed": 1,
+      "cw_pct": 3.8,
+      "revenue": 8997.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 42,
       "booked": 108,
@@ -60,18 +72,6 @@
       "cw_pct": 36.8,
       "revenue": 40173.0
     },
-    "Internal Webinar": {
-      "leads_created": 775,
-      "booked": 26,
-      "book_pct": 3.4,
-      "showed": 16,
-      "show_pct": 61.5,
-      "qualified": 9,
-      "qual_pct": 34.6,
-      "closed": 1,
-      "cw_pct": 3.8,
-      "revenue": 8997.0
-    },
     "Google Ads": {
       "leads_created": 28,
       "booked": 13,
@@ -92,9 +92,9 @@
       "show_pct": 72.0,
       "qualified": 14,
       "qual_pct": 56.0,
-      "closed": 5,
-      "cw_pct": 20.0,
-      "revenue": 33788.0
+      "closed": 6,
+      "cw_pct": 24.0,
+      "revenue": 39785.0
     },
     "Side Hustle Nation": {
       "leads_created": 0,
@@ -145,7 +145,7 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 427,
+      "leads_created": 428,
       "booked": 12,
       "book_pct": 2.8,
       "showed": 6,
