@@ -2,7 +2,7 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 1667,
+    "leads_created": 1670,
     "booked": 232,
     "showed": 128,
     "qualified": 106,
@@ -27,7 +27,7 @@
       "revenue": 9997.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 422,
+      "leads_created": 425,
       "booked": 10,
       "showed": 6,
       "qualified": 6,
@@ -36,6 +36,30 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 752,
+      "booked": 24,
+      "book_pct": 3.2,
+      "showed": 16,
+      "show_pct": 66.7,
+      "qualified": 9,
+      "qual_pct": 37.5,
+      "closed": 1,
+      "cw_pct": 4.2,
+      "revenue": 8997.0
+    },
+    "WWWS": {
+      "leads_created": 0,
+      "booked": 2,
+      "book_pct": 0,
+      "showed": 2,
+      "show_pct": 100.0,
+      "qualified": 2,
+      "qual_pct": 100.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Website": {
       "leads_created": 14,
       "booked": 18,
@@ -109,7 +133,7 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 422,
+      "leads_created": 425,
       "booked": 10,
       "book_pct": 2.4,
       "showed": 6,
@@ -132,18 +156,6 @@
       "cw_pct": 20.8,
       "revenue": 33788.0
     },
-    "Internal Webinar": {
-      "leads_created": 752,
-      "booked": 24,
-      "book_pct": 3.2,
-      "showed": 16,
-      "show_pct": 66.7,
-      "qualified": 9,
-      "qual_pct": 37.5,
-      "closed": 1,
-      "cw_pct": 4.2,
-      "revenue": 8997.0
-    },
     "LTF - In-House": {
       "leads_created": 1,
       "booked": 1,
@@ -151,18 +163,6 @@
       "showed": 0,
       "show_pct": 0.0,
       "qualified": 1,
-      "qual_pct": 100.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "WWWS": {
-      "leads_created": 0,
-      "booked": 2,
-      "book_pct": 0,
-      "showed": 2,
-      "show_pct": 100.0,
-      "qualified": 2,
       "qual_pct": 100.0,
       "closed": 0,
       "cw_pct": 0.0,
