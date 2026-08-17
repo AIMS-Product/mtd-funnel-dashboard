@@ -2,7 +2,7 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 2432,
+    "leads_created": 2433,
     "booked": 283,
     "showed": 151,
     "qualified": 126,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 1919,
+      "leads_created": 1920,
       "booked": 241,
       "showed": 132,
       "qualified": 108,
@@ -36,18 +36,6 @@
     }
   },
   "funnels": {
-    "Unknown (Needs Review)": {
-      "leads_created": 482,
-      "booked": 9,
-      "book_pct": 1.9,
-      "showed": 1,
-      "show_pct": 11.1,
-      "qualified": 2,
-      "qual_pct": 22.2,
-      "closed": 2,
-      "cw_pct": 22.2,
-      "revenue": 14997.0
-    },
     "Reactivation Scrapers": {
       "leads_created": 53,
       "booked": 120,
@@ -59,6 +47,30 @@
       "closed": 8,
       "cw_pct": 6.7,
       "revenue": 66529.0
+    },
+    "Linkedin": {
+      "leads_created": 3,
+      "booked": 2,
+      "book_pct": 66.7,
+      "showed": 1,
+      "show_pct": 50.0,
+      "qualified": 0,
+      "qual_pct": 0.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Unknown (Needs Review)": {
+      "leads_created": 482,
+      "booked": 9,
+      "book_pct": 1.9,
+      "showed": 1,
+      "show_pct": 11.1,
+      "qualified": 2,
+      "qual_pct": 22.2,
+      "closed": 2,
+      "cw_pct": 22.2,
+      "revenue": 14997.0
     },
     "YouTube": {
       "leads_created": 55,
@@ -73,7 +85,7 @@
       "revenue": 39785.0
     },
     "Internal Webinar": {
-      "leads_created": 1399,
+      "leads_created": 1400,
       "booked": 28,
       "book_pct": 2.0,
       "showed": 19,
@@ -174,18 +186,6 @@
       "book_pct": 0,
       "showed": 0,
       "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Linkedin": {
-      "leads_created": 3,
-      "booked": 2,
-      "book_pct": 66.7,
-      "showed": 1,
-      "show_pct": 50.0,
       "qualified": 0,
       "qual_pct": 0.0,
       "closed": 0,
