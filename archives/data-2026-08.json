@@ -36,18 +36,6 @@
     }
   },
   "funnels": {
-    "Google Ads": {
-      "leads_created": 42,
-      "booked": 20,
-      "book_pct": 47.6,
-      "showed": 10,
-      "show_pct": 50.0,
-      "qualified": 8,
-      "qual_pct": 40.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "YouTube": {
       "leads_created": 65,
       "booked": 37,
@@ -59,6 +47,30 @@
       "closed": 6,
       "cw_pct": 16.2,
       "revenue": 39785.0
+    },
+    "Internal Webinar": {
+      "leads_created": 1472,
+      "booked": 34,
+      "book_pct": 2.3,
+      "showed": 21,
+      "show_pct": 61.8,
+      "qualified": 13,
+      "qual_pct": 38.2,
+      "closed": 2,
+      "cw_pct": 5.9,
+      "revenue": 14994.0
+    },
+    "Instagram": {
+      "leads_created": 31,
+      "booked": 33,
+      "book_pct": 106.5,
+      "showed": 17,
+      "show_pct": 51.5,
+      "qualified": 16,
+      "qual_pct": 48.5,
+      "closed": 4,
+      "cw_pct": 12.1,
+      "revenue": 24991.0
     },
     "Reactivation Scrapers": {
       "leads_created": 66,
@@ -84,17 +96,17 @@
       "cw_pct": 22.6,
       "revenue": 40173.0
     },
-    "Internal Webinar": {
-      "leads_created": 1472,
-      "booked": 34,
-      "book_pct": 2.3,
-      "showed": 21,
-      "show_pct": 61.8,
-      "qualified": 13,
-      "qual_pct": 38.2,
-      "closed": 2,
-      "cw_pct": 5.9,
-      "revenue": 14994.0
+    "Google Ads": {
+      "leads_created": 42,
+      "booked": 20,
+      "book_pct": 47.6,
+      "showed": 10,
+      "show_pct": 50.0,
+      "qualified": 8,
+      "qual_pct": 40.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "LTF - In-House": {
       "leads_created": 1,
@@ -107,18 +119,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Instagram": {
-      "leads_created": 31,
-      "booked": 33,
-      "book_pct": 106.5,
-      "showed": 17,
-      "show_pct": 51.5,
-      "qualified": 16,
-      "qual_pct": 48.5,
-      "closed": 4,
-      "cw_pct": 12.1,
-      "revenue": 24991.0
     },
     "X": {
       "leads_created": 1,
