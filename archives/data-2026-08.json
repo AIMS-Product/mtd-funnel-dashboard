@@ -4,7 +4,7 @@
   "grand": {
     "leads_created": 2673,
     "booked": 370,
-    "showed": 200,
+    "showed": 201,
     "qualified": 165,
     "closed": 41,
     "revenue": 281736.0
@@ -13,7 +13,7 @@
     "IN-HOUSE": {
       "leads_created": 2081,
       "booked": 328,
-      "showed": 177,
+      "showed": 178,
       "qualified": 143,
       "closed": 32,
       "revenue": 220757.0
@@ -40,25 +40,13 @@
       "leads_created": 83,
       "booked": 159,
       "book_pct": 191.6,
-      "showed": 71,
-      "show_pct": 44.7,
+      "showed": 72,
+      "show_pct": 45.3,
       "qualified": 60,
       "qual_pct": 37.7,
       "closed": 16,
       "cw_pct": 10.1,
       "revenue": 118908.0
-    },
-    "Internal Webinar": {
-      "leads_created": 1464,
-      "booked": 44,
-      "book_pct": 3.0,
-      "showed": 28,
-      "show_pct": 63.6,
-      "qualified": 18,
-      "qual_pct": 40.9,
-      "closed": 2,
-      "cw_pct": 4.5,
-      "revenue": 14994.0
     },
     "YouTube": {
       "leads_created": 76,
@@ -72,18 +60,6 @@
       "cw_pct": 16.3,
       "revenue": 46682.0
     },
-    "Google Ads": {
-      "leads_created": 46,
-      "booked": 24,
-      "book_pct": 52.2,
-      "showed": 10,
-      "show_pct": 41.7,
-      "qualified": 8,
-      "qual_pct": 33.3,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Meta Ads": {
       "leads_created": 373,
       "booked": 15,
@@ -92,6 +68,30 @@
       "show_pct": 53.3,
       "qualified": 6,
       "qual_pct": 40.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Internal Webinar": {
+      "leads_created": 1464,
+      "booked": 44,
+      "book_pct": 3.0,
+      "showed": 28,
+      "show_pct": 63.6,
+      "qualified": 18,
+      "qual_pct": 40.9,
+      "closed": 2,
+      "cw_pct": 4.5,
+      "revenue": 14994.0
+    },
+    "Google Ads": {
+      "leads_created": 46,
+      "booked": 24,
+      "book_pct": 52.2,
+      "showed": 10,
+      "show_pct": 41.7,
+      "qualified": 8,
+      "qual_pct": 33.3,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
