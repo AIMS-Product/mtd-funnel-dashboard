@@ -4,30 +4,30 @@
   "grand": {
     "leads_created": 2665,
     "booked": 375,
-    "showed": 196,
+    "showed": 195,
     "qualified": 163,
     "closed": 40,
     "revenue": 268842.0
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 2067,
-      "booked": 327,
-      "showed": 173,
-      "qualified": 142,
+      "leads_created": 2068,
+      "booked": 326,
+      "showed": 172,
+      "qualified": 141,
       "closed": 31,
       "revenue": 207863.0
     },
     "EXTERNAL": {
       "leads_created": 42,
-      "booked": 38,
+      "booked": 39,
       "showed": 21,
-      "qualified": 18,
+      "qualified": 19,
       "closed": 7,
       "revenue": 45982.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 556,
+      "leads_created": 555,
       "booked": 10,
       "showed": 2,
       "qualified": 3,
@@ -36,53 +36,17 @@
     }
   },
   "funnels": {
-    "YouTube": {
-      "leads_created": 76,
-      "booked": 43,
-      "book_pct": 56.6,
-      "showed": 34,
-      "show_pct": 79.1,
-      "qualified": 28,
-      "qual_pct": 65.1,
-      "closed": 6,
-      "cw_pct": 14.0,
-      "revenue": 39785.0
-    },
-    "Instagram": {
-      "leads_created": 38,
-      "booked": 35,
-      "book_pct": 92.1,
-      "showed": 19,
-      "show_pct": 54.3,
-      "qualified": 17,
-      "qual_pct": 48.6,
-      "closed": 7,
-      "cw_pct": 20.0,
-      "revenue": 45982.0
-    },
     "Reactivation Scrapers": {
       "leads_created": 77,
-      "booked": 164,
-      "book_pct": 213.0,
-      "showed": 71,
-      "show_pct": 43.3,
-      "qualified": 61,
-      "qual_pct": 37.2,
+      "booked": 163,
+      "book_pct": 211.7,
+      "showed": 70,
+      "show_pct": 42.9,
+      "qualified": 60,
+      "qual_pct": 36.8,
       "closed": 16,
       "cw_pct": 9.8,
       "revenue": 112911.0
-    },
-    "Unknown (Needs Review)": {
-      "leads_created": 556,
-      "booked": 10,
-      "book_pct": 1.8,
-      "showed": 2,
-      "show_pct": 20.0,
-      "qualified": 3,
-      "qual_pct": 30.0,
-      "closed": 2,
-      "cw_pct": 20.0,
-      "revenue": 14997.0
     },
     "Internal Webinar": {
       "leads_created": 1466,
@@ -96,10 +60,22 @@
       "cw_pct": 4.5,
       "revenue": 14994.0
     },
+    "YouTube": {
+      "leads_created": 76,
+      "booked": 43,
+      "book_pct": 56.6,
+      "showed": 34,
+      "show_pct": 79.1,
+      "qualified": 28,
+      "qual_pct": 65.1,
+      "closed": 6,
+      "cw_pct": 14.0,
+      "revenue": 39785.0
+    },
     "Google Ads": {
-      "leads_created": 45,
+      "leads_created": 46,
       "booked": 23,
-      "book_pct": 51.1,
+      "book_pct": 50.0,
       "showed": 10,
       "show_pct": 43.5,
       "qualified": 8,
@@ -107,6 +83,42 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
+    },
+    "Instagram": {
+      "leads_created": 38,
+      "booked": 36,
+      "book_pct": 94.7,
+      "showed": 19,
+      "show_pct": 52.8,
+      "qualified": 18,
+      "qual_pct": 50.0,
+      "closed": 7,
+      "cw_pct": 19.4,
+      "revenue": 45982.0
+    },
+    "LTF - In-House": {
+      "leads_created": 1,
+      "booked": 3,
+      "book_pct": 300.0,
+      "showed": 1,
+      "show_pct": 33.3,
+      "qualified": 2,
+      "qual_pct": 66.7,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Unknown (Needs Review)": {
+      "leads_created": 555,
+      "booked": 10,
+      "book_pct": 1.8,
+      "showed": 2,
+      "show_pct": 20.0,
+      "qualified": 3,
+      "qual_pct": 30.0,
+      "closed": 2,
+      "cw_pct": 20.0,
+      "revenue": 14997.0
     },
     "Website": {
       "leads_created": 26,
@@ -128,18 +140,6 @@
       "show_pct": 100.0,
       "qualified": 2,
       "qual_pct": 100.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "LTF - In-House": {
-      "leads_created": 1,
-      "booked": 3,
-      "book_pct": 300.0,
-      "showed": 1,
-      "show_pct": 33.3,
-      "qualified": 2,
-      "qual_pct": 66.7,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
