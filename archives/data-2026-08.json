@@ -11,7 +11,7 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 2091,
+      "leads_created": 2092,
       "booked": 330,
       "showed": 178,
       "qualified": 144,
@@ -27,7 +27,7 @@
       "revenue": 45982.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 577,
+      "leads_created": 576,
       "booked": 4,
       "showed": 2,
       "qualified": 3,
@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "Google Ads": {
+      "leads_created": 46,
+      "booked": 24,
+      "book_pct": 52.2,
+      "showed": 10,
+      "show_pct": 41.7,
+      "qualified": 8,
+      "qual_pct": 33.3,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Website": {
       "leads_created": 32,
       "booked": 35,
@@ -72,20 +84,8 @@
       "cw_pct": 4.5,
       "revenue": 14994.0
     },
-    "Google Ads": {
-      "leads_created": 46,
-      "booked": 24,
-      "book_pct": 52.2,
-      "showed": 10,
-      "show_pct": 41.7,
-      "qualified": 8,
-      "qual_pct": 33.3,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Unknown (Needs Review)": {
-      "leads_created": 577,
+      "leads_created": 576,
       "booked": 4,
       "book_pct": 0.7,
       "showed": 2,
@@ -193,9 +193,9 @@
       "revenue": 0.0
     },
     "Anthony IG": {
-      "leads_created": 4,
+      "leads_created": 5,
       "booked": 1,
-      "book_pct": 25.0,
+      "book_pct": 20.0,
       "showed": 0,
       "show_pct": 0.0,
       "qualified": 0,
