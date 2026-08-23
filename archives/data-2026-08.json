@@ -6,8 +6,8 @@
     "booked": 375,
     "showed": 201,
     "qualified": 167,
-    "closed": 42,
-    "revenue": 293536.0
+    "closed": 43,
+    "revenue": 302533.0
   },
   "groups": {
     "IN-HOUSE": {
@@ -15,8 +15,8 @@
       "booked": 332,
       "showed": 177,
       "qualified": 144,
-      "closed": 33,
-      "revenue": 232557.0
+      "closed": 34,
+      "revenue": 241554.0
     },
     "EXTERNAL": {
       "leads_created": 50,
@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "Reactivation Scrapers": {
+      "leads_created": 86,
+      "booked": 163,
+      "book_pct": 189.5,
+      "showed": 72,
+      "show_pct": 44.2,
+      "qualified": 60,
+      "qual_pct": 36.8,
+      "closed": 18,
+      "cw_pct": 11.0,
+      "revenue": 139705.0
+    },
     "Website": {
       "leads_created": 32,
       "booked": 36,
@@ -47,18 +59,6 @@
       "closed": 7,
       "cw_pct": 19.4,
       "revenue": 40173.0
-    },
-    "Reactivation Scrapers": {
-      "leads_created": 86,
-      "booked": 163,
-      "book_pct": 189.5,
-      "showed": 72,
-      "show_pct": 44.2,
-      "qualified": 60,
-      "qual_pct": 36.8,
-      "closed": 17,
-      "cw_pct": 10.4,
-      "revenue": 130708.0
     },
     "YouTube": {
       "leads_created": 83,
