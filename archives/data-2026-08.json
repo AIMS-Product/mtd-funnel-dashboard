@@ -6,8 +6,8 @@
     "booked": 402,
     "showed": 205,
     "qualified": 173,
-    "closed": 43,
-    "revenue": 302533.0
+    "closed": 44,
+    "revenue": 324533.0
   },
   "groups": {
     "IN-HOUSE": {
@@ -15,8 +15,8 @@
       "booked": 351,
       "showed": 181,
       "qualified": 150,
-      "closed": 34,
-      "revenue": 241554.0
+      "closed": 35,
+      "revenue": 263554.0
     },
     "EXTERNAL": {
       "leads_created": 51,
@@ -48,6 +48,18 @@
       "cw_pct": 4.3,
       "revenue": 14994.0
     },
+    "Unknown (Needs Review)": {
+      "leads_created": 601,
+      "booked": 7,
+      "book_pct": 1.2,
+      "showed": 2,
+      "show_pct": 28.6,
+      "qualified": 3,
+      "qual_pct": 42.9,
+      "closed": 2,
+      "cw_pct": 28.6,
+      "revenue": 14997.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 87,
       "booked": 175,
@@ -68,9 +80,9 @@
       "show_pct": 66.7,
       "qualified": 21,
       "qual_pct": 58.3,
-      "closed": 7,
-      "cw_pct": 19.4,
-      "revenue": 40173.0
+      "closed": 8,
+      "cw_pct": 22.2,
+      "revenue": 62173.0
     },
     "Instagram": {
       "leads_created": 47,
@@ -95,18 +107,6 @@
       "closed": 7,
       "cw_pct": 14.9,
       "revenue": 46682.0
-    },
-    "Unknown (Needs Review)": {
-      "leads_created": 601,
-      "booked": 7,
-      "book_pct": 1.2,
-      "showed": 2,
-      "show_pct": 28.6,
-      "qualified": 3,
-      "qual_pct": 42.9,
-      "closed": 2,
-      "cw_pct": 28.6,
-      "revenue": 14997.0
     },
     "Google Ads": {
       "leads_created": 47,
