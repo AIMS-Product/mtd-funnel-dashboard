@@ -2,7 +2,7 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 2807,
+    "leads_created": 2818,
     "booked": 425,
     "showed": 224,
     "qualified": 187,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "IN-HOUSE": {
-      "leads_created": 2131,
+      "leads_created": 2138,
       "booked": 370,
       "showed": 194,
       "qualified": 158,
@@ -19,7 +19,7 @@
       "revenue": 288445.0
     },
     "EXTERNAL": {
-      "leads_created": 51,
+      "leads_created": 52,
       "booked": 45,
       "showed": 27,
       "qualified": 25,
@@ -27,7 +27,7 @@
       "revenue": 45982.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 625,
+      "leads_created": 628,
       "booked": 10,
       "showed": 3,
       "qualified": 4,
@@ -37,9 +37,9 @@
   },
   "funnels": {
     "Instagram": {
-      "leads_created": 47,
+      "leads_created": 48,
       "booked": 42,
-      "book_pct": 89.4,
+      "book_pct": 87.5,
       "showed": 25,
       "show_pct": 59.5,
       "qualified": 24,
@@ -47,30 +47,6 @@
       "closed": 7,
       "cw_pct": 16.7,
       "revenue": 45982.0
-    },
-    "Reactivation Scrapers": {
-      "leads_created": 97,
-      "booked": 186,
-      "book_pct": 191.8,
-      "showed": 79,
-      "show_pct": 42.5,
-      "qualified": 64,
-      "qual_pct": 34.4,
-      "closed": 19,
-      "cw_pct": 10.2,
-      "revenue": 148702.0
-    },
-    "VSL": {
-      "leads_created": 2,
-      "booked": 1,
-      "book_pct": 50.0,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "YouTube": {
       "leads_created": 88,
@@ -84,42 +60,6 @@
       "cw_pct": 15.1,
       "revenue": 53579.0
     },
-    "Unknown (Needs Review)": {
-      "leads_created": 625,
-      "booked": 10,
-      "book_pct": 1.6,
-      "showed": 3,
-      "show_pct": 30.0,
-      "qualified": 4,
-      "qual_pct": 40.0,
-      "closed": 1,
-      "cw_pct": 10.0,
-      "revenue": 4000.0
-    },
-    "Google Ads": {
-      "leads_created": 50,
-      "booked": 26,
-      "book_pct": 52.0,
-      "showed": 11,
-      "show_pct": 42.3,
-      "qualified": 9,
-      "qual_pct": 34.6,
-      "closed": 1,
-      "cw_pct": 3.8,
-      "revenue": 8997.0
-    },
-    "Internal Webinar": {
-      "leads_created": 1461,
-      "booked": 47,
-      "book_pct": 3.2,
-      "showed": 29,
-      "show_pct": 61.7,
-      "qualified": 20,
-      "qual_pct": 42.6,
-      "closed": 2,
-      "cw_pct": 4.3,
-      "revenue": 14994.0
-    },
     "Website": {
       "leads_created": 31,
       "booked": 36,
@@ -131,6 +71,66 @@
       "closed": 8,
       "cw_pct": 22.2,
       "revenue": 62173.0
+    },
+    "Reactivation Scrapers": {
+      "leads_created": 97,
+      "booked": 186,
+      "book_pct": 191.8,
+      "showed": 79,
+      "show_pct": 42.5,
+      "qualified": 64,
+      "qual_pct": 34.4,
+      "closed": 19,
+      "cw_pct": 10.2,
+      "revenue": 148702.0
+    },
+    "Internal Webinar": {
+      "leads_created": 1467,
+      "booked": 47,
+      "book_pct": 3.2,
+      "showed": 29,
+      "show_pct": 61.7,
+      "qualified": 20,
+      "qual_pct": 42.6,
+      "closed": 2,
+      "cw_pct": 4.3,
+      "revenue": 14994.0
+    },
+    "Google Ads": {
+      "leads_created": 51,
+      "booked": 26,
+      "book_pct": 51.0,
+      "showed": 11,
+      "show_pct": 42.3,
+      "qualified": 9,
+      "qual_pct": 34.6,
+      "closed": 1,
+      "cw_pct": 3.8,
+      "revenue": 8997.0
+    },
+    "Unknown (Needs Review)": {
+      "leads_created": 628,
+      "booked": 10,
+      "book_pct": 1.6,
+      "showed": 3,
+      "show_pct": 30.0,
+      "qualified": 4,
+      "qual_pct": 40.0,
+      "closed": 1,
+      "cw_pct": 10.0,
+      "revenue": 4000.0
+    },
+    "VSL": {
+      "leads_created": 2,
+      "booked": 1,
+      "book_pct": 50.0,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "X": {
       "leads_created": 1,
