@@ -81,7 +81,7 @@ EXCLUDED_CLOSER_USER_IDS = {
 # ── Known Funnel# ── Known Funnel Display Order (grouped) ──────────────────────────────────────
 
 FUNNEL_GROUPS = [
-    ("IN-HOUSE", [
+    ("LEAD SOURCES", [
         "YouTube",
         "Meta Ads",
         "VSL",
@@ -101,8 +101,6 @@ FUNNEL_GROUPS = [
         "Google Ads",
         "YouTube Ads",
         "LTF - In-House",
-    ]),
-    ("EXTERNAL", [
         "Low Ticket Funnel",
         "Instagram",
         "X",
@@ -1133,103 +1131,31 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     <div class="label">Leads Created</div>
     <div class="value">{g_lc}</div>
     <div class="kpi-sub">new leads MTD</div>
-    <div class="kpi-split">
-      <div class="kpi-split-item">
-        <div class="split-label">External</div>
-        <div class="split-value">{ext.get("leads_created", 0)}</div>
-        <div class="split-rate">{pct(ext.get("leads_created",0), g_lc)} of total</div>
-      </div>
-      <div class="kpi-split-item">
-        <div class="split-label">In-House</div>
-        <div class="split-value">{inh.get("leads_created", 0)}</div>
-        <div class="split-rate">{pct(inh.get("leads_created",0), g_lc)} of total</div>
-      </div>
-    </div>
   </div>
   <div class="kpi" style="--kpi-accent:#4f46e5; --kpi-color:var(--text);">
     <div class="label">Total Booked</div>
     <div class="value">{g_bo}</div>
     <div class="kpi-sub">new first calls MTD</div>
-    <div class="kpi-split">
-      <div class="kpi-split-item">
-        <div class="split-label">External</div>
-        <div class="split-value">{ext["booked"]}</div>
-        <div class="split-rate">{pct(ext["booked"], g_bo)} of total</div>
-      </div>
-      <div class="kpi-split-item">
-        <div class="split-label">In-House</div>
-        <div class="split-value">{inh["booked"]}</div>
-        <div class="split-rate">{pct(inh["booked"], g_bo)} of total</div>
-      </div>
-    </div>
   </div>
   <div class="kpi" style="--kpi-accent:#2563eb; --kpi-color:#2563eb;">
     <div class="label">Showed</div>
     <div class="value">{g_sh}</div>
     <div class="kpi-sub">{pct(g_sh, g_bo)} show rate</div>
-    <div class="kpi-split">
-      <div class="kpi-split-item">
-        <div class="split-label">External</div>
-        <div class="split-value">{ext["showed"]}</div>
-        <div class="split-rate">{pct(ext["showed"], ext["booked"])} show</div>
-      </div>
-      <div class="kpi-split-item">
-        <div class="split-label">In-House</div>
-        <div class="split-value">{inh["showed"]}</div>
-        <div class="split-rate">{pct(inh["showed"], inh["booked"])} show</div>
-      </div>
-    </div>
   </div>
   <div class="kpi" style="--kpi-accent:#7c3aed; --kpi-color:#7c3aed;">
     <div class="label">Qualified</div>
     <div class="value">{g_qu}</div>
     <div class="kpi-sub">{pct(g_qu, g_bo)} qual rate</div>
-    <div class="kpi-split">
-      <div class="kpi-split-item">
-        <div class="split-label">External</div>
-        <div class="split-value">{ext["qualified"]}</div>
-        <div class="split-rate">{pct(ext["qualified"], ext["booked"])} qual</div>
-      </div>
-      <div class="kpi-split-item">
-        <div class="split-label">In-House</div>
-        <div class="split-value">{inh["qualified"]}</div>
-        <div class="split-rate">{pct(inh["qualified"], inh["booked"])} qual</div>
-      </div>
-    </div>
   </div>
   <div class="kpi" style="--kpi-accent:#d97706; --kpi-color:#d97706;">
     <div class="label">Closed Won</div>
     <div class="value">{g_cl}</div>
     <div class="kpi-sub">{pct(g_cl, g_bo)} booked→close · {pct(g_cl, g_qu)} qual→close</div>
-    <div class="kpi-split">
-      <div class="kpi-split-item">
-        <div class="split-label">External</div>
-        <div class="split-value">{ext["closed"]}</div>
-        <div class="split-rate">{pct(ext["closed"], ext["booked"])} b→c</div>
-      </div>
-      <div class="kpi-split-item">
-        <div class="split-label">In-House</div>
-        <div class="split-value">{inh["closed"]}</div>
-        <div class="split-rate">{pct(inh["closed"], inh["booked"])} b→c</div>
-      </div>
-    </div>
   </div>
   <div class="kpi" style="--kpi-accent:#0e9f6e; --kpi-color:#0e9f6e;">
     <div class="label">Closed Revenue</div>
     <div class="value">{fmt_currency(g_rev)}</div>
     <div class="kpi-sub">{rev_per_close(g_rev, g_cl)} avg deal{f'  ·  <span style="color:#7bc4a0; font-weight:600;">ARR {fmt_currency(g_vh_rev)}</span>  <span style="color:#7bc4a0; opacity:0.75; font-size:11px;">MRR {fmt_currency(g_vh_rev / 12)}</span>' if g_vh_rev else ""}</div>
-    <div class="kpi-split">
-      <div class="kpi-split-item">
-        <div class="split-label">External</div>
-        <div class="split-value">{fmt_currency(ext["revenue"])}</div>
-        <div class="split-rate">{rev_per_close(ext["revenue"], ext["closed"])} avg</div>
-      </div>
-      <div class="kpi-split-item">
-        <div class="split-label">In-House</div>
-        <div class="split-value">{fmt_currency(inh["revenue"])}</div>
-        <div class="split-rate">{rev_per_close(inh["revenue"], inh["closed"])} avg</div>
-      </div>
-    </div>
   </div>
 </div>
 
