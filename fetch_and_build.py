@@ -75,6 +75,7 @@ EXCLUDED_CLOSER_USER_IDS = {
     "user_5cZRqXu8kb4O1IeBVA98UMcMEhYZUhx1fnCHfSL0YMV",  # Stephen Olivas
     "user_4sfuKGMbv0LQZ4hpS8ipASv406kKTSNP5Xx79jOwSqM",  # Spencer Reynolds
     "user_SGISGe3kE7zhSm7LQgZ0Vrt7DKz5RVZ0JzFkI4S8llS",  # Mallory Kent
+    "user_1BdSGJ3dJ8llCciTSwvV9X8vHpBq2rHp4meX7Wlzsh0",  # Adam Wolfe
 }
 
 # ── Known Funnel# ── Known Funnel Display Order (grouped) ──────────────────────────────────────
