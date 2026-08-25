@@ -3,7 +3,7 @@
   "month_label": "August 2026",
   "grand": {
     "leads_created": 2798,
-    "booked": 421,
+    "booked": 422,
     "showed": 220,
     "qualified": 184,
     "closed": 45,
@@ -12,7 +12,7 @@
   "groups": {
     "IN-HOUSE": {
       "leads_created": 2129,
-      "booked": 369,
+      "booked": 370,
       "showed": 192,
       "qualified": 157,
       "closed": 36,
@@ -36,6 +36,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 1461,
+      "booked": 47,
+      "book_pct": 3.2,
+      "showed": 29,
+      "show_pct": 61.7,
+      "qualified": 20,
+      "qual_pct": 42.6,
+      "closed": 2,
+      "cw_pct": 4.3,
+      "revenue": 14994.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 96,
       "booked": 186,
@@ -60,6 +72,18 @@
       "cw_pct": 17.5,
       "revenue": 45982.0
     },
+    "VSL": {
+      "leads_created": 2,
+      "booked": 1,
+      "book_pct": 50.0,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "X": {
       "leads_created": 1,
       "booked": 1,
@@ -72,17 +96,17 @@
       "cw_pct": 0.0,
       "revenue": 0.0
     },
-    "Internal Webinar": {
-      "leads_created": 1461,
-      "booked": 47,
-      "book_pct": 3.2,
-      "showed": 29,
-      "show_pct": 61.7,
-      "qualified": 20,
-      "qual_pct": 42.6,
-      "closed": 2,
-      "cw_pct": 4.3,
-      "revenue": 14994.0
+    "Google Ads": {
+      "leads_created": 50,
+      "booked": 26,
+      "book_pct": 52.0,
+      "showed": 11,
+      "show_pct": 42.3,
+      "qualified": 9,
+      "qual_pct": 34.6,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "YouTube": {
       "leads_created": 88,
@@ -95,18 +119,6 @@
       "closed": 7,
       "cw_pct": 13.2,
       "revenue": 46682.0
-    },
-    "Google Ads": {
-      "leads_created": 50,
-      "booked": 26,
-      "book_pct": 52.0,
-      "showed": 11,
-      "show_pct": 42.3,
-      "qualified": 9,
-      "qual_pct": 34.6,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "Unknown (Needs Review)": {
       "leads_created": 620,
@@ -202,18 +214,6 @@
       "qual_pct": 0.0,
       "closed": 0,
       "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "VSL": {
-      "leads_created": 2,
-      "booked": 0,
-      "book_pct": 0.0,
-      "showed": 0,
-      "show_pct": 0,
-      "qualified": 0,
-      "qual_pct": 0,
-      "closed": 0,
-      "cw_pct": 0,
       "revenue": 0.0
     }
   }
