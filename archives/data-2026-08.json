@@ -6,8 +6,8 @@
     "booked": 423,
     "showed": 222,
     "qualified": 185,
-    "closed": 45,
-    "revenue": 333530.0
+    "closed": 44,
+    "revenue": 322533.0
   },
   "groups": {
     "IN-HOUSE": {
@@ -31,11 +31,23 @@
       "booked": 9,
       "showed": 3,
       "qualified": 4,
-      "closed": 2,
-      "revenue": 14997.0
+      "closed": 1,
+      "revenue": 4000.0
     }
   },
   "funnels": {
+    "Website": {
+      "leads_created": 31,
+      "booked": 36,
+      "book_pct": 116.1,
+      "showed": 24,
+      "show_pct": 66.7,
+      "qualified": 21,
+      "qual_pct": 58.3,
+      "closed": 8,
+      "cw_pct": 22.2,
+      "revenue": 62173.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 96,
       "booked": 186,
@@ -128,21 +140,9 @@
       "show_pct": 33.3,
       "qualified": 4,
       "qual_pct": 44.4,
-      "closed": 2,
-      "cw_pct": 22.2,
-      "revenue": 14997.0
-    },
-    "Website": {
-      "leads_created": 31,
-      "booked": 36,
-      "book_pct": 116.1,
-      "showed": 24,
-      "show_pct": 66.7,
-      "qualified": 21,
-      "qual_pct": 58.3,
-      "closed": 8,
-      "cw_pct": 22.2,
-      "revenue": 62173.0
+      "closed": 1,
+      "cw_pct": 11.1,
+      "revenue": 4000.0
     },
     "Meta Ads": {
       "leads_created": 395,
