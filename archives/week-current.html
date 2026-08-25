@@ -392,7 +392,7 @@
       <option value="/archives/week-current.html" selected>Aug 24–25 ▶</option></select></div>
     </div>
     <span class="snapshot-label"><span class="archive-badge">Week View</span></span>
-    August 25, 2026 at 12:06 PM PT<br>
+    August 25, 2026 at 12:20 PM PT<br>
     Source · Close CRM
   </div>
 </div>
@@ -403,103 +403,31 @@
     <div class="label">Leads Created</div>
     <div class="value">86</div>
     <div class="kpi-sub">new leads MTD</div>
-    <div class="kpi-split">
-      <div class="kpi-split-item">
-        <div class="split-label">External</div>
-        <div class="split-value">4</div>
-        <div class="split-rate">4.7% of total</div>
-      </div>
-      <div class="kpi-split-item">
-        <div class="split-label">In-House</div>
-        <div class="split-value">43</div>
-        <div class="split-rate">50.0% of total</div>
-      </div>
-    </div>
   </div>
   <div class="kpi" style="--kpi-accent:#4f46e5; --kpi-color:var(--text);">
     <div class="label">Total Booked</div>
     <div class="value">54</div>
     <div class="kpi-sub">new first calls MTD</div>
-    <div class="kpi-split">
-      <div class="kpi-split-item">
-        <div class="split-label">External</div>
-        <div class="split-value">6</div>
-        <div class="split-rate">11.1% of total</div>
-      </div>
-      <div class="kpi-split-item">
-        <div class="split-label">In-House</div>
-        <div class="split-value">42</div>
-        <div class="split-rate">77.8% of total</div>
-      </div>
-    </div>
   </div>
   <div class="kpi" style="--kpi-accent:#2563eb; --kpi-color:#2563eb;">
     <div class="label">Showed</div>
     <div class="value">20</div>
     <div class="kpi-sub">37.0% show rate</div>
-    <div class="kpi-split">
-      <div class="kpi-split-item">
-        <div class="split-label">External</div>
-        <div class="split-value">4</div>
-        <div class="split-rate">66.7% show</div>
-      </div>
-      <div class="kpi-split-item">
-        <div class="split-label">In-House</div>
-        <div class="split-value">15</div>
-        <div class="split-rate">35.7% show</div>
-      </div>
-    </div>
   </div>
   <div class="kpi" style="--kpi-accent:#7c3aed; --kpi-color:#7c3aed;">
     <div class="label">Qualified</div>
     <div class="value">14</div>
     <div class="kpi-sub">25.9% qual rate</div>
-    <div class="kpi-split">
-      <div class="kpi-split-item">
-        <div class="split-label">External</div>
-        <div class="split-value">4</div>
-        <div class="split-rate">66.7% qual</div>
-      </div>
-      <div class="kpi-split-item">
-        <div class="split-label">In-House</div>
-        <div class="split-value">9</div>
-        <div class="split-rate">21.4% qual</div>
-      </div>
-    </div>
   </div>
   <div class="kpi" style="--kpi-accent:#d97706; --kpi-color:#d97706;">
     <div class="label">Closed Won</div>
     <div class="value">4</div>
     <div class="kpi-sub">7.4% booked→close · 28.6% qual→close</div>
-    <div class="kpi-split">
-      <div class="kpi-split-item">
-        <div class="split-label">External</div>
-        <div class="split-value">0</div>
-        <div class="split-rate">0.0% b→c</div>
-      </div>
-      <div class="kpi-split-item">
-        <div class="split-label">In-House</div>
-        <div class="split-value">4</div>
-        <div class="split-rate">9.5% b→c</div>
-      </div>
-    </div>
   </div>
   <div class="kpi" style="--kpi-accent:#0e9f6e; --kpi-color:#0e9f6e;">
     <div class="label">Closed Revenue</div>
     <div class="value">$46,891</div>
     <div class="kpi-sub">$11,723 avg deal  ·  <span style="color:#7bc4a0; font-weight:600;">ARR $10,194</span>  <span style="color:#7bc4a0; opacity:0.75; font-size:11px;">MRR $850</span></div>
-    <div class="kpi-split">
-      <div class="kpi-split-item">
-        <div class="split-label">External</div>
-        <div class="split-value">$0</div>
-        <div class="split-rate">— avg</div>
-      </div>
-      <div class="kpi-split-item">
-        <div class="split-label">In-House</div>
-        <div class="split-value">$46,891</div>
-        <div class="split-rate">$11,723 avg</div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -527,13 +455,13 @@
     </thead>
     <tbody>
 
-    <tr class="section-header-row" onclick="toggleSection('in_house')">
+    <tr class="section-header-row" onclick="toggleSection('lead_sources')">
       <td colspan="13">
-        <span class="section-chevron open" id="secchev-in_house">›</span>FUNNEL BREAKDOWN — IN-HOUSE
+        <span class="section-chevron open" id="secchev-lead_sources">›</span>FUNNEL BREAKDOWN — LEAD SOURCES
       </td>
     </tr>
 
-    <tr class="funnel-row" data-section="in_house" onclick="toggleUTM('youtube')" data-fid="youtube">
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('youtube')" data-fid="youtube">
       <td class="col-name">
         <span class="chevron" id="chev-youtube">›</span>YouTube
       </td>
@@ -584,6 +512,22 @@
     </tr>
 
     <tr class="utm-row" data-parent="youtube">
+      <td class="col-name col-utm">↳ build-buy-route</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="youtube">
       <td class="col-name col-utm">↳ start-vending-2025</td>
       <td class="col-num">—</td>
       <td class="col-num">1</td>
@@ -617,22 +561,6 @@
 
     <tr class="utm-row" data-parent="youtube">
       <td class="col-name col-utm">↳ vending-items-20k</td>
-      <td class="col-num">—</td>
-      <td class="col-num">1</td>
-      <td class="col-pace"></td>
-      <td class="col-goal"></td>
-      <td class="col-num">—</td>
-      <td class="col-pct bad">0.0%</td>
-      <td class="col-num">—</td>
-      <td class="col-pct bad">0.0%</td>
-      <td class="col-num">—</td>
-      <td class="col-pct bad">0.0%</td>
-      <td class="col-rev">$0</td>
-      <td class="col-num">—</td>
-    </tr>
-
-    <tr class="utm-row" data-parent="youtube">
-      <td class="col-name col-utm">↳ build-buy-route</td>
       <td class="col-num">—</td>
       <td class="col-num">1</td>
       <td class="col-pace"></td>
@@ -695,7 +623,7 @@
       <td class="col-num">—</td>
     </tr>
 
-    <tr class="funnel-row" data-section="in_house" onclick="toggleUTM('meta_ads')" data-fid="meta_ads">
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('meta_ads')" data-fid="meta_ads">
       <td class="col-name">
         <span class="chevron" id="chev-meta_ads">›</span>Meta Ads
       </td>
@@ -729,7 +657,7 @@
       <td class="col-num">—</td>
     </tr>
 
-    <tr class="funnel-row" data-section="in_house" onclick="toggleUTM('vsl')" data-fid="vsl">
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('vsl')" data-fid="vsl">
       <td class="col-name">
         <span class="chevron" id="chev-vsl">›</span>VSL
       </td>
@@ -763,7 +691,7 @@
       <td class="col-num">—</td>
     </tr>
 
-    <tr class="funnel-row" data-section="in_house" onclick="toggleUTM('website')" data-fid="website">
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('website')" data-fid="website">
       <td class="col-name">
         <span class="chevron" id="chev-website">›</span>Website
       </td>
@@ -813,7 +741,7 @@
       <td class="col-num">$22,000</td>
     </tr>
 
-    <tr class="funnel-row" data-section="in_house" onclick="toggleUTM('internal_webinar')" data-fid="internal_webinar">
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('internal_webinar')" data-fid="internal_webinar">
       <td class="col-name">
         <span class="chevron" id="chev-internal_webinar">›</span>Internal Webinar
       </td>
@@ -879,7 +807,7 @@
       <td class="col-num">—</td>
     </tr>
 
-    <tr class="funnel-row" data-section="in_house" onclick="toggleUTM('reactivation_scrapers')" data-fid="reactivation_scrapers">
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('reactivation_scrapers')" data-fid="reactivation_scrapers">
       <td class="col-name">
         <span class="chevron" id="chev-reactivation_scrapers">›</span>Reactivation Scrapers
       </td>
@@ -1025,7 +953,7 @@
       <td class="col-num">—</td>
     </tr>
 
-    <tr class="funnel-row" data-section="in_house" onclick="toggleUTM('google_ads')" data-fid="google_ads">
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('google_ads')" data-fid="google_ads">
       <td class="col-name">
         <span class="chevron" id="chev-google_ads">›</span>Google Ads
       </td>
@@ -1075,13 +1003,7 @@
       <td class="col-num">$8,997</td>
     </tr>
 
-    <tr class="section-header-row" onclick="toggleSection('external')">
-      <td colspan="13">
-        <span class="section-chevron open" id="secchev-external">›</span>FUNNEL BREAKDOWN — EXTERNAL
-      </td>
-    </tr>
-
-    <tr class="funnel-row" data-section="external" onclick="toggleUTM('instagram')" data-fid="instagram">
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('instagram')" data-fid="instagram">
       <td class="col-name">
         <span class="chevron" id="chev-instagram">›</span>Instagram
       </td>
