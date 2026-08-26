@@ -2,7 +2,7 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 3888,
+    "leads_created": 3889,
     "booked": 471,
     "showed": 238,
     "qualified": 204,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 3253,
+      "leads_created": 3254,
       "booked": 458,
       "showed": 234,
       "qualified": 198,
@@ -28,18 +28,6 @@
     }
   },
   "funnels": {
-    "Google Ads": {
-      "leads_created": 53,
-      "booked": 28,
-      "book_pct": 52.8,
-      "showed": 12,
-      "show_pct": 42.9,
-      "qualified": 10,
-      "qual_pct": 35.7,
-      "closed": 1,
-      "cw_pct": 3.6,
-      "revenue": 8997.0
-    },
     "Unknown (Needs Review)": {
       "leads_created": 635,
       "booked": 13,
@@ -64,18 +52,6 @@
       "cw_pct": 15.6,
       "revenue": 45982.0
     },
-    "X": {
-      "leads_created": 1,
-      "booked": 1,
-      "book_pct": 100.0,
-      "showed": 1,
-      "show_pct": 100.0,
-      "qualified": 1,
-      "qual_pct": 100.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Reactivation Scrapers": {
       "leads_created": 108,
       "booked": 203,
@@ -87,6 +63,18 @@
       "closed": 21,
       "cw_pct": 10.3,
       "revenue": 163696.0
+    },
+    "YouTube": {
+      "leads_created": 92,
+      "booked": 58,
+      "book_pct": 63.0,
+      "showed": 45,
+      "show_pct": 77.6,
+      "qualified": 38,
+      "qual_pct": 65.5,
+      "closed": 8,
+      "cw_pct": 13.8,
+      "revenue": 53579.0
     },
     "Internal Webinar": {
       "leads_created": 2500,
@@ -100,17 +88,29 @@
       "cw_pct": 3.3,
       "revenue": 14994.0
     },
-    "YouTube": {
-      "leads_created": 92,
-      "booked": 58,
-      "book_pct": 63.0,
-      "showed": 45,
-      "show_pct": 77.6,
-      "qualified": 38,
-      "qual_pct": 65.5,
-      "closed": 8,
-      "cw_pct": 13.8,
-      "revenue": 53579.0
+    "X": {
+      "leads_created": 1,
+      "booked": 1,
+      "book_pct": 100.0,
+      "showed": 1,
+      "show_pct": 100.0,
+      "qualified": 1,
+      "qual_pct": 100.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Google Ads": {
+      "leads_created": 54,
+      "booked": 28,
+      "book_pct": 51.9,
+      "showed": 12,
+      "show_pct": 42.9,
+      "qualified": 10,
+      "qual_pct": 35.7,
+      "closed": 1,
+      "cw_pct": 3.6,
+      "revenue": 8997.0
     },
     "Website": {
       "leads_created": 32,
