@@ -2,7 +2,7 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 3993,
+    "leads_created": 3994,
     "booked": 496,
     "showed": 252,
     "qualified": 217,
@@ -19,7 +19,7 @@
       "revenue": 383309.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 645,
+      "leads_created": 646,
       "booked": 6,
       "showed": 1,
       "qualified": 2,
@@ -28,8 +28,20 @@
     }
   },
   "funnels": {
+    "Google Ads": {
+      "leads_created": 53,
+      "booked": 29,
+      "book_pct": 54.7,
+      "showed": 13,
+      "show_pct": 44.8,
+      "qualified": 11,
+      "qual_pct": 37.9,
+      "closed": 2,
+      "cw_pct": 6.9,
+      "revenue": 15894.0
+    },
     "Unknown (Needs Review)": {
-      "leads_created": 645,
+      "leads_created": 646,
       "booked": 6,
       "book_pct": 0.9,
       "showed": 1,
@@ -51,18 +63,6 @@
       "closed": 21,
       "cw_pct": 9.9,
       "revenue": 163696.0
-    },
-    "Google Ads": {
-      "leads_created": 53,
-      "booked": 29,
-      "book_pct": 54.7,
-      "showed": 13,
-      "show_pct": 44.8,
-      "qualified": 11,
-      "qual_pct": 37.9,
-      "closed": 2,
-      "cw_pct": 6.9,
-      "revenue": 15894.0
     },
     "Internal Webinar": {
       "leads_created": 2580,
