@@ -2,7 +2,7 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 4023,
+    "leads_created": 4026,
     "booked": 497,
     "showed": 255,
     "qualified": 220,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 3372,
+      "leads_created": 3373,
       "booked": 491,
       "showed": 254,
       "qualified": 218,
@@ -19,7 +19,7 @@
       "revenue": 383309.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 651,
+      "leads_created": 653,
       "booked": 6,
       "showed": 1,
       "qualified": 2,
@@ -28,17 +28,17 @@
     }
   },
   "funnels": {
-    "Unknown (Needs Review)": {
-      "leads_created": 651,
-      "booked": 6,
-      "book_pct": 0.9,
-      "showed": 1,
-      "show_pct": 16.7,
-      "qualified": 2,
-      "qual_pct": 33.3,
-      "closed": 1,
-      "cw_pct": 16.7,
-      "revenue": 4000.0
+    "Internal Webinar": {
+      "leads_created": 2603,
+      "booked": 73,
+      "book_pct": 2.8,
+      "showed": 39,
+      "show_pct": 53.4,
+      "qualified": 30,
+      "qual_pct": 41.1,
+      "closed": 2,
+      "cw_pct": 2.7,
+      "revenue": 14994.0
     },
     "Reactivation Scrapers": {
       "leads_created": 117,
@@ -64,17 +64,17 @@
       "cw_pct": 15.3,
       "revenue": 68576.0
     },
-    "Internal Webinar": {
-      "leads_created": 2602,
-      "booked": 73,
-      "book_pct": 2.8,
-      "showed": 39,
-      "show_pct": 53.4,
-      "qualified": 30,
-      "qual_pct": 41.1,
-      "closed": 2,
-      "cw_pct": 2.7,
-      "revenue": 14994.0
+    "Unknown (Needs Review)": {
+      "leads_created": 653,
+      "booked": 6,
+      "book_pct": 0.9,
+      "showed": 1,
+      "show_pct": 16.7,
+      "qualified": 2,
+      "qual_pct": 33.3,
+      "closed": 1,
+      "cw_pct": 16.7,
+      "revenue": 4000.0
     },
     "Website": {
       "leads_created": 41,
@@ -88,18 +88,6 @@
       "cw_pct": 20.0,
       "revenue": 68170.0
     },
-    "Side Hustle Nation": {
-      "leads_created": 0,
-      "booked": 1,
-      "book_pct": 0,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Instagram": {
       "leads_created": 53,
       "booked": 46,
@@ -111,6 +99,18 @@
       "closed": 7,
       "cw_pct": 15.2,
       "revenue": 45982.0
+    },
+    "Side Hustle Nation": {
+      "leads_created": 0,
+      "booked": 1,
+      "book_pct": 0,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "Google Ads": {
       "leads_created": 53,
