@@ -2,7 +2,7 @@
   "month_key": "2026-08",
   "month_label": "August 2026",
   "grand": {
-    "leads_created": 4120,
+    "leads_created": 4121,
     "booked": 501,
     "showed": 270,
     "qualified": 231,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 3474,
+      "leads_created": 3475,
       "booked": 498,
       "showed": 269,
       "qualified": 229,
@@ -28,8 +28,20 @@
     }
   },
   "funnels": {
+    "Meta Ads": {
+      "leads_created": 403,
+      "booked": 13,
+      "book_pct": 3.2,
+      "showed": 6,
+      "show_pct": 46.2,
+      "qualified": 5,
+      "qual_pct": 38.5,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Internal Webinar": {
-      "leads_created": 2654,
+      "leads_created": 2655,
       "booked": 66,
       "book_pct": 2.5,
       "showed": 40,
@@ -156,18 +168,6 @@
       "show_pct": 0.0,
       "qualified": 0,
       "qual_pct": 0.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Meta Ads": {
-      "leads_created": 403,
-      "booked": 13,
-      "book_pct": 3.2,
-      "showed": 6,
-      "show_pct": 46.2,
-      "qualified": 5,
-      "qual_pct": 38.5,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
