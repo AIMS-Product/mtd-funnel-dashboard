@@ -345,21 +345,30 @@ def fetch_reactivation_scraper_meetings(start_date, end_date):
       - meetings /activity/meeting/ in date range
       - title starts with one of NEXT_STEPS_TITLE_PREFIXES
       - bucketed by starts_at (Pacific time)
-    Returns list of {lead_id, starts_at} for meetings that match.
+
+    Close API quirk: /activity/meeting/ does not support date_started__ filters.
+    We filter by date_created with a 60-day lookback window (meetings are booked
+    before they occur), then filter client-side by starts_at in Pacific time.
     """
-    start_utc = datetime(start_date.year, start_date.month, start_date.day,
-                         0, 0, 0, tzinfo=PACIFIC).astimezone(timezone.utc)
-    end_utc   = datetime(end_date.year, end_date.month, end_date.day,
-                         23, 59, 59, tzinfo=PACIFIC).astimezone(timezone.utc)
-    start_str = start_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
-    end_str   = end_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
+    # Generous window: meetings booked up to 60 days before the period start
+    from datetime import timedelta as _td
+    created_start = start_date - _td(days=60)
+    created_end   = end_date   + _td(days=7)
+    created_start_str = created_start.strftime("%Y-%m-%d")
+    created_end_str   = created_end.strftime("%Y-%m-%d")
+
+    # Pacific boundaries for client-side starts_at filter
+    starts_min = datetime(start_date.year, start_date.month, start_date.day,
+                          0, 0, 0, tzinfo=PACIFIC)
+    starts_max = datetime(end_date.year, end_date.month, end_date.day,
+                          23, 59, 59, tzinfo=PACIFIC)
 
     print(f"Fetching RS Next Steps meetings ({start_date} → {end_date})...", flush=True)
     results, skip = [], 0
     while True:
         data = close_get("activity/meeting/", {
-            "date_started__gte": start_str,
-            "date_started__lte": end_str,
+            "date_created__gte": created_start_str,
+            "date_created__lte": created_end_str,
             "_fields":           "id,lead_id,title,starts_at,outcome",
             "_limit":            200,
             "_skip":             skip,
@@ -367,14 +376,27 @@ def fetch_reactivation_scraper_meetings(start_date, end_date):
         batch = data.get("data", [])
         for m in batch:
             title = (m.get("title") or "").strip()
-            if any(title.startswith(p) for p in NEXT_STEPS_TITLE_PREFIXES):
-                results.append({"lead_id": m["lead_id"], "starts_at": m.get("starts_at"),
-                                "outcome": m.get("outcome")})
+            if not any(title.startswith(p) for p in NEXT_STEPS_TITLE_PREFIXES):
+                continue
+            # Filter client-side by starts_at in Pacific time
+            starts_raw = m.get("starts_at")
+            if starts_raw:
+                try:
+                    from datetime import datetime as _dt
+                    starts_dt = _dt.fromisoformat(
+                        starts_raw.replace("Z", "+00:00")
+                    ).astimezone(PACIFIC)
+                    if not (starts_min <= starts_dt <= starts_max):
+                        continue
+                except Exception:
+                    continue
+            results.append({"lead_id": m["lead_id"], "starts_at": starts_raw,
+                            "outcome": m.get("outcome")})
         if not data.get("has_more"):
             break
         skip += 200
 
-    print(f"  RS Next Steps meetings (title-matched): {len(results)}", flush=True)
+    print(f"  RS Next Steps meetings (title-matched, starts in period): {len(results)}", flush=True)
     return results
 
 
