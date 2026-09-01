@@ -361,9 +361,8 @@ def fetch_reactivation_scraper_meetings(start_date, end_date):
     results, scanned, skip = [], 0, 0
     while True:
         data = close_get("activity/meeting", {
-            "_fields": "id,lead_id,title,starts_at,date_created",
-            "_limit":  200,
-            "_skip":   skip,
+            "_limit": 200,
+            "_skip":  skip,
         })
         batch = data.get("data", [])
         if not batch:
@@ -372,7 +371,7 @@ def fetch_reactivation_scraper_meetings(start_date, end_date):
         for m in batch:
             scanned += 1
             # Stop when date_created is old enough that starts_at can't be in window
-            created_raw = m.get("date_created") or ""
+            created_raw = m.get("date_created") or m.get("created_at") or m.get("date_created_utc") or ""
             if created_raw:
                 try:
                     created_dt = datetime.fromisoformat(
