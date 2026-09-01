@@ -340,31 +340,50 @@ def fetch_reactivation_scraper_meetings(start_date, end_date):
     """
     Fetch Next Steps meetings for Reactivation Scrapers.
     Detection: any meeting title containing "next steps" (case-insensitive).
-    Attribution: lead's Reactivation - Setter Name field.
 
-    Close API: endpoint is "activity/meeting" (no trailing slash).
-    No date filter supported — fetch all, filter client-side by starts_at.
-    Early exit once meetings are older than the period (newest-first order).
+    Close API: "activity/meeting" (no trailing slash), no date filters supported.
+    Results are ordered by date_created (newest first) — NOT by starts_at.
+    We page through all meetings and filter starts_at client-side.
+    Early exit when date_created goes past 180 days before period start
+    (a meeting created that long ago and starting in the current period is
+    effectively impossible). Mirrors how Call Capacity dashboard fetches meetings.
     """
+    from datetime import timedelta as _td
     starts_min = datetime(start_date.year, start_date.month, start_date.day,
                           0, 0, 0, tzinfo=PACIFIC)
     starts_max = datetime(end_date.year, end_date.month, end_date.day,
                           23, 59, 59, tzinfo=PACIFIC)
+    # Stop paginating when date_created is this old (meetings ordered by date_created)
+    created_cutoff = datetime(start_date.year, start_date.month, start_date.day,
+                              0, 0, 0, tzinfo=PACIFIC) - _td(days=180)
 
     print(f"Fetching RS Next Steps meetings ({start_date} → {end_date})...", flush=True)
     results, scanned, skip = [], 0, 0
     while True:
         data = close_get("activity/meeting", {
-            "_fields": "id,lead_id,title,starts_at",
-            "_limit":  100,
+            "_fields": "id,lead_id,title,starts_at,date_created",
+            "_limit":  200,
             "_skip":   skip,
         })
         batch = data.get("data", [])
         if not batch:
             break
-        scanned += len(batch)
+        stop = False
         for m in batch:
-            title = (m.get("title") or "").strip()
+            scanned += 1
+            # Stop when date_created is old enough that starts_at can't be in window
+            created_raw = m.get("date_created") or ""
+            if created_raw:
+                try:
+                    created_dt = datetime.fromisoformat(
+                        created_raw.replace("Z", "+00:00")
+                    ).astimezone(PACIFIC)
+                    if created_dt < created_cutoff:
+                        stop = True
+                        break
+                except Exception:
+                    pass
+            # Filter by starts_at within period
             starts_raw = m.get("starts_at") or ""
             if not starts_raw:
                 continue
@@ -374,24 +393,24 @@ def fetch_reactivation_scraper_meetings(start_date, end_date):
                 ).astimezone(PACIFIC)
             except Exception:
                 continue
-            # Early exit: meetings return newest-first; stop when past our window
-            if starts_dt < starts_min:
-                print(f"  Scanned {scanned} meetings, found {len(results)} RS matches.", flush=True)
-                return results
-            if starts_dt > starts_max:
+            if not (starts_min <= starts_dt <= starts_max):
                 continue
-            # Title detection: any "next steps" meeting (case-insensitive substring)
+            # Title detection: any "next steps" substring (case-insensitive)
+            title = (m.get("title") or "").strip()
             if NEXT_STEPS_PHRASE not in title.lower():
                 continue
             results.append({"lead_id": m["lead_id"], "starts_at": starts_raw})
 
+        if stop:
+            print(f"  Hit date_created cutoff after {scanned} meetings.", flush=True)
+            break
         if not data.get("has_more"):
             break
-        skip += 100
+        skip += 200
         if scanned % 1000 == 0:
             print(f"  Scanned {scanned} meetings so far...", flush=True)
 
-    print(f"  Scanned {scanned} meetings, found {len(results)} RS matches.", flush=True)
+    print(f"  RS Next Steps meetings found: {len(results)} (scanned {scanned})", flush=True)
     return results
 
 
