@@ -342,20 +342,13 @@ def fetch_reactivation_scraper_meetings(start_date, end_date):
     Detection: any meeting title containing "next steps" (case-insensitive).
 
     Close API: "activity/meeting" (no trailing slash), no date filters supported.
-    Results are ordered by date_created (newest first) — NOT by starts_at.
-    We page through all meetings and filter starts_at client-side.
-    Early exit when date_created goes past 180 days before period start
-    (a meeting created that long ago and starting in the current period is
-    effectively impossible). Mirrors how Call Capacity dashboard fetches meetings.
+    No cutoff — page through ALL meetings and filter starts_at client-side.
+    Mirrors Call Capacity dashboard which also pages through all meetings.
     """
-    from datetime import timedelta as _td
     starts_min = datetime(start_date.year, start_date.month, start_date.day,
                           0, 0, 0, tzinfo=PACIFIC)
     starts_max = datetime(end_date.year, end_date.month, end_date.day,
                           23, 59, 59, tzinfo=PACIFIC)
-    # Stop paginating when date_created is this old (meetings ordered by date_created)
-    created_cutoff = datetime(start_date.year, start_date.month, start_date.day,
-                              0, 0, 0, tzinfo=PACIFIC) - _td(days=180)
 
     print(f"Fetching RS Next Steps meetings ({start_date} → {end_date})...", flush=True)
     results, scanned, skip = [], 0, 0
@@ -367,22 +360,8 @@ def fetch_reactivation_scraper_meetings(start_date, end_date):
         batch = data.get("data", [])
         if not batch:
             break
-        stop = False
         for m in batch:
             scanned += 1
-            # Stop when date_created is old enough that starts_at can't be in window
-            created_raw = m.get("date_created") or m.get("created_at") or m.get("date_created_utc") or ""
-            if created_raw:
-                try:
-                    created_dt = datetime.fromisoformat(
-                        created_raw.replace("Z", "+00:00")
-                    ).astimezone(PACIFIC)
-                    if created_dt < created_cutoff:
-                        stop = True
-                        break
-                except Exception:
-                    pass
-            # Filter by starts_at within period
             starts_raw = m.get("starts_at") or ""
             if not starts_raw:
                 continue
@@ -394,22 +373,18 @@ def fetch_reactivation_scraper_meetings(start_date, end_date):
                 continue
             if not (starts_min <= starts_dt <= starts_max):
                 continue
-            # Title detection: any "next steps" substring (case-insensitive)
             title = (m.get("title") or "").strip()
             if NEXT_STEPS_PHRASE not in title.lower():
                 continue
             results.append({"lead_id": m["lead_id"], "starts_at": starts_raw})
 
-        if stop:
-            print(f"  Hit date_created cutoff after {scanned} meetings.", flush=True)
-            break
         if not data.get("has_more"):
             break
-        skip += 200
-        if scanned % 1000 == 0:
-            print(f"  Scanned {scanned} meetings so far...", flush=True)
+        skip += 100
+        if scanned % 500 == 0:
+            print(f"  Scanned {scanned} meetings...", flush=True)
 
-    print(f"  RS Next Steps meetings found: {len(results)} (scanned {scanned})", flush=True)
+    print(f"  RS Next Steps meetings found: {len(results)} (scanned {scanned} total)", flush=True)
     return results
 
 
