@@ -341,62 +341,57 @@ def fetch_leads_created(start_date, end_date):
 def fetch_reactivation_scraper_meetings(start_date, end_date):
     """
     Fetch Next Steps meetings for Reactivation Scrapers using title-prefix matching.
-    This is the canonical Lane 2 methodology:
-      - meetings /activity/meeting/ in date range
-      - title starts with one of NEXT_STEPS_TITLE_PREFIXES
-      - bucketed by starts_at (Pacific time)
+    Lane 2 methodology: title-prefix filter + starts_at bucketing (Pacific time).
 
-    Close API quirk: /activity/meeting/ does not support date_started__ filters.
-    We filter by date_created with a 60-day lookback window (meetings are booked
-    before they occur), then filter client-side by starts_at in Pacific time.
+    Close API quirk: /activity/meeting/ rejects date-based query params entirely.
+    We fetch without date filters and filter fully client-side by starts_at.
+    outcome field also not available via _fields on this endpoint — showed uses
+    lead-level First Call Show Up field instead (coarser but accepted per the doc).
     """
-    # Generous window: meetings booked up to 60 days before the period start
-    from datetime import timedelta as _td
-    created_start = start_date - _td(days=60)
-    created_end   = end_date   + _td(days=7)
-    created_start_str = created_start.strftime("%Y-%m-%d")
-    created_end_str   = created_end.strftime("%Y-%m-%d")
-
-    # Pacific boundaries for client-side starts_at filter
     starts_min = datetime(start_date.year, start_date.month, start_date.day,
                           0, 0, 0, tzinfo=PACIFIC)
     starts_max = datetime(end_date.year, end_date.month, end_date.day,
                           23, 59, 59, tzinfo=PACIFIC)
 
     print(f"Fetching RS Next Steps meetings ({start_date} → {end_date})...", flush=True)
-    results, skip = [], 0
+    results, fetched, skip = [], 0, 0
     while True:
         data = close_get("activity/meeting/", {
-            "date_created__gte": created_start_str,
-            "date_created__lte": created_end_str,
-            "_fields":           "id,lead_id,title,starts_at,outcome",
-            "_limit":            200,
-            "_skip":             skip,
+            "_fields": "id,lead_id,title,starts_at",
+            "_limit":  200,
+            "_skip":   skip,
         })
         batch = data.get("data", [])
+        fetched += len(batch)
         for m in batch:
             title = (m.get("title") or "").strip()
             if not any(title.startswith(p) for p in NEXT_STEPS_TITLE_PREFIXES):
                 continue
-            # Filter client-side by starts_at in Pacific time
+            # Filter by starts_at in Pacific time
             starts_raw = m.get("starts_at")
-            if starts_raw:
-                try:
-                    from datetime import datetime as _dt
-                    starts_dt = _dt.fromisoformat(
-                        starts_raw.replace("Z", "+00:00")
-                    ).astimezone(PACIFIC)
-                    if not (starts_min <= starts_dt <= starts_max):
-                        continue
-                except Exception:
-                    continue
-            results.append({"lead_id": m["lead_id"], "starts_at": starts_raw,
-                            "outcome": m.get("outcome")})
+            if not starts_raw:
+                continue
+            try:
+                starts_dt = datetime.fromisoformat(
+                    starts_raw.replace("Z", "+00:00")
+                ).astimezone(PACIFIC)
+            except Exception:
+                continue
+            # Stop paginating once meetings are older than our window
+            if starts_dt < starts_min:
+                print(f"  Reached meetings older than {start_date} — stopping pagination.", flush=True)
+                print(f"  RS Next Steps meetings found: {len(results)}", flush=True)
+                return results
+            if starts_dt <= starts_max:
+                results.append({"lead_id": m["lead_id"], "starts_at": starts_raw})
+
         if not data.get("has_more"):
             break
         skip += 200
+        if fetched % 1000 == 0:
+            print(f"  Scanned {fetched} meetings so far...", flush=True)
 
-    print(f"  RS Next Steps meetings (title-matched, starts in period): {len(results)}", flush=True)
+    print(f"  RS Next Steps meetings (title-matched, in period): {len(results)}", flush=True)
     return results
 
 
@@ -509,12 +504,11 @@ def aggregate_data(start_date, end_date, month_label,
             }
             rs_lead_cache[lid] = info
 
-        # showed = native Close meeting outcome (per-meeting, more accurate than lead field)
-        # qualified = lead-level field (sales decision, not a meeting outcome)
-        showed = mtg.get("outcome") == COMPLETED_MEETING_OUTCOME_ID
+        # showed = lead-level field (outcome not available via /activity/meeting/ _fields)
+        # qualified = lead-level field
         meeting_rows.append({
             "funnel":       REACTIVATION_SCRAPERS_FUNNEL,
-            "show_up":      showed,
+            "show_up":      info["showed"],
             "qualified":    info["qualified"],
             "utm_campaign": info["setter"],
         })
