@@ -61,13 +61,11 @@ SETTER_NAME_FUNNELS = {"Reactivation Scrapers"}
 
 # Reactivation Scrapers title-prefix methodology (see reactivation-scrapers-booked-meetings-methodology.md)
 REACTIVATION_SCRAPERS_FUNNEL = "Reactivation Scrapers"
-NEXT_STEPS_TITLE_PREFIXES = (
-    "Vendingpreneurs Call - Next Steps",
-    "Vendingpreneurs Next Steps Call",
-    "Vendingpreneurs - Next Steps",
-    "Vendingpreneur Next Steps",   # singular, older Calendly link still in use
-)
-COMPLETED_MEETING_OUTCOME_ID = "outcome_032Djn4dfeNuEoCunojA7K"  # native Close outcome = showed
+# Detection: any meeting title containing "next steps" (case-insensitive) is
+# a scraper-booked Next Steps meeting — per Call Capacity dashboard 2026-09-01.
+# Attribution (which setter) uses the lead's Reactivation - Setter Name field.
+NEXT_STEPS_PHRASE = "next steps"
+COMPLETED_MEETING_OUTCOME_ID = "outcome_032Djn4dfeNuEoCunojA7K"  # native Close outcome
 
 CLOSED_WON_STATUS_ID    = "stat_0oW3iRpVp9z5DJq0cuwI1HgR0XhHAhykEPPIq4TFsxd"
 WEEKLY_FEATURE_START    = "2026-04"  # Weeks only available for this month and later
@@ -338,74 +336,36 @@ def fetch_leads_created(start_date, end_date):
 
 # ── Reactivation Scrapers Meeting Fetch (title-prefix methodology) ────────────
 
-def fetch_rs_lead_pool(start_date, end_date):
+def fetch_reactivation_scraper_meetings(start_date, end_date):
     """
-    Fetch all Reactivation Scrapers leads that were updated within a 90-day
-    lookback window — broad enough to catch any lead with a Next Steps meeting
-    booked in advance of the current period.
-    Returns dict of lead_id → {setter, showed, qualified}.
-    """
-    from datetime import timedelta as _td
-    lookback = (start_date - _td(days=90)).strftime("%Y-%m-%d")
-    lookahead = (end_date   + _td(days=7)).strftime("%Y-%m-%d")
-    query = (f'custom.{CF_FUNNEL_NAME} = "Reactivation Scrapers" '
-             f'AND date_updated >= "{lookback}" AND date_updated <= "{lookahead}"')
+    Fetch Next Steps meetings for Reactivation Scrapers.
+    Detection: any meeting title containing "next steps" (case-insensitive).
+    Attribution: lead's Reactivation - Setter Name field.
 
-    print(f"  Building RS lead pool (updated {lookback} → {lookahead})...", flush=True)
-    pool, skip = {}, 0
-    while True:
-        data = close_get("lead/", {
-            "query":   query,
-            "_fields": f"id,status_id,custom.{CF_SETTER_NAME},custom.{CF_SHOW_UP},custom.{CF_QUALIFIED}",
-            "_limit":  200, "_skip": skip,
-        })
-        for lead in data.get("data", []):
-            lid = lead.get("id")
-            if not lid or lead.get("status_id") in EXCLUDED_LEAD_STATUS_IDS:
-                continue
-            setter_raw = lead.get(f"custom.{CF_SETTER_NAME}")
-            if isinstance(setter_raw, list): setter_raw = setter_raw[0] if setter_raw else None
-            pool[lid] = {
-                "setter":    str(setter_raw).strip() if setter_raw else "Unattributed",
-                "showed":    _is_yes(lead.get(f"custom.{CF_SHOW_UP}")),
-                "qualified": _is_yes(lead.get(f"custom.{CF_QUALIFIED}")),
-            }
-        if not data.get("has_more"):
-            break
-        skip += 200
-    print(f"  RS lead pool: {len(pool)} leads", flush=True)
-    return pool
-
-
-def fetch_reactivation_scraper_meetings(start_date, end_date, rs_lead_pool):
-    """
-    For each lead in rs_lead_pool, fetch their /activity/meeting/ records and
-    return those whose title starts with a Next Steps prefix AND whose starts_at
-    falls in [start_date, end_date] (Pacific time).
-
-    Close API quirk: /activity/meeting/ requires lead_id — no date-range listing.
-    We query per lead and filter client-side by starts_at and title prefix.
+    Close API: endpoint is "activity/meeting" (no trailing slash).
+    No date filter supported — fetch all, filter client-side by starts_at.
+    Early exit once meetings are older than the period (newest-first order).
     """
     starts_min = datetime(start_date.year, start_date.month, start_date.day,
                           0, 0, 0, tzinfo=PACIFIC)
     starts_max = datetime(end_date.year, end_date.month, end_date.day,
                           23, 59, 59, tzinfo=PACIFIC)
 
-    print(f"Fetching RS Next Steps meetings ({start_date} → {end_date}) "
-          f"across {len(rs_lead_pool)} leads...", flush=True)
-    results = []
-    for lid in rs_lead_pool:
-        data = close_get("activity/meeting/", {
-            "lead_id": lid,
+    print(f"Fetching RS Next Steps meetings ({start_date} → {end_date})...", flush=True)
+    results, scanned, skip = [], 0, 0
+    while True:
+        data = close_get("activity/meeting", {
             "_fields": "id,lead_id,title,starts_at",
-            "_limit":  50,
-            "_skip":   0,
+            "_limit":  100,
+            "_skip":   skip,
         })
-        for m in data.get("data", []):
+        batch = data.get("data", [])
+        if not batch:
+            break
+        scanned += len(batch)
+        for m in batch:
             title = (m.get("title") or "").strip()
-            if not any(title.startswith(p) for p in NEXT_STEPS_TITLE_PREFIXES):
-                continue
-            starts_raw = m.get("starts_at")
+            starts_raw = m.get("starts_at") or ""
             if not starts_raw:
                 continue
             try:
@@ -414,10 +374,24 @@ def fetch_reactivation_scraper_meetings(start_date, end_date, rs_lead_pool):
                 ).astimezone(PACIFIC)
             except Exception:
                 continue
-            if starts_min <= starts_dt <= starts_max:
-                results.append({"lead_id": lid, "starts_at": starts_raw})
+            # Early exit: meetings return newest-first; stop when past our window
+            if starts_dt < starts_min:
+                print(f"  Scanned {scanned} meetings, found {len(results)} RS matches.", flush=True)
+                return results
+            if starts_dt > starts_max:
+                continue
+            # Title detection: any "next steps" meeting (case-insensitive substring)
+            if NEXT_STEPS_PHRASE not in title.lower():
+                continue
+            results.append({"lead_id": m["lead_id"], "starts_at": starts_raw})
 
-    print(f"  RS Next Steps meetings found: {len(results)}", flush=True)
+        if not data.get("has_more"):
+            break
+        skip += 100
+        if scanned % 1000 == 0:
+            print(f"  Scanned {scanned} meetings so far...", flush=True)
+
+    print(f"  Scanned {scanned} meetings, found {len(results)} RS matches.", flush=True)
     return results
 
 
@@ -494,11 +468,7 @@ def aggregate_data(start_date, end_date, month_label,
                               "qualified": qualified, "utm_campaign": utm})
 
     # ── Reactivation Scrapers: title-prefix methodology ───────────────────────
-    # Merge FSCBD-cached RS leads with broader pool (leads updated recently)
-    rs_broader = fetch_rs_lead_pool(start_date, end_date)
-    for lid, info in rs_broader.items():
-        rs_lead_cache.setdefault(lid, info)  # FSCBD cache takes precedence
-    rs_meetings = fetch_reactivation_scraper_meetings(start_date, end_date, rs_lead_cache)
+    rs_meetings = fetch_reactivation_scraper_meetings(start_date, end_date)
     rs_counted  = 0
     for mtg in rs_meetings:
         lid = mtg["lead_id"]
