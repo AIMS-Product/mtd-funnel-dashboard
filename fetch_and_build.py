@@ -338,36 +338,73 @@ def fetch_leads_created(start_date, end_date):
 
 # ── Reactivation Scrapers Meeting Fetch (title-prefix methodology) ────────────
 
-def fetch_reactivation_scraper_meetings(start_date, end_date):
+def fetch_rs_lead_pool(start_date, end_date):
     """
-    Fetch Next Steps meetings for Reactivation Scrapers using title-prefix matching.
-    Lane 2 methodology: title-prefix filter + starts_at bucketing (Pacific time).
+    Fetch all Reactivation Scrapers leads that were updated within a 90-day
+    lookback window — broad enough to catch any lead with a Next Steps meeting
+    booked in advance of the current period.
+    Returns dict of lead_id → {setter, showed, qualified}.
+    """
+    from datetime import timedelta as _td
+    lookback = (start_date - _td(days=90)).strftime("%Y-%m-%d")
+    lookahead = (end_date   + _td(days=7)).strftime("%Y-%m-%d")
+    query = (f'custom.{CF_FUNNEL_NAME} = "Reactivation Scrapers" '
+             f'AND date_updated >= "{lookback}" AND date_updated <= "{lookahead}"')
 
-    Close API quirk: /activity/meeting/ rejects date-based query params entirely.
-    We fetch without date filters and filter fully client-side by starts_at.
-    outcome field also not available via _fields on this endpoint — showed uses
-    lead-level First Call Show Up field instead (coarser but accepted per the doc).
+    print(f"  Building RS lead pool (updated {lookback} → {lookahead})...", flush=True)
+    pool, skip = {}, 0
+    while True:
+        data = close_get("lead/", {
+            "query":   query,
+            "_fields": f"id,status_id,custom.{CF_SETTER_NAME},custom.{CF_SHOW_UP},custom.{CF_QUALIFIED}",
+            "_limit":  200, "_skip": skip,
+        })
+        for lead in data.get("data", []):
+            lid = lead.get("id")
+            if not lid or lead.get("status_id") in EXCLUDED_LEAD_STATUS_IDS:
+                continue
+            setter_raw = lead.get(f"custom.{CF_SETTER_NAME}")
+            if isinstance(setter_raw, list): setter_raw = setter_raw[0] if setter_raw else None
+            pool[lid] = {
+                "setter":    str(setter_raw).strip() if setter_raw else "Unattributed",
+                "showed":    _is_yes(lead.get(f"custom.{CF_SHOW_UP}")),
+                "qualified": _is_yes(lead.get(f"custom.{CF_QUALIFIED}")),
+            }
+        if not data.get("has_more"):
+            break
+        skip += 200
+    print(f"  RS lead pool: {len(pool)} leads", flush=True)
+    return pool
+
+
+def fetch_reactivation_scraper_meetings(start_date, end_date, rs_lead_pool):
+    """
+    For each lead in rs_lead_pool, fetch their /activity/meeting/ records and
+    return those whose title starts with a Next Steps prefix AND whose starts_at
+    falls in [start_date, end_date] (Pacific time).
+
+    Close API quirk: /activity/meeting/ requires lead_id — no date-range listing.
+    We query per lead and filter client-side by starts_at and title prefix.
     """
     starts_min = datetime(start_date.year, start_date.month, start_date.day,
                           0, 0, 0, tzinfo=PACIFIC)
     starts_max = datetime(end_date.year, end_date.month, end_date.day,
                           23, 59, 59, tzinfo=PACIFIC)
 
-    print(f"Fetching RS Next Steps meetings ({start_date} → {end_date})...", flush=True)
-    results, fetched, skip = [], 0, 0
-    while True:
+    print(f"Fetching RS Next Steps meetings ({start_date} → {end_date}) "
+          f"across {len(rs_lead_pool)} leads...", flush=True)
+    results = []
+    for lid in rs_lead_pool:
         data = close_get("activity/meeting/", {
+            "lead_id": lid,
             "_fields": "id,lead_id,title,starts_at",
-            "_limit":  200,
-            "_skip":   skip,
+            "_limit":  50,
+            "_skip":   0,
         })
-        batch = data.get("data", [])
-        fetched += len(batch)
-        for m in batch:
+        for m in data.get("data", []):
             title = (m.get("title") or "").strip()
             if not any(title.startswith(p) for p in NEXT_STEPS_TITLE_PREFIXES):
                 continue
-            # Filter by starts_at in Pacific time
             starts_raw = m.get("starts_at")
             if not starts_raw:
                 continue
@@ -377,21 +414,10 @@ def fetch_reactivation_scraper_meetings(start_date, end_date):
                 ).astimezone(PACIFIC)
             except Exception:
                 continue
-            # Stop paginating once meetings are older than our window
-            if starts_dt < starts_min:
-                print(f"  Reached meetings older than {start_date} — stopping pagination.", flush=True)
-                print(f"  RS Next Steps meetings found: {len(results)}", flush=True)
-                return results
-            if starts_dt <= starts_max:
-                results.append({"lead_id": m["lead_id"], "starts_at": starts_raw})
+            if starts_min <= starts_dt <= starts_max:
+                results.append({"lead_id": lid, "starts_at": starts_raw})
 
-        if not data.get("has_more"):
-            break
-        skip += 200
-        if fetched % 1000 == 0:
-            print(f"  Scanned {fetched} meetings so far...", flush=True)
-
-    print(f"  RS Next Steps meetings (title-matched, in period): {len(results)}", flush=True)
+    print(f"  RS Next Steps meetings found: {len(results)}", flush=True)
     return results
 
 
@@ -468,7 +494,11 @@ def aggregate_data(start_date, end_date, month_label,
                               "qualified": qualified, "utm_campaign": utm})
 
     # ── Reactivation Scrapers: title-prefix methodology ───────────────────────
-    rs_meetings = fetch_reactivation_scraper_meetings(start_date, end_date)
+    # Merge FSCBD-cached RS leads with broader pool (leads updated recently)
+    rs_broader = fetch_rs_lead_pool(start_date, end_date)
+    for lid, info in rs_broader.items():
+        rs_lead_cache.setdefault(lid, info)  # FSCBD cache takes precedence
+    rs_meetings = fetch_reactivation_scraper_meetings(start_date, end_date, rs_lead_cache)
     rs_counted  = 0
     for mtg in rs_meetings:
         lid = mtg["lead_id"]
