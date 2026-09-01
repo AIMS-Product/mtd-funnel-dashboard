@@ -59,6 +59,16 @@ UTM_CONTENT_FUNNELS = {"Internal Webinar"}
 # Funnels that use Setter Name field instead of UTM for sub-breakdown
 SETTER_NAME_FUNNELS = {"Reactivation Scrapers"}
 
+# Reactivation Scrapers title-prefix methodology (see reactivation-scrapers-booked-meetings-methodology.md)
+REACTIVATION_SCRAPERS_FUNNEL = "Reactivation Scrapers"
+NEXT_STEPS_TITLE_PREFIXES = (
+    "Vendingpreneurs Call - Next Steps",
+    "Vendingpreneurs Next Steps Call",
+    "Vendingpreneurs - Next Steps",
+    "Vendingpreneur Next Steps",   # singular, older Calendly link still in use
+)
+COMPLETED_MEETING_OUTCOME_ID = "outcome_032Djn4dfeNuEoCunojA7K"  # native Close outcome = showed
+
 CLOSED_WON_STATUS_ID    = "stat_0oW3iRpVp9z5DJq0cuwI1HgR0XhHAhykEPPIq4TFsxd"
 WEEKLY_FEATURE_START    = "2026-04"  # Weeks only available for this month and later
 
@@ -326,6 +336,48 @@ def fetch_leads_created(start_date, end_date):
     return leads
 
 
+# ── Reactivation Scrapers Meeting Fetch (title-prefix methodology) ────────────
+
+def fetch_reactivation_scraper_meetings(start_date, end_date):
+    """
+    Fetch Next Steps meetings for Reactivation Scrapers using title-prefix matching.
+    This is the canonical Lane 2 methodology:
+      - meetings /activity/meeting/ in date range
+      - title starts with one of NEXT_STEPS_TITLE_PREFIXES
+      - bucketed by starts_at (Pacific time)
+    Returns list of {lead_id, starts_at} for meetings that match.
+    """
+    start_utc = datetime(start_date.year, start_date.month, start_date.day,
+                         0, 0, 0, tzinfo=PACIFIC).astimezone(timezone.utc)
+    end_utc   = datetime(end_date.year, end_date.month, end_date.day,
+                         23, 59, 59, tzinfo=PACIFIC).astimezone(timezone.utc)
+    start_str = start_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
+    end_str   = end_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    print(f"Fetching RS Next Steps meetings ({start_date} → {end_date})...", flush=True)
+    results, skip = [], 0
+    while True:
+        data = close_get("activity/meeting/", {
+            "date_started__gte": start_str,
+            "date_started__lte": end_str,
+            "_fields":           "id,lead_id,title,starts_at,outcome",
+            "_limit":            200,
+            "_skip":             skip,
+        })
+        batch = data.get("data", [])
+        for m in batch:
+            title = (m.get("title") or "").strip()
+            if any(title.startswith(p) for p in NEXT_STEPS_TITLE_PREFIXES):
+                results.append({"lead_id": m["lead_id"], "starts_at": m.get("starts_at"),
+                                "outcome": m.get("outcome")})
+        if not data.get("has_more"):
+            break
+        skip += 200
+
+    print(f"  RS Next Steps meetings (title-matched): {len(results)}", flush=True)
+    return results
+
+
 # ── Main Aggregation ───────────────────────────────────────────────────────────
 
 def _is_yes(val):
@@ -362,33 +414,92 @@ def aggregate_data(start_date, end_date, month_label,
     # Fetch booked leads via First Sales Call Booked Date field
     booked_leads = fetch_leads_by_booked_date(start_date, end_date)
 
-    meeting_rows = []
+    meeting_rows  = []
+    rs_lead_cache = {}  # lead_id → {setter, showed, qualified} for RS title-prefix lookup
+
     for lead in booked_leads:
         lid = lead.get("id")
         if not lid:
             continue
-        # Cache the lead (already has all fields we need from the fetch)
         lead_cache[lid] = lead
         if lead.get("status_id") in EXCLUDED_LEAD_STATUS_IDS:
             continue
-        funnel    = get_funnel_name(lead)
+        funnel = get_funnel_name(lead)
+
+        # Reactivation Scrapers: cache showed/qualified for title-prefix path below;
+        # do NOT count as booked via FSCBD — the title-prefix method replaces it.
+        if funnel == REACTIVATION_SCRAPERS_FUNNEL:
+            setter_raw = lead.get(f"custom.{CF_SETTER_NAME}")
+            if isinstance(setter_raw, list): setter_raw = setter_raw[0] if setter_raw else None
+            rs_lead_cache[lid] = {
+                "setter":    str(setter_raw).strip() if setter_raw else "Unattributed",
+                "showed":    _is_yes(lead.get(f"custom.{CF_SHOW_UP}")),
+                "qualified": _is_yes(lead.get(f"custom.{CF_QUALIFIED}")),
+            }
+            continue  # skip FSCBD booked count for RS
+
         show_up   = _is_yes(lead.get(f"custom.{CF_SHOW_UP}"))
         qualified = _is_yes(lead.get(f"custom.{CF_QUALIFIED}"))
         if lid not in utm_cache:
             utm_cache[lid] = fetch_utm_data(lid)
         utm_campaign, utm_content = utm_cache[lid]
-        if funnel in SETTER_NAME_FUNNELS:
-            setter_raw = lead.get(f"custom.{CF_SETTER_NAME}")
-            if isinstance(setter_raw, list): setter_raw = setter_raw[0] if setter_raw else None
-            utm = str(setter_raw).strip() if setter_raw else "Unattributed"
-        elif funnel in UTM_CONTENT_FUNNELS:
+        if funnel in UTM_CONTENT_FUNNELS:
             utm = utm_content or "Unattributed"
         else:
             utm = utm_campaign or "Unattributed"
         meeting_rows.append({"funnel": funnel, "show_up": show_up,
                               "qualified": qualified, "utm_campaign": utm})
 
-    print(f"  Booked rows after status filter: {len(meeting_rows)}", flush=True)
+    # ── Reactivation Scrapers: title-prefix methodology ───────────────────────
+    rs_meetings = fetch_reactivation_scraper_meetings(start_date, end_date)
+    rs_counted  = 0
+    for mtg in rs_meetings:
+        lid = mtg["lead_id"]
+        if lid in rs_lead_cache:
+            info = rs_lead_cache[lid]
+        elif lid in lead_cache:
+            # Lead was fetched for another reason (e.g. won opp) — extract RS info
+            lead = lead_cache[lid]
+            if get_funnel_name(lead) != REACTIVATION_SCRAPERS_FUNNEL:
+                continue
+            setter_raw = lead.get(f"custom.{CF_SETTER_NAME}")
+            if isinstance(setter_raw, list): setter_raw = setter_raw[0] if setter_raw else None
+            info = {
+                "setter":    str(setter_raw).strip() if setter_raw else "Unattributed",
+                "showed":    _is_yes(lead.get(f"custom.{CF_SHOW_UP}")),
+                "qualified": _is_yes(lead.get(f"custom.{CF_QUALIFIED}")),
+            }
+            rs_lead_cache[lid] = info
+        else:
+            # Lead not yet cached — fetch it
+            lead = fetch_lead(lid)
+            lead_cache[lid] = lead
+            if lead.get("status_id") in EXCLUDED_LEAD_STATUS_IDS:
+                continue
+            if get_funnel_name(lead) != REACTIVATION_SCRAPERS_FUNNEL:
+                continue  # title matched but lead not actually RS — skip
+            setter_raw = lead.get(f"custom.{CF_SETTER_NAME}")
+            if isinstance(setter_raw, list): setter_raw = setter_raw[0] if setter_raw else None
+            info = {
+                "setter":    str(setter_raw).strip() if setter_raw else "Unattributed",
+                "showed":    _is_yes(lead.get(f"custom.{CF_SHOW_UP}")),
+                "qualified": _is_yes(lead.get(f"custom.{CF_QUALIFIED}")),
+            }
+            rs_lead_cache[lid] = info
+
+        # showed = native Close meeting outcome (per-meeting, more accurate than lead field)
+        # qualified = lead-level field (sales decision, not a meeting outcome)
+        showed = mtg.get("outcome") == COMPLETED_MEETING_OUTCOME_ID
+        meeting_rows.append({
+            "funnel":       REACTIVATION_SCRAPERS_FUNNEL,
+            "show_up":      showed,
+            "qualified":    info["qualified"],
+            "utm_campaign": info["setter"],
+        })
+        rs_counted += 1
+
+    print(f"  Booked rows after status filter: {len(meeting_rows)} "
+          f"(incl. {rs_counted} RS title-prefix meetings)", flush=True)
 
     closed_rows    = []
     tier_by_funnel   = {}
