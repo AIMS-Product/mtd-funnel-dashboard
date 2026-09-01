@@ -291,7 +291,7 @@ def fetch_leads_by_booked_date(start_date, end_date):
         print(f"  Fetched {len(leads)} leads so far...", flush=True)
         if not data.get("has_more"):
             break
-        skip += 200
+        skip += 100
 
     print(f"  Total booked leads: {len(leads)}", flush=True)
     return leads
@@ -361,7 +361,7 @@ def fetch_reactivation_scraper_meetings(start_date, end_date):
     results, scanned, skip = [], 0, 0
     while True:
         data = close_get("activity/meeting", {
-            "_limit": 200,
+            "_limit": 100,
             "_skip":  skip,
         })
         batch = data.get("data", [])
