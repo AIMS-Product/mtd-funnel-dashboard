@@ -4,8 +4,8 @@
   "grand": {
     "leads_created": 137,
     "booked": 54,
-    "showed": 21,
-    "qualified": 14,
+    "showed": 23,
+    "qualified": 16,
     "closed": 3,
     "revenue": 21344.0
   },
@@ -13,21 +13,33 @@
     "LEAD SOURCES": {
       "leads_created": 83,
       "booked": 50,
-      "showed": 20,
-      "qualified": 13,
+      "showed": 21,
+      "qualified": 14,
       "closed": 3,
       "revenue": 21344.0
     },
     "UNCATEGORIZED": {
       "leads_created": 54,
       "booked": 4,
-      "showed": 1,
-      "qualified": 1,
+      "showed": 2,
+      "qualified": 2,
       "closed": 0,
       "revenue": 0.0
     }
   },
   "funnels": {
+    "Linkedin": {
+      "leads_created": 0,
+      "booked": 3,
+      "book_pct": 0,
+      "showed": 2,
+      "show_pct": 66.7,
+      "qualified": 1,
+      "qual_pct": 33.3,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "YouTube": {
       "leads_created": 7,
       "booked": 3,
@@ -44,22 +56,10 @@
       "leads_created": 54,
       "booked": 4,
       "book_pct": 7.4,
-      "showed": 1,
-      "show_pct": 25.0,
-      "qualified": 1,
-      "qual_pct": 25.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Linkedin": {
-      "leads_created": 0,
-      "booked": 3,
-      "book_pct": 0,
-      "showed": 1,
-      "show_pct": 33.3,
-      "qualified": 0,
-      "qual_pct": 0.0,
+      "showed": 2,
+      "show_pct": 50.0,
+      "qualified": 2,
+      "qual_pct": 50.0,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
