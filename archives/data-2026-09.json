@@ -2,8 +2,8 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 165,
-    "booked": 56,
+    "leads_created": 166,
+    "booked": 55,
     "showed": 31,
     "qualified": 19,
     "closed": 5,
@@ -11,8 +11,8 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 101,
-      "booked": 53,
+      "leads_created": 102,
+      "booked": 52,
       "showed": 30,
       "qualified": 17,
       "closed": 5,
@@ -28,10 +28,22 @@
     }
   },
   "funnels": {
+    "Website": {
+      "leads_created": 2,
+      "booked": 3,
+      "book_pct": 150.0,
+      "showed": 3,
+      "show_pct": 100.0,
+      "qualified": 3,
+      "qual_pct": 100.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Internal Webinar": {
-      "leads_created": 63,
+      "leads_created": 64,
       "booked": 9,
-      "book_pct": 14.3,
+      "book_pct": 14.1,
       "showed": 5,
       "show_pct": 55.6,
       "qualified": 2,
@@ -51,30 +63,6 @@
       "closed": 2,
       "cw_pct": 100.0,
       "revenue": 11994.0
-    },
-    "Instagram": {
-      "leads_created": 14,
-      "booked": 2,
-      "book_pct": 14.3,
-      "showed": 1,
-      "show_pct": 50.0,
-      "qualified": 1,
-      "qual_pct": 50.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Website": {
-      "leads_created": 2,
-      "booked": 3,
-      "book_pct": 150.0,
-      "showed": 3,
-      "show_pct": 100.0,
-      "qualified": 3,
-      "qual_pct": 100.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "Unknown (Needs Review)": {
       "leads_created": 64,
@@ -96,6 +84,18 @@
       "show_pct": 66.7,
       "qualified": 1,
       "qual_pct": 33.3,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Instagram": {
+      "leads_created": 14,
+      "booked": 1,
+      "book_pct": 7.1,
+      "showed": 1,
+      "show_pct": 100.0,
+      "qualified": 1,
+      "qual_pct": 100.0,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
