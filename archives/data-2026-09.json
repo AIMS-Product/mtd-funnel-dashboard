@@ -2,7 +2,7 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 240,
+    "leads_created": 243,
     "booked": 84,
     "showed": 34,
     "qualified": 24,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 147,
+      "leads_created": 149,
       "booked": 78,
       "showed": 33,
       "qualified": 22,
@@ -19,7 +19,7 @@
       "revenue": 33338.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 93,
+      "leads_created": 94,
       "booked": 6,
       "showed": 1,
       "qualified": 2,
@@ -28,34 +28,10 @@
     }
   },
   "funnels": {
-    "Instagram": {
-      "leads_created": 14,
-      "booked": 4,
-      "book_pct": 28.6,
-      "showed": 2,
-      "show_pct": 50.0,
-      "qualified": 3,
-      "qual_pct": 75.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Internal Webinar": {
-      "leads_created": 107,
-      "booked": 18,
-      "book_pct": 16.8,
-      "showed": 6,
-      "show_pct": 33.3,
-      "qualified": 5,
-      "qual_pct": 27.8,
-      "closed": 1,
-      "cw_pct": 5.6,
-      "revenue": 5000.0
-    },
     "Unknown (Needs Review)": {
-      "leads_created": 93,
+      "leads_created": 94,
       "booked": 6,
-      "book_pct": 6.5,
+      "book_pct": 6.4,
       "showed": 1,
       "show_pct": 16.7,
       "qualified": 2,
@@ -75,6 +51,30 @@
       "closed": 1,
       "cw_pct": 100.0,
       "revenue": 10347.0
+    },
+    "Internal Webinar": {
+      "leads_created": 109,
+      "booked": 18,
+      "book_pct": 16.5,
+      "showed": 6,
+      "show_pct": 33.3,
+      "qualified": 5,
+      "qual_pct": 27.8,
+      "closed": 1,
+      "cw_pct": 5.6,
+      "revenue": 5000.0
+    },
+    "Instagram": {
+      "leads_created": 14,
+      "booked": 4,
+      "book_pct": 28.6,
+      "showed": 2,
+      "show_pct": 50.0,
+      "qualified": 3,
+      "qual_pct": 75.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "YouTube": {
       "leads_created": 7,
