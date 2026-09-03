@@ -2,7 +2,7 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 280,
+    "leads_created": 282,
     "booked": 83,
     "showed": 40,
     "qualified": 28,
@@ -19,7 +19,7 @@
       "revenue": 39335.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 111,
+      "leads_created": 113,
       "booked": 6,
       "showed": 3,
       "qualified": 4,
@@ -28,22 +28,22 @@
     }
   },
   "funnels": {
-    "Unknown (Needs Review)": {
-      "leads_created": 111,
-      "booked": 6,
-      "book_pct": 5.4,
-      "showed": 3,
-      "show_pct": 50.0,
-      "qualified": 4,
-      "qual_pct": 66.7,
+    "Google Ads": {
+      "leads_created": 1,
+      "booked": 1,
+      "book_pct": 100.0,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0.0,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
     },
     "Internal Webinar": {
-      "leads_created": 128,
+      "leads_created": 127,
       "booked": 17,
-      "book_pct": 13.3,
+      "book_pct": 13.4,
       "showed": 7,
       "show_pct": 41.2,
       "qualified": 6,
@@ -51,6 +51,30 @@
       "closed": 1,
       "cw_pct": 5.9,
       "revenue": 5000.0
+    },
+    "Meta Ads": {
+      "leads_created": 7,
+      "booked": 1,
+      "book_pct": 14.3,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Unknown (Needs Review)": {
+      "leads_created": 113,
+      "booked": 6,
+      "book_pct": 5.3,
+      "showed": 3,
+      "show_pct": 50.0,
+      "qualified": 4,
+      "qual_pct": 66.7,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "Instagram": {
       "leads_created": 14,
@@ -75,30 +99,6 @@
       "closed": 2,
       "cw_pct": 100.0,
       "revenue": 11994.0
-    },
-    "Google Ads": {
-      "leads_created": 1,
-      "booked": 1,
-      "book_pct": 100.0,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Meta Ads": {
-      "leads_created": 7,
-      "booked": 1,
-      "book_pct": 14.3,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "LTF - In-House": {
       "leads_created": 0,
@@ -137,9 +137,9 @@
       "revenue": 0.0
     },
     "Reactivation Scrapers": {
-      "leads_created": 11,
+      "leads_created": 12,
       "booked": 45,
-      "book_pct": 409.1,
+      "book_pct": 375.0,
       "showed": 20,
       "show_pct": 44.4,
       "qualified": 9,
