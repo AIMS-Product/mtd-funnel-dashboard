@@ -2,19 +2,19 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 1393,
+    "leads_created": 1394,
     "booked": 186,
-    "showed": 96,
-    "qualified": 74,
+    "showed": 97,
+    "qualified": 75,
     "closed": 17,
     "revenue": 130802.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1197,
+      "leads_created": 1198,
       "booked": 183,
-      "showed": 95,
-      "qualified": 73,
+      "showed": 96,
+      "qualified": 74,
       "closed": 17,
       "revenue": 130802.0
     },
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Instagram": {
+      "leads_created": 54,
+      "booked": 18,
+      "book_pct": 33.3,
+      "showed": 12,
+      "show_pct": 66.7,
+      "qualified": 10,
+      "qual_pct": 55.6,
+      "closed": 2,
+      "cw_pct": 11.1,
+      "revenue": 12894.0
+    },
     "Website": {
       "leads_created": 12,
       "booked": 12,
@@ -40,6 +52,18 @@
       "cw_pct": 8.3,
       "revenue": 6897.0
     },
+    "Internal Webinar": {
+      "leads_created": 1025,
+      "booked": 38,
+      "book_pct": 3.7,
+      "showed": 21,
+      "show_pct": 55.3,
+      "qualified": 14,
+      "qual_pct": 36.8,
+      "closed": 3,
+      "cw_pct": 7.9,
+      "revenue": 25994.0
+    },
     "YouTube": {
       "leads_created": 18,
       "booked": 8,
@@ -51,30 +75,6 @@
       "closed": 4,
       "cw_pct": 50.0,
       "revenue": 27888.0
-    },
-    "Internal Webinar": {
-      "leads_created": 1024,
-      "booked": 38,
-      "book_pct": 3.7,
-      "showed": 21,
-      "show_pct": 55.3,
-      "qualified": 14,
-      "qual_pct": 36.8,
-      "closed": 3,
-      "cw_pct": 7.9,
-      "revenue": 25994.0
-    },
-    "Instagram": {
-      "leads_created": 54,
-      "booked": 18,
-      "book_pct": 33.3,
-      "showed": 12,
-      "show_pct": 66.7,
-      "qualified": 10,
-      "qual_pct": 55.6,
-      "closed": 2,
-      "cw_pct": 11.1,
-      "revenue": 12894.0
     },
     "Unknown (Needs Review)": {
       "leads_created": 196,
@@ -152,10 +152,10 @@
       "leads_created": 41,
       "booked": 94,
       "book_pct": 229.3,
-      "showed": 45,
-      "show_pct": 47.9,
-      "qualified": 33,
-      "qual_pct": 35.1,
+      "showed": 46,
+      "show_pct": 48.9,
+      "qualified": 34,
+      "qual_pct": 36.2,
       "closed": 6,
       "cw_pct": 6.4,
       "revenue": 46782.0
