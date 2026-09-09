@@ -2,7 +2,7 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 1427,
+    "leads_created": 1429,
     "booked": 275,
     "showed": 125,
     "qualified": 95,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1228,
+      "leads_created": 1230,
       "booked": 269,
       "showed": 123,
       "qualified": 93,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 1054,
+      "booked": 80,
+      "book_pct": 7.6,
+      "showed": 33,
+      "show_pct": 41.2,
+      "qualified": 21,
+      "qual_pct": 26.2,
+      "closed": 3,
+      "cw_pct": 3.8,
+      "revenue": 25994.0
+    },
     "Mike Newsletter": {
       "leads_created": 1,
       "booked": 1,
@@ -87,18 +99,6 @@
       "closed": 4,
       "cw_pct": 26.7,
       "revenue": 27888.0
-    },
-    "Internal Webinar": {
-      "leads_created": 1052,
-      "booked": 80,
-      "book_pct": 7.6,
-      "showed": 33,
-      "show_pct": 41.2,
-      "qualified": 21,
-      "qual_pct": 26.2,
-      "closed": 3,
-      "cw_pct": 3.8,
-      "revenue": 25994.0
     },
     "Unknown (Needs Review)": {
       "leads_created": 199,
