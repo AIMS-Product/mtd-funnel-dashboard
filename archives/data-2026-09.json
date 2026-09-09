@@ -3,23 +3,23 @@
   "month_label": "September 2026",
   "grand": {
     "leads_created": 1470,
-    "booked": 285,
-    "showed": 133,
-    "qualified": 100,
+    "booked": 286,
+    "showed": 136,
+    "qualified": 101,
     "closed": 19,
     "revenue": 147696.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1268,
-      "booked": 279,
-      "showed": 131,
-      "qualified": 98,
+      "leads_created": 1269,
+      "booked": 280,
+      "showed": 134,
+      "qualified": 99,
       "closed": 18,
       "revenue": 141699.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 202,
+      "leads_created": 201,
       "booked": 6,
       "showed": 2,
       "qualified": 2,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 1081,
+      "booked": 82,
+      "book_pct": 7.6,
+      "showed": 38,
+      "show_pct": 46.3,
+      "qualified": 22,
+      "qual_pct": 26.8,
+      "closed": 3,
+      "cw_pct": 3.7,
+      "revenue": 25994.0
+    },
     "YouTube": {
       "leads_created": 17,
       "booked": 13,
@@ -39,18 +51,6 @@
       "closed": 5,
       "cw_pct": 38.5,
       "revenue": 38785.0
-    },
-    "Internal Webinar": {
-      "leads_created": 1081,
-      "booked": 81,
-      "book_pct": 7.5,
-      "showed": 35,
-      "show_pct": 43.2,
-      "qualified": 21,
-      "qual_pct": 25.9,
-      "closed": 3,
-      "cw_pct": 3.7,
-      "revenue": 25994.0
     },
     "Website": {
       "leads_created": 12,
@@ -65,7 +65,7 @@
       "revenue": 6897.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 202,
+      "leads_created": 201,
       "booked": 6,
       "book_pct": 3.0,
       "showed": 2,
@@ -137,9 +137,9 @@
       "revenue": 0.0
     },
     "Meta Ads": {
-      "leads_created": 39,
+      "leads_created": 38,
       "booked": 2,
-      "book_pct": 5.1,
+      "book_pct": 5.3,
       "showed": 0,
       "show_pct": 0.0,
       "qualified": 0,
@@ -149,9 +149,9 @@
       "revenue": 0.0
     },
     "Reactivation Scrapers": {
-      "leads_created": 48,
+      "leads_created": 50,
       "booked": 105,
-      "book_pct": 218.8,
+      "book_pct": 210.0,
       "showed": 49,
       "show_pct": 46.7,
       "qualified": 34,
