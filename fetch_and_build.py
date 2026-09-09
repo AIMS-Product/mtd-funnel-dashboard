@@ -69,6 +69,7 @@ COMPLETED_MEETING_OUTCOME_ID = "outcome_032Djn4dfeNuEoCunojA7K"  # native Close 
 
 CLOSED_WON_STATUS_ID    = "stat_0oW3iRpVp9z5DJq0cuwI1HgR0XhHAhykEPPIq4TFsxd"
 WEEKLY_FEATURE_START    = "2026-04"  # Weeks only available for this month and later
+MONTHLY_BOOKED_GOAL     = 850        # Update at the start of each month
 
 # ── Filter Constants ──────────────────────────────────────────────────────────
 
@@ -1254,7 +1255,7 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
   </div>
   <div class="kpi" style="--kpi-accent:#4f46e5; --kpi-color:var(--text);">
     <div class="label">Total Booked</div>
-    <div class="value">{g_bo}</div>
+    <div class="value">{g_bo}<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ {MONTHLY_BOOKED_GOAL:,} <span style="font-size:12px;">goal</span></span></div>
     <div class="kpi-sub">new first calls MTD</div>
   </div>
   <div class="kpi" style="--kpi-accent:#2563eb; --kpi-color:#2563eb;">
