@@ -70,6 +70,7 @@ COMPLETED_MEETING_OUTCOME_ID = "outcome_032Djn4dfeNuEoCunojA7K"  # native Close 
 CLOSED_WON_STATUS_ID    = "stat_0oW3iRpVp9z5DJq0cuwI1HgR0XhHAhykEPPIq4TFsxd"
 WEEKLY_FEATURE_START    = "2026-04"  # Weeks only available for this month and later
 MONTHLY_BOOKED_GOAL     = 850        # Update at the start of each month
+MONTHLY_REVENUE_GOAL    = 750_000    # Update at the start of each month
 
 # ── Filter Constants ──────────────────────────────────────────────────────────
 
@@ -851,8 +852,11 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
                                      goals, day_of_month, days_in_month,
                                      tier_by_funnel)
 
-    g_lc    = grand.get("leads_created", 0)
-    g_vh_rev = data.get("vendhub_revenue", 0.0)
+    g_lc      = grand.get("leads_created", 0)
+    g_vh_rev  = data.get("vendhub_revenue", 0.0)
+    day_num   = data.get("day_of_month",  1)
+    days_tot  = data.get("days_in_month", 30)
+    pct_month = round(day_num / days_tot * 100, 1) if days_tot else 0
     g_bo  = grand["booked"]
     g_sh  = grand["showed"]
     g_qu  = grand["qualified"]
@@ -1002,6 +1006,27 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     color: var(--text);
     line-height: 1.1;
   }}
+  .rev-goal-badge {{
+    position: absolute;
+    top: 10px; right: 10px;
+    font-size: 11px; font-weight: 700;
+    padding: 3px 8px; border-radius: 20px;
+    letter-spacing: 0.04em;
+  }}
+  .rev-goal-badge.red    {{ background: #e02424; color: #fff; }}
+  .rev-goal-badge.amber  {{ background: #d97706; color: #fff; }}
+  .rev-goal-badge.green  {{ background: #0e9f6e; color: #fff; }}
+
+  .rev-goal-badge-mid {{
+    display: inline-block;
+    font-size: 16px; font-weight: 700;
+    padding: 2px 10px; border-radius: 16px;
+    margin-left: 6px; vertical-align: middle;
+  }}
+  .rev-goal-badge-mid.red   {{ background: rgba(224,36,36,0.12);  color: #e02424; }}
+  .rev-goal-badge-mid.amber {{ background: rgba(217,119,6,0.12);  color: #d97706; }}
+  .rev-goal-badge-mid.green {{ background: rgba(14,159,110,0.12); color: #0e9f6e; }}
+
   .kpi-split-item .split-rate {{
     font-size: 10px;
     color: var(--muted2);
@@ -1090,6 +1115,44 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     display: inline-block; transition: transform 0.15s;
   }}
   .pkg-chevron.open {{ transform: rotate(90deg); color: var(--muted2); }}
+
+  /* Time context block */
+  .time-context {{
+    display: flex;
+    gap: 20px;
+    padding: 0 36px 16px;
+    align-items: center;
+  }}
+  .time-item {{
+    font-size: 12px;
+    color: var(--muted2);
+  }}
+  .time-item .time-val {{
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-left: 4px;
+  }}
+  .time-divider {{
+    width: 1px;
+    height: 14px;
+    background: var(--border);
+  }}
+
+  /* Booked progress bar */
+  .booked-bar-wrap {{
+    margin-top: 8px;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }}
+  .booked-bar-fill {{
+    height: 100%;
+    border-radius: 2px;
+    background: var(--accent);
+    transition: width 0.4s ease;
+  }}
 
   /* Total row */
   .total-row {{
@@ -1247,6 +1310,12 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
 </div>
 
 <!-- KPI Cards -->
+<div class="time-context">
+  <span class="time-item">Day in month<span class="time-val">{day_num} / {days_tot}</span></span>
+  <span class="time-divider"></span>
+  <span class="time-item">Month elapsed<span class="time-val">{pct_month}%</span></span>
+</div>
+
 <div class="kpis">
   <div class="kpi" style="--kpi-accent:#6366f1; --kpi-color:#6366f1;">
     <div class="label">Leads Created</div>
@@ -1256,6 +1325,9 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
   <div class="kpi" style="--kpi-accent:#4f46e5; --kpi-color:var(--text);">
     <div class="label">Total Booked</div>
     <div class="value">{g_bo}<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ {MONTHLY_BOOKED_GOAL:,} <span style="font-size:12px;">goal</span></span></div>
+    <div class="booked-bar-wrap">
+      <div class="booked-bar-fill" style="width:{min(round(g_bo / MONTHLY_BOOKED_GOAL * 100, 1), 100)}%"></div>
+    </div>
     <div class="kpi-sub">new first calls MTD</div>
   </div>
   <div class="kpi" style="--kpi-accent:#2563eb; --kpi-color:#2563eb;">
@@ -1273,9 +1345,13 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     <div class="value">{g_cl}</div>
     <div class="kpi-sub">{pct(g_cl, g_bo)} booked→close · {pct(g_cl, g_qu)} qual→close</div>
   </div>
-  <div class="kpi" style="--kpi-accent:#0e9f6e; --kpi-color:#0e9f6e;">
+  <div class="kpi" style="--kpi-accent:#0e9f6e; --kpi-color:#0e9f6e; position:relative;">
     <div class="label">Closed Revenue</div>
-    <div class="value">{fmt_currency(g_rev)}</div>
+    {(lambda pct_rev, cls: f'<div class="rev-goal-badge {cls}">{pct_rev:.1f}% to goal</div>')(
+      g_rev / MONTHLY_REVENUE_GOAL * 100,
+      "green" if g_rev / MONTHLY_REVENUE_GOAL >= 0.80 else "amber" if g_rev / MONTHLY_REVENUE_GOAL >= 0.50 else "red"
+    ) if MONTHLY_REVENUE_GOAL else ""}
+    <div class="value">{fmt_currency(g_rev)}<span class="rev-goal-badge-mid {'green' if g_rev / MONTHLY_REVENUE_GOAL >= 0.80 else 'amber' if g_rev / MONTHLY_REVENUE_GOAL >= 0.50 else 'red'}">{fmt_currency(MONTHLY_REVENUE_GOAL)}</span></div>
     <div class="kpi-sub">{rev_per_close(g_rev, g_cl)} avg deal{f'  ·  <span style="color:#7bc4a0; font-weight:600;">ARR {fmt_currency(g_vh_rev)}</span>  <span style="color:#7bc4a0; opacity:0.75; font-size:11px;">MRR {fmt_currency(g_vh_rev / 12)}</span>' if g_vh_rev else ""}</div>
   </div>
 </div>
