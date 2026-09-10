@@ -141,6 +141,27 @@
     color: var(--text);
     line-height: 1.1;
   }
+  .rev-goal-badge {
+    position: absolute;
+    top: 10px; right: 10px;
+    font-size: 11px; font-weight: 700;
+    padding: 3px 8px; border-radius: 20px;
+    letter-spacing: 0.04em;
+  }
+  .rev-goal-badge.red    { background: #e02424; color: #fff; }
+  .rev-goal-badge.amber  { background: #d97706; color: #fff; }
+  .rev-goal-badge.green  { background: #0e9f6e; color: #fff; }
+
+  .rev-goal-badge-mid {
+    display: inline-block;
+    font-size: 16px; font-weight: 700;
+    padding: 2px 10px; border-radius: 16px;
+    margin-left: 6px; vertical-align: middle;
+  }
+  .rev-goal-badge-mid.red   { background: rgba(224,36,36,0.12);  color: #e02424; }
+  .rev-goal-badge-mid.amber { background: rgba(217,119,6,0.12);  color: #d97706; }
+  .rev-goal-badge-mid.green { background: rgba(14,159,110,0.12); color: #0e9f6e; }
+
   .kpi-split-item .split-rate {
     font-size: 10px;
     color: var(--muted2);
@@ -229,6 +250,44 @@
     display: inline-block; transition: transform 0.15s;
   }
   .pkg-chevron.open { transform: rotate(90deg); color: var(--muted2); }
+
+  /* Time context block */
+  .time-context {
+    display: flex;
+    gap: 20px;
+    padding: 0 36px 16px;
+    align-items: center;
+  }
+  .time-item {
+    font-size: 12px;
+    color: var(--muted2);
+  }
+  .time-item .time-val {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-left: 4px;
+  }
+  .time-divider {
+    width: 1px;
+    height: 14px;
+    background: var(--border);
+  }
+
+  /* Booked progress bar */
+  .booked-bar-wrap {
+    margin-top: 8px;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .booked-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: var(--accent);
+    transition: width 0.4s ease;
+  }
 
   /* Total row */
   .total-row {
@@ -390,41 +449,51 @@
       <option value="/archives/week-current.html" >Sep 7–10 ▶</option></select></div>
     </div>
     <span class="snapshot-label">Snapshot</span>
-    September 10, 2026 at 01:20 PM PT<br>
+    September 10, 2026 at 01:35 PM PT<br>
     Source · Close CRM
   </div>
 </div>
 
 <!-- KPI Cards -->
+<div class="time-context">
+  <span class="time-item">Day in month<span class="time-val">10 / 30</span></span>
+  <span class="time-divider"></span>
+  <span class="time-item">Month elapsed<span class="time-val">33.3%</span></span>
+</div>
+
 <div class="kpis">
   <div class="kpi" style="--kpi-accent:#6366f1; --kpi-color:#6366f1;">
     <div class="label">Leads Created</div>
-    <div class="value">1587</div>
+    <div class="value">1588</div>
     <div class="kpi-sub">new leads MTD</div>
   </div>
   <div class="kpi" style="--kpi-accent:#4f46e5; --kpi-color:var(--text);">
     <div class="label">Total Booked</div>
-    <div class="value">317<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ 850 <span style="font-size:12px;">goal</span></span></div>
+    <div class="value">318<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ 850 <span style="font-size:12px;">goal</span></span></div>
+    <div class="booked-bar-wrap">
+      <div class="booked-bar-fill" style="width:37.4%"></div>
+    </div>
     <div class="kpi-sub">new first calls MTD</div>
   </div>
   <div class="kpi" style="--kpi-accent:#2563eb; --kpi-color:#2563eb;">
     <div class="label">Showed</div>
     <div class="value">158</div>
-    <div class="kpi-sub">49.8% show rate</div>
+    <div class="kpi-sub">49.7% show rate</div>
   </div>
   <div class="kpi" style="--kpi-accent:#7c3aed; --kpi-color:#7c3aed;">
     <div class="label">Qualified</div>
     <div class="value">126</div>
-    <div class="kpi-sub">39.7% qual rate</div>
+    <div class="kpi-sub">39.6% qual rate</div>
   </div>
   <div class="kpi" style="--kpi-accent:#d97706; --kpi-color:#d97706;">
     <div class="label">Closed Won</div>
     <div class="value">19</div>
     <div class="kpi-sub">6.0% booked→close · 15.1% qual→close</div>
   </div>
-  <div class="kpi" style="--kpi-accent:#0e9f6e; --kpi-color:#0e9f6e;">
+  <div class="kpi" style="--kpi-accent:#0e9f6e; --kpi-color:#0e9f6e; position:relative;">
     <div class="label">Closed Revenue</div>
-    <div class="value">$147,696</div>
+    <div class="rev-goal-badge red">19.7% to goal</div>
+    <div class="value">$147,696<span class="rev-goal-badge-mid red">$750,000</span></div>
     <div class="kpi-sub">$7,773 avg deal  ·  <span style="color:#7bc4a0; font-weight:600;">ARR $31,790</span>  <span style="color:#7bc4a0; opacity:0.75; font-size:11px;">MRR $2,649</span></div>
   </div>
 </div>
@@ -676,15 +745,15 @@
         <span class="chevron" id="chev-website">›</span>Website
       </td>
       <td class="col-num">16</td>
-      <td class="col-num">27</td>
-      <td class="col-pace pace-behind">81</td>
-      <td class="col-goal">27% (100)</td>
-      <td class="col-num">18</td>
-      <td class="col-pct mid">66.7%</td>
+      <td class="col-num">28</td>
+      <td class="col-pace pace-behind">84</td>
+      <td class="col-goal">28% (100)</td>
       <td class="col-num">19</td>
-      <td class="col-pct good">70.4%</td>
+      <td class="col-pct mid">67.9%</td>
+      <td class="col-num">20</td>
+      <td class="col-pct good">71.4%</td>
       <td class="col-num">1</td>
-      <td class="col-pct bad">3.7%</td>
+      <td class="col-pct bad">3.6%</td>
       <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('website')" title="Click to see package breakdown">$6,897 <span class="pkg-chevron" id="pkgchev-website">›</span></td>
       <td class="col-num">$6,897</td>
     </tr>
@@ -708,15 +777,15 @@
     <tr class="utm-row" data-parent="website">
       <td class="col-name col-utm">↳ Unattributed</td>
       <td class="col-num">—</td>
-      <td class="col-num">23</td>
+      <td class="col-num">24</td>
       <td class="col-pace"></td>
       <td class="col-goal"></td>
-      <td class="col-num">16</td>
-      <td class="col-pct mid">69.6%</td>
       <td class="col-num">17</td>
-      <td class="col-pct good">73.9%</td>
+      <td class="col-pct good">70.8%</td>
+      <td class="col-num">18</td>
+      <td class="col-pct good">75.0%</td>
       <td class="col-num">1</td>
-      <td class="col-pct bad">4.3%</td>
+      <td class="col-pct bad">4.2%</td>
       <td class="col-rev">$6,897</td>
       <td class="col-num">$6,897</td>
     </tr>
@@ -757,14 +826,14 @@
       <td class="col-name">
         <span class="chevron" id="chev-internal_webinar">›</span>Internal Webinar
       </td>
-      <td class="col-num">1167</td>
+      <td class="col-num">1168</td>
       <td class="col-num">93</td>
       <td class="col-pace pace-exceed">279</td>
       <td class="col-goal">133% (70)</td>
       <td class="col-num">48</td>
       <td class="col-pct mid">51.6%</td>
-      <td class="col-num">33</td>
-      <td class="col-pct bad">35.5%</td>
+      <td class="col-num">32</td>
+      <td class="col-pct bad">34.4%</td>
       <td class="col-num">3</td>
       <td class="col-pct bad">3.2%</td>
       <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('internal_webinar')" title="Click to see package breakdown">$25,994 <span class="pkg-chevron" id="pkgchev-internal_webinar">›</span></td>
@@ -822,15 +891,15 @@
     <tr class="utm-row" data-parent="internal_webinar">
       <td class="col-name col-utm">↳ sept01_end_cta</td>
       <td class="col-num">—</td>
-      <td class="col-num">27</td>
+      <td class="col-num">28</td>
       <td class="col-pace"></td>
       <td class="col-goal"></td>
       <td class="col-num">13</td>
-      <td class="col-pct bad">48.1%</td>
+      <td class="col-pct bad">46.4%</td>
       <td class="col-num">11</td>
-      <td class="col-pct bad">40.7%</td>
+      <td class="col-pct bad">39.3%</td>
       <td class="col-num">1</td>
-      <td class="col-pct bad">3.7%</td>
+      <td class="col-pct bad">3.6%</td>
       <td class="col-rev">$5,997</td>
       <td class="col-num">$5,997</td>
     </tr>
@@ -838,12 +907,12 @@
     <tr class="utm-row" data-parent="internal_webinar">
       <td class="col-name col-utm">↳ sept08_end_cta</td>
       <td class="col-num">—</td>
-      <td class="col-num">26</td>
+      <td class="col-num">24</td>
       <td class="col-pace"></td>
       <td class="col-goal"></td>
-      <td class="col-num">18</td>
-      <td class="col-pct mid">69.2%</td>
-      <td class="col-num">13</td>
+      <td class="col-num">17</td>
+      <td class="col-pct good">70.8%</td>
+      <td class="col-num">12</td>
       <td class="col-pct mid">50.0%</td>
       <td class="col-num">—</td>
       <td class="col-pct bad">0.0%</td>
@@ -877,6 +946,22 @@
       <td class="col-pct bad">20.0%</td>
       <td class="col-num">3</td>
       <td class="col-pct bad">20.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ af199696-855c-4b52-a922-b71fb121d287</td>
+      <td class="col-num">—</td>
+      <td class="col-num">2</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">2</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
       <td class="col-num">—</td>
       <td class="col-pct bad">0.0%</td>
       <td class="col-rev">$0</td>
@@ -939,22 +1024,6 @@
       <td class="col-goal"></td>
       <td class="col-num">—</td>
       <td class="col-pct bad">0.0%</td>
-      <td class="col-num">—</td>
-      <td class="col-pct bad">0.0%</td>
-      <td class="col-num">—</td>
-      <td class="col-pct bad">0.0%</td>
-      <td class="col-rev">$0</td>
-      <td class="col-num">—</td>
-    </tr>
-
-    <tr class="utm-row" data-parent="internal_webinar">
-      <td class="col-name col-utm">↳ af199696-855c-4b52-a922-b71fb121d287</td>
-      <td class="col-num">—</td>
-      <td class="col-num">1</td>
-      <td class="col-pace"></td>
-      <td class="col-goal"></td>
-      <td class="col-num">1</td>
-      <td class="col-pct good">100.0%</td>
       <td class="col-num">—</td>
       <td class="col-pct bad">0.0%</td>
       <td class="col-num">—</td>
@@ -1247,8 +1316,8 @@
       <td class="col-num">13</td>
       <td class="col-pace pace-muted">39</td>
       <td class="col-goal">—</td>
-      <td class="col-num">7</td>
-      <td class="col-pct mid">53.8%</td>
+      <td class="col-num">6</td>
+      <td class="col-pct bad">46.2%</td>
       <td class="col-num">5</td>
       <td class="col-pct bad">38.5%</td>
       <td class="col-num">—</td>
@@ -1263,8 +1332,8 @@
       <td class="col-num">7</td>
       <td class="col-pace"></td>
       <td class="col-goal"></td>
-      <td class="col-num">3</td>
-      <td class="col-pct bad">42.9%</td>
+      <td class="col-num">2</td>
+      <td class="col-pct bad">28.6%</td>
       <td class="col-num">3</td>
       <td class="col-pct bad">42.9%</td>
       <td class="col-num">—</td>
@@ -1611,14 +1680,14 @@
 
     <tr class="total-row">
       <td class="col-name">TOTAL</td>
-      <td class="col-num">1587</td>
-      <td class="col-num">317</td>
+      <td class="col-num">1588</td>
+      <td class="col-num">318</td>
       <td class="col-pace">—</td>
       <td class="col-goal">—</td>
       <td class="col-num">158</td>
-      <td class="col-pct bad">49.8%</td>
+      <td class="col-pct bad">49.7%</td>
       <td class="col-num">126</td>
-      <td class="col-pct bad">39.7%</td>
+      <td class="col-pct bad">39.6%</td>
       <td class="col-num">19</td>
       <td class="col-pct bad">6.0%</td>
       <td class="col-rev">$147,696</td>
