@@ -2,24 +2,24 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 1558,
+    "leads_created": 1560,
     "booked": 318,
-    "showed": 150,
-    "qualified": 113,
+    "showed": 151,
+    "qualified": 114,
     "closed": 19,
     "revenue": 147696.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1346,
+      "leads_created": 1347,
       "booked": 315,
-      "showed": 150,
-      "qualified": 113,
+      "showed": 151,
+      "qualified": 114,
       "closed": 18,
       "revenue": 141699.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 212,
+      "leads_created": 213,
       "booked": 3,
       "showed": 0,
       "qualified": 0,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 1147,
+      "booked": 96,
+      "book_pct": 8.4,
+      "showed": 46,
+      "show_pct": 47.9,
+      "qualified": 29,
+      "qual_pct": 30.2,
+      "closed": 3,
+      "cw_pct": 3.1,
+      "revenue": 25994.0
+    },
     "Instagram": {
       "leads_created": 64,
       "booked": 32,
@@ -39,18 +51,6 @@
       "closed": 2,
       "cw_pct": 6.2,
       "revenue": 12894.0
-    },
-    "Internal Webinar": {
-      "leads_created": 1146,
-      "booked": 96,
-      "book_pct": 8.4,
-      "showed": 46,
-      "show_pct": 47.9,
-      "qualified": 29,
-      "qual_pct": 30.2,
-      "closed": 3,
-      "cw_pct": 3.1,
-      "revenue": 25994.0
     },
     "Google Ads": {
       "leads_created": 10,
@@ -77,7 +77,7 @@
       "revenue": 38785.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 212,
+      "leads_created": 213,
       "booked": 3,
       "book_pct": 1.4,
       "showed": 0,
@@ -152,10 +152,10 @@
       "leads_created": 50,
       "booked": 123,
       "book_pct": 246.0,
-      "showed": 53,
-      "show_pct": 43.1,
-      "qualified": 39,
-      "qual_pct": 31.7,
+      "showed": 54,
+      "show_pct": 43.9,
+      "qualified": 40,
+      "qual_pct": 32.5,
       "closed": 6,
       "cw_pct": 4.9,
       "revenue": 46782.0
