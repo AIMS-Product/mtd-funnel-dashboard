@@ -612,6 +612,8 @@ def aggregate_data(start_date, end_date, month_label,
     _days_in_mon = calendar.monthrange(start_date.year, start_date.month)[1]
     # For archive months use last day of that month; for live use today
     _day_elapsed = end_date.day if end_date.month == start_date.month else _days_in_mon
+    _working_days_in_mon  = working_days_in_month(start_date.year, start_date.month)
+    _working_days_elapsed = count_working_days_elapsed(start_date.year, start_date.month, _day_elapsed)
     data = {
         "funnel_data":   funnel_data,
         "funnel_totals": funnel_totals,
@@ -626,6 +628,8 @@ def aggregate_data(start_date, end_date, month_label,
         "goals":         _goals,
         "day_of_month":  _day_elapsed,
         "days_in_month": _days_in_mon,
+        "working_days_in_month":  _working_days_in_mon,
+        "working_days_elapsed":  _working_days_elapsed,
     }
     return data, lead_cache, utm_cache
 
@@ -671,6 +675,19 @@ def load_goals():
             return json.load(f)
     except Exception:
         return {}
+
+def working_days_in_month(year, month):
+    """Count Mon-Fri days in the given month."""
+    days_in_mon = calendar.monthrange(year, month)[1]
+    return sum(1 for d in range(1, days_in_mon + 1)
+               if date(year, month, d).weekday() < 5)
+
+def count_working_days_elapsed(year, month, through_day):
+    """Count Mon-Fri days from day 1 through through_day (inclusive)."""
+    if through_day < 1:
+        return 0
+    return sum(1 for d in range(1, through_day + 1)
+               if date(year, month, d).weekday() < 5)
 
 def calc_on_pace(booked, goal, day_of_month, days_in_month):
     """
@@ -862,7 +879,9 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     g_vh_rev  = data.get("vendhub_revenue", 0.0)
     day_num   = data.get("day_of_month",  1)
     days_tot  = data.get("days_in_month", 30)
-    pct_month = round(day_num / days_tot * 100, 1) if days_tot else 0
+    wd_num    = data.get("working_days_elapsed",  0)
+    wd_tot    = data.get("working_days_in_month", 0)
+    pct_month = round(wd_num / wd_tot * 100, 1) if wd_tot else 0
     g_bo  = grand["booked"]
     g_sh  = grand["showed"]
     g_qu  = grand["qualified"]
@@ -1300,6 +1319,8 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     <div class="pickers-row">
       <div class="compact-stats">
         <span class="cs-item">Day <strong>{day_num}/{days_tot}</strong></span>
+        <span class="cs-sep">·</span>
+        <span class="cs-item">Working days <strong>{wd_num}/{wd_tot}</strong></span>
         <span class="cs-sep">·</span>
         <span class="cs-item"><strong>{pct_month}%</strong> elapsed</span>
       </div>
