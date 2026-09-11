@@ -2,18 +2,18 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 1769,
+    "leads_created": 1773,
     "booked": 345,
-    "showed": 160,
+    "showed": 161,
     "qualified": 127,
     "closed": 20,
     "revenue": 153693.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1545,
+      "leads_created": 1549,
       "booked": 340,
-      "showed": 160,
+      "showed": 161,
       "qualified": 127,
       "closed": 19,
       "revenue": 147696.0
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 1325,
+      "booked": 95,
+      "book_pct": 7.2,
+      "showed": 46,
+      "show_pct": 48.4,
+      "qualified": 30,
+      "qual_pct": 31.6,
+      "closed": 3,
+      "cw_pct": 3.2,
+      "revenue": 25994.0
+    },
     "Instagram": {
       "leads_created": 64,
       "booked": 36,
@@ -39,18 +51,6 @@
       "closed": 2,
       "cw_pct": 5.6,
       "revenue": 12894.0
-    },
-    "Internal Webinar": {
-      "leads_created": 1322,
-      "booked": 96,
-      "book_pct": 7.3,
-      "showed": 46,
-      "show_pct": 47.9,
-      "qualified": 30,
-      "qual_pct": 31.2,
-      "closed": 3,
-      "cw_pct": 3.1,
-      "revenue": 25994.0
     },
     "YouTube": {
       "leads_created": 24,
@@ -66,14 +66,14 @@
     },
     "Website": {
       "leads_created": 15,
-      "booked": 24,
-      "book_pct": 160.0,
-      "showed": 15,
-      "show_pct": 62.5,
+      "booked": 25,
+      "book_pct": 166.7,
+      "showed": 16,
+      "show_pct": 64.0,
       "qualified": 16,
-      "qual_pct": 66.7,
+      "qual_pct": 64.0,
       "closed": 1,
-      "cw_pct": 4.2,
+      "cw_pct": 4.0,
       "revenue": 6897.0
     },
     "Google Ads": {
@@ -149,9 +149,9 @@
       "revenue": 0.0
     },
     "Reactivation Scrapers": {
-      "leads_created": 57,
+      "leads_created": 58,
       "booked": 143,
-      "book_pct": 250.9,
+      "book_pct": 246.6,
       "showed": 63,
       "show_pct": 44.1,
       "qualified": 48,
