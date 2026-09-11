@@ -1012,8 +1012,6 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     gap: 6px;
     font-size: 12px;
     color: var(--muted2);
-    margin-bottom: 8px;
-    justify-content: flex-end;
   }}
   .compact-stats strong {{
     color: var(--text);
@@ -1259,16 +1257,13 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     <p class="sub">Vendingpreneurs · All Sales Calls · {data['month_label']}{data.get('week_range_label','')}</p>
   </div>
   <div class="header-right">
-    <div class="compact-stats">
-      <span class="cs-item">Day <strong>{day_num}/{days_tot}</strong></span>
-      <span class="cs-sep">·</span>
-      <span class="cs-item"><strong>{pct_month}%</strong> elapsed</span>
-      <span class="cs-sep">·</span>
-      <span class="cs-item">Booked <strong>{g_bo}/{MONTHLY_BOOKED_GOAL:,}</strong></span>
-      <span class="cs-sep">·</span>
-      <span class="cs-item">Rev <strong>{fmt_currency(g_rev)}/{fmt_currency(MONTHLY_REVENUE_GOAL)}</strong></span>
-    </div>
     <div class="pickers-row">
+      <div class="compact-stats">
+        <span class="cs-item">Day <strong>{day_num}/{days_tot}</strong></span>
+        <span class="cs-sep">·</span>
+        <span class="cs-item"><strong>{pct_month}%</strong> elapsed</span>
+      </div>
+      <span class="picker-divider">|</span>
       {month_picker_html}{week_picker_html}
     </div>
     <span class="snapshot-label">{data.get("badge_html","") or "Snapshot"}</span>
@@ -1306,7 +1301,7 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
   </div>
   <div class="kpi" style="--kpi-accent:#0e9f6e; --kpi-color:#0e9f6e;">
     <div class="label">Closed Revenue</div>
-    <div class="value">{fmt_currency(g_rev)}<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ {fmt_currency(MONTHLY_REVENUE_GOAL)} <span style="font-size:12px;">goal</span></span></div>
+    <div class="value">{fmt_currency(g_rev)}<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ {fmt_currency(MONTHLY_REVENUE_GOAL)}</span></div>
     <div class="kpi-sub">{rev_per_close(g_rev, g_cl)} avg deal{f'  ·  <span style="color:#7bc4a0; font-weight:600;">ARR {fmt_currency(g_vh_rev)}</span>  <span style="color:#7bc4a0; opacity:0.75; font-size:11px;">MRR {fmt_currency(g_vh_rev / 12)}</span>' if g_vh_rev else ""}</div>
   </div>
 </div>
