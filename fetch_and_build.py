@@ -703,6 +703,12 @@ def goal_pct_label(booked, goal):
     p = round(booked / goal * 100)
     return f"{p}% ({goal})"
 
+def goal_pct_corner(value, goal):
+    """'40%' format for the small muted corner badge on a KPI tile — no target suffix."""
+    if not goal:
+        return "—"
+    return f"{round(value / goal * 100)}%"
+
 
 # ── HTML Generation ────────────────────────────────────────────────────────────
 
@@ -863,6 +869,11 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     g_cl  = grand["closed"]
     g_rev = grand["revenue"]
 
+    _csv_slug = re.sub(r"[^a-z0-9]+", "-", data['month_label'].lower()).strip("-")
+    if data.get('week_range_label'):
+        _csv_slug += "-week"
+    csv_filename = f"mtd-funnel-{_csv_slug}.csv"
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -979,6 +990,14 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     font-size: 11px;
     color: var(--muted2);
     margin-top: 5px;
+  }}
+  .kpi-goal-pct {{
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted2);
   }}
   .kpi-split {{
     display: flex;
@@ -1235,6 +1254,27 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     white-space: nowrap;
   }}
 
+  /* CSV download button */
+  .csv-download-btn {{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface);
+    color: var(--muted2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }}
+  .csv-download-btn:hover {{
+    border-color: var(--accent);
+    color: var(--accent);
+  }}
+
   @media (max-width: 960px) {{
     .kpis {{ grid-template-columns: repeat(2, 1fr); }}
     .header {{ flex-direction: column; gap: 12px; }}
@@ -1280,6 +1320,7 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     <div class="kpi-sub">new leads MTD</div>
   </div>
   <div class="kpi" style="--kpi-accent:#4f46e5; --kpi-color:var(--text);">
+    <div class="kpi-goal-pct">{goal_pct_corner(g_bo, MONTHLY_BOOKED_GOAL)}</div>
     <div class="label">Total Booked</div>
     <div class="value">{g_bo}<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ {MONTHLY_BOOKED_GOAL:,} <span style="font-size:12px;">goal</span></span></div>
     <div class="kpi-sub">new first calls MTD</div>
@@ -1300,6 +1341,7 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     <div class="kpi-sub">{pct(g_cl, g_bo)} booked→close · {pct(g_cl, g_qu)} qual→close</div>
   </div>
   <div class="kpi" style="--kpi-accent:#0e9f6e; --kpi-color:#0e9f6e;">
+    <div class="kpi-goal-pct">{goal_pct_corner(g_rev, MONTHLY_REVENUE_GOAL)}</div>
     <div class="label">Closed Revenue</div>
     <div class="value">{fmt_currency(g_rev)}<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ {fmt_currency(MONTHLY_REVENUE_GOAL)}</span></div>
     <div class="kpi-sub">{rev_per_close(g_rev, g_cl)} avg deal{f'  ·  <span style="color:#7bc4a0; font-weight:600;">ARR {fmt_currency(g_vh_rev)}</span>  <span style="color:#7bc4a0; opacity:0.75; font-size:11px;">MRR {fmt_currency(g_vh_rev / 12)}</span>' if g_vh_rev else ""}</div>
@@ -1391,10 +1433,48 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     }});
     chevron.classList.toggle("open", !isOpen);
   }}
+
+  function csvEscape(value) {{
+    const s = String(value == null ? "" : value);
+    if (/["\\n,]/.test(s)) {{
+      return '"' + s.replace(/"/g, '""') + '"';
+    }}
+    return s;
+  }}
+
+  function downloadFunnelCSV() {{
+    const table = document.querySelector(".table-wrap table");
+    if (!table) return;
+
+    const headerCells = Array.from(table.querySelectorAll("thead th"))
+      .map(th => th.textContent.replace(/\s+/g, " ").trim());
+    const rows = [headerCells];
+
+    table.querySelectorAll("tbody tr").forEach(tr => {{
+      // Only export top-level funnel rows and the TOTAL row — skip section
+      // headers and the collapsible UTM/package sub-rows.
+      if (!tr.classList.contains("funnel-row") && !tr.classList.contains("total-row")) return;
+      const cells = Array.from(tr.children).map(td =>
+        td.textContent.replace(/[›▶]/g, "").replace(/\s+/g, " ").trim()
+      );
+      rows.push(cells);
+    }});
+
+    const csv = rows.map(r => r.map(csvEscape).join(",")).join("\\r\\n");
+    const blob = new Blob([csv], {{ type: "text/csv;charset=utf-8;" }});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "{csv_filename}";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }}
 </script>
 
-<div style="padding: 24px 36px 32px; border-top: 1px solid var(--border); margin-top: 8px;">
-  <p style="font-size: 11px; color: var(--muted); line-height: 1.7; max-width: 640px;">
+<div style="padding: 24px 36px 32px; border-top: 1px solid var(--border); margin-top: 8px; display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+  <p style="font-size: 11px; color: var(--muted); line-height: 1.7; max-width: 640px; margin:0;">
     <strong style="color: var(--muted2);">Projected</strong> — End-of-month estimate based on current daily booking pace:
     <em>(Booked ÷ Days Elapsed) × Days in Month</em>. Color reflects projected vs goal.
     &nbsp;&nbsp;<strong style="color: var(--muted2);">*</strong> — Funnel excluded from top-line totals and KPI tiles.
@@ -1404,6 +1484,7 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
     Funnels without a goal show —.
     Goals are updated monthly in <code style="font-size:10.5px; background:var(--surface2); padding:1px 4px; border-radius:3px;">goals.json</code>.
   </p>
+  <button type="button" class="csv-download-btn" onclick="downloadFunnelCSV()">⬇ Download CSV</button>
 </div>
 
 </body>
