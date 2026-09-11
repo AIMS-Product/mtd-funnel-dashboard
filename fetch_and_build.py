@@ -53,6 +53,7 @@ CF_UTM_CONTENT      = "cf_R7o66i0XPycLQHlxOLbIqk6c6j3oB8CzxF3e3apI1hn"  # utm_co
 CF_FIRST_SALES_CALL = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"  # First Sales Call Booked Date (lead)
 CF_FIRST_SALES    = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"            # First Sales Call Booked Date (lead)
 CF_SETTER_NAME    = "cf_vz6kNiu4ItFxRA8Y9HKlWIoQMq3TsdaQqKekQ2YuxVk"           # Reactivation - Setter Name (lead)
+CF_BUSINESS_LINE  = "cf_aJlNlilQZIgLLuhcymNN8fiOzewnFxrbWjLZFPmsucO"           # BTC Business Line (lead)
 
 # Funnels that use utm_content instead of utm_campaign for sub-breakdown
 UTM_CONTENT_FUNNELS = {"Internal Webinar"}
@@ -113,6 +114,22 @@ EXCLUDED_LEAD_STATUS_IDS = {
     "stat_hWIGHjzyNpl4YjIFSFz3VK4fp2ny10SFJLKAihmo4KT",  # Canceled (by Lead)
     "stat_YV4ZngDB4IGjLjlOf0YTFEWuKZJ6fhNxVkzQkvKYfdB",  # Outside the US
 }
+
+# Business Line (BTC Business Line, cf_aJlNlilQZIgLLuhcymNN8fiOzewnFxrbWjLZFPmsucO)
+# values excluded dashboard-wide. To bring The Land Geek back into the dashboard,
+# just remove/comment out its line below — no other code changes needed, every
+# filter point reads from this one set via is_excluded_business_line().
+EXCLUDED_BUSINESS_LINES = {
+    "The Land Geek (TLG)",
+}
+
+def is_excluded_business_line(lead):
+    """True if this lead's BTC Business Line is in EXCLUDED_BUSINESS_LINES."""
+    raw = lead.get(f"custom.{CF_BUSINESS_LINE}")
+    if isinstance(raw, list):
+        raw = raw[0] if raw else None
+    val = str(raw).strip() if raw else ""
+    return val in EXCLUDED_BUSINESS_LINES
 
 # Excluded from closed-won revenue — matches rep dashboard user exclusions
 EXCLUDED_CLOSER_USER_IDS = {
@@ -221,7 +238,8 @@ def fetch_lead(lead_id):
                    f"custom.{CF_QUALIFIED},"
                    f"custom.{CF_PROGRAM_TIER},"
                    f"custom.{CF_VENDHUB_PLAN},"
-                   f"custom.{CF_SETTER_NAME}"
+                   f"custom.{CF_SETTER_NAME},"
+                   f"custom.{CF_BUSINESS_LINE}"
     })
 
 
@@ -319,7 +337,8 @@ def fetch_leads_by_booked_date(start_date, end_date):
                         f"custom.{CF_QUALIFIED},"
                         f"custom.{CF_PROGRAM_TIER},"
                         f"custom.{CF_VENDHUB_PLAN},"
-                        f"custom.{CF_SETTER_NAME}"),
+                        f"custom.{CF_SETTER_NAME},"
+                        f"custom.{CF_BUSINESS_LINE}"),
             "_limit":  200,
             "_skip":   skip,
         })
@@ -356,7 +375,7 @@ def fetch_leads_created(start_date, end_date):
     while True:
         data = close_get("lead/", {
             "query":   query,
-            "_fields": f"id,status_id,custom.{CF_FUNNEL_NAME}",
+            "_fields": f"id,status_id,custom.{CF_FUNNEL_NAME},custom.{CF_BUSINESS_LINE}",
             "_limit":  200,
             "_skip":   skip,
         })
@@ -454,6 +473,8 @@ def aggregate_data(start_date, end_date, month_label,
     for lead in created_leads:
         if lead.get("status_id") in EXCLUDED_LEAD_STATUS_IDS:
             continue
+        if is_excluded_business_line(lead):
+            continue
         funnel = get_funnel_name(lead)
         # Only track leads_created for known funnels — new leads often have no funnel
         # set yet, which would inflate "Unknown (Needs Review)" with unprocessed leads
@@ -474,6 +495,8 @@ def aggregate_data(start_date, end_date, month_label,
             continue
         lead_cache[lid] = lead
         if lead.get("status_id") in EXCLUDED_LEAD_STATUS_IDS:
+            continue
+        if is_excluded_business_line(lead):
             continue
         funnel = get_funnel_name(lead)
 
@@ -508,6 +531,10 @@ def aggregate_data(start_date, end_date, month_label,
         elif lid in lead_cache:
             # Lead was fetched for another reason (e.g. won opp) — extract RS info
             lead = lead_cache[lid]
+            if lead.get("status_id") in EXCLUDED_LEAD_STATUS_IDS:
+                continue
+            if is_excluded_business_line(lead):
+                continue
             if get_funnel_name(lead) != REACTIVATION_SCRAPERS_FUNNEL:
                 continue
             info = {
@@ -520,6 +547,8 @@ def aggregate_data(start_date, end_date, month_label,
             lead = fetch_lead(lid)
             lead_cache[lid] = lead
             if lead.get("status_id") in EXCLUDED_LEAD_STATUS_IDS:
+                continue
+            if is_excluded_business_line(lead):
                 continue
             if get_funnel_name(lead) != REACTIVATION_SCRAPERS_FUNNEL:
                 continue  # title matched but lead not actually RS — skip
@@ -551,6 +580,8 @@ def aggregate_data(start_date, end_date, month_label,
             lead_cache[lid] = fetch_lead(lid)
         lead = lead_cache[lid]
         if lead.get("status_id") in EXCLUDED_LEAD_STATUS_IDS:
+            continue
+        if is_excluded_business_line(lead):
             continue
         if opp.get("user_id") in EXCLUDED_CLOSER_USER_IDS:
             continue
