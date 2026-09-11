@@ -147,8 +147,6 @@
     gap: 6px;
     font-size: 12px;
     color: var(--muted2);
-    margin-bottom: 8px;
-    justify-content: flex-end;
   }
   .compact-stats strong {
     color: var(--text);
@@ -404,6 +402,12 @@
       <span class="cs-item">Rev <strong>$153,693/$750,000</strong></span>
     </div>
     <div class="pickers-row">
+      <div class="compact-stats">
+        <span class="cs-item">Day <strong>11/30</strong></span>
+        <span class="cs-sep">·</span>
+        <span class="cs-item"><strong>36.7%</strong> elapsed</span>
+      </div>
+      <span class="picker-divider">|</span>
       <div class="month-picker"><select onchange="window.location.href=this.value"><option value="/index.html" selected>September 2026</option>
       <option value="/archives/2026-08.html" >August 2026</option>
       <option value="/archives/2026-07.html" >July 2026</option>
@@ -451,7 +455,7 @@
   </div>
   <div class="kpi" style="--kpi-accent:#0e9f6e; --kpi-color:#0e9f6e;">
     <div class="label">Closed Revenue</div>
-    <div class="value">$153,693<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ $750,000 <span style="font-size:12px;">goal</span></span></div>
+    <div class="value">$153,693<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ $750,000</span></div>
     <div class="kpi-sub">$7,685 avg deal  ·  <span style="color:#7bc4a0; font-weight:600;">ARR $32,990</span>  <span style="color:#7bc4a0; opacity:0.75; font-size:11px;">MRR $2,749</span></div>
   </div>
 </div>
