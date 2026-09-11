@@ -61,10 +61,45 @@ SETTER_NAME_FUNNELS = {"Reactivation Scrapers"}
 
 # Reactivation Scrapers title-prefix methodology (see reactivation-scrapers-booked-meetings-methodology.md)
 REACTIVATION_SCRAPERS_FUNNEL = "Reactivation Scrapers"
-# Detection: any meeting title containing "next steps" (case-insensitive) is
-# a scraper-booked Next Steps meeting — per Call Capacity dashboard 2026-09-01.
-# Attribution (which setter) uses the lead's Reactivation - Setter Name field.
-NEXT_STEPS_PHRASE = "next steps"
+# Detection + attribution: exact title-pattern matching against the known Next
+# Steps calendar-link titles, mirrored from AIMS-Product/close-first-sales-meeting's
+# update_field.py (2026-09-11). Each pattern is paired with the closer whose
+# Calendly link produces that title — a meeting is a Next Steps meeting iff its
+# title matches one of these patterns, and the scraper credited for booking it
+# is the paired name, not the lead's Reactivation - Setter Name field (title-based
+# attribution is more accurate per-meeting than the lead-level field).
+NEXT_STEPS_TITLE_PATTERNS = [
+    (re.compile(r"vendingpren[eu]+rs?\s+-\s+next\s+steps\s+call", re.IGNORECASE),     "Charlie Ingram"),
+    (re.compile(r"vendingpren[eu]+rs?\s+call\s+-\s+next\s+steps", re.IGNORECASE),     "Jacob Hepner"),
+    (re.compile(r"vendingpren[eu]+rs?\s+next\s+steps\s+call", re.IGNORECASE),         "Vince Bartolini"),
+    (re.compile(r"vendingpren[eu]+rs?\s+next\s+steps\s+session", re.IGNORECASE),      "Pearl Sathekge"),
+    (re.compile(r"vendingpren[eu]+rs?\s+discovery\s+-\s+next\s+steps", re.IGNORECASE), "Kelly Schrader"),
+    (re.compile(r"vendingpren[eu]+rs?\s+-\s+next\s+steps(?!\s+call)", re.IGNORECASE), "Jacob Herbig"),
+    (re.compile(r"vendingpren[eu]+r\s+next\s+steps", re.IGNORECASE),                  "William Nowak"),
+    (re.compile(r"vending\s+discovery\s+call\s+-\s+next\s+steps", re.IGNORECASE),     "August Young"),
+    (re.compile(r"vending\s+discovery\s+-\s+next\s+steps", re.IGNORECASE),            "Spencer Reynolds"),
+    (re.compile(r"vendingpren[eu]+rs?\s+strategy\s*-?\s*next\s+steps", re.IGNORECASE), "Amy Mulch"),
+    (re.compile(r"vending\s+opportunity\s*-?\s*next\s+steps", re.IGNORECASE),          "Cassie Caraballo"),
+    (re.compile(r"vendingpren[eu]+rs?\s+connect\s*-?\s*next\s+steps", re.IGNORECASE),  "Jessica Zatkin"),
+    (re.compile(r"vending\s+success\s*-?\s*next\s+steps", re.IGNORECASE),              "Abigail Garza"),
+    (re.compile(r"vendingpren[eu]+rs?\s+momentum\s*-?\s*next\s+steps", re.IGNORECASE), "Connor George"),
+    (re.compile(r"vendingpren[eu]+rs?\s+launch\s*-?\s*next\s+steps", re.IGNORECASE),   "Dana Lesiuk"),
+    (re.compile(r"vendingpren[eu]+rs?\s+pathway\s*-?\s*next\s+steps", re.IGNORECASE),  "Naria Torres"),
+    (re.compile(r"vendingpren[eu]+rs?\s+blueprint\s*-?\s*next\s+steps", re.IGNORECASE), "Melia King"),
+    (re.compile(r"vendingpren[eu]+rs?\s+compass\s*-?\s*next\s+steps", re.IGNORECASE),  "Josh Stoffel"),
+    (re.compile(r"vendingpren[eu]+rs?\s+horizon\s*-?\s*next\s+steps", re.IGNORECASE),  "Beatrice Braescu Cojocaru"),
+    (re.compile(r"vendingpren[eu]+rs?\s+elevate\s*-?\s*next\s+steps", re.IGNORECASE),  "Catalina"),
+    (re.compile(r"vendingpren[eu]+rs?\s+catalyst\s*-?\s*next\s+steps", re.IGNORECASE), "Raiya"),
+    (re.compile(r"vendingpren[eu]+rs?\s+clarity\s*-?\s*next\s+steps", re.IGNORECASE),  "Luna"),
+]
+
+def match_next_steps_setter(title):
+    """Return the scraper name credited for this title (via calendar-link pattern),
+    or None if the title doesn't match any known Next Steps calendar link."""
+    for pattern, setter in NEXT_STEPS_TITLE_PATTERNS:
+        if pattern.search(title):
+            return setter
+    return None
 COMPLETED_MEETING_OUTCOME_ID = "outcome_032Djn4dfeNuEoCunojA7K"  # native Close outcome
 
 CLOSED_WON_STATUS_ID    = "stat_0oW3iRpVp9z5DJq0cuwI1HgR0XhHAhykEPPIq4TFsxd"
@@ -341,7 +376,9 @@ def fetch_leads_created(start_date, end_date):
 def fetch_reactivation_scraper_meetings(start_date, end_date):
     """
     Fetch Next Steps meetings for Reactivation Scrapers.
-    Detection: any meeting title containing "next steps" (case-insensitive).
+    Detection + attribution: exact match against NEXT_STEPS_TITLE_PATTERNS —
+    each matched title carries its paired scraper name straight from the title,
+    not from the lead's Reactivation - Setter Name field.
 
     Close API: "activity/meeting" (no trailing slash), no date filters supported.
     No cutoff — page through ALL meetings and filter starts_at client-side.
@@ -376,9 +413,10 @@ def fetch_reactivation_scraper_meetings(start_date, end_date):
             if not (starts_min <= starts_dt <= starts_max):
                 continue
             title = (m.get("title") or "").strip()
-            if NEXT_STEPS_PHRASE not in title.lower():
+            setter = match_next_steps_setter(title)
+            if setter is None:
                 continue
-            results.append({"lead_id": m["lead_id"], "starts_at": starts_raw})
+            results.append({"lead_id": m["lead_id"], "starts_at": starts_raw, "setter": setter})
 
         if not data.get("has_more"):
             break
@@ -427,7 +465,8 @@ def aggregate_data(start_date, end_date, month_label,
     booked_leads = fetch_leads_by_booked_date(start_date, end_date)
 
     meeting_rows  = []
-    rs_lead_cache = {}  # lead_id → {setter, showed, qualified} for RS title-prefix lookup
+    rs_lead_cache = {}  # lead_id → {showed, qualified} for RS title-prefix lookup
+                        # (attribution comes from the meeting title, not this cache)
 
     for lead in booked_leads:
         lid = lead.get("id")
@@ -441,10 +480,7 @@ def aggregate_data(start_date, end_date, month_label,
         # Reactivation Scrapers: cache showed/qualified for title-prefix path below;
         # do NOT count as booked via FSCBD — the title-prefix method replaces it.
         if funnel == REACTIVATION_SCRAPERS_FUNNEL:
-            setter_raw = lead.get(f"custom.{CF_SETTER_NAME}")
-            if isinstance(setter_raw, list): setter_raw = setter_raw[0] if setter_raw else None
             rs_lead_cache[lid] = {
-                "setter":    str(setter_raw).strip() if setter_raw else "Unattributed",
                 "showed":    _is_yes(lead.get(f"custom.{CF_SHOW_UP}")),
                 "qualified": _is_yes(lead.get(f"custom.{CF_QUALIFIED}")),
             }
@@ -474,10 +510,7 @@ def aggregate_data(start_date, end_date, month_label,
             lead = lead_cache[lid]
             if get_funnel_name(lead) != REACTIVATION_SCRAPERS_FUNNEL:
                 continue
-            setter_raw = lead.get(f"custom.{CF_SETTER_NAME}")
-            if isinstance(setter_raw, list): setter_raw = setter_raw[0] if setter_raw else None
             info = {
-                "setter":    str(setter_raw).strip() if setter_raw else "Unattributed",
                 "showed":    _is_yes(lead.get(f"custom.{CF_SHOW_UP}")),
                 "qualified": _is_yes(lead.get(f"custom.{CF_QUALIFIED}")),
             }
@@ -490,22 +523,19 @@ def aggregate_data(start_date, end_date, month_label,
                 continue
             if get_funnel_name(lead) != REACTIVATION_SCRAPERS_FUNNEL:
                 continue  # title matched but lead not actually RS — skip
-            setter_raw = lead.get(f"custom.{CF_SETTER_NAME}")
-            if isinstance(setter_raw, list): setter_raw = setter_raw[0] if setter_raw else None
             info = {
-                "setter":    str(setter_raw).strip() if setter_raw else "Unattributed",
                 "showed":    _is_yes(lead.get(f"custom.{CF_SHOW_UP}")),
                 "qualified": _is_yes(lead.get(f"custom.{CF_QUALIFIED}")),
             }
             rs_lead_cache[lid] = info
 
-        # showed = lead-level field (outcome not available via /activity/meeting/ _fields)
-        # qualified = lead-level field
+        # showed/qualified = lead-level fields (outcome not available via /activity/meeting/ _fields)
+        # setter = title-derived attribution (mtg["setter"]), not the lead's field
         meeting_rows.append({
             "funnel":       REACTIVATION_SCRAPERS_FUNNEL,
             "show_up":      info["showed"],
             "qualified":    info["qualified"],
-            "utm_campaign": info["setter"],
+            "utm_campaign": mtg["setter"],
         })
         rs_counted += 1
 
