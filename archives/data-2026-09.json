@@ -2,7 +2,7 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 1848,
+    "leads_created": 1852,
     "booked": 334,
     "showed": 178,
     "qualified": 140,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1618,
+      "leads_created": 1621,
       "booked": 330,
       "showed": 178,
       "qualified": 140,
@@ -19,7 +19,7 @@
       "revenue": 147696.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 230,
+      "leads_created": 231,
       "booked": 4,
       "showed": 0,
       "qualified": 0,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Website": {
+      "leads_created": 16,
+      "booked": 26,
+      "book_pct": 162.5,
+      "showed": 17,
+      "show_pct": 65.4,
+      "qualified": 17,
+      "qual_pct": 65.4,
+      "closed": 1,
+      "cw_pct": 3.8,
+      "revenue": 6897.0
+    },
     "Instagram": {
       "leads_created": 64,
       "booked": 36,
@@ -41,7 +53,7 @@
       "revenue": 12894.0
     },
     "Internal Webinar": {
-      "leads_created": 1386,
+      "leads_created": 1390,
       "booked": 97,
       "book_pct": 7.0,
       "showed": 51,
@@ -51,18 +63,6 @@
       "closed": 3,
       "cw_pct": 3.1,
       "revenue": 25994.0
-    },
-    "Website": {
-      "leads_created": 16,
-      "booked": 26,
-      "book_pct": 162.5,
-      "showed": 17,
-      "show_pct": 65.4,
-      "qualified": 17,
-      "qual_pct": 65.4,
-      "closed": 1,
-      "cw_pct": 3.8,
-      "revenue": 6897.0
     },
     "Google Ads": {
       "leads_created": 13,
@@ -89,7 +89,7 @@
       "revenue": 38785.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 230,
+      "leads_created": 231,
       "booked": 4,
       "book_pct": 1.7,
       "showed": 0,
@@ -149,9 +149,9 @@
       "revenue": 0.0
     },
     "Reactivation Scrapers": {
-      "leads_created": 64,
+      "leads_created": 63,
       "booked": 130,
-      "book_pct": 203.1,
+      "book_pct": 206.3,
       "showed": 70,
       "show_pct": 53.8,
       "qualified": 52,
