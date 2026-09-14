@@ -121,6 +121,7 @@ EXCLUDED_LEAD_STATUS_IDS = {
 # filter point reads from this one set via is_excluded_business_line().
 EXCLUDED_BUSINESS_LINES = {
     "The Land Geek (TLG)",
+    "Publishing Profits Academy (PPA)",
 }
 
 def is_excluded_business_line(lead):
