@@ -1,0 +1,48 @@
+name: Meetings Booked by Day
+
+# One-off report: input a date range, get a per-day (and per-funnel) Meetings
+# Booked breakdown in the run summary. Mirrors fetch_and_build.py's Booked
+# methodology exactly — see meetings_by_day.py for details. This never runs
+# on a schedule; it's manual-dispatch only.
+
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: "Start date (YYYY-MM-DD)"
+        required: true
+        type: string
+      end:
+        description: "End date (YYYY-MM-DD, inclusive)"
+        required: true
+        type: string
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run report
+        env:
+          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+        run: |
+          python3 meetings_by_day.py --start "${{ inputs.start }}" --end "${{ inputs.end }}" | tee report_output.txt
+
+      - name: Add report to run summary
+        run: |
+          {
+            echo "### Meetings Booked by Day — ${{ inputs.start }} to ${{ inputs.end }}"
+            echo '```text'
+            cat report_output.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
