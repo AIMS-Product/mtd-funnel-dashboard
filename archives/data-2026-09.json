@@ -2,7 +2,7 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 2296,
+    "leads_created": 2301,
     "booked": 434,
     "showed": 227,
     "qualified": 173,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2032,
+      "leads_created": 2036,
       "booked": 430,
       "showed": 227,
       "qualified": 173,
@@ -19,7 +19,7 @@
       "revenue": 171963.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 264,
+      "leads_created": 265,
       "booked": 4,
       "showed": 0,
       "qualified": 0,
@@ -28,6 +28,30 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 1753,
+      "booked": 132,
+      "book_pct": 7.5,
+      "showed": 69,
+      "show_pct": 52.3,
+      "qualified": 50,
+      "qual_pct": 37.9,
+      "closed": 3,
+      "cw_pct": 2.3,
+      "revenue": 25994.0
+    },
+    "Google Ads": {
+      "leads_created": 24,
+      "booked": 23,
+      "book_pct": 95.8,
+      "showed": 12,
+      "show_pct": 52.2,
+      "qualified": 8,
+      "qual_pct": 34.8,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Instagram": {
       "leads_created": 75,
       "booked": 49,
@@ -51,30 +75,6 @@
       "closed": 5,
       "cw_pct": 25.0,
       "revenue": 38785.0
-    },
-    "Internal Webinar": {
-      "leads_created": 1748,
-      "booked": 132,
-      "book_pct": 7.6,
-      "showed": 69,
-      "show_pct": 52.3,
-      "qualified": 50,
-      "qual_pct": 37.9,
-      "closed": 3,
-      "cw_pct": 2.3,
-      "revenue": 25994.0
-    },
-    "Google Ads": {
-      "leads_created": 24,
-      "booked": 23,
-      "book_pct": 95.8,
-      "showed": 12,
-      "show_pct": 52.2,
-      "qualified": 8,
-      "qual_pct": 34.8,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "Website": {
       "leads_created": 21,
@@ -101,7 +101,7 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 264,
+      "leads_created": 265,
       "booked": 4,
       "book_pct": 1.5,
       "showed": 0,
@@ -113,9 +113,9 @@
       "revenue": 5997.0
     },
     "Meta Ads": {
-      "leads_created": 55,
+      "leads_created": 54,
       "booked": 2,
-      "book_pct": 3.6,
+      "book_pct": 3.7,
       "showed": 0,
       "show_pct": 0.0,
       "qualified": 0,
