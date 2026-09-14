@@ -2,7 +2,7 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 2281,
+    "leads_created": 2573,
     "booked": 435,
     "showed": 220,
     "qualified": 167,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2017,
+      "leads_created": 2068,
       "booked": 431,
       "showed": 220,
       "qualified": 167,
@@ -19,7 +19,7 @@
       "revenue": 171963.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 264,
+      "leads_created": 505,
       "booked": 4,
       "showed": 0,
       "qualified": 0,
@@ -28,18 +28,6 @@
     }
   },
   "funnels": {
-    "YouTube": {
-      "leads_created": 31,
-      "booked": 21,
-      "book_pct": 67.7,
-      "showed": 8,
-      "show_pct": 38.1,
-      "qualified": 9,
-      "qual_pct": 42.9,
-      "closed": 5,
-      "cw_pct": 23.8,
-      "revenue": 38785.0
-    },
     "Instagram": {
       "leads_created": 74,
       "booked": 50,
@@ -52,10 +40,22 @@
       "cw_pct": 6.0,
       "revenue": 14082.0
     },
+    "YouTube": {
+      "leads_created": 32,
+      "booked": 21,
+      "book_pct": 65.6,
+      "showed": 8,
+      "show_pct": 38.1,
+      "qualified": 9,
+      "qual_pct": 42.9,
+      "closed": 5,
+      "cw_pct": 23.8,
+      "revenue": 38785.0
+    },
     "Google Ads": {
-      "leads_created": 24,
+      "leads_created": 25,
       "booked": 23,
-      "book_pct": 95.8,
+      "book_pct": 92.0,
       "showed": 11,
       "show_pct": 47.8,
       "qualified": 7,
@@ -65,9 +65,9 @@
       "revenue": 0.0
     },
     "Internal Webinar": {
-      "leads_created": 1741,
+      "leads_created": 1790,
       "booked": 130,
-      "book_pct": 7.5,
+      "book_pct": 7.3,
       "showed": 66,
       "show_pct": 50.8,
       "qualified": 47,
@@ -101,9 +101,9 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 264,
+      "leads_created": 505,
       "booked": 4,
-      "book_pct": 1.5,
+      "book_pct": 0.8,
       "showed": 0,
       "show_pct": 0.0,
       "qualified": 0,
