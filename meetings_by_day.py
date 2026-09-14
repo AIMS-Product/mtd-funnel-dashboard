@@ -65,6 +65,7 @@ EXCLUDED_LEAD_STATUS_IDS = {
 # the toggle in fetch_and_build.py's EXCLUDED_BUSINESS_LINES.
 EXCLUDED_BUSINESS_LINES = {
     "The Land Geek (TLG)",
+    "Publishing Profits Academy (PPA)",
 }
 
 # Excluded from the TOTAL only (matches the dashboard's KPI tiles) — not from
