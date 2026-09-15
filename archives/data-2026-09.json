@@ -2,24 +2,24 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 2349,
-    "booked": 433,
-    "showed": 230,
-    "qualified": 174,
+    "leads_created": 2355,
+    "booked": 432,
+    "showed": 231,
+    "qualified": 175,
     "closed": 25,
     "revenue": 177960.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2082,
-      "booked": 430,
-      "showed": 230,
-      "qualified": 174,
+      "leads_created": 2087,
+      "booked": 429,
+      "showed": 231,
+      "qualified": 175,
       "closed": 24,
       "revenue": 171963.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 267,
+      "leads_created": 268,
       "booked": 3,
       "showed": 0,
       "qualified": 0,
@@ -28,20 +28,8 @@
     }
   },
   "funnels": {
-    "Linkedin": {
-      "leads_created": 1,
-      "booked": 5,
-      "book_pct": 500.0,
-      "showed": 2,
-      "show_pct": 40.0,
-      "qualified": 1,
-      "qual_pct": 20.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Internal Webinar": {
-      "leads_created": 1797,
+      "leads_created": 1802,
       "booked": 133,
       "book_pct": 7.4,
       "showed": 71,
@@ -54,15 +42,27 @@
     },
     "Website": {
       "leads_created": 21,
-      "booked": 35,
-      "book_pct": 166.7,
+      "booked": 34,
+      "book_pct": 161.9,
       "showed": 21,
-      "show_pct": 60.0,
+      "show_pct": 61.8,
       "qualified": 21,
-      "qual_pct": 60.0,
+      "qual_pct": 61.8,
       "closed": 1,
       "cw_pct": 2.9,
       "revenue": 6897.0
+    },
+    "Linkedin": {
+      "leads_created": 1,
+      "booked": 5,
+      "book_pct": 500.0,
+      "showed": 3,
+      "show_pct": 60.0,
+      "qualified": 2,
+      "qual_pct": 40.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "YouTube": {
       "leads_created": 32,
@@ -101,7 +101,7 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 267,
+      "leads_created": 268,
       "booked": 3,
       "book_pct": 1.1,
       "showed": 0,
