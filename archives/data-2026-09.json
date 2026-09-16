@@ -2,8 +2,8 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 2660,
-    "booked": 491,
+    "leads_created": 2663,
+    "booked": 489,
     "showed": 262,
     "qualified": 186,
     "closed": 31,
@@ -11,15 +11,15 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2377,
-      "booked": 487,
+      "leads_created": 2379,
+      "booked": 485,
       "showed": 262,
       "qualified": 186,
       "closed": 30,
       "revenue": 216636.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 283,
+      "leads_created": 284,
       "booked": 4,
       "showed": 0,
       "qualified": 0,
@@ -28,10 +28,22 @@
     }
   },
   "funnels": {
-    "WWWS": {
-      "leads_created": 0,
+    "Website": {
+      "leads_created": 27,
+      "booked": 38,
+      "book_pct": 140.7,
+      "showed": 24,
+      "show_pct": 63.2,
+      "qualified": 23,
+      "qual_pct": 60.5,
+      "closed": 1,
+      "cw_pct": 2.6,
+      "revenue": 6897.0
+    },
+    "VSL": {
+      "leads_created": 2,
       "booked": 1,
-      "book_pct": 0,
+      "book_pct": 50.0,
       "showed": 0,
       "show_pct": 0.0,
       "qualified": 0,
@@ -52,8 +64,44 @@
       "cw_pct": 0.0,
       "revenue": 0.0
     },
+    "YouTube": {
+      "leads_created": 38,
+      "booked": 30,
+      "book_pct": 78.9,
+      "showed": 20,
+      "show_pct": 66.7,
+      "qualified": 20,
+      "qual_pct": 66.7,
+      "closed": 8,
+      "cw_pct": 26.7,
+      "revenue": 55467.0
+    },
+    "LTF - In-House": {
+      "leads_created": 0,
+      "booked": 4,
+      "book_pct": 0,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0.0,
+      "closed": 2,
+      "cw_pct": 50.0,
+      "revenue": 11535.0
+    },
+    "WWWS": {
+      "leads_created": 0,
+      "booked": 1,
+      "book_pct": 0,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Internal Webinar": {
-      "leads_created": 2050,
+      "leads_created": 2052,
       "booked": 136,
       "book_pct": 6.6,
       "showed": 71,
@@ -76,30 +124,6 @@
       "cw_pct": 5.9,
       "revenue": 14082.0
     },
-    "Website": {
-      "leads_created": 27,
-      "booked": 38,
-      "book_pct": 140.7,
-      "showed": 24,
-      "show_pct": 63.2,
-      "qualified": 23,
-      "qual_pct": 60.5,
-      "closed": 1,
-      "cw_pct": 2.6,
-      "revenue": 6897.0
-    },
-    "YouTube": {
-      "leads_created": 38,
-      "booked": 30,
-      "book_pct": 78.9,
-      "showed": 20,
-      "show_pct": 66.7,
-      "qualified": 20,
-      "qual_pct": 66.7,
-      "closed": 8,
-      "cw_pct": 26.7,
-      "revenue": 55467.0
-    },
     "Google Ads": {
       "leads_created": 28,
       "booked": 27,
@@ -111,18 +135,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "LTF - In-House": {
-      "leads_created": 0,
-      "booked": 5,
-      "book_pct": 0,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0.0,
-      "closed": 2,
-      "cw_pct": 40.0,
-      "revenue": 11535.0
     },
     "Linkedin": {
       "leads_created": 1,
@@ -136,20 +148,8 @@
       "cw_pct": 0.0,
       "revenue": 0.0
     },
-    "VSL": {
-      "leads_created": 2,
-      "booked": 2,
-      "book_pct": 100.0,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Unknown (Needs Review)": {
-      "leads_created": 283,
+      "leads_created": 284,
       "booked": 4,
       "book_pct": 1.4,
       "showed": 0,
