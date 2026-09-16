@@ -2,19 +2,19 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 2678,
+    "leads_created": 2684,
     "booked": 495,
     "showed": 268,
-    "qualified": 194,
+    "qualified": 195,
     "closed": 32,
     "revenue": 229530.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2391,
+      "leads_created": 2397,
       "booked": 491,
       "showed": 268,
-      "qualified": 194,
+      "qualified": 195,
       "closed": 31,
       "revenue": 223533.0
     },
@@ -28,22 +28,10 @@
     }
   },
   "funnels": {
-    "YouTube": {
-      "leads_created": 39,
-      "booked": 30,
-      "book_pct": 76.9,
-      "showed": 20,
-      "show_pct": 66.7,
-      "qualified": 20,
-      "qual_pct": 66.7,
-      "closed": 8,
-      "cw_pct": 26.7,
-      "revenue": 55467.0
-    },
     "Instagram": {
-      "leads_created": 84,
+      "leads_created": 85,
       "booked": 49,
-      "book_pct": 58.3,
+      "book_pct": 57.6,
       "showed": 30,
       "show_pct": 61.2,
       "qualified": 22,
@@ -52,8 +40,20 @@
       "cw_pct": 6.1,
       "revenue": 14082.0
     },
+    "YouTube": {
+      "leads_created": 40,
+      "booked": 30,
+      "book_pct": 75.0,
+      "showed": 20,
+      "show_pct": 66.7,
+      "qualified": 20,
+      "qual_pct": 66.7,
+      "closed": 8,
+      "cw_pct": 26.7,
+      "revenue": 55467.0
+    },
     "Internal Webinar": {
-      "leads_created": 2057,
+      "leads_created": 2059,
       "booked": 140,
       "book_pct": 6.8,
       "showed": 72,
@@ -137,9 +137,9 @@
       "revenue": 0.0
     },
     "Google Ads": {
-      "leads_created": 28,
+      "leads_created": 29,
       "booked": 27,
-      "book_pct": 96.4,
+      "book_pct": 93.1,
       "showed": 16,
       "show_pct": 59.3,
       "qualified": 8,
@@ -173,13 +173,13 @@
       "revenue": 0.0
     },
     "Reactivation Scrapers": {
-      "leads_created": 94,
+      "leads_created": 95,
       "booked": 193,
-      "book_pct": 205.3,
+      "book_pct": 203.2,
       "showed": 98,
       "show_pct": 50.8,
-      "qualified": 68,
-      "qual_pct": 35.2,
+      "qualified": 69,
+      "qual_pct": 35.8,
       "closed": 14,
       "cw_pct": 7.3,
       "revenue": 109558.0
