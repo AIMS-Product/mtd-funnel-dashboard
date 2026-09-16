@@ -2,19 +2,19 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 2676,
+    "leads_created": 2675,
     "booked": 494,
-    "showed": 268,
-    "qualified": 192,
+    "showed": 269,
+    "qualified": 191,
     "closed": 32,
     "revenue": 229530.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2390,
+      "leads_created": 2389,
       "booked": 490,
-      "showed": 268,
-      "qualified": 192,
+      "showed": 269,
+      "qualified": 191,
       "closed": 31,
       "revenue": 223533.0
     },
@@ -29,11 +29,11 @@
   },
   "funnels": {
     "Internal Webinar": {
-      "leads_created": 2057,
+      "leads_created": 2055,
       "booked": 137,
       "book_pct": 6.7,
-      "showed": 71,
-      "show_pct": 51.8,
+      "showed": 72,
+      "show_pct": 52.6,
       "qualified": 46,
       "qual_pct": 33.6,
       "closed": 3,
@@ -51,6 +51,18 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
+    },
+    "Website": {
+      "leads_created": 27,
+      "booked": 38,
+      "book_pct": 140.7,
+      "showed": 24,
+      "show_pct": 63.2,
+      "qualified": 22,
+      "qual_pct": 57.9,
+      "closed": 1,
+      "cw_pct": 2.6,
+      "revenue": 6897.0
     },
     "Linkedin": {
       "leads_created": 1,
@@ -75,18 +87,6 @@
       "closed": 3,
       "cw_pct": 5.9,
       "revenue": 14082.0
-    },
-    "Website": {
-      "leads_created": 27,
-      "booked": 38,
-      "book_pct": 140.7,
-      "showed": 24,
-      "show_pct": 63.2,
-      "qualified": 22,
-      "qual_pct": 57.9,
-      "closed": 1,
-      "cw_pct": 2.6,
-      "revenue": 6897.0
     },
     "VSL": {
       "leads_created": 2,
@@ -173,13 +173,13 @@
       "revenue": 0.0
     },
     "Reactivation Scrapers": {
-      "leads_created": 93,
+      "leads_created": 94,
       "booked": 193,
-      "book_pct": 207.5,
+      "book_pct": 205.3,
       "showed": 98,
       "show_pct": 50.8,
-      "qualified": 68,
-      "qual_pct": 35.2,
+      "qualified": 67,
+      "qual_pct": 34.7,
       "closed": 14,
       "cw_pct": 7.3,
       "revenue": 109558.0
