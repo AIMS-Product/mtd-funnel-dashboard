@@ -2,24 +2,24 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 2556,
-    "booked": 457,
-    "showed": 248,
-    "qualified": 183,
+    "leads_created": 2558,
+    "booked": 456,
+    "showed": 246,
+    "qualified": 182,
     "closed": 29,
     "revenue": 200639.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2275,
-      "booked": 451,
-      "showed": 246,
-      "qualified": 181,
+      "leads_created": 2276,
+      "booked": 450,
+      "showed": 244,
+      "qualified": 180,
       "closed": 28,
       "revenue": 194642.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 281,
+      "leads_created": 282,
       "booked": 6,
       "showed": 2,
       "qualified": 2,
@@ -28,6 +28,30 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 1965,
+      "booked": 131,
+      "book_pct": 6.7,
+      "showed": 69,
+      "show_pct": 52.7,
+      "qualified": 47,
+      "qual_pct": 35.9,
+      "closed": 3,
+      "cw_pct": 2.3,
+      "revenue": 25994.0
+    },
+    "YouTube": {
+      "leads_created": 36,
+      "booked": 22,
+      "book_pct": 61.1,
+      "showed": 12,
+      "show_pct": 54.5,
+      "qualified": 11,
+      "qual_pct": 50.0,
+      "closed": 7,
+      "cw_pct": 31.8,
+      "revenue": 49470.0
+    },
     "Website": {
       "leads_created": 24,
       "booked": 39,
@@ -40,18 +64,6 @@
       "cw_pct": 2.6,
       "revenue": 6897.0
     },
-    "Internal Webinar": {
-      "leads_created": 1964,
-      "booked": 131,
-      "book_pct": 6.7,
-      "showed": 70,
-      "show_pct": 53.4,
-      "qualified": 47,
-      "qual_pct": 35.9,
-      "closed": 3,
-      "cw_pct": 2.3,
-      "revenue": 25994.0
-    },
     "Google Ads": {
       "leads_created": 26,
       "booked": 26,
@@ -63,18 +75,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "YouTube": {
-      "leads_created": 36,
-      "booked": 23,
-      "book_pct": 63.9,
-      "showed": 13,
-      "show_pct": 56.5,
-      "qualified": 12,
-      "qual_pct": 52.2,
-      "closed": 7,
-      "cw_pct": 30.4,
-      "revenue": 49470.0
     },
     "LTF - In-House": {
       "leads_created": 0,
@@ -113,7 +113,7 @@
       "revenue": 14082.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 281,
+      "leads_created": 282,
       "booked": 6,
       "book_pct": 2.1,
       "showed": 2,
