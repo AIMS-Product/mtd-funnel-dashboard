@@ -2,24 +2,24 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 2801,
-    "booked": 589,
-    "showed": 332,
+    "leads_created": 2803,
+    "booked": 590,
+    "showed": 333,
     "qualified": 248,
     "closed": 34,
     "revenue": 240827.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2499,
-      "booked": 585,
-      "showed": 332,
+      "leads_created": 2502,
+      "booked": 586,
+      "showed": 333,
       "qualified": 248,
       "closed": 33,
       "revenue": 234830.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 302,
+      "leads_created": 301,
       "booked": 4,
       "showed": 0,
       "qualified": 0,
@@ -28,18 +28,6 @@
     }
   },
   "funnels": {
-    "Internal Webinar": {
-      "leads_created": 2140,
-      "booked": 177,
-      "book_pct": 8.3,
-      "showed": 101,
-      "show_pct": 57.1,
-      "qualified": 72,
-      "qual_pct": 40.7,
-      "closed": 3,
-      "cw_pct": 1.7,
-      "revenue": 25994.0
-    },
     "Website": {
       "leads_created": 28,
       "booked": 51,
@@ -51,6 +39,18 @@
       "closed": 1,
       "cw_pct": 2.0,
       "revenue": 6897.0
+    },
+    "Internal Webinar": {
+      "leads_created": 2141,
+      "booked": 178,
+      "book_pct": 8.3,
+      "showed": 102,
+      "show_pct": 57.3,
+      "qualified": 72,
+      "qual_pct": 40.4,
+      "closed": 3,
+      "cw_pct": 1.7,
+      "revenue": 25994.0
     },
     "Instagram": {
       "leads_created": 92,
@@ -89,9 +89,9 @@
       "revenue": 0.0
     },
     "YouTube": {
-      "leads_created": 41,
+      "leads_created": 42,
       "booked": 34,
-      "book_pct": 82.9,
+      "book_pct": 81.0,
       "showed": 22,
       "show_pct": 64.7,
       "qualified": 22,
@@ -101,9 +101,9 @@
       "revenue": 55467.0
     },
     "Google Ads": {
-      "leads_created": 32,
+      "leads_created": 33,
       "booked": 34,
-      "book_pct": 106.2,
+      "book_pct": 103.0,
       "showed": 21,
       "show_pct": 61.8,
       "qualified": 14,
@@ -149,7 +149,7 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 302,
+      "leads_created": 301,
       "booked": 4,
       "book_pct": 1.3,
       "showed": 0,
