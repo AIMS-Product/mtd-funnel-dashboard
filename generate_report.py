@@ -19,6 +19,7 @@ CF_FUNNEL_NAME = "cf_xqDQE8fkPsWa0RNEve7hcaxKblCe6489XeZGRDzyPdX"
 CF_SHOW_UP     = "cf_OPyvpU45RdvjLqfm8V1VWwNxrGKogEH2IBJmfCj0Uhq"
 CF_QUALIFIED   = "cf_ZDx7NBQaDzV1yYrFcBMzt6cIYj81dAcswpNN0CQzCPS"
 CF_SALES_CYCLE = "cf_27NpVa3rplytwPB6uJB4YJxC1qztWgOsiLM2hZUhicq"
+CF_BUSINESS_LINE = "cf_aJlNlilQZIgLLuhcymNN8fiOzewnFxrbWjLZFPmsucO"  # BTC Business Line
 PIPE_SALES     = "pipe_78hyBUVS7IKikGEmstObu1"
 STAT_WON       = "stat_WnFc0uhjcjV0cc3bVzdFVqDz7av6rbsOmOvHUsO6s03"
 
@@ -33,6 +34,22 @@ EXCLUDED_WON_USER_IDS = {
     "user_MKOQR5gHgClObwmBNdLwVJUE2FgJM9DAtXGHxJ1KFjN",
 }
 EXCLUDED_FROM_TOTALS_FUNNELS = {"LTF - Quiz Funnel"}
+
+# Business Line (BTC Business Line, cf_aJlNlilQZIgLLuhcymNN8fiOzewnFxrbWjLZFPmsucO)
+# values excluded report-wide — kept in sync with fetch_and_build.py. To bring a
+# business line back, just remove/comment out its line below.
+EXCLUDED_BUSINESS_LINES = {
+    "The Land Geek (TLG)",
+    "Publishing Profits Academy (PPA)",
+}
+
+def is_excluded_business_line(lead):
+    """True if this lead's BTC Business Line is in EXCLUDED_BUSINESS_LINES."""
+    raw = lead.get(f"custom.{CF_BUSINESS_LINE}")
+    if isinstance(raw, list):
+        raw = raw[0] if raw else None
+    val = str(raw).strip() if raw else ""
+    return val in EXCLUDED_BUSINESS_LINES
 
 FUNNEL_GROUPS = [
     ("IN-HOUSE",  ["YouTube", "Meta Ads", "VSL", "Website", "Internal Webinar",
@@ -114,7 +131,8 @@ def fetch_booked_leads(start_date, end_date):
     while True:
         data = close_get("lead/", {
             "query":   query,
-            "_fields": f"id,status_id,custom.{CF_FUNNEL_NAME},custom.{CF_SHOW_UP},custom.{CF_QUALIFIED}",
+            "_fields": (f"id,status_id,custom.{CF_FUNNEL_NAME},custom.{CF_SHOW_UP},"
+                        f"custom.{CF_QUALIFIED},custom.{CF_BUSINESS_LINE}"),
             "_limit":  200, "_skip": skip,
         })
         batch = data.get("data", [])
@@ -151,6 +169,7 @@ def aggregate(start_date, end_date, goals):
     funnel_data = {}
     for lead in booked_leads:
         if lead.get("status_id") in EXCLUDED_LEAD_STATUS_IDS: continue
+        if is_excluded_business_line(lead): continue
         funnel = get_funnel_name(lead)
         if funnel not in funnel_data:
             funnel_data[funnel] = {"booked": 0, "showed": 0, "qualified": 0,
@@ -172,12 +191,13 @@ def aggregate(start_date, end_date, goals):
         if lid not in lead_cache:
             try:
                 lead_resp = close_get(f"lead/{lid}/", {
-                    "_fields": f"id,custom.{CF_FUNNEL_NAME},custom.{CF_FIRST_SALES}"
+                    "_fields": f"id,custom.{CF_FUNNEL_NAME},custom.{CF_FIRST_SALES},custom.{CF_BUSINESS_LINE}"
                 })
                 lead_cache[lid] = lead_resp
             except Exception:
                 lead_cache[lid] = {}
         lead_obj = lead_cache[lid] if isinstance(lead_cache[lid], dict) else {}
+        if lead_obj and is_excluded_business_line(lead_obj): continue
         funnel = get_funnel_name(lead_obj) if lead_obj else "No Attribution"
         if funnel not in funnel_data:
             funnel_data[funnel] = {"booked": 0, "showed": 0, "qualified": 0,
@@ -240,7 +260,7 @@ def aggregate(start_date, end_date, goals):
             "showed":      t["showed"],
             "show_pct":    pct(t["showed"], t["booked"]),
             "qualified":   t["qualified"],
-            "qual_pct":    pct(t["qualified"], t["booked"]),
+            "qual_pct":    pct(t["qualified"], t["showed"]),
             "closed":      t["closed"] if t["closed"] else "",
             "cw_pct":      pct(t["closed"], t["booked"]),
             "revenue":     fmt_currency(t["revenue"]),
@@ -296,6 +316,9 @@ def write_csv(start_date, end_date, grand, group_totals, rows, end_date_obj=None
                     pct(inh.get("showed",0), inh.get("booked",0)), ""])
         w.writerow(kpi_row("Showed",         "showed"))
         w.writerow(kpi_row("Qualified",      "qualified"))
+        w.writerow(["Qual Rate", pct(grand["qualified"], grand["showed"]),
+                    pct(ext.get("qualified",0), ext.get("showed",0)), "",
+                    pct(inh.get("qualified",0), inh.get("showed",0)), ""])
         w.writerow(kpi_row("Closed Won",     "closed"))
         w.writerow(["Close Rate (b→c)", pct(grand["closed"], grand["booked"]),
                     pct(ext.get("closed",0), ext.get("booked",0)), "",
@@ -333,7 +356,7 @@ def write_csv(start_date, end_date, grand, group_totals, rows, end_date_obj=None
             "TOTAL", "TOTAL", "",
             grand["booked"], "", "",
             grand["showed"], pct(grand["showed"], grand["booked"]),
-            grand["qualified"], pct(grand["qualified"], grand["booked"]),
+            grand["qualified"], pct(grand["qualified"], grand["showed"]),
             grand["closed"], pct(grand["closed"], grand["booked"]),
             fmt_currency(grand["revenue"]),
             fmt_currency(grand["revenue"] / grand["closed"]) if grand["closed"] else "",
