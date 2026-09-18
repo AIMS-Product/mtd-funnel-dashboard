@@ -832,7 +832,7 @@ def build_funnel_rows(funnel_data, funnel_totals, goals=None, day_of_month=1, da
       <td class="col-num">{sh if sh else "—"}</td>
       <td class="col-pct {pct_class(sh, bo)}">{pct(sh, bo)}</td>
       <td class="col-num">{qu if qu else "—"}</td>
-      <td class="col-pct {pct_class(qu, bo)}">{pct(qu, bo)}</td>
+      <td class="col-pct {pct_class(qu, sh)}">{pct(qu, sh)}</td>
       <td class="col-num">{cl if cl else "—"}</td>
       <td class="col-pct {pct_class(cl, bo, high=0.15, low=0.07)}">{pct(cl, bo)}</td>
       <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('{fid}')" title="Click to see package breakdown">{fmt_currency(rev)} <span class="pkg-chevron" id="pkgchev-{fid}">›</span></td>
@@ -878,7 +878,7 @@ def build_funnel_rows(funnel_data, funnel_totals, goals=None, day_of_month=1, da
       <td class="col-num">{s if s else "—"}</td>
       <td class="col-pct {pct_class(s, b)}">{pct(s, b)}</td>
       <td class="col-num">{q if q else "—"}</td>
-      <td class="col-pct {pct_class(q, b)}">{pct(q, b)}</td>
+      <td class="col-pct {pct_class(q, s)}">{pct(q, s)}</td>
       <td class="col-num">{c if c else "—"}</td>
       <td class="col-pct {pct_class(c, b, high=0.15, low=0.07)}">{pct(c, b)}</td>
       <td class="col-rev">{fmt_currency(r)}</td>
@@ -1416,7 +1416,7 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
   <div class="kpi" style="--kpi-accent:#7c3aed; --kpi-color:#7c3aed;">
     <div class="label">Qualified</div>
     <div class="value">{g_qu}</div>
-    <div class="kpi-sub">{pct(g_qu, g_bo)} qual rate</div>
+    <div class="kpi-sub">{pct(g_qu, g_sh)} qual rate · {pct(g_qu, g_bo)} of booked</div>
   </div>
   <div class="kpi" style="--kpi-accent:#d97706; --kpi-color:#d97706;">
     <div class="label">Closed Won</div>
@@ -1465,7 +1465,7 @@ def generate_html(data, month_picker_html="", week_picker_html=""):
       <td class="col-num">{g_sh}</td>
       <td class="col-pct {pct_class(g_sh, g_bo)}">{pct(g_sh, g_bo)}</td>
       <td class="col-num">{g_qu}</td>
-      <td class="col-pct {pct_class(g_qu, g_bo)}">{pct(g_qu, g_bo)}</td>
+      <td class="col-pct {pct_class(g_qu, g_sh)}">{pct(g_qu, g_sh)}</td>
       <td class="col-num">{g_cl}</td>
       <td class="col-pct {pct_class(g_cl, g_bo, high=0.15, low=0.07)}">{pct(g_cl, g_bo)}</td>
       <td class="col-rev">{fmt_currency(g_rev)}</td>
@@ -1697,7 +1697,7 @@ def save_data_json(data, month_key):
             "showed":    sh,
             "show_pct":  round(sh / bo * 100, 1) if bo else 0,
             "qualified": qu,
-            "qual_pct":  round(qu / bo * 100, 1) if bo else 0,
+            "qual_pct":  round(qu / sh * 100, 1) if sh else 0,
             "closed":    cl,
             "cw_pct":    round(cl / bo * 100, 1) if bo else 0,
             "revenue":   rev,
