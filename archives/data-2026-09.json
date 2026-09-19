@@ -2,7 +2,7 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 2900,
+    "leads_created": 2901,
     "booked": 603,
     "showed": 333,
     "qualified": 247,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2588,
+      "leads_created": 2589,
       "booked": 599,
       "showed": 333,
       "qualified": 247,
@@ -28,17 +28,29 @@
     }
   },
   "funnels": {
-    "YouTube": {
-      "leads_created": 43,
-      "booked": 31,
-      "book_pct": 72.1,
-      "showed": 21,
-      "show_pct": 67.7,
-      "qualified": 20,
-      "qual_pct": 95.2,
-      "closed": 8,
-      "cw_pct": 25.8,
-      "revenue": 55467.0
+    "Mike Newsletter": {
+      "leads_created": 1,
+      "booked": 3,
+      "book_pct": 300.0,
+      "showed": 3,
+      "show_pct": 100.0,
+      "qualified": 2,
+      "qual_pct": 66.7,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Internal Webinar": {
+      "leads_created": 2214,
+      "booked": 180,
+      "book_pct": 8.1,
+      "showed": 102,
+      "show_pct": 56.7,
+      "qualified": 71,
+      "qual_pct": 69.6,
+      "closed": 4,
+      "cw_pct": 2.2,
+      "revenue": 32891.0
     },
     "Instagram": {
       "leads_created": 94,
@@ -52,17 +64,17 @@
       "cw_pct": 6.9,
       "revenue": 20079.0
     },
-    "Internal Webinar": {
-      "leads_created": 2213,
-      "booked": 181,
-      "book_pct": 8.2,
-      "showed": 102,
-      "show_pct": 56.4,
-      "qualified": 71,
-      "qual_pct": 69.6,
-      "closed": 4,
-      "cw_pct": 2.2,
-      "revenue": 32891.0
+    "YouTube": {
+      "leads_created": 43,
+      "booked": 31,
+      "book_pct": 72.1,
+      "showed": 21,
+      "show_pct": 67.7,
+      "qualified": 20,
+      "qual_pct": 95.2,
+      "closed": 8,
+      "cw_pct": 25.8,
+      "revenue": 55467.0
     },
     "Google Ads": {
       "leads_created": 37,
@@ -78,10 +90,10 @@
     },
     "Website": {
       "leads_created": 28,
-      "booked": 50,
-      "book_pct": 178.6,
+      "booked": 51,
+      "book_pct": 182.1,
       "showed": 29,
-      "show_pct": 58.0,
+      "show_pct": 56.9,
       "qualified": 29,
       "qual_pct": 100.0,
       "closed": 1,
@@ -108,18 +120,6 @@
       "show_pct": 100.0,
       "qualified": 1,
       "qual_pct": 100.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Mike Newsletter": {
-      "leads_created": 1,
-      "booked": 3,
-      "book_pct": 300.0,
-      "showed": 3,
-      "show_pct": 100.0,
-      "qualified": 2,
-      "qual_pct": 66.7,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
