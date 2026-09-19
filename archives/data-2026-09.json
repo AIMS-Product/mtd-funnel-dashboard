@@ -2,19 +2,19 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 2941,
-    "booked": 615,
-    "showed": 342,
-    "qualified": 254,
+    "leads_created": 2944,
+    "booked": 613,
+    "showed": 340,
+    "qualified": 252,
     "closed": 36,
     "revenue": 253721.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2626,
-      "booked": 611,
-      "showed": 342,
-      "qualified": 254,
+      "leads_created": 2629,
+      "booked": 609,
+      "showed": 340,
+      "qualified": 252,
       "closed": 35,
       "revenue": 247724.0
     },
@@ -28,28 +28,40 @@
     }
   },
   "funnels": {
+    "Website": {
+      "leads_created": 28,
+      "booked": 50,
+      "book_pct": 178.6,
+      "showed": 31,
+      "show_pct": 62.0,
+      "qualified": 31,
+      "qual_pct": 100.0,
+      "closed": 1,
+      "cw_pct": 2.0,
+      "revenue": 6897.0
+    },
     "Internal Webinar": {
-      "leads_created": 2241,
+      "leads_created": 2245,
       "booked": 184,
       "book_pct": 8.2,
-      "showed": 107,
-      "show_pct": 58.2,
-      "qualified": 73,
-      "qual_pct": 68.2,
+      "showed": 106,
+      "show_pct": 57.6,
+      "qualified": 72,
+      "qual_pct": 67.9,
       "closed": 4,
       "cw_pct": 2.2,
       "revenue": 32891.0
     },
     "Instagram": {
-      "leads_created": 97,
-      "booked": 59,
-      "book_pct": 60.8,
-      "showed": 35,
-      "show_pct": 59.3,
-      "qualified": 25,
-      "qual_pct": 71.4,
+      "leads_created": 96,
+      "booked": 58,
+      "book_pct": 60.4,
+      "showed": 34,
+      "show_pct": 58.6,
+      "qualified": 24,
+      "qual_pct": 70.6,
       "closed": 4,
-      "cw_pct": 6.8,
+      "cw_pct": 6.9,
       "revenue": 20079.0
     },
     "WWWS": {
@@ -75,18 +87,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Website": {
-      "leads_created": 28,
-      "booked": 51,
-      "book_pct": 182.1,
-      "showed": 31,
-      "show_pct": 60.8,
-      "qualified": 31,
-      "qual_pct": 100.0,
-      "closed": 1,
-      "cw_pct": 2.0,
-      "revenue": 6897.0
     },
     "Mike Newsletter": {
       "leads_created": 1,
