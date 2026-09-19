@@ -4,7 +4,7 @@
   "grand": {
     "leads_created": 2917,
     "booked": 603,
-    "showed": 334,
+    "showed": 335,
     "qualified": 248,
     "closed": 36,
     "revenue": 253721.0
@@ -13,7 +13,7 @@
     "LEAD SOURCES": {
       "leads_created": 2604,
       "booked": 599,
-      "showed": 334,
+      "showed": 335,
       "qualified": 248,
       "closed": 35,
       "revenue": 247724.0
@@ -28,14 +28,26 @@
     }
   },
   "funnels": {
+    "Website": {
+      "leads_created": 28,
+      "booked": 51,
+      "book_pct": 182.1,
+      "showed": 30,
+      "show_pct": 58.8,
+      "qualified": 30,
+      "qual_pct": 100.0,
+      "closed": 1,
+      "cw_pct": 2.0,
+      "revenue": 6897.0
+    },
     "Internal Webinar": {
       "leads_created": 2224,
-      "booked": 179,
-      "book_pct": 8.0,
-      "showed": 102,
-      "show_pct": 57.0,
+      "booked": 180,
+      "book_pct": 8.1,
+      "showed": 103,
+      "show_pct": 57.2,
       "qualified": 71,
-      "qual_pct": 69.6,
+      "qual_pct": 68.9,
       "closed": 4,
       "cw_pct": 2.2,
       "revenue": 32891.0
@@ -87,18 +99,6 @@
       "closed": 8,
       "cw_pct": 25.8,
       "revenue": 55467.0
-    },
-    "Website": {
-      "leads_created": 28,
-      "booked": 52,
-      "book_pct": 185.7,
-      "showed": 30,
-      "show_pct": 57.7,
-      "qualified": 30,
-      "qual_pct": 100.0,
-      "closed": 1,
-      "cw_pct": 1.9,
-      "revenue": 6897.0
     },
     "LTF - In-House": {
       "leads_created": 0,
