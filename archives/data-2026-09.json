@@ -2,8 +2,8 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 3054,
-    "booked": 628,
+    "leads_created": 3055,
+    "booked": 626,
     "showed": 345,
     "qualified": 257,
     "closed": 37,
@@ -11,8 +11,8 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2734,
-      "booked": 624,
+      "leads_created": 2735,
+      "booked": 622,
       "showed": 345,
       "qualified": 257,
       "closed": 36,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 2343,
+      "booked": 183,
+      "book_pct": 7.8,
+      "showed": 105,
+      "show_pct": 57.4,
+      "qualified": 71,
+      "qual_pct": 67.6,
+      "closed": 4,
+      "cw_pct": 2.2,
+      "revenue": 32891.0
+    },
     "YouTube": {
       "leads_created": 52,
       "booked": 37,
@@ -39,18 +51,6 @@
       "closed": 8,
       "cw_pct": 21.6,
       "revenue": 55467.0
-    },
-    "Internal Webinar": {
-      "leads_created": 2342,
-      "booked": 185,
-      "book_pct": 7.9,
-      "showed": 105,
-      "show_pct": 56.8,
-      "qualified": 71,
-      "qual_pct": 67.6,
-      "closed": 4,
-      "cw_pct": 2.2,
-      "revenue": 32891.0
     },
     "VSL": {
       "leads_created": 2,
