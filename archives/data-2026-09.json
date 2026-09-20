@@ -2,19 +2,19 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 3138,
-    "booked": 622,
-    "showed": 346,
-    "qualified": 262,
+    "leads_created": 3142,
+    "booked": 620,
+    "showed": 345,
+    "qualified": 260,
     "closed": 39,
     "revenue": 274712.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2817,
-      "booked": 618,
-      "showed": 346,
-      "qualified": 262,
+      "leads_created": 2821,
+      "booked": 616,
+      "showed": 345,
+      "qualified": 260,
       "closed": 38,
       "revenue": 268715.0
     },
@@ -28,6 +28,42 @@
     }
   },
   "funnels": {
+    "YouTube": {
+      "leads_created": 54,
+      "booked": 35,
+      "book_pct": 64.8,
+      "showed": 25,
+      "show_pct": 71.4,
+      "qualified": 24,
+      "qual_pct": 96.0,
+      "closed": 8,
+      "cw_pct": 22.9,
+      "revenue": 55467.0
+    },
+    "Internal Webinar": {
+      "leads_created": 2427,
+      "booked": 182,
+      "book_pct": 7.5,
+      "showed": 102,
+      "show_pct": 56.0,
+      "qualified": 69,
+      "qual_pct": 67.6,
+      "closed": 4,
+      "cw_pct": 2.2,
+      "revenue": 32891.0
+    },
+    "Website": {
+      "leads_created": 27,
+      "booked": 51,
+      "book_pct": 188.9,
+      "showed": 29,
+      "show_pct": 56.9,
+      "qualified": 28,
+      "qual_pct": 96.6,
+      "closed": 2,
+      "cw_pct": 3.9,
+      "revenue": 15894.0
+    },
     "Google Ads": {
       "leads_created": 39,
       "booked": 33,
@@ -39,42 +75,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Website": {
-      "leads_created": 27,
-      "booked": 50,
-      "book_pct": 185.2,
-      "showed": 28,
-      "show_pct": 56.0,
-      "qualified": 27,
-      "qual_pct": 96.4,
-      "closed": 2,
-      "cw_pct": 4.0,
-      "revenue": 15894.0
-    },
-    "YouTube": {
-      "leads_created": 54,
-      "booked": 36,
-      "book_pct": 66.7,
-      "showed": 25,
-      "show_pct": 69.4,
-      "qualified": 25,
-      "qual_pct": 100.0,
-      "closed": 8,
-      "cw_pct": 22.2,
-      "revenue": 55467.0
-    },
-    "Internal Webinar": {
-      "leads_created": 2423,
-      "booked": 184,
-      "book_pct": 7.6,
-      "showed": 104,
-      "show_pct": 56.5,
-      "qualified": 71,
-      "qual_pct": 68.3,
-      "closed": 4,
-      "cw_pct": 2.2,
-      "revenue": 32891.0
     },
     "Instagram": {
       "leads_created": 100,
