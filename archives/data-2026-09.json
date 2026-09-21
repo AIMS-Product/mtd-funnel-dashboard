@@ -2,19 +2,19 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 3316,
-    "booked": 636,
-    "showed": 346,
-    "qualified": 258,
+    "leads_created": 3325,
+    "booked": 633,
+    "showed": 345,
+    "qualified": 256,
     "closed": 39,
     "revenue": 274712.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2989,
-      "booked": 632,
-      "showed": 346,
-      "qualified": 258,
+      "leads_created": 2997,
+      "booked": 629,
+      "showed": 345,
+      "qualified": 256,
       "closed": 38,
       "revenue": 268715.0
     },
@@ -28,6 +28,30 @@
     }
   },
   "funnels": {
+    "WWWS": {
+      "leads_created": 0,
+      "booked": 2,
+      "book_pct": 0,
+      "showed": 2,
+      "show_pct": 100.0,
+      "qualified": 1,
+      "qual_pct": 50.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Mike Newsletter": {
+      "leads_created": 1,
+      "booked": 2,
+      "book_pct": 200.0,
+      "showed": 2,
+      "show_pct": 100.0,
+      "qualified": 2,
+      "qual_pct": 100.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Website": {
       "leads_created": 27,
       "booked": 49,
@@ -41,73 +65,49 @@
       "revenue": 15894.0
     },
     "Internal Webinar": {
-      "leads_created": 2586,
-      "booked": 181,
+      "leads_created": 2594,
+      "booked": 182,
       "book_pct": 7.0,
-      "showed": 101,
-      "show_pct": 55.8,
+      "showed": 103,
+      "show_pct": 56.6,
       "qualified": 68,
-      "qual_pct": 67.3,
+      "qual_pct": 66.0,
       "closed": 4,
       "cw_pct": 2.2,
       "revenue": 32891.0
     },
-    "YouTube": {
-      "leads_created": 57,
-      "booked": 38,
-      "book_pct": 66.7,
-      "showed": 25,
-      "show_pct": 65.8,
-      "qualified": 24,
-      "qual_pct": 96.0,
-      "closed": 8,
-      "cw_pct": 21.1,
-      "revenue": 55467.0
-    },
-    "WWWS": {
-      "leads_created": 0,
-      "booked": 3,
-      "book_pct": 0,
-      "showed": 3,
-      "show_pct": 100.0,
-      "qualified": 2,
-      "qual_pct": 66.7,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Instagram": {
       "leads_created": 100,
-      "booked": 60,
-      "book_pct": 60.0,
-      "showed": 35,
-      "show_pct": 58.3,
-      "qualified": 29,
-      "qual_pct": 82.9,
+      "booked": 58,
+      "book_pct": 58.0,
+      "showed": 34,
+      "show_pct": 58.6,
+      "qualified": 27,
+      "qual_pct": 79.4,
       "closed": 4,
-      "cw_pct": 6.7,
+      "cw_pct": 6.9,
       "revenue": 20079.0
     },
-    "Mike Newsletter": {
-      "leads_created": 1,
-      "booked": 2,
-      "book_pct": 200.0,
-      "showed": 2,
-      "show_pct": 100.0,
-      "qualified": 1,
-      "qual_pct": 50.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
+    "YouTube": {
+      "leads_created": 57,
+      "booked": 37,
+      "book_pct": 64.9,
+      "showed": 24,
+      "show_pct": 64.9,
+      "qualified": 24,
+      "qual_pct": 100.0,
+      "closed": 8,
+      "cw_pct": 21.6,
+      "revenue": 55467.0
     },
     "Google Ads": {
-      "leads_created": 39,
-      "booked": 32,
-      "book_pct": 82.1,
-      "showed": 20,
-      "show_pct": 62.5,
-      "qualified": 12,
-      "qual_pct": 60.0,
+      "leads_created": 38,
+      "booked": 31,
+      "book_pct": 81.6,
+      "showed": 19,
+      "show_pct": 61.3,
+      "qualified": 11,
+      "qual_pct": 57.9,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
@@ -137,9 +137,9 @@
       "revenue": 11535.0
     },
     "Linkedin": {
-      "leads_created": 1,
+      "leads_created": 2,
       "booked": 7,
-      "book_pct": 700.0,
+      "book_pct": 350.0,
       "showed": 5,
       "show_pct": 71.4,
       "qualified": 4,
@@ -161,9 +161,9 @@
       "revenue": 5997.0
     },
     "Meta Ads": {
-      "leads_created": 58,
+      "leads_created": 57,
       "booked": 1,
-      "book_pct": 1.7,
+      "book_pct": 1.8,
       "showed": 0,
       "show_pct": 0.0,
       "qualified": 0,
@@ -181,7 +181,7 @@
       "qualified": 90,
       "qual_pct": 71.4,
       "closed": 18,
-      "cw_pct": 7.2,
+      "cw_pct": 7.1,
       "revenue": 132849.0
     },
     "Anthony IG": {
