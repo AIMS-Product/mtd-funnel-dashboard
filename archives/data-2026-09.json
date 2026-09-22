@@ -2,19 +2,19 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 3440,
-    "booked": 632,
-    "showed": 350,
-    "qualified": 255,
+    "leads_created": 3442,
+    "booked": 631,
+    "showed": 351,
+    "qualified": 256,
     "closed": 41,
     "revenue": 287606.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 3109,
-      "booked": 629,
-      "showed": 350,
-      "qualified": 255,
+      "leads_created": 3111,
+      "booked": 628,
+      "showed": 351,
+      "qualified": 256,
       "closed": 40,
       "revenue": 281609.0
     },
@@ -28,29 +28,41 @@
     }
   },
   "funnels": {
-    "Website": {
-      "leads_created": 27,
-      "booked": 43,
-      "book_pct": 159.3,
-      "showed": 23,
-      "show_pct": 53.5,
-      "qualified": 22,
-      "qual_pct": 95.7,
-      "closed": 2,
-      "cw_pct": 4.7,
-      "revenue": 15894.0
-    },
     "Internal Webinar": {
-      "leads_created": 2690,
-      "booked": 178,
+      "leads_created": 2692,
+      "booked": 177,
       "book_pct": 6.6,
       "showed": 106,
-      "show_pct": 59.6,
+      "show_pct": 59.9,
       "qualified": 69,
       "qual_pct": 65.1,
       "closed": 4,
-      "cw_pct": 2.2,
+      "cw_pct": 2.3,
       "revenue": 32891.0
+    },
+    "Google Ads": {
+      "leads_created": 38,
+      "booked": 31,
+      "book_pct": 81.6,
+      "showed": 20,
+      "show_pct": 64.5,
+      "qualified": 12,
+      "qual_pct": 60.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Website": {
+      "leads_created": 27,
+      "booked": 42,
+      "book_pct": 155.6,
+      "showed": 22,
+      "show_pct": 52.4,
+      "qualified": 21,
+      "qual_pct": 95.5,
+      "closed": 2,
+      "cw_pct": 4.8,
+      "revenue": 15894.0
     },
     "Unknown (Needs Review)": {
       "leads_created": 331,
@@ -63,18 +75,6 @@
       "closed": 1,
       "cw_pct": 33.3,
       "revenue": 5997.0
-    },
-    "Google Ads": {
-      "leads_created": 38,
-      "booked": 32,
-      "book_pct": 84.2,
-      "showed": 20,
-      "show_pct": 62.5,
-      "qualified": 12,
-      "qual_pct": 60.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "Instagram": {
       "leads_created": 102,
@@ -90,14 +90,14 @@
     },
     "YouTube": {
       "leads_created": 60,
-      "booked": 38,
-      "book_pct": 63.3,
-      "showed": 23,
-      "show_pct": 60.5,
-      "qualified": 23,
+      "booked": 39,
+      "book_pct": 65.0,
+      "showed": 24,
+      "show_pct": 61.5,
+      "qualified": 24,
       "qual_pct": 100.0,
       "closed": 8,
-      "cw_pct": 21.1,
+      "cw_pct": 20.5,
       "revenue": 55467.0
     },
     "WWWS": {
