@@ -2,24 +2,24 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 3599,
-    "booked": 739,
-    "showed": 390,
-    "qualified": 300,
+    "leads_created": 3600,
+    "booked": 740,
+    "showed": 391,
+    "qualified": 301,
     "closed": 43,
     "revenue": 300500.0
   },
   "groups": {
     "LEAD SOURCES": {
       "leads_created": 3257,
-      "booked": 732,
-      "showed": 390,
-      "qualified": 300,
+      "booked": 733,
+      "showed": 391,
+      "qualified": 301,
       "closed": 42,
       "revenue": 294503.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 342,
+      "leads_created": 343,
       "booked": 6,
       "showed": 0,
       "qualified": 0,
@@ -28,16 +28,28 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 2802,
+      "booked": 213,
+      "book_pct": 7.6,
+      "showed": 120,
+      "show_pct": 56.3,
+      "qualified": 84,
+      "qual_pct": 70.0,
+      "closed": 4,
+      "cw_pct": 1.9,
+      "revenue": 32891.0
+    },
     "YouTube": {
       "leads_created": 70,
-      "booked": 47,
-      "book_pct": 67.1,
-      "showed": 27,
-      "show_pct": 57.4,
-      "qualified": 29,
-      "qual_pct": 107.4,
+      "booked": 48,
+      "book_pct": 68.6,
+      "showed": 28,
+      "show_pct": 58.3,
+      "qualified": 30,
+      "qual_pct": 107.1,
       "closed": 8,
-      "cw_pct": 17.0,
+      "cw_pct": 16.7,
       "revenue": 55467.0
     },
     "Google Ads": {
@@ -51,18 +63,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Internal Webinar": {
-      "leads_created": 2802,
-      "booked": 213,
-      "book_pct": 7.6,
-      "showed": 120,
-      "show_pct": 56.3,
-      "qualified": 84,
-      "qual_pct": 70.0,
-      "closed": 4,
-      "cw_pct": 1.9,
-      "revenue": 32891.0
     },
     "Instagram": {
       "leads_created": 103,
@@ -137,9 +137,9 @@
       "revenue": 11535.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 342,
+      "leads_created": 343,
       "booked": 6,
-      "book_pct": 1.8,
+      "book_pct": 1.7,
       "showed": 0,
       "show_pct": 0.0,
       "qualified": 0,
