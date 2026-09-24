@@ -4,7 +4,7 @@
   "grand": {
     "leads_created": 3694,
     "booked": 770,
-    "showed": 408,
+    "showed": 407,
     "qualified": 313,
     "closed": 45,
     "revenue": 313394.0
@@ -13,7 +13,7 @@
     "LEAD SOURCES": {
       "leads_created": 3346,
       "booked": 765,
-      "showed": 408,
+      "showed": 407,
       "qualified": 313,
       "closed": 44,
       "revenue": 307397.0
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Google Ads": {
+      "leads_created": 52,
+      "booked": 36,
+      "book_pct": 69.2,
+      "showed": 23,
+      "show_pct": 63.9,
+      "qualified": 15,
+      "qual_pct": 65.2,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "YouTube": {
       "leads_created": 69,
       "booked": 49,
@@ -75,18 +87,6 @@
       "closed": 4,
       "cw_pct": 5.5,
       "revenue": 20079.0
-    },
-    "Google Ads": {
-      "leads_created": 52,
-      "booked": 36,
-      "book_pct": 69.2,
-      "showed": 24,
-      "show_pct": 66.7,
-      "qualified": 15,
-      "qual_pct": 62.5,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "LTF - In-House": {
       "leads_created": 0,
