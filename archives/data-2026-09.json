@@ -2,25 +2,25 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 3700,
-    "booked": 773,
-    "showed": 412,
-    "qualified": 314,
+    "leads_created": 3699,
+    "booked": 772,
+    "showed": 416,
+    "qualified": 313,
     "closed": 45,
     "revenue": 313394.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 3352,
-      "booked": 768,
-      "showed": 412,
-      "qualified": 314,
+      "leads_created": 3351,
+      "booked": 766,
+      "showed": 416,
+      "qualified": 313,
       "closed": 44,
       "revenue": 307397.0
     },
     "UNCATEGORIZED": {
       "leads_created": 348,
-      "booked": 5,
+      "booked": 6,
       "showed": 0,
       "qualified": 0,
       "closed": 1,
@@ -28,18 +28,6 @@
     }
   },
   "funnels": {
-    "Internal Webinar": {
-      "leads_created": 2869,
-      "booked": 230,
-      "book_pct": 8.0,
-      "showed": 130,
-      "show_pct": 56.5,
-      "qualified": 89,
-      "qual_pct": 68.5,
-      "closed": 4,
-      "cw_pct": 1.7,
-      "revenue": 32891.0
-    },
     "YouTube": {
       "leads_created": 69,
       "booked": 47,
@@ -51,6 +39,18 @@
       "closed": 8,
       "cw_pct": 17.0,
       "revenue": 55467.0
+    },
+    "Instagram": {
+      "leads_created": 111,
+      "booked": 74,
+      "book_pct": 66.7,
+      "showed": 41,
+      "show_pct": 55.4,
+      "qualified": 34,
+      "qual_pct": 82.9,
+      "closed": 4,
+      "cw_pct": 5.4,
+      "revenue": 20079.0
     },
     "Website": {
       "leads_created": 27,
@@ -64,41 +64,17 @@
       "cw_pct": 3.9,
       "revenue": 15894.0
     },
-    "VSL": {
-      "leads_created": 2,
-      "booked": 1,
-      "book_pct": 50.0,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Google Ads": {
-      "leads_created": 52,
-      "booked": 35,
-      "book_pct": 67.3,
-      "showed": 22,
-      "show_pct": 62.9,
-      "qualified": 14,
-      "qual_pct": 63.6,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Instagram": {
-      "leads_created": 111,
-      "booked": 75,
-      "book_pct": 67.6,
-      "showed": 41,
-      "show_pct": 54.7,
-      "qualified": 35,
-      "qual_pct": 85.4,
+    "Internal Webinar": {
+      "leads_created": 2870,
+      "booked": 228,
+      "book_pct": 7.9,
+      "showed": 132,
+      "show_pct": 57.9,
+      "qualified": 89,
+      "qual_pct": 67.4,
       "closed": 4,
-      "cw_pct": 5.3,
-      "revenue": 20079.0
+      "cw_pct": 1.8,
+      "revenue": 32891.0
     },
     "LTF - In-House": {
       "leads_created": 0,
@@ -112,16 +88,40 @@
       "cw_pct": 28.6,
       "revenue": 11535.0
     },
+    "Google Ads": {
+      "leads_created": 52,
+      "booked": 36,
+      "book_pct": 69.2,
+      "showed": 23,
+      "show_pct": 63.9,
+      "qualified": 14,
+      "qual_pct": 60.9,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "VSL": {
+      "leads_created": 2,
+      "booked": 1,
+      "book_pct": 50.0,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Unknown (Needs Review)": {
       "leads_created": 348,
-      "booked": 5,
-      "book_pct": 1.4,
+      "booked": 6,
+      "book_pct": 1.7,
       "showed": 0,
       "show_pct": 0.0,
       "qualified": 0,
       "qual_pct": 0,
       "closed": 1,
-      "cw_pct": 20.0,
+      "cw_pct": 16.7,
       "revenue": 5997.0
     },
     "WWWS": {
@@ -173,13 +173,13 @@
       "revenue": 0.0
     },
     "Reactivation Scrapers": {
-      "leads_created": 158,
+      "leads_created": 156,
       "booked": 307,
-      "book_pct": 194.3,
-      "showed": 148,
-      "show_pct": 48.2,
+      "book_pct": 196.8,
+      "showed": 149,
+      "show_pct": 48.5,
       "qualified": 108,
-      "qual_pct": 73.0,
+      "qual_pct": 72.5,
       "closed": 23,
       "cw_pct": 7.5,
       "revenue": 165534.0
