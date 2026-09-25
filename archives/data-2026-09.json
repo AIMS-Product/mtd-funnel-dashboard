@@ -2,24 +2,24 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 3820,
-    "booked": 807,
-    "showed": 436,
+    "leads_created": 3823,
+    "booked": 806,
+    "showed": 435,
     "qualified": 340,
     "closed": 51,
     "revenue": 352382.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 3464,
-      "booked": 801,
-      "showed": 436,
+      "leads_created": 3466,
+      "booked": 800,
+      "showed": 435,
       "qualified": 340,
       "closed": 50,
       "revenue": 346385.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 356,
+      "leads_created": 357,
       "booked": 6,
       "showed": 0,
       "qualified": 0,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 2965,
+      "booked": 235,
+      "book_pct": 7.9,
+      "showed": 131,
+      "show_pct": 55.7,
+      "qualified": 96,
+      "qual_pct": 73.3,
+      "closed": 6,
+      "cw_pct": 2.6,
+      "revenue": 46988.0
+    },
     "Instagram": {
       "leads_created": 114,
       "booked": 72,
@@ -39,18 +51,6 @@
       "closed": 4,
       "cw_pct": 5.6,
       "revenue": 20079.0
-    },
-    "Internal Webinar": {
-      "leads_created": 2964,
-      "booked": 236,
-      "book_pct": 8.0,
-      "showed": 132,
-      "show_pct": 55.9,
-      "qualified": 97,
-      "qual_pct": 73.5,
-      "closed": 6,
-      "cw_pct": 2.5,
-      "revenue": 46988.0
     },
     "Website": {
       "leads_created": 27,
@@ -89,7 +89,7 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 356,
+      "leads_created": 357,
       "booked": 6,
       "book_pct": 1.7,
       "showed": 0,
@@ -173,13 +173,13 @@
       "revenue": 0.0
     },
     "Reactivation Scrapers": {
-      "leads_created": 164,
+      "leads_created": 165,
       "booked": 323,
-      "book_pct": 197.0,
+      "book_pct": 195.8,
       "showed": 159,
       "show_pct": 49.2,
-      "qualified": 120,
-      "qual_pct": 75.5,
+      "qualified": 121,
+      "qual_pct": 76.1,
       "closed": 27,
       "cw_pct": 8.4,
       "revenue": 190425.0
