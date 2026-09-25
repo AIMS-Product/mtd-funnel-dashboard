@@ -3,18 +3,18 @@
   "month_label": "September 2026",
   "grand": {
     "leads_created": 3761,
-    "booked": 776,
+    "booked": 777,
     "showed": 433,
-    "qualified": 331,
+    "qualified": 333,
     "closed": 46,
     "revenue": 319391.0
   },
   "groups": {
     "LEAD SOURCES": {
       "leads_created": 3409,
-      "booked": 770,
+      "booked": 771,
       "showed": 433,
-      "qualified": 330,
+      "qualified": 332,
       "closed": 45,
       "revenue": 313394.0
     },
@@ -28,17 +28,29 @@
     }
   },
   "funnels": {
-    "Website": {
-      "leads_created": 27,
-      "booked": 48,
-      "book_pct": 177.8,
-      "showed": 31,
-      "show_pct": 64.6,
-      "qualified": 29,
-      "qual_pct": 93.5,
-      "closed": 2,
-      "cw_pct": 4.2,
-      "revenue": 15894.0
+    "Internal Webinar": {
+      "leads_created": 2912,
+      "booked": 222,
+      "book_pct": 7.6,
+      "showed": 134,
+      "show_pct": 60.4,
+      "qualified": 95,
+      "qual_pct": 70.9,
+      "closed": 4,
+      "cw_pct": 1.8,
+      "revenue": 32891.0
+    },
+    "YouTube": {
+      "leads_created": 73,
+      "booked": 51,
+      "book_pct": 69.9,
+      "showed": 29,
+      "show_pct": 56.9,
+      "qualified": 28,
+      "qual_pct": 96.6,
+      "closed": 8,
+      "cw_pct": 15.7,
+      "revenue": 55467.0
     },
     "Instagram": {
       "leads_created": 113,
@@ -52,17 +64,17 @@
       "cw_pct": 5.3,
       "revenue": 20079.0
     },
-    "Internal Webinar": {
-      "leads_created": 2912,
-      "booked": 224,
-      "book_pct": 7.7,
-      "showed": 136,
-      "show_pct": 60.7,
-      "qualified": 96,
-      "qual_pct": 70.6,
-      "closed": 4,
-      "cw_pct": 1.8,
-      "revenue": 32891.0
+    "Website": {
+      "leads_created": 27,
+      "booked": 49,
+      "book_pct": 181.5,
+      "showed": 32,
+      "show_pct": 65.3,
+      "qualified": 30,
+      "qual_pct": 93.8,
+      "closed": 2,
+      "cw_pct": 4.1,
+      "revenue": 15894.0
     },
     "Unknown (Needs Review)": {
       "leads_created": 352,
@@ -78,27 +90,15 @@
     },
     "Google Ads": {
       "leads_created": 51,
-      "booked": 41,
-      "book_pct": 80.4,
+      "booked": 42,
+      "book_pct": 82.4,
       "showed": 26,
-      "show_pct": 63.4,
-      "qualified": 15,
-      "qual_pct": 57.7,
+      "show_pct": 61.9,
+      "qualified": 16,
+      "qual_pct": 61.5,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "YouTube": {
-      "leads_created": 73,
-      "booked": 50,
-      "book_pct": 68.5,
-      "showed": 28,
-      "show_pct": 56.0,
-      "qualified": 27,
-      "qual_pct": 96.4,
-      "closed": 8,
-      "cw_pct": 16.0,
-      "revenue": 55467.0
     },
     "Mike Newsletter": {
       "leads_created": 1,
