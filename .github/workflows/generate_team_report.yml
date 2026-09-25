@@ -1,0 +1,53 @@
+name: Generate Team Performance Report
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: "Week start date (YYYY-MM-DD) — any weekday"
+        required: true
+        type: string
+      end_date:
+        description: "Week end date (YYYY-MM-DD) — must be start + 6 days"
+        required: true
+        type: string
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    env:
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch data and generate CSV
+        env:
+          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+        run: |
+          python3 -u generate_team_report.py \
+            --start ${{ github.event.inputs.start_date }} \
+            --end   ${{ github.event.inputs.end_date }}
+
+      - name: Commit and push CSV
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/
+          git diff --staged --quiet || \
+            git commit -m "Team performance CSV: ${{ github.event.inputs.start_date }} → ${{ github.event.inputs.end_date }}"
+          git pull --rebase --strategy-option=ours
+          git push
