@@ -27,7 +27,14 @@ EXCLUDED_LEAD_STATUS_IDS = {
     "stat_hWIGHjzyNpl4YjIFSFz3VK4fp2ny10SFJLKAihmo4KT",
     "stat_YV4ZngDB4IGjLjlOf0YTFEWuKZJ6fhNxVkzQkvKYfdB",
 }
+# Kept in sync with EXCLUDED_CLOSER_USER_IDS in fetch_and_build.py
 EXCLUDED_WON_USER_IDS = {
+    "user_yRF070m26JE67J6CJqzkAB3IqY7btNm1K5RisCglKa6",  # Ahmad Bukhari
+    "user_5cZRqXu8kb4O1IeBVA98UMcMEhYZUhx1fnCHfSL0YMV",  # Stephen Olivas
+    "user_4sfuKGMbv0LQZ4hpS8ipASv406kKTSNP5Xx79jOwSqM",  # Spencer Reynolds
+    "user_SGISGe3kE7zhSm7LQgZ0Vrt7DKz5RVZ0JzFkI4S8llS",  # Mallory Kent
+    "user_1BdSGJ3dJ8llCciTSwvV9X8vHpBq2rHp4meX7Wlzsh0",  # Adam Wolfe
+    # Legacy IDs from the original list (don't match any active user) — kept so nothing previously excluded comes back
     "user_3mOVGlSt7OC8FTOk4lsF6EGqPiTBRPrFqEdaqcfj8Pw",
     "user_5KQyMhFRJxMf4OilHxLr4I2HbdXFvTBaqHoXkzW7PqW",
     "user_w7DG4aSzvFCOPrbJXODJIimGmq4Tqn0nSVDXn2FtZuQ",
