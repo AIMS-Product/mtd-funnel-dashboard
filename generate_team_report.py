@@ -26,10 +26,14 @@ Metric definitions
   Qualified   Booked leads with Qualified (Opp) = Yes
   Closed Won  Sales-pipeline opps with date_won in the window (per opp)
   Revenue     Sum of won opp value (cents ÷ 100)
-  Pipeline    Qualified booked-in-window leads owned by a CLOSER that are still
-              open at run time (lead status not Lost / Canceled / Outside US /
-              Closed-Won, no won sales opp, and not every sales opp lost)
-              × PIPELINE_VALUE_PER_OPP
+  Pipeline    Same basis as the Sales Manager Dashboard scorecard ("open leads"):
+              ALL leads with Lead Owner = a closer AND Qualified (Opp) = Yes,
+              excluding lead status Lost / Canceled (by Lead) / Outside the US /
+              Closed-Won and any lead with a won Sales-pipeline opp.
+              × PIPELINE_VALUE_PER_OPP × PIPELINE_WEIGHT (20%). Point-in-time
+              snapshot at run time — NOT limited to the report window.
+  Revenue Goal  Volume-based: Booked × GOAL_CLOSE_RATE_NET (13%) ×
+                REVENUE_GOAL_AVG_DEAL ($7,000). Applied to the team and each rep.
   Show Rate               Showed ÷ Booked
   Close Rate (Net)        Closed Won ÷ Booked
   Close Rate (Qualified)  Closed Won ÷ Qualified
@@ -58,15 +62,25 @@ from generate_report import (
 )
 
 # ── Goals (weekly, team) ──────────────────────────────────────────────────────
-GOAL_REVENUE          = 182_000
+# Revenue goal is volume-based (Joe): Booked × 13% × $7,000
+# e.g. 150 booked → 19.5 deals × $7,000 = $136,500
+REVENUE_GOAL_AVG_DEAL = 7_000
 GOAL_PIPELINE         = 840_000
 GOAL_SHOW_RATE        = 0.65
 GOAL_CLOSE_RATE_NET   = 0.13   # Closed ÷ Booked (net)
 GOAL_CLOSE_RATE_QUAL  = 0.20   # Closed ÷ Qualified
 
-PIPELINE_VALUE_PER_OPP = 7_500  # "× 7.5" → $7,500 per open qualified opp
+PIPELINE_VALUE_PER_OPP = 7_000  # $7,000 per open qualified opp (same avg deal as the revenue goal)
+PIPELINE_WEIGHT        = 0.20   # Pipeline = 20% of gross (goal is set on the same 20% basis)
 
-# ── Closer roster (keep in sync with rep-dashboard REP_QUOTAS) ────────────────
+def revenue_goal(booked):
+    return booked * GOAL_CLOSE_RATE_NET * REVENUE_GOAL_AVG_DEAL
+
+def weighted_pipeline(open_opps):
+    return open_opps * PIPELINE_VALUE_PER_OPP * PIPELINE_WEIGHT
+
+# ── Closer roster (rep-dashboard REP_QUOTAS + Joe Dysert, who also takes calls
+#    and closes deals) — everyone here gets a rep row and counts toward Pipeline ─
 CLOSERS = [
     "Christian Hartwell",
     "Scott Seymour",
@@ -77,6 +91,7 @@ CLOSERS = [
     "Luke Herman",
     "Ariella Irvine",
     "Oscar Pugh",
+    "Joe Dysert",
 ]
 OTHER_ROW = "Other / Non-Closer"
 
@@ -89,16 +104,10 @@ CF_LEAD_OWNER = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"
 
 STAT_LEAD_LOST       = "stat_aR2jBa8YnTNZmHAnPsnlQuinBdaXpSBCkZGP3UvoBlV"
 STAT_LEAD_CLOSED_WON = "stat_0oW3iRpVp9z5DJq0cuwI1HgR0XhHAhykEPPIq4TFsxd"
-# Lead statuses that remove a qualified lead from Pipeline
+# Lead statuses that remove a qualified lead from Pipeline — matches
+# CLOSED_LEAD_STATUSES in sales-manager-dashboard/scripts/fetch_data.py
 PIPELINE_EXCLUDED_LEAD_STATUSES = EXCLUDED_LEAD_STATUS_IDS | {
     STAT_LEAD_LOST, STAT_LEAD_CLOSED_WON,
-}
-# Sales-pipeline opp statuses treated as closed-lost (fallback when an opp
-# has no status_type): Lost, Outside the US, No Show
-LOST_OPP_STATUS_IDS = {
-    "stat_bBWcww9IflskaleadKuK2E4SGFF4qy3IuBucrqo7H4u",
-    "stat_E9LE4YrRUQvQIIs7GoaWA4eOFqzs1GtsoV4qKWmvbYN",
-    "stat_NCXVjokjo3VXirJx2eSAcRoKlEDg1WsO1sjeLfU8udO",
 }
 
 close_get = gr.close_get
@@ -151,22 +160,32 @@ def resolve_owner(raw, user_map):
 def bucket(name):
     return name if name in CLOSERS else OTHER_ROW
 
-def is_open_for_pipeline(lead):
-    """Qualified lead still open: not Lost/Canceled/Outside US/Closed-Won,
-    no won sales opp, and not every sales opp closed-lost."""
-    if lead.get("status_id") in PIPELINE_EXCLUDED_LEAD_STATUSES:
-        return False, "closed lead status"
-    sales_opps = [o for o in (lead.get("opportunities") or [])
-                  if o.get("pipeline_id") == PIPE_SALES]
-    for o in sales_opps:
-        if o.get("status_type") == "won" or o.get("status_id") == STAT_WON:
-            return False, "has won opp"
-    if sales_opps and all(
-        o.get("status_type") == "lost" or o.get("status_id") in LOST_OPP_STATUS_IDS
-        for o in sales_opps
-    ):
-        return False, "all sales opps lost"
-    return True, ""
+def fetch_open_qualified_by_closer():
+    """Open qualified book per closer — same query and exclusions as
+    fetch_open_leads_per_rep() in the Sales Manager Dashboard scorecard."""
+    counts, dropped = {}, {"closed lead status": 0, "has won opp": 0}
+    print("Fetching open qualified pipeline per closer...", flush=True)
+    for rep_name in CLOSERS:
+        n, skip = 0, 0
+        while True:
+            data = close_get("lead/", {
+                "query":   f'"Lead Owner":"{rep_name}" "Qualified (Opp)":"Yes"',
+                "_fields": "id,status_id,opportunities",
+                "_limit":  200, "_skip": skip,
+            })
+            for lead in data.get("data", []):
+                if lead.get("status_id") in PIPELINE_EXCLUDED_LEAD_STATUSES:
+                    dropped["closed lead status"] += 1; continue
+                if any(o.get("pipeline_id") == PIPE_SALES and o.get("status_id") == STAT_WON
+                       for o in (lead.get("opportunities") or [])):
+                    dropped["has won opp"] += 1; continue
+                n += 1
+            if not data.get("has_more"):
+                break
+            skip += 200
+        counts[rep_name] = n
+    print(f"  Open qualified leads: {sum(counts.values())} across {len(counts)} closers", flush=True)
+    return counts, dropped
 
 
 # ── Fetch ─────────────────────────────────────────────────────────────────────
@@ -174,7 +193,7 @@ def fetch_booked_leads(start_date, end_date):
     s, e = start_date.isoformat(), end_date.isoformat()
     query = f'custom.{CF_FIRST_SALES} >= "{s}" AND custom.{CF_FIRST_SALES} <= "{e}"'
     fields = ",".join([
-        "id", "display_name", "status_id", "opportunities",
+        "id", "display_name", "status_id",
         f"custom.{CF_FUNNEL_NAME}", f"custom.{CF_SHOW_UP}", f"custom.{CF_QUALIFIED}",
         f"custom.{CF_BUSINESS_LINE}", f"custom.{CF_LEAD_OWNER}",
     ])
@@ -237,13 +256,11 @@ def aggregate(start_date, end_date):
             tgt["showed"] += showed
             tgt["qualified"] += qualified
 
-        if qualified and row_key != OTHER_ROW:
-            is_open, why = is_open_for_pipeline(lead)
-            if is_open:
-                reps[row_key]["qual_open"] += 1
-                team["qual_open"] += 1
-            else:
-                notes["pipeline_dropped"][why] = notes["pipeline_dropped"].get(why, 0) + 1
+    # Pipeline — open qualified book per closer (scorecard method, snapshot)
+    open_counts, notes["pipeline_dropped"] = fetch_open_qualified_by_closer()
+    for name, n in open_counts.items():
+        reps[name]["qual_open"] = n
+        team["qual_open"] += n
 
     # Closed Won / Revenue (per opp, by opp owner) — same rules as generate_report.py
     lead_cache, seen = {}, set()
@@ -310,7 +327,9 @@ def write_csv(start_date, end_date, team, reps, notes):
     start, end = start_date.isoformat(), end_date.isoformat()
     fname = out_dir / f"team_report_{start}_{end}.csv"
 
-    team_pipeline   = team["qual_open"] * PIPELINE_VALUE_PER_OPP
+    team_pipeline_gross = team["qual_open"] * PIPELINE_VALUE_PER_OPP
+    team_pipeline   = weighted_pipeline(team["qual_open"])
+    team_rev_goal   = revenue_goal(team["booked"])
     team_show       = rate(team["showed"], team["booked"])
     team_close_net  = rate(team["closed"], team["booked"])
     team_close_qual = rate(team["closed"], team["qualified"])
@@ -329,18 +348,26 @@ def write_csv(start_date, end_date, team, reps, notes):
                     f"{start_date.strftime('%B %-d')} – {end_date.strftime('%B %-d, %Y')}"])
         w.writerow(["Generated At", datetime.now(PACIFIC).strftime("%B %-d, %Y at %-I:%M %p PT")])
         w.writerow(["Pipeline Value Per Qualified Opp", fmt_currency(PIPELINE_VALUE_PER_OPP)])
+        w.writerow(["Pipeline Weight", f"{PIPELINE_WEIGHT * 100:.0f}%"])
+        w.writerow(["Pipeline Basis", "Open qualified book as of Generated At (snapshot, not limited to the week)"])
+        w.writerow(["Revenue Goal Basis",
+                    f"Booked × {GOAL_CLOSE_RATE_NET * 100:.0f}% × {fmt_currency(REVENUE_GOAL_AVG_DEAL)} "
+                    f"= {team['booked'] * GOAL_CLOSE_RATE_NET:.1f} deals × {fmt_currency(REVENUE_GOAL_AVG_DEAL)}"])
         w.writerow(["Closers", "; ".join(CLOSERS)])
         w.writerow([])
 
         # ── Top tiles ─────────────────────────────────────────────────────────
         w.writerow(["## TEAM KPI TILES"])
         w.writerow(["Tile", "Actual", "Goal", "% of Goal", "Status", "Numerator", "Denominator", "Definition"])
-        w.writerow(["Team Revenue Closed", fmt_currency(team["revenue"]), fmt_currency(GOAL_REVENUE),
-                    pct_of_goal(team["revenue"], GOAL_REVENUE), status_vs_goal(team["revenue"], GOAL_REVENUE),
-                    team["closed"], "", "Won opp value, date_won in window (deals)"])
+        w.writerow(["Team Revenue Closed", fmt_currency(team["revenue"]), fmt_currency(team_rev_goal),
+                    pct_of_goal(team["revenue"], team_rev_goal), status_vs_goal(team["revenue"], team_rev_goal),
+                    team["closed"], team["booked"],
+                    f"Won opp value in window (numerator = deals). Goal = Booked × "
+                    f"{GOAL_CLOSE_RATE_NET * 100:.0f}% × {fmt_currency(REVENUE_GOAL_AVG_DEAL)} (denominator = booked)"])
         w.writerow(["Team Pipeline", fmt_currency(team_pipeline), fmt_currency(GOAL_PIPELINE),
                     pct_of_goal(team_pipeline, GOAL_PIPELINE), status_vs_goal(team_pipeline, GOAL_PIPELINE),
-                    team["qual_open"], "", f"Open qualified opps owned by closers × {fmt_currency(PIPELINE_VALUE_PER_OPP)}"])
+                    team["qual_open"], "", f"All open qualified leads owned by closers (snapshot) × "
+                    f"{fmt_currency(PIPELINE_VALUE_PER_OPP)} × {PIPELINE_WEIGHT * 100:.0f}%"])
         w.writerow(["Team Show Rate", fmt_rate(team_show), fmt_rate(GOAL_SHOW_RATE),
                     pct_of_goal(team_show, GOAL_SHOW_RATE), status_vs_goal(team_show, GOAL_SHOW_RATE),
                     team["showed"], team["booked"], "Showed ÷ Booked"])
@@ -360,22 +387,25 @@ def write_csv(start_date, end_date, team, reps, notes):
         w.writerow(["Qualified", team["qualified"]])
         w.writerow(["Qual Rate (Qualified ÷ Showed)", fmt_rate(rate(team["qualified"], team["showed"]))])
         w.writerow(["Open Qualified Opps (Closers)", team["qual_open"]])
+        w.writerow(["Pipeline (Gross, before 20%)", fmt_currency(team_pipeline_gross)])
+        w.writerow(["Revenue Goal (Deals Needed)", f"{team['booked'] * GOAL_CLOSE_RATE_NET:.1f}"])
         w.writerow(["Closed Won", team["closed"]])
         w.writerow(["Avg Deal", fmt_currency(team["revenue"] / team["closed"]) if team["closed"] else ""])
         w.writerow([])
 
         # ── Rep breakdown ─────────────────────────────────────────────────────
         w.writerow(["## REP BREAKDOWN"])
-        w.writerow(["Rep", "Revenue", "Closed Won", "Avg Deal",
+        w.writerow(["Rep", "Revenue", "Revenue Goal", "% of Rev Goal", "Closed Won", "Avg Deal",
                     "Pipeline", "Open Qualified Opps",
                     "Booked", "Showed", "Show %", "Qualified", "Qual %",
                     "Close % (Booked → Closed, Net)", "Close % (Qualified → Closed)"])
 
         def rep_line(name, r, is_other=False):
             return [
-                name, fmt_currency(r["revenue"]), r["closed"],
+                name, fmt_currency(r["revenue"]), fmt_currency(revenue_goal(r["booked"])),
+                pct_of_goal(r["revenue"], revenue_goal(r["booked"])), r["closed"],
                 fmt_currency(r["revenue"] / r["closed"]) if r["closed"] else "",
-                "" if is_other else fmt_currency(r["qual_open"] * PIPELINE_VALUE_PER_OPP),
+                "" if is_other else fmt_currency(weighted_pipeline(r["qual_open"])),
                 "" if is_other else r["qual_open"],
                 r["booked"], r["showed"], fmt_rate(rate(r["showed"], r["booked"])),
                 r["qualified"], fmt_rate(rate(r["qualified"], r["showed"])),
@@ -426,7 +456,7 @@ def write_csv(start_date, end_date, team, reps, notes):
         w.writerow(["Booked leads excluded — LTF - Quiz Funnel", notes["excluded_funnel"]])
         w.writerow(["Booked leads with no Lead Owner (in Other row)", notes["no_owner"]])
         for why, n in sorted(notes["pipeline_dropped"].items()):
-            w.writerow([f"Closer qualified leads removed from Pipeline — {why}", n])
+            w.writerow([f"Closer qualified leads not in Pipeline — {why}", n])
         w.writerow(["Won opps excluded — excluded owner", notes["won_excluded_user"]])
         w.writerow(["Won opps excluded — business line (TLG/PPA)", notes["won_excluded_bl"]])
         w.writerow(["Won opps excluded — LTF - Quiz Funnel", notes["won_excluded_funnel"]])
