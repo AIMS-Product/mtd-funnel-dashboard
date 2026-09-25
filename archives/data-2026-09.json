@@ -2,20 +2,20 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 3805,
-    "booked": 814,
-    "showed": 434,
-    "qualified": 339,
-    "closed": 48,
+    "leads_created": 3808,
+    "booked": 812,
+    "showed": 435,
+    "qualified": 338,
+    "closed": 49,
     "revenue": 334388.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 3450,
-      "booked": 808,
-      "showed": 434,
-      "qualified": 339,
-      "closed": 47,
+      "leads_created": 3452,
+      "booked": 806,
+      "showed": 435,
+      "qualified": 338,
+      "closed": 48,
       "revenue": 328391.0
     },
     "UNCATEGORIZED": {
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Instagram": {
+      "leads_created": 115,
+      "booked": 73,
+      "book_pct": 63.5,
+      "showed": 39,
+      "show_pct": 53.4,
+      "qualified": 34,
+      "qual_pct": 87.2,
+      "closed": 4,
+      "cw_pct": 5.5,
+      "revenue": 20079.0
+    },
     "Internal Webinar": {
       "leads_created": 2952,
       "booked": 242,
@@ -51,6 +63,18 @@
       "closed": 8,
       "cw_pct": 15.1,
       "revenue": 55467.0
+    },
+    "Website": {
+      "leads_created": 27,
+      "booked": 52,
+      "book_pct": 192.6,
+      "showed": 33,
+      "show_pct": 63.5,
+      "qualified": 30,
+      "qual_pct": 90.9,
+      "closed": 2,
+      "cw_pct": 3.8,
+      "revenue": 15894.0
     },
     "Google Ads": {
       "leads_created": 51,
