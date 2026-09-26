@@ -2,8 +2,8 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 3898,
-    "booked": 809,
+    "leads_created": 3899,
+    "booked": 808,
     "showed": 450,
     "qualified": 364,
     "closed": 53,
@@ -11,8 +11,8 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 3535,
-      "booked": 805,
+      "leads_created": 3536,
+      "booked": 804,
       "showed": 450,
       "qualified": 364,
       "closed": 52,
@@ -28,8 +28,20 @@
     }
   },
   "funnels": {
+    "LTF - In-House": {
+      "leads_created": 0,
+      "booked": 6,
+      "book_pct": 0,
+      "showed": 2,
+      "show_pct": 33.3,
+      "qualified": 2,
+      "qual_pct": 100.0,
+      "closed": 2,
+      "cw_pct": 33.3,
+      "revenue": 11535.0
+    },
     "Internal Webinar": {
-      "leads_created": 3027,
+      "leads_created": 3028,
       "booked": 239,
       "book_pct": 7.9,
       "showed": 144,
@@ -123,18 +135,6 @@
       "closed": 1,
       "cw_pct": 25.0,
       "revenue": 5997.0
-    },
-    "LTF - In-House": {
-      "leads_created": 0,
-      "booked": 7,
-      "book_pct": 0,
-      "showed": 2,
-      "show_pct": 28.6,
-      "qualified": 2,
-      "qual_pct": 100.0,
-      "closed": 2,
-      "cw_pct": 28.6,
-      "revenue": 11535.0
     },
     "Mike Newsletter": {
       "leads_created": 1,
