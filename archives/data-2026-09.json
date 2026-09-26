@@ -2,19 +2,19 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 3843,
+    "leads_created": 3844,
     "booked": 807,
-    "showed": 440,
-    "qualified": 346,
+    "showed": 441,
+    "qualified": 348,
     "closed": 53,
     "revenue": 367467.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 3485,
+      "leads_created": 3486,
       "booked": 802,
-      "showed": 440,
-      "qualified": 346,
+      "showed": 441,
+      "qualified": 348,
       "closed": 52,
       "revenue": 361470.0
     },
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 2985,
+      "booked": 236,
+      "book_pct": 7.9,
+      "showed": 137,
+      "show_pct": 58.1,
+      "qualified": 101,
+      "qual_pct": 73.7,
+      "closed": 6,
+      "cw_pct": 2.5,
+      "revenue": 46988.0
+    },
     "Unknown (Needs Review)": {
       "leads_created": 358,
       "booked": 5,
@@ -52,40 +64,28 @@
       "cw_pct": 0.0,
       "revenue": 0.0
     },
-    "Internal Webinar": {
-      "leads_created": 2984,
-      "booked": 238,
-      "book_pct": 8.0,
-      "showed": 138,
-      "show_pct": 58.0,
-      "qualified": 101,
-      "qual_pct": 73.2,
-      "closed": 6,
-      "cw_pct": 2.5,
-      "revenue": 46988.0
-    },
     "YouTube": {
       "leads_created": 76,
-      "booked": 57,
-      "book_pct": 75.0,
-      "showed": 34,
-      "show_pct": 59.6,
-      "qualified": 34,
+      "booked": 58,
+      "book_pct": 76.3,
+      "showed": 35,
+      "show_pct": 60.3,
+      "qualified": 35,
       "qual_pct": 100.0,
       "closed": 8,
-      "cw_pct": 14.0,
+      "cw_pct": 13.8,
       "revenue": 55467.0
     },
     "Instagram": {
       "leads_created": 114,
-      "booked": 70,
-      "book_pct": 61.4,
-      "showed": 39,
-      "show_pct": 55.7,
-      "qualified": 32,
-      "qual_pct": 82.1,
+      "booked": 71,
+      "book_pct": 62.3,
+      "showed": 40,
+      "show_pct": 56.3,
+      "qualified": 33,
+      "qual_pct": 82.5,
       "closed": 4,
-      "cw_pct": 5.7,
+      "cw_pct": 5.6,
       "revenue": 20079.0
     },
     "WWWS": {
