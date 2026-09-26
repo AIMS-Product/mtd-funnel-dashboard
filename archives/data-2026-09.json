@@ -2,7 +2,7 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 3884,
+    "leads_created": 3890,
     "booked": 813,
     "showed": 443,
     "qualified": 352,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 3522,
+      "leads_created": 3527,
       "booked": 808,
       "showed": 443,
       "qualified": 352,
@@ -19,7 +19,7 @@
       "revenue": 361470.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 362,
+      "leads_created": 363,
       "booked": 5,
       "showed": 0,
       "qualified": 0,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 3020,
+      "booked": 242,
+      "book_pct": 8.0,
+      "showed": 140,
+      "show_pct": 57.9,
+      "qualified": 103,
+      "qual_pct": 73.6,
+      "closed": 6,
+      "cw_pct": 2.5,
+      "revenue": 46988.0
+    },
     "Instagram": {
       "leads_created": 116,
       "booked": 72,
@@ -40,22 +52,10 @@
       "cw_pct": 5.6,
       "revenue": 20079.0
     },
-    "Internal Webinar": {
-      "leads_created": 3016,
-      "booked": 242,
-      "book_pct": 8.0,
-      "showed": 140,
-      "show_pct": 57.9,
-      "qualified": 103,
-      "qual_pct": 73.6,
-      "closed": 6,
-      "cw_pct": 2.5,
-      "revenue": 46988.0
-    },
     "Google Ads": {
-      "leads_created": 52,
+      "leads_created": 51,
       "booked": 40,
-      "book_pct": 76.9,
+      "book_pct": 78.4,
       "showed": 26,
       "show_pct": 65.0,
       "qualified": 17,
@@ -77,7 +77,7 @@
       "revenue": 55467.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 362,
+      "leads_created": 363,
       "booked": 5,
       "book_pct": 1.4,
       "showed": 0,
@@ -173,9 +173,9 @@
       "revenue": 0.0
     },
     "Reactivation Scrapers": {
-      "leads_created": 162,
+      "leads_created": 164,
       "booked": 325,
-      "book_pct": 200.6,
+      "book_pct": 198.2,
       "showed": 157,
       "show_pct": 48.3,
       "qualified": 122,
