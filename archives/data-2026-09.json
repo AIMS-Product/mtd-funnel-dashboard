@@ -28,41 +28,41 @@
     }
   },
   "funnels": {
-    "VSL": {
-      "leads_created": 5,
-      "booked": 1,
-      "book_pct": 20.0,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
+    "YouTube": {
+      "leads_created": 87,
+      "booked": 64,
+      "book_pct": 73.6,
+      "showed": 35,
+      "show_pct": 54.7,
+      "qualified": 35,
+      "qual_pct": 100.0,
+      "closed": 8,
+      "cw_pct": 12.5,
+      "revenue": 55467.0
+    },
+    "LTF - In-House": {
+      "leads_created": 0,
+      "booked": 6,
+      "book_pct": 0,
+      "showed": 2,
+      "show_pct": 33.3,
+      "qualified": 1,
+      "qual_pct": 50.0,
+      "closed": 2,
+      "cw_pct": 33.3,
+      "revenue": 11535.0
     },
     "Internal Webinar": {
-      "leads_created": 3126,
-      "booked": 263,
-      "book_pct": 8.4,
-      "showed": 157,
-      "show_pct": 59.7,
-      "qualified": 114,
-      "qual_pct": 72.6,
+      "leads_created": 3133,
+      "booked": 268,
+      "book_pct": 8.6,
+      "showed": 156,
+      "show_pct": 58.2,
+      "qualified": 113,
+      "qual_pct": 72.4,
       "closed": 6,
-      "cw_pct": 2.3,
+      "cw_pct": 2.2,
       "revenue": 46988.0
-    },
-    "Unknown (Needs Review)": {
-      "leads_created": 369,
-      "booked": 6,
-      "book_pct": 1.6,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0,
-      "closed": 1,
-      "cw_pct": 16.7,
-      "revenue": 5997.0
     },
     "Website": {
       "leads_created": 29,
@@ -148,18 +148,6 @@
       "cw_pct": 0.0,
       "revenue": 0.0
     },
-    "LTF - In-House": {
-      "leads_created": 0,
-      "booked": 7,
-      "book_pct": 0,
-      "showed": 3,
-      "show_pct": 42.9,
-      "qualified": 2,
-      "qual_pct": 66.7,
-      "closed": 2,
-      "cw_pct": 28.6,
-      "revenue": 11535.0
-    },
     "Mike Newsletter": {
       "leads_created": 1,
       "booked": 4,
@@ -209,11 +197,11 @@
       "revenue": 0.0
     },
     "Reactivation Scrapers": {
-      "leads_created": 169,
-      "booked": 347,
-      "book_pct": 205.3,
+      "leads_created": 168,
+      "booked": 346,
+      "book_pct": 206.0,
       "showed": 168,
-      "show_pct": 48.4,
+      "show_pct": 48.6,
       "qualified": 126,
       "qual_pct": 75.0,
       "closed": 29,
