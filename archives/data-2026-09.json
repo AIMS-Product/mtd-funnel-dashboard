@@ -2,24 +2,24 @@
   "month_key": "2026-09",
   "month_label": "September 2026",
   "grand": {
-    "leads_created": 4100,
-    "booked": 895,
-    "showed": 476,
-    "qualified": 365,
+    "leads_created": 4104,
+    "booked": 889,
+    "showed": 474,
+    "qualified": 363,
     "closed": 53,
     "revenue": 367467.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 3728,
-      "booked": 889,
-      "showed": 476,
-      "qualified": 365,
+      "leads_created": 3729,
+      "booked": 883,
+      "showed": 474,
+      "qualified": 363,
       "closed": 52,
       "revenue": 361470.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 372,
+      "leads_created": 375,
       "booked": 6,
       "showed": 0,
       "qualified": 0,
@@ -28,53 +28,17 @@
     }
   },
   "funnels": {
-    "Internal Webinar": {
-      "leads_created": 3183,
-      "booked": 276,
-      "book_pct": 8.7,
-      "showed": 152,
-      "show_pct": 55.1,
-      "qualified": 108,
-      "qual_pct": 71.1,
-      "closed": 6,
-      "cw_pct": 2.2,
-      "revenue": 46988.0
-    },
-    "LTF - In-House": {
-      "leads_created": 0,
-      "booked": 9,
-      "book_pct": 0,
-      "showed": 4,
-      "show_pct": 44.4,
-      "qualified": 2,
-      "qual_pct": 50.0,
+    "Website": {
+      "leads_created": 30,
+      "booked": 52,
+      "book_pct": 173.3,
+      "showed": 30,
+      "show_pct": 57.7,
+      "qualified": 28,
+      "qual_pct": 93.3,
       "closed": 2,
-      "cw_pct": 22.2,
-      "revenue": 11535.0
-    },
-    "YouTube": {
-      "leads_created": 89,
-      "booked": 63,
-      "book_pct": 70.8,
-      "showed": 33,
-      "show_pct": 52.4,
-      "qualified": 34,
-      "qual_pct": 103.0,
-      "closed": 8,
-      "cw_pct": 12.7,
-      "revenue": 55467.0
-    },
-    "Instagram": {
-      "leads_created": 120,
-      "booked": 80,
-      "book_pct": 66.7,
-      "showed": 46,
-      "show_pct": 57.5,
-      "qualified": 38,
-      "qual_pct": 82.6,
-      "closed": 4,
-      "cw_pct": 5.0,
-      "revenue": 20079.0
+      "cw_pct": 3.8,
+      "revenue": 15894.0
     },
     "VSL": {
       "leads_created": 4,
@@ -87,6 +51,66 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
+    },
+    "LTF - In-House": {
+      "leads_created": 0,
+      "booked": 8,
+      "book_pct": 0,
+      "showed": 4,
+      "show_pct": 50.0,
+      "qualified": 2,
+      "qual_pct": 50.0,
+      "closed": 2,
+      "cw_pct": 25.0,
+      "revenue": 11535.0
+    },
+    "Google Ads": {
+      "leads_created": 56,
+      "booked": 42,
+      "book_pct": 75.0,
+      "showed": 28,
+      "show_pct": 66.7,
+      "qualified": 17,
+      "qual_pct": 60.7,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Internal Webinar": {
+      "leads_created": 3184,
+      "booked": 273,
+      "book_pct": 8.6,
+      "showed": 150,
+      "show_pct": 54.9,
+      "qualified": 106,
+      "qual_pct": 70.7,
+      "closed": 6,
+      "cw_pct": 2.2,
+      "revenue": 46988.0
+    },
+    "Instagram": {
+      "leads_created": 120,
+      "booked": 81,
+      "book_pct": 67.5,
+      "showed": 47,
+      "show_pct": 58.0,
+      "qualified": 39,
+      "qual_pct": 83.0,
+      "closed": 4,
+      "cw_pct": 4.9,
+      "revenue": 20079.0
+    },
+    "YouTube": {
+      "leads_created": 89,
+      "booked": 62,
+      "book_pct": 69.7,
+      "showed": 33,
+      "show_pct": 53.2,
+      "qualified": 35,
+      "qual_pct": 106.1,
+      "closed": 8,
+      "cw_pct": 12.9,
+      "revenue": 55467.0
     },
     "Mike Newsletter": {
       "leads_created": 1,
@@ -101,7 +125,7 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 372,
+      "leads_created": 375,
       "booked": 6,
       "book_pct": 1.6,
       "showed": 0,
@@ -152,8 +176,8 @@
       "leads_created": 174,
       "booked": 347,
       "book_pct": 199.4,
-      "showed": 168,
-      "show_pct": 48.4,
+      "showed": 169,
+      "show_pct": 48.7,
       "qualified": 126,
       "qual_pct": 74.6,
       "closed": 29,
