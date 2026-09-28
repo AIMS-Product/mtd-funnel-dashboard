@@ -1670,6 +1670,48 @@ def write_nav_json(live_month, archive_months):
     print(f"Written: {nav_path}", flush=True)
 
 
+def save_weekly_data_json(data, week_monday_str):
+    """
+    Save weekly funnel totals as archives/data-week-YYYY-MM-DD.json.
+    Consumed by the Sales Manager Dashboard to align its Team Totals
+    with the MTD Funnel Dashboard's numbers exactly.
+    """
+    ARCHIVES_DIR.mkdir(exist_ok=True)
+    g = data["grand"]
+    export = {
+        "week_key":    week_monday_str,
+        "month_label": data["month_label"],
+        "generated_at": data["generated_at"],
+        "grand": {
+            "leads_created": g.get("leads_created", 0),
+            "booked":    g["booked"],
+            "showed":    g["showed"],
+            "qualified": g["qualified"],
+            "closed":    g["closed"],
+            "revenue":   g["revenue"],
+        },
+        "funnels": {},
+    }
+    for funnel, totals in data["funnel_totals"].items():
+        bo  = totals.get("booked", 0)
+        sh  = totals.get("showed", 0)
+        qu  = totals.get("qualified", 0)
+        cl  = totals.get("closed", 0)
+        rev = totals.get("revenue", 0.0)
+        export["funnels"][funnel] = {
+            "booked":    bo,
+            "showed":    sh,
+            "qualified": qu,
+            "closed":    cl,
+            "revenue":   rev,
+        }
+    fname = f"data-week-{week_monday_str}.json"
+    path  = ARCHIVES_DIR / fname
+    with open(path, "w") as f:
+        json.dump(export, f, indent=2)
+    print(f"Written: {path}", flush=True)
+
+
 def save_data_json(data, month_key):
     """
     Save funnel data as archives/data-YYYY-MM.json (or data-current.json for live month).
@@ -1956,6 +1998,7 @@ if __name__ == "__main__":
                                          is_current_month=(month_key == live_month))
         write_dashboard(data, out_path, month_picker, week_picker,
                         is_archive_page=True, is_week_page=True)
+        save_weekly_data_json(data, args.week)
 
     # ── MODE: Regular live run — build index.html + week-current.html ─────────
     else:
@@ -1997,6 +2040,7 @@ if __name__ == "__main__":
         write_dashboard(data_week, ARCHIVES_DIR / "week-current.html",
                         month_picker_cur, week_picker_cur,
                         is_archive_page=False, is_week_page=True)
+        save_weekly_data_json(data_week, w_monday.strftime("%Y-%m-%d"))
 
     # ── Always write nav.json and picker.js so client-side pickers stay current
     archive_months = scan_monthly_archives()  # re-scan in case we just wrote a new archive
