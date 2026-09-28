@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "VSL": {
+      "leads_created": 5,
+      "booked": 1,
+      "book_pct": 20.0,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Internal Webinar": {
       "leads_created": 3126,
       "booked": 263,
@@ -81,11 +93,11 @@
       "booked": 78,
       "book_pct": 65.0,
       "showed": 47,
-      "show_pct": 60.3,
+      "show_pct": 58.8,
       "qualified": 40,
       "qual_pct": 85.1,
       "closed": 4,
-      "cw_pct": 5.1,
+      "cw_pct": 5.0,
       "revenue": 20079.0
     },
     "Google Ads": {
@@ -120,18 +132,6 @@
       "show_pct": 100.0,
       "qualified": 4,
       "qual_pct": 100.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "VSL": {
-      "leads_created": 5,
-      "booked": 2,
-      "book_pct": 40.0,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
@@ -173,11 +173,11 @@
       "revenue": 0.0
     },
     "Reactivation Scrapers": {
-      "leads_created": 167,
-      "booked": 345,
-      "book_pct": 206.6,
+      "leads_created": 169,
+      "booked": 347,
+      "book_pct": 205.3,
       "showed": 168,
-      "show_pct": 48.7,
+      "show_pct": 48.4,
       "qualified": 126,
       "qual_pct": 75.0,
       "closed": 29,
