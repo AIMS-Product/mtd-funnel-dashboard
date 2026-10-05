@@ -54,54 +54,19 @@ CF_FIRST_SALES_CALL = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"  # First 
 CF_FIRST_SALES    = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"            # First Sales Call Booked Date (lead)
 CF_SETTER_NAME    = "cf_vz6kNiu4ItFxRA8Y9HKlWIoQMq3TsdaQqKekQ2YuxVk"           # Reactivation - Setter Name (lead)
 CF_BUSINESS_LINE  = "cf_aJlNlilQZIgLLuhcymNN8fiOzewnFxrbWjLZFPmsucO"           # BTC Business Line (lead)
+CF_LEAD_OWNER    = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"  # Lead Owner (lead)
+
+# Match the rep scorecard's Lane 1 roster plus Joe Dysert.
+SCORECARD_BOOKING_OWNERS = {
+    "Ariella Irvine", "Christian Hartwell", "Eric Piccione", "Joe Dysert",
+    "Joe Vaughan", "Luke Herman", "Oscar Pugh", "Robin Perkins",
+    "Scott Seymour", "Shreya Bechra",
+}
 
 # Funnels that use utm_content instead of utm_campaign for sub-breakdown
 UTM_CONTENT_FUNNELS = {"Internal Webinar"}
 # Funnels that use Setter Name field instead of UTM for sub-breakdown
 SETTER_NAME_FUNNELS = {"Reactivation Scrapers"}
-
-# Reactivation Scrapers title-prefix methodology (see reactivation-scrapers-booked-meetings-methodology.md)
-REACTIVATION_SCRAPERS_FUNNEL = "Reactivation Scrapers"
-# Detection + attribution: exact title-pattern matching against the known Next
-# Steps calendar-link titles, mirrored from AIMS-Product/close-first-sales-meeting's
-# update_field.py (2026-09-11). Each pattern is paired with the closer whose
-# Calendly link produces that title — a meeting is a Next Steps meeting iff its
-# title matches one of these patterns, and the scraper credited for booking it
-# is the paired name, not the lead's Reactivation - Setter Name field (title-based
-# attribution is more accurate per-meeting than the lead-level field).
-NEXT_STEPS_TITLE_PATTERNS = [
-    (re.compile(r"vendingpren[eu]+rs?\s+-\s+next\s+steps\s+call", re.IGNORECASE),     "Charlie Ingram"),
-    (re.compile(r"vendingpren[eu]+rs?\s+call\s+-\s+next\s+steps", re.IGNORECASE),     "Jacob Hepner"),
-    (re.compile(r"vendingpren[eu]+rs?\s+next\s+steps\s+call", re.IGNORECASE),         "Vince Bartolini"),
-    (re.compile(r"vendingpren[eu]+rs?\s+next\s+steps\s+session", re.IGNORECASE),      "Pearl Sathekge"),
-    (re.compile(r"vendingpren[eu]+rs?\s+discovery\s+-\s+next\s+steps", re.IGNORECASE), "Kelly Schrader"),
-    (re.compile(r"vendingpren[eu]+rs?\s+-\s+next\s+steps(?!\s+call)", re.IGNORECASE), "Jacob Herbig"),
-    (re.compile(r"vendingpren[eu]+r\s+next\s+steps", re.IGNORECASE),                  "William Nowak"),
-    (re.compile(r"vending\s+discovery\s+call\s+-\s+next\s+steps", re.IGNORECASE),     "August Young"),
-    (re.compile(r"vending\s+discovery\s+-\s+next\s+steps", re.IGNORECASE),            "Spencer Reynolds"),
-    (re.compile(r"vendingpren[eu]+rs?\s+strategy\s*-?\s*next\s+steps", re.IGNORECASE), "Amy Mulch"),
-    (re.compile(r"vending\s+opportunity\s*-?\s*next\s+steps", re.IGNORECASE),          "Cassie Caraballo"),
-    (re.compile(r"vendingpren[eu]+rs?\s+connect\s*-?\s*next\s+steps", re.IGNORECASE),  "Jessica Zatkin"),
-    (re.compile(r"vending\s+success\s*-?\s*next\s+steps", re.IGNORECASE),              "Abigail Garza"),
-    (re.compile(r"vendingpren[eu]+rs?\s+momentum\s*-?\s*next\s+steps", re.IGNORECASE), "Connor George"),
-    (re.compile(r"vendingpren[eu]+rs?\s+launch\s*-?\s*next\s+steps", re.IGNORECASE),   "Dana Lesiuk"),
-    (re.compile(r"vendingpren[eu]+rs?\s+pathway\s*-?\s*next\s+steps", re.IGNORECASE),  "Naria Torres"),
-    (re.compile(r"vendingpren[eu]+rs?\s+blueprint\s*-?\s*next\s+steps", re.IGNORECASE), "Melia King"),
-    (re.compile(r"vendingpren[eu]+rs?\s+compass\s*-?\s*next\s+steps", re.IGNORECASE),  "Josh Stoffel"),
-    (re.compile(r"vendingpren[eu]+rs?\s+horizon\s*-?\s*next\s+steps", re.IGNORECASE),  "Beatrice Braescu Cojocaru"),
-    (re.compile(r"vendingpren[eu]+rs?\s+elevate\s*-?\s*next\s+steps", re.IGNORECASE),  "Catalina"),
-    (re.compile(r"vendingpren[eu]+rs?\s+catalyst\s*-?\s*next\s+steps", re.IGNORECASE), "Raiya"),
-    (re.compile(r"vendingpren[eu]+rs?\s+clarity\s*-?\s*next\s+steps", re.IGNORECASE),  "Luna"),
-]
-
-def match_next_steps_setter(title):
-    """Return the scraper name credited for this title (via calendar-link pattern),
-    or None if the title doesn't match any known Next Steps calendar link."""
-    for pattern, setter in NEXT_STEPS_TITLE_PATTERNS:
-        if pattern.search(title):
-            return setter
-    return None
-COMPLETED_MEETING_OUTCOME_ID = "outcome_032Djn4dfeNuEoCunojA7K"  # native Close outcome
 
 CLOSED_WON_STATUS_ID    = "stat_0oW3iRpVp9z5DJq0cuwI1HgR0XhHAhykEPPIq4TFsxd"
 WEEKLY_FEATURE_START    = "2026-04"  # Weeks only available for this month and later
@@ -131,6 +96,34 @@ def is_excluded_business_line(lead):
         raw = raw[0] if raw else None
     val = str(raw).strip() if raw else ""
     return val in EXCLUDED_BUSINESS_LINES
+
+def fetch_user_names():
+    """Return Close user ID -> normalized full name, as used by the rep scorecard."""
+    users, skip = {}, 0
+    while True:
+        data = close_get("user/", {"_skip": skip, "_limit": 100})
+        for user in data.get("data", []):
+            full_name = " ".join(f"{user.get('first_name', '')} {user.get('last_name', '')}".split())
+            if user.get("id") and full_name:
+                users[user["id"]] = full_name
+        if not data.get("has_more"):
+            break
+        skip += 100
+    return users
+
+def is_scorecard_booking_owner(lead, user_names):
+    """True when the lead owner resolves to the scorecard's Lane 1 + manager roster."""
+    raw = lead.get(f"custom.{CF_LEAD_OWNER}")
+    if raw is None:
+        raw = lead.get("custom", {}).get(CF_LEAD_OWNER)
+    if isinstance(raw, list):
+        raw = raw[0] if raw else None
+    if isinstance(raw, dict):
+        owner = raw.get("name") or user_names.get(raw.get("id"), "")
+    else:
+        value = " ".join(str(raw or "").split())
+        owner = user_names.get(value, value)
+    return owner in SCORECARD_BOOKING_OWNERS
 
 # Excluded from closed-won revenue — matches rep dashboard user exclusions
 EXCLUDED_CLOSER_USER_IDS = {
@@ -339,7 +332,8 @@ def fetch_leads_by_booked_date(start_date, end_date):
                         f"custom.{CF_PROGRAM_TIER},"
                         f"custom.{CF_VENDHUB_PLAN},"
                         f"custom.{CF_SETTER_NAME},"
-                        f"custom.{CF_BUSINESS_LINE}"),
+                        f"custom.{CF_BUSINESS_LINE},"
+                        f"custom.{CF_LEAD_OWNER}"),
             "_limit":  200,
             "_skip":   skip,
         })
@@ -348,7 +342,7 @@ def fetch_leads_by_booked_date(start_date, end_date):
         print(f"  Fetched {len(leads)} leads so far...", flush=True)
         if not data.get("has_more"):
             break
-        skip += 100
+        skip += 200
 
     print(f"  Total booked leads: {len(leads)}", flush=True)
     return leads
@@ -391,63 +385,6 @@ def fetch_leads_created(start_date, end_date):
     return leads
 
 
-# ── Reactivation Scrapers Meeting Fetch (title-prefix methodology) ────────────
-
-def fetch_reactivation_scraper_meetings(start_date, end_date):
-    """
-    Fetch Next Steps meetings for Reactivation Scrapers.
-    Detection + attribution: exact match against NEXT_STEPS_TITLE_PATTERNS —
-    each matched title carries its paired scraper name straight from the title,
-    not from the lead's Reactivation - Setter Name field.
-
-    Close API: "activity/meeting" (no trailing slash), no date filters supported.
-    No cutoff — page through ALL meetings and filter starts_at client-side.
-    Mirrors Call Capacity dashboard which also pages through all meetings.
-    """
-    starts_min = datetime(start_date.year, start_date.month, start_date.day,
-                          0, 0, 0, tzinfo=PACIFIC)
-    starts_max = datetime(end_date.year, end_date.month, end_date.day,
-                          23, 59, 59, tzinfo=PACIFIC)
-
-    print(f"Fetching RS Next Steps meetings ({start_date} → {end_date})...", flush=True)
-    results, scanned, skip = [], 0, 0
-    while True:
-        data = close_get("activity/meeting", {
-            "_limit": 100,
-            "_skip":  skip,
-        })
-        batch = data.get("data", [])
-        if not batch:
-            break
-        for m in batch:
-            scanned += 1
-            starts_raw = m.get("starts_at") or ""
-            if not starts_raw:
-                continue
-            try:
-                starts_dt = datetime.fromisoformat(
-                    starts_raw.replace("Z", "+00:00")
-                ).astimezone(PACIFIC)
-            except Exception:
-                continue
-            if not (starts_min <= starts_dt <= starts_max):
-                continue
-            title = (m.get("title") or "").strip()
-            setter = match_next_steps_setter(title)
-            if setter is None:
-                continue
-            results.append({"lead_id": m["lead_id"], "starts_at": starts_raw, "setter": setter})
-
-        if not data.get("has_more"):
-            break
-        skip += 100
-        if scanned % 500 == 0:
-            print(f"  Scanned {scanned} meetings...", flush=True)
-
-    print(f"  RS Next Steps meetings found: {len(results)} (scanned {scanned} total)", flush=True)
-    return results
-
-
 # ── Main Aggregation ───────────────────────────────────────────────────────────
 
 def _is_yes(val):
@@ -485,11 +422,9 @@ def aggregate_data(start_date, end_date, month_label,
 
     # Fetch booked leads via First Sales Call Booked Date field
     booked_leads = fetch_leads_by_booked_date(start_date, end_date)
+    user_names = fetch_user_names()
 
     meeting_rows  = []
-    rs_lead_cache = {}  # lead_id → {showed, qualified} for RS title-prefix lookup
-                        # (attribution comes from the meeting title, not this cache)
-
     for lead in booked_leads:
         lid = lead.get("id")
         if not lid:
@@ -499,16 +434,9 @@ def aggregate_data(start_date, end_date, month_label,
             continue
         if is_excluded_business_line(lead):
             continue
+        if not is_scorecard_booking_owner(lead, user_names):
+            continue
         funnel = get_funnel_name(lead)
-
-        # Reactivation Scrapers: cache showed/qualified for title-prefix path below;
-        # do NOT count as booked via FSCBD — the title-prefix method replaces it.
-        if funnel == REACTIVATION_SCRAPERS_FUNNEL:
-            rs_lead_cache[lid] = {
-                "showed":    _is_yes(lead.get(f"custom.{CF_SHOW_UP}")),
-                "qualified": _is_yes(lead.get(f"custom.{CF_QUALIFIED}")),
-            }
-            continue  # skip FSCBD booked count for RS
 
         show_up   = _is_yes(lead.get(f"custom.{CF_SHOW_UP}"))
         qualified = _is_yes(lead.get(f"custom.{CF_QUALIFIED}"))
@@ -522,55 +450,7 @@ def aggregate_data(start_date, end_date, month_label,
         meeting_rows.append({"funnel": funnel, "show_up": show_up,
                               "qualified": qualified, "utm_campaign": utm})
 
-    # ── Reactivation Scrapers: title-prefix methodology ───────────────────────
-    rs_meetings = fetch_reactivation_scraper_meetings(start_date, end_date)
-    rs_counted  = 0
-    for mtg in rs_meetings:
-        lid = mtg["lead_id"]
-        if lid in rs_lead_cache:
-            info = rs_lead_cache[lid]
-        elif lid in lead_cache:
-            # Lead was fetched for another reason (e.g. won opp) — extract RS info
-            lead = lead_cache[lid]
-            if lead.get("status_id") in EXCLUDED_LEAD_STATUS_IDS:
-                continue
-            if is_excluded_business_line(lead):
-                continue
-            if get_funnel_name(lead) != REACTIVATION_SCRAPERS_FUNNEL:
-                continue
-            info = {
-                "showed":    _is_yes(lead.get(f"custom.{CF_SHOW_UP}")),
-                "qualified": _is_yes(lead.get(f"custom.{CF_QUALIFIED}")),
-            }
-            rs_lead_cache[lid] = info
-        else:
-            # Lead not yet cached — fetch it
-            lead = fetch_lead(lid)
-            lead_cache[lid] = lead
-            if lead.get("status_id") in EXCLUDED_LEAD_STATUS_IDS:
-                continue
-            if is_excluded_business_line(lead):
-                continue
-            if get_funnel_name(lead) != REACTIVATION_SCRAPERS_FUNNEL:
-                continue  # title matched but lead not actually RS — skip
-            info = {
-                "showed":    _is_yes(lead.get(f"custom.{CF_SHOW_UP}")),
-                "qualified": _is_yes(lead.get(f"custom.{CF_QUALIFIED}")),
-            }
-            rs_lead_cache[lid] = info
-
-        # showed/qualified = lead-level fields (outcome not available via /activity/meeting/ _fields)
-        # setter = title-derived attribution (mtg["setter"]), not the lead's field
-        meeting_rows.append({
-            "funnel":       REACTIVATION_SCRAPERS_FUNNEL,
-            "show_up":      info["showed"],
-            "qualified":    info["qualified"],
-            "utm_campaign": mtg["setter"],
-        })
-        rs_counted += 1
-
-    print(f"  Booked rows after status filter: {len(meeting_rows)} "
-          f"(incl. {rs_counted} RS title-prefix meetings)", flush=True)
+    print(f"  Booked rows after scorecard roster/status filters: {len(meeting_rows)}", flush=True)
 
     closed_rows    = []
     tier_by_funnel   = {}
