@@ -70,7 +70,7 @@ SETTER_NAME_FUNNELS = {"Reactivation Scrapers"}
 
 CLOSED_WON_STATUS_ID    = "stat_0oW3iRpVp9z5DJq0cuwI1HgR0XhHAhykEPPIq4TFsxd"
 WEEKLY_FEATURE_START    = "2026-04"  # Weeks only available for this month and later
-MONTHLY_BOOKED_GOAL     = 850        # Update at the start of each month
+MONTHLY_BOOKED_GOAL     = 1_241      # Update at the start of each month
 MONTHLY_REVENUE_GOAL    = 750_000    # Update at the start of each month
 
 # ── Filter Constants ──────────────────────────────────────────────────────────
