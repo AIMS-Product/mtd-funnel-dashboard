@@ -6,8 +6,8 @@
     "booked": 122,
     "showed": 75,
     "qualified": 52,
-    "closed": 7,
-    "revenue": 51338.0
+    "closed": 8,
+    "revenue": 58235.0
   },
   "groups": {
     "LEAD SOURCES": {
@@ -15,8 +15,8 @@
       "booked": 119,
       "showed": 73,
       "qualified": 51,
-      "closed": 7,
-      "revenue": 51338.0
+      "closed": 8,
+      "revenue": 58235.0
     },
     "UNCATEGORIZED": {
       "leads_created": 89,
@@ -28,18 +28,6 @@
     }
   },
   "funnels": {
-    "Internal Webinar": {
-      "leads_created": 464,
-      "booked": 44,
-      "book_pct": 9.5,
-      "showed": 25,
-      "show_pct": 56.8,
-      "qualified": 18,
-      "qual_pct": 72.0,
-      "closed": 3,
-      "cw_pct": 6.8,
-      "revenue": 24997.0
-    },
     "Reactivation Scrapers": {
       "leads_created": 24,
       "booked": 45,
@@ -51,6 +39,18 @@
       "closed": 1,
       "cw_pct": 2.2,
       "revenue": 6897.0
+    },
+    "Internal Webinar": {
+      "leads_created": 464,
+      "booked": 44,
+      "book_pct": 9.5,
+      "showed": 25,
+      "show_pct": 56.8,
+      "qualified": 18,
+      "qual_pct": 72.0,
+      "closed": 4,
+      "cw_pct": 9.1,
+      "revenue": 31894.0
     },
     "Website": {
       "leads_created": 9,
