@@ -2,8 +2,8 @@
   "month_key": "2026-10",
   "month_label": "October 2026",
   "grand": {
-    "leads_created": 599,
-    "booked": 93,
+    "leads_created": 600,
+    "booked": 124,
     "showed": 53,
     "qualified": 41,
     "closed": 6,
@@ -11,8 +11,8 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 519,
-      "booked": 90,
+      "leads_created": 520,
+      "booked": 121,
       "showed": 51,
       "qualified": 40,
       "closed": 6,
@@ -29,27 +29,27 @@
   },
   "funnels": {
     "Internal Webinar": {
-      "leads_created": 446,
-      "booked": 23,
-      "book_pct": 5.2,
+      "leads_created": 447,
+      "booked": 46,
+      "book_pct": 10.3,
       "showed": 10,
-      "show_pct": 43.5,
+      "show_pct": 21.7,
       "qualified": 10,
       "qual_pct": 100.0,
       "closed": 2,
-      "cw_pct": 8.7,
+      "cw_pct": 4.3,
       "revenue": 16000.0
     },
     "Reactivation Scrapers": {
       "leads_created": 15,
-      "booked": 39,
-      "book_pct": 260.0,
+      "booked": 45,
+      "book_pct": 300.0,
       "showed": 25,
-      "show_pct": 64.1,
+      "show_pct": 55.6,
       "qualified": 17,
       "qual_pct": 68.0,
       "closed": 1,
-      "cw_pct": 2.6,
+      "cw_pct": 2.2,
       "revenue": 6897.0
     },
     "Website": {
@@ -75,6 +75,18 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
+    },
+    "LTF - In-House": {
+      "leads_created": 0,
+      "booked": 1,
+      "book_pct": 0,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0,
+      "closed": 1,
+      "cw_pct": 100.0,
+      "revenue": 1200.0
     },
     "Linkedin": {
       "leads_created": 0,
@@ -114,27 +126,15 @@
     },
     "Google Ads": {
       "leads_created": 13,
-      "booked": 2,
-      "book_pct": 15.4,
+      "booked": 3,
+      "book_pct": 23.1,
       "showed": 1,
-      "show_pct": 50.0,
+      "show_pct": 33.3,
       "qualified": 1,
       "qual_pct": 100.0,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "LTF - In-House": {
-      "leads_created": 0,
-      "booked": 0,
-      "book_pct": 0,
-      "showed": 0,
-      "show_pct": 0,
-      "qualified": 0,
-      "qual_pct": 0,
-      "closed": 1,
-      "cw_pct": 0,
-      "revenue": 1200.0
     },
     "Meta Ads": {
       "leads_created": 7,
