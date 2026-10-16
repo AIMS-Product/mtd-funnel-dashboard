@@ -1,36 +1,43 @@
 {
   "week_key": "2026-10-12",
   "month_label": "October 2026 \u00b7 Oct 12\u201318",
-  "generated_at": "October 16, 2026 at 05:54 AM PT",
+  "generated_at": "October 16, 2026 at 08:53 AM PT",
   "grand": {
-    "leads_created": 490,
-    "booked": 87,
+    "leads_created": 501,
+    "booked": 88,
     "showed": 40,
-    "qualified": 27,
-    "closed": 10,
-    "revenue": 94382.0
+    "qualified": 29,
+    "closed": 11,
+    "revenue": 104729.0
   },
   "funnels": {
-    "Instagram": {
+    "Unknown (Needs Review)": {
+      "booked": 4,
+      "showed": 1,
+      "qualified": 1,
+      "closed": 0,
+      "revenue": 0.0
+    },
+    "Meta Ads": {
       "booked": 1,
       "showed": 1,
       "qualified": 1,
       "closed": 1,
-      "revenue": 9497.0
-    },
-    "Meta Ads": {
-      "booked": 1,
-      "showed": 0,
-      "qualified": 0,
-      "closed": 0,
-      "revenue": 0.0
+      "revenue": 10347.0
     },
     "Reactivation Scrapers": {
-      "booked": 48,
+      "booked": 49,
       "showed": 20,
-      "qualified": 14,
+      "qualified": 15,
       "closed": 6,
       "revenue": 66891.0
+    },
+    "Internal Webinar": {
+      "booked": 24,
+      "showed": 11,
+      "qualified": 6,
+      "closed": 1,
+      "revenue": 5997.0
     },
     "YouTube": {
       "booked": 7,
@@ -39,26 +46,19 @@
       "closed": 2,
       "revenue": 11997.0
     },
-    "Internal Webinar": {
-      "booked": 25,
-      "showed": 11,
-      "qualified": 6,
-      "closed": 1,
-      "revenue": 5997.0
-    },
-    "Unknown (Needs Review)": {
+    "Google Ads": {
       "booked": 2,
       "showed": 1,
-      "qualified": 1,
-      "closed": 0,
-      "revenue": 0.0
-    },
-    "Google Ads": {
-      "booked": 3,
-      "showed": 2,
       "qualified": 0,
       "closed": 0,
       "revenue": 0.0
+    },
+    "Instagram": {
+      "booked": 1,
+      "showed": 1,
+      "qualified": 1,
+      "closed": 1,
+      "revenue": 9497.0
     }
   }
 }
