@@ -2,7 +2,7 @@
   "month_key": "2026-10",
   "month_label": "October 2026",
   "grand": {
-    "leads_created": 1531,
+    "leads_created": 1534,
     "booked": 272,
     "showed": 163,
     "qualified": 117,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1291,
+      "leads_created": 1293,
       "booked": 264,
       "showed": 157,
       "qualified": 112,
@@ -19,7 +19,7 @@
       "revenue": 209299.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 240,
+      "leads_created": 241,
       "booked": 8,
       "showed": 6,
       "qualified": 5,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 1139,
+      "booked": 78,
+      "book_pct": 6.8,
+      "showed": 47,
+      "show_pct": 60.3,
+      "qualified": 35,
+      "qual_pct": 74.5,
+      "closed": 7,
+      "cw_pct": 9.0,
+      "revenue": 54235.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 65,
       "booked": 137,
@@ -40,26 +52,26 @@
       "cw_pct": 7.3,
       "revenue": 108129.0
     },
-    "Internal Webinar": {
-      "leads_created": 1137,
-      "booked": 78,
-      "book_pct": 6.9,
-      "showed": 47,
-      "show_pct": 60.3,
-      "qualified": 35,
-      "qual_pct": 74.5,
-      "closed": 7,
-      "cw_pct": 9.0,
-      "revenue": 54235.0
-    },
     "Unknown (Needs Review)": {
-      "leads_created": 240,
+      "leads_created": 241,
       "booked": 8,
       "book_pct": 3.3,
       "showed": 6,
       "show_pct": 75.0,
       "qualified": 5,
       "qual_pct": 83.3,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "WWWS": {
+      "leads_created": 0,
+      "booked": 1,
+      "book_pct": 0,
+      "showed": 1,
+      "show_pct": 100.0,
+      "qualified": 1,
+      "qual_pct": 100.0,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
@@ -119,18 +131,6 @@
       "showed": 2,
       "show_pct": 100.0,
       "qualified": 2,
-      "qual_pct": 100.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "WWWS": {
-      "leads_created": 0,
-      "booked": 1,
-      "book_pct": 0,
-      "showed": 1,
-      "show_pct": 100.0,
-      "qualified": 1,
       "qual_pct": 100.0,
       "closed": 0,
       "cw_pct": 0.0,
