@@ -2,7 +2,7 @@
   "month_key": "2026-10",
   "month_label": "October 2026",
   "grand": {
-    "leads_created": 1662,
+    "leads_created": 1664,
     "booked": 297,
     "showed": 176,
     "qualified": 129,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1392,
+      "leads_created": 1393,
       "booked": 290,
       "showed": 171,
       "qualified": 125,
@@ -19,7 +19,7 @@
       "revenue": 270816.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 270,
+      "leads_created": 271,
       "booked": 7,
       "showed": 5,
       "qualified": 4,
@@ -28,18 +28,6 @@
     }
   },
   "funnels": {
-    "Unknown (Needs Review)": {
-      "leads_created": 270,
-      "booked": 7,
-      "book_pct": 2.6,
-      "showed": 5,
-      "show_pct": 71.4,
-      "qualified": 4,
-      "qual_pct": 80.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Reactivation Scrapers": {
       "leads_created": 72,
       "booked": 155,
@@ -52,6 +40,30 @@
       "cw_pct": 7.1,
       "revenue": 117126.0
     },
+    "Internal Webinar": {
+      "leads_created": 1229,
+      "booked": 83,
+      "book_pct": 6.8,
+      "showed": 49,
+      "show_pct": 59.0,
+      "qualified": 34,
+      "qual_pct": 69.4,
+      "closed": 9,
+      "cw_pct": 10.8,
+      "revenue": 69229.0
+    },
+    "Unknown (Needs Review)": {
+      "leads_created": 271,
+      "booked": 7,
+      "book_pct": 2.6,
+      "showed": 5,
+      "show_pct": 71.4,
+      "qualified": 4,
+      "qual_pct": 80.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Google Ads": {
       "leads_created": 23,
       "booked": 7,
@@ -63,18 +75,6 @@
       "closed": 1,
       "cw_pct": 14.3,
       "revenue": 5997.0
-    },
-    "Internal Webinar": {
-      "leads_created": 1228,
-      "booked": 83,
-      "book_pct": 6.8,
-      "showed": 49,
-      "show_pct": 59.0,
-      "qualified": 34,
-      "qual_pct": 69.4,
-      "closed": 9,
-      "cw_pct": 10.8,
-      "revenue": 69229.0
     },
     "Website": {
       "leads_created": 12,
