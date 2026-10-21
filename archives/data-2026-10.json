@@ -2,24 +2,24 @@
   "month_key": "2026-10",
   "month_label": "October 2026",
   "grand": {
-    "leads_created": 19141,
-    "booked": 351,
+    "leads_created": 19151,
+    "booked": 350,
     "showed": 204,
-    "qualified": 148,
+    "qualified": 150,
     "closed": 35,
     "revenue": 291810.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1647,
-      "booked": 343,
+      "leads_created": 1651,
+      "booked": 342,
       "showed": 199,
-      "qualified": 144,
+      "qualified": 146,
       "closed": 35,
       "revenue": 291810.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 17494,
+      "leads_created": 17500,
       "booked": 8,
       "showed": 5,
       "qualified": 4,
@@ -28,20 +28,8 @@
     }
   },
   "funnels": {
-    "Reactivation Scrapers": {
-      "leads_created": 88,
-      "booked": 189,
-      "book_pct": 214.8,
-      "showed": 105,
-      "show_pct": 55.6,
-      "qualified": 70,
-      "qual_pct": 66.7,
-      "closed": 12,
-      "cw_pct": 6.3,
-      "revenue": 123123.0
-    },
     "Internal Webinar": {
-      "leads_created": 1449,
+      "leads_created": 1452,
       "booked": 91,
       "book_pct": 6.3,
       "showed": 51,
@@ -52,17 +40,53 @@
       "cw_pct": 11.0,
       "revenue": 75229.0
     },
-    "Website": {
-      "leads_created": 16,
-      "booked": 13,
-      "book_pct": 81.2,
-      "showed": 8,
-      "show_pct": 61.5,
-      "qualified": 5,
-      "qual_pct": 62.5,
+    "Reactivation Scrapers": {
+      "leads_created": 89,
+      "booked": 188,
+      "book_pct": 211.2,
+      "showed": 105,
+      "show_pct": 55.9,
+      "qualified": 72,
+      "qual_pct": 68.6,
+      "closed": 12,
+      "cw_pct": 6.4,
+      "revenue": 123123.0
+    },
+    "Meta Ads": {
+      "leads_created": 11,
+      "booked": 1,
+      "book_pct": 9.1,
+      "showed": 1,
+      "show_pct": 100.0,
+      "qualified": 1,
+      "qual_pct": 100.0,
       "closed": 1,
-      "cw_pct": 7.7,
+      "cw_pct": 100.0,
+      "revenue": 10347.0
+    },
+    "Google Ads": {
+      "leads_created": 30,
+      "booked": 11,
+      "book_pct": 36.7,
+      "showed": 7,
+      "show_pct": 63.6,
+      "qualified": 5,
+      "qual_pct": 71.4,
+      "closed": 1,
+      "cw_pct": 9.1,
       "revenue": 5997.0
+    },
+    "Unknown (Needs Review)": {
+      "leads_created": 17500,
+      "booked": 8,
+      "book_pct": 0.0,
+      "showed": 5,
+      "show_pct": 62.5,
+      "qualified": 4,
+      "qual_pct": 80.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "YouTube": {
       "leads_created": 31,
@@ -76,6 +100,18 @@
       "cw_pct": 31.8,
       "revenue": 49423.0
     },
+    "Website": {
+      "leads_created": 16,
+      "booked": 13,
+      "book_pct": 81.2,
+      "showed": 8,
+      "show_pct": 61.5,
+      "qualified": 5,
+      "qual_pct": 62.5,
+      "closed": 1,
+      "cw_pct": 7.7,
+      "revenue": 5997.0
+    },
     "Linkedin": {
       "leads_created": 1,
       "booked": 2,
@@ -84,18 +120,6 @@
       "show_pct": 100.0,
       "qualified": 2,
       "qual_pct": 100.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Unknown (Needs Review)": {
-      "leads_created": 17494,
-      "booked": 8,
-      "book_pct": 0.0,
-      "showed": 5,
-      "show_pct": 62.5,
-      "qualified": 4,
-      "qual_pct": 80.0,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
@@ -111,30 +135,6 @@
       "closed": 1,
       "cw_pct": 8.3,
       "revenue": 9497.0
-    },
-    "Google Ads": {
-      "leads_created": 30,
-      "booked": 11,
-      "book_pct": 36.7,
-      "showed": 7,
-      "show_pct": 63.6,
-      "qualified": 5,
-      "qual_pct": 71.4,
-      "closed": 1,
-      "cw_pct": 9.1,
-      "revenue": 5997.0
-    },
-    "Meta Ads": {
-      "leads_created": 11,
-      "booked": 1,
-      "book_pct": 9.1,
-      "showed": 1,
-      "show_pct": 100.0,
-      "qualified": 1,
-      "qual_pct": 100.0,
-      "closed": 1,
-      "cw_pct": 100.0,
-      "revenue": 10347.0
     },
     "LTF - In-House": {
       "leads_created": 0,
