@@ -2,7 +2,7 @@
   "month_key": "2026-10",
   "month_label": "October 2026",
   "grand": {
-    "leads_created": 19183,
+    "leads_created": 19189,
     "booked": 364,
     "showed": 209,
     "qualified": 152,
@@ -11,16 +11,16 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1677,
-      "booked": 355,
+      "leads_created": 1685,
+      "booked": 356,
       "showed": 204,
       "qualified": 148,
       "closed": 36,
       "revenue": 300807.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 17506,
-      "booked": 9,
+      "leads_created": 17504,
+      "booked": 8,
       "showed": 5,
       "qualified": 4,
       "closed": 0,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Instagram": {
+      "leads_created": 21,
+      "booked": 13,
+      "book_pct": 61.9,
+      "showed": 9,
+      "show_pct": 69.2,
+      "qualified": 9,
+      "qual_pct": 100.0,
+      "closed": 1,
+      "cw_pct": 7.7,
+      "revenue": 9497.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 91,
       "booked": 197,
@@ -53,7 +65,7 @@
       "revenue": 49423.0
     },
     "Internal Webinar": {
-      "leads_created": 1475,
+      "leads_created": 1479,
       "booked": 92,
       "book_pct": 6.2,
       "showed": 53,
@@ -65,9 +77,9 @@
       "revenue": 75229.0
     },
     "Google Ads": {
-      "leads_created": 30,
+      "leads_created": 32,
       "booked": 13,
-      "book_pct": 43.3,
+      "book_pct": 40.6,
       "showed": 7,
       "show_pct": 53.8,
       "qualified": 5,
@@ -77,9 +89,9 @@
       "revenue": 5997.0
     },
     "Website": {
-      "leads_created": 16,
+      "leads_created": 17,
       "booked": 13,
-      "book_pct": 81.2,
+      "book_pct": 76.5,
       "showed": 8,
       "show_pct": 61.5,
       "qualified": 5,
@@ -87,18 +99,6 @@
       "closed": 1,
       "cw_pct": 7.7,
       "revenue": 5997.0
-    },
-    "Instagram": {
-      "leads_created": 20,
-      "booked": 12,
-      "book_pct": 60.0,
-      "showed": 9,
-      "show_pct": 75.0,
-      "qualified": 9,
-      "qual_pct": 100.0,
-      "closed": 1,
-      "cw_pct": 8.3,
-      "revenue": 9497.0
     },
     "Meta Ads": {
       "leads_created": 11,
@@ -113,11 +113,11 @@
       "revenue": 10347.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 17506,
-      "booked": 9,
-      "book_pct": 0.1,
+      "leads_created": 17504,
+      "booked": 8,
+      "book_pct": 0.0,
       "showed": 5,
-      "show_pct": 55.6,
+      "show_pct": 62.5,
       "qualified": 4,
       "qual_pct": 80.0,
       "closed": 0,
