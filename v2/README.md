@@ -27,6 +27,6 @@ python3 v2/publish_shadow.py --source v2/public/data.json
 - Only active/eligible Lane 2 title mappings earn Lane 2 credit. Canceled and declined meetings do not count as bookings and do not start the repeat clock.
 - The 30-day repeat clock is anchored to scheduled meeting start. Any non-canceled scheduled meeting starts or advances the clock, even when its title does not earn booking credit. Exactly 720 elapsed hours remains inside the window; a new qualifying credit is eligible only after 720 hours.
 - A qualifying no-show keeps its booking credit. A reschedule earns no second credit. A canceled meeting loses its credit; a later qualifying replacement may earn one under the repeat-clock rule.
-- The public shadow shows aggregate totals, source rows, and plain attributed-value rows under each source. It omits campaign/content labels and hierarchy, lead names, meeting titles, Close links, IDs, and meeting-level drilldowns.
+- The public shadow shows aggregate totals and plain attributed-value rows under each source: campaign values generally, and UTM Content values for Internal Webinar. It omits campaign/content labels and hierarchy, lead names, meeting titles, Close links, IDs, and meeting-level drilldowns.
 
 The pinned rule configuration is recorded in `rules.json`. Raw Close response data and the local detailed preview remain private and are not committed.

@@ -33,6 +33,20 @@ def public_data(source: Path) -> dict[str, Any]:
     for row in raw["channels"]:
         channel = {key: row[key] for key in CHANNEL_FIELDS}
         channel["drilldowns"] = []
+        if channel["channel"] == "Internal Webinar":
+            # Webinar attribution is reviewed at the content level; omit the
+            # campaign layer and show each UTM content value directly.
+            values: dict[str, int] = {}
+            for campaign in row.get("drilldowns", []):
+                for content in campaign.get("content", []):
+                    value = content["name"]
+                    values[value] = values.get(value, 0) + content["bookings"]
+            channel["drilldowns"] = [
+                {"value": value, "bookings": bookings}
+                for value, bookings in sorted(values.items(), key=lambda item: (-item[1], item[0]))
+            ]
+            channels.append(channel)
+            continue
         for campaign in row.get("drilldowns", []):
             campaign_bookings = 0
             for content in campaign.get("content", []):
