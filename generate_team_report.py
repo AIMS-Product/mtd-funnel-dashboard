@@ -43,8 +43,9 @@ Rep attribution
   Booked / Showed / Qualified / Pipeline → lead's "Lead Owner" field
   Closed Won / Revenue                   → won opp's owner (user_id)
 Anyone not in CLOSERS rolls into the "Other / Non-Closer" row, so the rep
-rows + Other always sum to the Team numbers (except Pipeline, which is
-closers-only by definition).
+row remains visible for audit, but is excluded from Team totals and KPIs.
+Only CLOSERS contribute to Team booked, showed, qualified, closed, and revenue
+metrics; Pipeline is closers-only by definition.
 """
 
 import os, sys, csv, argparse
@@ -250,7 +251,11 @@ def aggregate(start_date, end_date):
         showed    = _is_yes(lead.get(f"custom.{CF_SHOW_UP}"))
         qualified = _is_yes(lead.get(f"custom.{CF_QUALIFIED}"))
 
-        for tgt in (team, reps[row_key]):
+        if row_key == OTHER_ROW:
+            tgt_rows = (reps[OTHER_ROW],)
+        else:
+            tgt_rows = (team, reps[row_key])
+        for tgt in tgt_rows:
             tgt["booked"] += 1
             tgt["showed"] += showed
             tgt["qualified"] += qualified
@@ -290,7 +295,10 @@ def aggregate(start_date, end_date):
         value = (opp.get("value") or 0) / 100
         if row_key == OTHER_ROW:
             notes["other_owners_revenue"][owner] = notes["other_owners_revenue"].get(owner, 0) + value
-        for tgt in (team, reps[row_key]):
+            tgt_rows = (reps[OTHER_ROW],)
+        else:
+            tgt_rows = (team, reps[row_key])
+        for tgt in tgt_rows:
             tgt["closed"] += 1
             tgt["revenue"] += value
 
@@ -416,14 +424,14 @@ def write_csv(start_date, end_date, team, reps, notes):
                              key=lambda x: (-x[1]["revenue"], -x[1]["booked"], x[0]))
         for name, r in closer_rows:
             w.writerow(rep_line(name, r))
-        w.writerow(rep_line(OTHER_ROW, reps[OTHER_ROW], is_other=True))
+        w.writerow(rep_line("EXCLUDED — Other / Non-Closer", reps[OTHER_ROW], is_other=True))
         w.writerow(rep_line("TOTAL", team))
         w.writerow([])
 
         # ── Reconciliation ────────────────────────────────────────────────────
-        # Self-check: closers + Other must equal Team
+        # Self-check: closer rows alone must equal Team; Other is audit-only.
         for k in ("booked", "showed", "qualified", "closed", "revenue"):
-            s = sum(reps[n][k] for n in CLOSERS) + reps[OTHER_ROW][k]
+            s = sum(reps[n][k] for n in CLOSERS)
             if abs(s - team[k]) > 0.01:
                 warnings.append(f"Rep rows don't sum to Team for {k}: {s} vs {team[k]}")
 
@@ -453,7 +461,9 @@ def write_csv(start_date, end_date, team, reps, notes):
         w.writerow(["Booked leads excluded — Canceled / Outside US status", notes["excluded_status"]])
         w.writerow(["Booked leads excluded — business line (TLG/PPA)", notes["excluded_business_line"]])
         w.writerow(["Booked leads excluded — LTF - Quiz Funnel", notes["excluded_funnel"]])
-        w.writerow(["Booked leads with no Lead Owner (in Other row)", notes["no_owner"]])
+        w.writerow(["Booked leads with no Lead Owner (excluded from team totals)", notes["no_owner"]])
+        w.writerow(["Other / Non-Closer bookings excluded from Team totals",
+                    sum(notes["other_owners_booked"].values())])
         for why, n in sorted(notes["pipeline_dropped"].items()):
             w.writerow([f"Closer qualified leads not in Pipeline — {why}", n])
         w.writerow(["Won opps excluded — excluded owner", notes["won_excluded_user"]])
@@ -464,11 +474,11 @@ def write_csv(start_date, end_date, team, reps, notes):
                         notes["won_lead_lookup_failed"]])
             warnings.append(f"{notes['won_lead_lookup_failed']} won opp lead lookup(s) failed")
         for owner, n in sorted(notes["other_owners_booked"].items(), key=lambda x: -x[1]):
-            w.writerow([f"Other row — booked owned by {owner}", n])
+            w.writerow([f"Excluded Other / Non-Closer — booked owned by {owner}", n])
             if owner != "(no Lead Owner)" and n >= NEW_CLOSER_FLAG_THRESHOLD:
                 warnings.append(f"{owner} owns {n} booked calls but isn't in CLOSERS — new closer?")
         for owner, v in sorted(notes["other_owners_revenue"].items(), key=lambda x: -x[1]):
-            w.writerow([f"Other row — revenue closed by {owner}", fmt_currency(v)])
+            w.writerow([f"Excluded Other / Non-Closer — revenue closed by {owner}", fmt_currency(v)])
         w.writerow([])
 
         w.writerow(["## WARNINGS"])
