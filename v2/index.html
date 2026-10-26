@@ -461,6 +461,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const fmt=n=>new Intl.NumberFormat('en-US').format(Number(n||0));
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(Number(n||0));
 const pct=(a,b)=>b?`${(100*a/b).toFixed(1)}%`:'—';
+const pctClass=(n,d,high=.70,low=.50)=>d?(n/d>=high?'good':n/d<low?'bad':'mid'):'';
 const stamp=new Date(report.generated_at);
 const [periodStart,periodEnd]=report.period.split(' through ');
 const localDate=iso=>{const [y,m,d]=iso.split('-').map(Number);return new Intl.DateTimeFormat('en-US',{timeZone:'UTC',month:'short',day:'numeric',year:'numeric'}).format(new Date(Date.UTC(y,m-1,d,12)));};
@@ -478,7 +479,7 @@ const cards=[
 document.getElementById('kpis').innerHTML=cards.map(([label,value,sub,color],i)=>`<div class="kpi" style="--kpi-accent:${color};--kpi-color:${i===1?'var(--text)':color}"><div class="label">${esc(label)}</div><div class="value">${esc(value)}</div><div class="kpi-sub">${esc(sub)}</div></div>`).join('');
 function rowCells(c, total=false){
  const show=pct(c.showed,c.bookings), qual=pct(c.qualified,c.showed), close=pct(c.closed_won,c.bookings);
- return `<td class="col-name">${total?'TOTAL':esc(c.channel)}</td><td class="col-num">${fmt(c.leads_created)}</td><td class="col-num">${fmt(c.bookings)}</td><td class="col-pace">—</td><td class="col-goal">—</td><td class="col-num">${fmt(c.showed)}</td><td class="col-pct">${show}</td><td class="col-num">${fmt(c.qualified)}</td><td class="col-pct">${qual}</td><td class="col-num">${fmt(c.closed_won)}</td><td class="col-pct">${close}</td><td class="col-rev">${money(c.revenue)}</td><td class="col-num">${c.closed_won?money(c.revenue/c.closed_won):'—'}</td>`;
+ return `<td class="col-name">${total?'TOTAL':esc(c.channel)}</td><td class="col-num">${fmt(c.leads_created)}</td><td class="col-num">${fmt(c.bookings)}</td><td class="col-pace">—</td><td class="col-goal">—</td><td class="col-num">${fmt(c.showed)}</td><td class="col-pct ${pctClass(c.showed,c.bookings)}">${show}</td><td class="col-num">${fmt(c.qualified)}</td><td class="col-pct ${pctClass(c.qualified,c.showed)}">${qual}</td><td class="col-num">${fmt(c.closed_won)}</td><td class="col-pct ${pctClass(c.closed_won,c.bookings,.15,.07)}">${close}</td><td class="col-rev">${money(c.revenue)}</td><td class="col-num">${c.closed_won?money(c.revenue/c.closed_won):'—'}</td>`;
 }
 const body=document.getElementById('funnel-body');
 let sourceIndex=0;
