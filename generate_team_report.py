@@ -91,6 +91,7 @@ CLOSERS = [
     "Shreya Bechra",
     "Luke Herman",
     "Ariella Irvine",
+    "Oscar Pugh",
     "Joe Dysert",
 ]
 OTHER_ROW = "Other / Non-Closer"
