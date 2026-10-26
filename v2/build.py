@@ -227,6 +227,31 @@ def source_resolve(lead: dict[str, Any], contacts: list[dict[str, Any]]) -> tupl
     return "Unknown (Needs Review)", "unresolved_contact_origins"
 
 
+def attribution_review(lead: dict[str, Any], contacts: list[dict[str, Any]]) -> tuple[str, str] | tuple[None, None]:
+    """Record why a lead remains unresolved under the approved V2 source rules."""
+    channel, _ = source_resolve(lead, contacts)
+    if channel != "Unknown (Needs Review)":
+        return None, None
+
+    source_values = set()
+    for contact in contacts:
+        raw = custom(contact, RULES["contact_utm_fields"]["source"])
+        if raw:
+            source_values.add(raw.casefold().split("&", 1)[0].split("?", 1)[0])
+    if not source_values:
+        return "unrecoverable_under_v2_rules", "no_utm_source_value"
+
+    mapped = {RULES["utm_source_map"][value] for value in source_values if value in RULES["utm_source_map"]}
+    unmapped = source_values - RULES["utm_source_map"].keys()
+    if len(mapped) > 1:
+        reason = "conflicting_mapped_sources"
+    elif mapped and unmapped:
+        reason = "mapped_and_unmapped_source_values"
+    else:
+        reason = "utm_source_value_not_in_approved_map"
+    return "unrecoverable_under_v2_rules", reason
+
+
 def recognized_lead_source(lead: dict[str, Any]) -> bool:
     value = str(lead.get("funnel") or "").casefold()
     return value in {label.casefold() for label in RULES["marketing_sources"]}
@@ -461,6 +486,7 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None) -> dict[st
             continue
         campaign, content = contact_utm(contact_cache[lead_id])
         channel, source_basis = source_resolve(lead, contact_cache[lead_id])
+        attribution_status, attribution_reason = attribution_review(lead, contact_cache[lead_id])
         candidate_rows.append({
             "meeting_id": str(meeting["id"]), "lead_id": lead_id,
             "lead_name": lead.get("display_name") or "Unknown lead", "title": meeting.get("title") or "",
@@ -468,6 +494,7 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None) -> dict[st
             "starts_at": starts_at.isoformat(), "scheduled_date_pt": starts_at.astimezone(PACIFIC).date().isoformat(),
             "status": status, "outcome": outcome or "No outcome", "bucket": bucket,
             "setter": setter or "Marketing", "rule": rule or "", "channel": channel, "source_basis": source_basis,
+            "attribution_status": attribution_status, "attribution_reason": attribution_reason,
             "utm_campaign": campaign, "utm_content": content,
             "close_url": f"https://app.close.com/lead/{lead_id}/",
             "showed": normalized(outcome) == "completed",
@@ -478,6 +505,7 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None) -> dict[st
     channel_rows: dict[str, dict[str, Any]] = defaultdict(lambda: {
         "leads_created": 0, "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0,
         "showed": 0, "qualified_leads": set(), "closed_won": 0, "revenue": 0.0, "drilldowns": {},
+        "unrecoverable_leads": set(), "unrecoverable_reasons": defaultdict(set),
     })
     for lead in leads_created:
         lead_id = str(lead.get("id") or "")
@@ -487,6 +515,9 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None) -> dict[st
         channel_rows[channel]["leads_created"] += 1
     for row in counted:
         entry = channel_rows[row["channel"]]
+        if row.get("attribution_status") == "unrecoverable_under_v2_rules":
+            entry["unrecoverable_leads"].add(row["lead_id"])
+            entry["unrecoverable_reasons"][row["attribution_reason"]].add(row["lead_id"])
         entry["bookings"] += 1
         entry[{"Marketing": "marketing", "Lane 2": "lane2", "Social DMs": "social_dms"}[row["bucket"]]] += 1
         entry["showed"] += int(row["showed"])
@@ -522,6 +553,10 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None) -> dict[st
     output_rows = []
     for channel, entry in sorted(channel_rows.items(), key=lambda item: (-item[1]["bookings"], item[0])):
         entry["qualified"] = len(entry.pop("qualified_leads"))
+        entry["unrecoverable_booked_leads"] = len(entry.pop("unrecoverable_leads"))
+        entry["unrecoverable_reason_counts"] = {
+            reason: len(lead_ids) for reason, lead_ids in entry.pop("unrecoverable_reasons").items()
+        }
         entry["drilldowns"] = [
             {"campaign": campaign, "content": content_rows}
             for campaign, content_rows in sorted(entry["drilldowns"].items(), key=lambda item: (-sum(x["bookings"] for x in item[1].values()), item[0]))
@@ -541,6 +576,7 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None) -> dict[st
         "candidate_meetings": len(candidate_rows), "counted_meetings": len(counted),
         "excluded_repeat_candidates": suppressions.get("within_30_day_episode", 0),
         "lead_source_note": "Lead-created total is complete. Source by channel uses the lead's Close funnel when recognized; contact UTM fallback is loaded for booked and won leads, so unbooked leads without a recognized funnel appear as Unknown (Needs Review). Booking campaign/content drilldowns use contact UTM data.",
+        "attribution_reviewed_at": as_of.isoformat(),
         "rows": counted, "channels": output_rows, "totals": totals,
     }
 

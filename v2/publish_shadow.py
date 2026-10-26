@@ -23,6 +23,7 @@ TOTAL_FIELDS = (
 CHANNEL_FIELDS = (
     "channel", "leads_created", "bookings", "marketing", "lane2",
     "social_dms", "showed", "qualified", "closed_won", "revenue",
+    "unrecoverable_booked_leads",
 )
 
 
@@ -62,6 +63,7 @@ def public_data(source: Path) -> dict[str, Any]:
         "rules_version": raw["rules_version"],
         "counted_meetings": raw["counted_meetings"],
         "excluded_repeat_candidates": raw["excluded_repeat_candidates"],
+        "attribution_reviewed_at": raw.get("attribution_reviewed_at"),
         "lead_source_note": (
             "Lead source is shown separately from meeting-title booking attribution. "
             "Attribution values show aggregate counts only."
