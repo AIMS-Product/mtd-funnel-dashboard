@@ -442,7 +442,7 @@
 </div>
 <div class="kpis" id="kpis"></div>
 <div class="section-label">Funnel Breakdown — Booked → Showed → Qualified → Closed Won → Revenue</div>
-<p class="section-note">Expand a lead source to see aggregate UTM campaign and content performance. Lead and meeting-level details are excluded from this public shadow report.</p>
+<p class="section-note">Expand a lead source to see its attributed values. Lead and meeting-level details are excluded from this public shadow report.</p>
 <div class="table-wrap">
 <table id="funnel-table">
 <thead><tr>
@@ -490,22 +490,13 @@ for(const [section,channels] of [['lead_sources',report.channels.filter(c=>c.cha
   const sid=`s${sourceIndex++}`;
   const buckets=`Marketing ${fmt(c.marketing)} · Lane 2 ${fmt(c.lane2)} · Social DMs ${fmt(c.social_dms)}`;
   body.insertAdjacentHTML('beforeend',`<tr class="funnel-row" data-channel="${sid}"><td class="col-name"><span class="chevron" id="chev-${sid}">›</span>${esc(c.channel)}<div class="channel-meta">${buckets}</div></td>${rowCells(c).slice(rowCells(c).indexOf('</td>')+5)}</tr>`);
-  let campaignIndex=0;
-  for(const campaign of c.drilldowns){
-   const cid=`${sid}-c${campaignIndex++}`;
-   const campaignBookings=campaign.content.reduce((sum,x)=>sum+x.bookings,0);
-   body.insertAdjacentHTML('beforeend',`<tr class="utm-row" data-parent="${sid}" data-campaign="${cid}"><td class="col-name"><span class="chevron" id="chev-${cid}">›</span>UTM Campaign · ${esc(campaign.campaign)}</td><td class="col-num">—</td><td class="col-num">${fmt(campaignBookings)}</td><td class="col-pace"></td><td class="col-goal"></td><td class="col-num"></td><td class="col-pct"></td><td class="col-num"></td><td class="col-pct"></td><td class="col-num"></td><td class="col-pct"></td><td class="col-rev"></td><td class="col-num"></td></tr>`);
-   let contentIndex=0;
-   for(const content of campaign.content){
-    const xid=`${cid}-x${contentIndex++}`;
-    body.insertAdjacentHTML('beforeend',`<tr class="utm-content-row" data-parent="${cid}"><td class="col-name">UTM Content · ${esc(content.name)}</td><td class="col-num">—</td><td class="col-num">${fmt(content.bookings)}</td><td class="col-pace"></td><td class="col-goal"></td><td class="col-num">${fmt(content.showed)}</td><td class="col-pct">${pct(content.showed,content.bookings)}</td><td class="col-num">${fmt(content.qualified)}</td><td class="col-pct">${pct(content.qualified,content.showed)}</td><td class="col-num">—</td><td class="col-pct">—</td><td class="col-rev">—</td><td class="col-num">—</td></tr>`);
-   }
+  for(const value of c.drilldowns){
+   body.insertAdjacentHTML('beforeend',`<tr class="utm-row" data-parent="${sid}"><td class="col-name">${esc(value.value)}</td><td class="col-num">—</td><td class="col-num">${fmt(value.bookings)}</td><td class="col-pace"></td><td class="col-goal"></td><td class="col-num"></td><td class="col-pct"></td><td class="col-num"></td><td class="col-pct"></td><td class="col-num"></td><td class="col-pct"></td><td class="col-rev"></td><td class="col-num"></td></tr>`);
   }
  }
 }
 body.insertAdjacentHTML('beforeend',`<tr class="total-row">${rowCells({channel:'TOTAL',...t,showed:t.showed,qualified:t.qualified,closed_won:t.closed_won,revenue:t.revenue},true)}</tr>`);
 document.querySelectorAll('.funnel-row').forEach(tr=>tr.addEventListener('click',()=>{const id=tr.dataset.channel;const open=tr.dataset.open==='1';tr.dataset.open=open?'0':'1';document.getElementById(`chev-${id}`).classList.toggle('open',!open);document.querySelectorAll(`.utm-row[data-parent="${id}"]`).forEach(x=>x.classList.toggle('open',!open));}));
-document.querySelectorAll('.utm-row[data-campaign]').forEach(tr=>tr.addEventListener('click',()=>{const id=tr.dataset.campaign;const open=tr.dataset.open==='1';tr.dataset.open=open?'0':'1';document.getElementById(`chev-${id}`).classList.toggle('open',!open);document.querySelectorAll(`.utm-content-row[data-parent="${id}"]`).forEach(x=>x.classList.toggle('open',!open));}));
 document.getElementById('source-note').textContent=`${report.lead_source_note} Source cutoff (exclusive): ${report.generated_at}. Rules: ${report.rules_version}. Clock: any non-canceled scheduled meeting starts or advances the 30-day window using scheduled start. ${fmt(report.excluded_repeat_candidates)} candidate bookings fell inside an existing window. Snapshot includes ${fmt(report.counted_meetings)} qualifying first-call credits; held/review and nonqualifying meetings are omitted.`;
 </script>
 </body>

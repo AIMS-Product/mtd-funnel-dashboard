@@ -2,7 +2,7 @@
 """Render the public V2 shadow page from a private local Close snapshot.
 
 The public page uses the existing MTD dashboard template, but only receives
-whitelisted aggregate fields. Raw Close rows and drilldowns are never embedded.
+whitelisted aggregate fields. Raw Close rows are never embedded; only plain attribution values and counts are included.
 """
 
 from __future__ import annotations
@@ -34,27 +34,12 @@ def public_data(source: Path) -> dict[str, Any]:
         channel = {key: row[key] for key in CHANNEL_FIELDS}
         channel["drilldowns"] = []
         for campaign in row.get("drilldowns", []):
-            content_rows = []
             campaign_bookings = 0
             for content in campaign.get("content", []):
-                # Use lead IDs only to deduplicate the aggregate qualification
-                # count. No row-level values are included in public output.
-                qualified_leads = {
-                    str(meeting["lead_id"])
-                    for meeting in content.get("rows", [])
-                    if meeting.get("qualified") and meeting.get("lead_id")
-                }
-                content_rows.append({
-                    "name": content["name"],
-                    "bookings": content["bookings"],
-                    "showed": content["showed"],
-                    "qualified": len(qualified_leads),
-                })
                 campaign_bookings += content["bookings"]
             channel["drilldowns"].append({
-                "campaign": campaign["campaign"],
+                "value": campaign["campaign"],
                 "bookings": campaign_bookings,
-                "content": content_rows,
             })
         channels.append(channel)
     return {
@@ -65,7 +50,7 @@ def public_data(source: Path) -> dict[str, Any]:
         "excluded_repeat_candidates": raw["excluded_repeat_candidates"],
         "lead_source_note": (
             "Lead source is shown separately from meeting-title booking attribution. "
-            "UTM campaign and content drilldowns show aggregate counts only."
+            "Attribution values show aggregate counts only."
         ),
         "totals": totals,
         "channels": channels,
