@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <title>MTD V2 Shadow Report</title>
+  <style>
+    :root { color-scheme: light; --ink: #18202b; --muted: #586575; --line: #d8dee7; --pale: #f3f6fb; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f7f8fa; color: var(--ink); font: 16px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { max-width: 900px; margin: 32px auto; padding: 0 20px 48px; }
+    header, section { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 24px; margin-bottom: 18px; }
+    .badge { display: inline-block; border-radius: 999px; padding: 4px 10px; background: #fff2cc; color: #674d00; font-size: 13px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; }
+    h1 { margin: 12px 0 4px; font-size: clamp(28px, 5vw, 38px); line-height: 1.15; }
+    h2 { margin: 0 0 14px; font-size: 20px; }
+    p { margin: 8px 0; }
+    .muted { color: var(--muted); }
+    .total { display: flex; align-items: baseline; gap: 12px; margin-top: 22px; }
+    .total strong { font-size: 42px; line-height: 1; }
+    .meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 18px; }
+    .meta div { background: var(--pale); border-radius: 8px; padding: 12px; }
+    .meta b { display: block; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid var(--line); padding: 10px 8px; text-align: left; }
+    th:last-child, td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+    tfoot td { font-weight: 700; border-bottom: 0; }
+    .rules { padding-left: 20px; margin-bottom: 0; }
+    .rules li { margin: 6px 0; }
+    footer { padding: 0 4px; color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <span class="badge">Shadow report · review only</span>
+      <h1>Month-to-date bookings</h1>
+      <p class="muted">This V2 view is separate from the existing production MTD report. It does not change production reporting.</p>
+      <div class="total"><strong>507</strong><span>qualifying bookings</span></div>
+      <div class="meta">
+        <div><b>Reporting period</b>Oct 1–26, 2026 · Pacific</div>
+        <div><b>Close source cutoff</b>Oct 26, 2026 · 1:32:47 PM Pacific (exclusive)</div>
+        <div><b>Rules revision</b>booked_calls.v2.6 · scheduled-time 720-hour episode</div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Booked by</h2>
+      <table>
+        <thead><tr><th>Booking channel</th><th>Bookings</th></tr></thead>
+        <tbody>
+          <tr><td>Marketing</td><td>203</td></tr>
+          <tr><td>Lane 2</td><td>274</td></tr>
+          <tr><td>Social DMs</td><td>30</td></tr>
+        </tbody>
+        <tfoot><tr><td>Total</td><td>507</td></tr></tfoot>
+      </table>
+    </section>
+
+    <section>
+      <h2>Lead source</h2>
+      <p class="muted">Lead source is reported separately from the meeting-title booking channel.</p>
+      <table>
+        <thead><tr><th>Lead source</th><th>Bookings</th></tr></thead>
+        <tbody>
+          <tr><td>Internal Webinar</td><td>169</td></tr>
+          <tr><td>Unknown (Needs Review)</td><td>148</td></tr>
+          <tr><td>Google Ads</td><td>56</td></tr>
+          <tr><td>YouTube</td><td>54</td></tr>
+          <tr><td>Instagram</td><td>25</td></tr>
+          <tr><td>Website</td><td>22</td></tr>
+          <tr><td>Meta Ads</td><td>20</td></tr>
+          <tr><td>LTF - In-House</td><td>5</td></tr>
+          <tr><td>Linkedin</td><td>3</td></tr>
+          <tr><td>GoHighLevel</td><td>2</td></tr>
+          <tr><td>WWWS</td><td>2</td></tr>
+          <tr><td>VSL</td><td>1</td></tr>
+        </tbody>
+        <tfoot><tr><td>Total</td><td>507</td></tr></tfoot>
+      </table>
+    </section>
+
+    <section>
+      <h2>Counting rules</h2>
+      <ul class="rules">
+        <li>MTD uses Close meeting creation time in Pacific time.</li>
+        <li>Meeting title and the active Lane 2 title map determine booking channel; lead source stays separate.</li>
+        <li>Pearl’s Social DM bookings are shown separately from Lane 2.</li>
+        <li>Any non-canceled scheduled meeting starts or advances the 720-hour clock. A new qualifying credit is eligible only after more than 720 elapsed hours.</li>
+        <li>Canceled or declined meetings earn no credit and do not advance the clock. A qualifying no-show retains its credit; a reschedule does not earn another. A later qualifying replacement may earn credit under the clock rules.</li>
+      </ul>
+    </section>
+
+    <footer>Aggregate totals only. This page contains no lead names, meeting titles, Close links, or lead-level identifiers.</footer>
+  </main>
+</body>
+</html>
