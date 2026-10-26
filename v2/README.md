@@ -21,6 +21,8 @@ python3 v2/publish_shadow.py --source v2/public/data.json
 
 ## V2 rules
 
+The detailed replication guide is [`CALCULATION_RULES.md`](CALCULATION_RULES.md). It documents the time windows, meeting qualification and credit logic, lead-source attribution, metric formulas, display calculations, and implementation caveats. The exact machine-readable mappings and policy constants remain in [`rules.json`](rules.json), and [`build.py`](build.py) is the executable reference.
+
 - Reporting period is based on Close meeting creation time in America/Los_Angeles.
 - The meeting title and approved title map determine booking channel. Lead source is reported separately.
 - Pearl's Social DMs are distinct from Lane 2.
