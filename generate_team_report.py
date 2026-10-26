@@ -29,9 +29,10 @@ Metric definitions
   Pipeline    Same basis as the Sales Manager Dashboard scorecard ("open leads"):
               ALL leads with Lead Owner = a closer AND Qualified (Opp) = Yes,
               excluding lead status Lost / Canceled (by Lead) / Outside the US /
-              Closed-Won and any lead with a won Sales-pipeline opp.
-              × PIPELINE_VALUE_PER_OPP × PIPELINE_WEIGHT (20%). Point-in-time
-              snapshot at run time — NOT limited to the report window.
+              Closed-Won and any lead with a won Sales-pipeline opp. Also limited
+              to leads whose Current Owner Since is within the 30 days before
+              report generation. × PIPELINE_VALUE_PER_OPP × PIPELINE_WEIGHT (20%).
+              Point-in-time snapshot; not limited to the report week.
   Revenue Goal  Volume-based: Booked × GOAL_CLOSE_RATE_NET (13%) ×
                 REVENUE_GOAL_AVG_DEAL ($7,000). Applied to the team and each rep.
   Show Rate               Showed ÷ Booked
@@ -73,6 +74,7 @@ GOAL_CLOSE_RATE_QUAL  = 0.20   # Closed ÷ Qualified
 
 PIPELINE_VALUE_PER_OPP = 7_000  # $7,000 per open qualified opp (same avg deal as the revenue goal)
 PIPELINE_WEIGHT        = 0.20   # Pipeline = 20% of gross (goal is set on the same 20% basis)
+PIPELINE_AGE_DAYS      = 30
 
 def revenue_goal(booked):
     return booked * GOAL_CLOSE_RATE_NET * REVENUE_GOAL_AVG_DEAL
@@ -102,6 +104,7 @@ NEW_CLOSER_FLAG_THRESHOLD = 3
 
 # ── Close IDs used only here ──────────────────────────────────────────────────
 CF_LEAD_OWNER = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"
+CF_CURRENT_OWNER_SINCE = "cf_2tuoNM0K9ND9na49hMsj02KI7732MuKSiFX2thJuIgU"
 
 STAT_LEAD_LOST       = "stat_aR2jBa8YnTNZmHAnPsnlQuinBdaXpSBCkZGP3UvoBlV"
 STAT_LEAD_CLOSED_WON = "stat_0oW3iRpVp9z5DJq0cuwI1HgR0XhHAhykEPPIq4TFsxd"
@@ -161,17 +164,45 @@ def resolve_owner(raw, user_map):
 def bucket(name):
     return name if name in CLOSERS else OTHER_ROW
 
-def fetch_open_qualified_by_closer():
+def parse_close_datetime(value):
+    """Parse a Close date/datetime custom-field value as Pacific-local time."""
+    if not value:
+        return None
+    if isinstance(value, datetime):
+        parsed = value
+    else:
+        raw = str(value).strip()
+        try:
+            parsed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError:
+            return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=PACIFIC)
+    return parsed.astimezone(PACIFIC)
+
+
+def fetch_open_qualified_by_closer(as_of=None):
     """Open qualified book per closer — same query and exclusions as
-    fetch_open_leads_per_rep() in the Sales Manager Dashboard scorecard."""
-    counts, dropped = {}, {"closed lead status": 0, "has won opp": 0}
-    print("Fetching open qualified pipeline per closer...", flush=True)
+    fetch_open_leads_per_rep() in the Sales Manager Dashboard scorecard, limited
+    to leads whose Current Owner Since is within the trailing 30 days."""
+    as_of = as_of or datetime.now(PACIFIC)
+    if as_of.tzinfo is None:
+        as_of = as_of.replace(tzinfo=PACIFIC)
+    as_of = as_of.astimezone(PACIFIC)
+    cutoff = as_of - timedelta(days=PIPELINE_AGE_DAYS)
+    counts, dropped = {}, {
+        "closed lead status": 0,
+        "has won opp": 0,
+        "missing Current Owner Since": 0,
+        "Current Owner Since outside 30 days": 0,
+    }
+    print(f"Fetching open qualified pipeline per closer (Current Owner Since ≥ {cutoff.isoformat()})...", flush=True)
     for rep_name in CLOSERS:
         n, skip = 0, 0
         while True:
             data = close_get("lead/", {
                 "query":   f'"Lead Owner":"{rep_name}" "Qualified (Opp)":"Yes"',
-                "_fields": "id,status_id,opportunities",
+                "_fields": f"id,status_id,opportunities,custom.{CF_CURRENT_OWNER_SINCE}",
                 "_limit":  200, "_skip": skip,
             })
             for lead in data.get("data", []):
@@ -180,6 +211,11 @@ def fetch_open_qualified_by_closer():
                 if any(o.get("pipeline_id") == PIPE_SALES and o.get("status_id") == STAT_WON
                        for o in (lead.get("opportunities") or [])):
                     dropped["has won opp"] += 1; continue
+                owner_since = parse_close_datetime(lead.get(f"custom.{CF_CURRENT_OWNER_SINCE}"))
+                if owner_since is None:
+                    dropped["missing Current Owner Since"] += 1; continue
+                if owner_since < cutoff or owner_since > as_of:
+                    dropped["Current Owner Since outside 30 days"] += 1; continue
                 n += 1
             if not data.get("has_more"):
                 break
@@ -261,7 +297,7 @@ def aggregate(start_date, end_date):
             tgt["showed"] += showed
             tgt["qualified"] += qualified
 
-    # Pipeline — open qualified book per closer (scorecard method, snapshot)
+    # Pipeline — current open qualified leads owned in the trailing 30 days.
     open_counts, notes["pipeline_dropped"] = fetch_open_qualified_by_closer()
     for name, n in open_counts.items():
         reps[name]["qual_open"] = n
@@ -357,7 +393,8 @@ def write_csv(start_date, end_date, team, reps, notes):
         w.writerow(["Generated At", datetime.now(PACIFIC).strftime("%B %-d, %Y at %-I:%M %p PT")])
         w.writerow(["Pipeline Value Per Qualified Opp", fmt_currency(PIPELINE_VALUE_PER_OPP)])
         w.writerow(["Pipeline Weight", f"{PIPELINE_WEIGHT * 100:.0f}%"])
-        w.writerow(["Pipeline Basis", "Open qualified book as of Generated At (snapshot, not limited to the week)"])
+        w.writerow(["Pipeline Basis",
+                    f"Open qualified leads with Current Owner Since in the {PIPELINE_AGE_DAYS} days before Generated At; snapshot, not limited to the report week"])
         w.writerow(["Revenue Goal Basis",
                     f"Booked × {GOAL_CLOSE_RATE_NET * 100:.0f}% × {fmt_currency(REVENUE_GOAL_AVG_DEAL)} "
                     f"= {team['booked'] * GOAL_CLOSE_RATE_NET:.1f} deals × {fmt_currency(REVENUE_GOAL_AVG_DEAL)}"])
@@ -374,7 +411,7 @@ def write_csv(start_date, end_date, team, reps, notes):
                     f"{GOAL_CLOSE_RATE_NET * 100:.0f}% × {fmt_currency(REVENUE_GOAL_AVG_DEAL)} (denominator = booked)"])
         w.writerow(["Team Pipeline", fmt_currency(team_pipeline), fmt_currency(GOAL_PIPELINE),
                     pct_of_goal(team_pipeline, GOAL_PIPELINE), status_vs_goal(team_pipeline, GOAL_PIPELINE),
-                    team["qual_open"], "", f"All open qualified leads owned by closers (snapshot) × "
+                    team["qual_open"], "", f"Open qualified leads owned by closers in the trailing {PIPELINE_AGE_DAYS} days by Current Owner Since × "
                     f"{fmt_currency(PIPELINE_VALUE_PER_OPP)} × {PIPELINE_WEIGHT * 100:.0f}%"])
         w.writerow(["Team Show Rate", fmt_rate(team_show), fmt_rate(GOAL_SHOW_RATE),
                     pct_of_goal(team_show, GOAL_SHOW_RATE), status_vs_goal(team_show, GOAL_SHOW_RATE),
