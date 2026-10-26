@@ -468,9 +468,10 @@ const localDate=iso=>{const [y,m,d]=iso.split('-').map(Number);return new Intl.D
 document.getElementById('month-label').textContent=`MTD ${localDate(periodStart)} – ${localDate(periodEnd.replace(' PT',''))} PT`;
 document.getElementById('snapshot').textContent=stamp.toLocaleString('en-US',{timeZone:'America/Los_Angeles',month:'long',day:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})+' PT';
 const t=report.totals;
+const bookingMix=`Lane 2 ${fmt(t.lane2)} · Marketing ${fmt(t.marketing)} · Social DMs ${fmt(t.social_dms)}`;
 const cards=[
  ['Leads Created',fmt(t.leads_created),'new leads MTD','#6366f1'],
- ['Total Booked',fmt(t.bookings),'qualifying first calls MTD','#4f46e5'],
+ ['Total Booked',fmt(t.bookings),bookingMix,'#4f46e5'],
  ['Showed',fmt(t.showed),`${pct(t.showed,t.bookings)} show rate`,'#2563eb'],
  ['Qualified',fmt(t.qualified),`${pct(t.qualified,t.showed)} of showed · ${pct(t.qualified,t.bookings)} of booked`,'#7c3aed'],
  ['Closed Won',fmt(t.closed_won),`${pct(t.closed_won,t.bookings)} booked→close`,'#d97706'],
