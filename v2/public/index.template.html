@@ -442,7 +442,7 @@
 </div>
 <div class="kpis" id="kpis"></div>
 <div class="section-label">Funnel Breakdown — Booked → Showed → Qualified → Closed Won → Revenue</div>
-<p class="section-note">Aggregate MTD funnel by lead source. Meeting-level identifiers and campaign/content drilldowns are excluded from this public shadow report.</p>
+<p class="section-note">Expand a lead source to see aggregate UTM campaign and content performance. Lead and meeting-level details are excluded from this public shadow report.</p>
 <div class="table-wrap">
 <table id="funnel-table">
 <thead><tr>
@@ -480,10 +480,6 @@ function rowCells(c, total=false){
  const show=pct(c.showed,c.bookings), qual=pct(c.qualified,c.showed), close=pct(c.closed_won,c.bookings);
  return `<td class="col-name">${total?'TOTAL':esc(c.channel)}</td><td class="col-num">${fmt(c.leads_created)}</td><td class="col-num">${fmt(c.bookings)}</td><td class="col-pace">—</td><td class="col-goal">—</td><td class="col-num">${fmt(c.showed)}</td><td class="col-pct">${show}</td><td class="col-num">${fmt(c.qualified)}</td><td class="col-pct">${qual}</td><td class="col-num">${fmt(c.closed_won)}</td><td class="col-pct">${close}</td><td class="col-rev">${money(c.revenue)}</td><td class="col-num">${c.closed_won?money(c.revenue/c.closed_won):'—'}</td>`;
 }
-function meetingTable(content){
- const rows=content.rows.map(m=>`<tr><td><a href="${esc(m.close_url)}" target="_blank" rel="noopener">${esc(m.lead_name)}</a></td><td>${esc(m.booked_date_pt)}</td><td>${esc(m.scheduled_date_pt)}</td><td>${esc(m.title)}</td><td>${esc(m.setter)}</td><td>${esc(m.outcome)}</td><td>${esc(m.status)}</td><td>${esc(m.bucket)}</td></tr>`).join('');
- return `<table><thead><tr><th>Lead</th><th>Booked PT</th><th>Scheduled PT</th><th>Meeting title</th><th>Booked by</th><th>Native outcome</th><th>Status</th><th>Credit</th></tr></thead><tbody>${rows}</tbody></table>`;
-}
 const body=document.getElementById('funnel-body');
 let sourceIndex=0;
 for(const [section,channels] of [['lead_sources',report.channels.filter(c=>c.channel!=='Unknown (Needs Review)')],['uncategorized',report.channels.filter(c=>c.channel==='Unknown (Needs Review)')]]){
@@ -502,9 +498,7 @@ for(const [section,channels] of [['lead_sources',report.channels.filter(c=>c.cha
    let contentIndex=0;
    for(const content of campaign.content){
     const xid=`${cid}-x${contentIndex++}`;
-    const drawer=`${xid}-meetings`;
-    const qualifiedLeads=new Set(content.rows.filter(m=>m.qualified).map(m=>m.lead_id)).size;
-    body.insertAdjacentHTML('beforeend',`<tr class="utm-content-row" data-parent="${cid}" data-content="${xid}"><td class="col-name">UTM Content · ${esc(content.name)}</td><td class="col-num">—</td><td class="col-num">${fmt(content.bookings)}</td><td class="col-pace"></td><td class="col-goal"></td><td class="col-num">${fmt(content.showed)}</td><td class="col-pct">${pct(content.showed,content.bookings)}</td><td class="col-num">${fmt(qualifiedLeads)}</td><td class="col-pct">${pct(qualifiedLeads,content.showed)}</td><td colspan="4"><button class="expand-link" data-drawer="${drawer}">View ${fmt(content.bookings)} meetings →</button></td></tr><tr class="utm-content-row" data-parent="${cid}"><td colspan="13"><div class="meeting-drawer" id="${drawer}">${meetingTable(content)}</div></td></tr>`);
+    body.insertAdjacentHTML('beforeend',`<tr class="utm-content-row" data-parent="${cid}"><td class="col-name">UTM Content · ${esc(content.name)}</td><td class="col-num">—</td><td class="col-num">${fmt(content.bookings)}</td><td class="col-pace"></td><td class="col-goal"></td><td class="col-num">${fmt(content.showed)}</td><td class="col-pct">${pct(content.showed,content.bookings)}</td><td class="col-num">${fmt(content.qualified)}</td><td class="col-pct">${pct(content.qualified,content.showed)}</td><td class="col-num">—</td><td class="col-pct">—</td><td class="col-rev">—</td><td class="col-num">—</td></tr>`);
    }
   }
  }
@@ -512,8 +506,6 @@ for(const [section,channels] of [['lead_sources',report.channels.filter(c=>c.cha
 body.insertAdjacentHTML('beforeend',`<tr class="total-row">${rowCells({channel:'TOTAL',...t,showed:t.showed,qualified:t.qualified,closed_won:t.closed_won,revenue:t.revenue},true)}</tr>`);
 document.querySelectorAll('.funnel-row').forEach(tr=>tr.addEventListener('click',()=>{const id=tr.dataset.channel;const open=tr.dataset.open==='1';tr.dataset.open=open?'0':'1';document.getElementById(`chev-${id}`).classList.toggle('open',!open);document.querySelectorAll(`.utm-row[data-parent="${id}"]`).forEach(x=>x.classList.toggle('open',!open));}));
 document.querySelectorAll('.utm-row[data-campaign]').forEach(tr=>tr.addEventListener('click',()=>{const id=tr.dataset.campaign;const open=tr.dataset.open==='1';tr.dataset.open=open?'0':'1';document.getElementById(`chev-${id}`).classList.toggle('open',!open);document.querySelectorAll(`.utm-content-row[data-parent="${id}"]`).forEach(x=>x.classList.toggle('open',!open));}));
-document.querySelectorAll('.utm-content-row[data-content]').forEach(tr=>tr.addEventListener('click',()=>{const id=tr.dataset.content;const drawer=document.getElementById(`${id}-meetings`);drawer.classList.toggle('open');}));
-document.querySelectorAll('.expand-link').forEach(button=>button.addEventListener('click',e=>{e.stopPropagation();document.getElementById(button.dataset.drawer).classList.toggle('open');}));
 document.getElementById('source-note').textContent=`${report.lead_source_note} Source cutoff (exclusive): ${report.generated_at}. Rules: ${report.rules_version}. Clock: any non-canceled scheduled meeting starts or advances the 30-day window using scheduled start. ${fmt(report.excluded_repeat_candidates)} candidate bookings fell inside an existing window. Snapshot includes ${fmt(report.counted_meetings)} qualifying first-call credits; held/review and nonqualifying meetings are omitted.`;
 </script>
 </body>

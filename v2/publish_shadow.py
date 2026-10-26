@@ -31,7 +31,32 @@ def public_data(source: Path) -> dict[str, Any]:
     totals = {key: raw["totals"][key] for key in TOTAL_FIELDS}
     channels = []
     for row in raw["channels"]:
-        channels.append({key: row[key] for key in CHANNEL_FIELDS})
+        channel = {key: row[key] for key in CHANNEL_FIELDS}
+        channel["drilldowns"] = []
+        for campaign in row.get("drilldowns", []):
+            content_rows = []
+            campaign_bookings = 0
+            for content in campaign.get("content", []):
+                # Use lead IDs only to deduplicate the aggregate qualification
+                # count. No row-level values are included in public output.
+                qualified_leads = {
+                    str(meeting["lead_id"])
+                    for meeting in content.get("rows", [])
+                    if meeting.get("qualified") and meeting.get("lead_id")
+                }
+                content_rows.append({
+                    "name": content["name"],
+                    "bookings": content["bookings"],
+                    "showed": content["showed"],
+                    "qualified": len(qualified_leads),
+                })
+                campaign_bookings += content["bookings"]
+            channel["drilldowns"].append({
+                "campaign": campaign["campaign"],
+                "bookings": campaign_bookings,
+                "content": content_rows,
+            })
+        channels.append(channel)
     return {
         "generated_at": raw["generated_at"],
         "period": raw["period"],
@@ -40,10 +65,10 @@ def public_data(source: Path) -> dict[str, Any]:
         "excluded_repeat_candidates": raw["excluded_repeat_candidates"],
         "lead_source_note": (
             "Lead source is shown separately from meeting-title booking attribution. "
-            "This public shadow includes aggregate totals only."
+            "UTM campaign and content drilldowns show aggregate counts only."
         ),
         "totals": totals,
-        "channels": [{**row, "drilldowns": []} for row in channels],
+        "channels": channels,
     }
 
 
