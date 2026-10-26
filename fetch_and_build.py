@@ -59,6 +59,7 @@ CF_LEAD_OWNER    = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"  # Lead Owne
 # Match the rep scorecard's Lane 1 roster plus Joe Dysert.
 SCORECARD_BOOKING_OWNERS = {
     "Ariella Irvine", "Christian Hartwell", "Eric Piccione", "Joe Dysert",
+    "Luke Herman", "Robin Perkins", "Joe Vaughan", "Oscar Pugh",
     "Scott Seymour", "Shreya Bechra",
 }
 
