@@ -2,7 +2,7 @@
   "month_key": "2026-10",
   "month_label": "October 2026",
   "grand": {
-    "leads_created": 20117,
+    "leads_created": 20119,
     "booked": 436,
     "showed": 248,
     "qualified": 182,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2456,
+      "leads_created": 2459,
       "booked": 424,
       "showed": 242,
       "qualified": 178,
@@ -19,7 +19,7 @@
       "revenue": 376456.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 17661,
+      "leads_created": 17660,
       "booked": 12,
       "showed": 6,
       "qualified": 4,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 2213,
+      "booked": 105,
+      "book_pct": 4.7,
+      "showed": 59,
+      "show_pct": 56.2,
+      "qualified": 42,
+      "qual_pct": 71.2,
+      "closed": 13,
+      "cw_pct": 12.4,
+      "revenue": 89311.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 111,
       "booked": 230,
@@ -40,30 +52,6 @@
       "cw_pct": 8.7,
       "revenue": 179190.0
     },
-    "Internal Webinar": {
-      "leads_created": 2211,
-      "booked": 105,
-      "book_pct": 4.7,
-      "showed": 59,
-      "show_pct": 56.2,
-      "qualified": 42,
-      "qual_pct": 71.2,
-      "closed": 13,
-      "cw_pct": 12.4,
-      "revenue": 89311.0
-    },
-    "Unknown (Needs Review)": {
-      "leads_created": 17661,
-      "booked": 12,
-      "book_pct": 0.1,
-      "showed": 6,
-      "show_pct": 50.0,
-      "qualified": 4,
-      "qual_pct": 66.7,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Instagram": {
       "leads_created": 25,
       "booked": 18,
@@ -75,6 +63,18 @@
       "closed": 3,
       "cw_pct": 16.7,
       "revenue": 23994.0
+    },
+    "Unknown (Needs Review)": {
+      "leads_created": 17660,
+      "booked": 12,
+      "book_pct": 0.1,
+      "showed": 6,
+      "show_pct": 50.0,
+      "qualified": 4,
+      "qual_pct": 66.7,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "YouTube": {
       "leads_created": 36,
@@ -101,9 +101,9 @@
       "revenue": 0.0
     },
     "Google Ads": {
-      "leads_created": 42,
+      "leads_created": 43,
       "booked": 21,
-      "book_pct": 50.0,
+      "book_pct": 48.8,
       "showed": 11,
       "show_pct": 52.4,
       "qualified": 7,
