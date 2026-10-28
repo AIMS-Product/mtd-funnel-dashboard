@@ -1,16 +1,23 @@
 {
   "week_key": "2026-10-26",
   "month_label": "October 2026 \u00b7 Oct 26\u2013Nov 1",
-  "generated_at": "October 28, 2026 at 12:22 PM PT",
+  "generated_at": "October 28, 2026 at 12:38 PM PT",
   "grand": {
-    "leads_created": 423,
+    "leads_created": 424,
     "booked": 48,
     "showed": 19,
     "qualified": 14,
-    "closed": 8,
+    "closed": 9,
     "revenue": 54670.0
   },
   "funnels": {
+    "Instagram": {
+      "booked": 3,
+      "showed": 3,
+      "qualified": 3,
+      "closed": 2,
+      "revenue": 14497.0
+    },
     "Reactivation Scrapers": {
       "booked": 31,
       "showed": 12,
@@ -24,13 +31,6 @@
       "qualified": 2,
       "closed": 1,
       "revenue": 1188.0
-    },
-    "Instagram": {
-      "booked": 3,
-      "showed": 3,
-      "qualified": 3,
-      "closed": 2,
-      "revenue": 14497.0
     },
     "Unknown (Needs Review)": {
       "booked": 3,
@@ -59,6 +59,13 @@
       "qualified": 0,
       "closed": 1,
       "revenue": 8997.0
+    },
+    "YouTube": {
+      "booked": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed": 1,
+      "revenue": 0.0
     }
   }
 }
