@@ -2,7 +2,7 @@
   "month_key": "2026-10",
   "month_label": "October 2026",
   "grand": {
-    "leads_created": 20171,
+    "leads_created": 20172,
     "booked": 478,
     "showed": 266,
     "qualified": 196,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2482,
+      "leads_created": 2481,
       "booked": 463,
       "showed": 258,
       "qualified": 192,
@@ -19,7 +19,7 @@
       "revenue": 400447.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 17689,
+      "leads_created": 17691,
       "booked": 15,
       "showed": 8,
       "qualified": 4,
@@ -28,20 +28,8 @@
     }
   },
   "funnels": {
-    "Unknown (Needs Review)": {
-      "leads_created": 17689,
-      "booked": 15,
-      "book_pct": 0.1,
-      "showed": 8,
-      "show_pct": 53.3,
-      "qualified": 4,
-      "qual_pct": 50.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Internal Webinar": {
-      "leads_created": 2230,
+      "leads_created": 2229,
       "booked": 119,
       "book_pct": 5.3,
       "showed": 64,
@@ -63,18 +51,6 @@
       "closed": 22,
       "cw_pct": 8.7,
       "revenue": 194184.0
-    },
-    "Google Ads": {
-      "leads_created": 42,
-      "booked": 22,
-      "book_pct": 52.4,
-      "showed": 11,
-      "show_pct": 50.0,
-      "qualified": 7,
-      "qual_pct": 63.6,
-      "closed": 1,
-      "cw_pct": 4.5,
-      "revenue": 5997.0
     },
     "YouTube": {
       "leads_created": 36,
@@ -98,6 +74,30 @@
       "qual_pct": 66.7,
       "closed": 1,
       "cw_pct": 5.9,
+      "revenue": 5997.0
+    },
+    "Unknown (Needs Review)": {
+      "leads_created": 17691,
+      "booked": 15,
+      "book_pct": 0.1,
+      "showed": 8,
+      "show_pct": 53.3,
+      "qualified": 4,
+      "qual_pct": 50.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Google Ads": {
+      "leads_created": 42,
+      "booked": 22,
+      "book_pct": 52.4,
+      "showed": 11,
+      "show_pct": 50.0,
+      "qualified": 7,
+      "qual_pct": 63.6,
+      "closed": 1,
+      "cw_pct": 4.5,
       "revenue": 5997.0
     },
     "Linkedin": {
