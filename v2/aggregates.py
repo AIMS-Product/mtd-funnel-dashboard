@@ -2,7 +2,7 @@
 
 from collections import defaultdict
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 CLOSERS = (
     "Christian Hartwell", "Scott Seymour", "Robin Perkins", "Eric Piccione",
     "Joe Vaughan", "Shreya Bechra", "Luke Herman", "Ariella Irvine",
@@ -52,6 +52,7 @@ def build_breakdowns(bookings, won, users):
         details[channel] = {
             "drilldowns": rollup(booked, closed, lambda row: row[field]),
             "packages": rollup([], closed, lambda row: row["package"]),
+            "setters": rollup(booked, closed, lambda row: owner_name(row["setter"], users)),
         }
     setters = rollup(bookings, won, lambda row: owner_name(row["setter"], users))
     team = rollup(bookings, won, lambda row: owner_name(row["owner"], users)

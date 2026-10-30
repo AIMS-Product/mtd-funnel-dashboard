@@ -107,15 +107,13 @@ def write_exports(data, directory, key):
     write_csv(directory / f"funnel-{key}.csv", funnel_rows(data))
     if data.get("team") or not any(data["totals"][key] for key in ("bookings", "showed", "qualified", "closed_won", "revenue")):
         write_csv(directory / f"team-{key}.csv", team_rows(data))
+    if data.get('setters'):
+        write_csv(directory / f"setters-{key}.csv", [['Setter', *METRICS]] + [[row['value'], *[row[field] for field in METRICS]] for row in data['setters']])
 
 
 def write_comparison(reports, path):
-    months = [{"view": report["view"], "channels": report["channels"], "totals": report["totals"]}
-              for report in reports if report["view"]["kind"] == "month"]
-    payload = json.dumps(months, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e")
-    style = (ROOT / "public/index.template.html").read_text().split("<style>")[1].split("</style>")[0]
-    template = (ROOT / "public/comparison.template.html").read_text()
-    path.write_text(template.replace("__STYLE__", style).replace("__MONTHS__", payload))
+    from archive_ui import write_current_comparison
+    write_current_comparison(reports, path)
 
 
 def main():

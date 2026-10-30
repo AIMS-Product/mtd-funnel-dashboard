@@ -1,0 +1,52 @@
+{
+  "live_month": "2026-10",
+  "live_month_label": "October 2026",
+  "months": [
+    {
+      "key": "2026-10",
+      "label": "October 2026",
+      "is_live": true
+    }
+  ],
+  "weeks": {
+    "2026-10": [
+      {
+        "key": "week-2026-10-26",
+        "label": "Oct 26\u2013Nov 1",
+        "is_current": false
+      },
+      {
+        "key": "week-2026-10-19",
+        "label": "Oct 19\u201325",
+        "is_current": false
+      },
+      {
+        "key": "week-2026-10-12",
+        "label": "Oct 12\u201318",
+        "is_current": false
+      },
+      {
+        "key": "week-2026-10-05",
+        "label": "Oct 5\u201311",
+        "is_current": false
+      },
+      {
+        "key": "week-2026-09-28",
+        "label": "Oct 1\u20134",
+        "is_current": false
+      },
+      {
+        "key": "week-current",
+        "label": "Oct 26\u201330 \u25b6",
+        "is_current": true
+      }
+    ]
+  },
+  "week_months": {
+    "week-2026-09-28": "2026-10",
+    "week-2026-10-05": "2026-10",
+    "week-2026-10-12": "2026-10",
+    "week-2026-10-19": "2026-10",
+    "week-2026-10-26": "2026-10"
+  }
+}

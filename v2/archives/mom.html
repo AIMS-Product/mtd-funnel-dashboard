@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow">
-<title>Month over Month — V2 Funnel Performance</title><style>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Month over Month — Funnel Performance</title>
+<style>
   :root {
     --bg:        #f4f6f9;
     --surface:   #ffffff;
@@ -11,12 +15,9 @@
     --muted:     #8792a2;
     --muted2:    #5c6680;
     --green:     #0e9f6e;
-    --green-dim: #0e9f6e20;
     --red:       #e02424;
-    --red-dim:   #e0242420;
     --amber:     #d97706;
     --blue:      #2563eb;
-    --purple:    #7c3aed;
     --accent:    #4f46e5;
   }
 
@@ -30,428 +31,375 @@
     min-height: 100vh;
   }
 
-  /* Light mode card shadow */
-  .kpi {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
-  }
-  table {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  /* ── Header ── */
   .header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 28px 36px 0;
+    padding: 28px 36px 20px;
   }
-  .header-left h1 {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--text);
-    letter-spacing: -0.01em;
+  .header h1 { font-size: 20px; font-weight: 700; color: var(--text); }
+  .header .sub { font-size: 11.5px; color: var(--muted2); margin-top: 3px; }
+  .back-link {
+    font-size: 12px; color: var(--accent); text-decoration: none;
+    padding: 6px 14px; border: 1px solid var(--border);
+    border-radius: 6px; background: var(--surface); white-space: nowrap;
   }
-  .header-left .sub {
-    font-size: 11.5px;
-    color: var(--muted2);
-    margin-top: 3px;
-  }
-  .header-right {
-    text-align: right;
-    font-size: 11px;
-    color: var(--muted2);
-    line-height: 1.6;
-  }
-  .header-right .snapshot-label {
-    font-weight: 600;
-    color: var(--muted2);
-    display: block;
-  }
+  .back-link:hover { background: var(--surface2); }
 
-  /* ── KPI Cards ── */
-  .kpis {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 14px;
-    padding: 24px 36px;
-  }
-  .kpi {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px 20px;
-    position: relative;
-    overflow: hidden;
-  }
-  .kpi::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--kpi-accent, var(--accent));
-    opacity: 0.6;
-  }
-  .kpi .label {
-    font-size: 10.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: var(--muted2);
-    margin-bottom: 8px;
-  }
-  .kpi .value {
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 1;
-    color: var(--kpi-color, var(--text));
-  }
-  .kpi .kpi-sub {
-    font-size: 11px;
-    color: var(--muted2);
-    margin-top: 5px;
-  }
-  .kpi-goal-pct {
-    position: absolute;
-    top: 18px;
-    right: 20px;
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--muted2);
-  }
-  .kpi-split {
-    display: flex;
-    gap: 6px;
-    margin-top: 10px;
-    padding-top: 9px;
-    border-top: 1px solid var(--border);
-  }
-  .kpi-split-item {
-    flex: 1;
-    background: var(--surface2);
-    border-radius: 6px;
-    padding: 6px 8px;
-  }
-  .kpi-split-item .split-label {
-    font-size: 9.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--muted);
-    margin-bottom: 2px;
-  }
-  .kpi-split-item .split-value {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text);
-    line-height: 1.1;
-  }
-  .compact-stats {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    color: var(--muted2);
-  }
-  .compact-stats strong {
-    color: var(--text);
-    font-weight: 600;
-  }
-  .cs-sep {
-    color: var(--border);
-    font-size: 14px;
-  }
-
-  .kpi-split-item .split-rate {
-    font-size: 10px;
-    color: var(--muted2);
-    margin-top: 1px;
-  }
-
-  /* ── Section label ── */
-  .section-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 6px 36px 10px;
-    font-size: 10.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-  }
-  .section-label::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-
-  /* ── Table ── */
-  .table-wrap {
-    padding: 0 36px 40px;
-    overflow-x: auto;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  thead th {
-    font-size: 10.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--muted);
-    padding: 8px 12px;
-    border-bottom: 1px solid var(--border);
-    white-space: nowrap;
-    font-weight: 500;
-  }
-  thead th.col-num,
-  thead th.col-pct,
-  thead th.col-rev { text-align: right; }
-
-  /* Funnel parent rows */
-  .funnel-row {
-    cursor: pointer;
-    border-top: 1px solid var(--border2);
-    transition: background 0.1s;
-  }
-  .funnel-row:hover { background: rgba(79,70,229,0.04); }
-  .funnel-row td { padding: 11px 12px; }
-
-  /* UTM sub-rows */
-  .utm-row {
-    display: none;
-    background: rgba(79,70,229,0.025);
-  }
-  .utm-row.open { display: table-row; }
-  .utm-row td { padding: 7px 12px; }
-  .utm-row + .utm-row td { border-top: 1px solid var(--border2); }
-
-  .pkg-row { display: none; background: #faf9ff; }
-  .pkg-row.open { display: table-row; }
-  .pkg-row td {
-    padding: 10px 12px;
-    color: var(--muted) !important;
-    font-weight: 400 !important;
-  }
-  .pkg-row + .pkg-row td { border-top: 1px solid var(--border2); }
-  .pkg-row .col-rev  { color: #7bc4a0 !important; font-weight: 400 !important; }
-  .pkg-row .col-num  { color: var(--muted) !important; }
-  .col-pkg {
-    color: var(--muted2) !important;
-    font-size: 12px;
-    padding-left: 28px !important;
-  }
-  .pkg-trigger { cursor: pointer; user-select: none; }
-  .pkg-trigger:hover { opacity: 0.75; }
-  .pkg-chevron {
-    font-size: 11px; color: #c0c8d4; margin-left: 4px;
-    display: inline-block; transition: transform 0.15s;
-  }
-  .pkg-chevron.open { transform: rotate(90deg); color: var(--muted2); }
-
-  /* Total row */
-  .total-row {
-    border-top: 2px solid var(--border);
-    font-weight: 700;
-    background: var(--surface2);
-    color: var(--text);
-  }
-  .total-row td { padding: 12px 12px; }
-
-  /* Cell types */
-  .col-name   { min-width: 190px; font-weight: 500; white-space: nowrap; }
-  .col-utm    { color: var(--muted2); padding-left: 32px !important; font-weight: 400; }
-  .col-num    { text-align: right; color: var(--text); }
-  .col-pct    { text-align: right; font-weight: 500; }
-  .col-rev    { text-align: right; color: var(--green); font-weight: 500; }
-
-  /* Excluded-from-totals funnel rows — grayed out */
-  .funnel-row-excluded td { color: var(--muted) !important; }
-  .funnel-row-excluded .col-rev { color: var(--muted) !important; }
-  .funnel-row-excluded .col-pct { color: var(--muted) !important; }
-  .funnel-row-excluded .col-pace { color: var(--muted) !important; }
-  .funnel-row-excluded .col-goal { color: var(--muted) !important; }
-
-  .col-pct.good { color: var(--green); }
-  .col-pct.bad  { color: var(--red); }
-  .col-pct.mid  { color: var(--amber); }
-
-  .col-pace  { text-align: right; font-size: 12px; color: var(--muted); }
-  .col-goal  { text-align: right; font-size: 12px; color: var(--muted); }
-  .col-pace.pace-exceed  { color: var(--green); font-weight: 600; }
-  .col-pace.pace-on      { color: #ca8a04;      font-weight: 500; }
-  .col-pace.pace-behind  { color: var(--red);   font-weight: 500; }
-
-  /* Chevron toggle */
-  .chevron {
-    display: inline-block;
-    width: 16px;
-    color: var(--muted);
-    font-size: 14px;
-    transition: transform 0.15s ease;
-    transform: rotate(0deg);
-    line-height: 1;
-  }
-  .chevron.open { transform: rotate(90deg); color: var(--accent); }
-
-  /* Section header rows */
-  .section-header-row td {
-    padding: 16px 12px 6px;
-    font-size: 10.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    font-weight: 700;
-    border-top: 2px solid var(--border);
-    background: transparent;
-    cursor: pointer;
-    user-select: none;
-  }
-  .section-header-row td:hover { color: #a5b4fc; }
-  .section-header-row:first-child td { border-top: none; }
-  .section-chevron {
-    display: inline-block;
-    width: 14px;
-    margin-right: 4px;
-    transition: transform 0.15s ease;
-    opacity: 0.7;
-  }
-  .section-chevron.open { transform: rotate(90deg); }
-
-  /* Progress bar mini (optional decoration on booked column) */
-  /* Pickers row */
-  .pickers-row {
+  /* ── Month toggle pills ── */
+  .month-toggles {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 6px;
+    padding: 0 36px 20px;
     flex-wrap: wrap;
-    justify-content: flex-end;
   }
-  /* Month picker */
-  .month-picker {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
-  .month-picker select, .week-picker select {
-    background: var(--surface);
-    color: var(--text);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 5px 10px;
-    font-size: 12px;
-    cursor: pointer;
-    outline: none;
-  }
-  .month-picker select:hover, .week-picker select:hover {
-    border-color: var(--accent);
-  }
-  /* Week picker */
-  .week-picker {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
-  .picker-divider {
-    color: var(--border);
-    font-size: 16px;
-    line-height: 1;
-    margin: 0 2px;
-  }
-  .archive-badge {
-    display: inline-block;
-    background: #fef3c7;
-    color: #92400e;
-    border: 1px solid #fcd34d;
-    border-radius: 4px;
-    font-size: 10px;
+  .toggle-label {
+    font-size: 11px;
     font-weight: 600;
-    padding: 2px 7px;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
+    letter-spacing: 0.07em;
+    color: var(--muted);
+    margin-right: 4px;
   }
-
-  /* CSV download button */
-  .csv-download-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--surface);
-    color: var(--muted2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 6px 12px;
+  .month-pill {
     font-size: 12px;
-    font-family: inherit;
+    font-weight: 500;
+    padding: 5px 13px;
+    border-radius: 20px;
+    border: 1.5px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
     cursor: pointer;
+    user-select: none;
+    transition: all 0.15s;
     white-space: nowrap;
-    flex-shrink: 0;
   }
-  .csv-download-btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
+  .month-pill.off {
+    background: transparent;
+    color: var(--muted);
+    border-color: var(--border);
+  }
+  .month-pill:hover { opacity: 0.8; }
+
+  .state-msg {
+    text-align: center; padding: 60px 36px;
+    color: var(--muted); font-size: 14px;
   }
 
-  @media (max-width: 960px) {
-    .kpis { grid-template-columns: repeat(2, 1fr); }
+  .table-wrap { padding: 0 36px 48px; overflow-x: auto; }
+  table {
+    width: auto; border-collapse: collapse;
+    background: var(--surface); border-radius: 10px;
+    overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .month-header th {
+    padding: 10px 8px 6px; font-size: 12px; font-weight: 700;
+    text-align: center; border-bottom: 1px solid var(--border);
+    border-right: 2px solid var(--border); color: var(--text);
+    background: var(--surface2); white-space: nowrap;
+  }
+  .month-header th:last-child { border-right: none; }
+  .month-header .col-funnel-head {
+    text-align: left; font-size: 10.5px; text-transform: uppercase;
+    letter-spacing: 0.07em; color: var(--muted); font-weight: 500;
+    border-right: 1px solid var(--border);
+  }
+
+  .sub-header th {
+    padding: 5px 8px 8px; font-size: 9.5px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+    text-align: right; border-bottom: 2px solid var(--border); white-space: nowrap;
+  }
+  .sub-header .last-in-group { border-right: 2px solid var(--border); }
+
+  .section-row td {
+    padding: 14px 12px 5px; font-size: 10.5px; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--accent); font-weight: 700;
+    border-top: 2px solid var(--border); background: transparent;
+  }
+
+  tr.data-row { border-top: 1px solid var(--border2); }
+  tr.data-row:hover { background: rgba(79,70,229,0.02); }
+  tr.data-row td { padding: 9px 8px; vertical-align: middle; }
+
+  .col-funnel {
+    font-weight: 500; min-width: 160px; border-right: 1px solid var(--border);
+    padding-left: 12px !important; white-space: nowrap;
+  }
+  .col-num   { text-align: right; }
+  .col-pct   { text-align: right; font-weight: 500; }
+  .col-rev   { text-align: right; color: var(--green); font-weight: 500; }
+  .col-last  { border-right: 2px solid var(--border); }
+
+  .pct-good  { color: var(--green); }
+  .pct-mid   { color: var(--amber); }
+  .pct-bad   { color: var(--red); }
+
+  tr.total-row { border-top: 2px solid var(--border); font-weight: 700; background: var(--surface2); }
+  tr.total-row td { padding: 11px 8px; }
+  tr.excl-row td { color: var(--muted) !important; }
+
+  /* Hidden month columns */
+  .mc-hidden { display: none !important; }
+
+  @media (max-width: 768px) {
     .header { flex-direction: column; gap: 12px; }
-    .header-right { text-align: left; }
+    .table-wrap { padding: 0 12px 36px; }
+    .month-toggles { padding: 0 12px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>Month over Month — Funnel Performance</h1>
+    <p class="sub" id="subtitle">Loading...</p>
+  </div>
+  <a class="back-link" href="/mtd-funnel-dashboard/v2/index.html">← Live Dashboard</a>
+</div>
+
+<div class="month-toggles" id="toggles"></div>
+
+<div id="content">
+  <div class="state-msg">Loading month data...</div>
+</div>
+
+<script>
+const BASE         = '/mtd-funnel-dashboard/v2';
+const EXCLUDED     = new Set(['LTF - Quiz Funnel']);
+const FUNNEL_ORDER = [
+  'YouTube', 'Meta Ads', 'VSL', 'Website', 'Internal Webinar',
+  'Mike Newsletter', 'Side Hustle Nation', 'WWWS', 'Tik Tok',
+  'Anthony IG', 'Passivepreneurs', 'Reactivation Email',
+  'Reactivation Scrapers', 'Sales Reactivation', 'Referred',
+  'LinkedIn Ads', 'Google Ads', 'YouTube Ads', 'LTF - In-House',
+  'Low Ticket Funnel', 'Instagram', 'X', 'Linkedin',
+];
+const GROUPS = {
+  'LEAD SOURCES': ['YouTube', 'Meta Ads', 'VSL', 'Website', 'Internal Webinar',
+                   'Mike Newsletter', 'Side Hustle Nation', 'WWWS', 'Tik Tok',
+                   'Anthony IG', 'Passivepreneurs', 'Reactivation Email',
+                   'Reactivation Scrapers', 'Sales Reactivation', 'Referred',
+                   'LinkedIn Ads', 'Google Ads', 'YouTube Ads', 'LTF - In-House',
+                   'Low Ticket Funnel', 'Instagram', 'X', 'Linkedin'],
+  'UNCATEGORIZED': ['Unknown (Needs Review)', 'No Attribution'],
+};
+
+// Track which months are visible
+const hiddenMonths = new Set();
+
+function mcClass(key) { return 'mc-' + key.replace(/-/g, '_'); }
+
+function toggleMonth(key) {
+  const cls = mcClass(key);
+  const pill = document.getElementById('pill-' + key);
+  if (hiddenMonths.has(key)) {
+    hiddenMonths.delete(key);
+    document.querySelectorAll('.' + cls).forEach(el => el.classList.remove('mc-hidden'));
+    if (pill) pill.classList.remove('off');
+  } else {
+    hiddenMonths.add(key);
+    document.querySelectorAll('.' + cls).forEach(el => el.classList.add('mc-hidden'));
+    if (pill) pill.classList.add('off');
+  }
+}
+
+function renderToggles(months) {
+  const wrap = document.getElementById('toggles');
+  const label = document.createElement('span');
+  label.className = 'toggle-label';
+  label.textContent = 'Show months:';
+  wrap.appendChild(label);
+  months.forEach(m => {
+    const pill = document.createElement('button');
+    pill.className = 'month-pill';
+    pill.id = 'pill-' + m.month_key;
+    pill.textContent = m.label;
+    pill.onclick = () => toggleMonth(m.month_key);
+    wrap.appendChild(pill);
+  });
+}
+
+function fmt(n)  { return n == null ? '—' : n.toLocaleString(); }
+function fmtR(n) { return n ? '$' + Math.round(n).toLocaleString() : '$0'; }
+function fmtP(p) { return p == null ? '—' : p.toFixed(1) + '%'; }
+function pClass(p, high, low) {
+  if (p == null) return '';
+  return p >= high ? 'pct-good' : p < low ? 'pct-bad' : 'pct-mid';
+}
+
+function funnelCells(fdata, months) {
+  return months.map((m, mi) => {
+    const f    = fdata && fdata[m.month_key] ? fdata[m.month_key] : null;
+    const last = mi === months.length - 1;
+    const cls  = mcClass(m.month_key);
+    const bo   = f ? f.booked   : null;
+    const sh   = f ? f.show_pct : null;
+    const qu   = f ? f.qual_pct : null;
+    const cw   = f ? f.cw_pct   : null;
+    const rev  = f ? f.revenue  : null;
+    return `
+      <td class="col-num ${cls}">${fmt(bo)}</td>
+      <td class="col-pct ${pClass(sh,65,50)} ${cls}">${fmtP(sh)}</td>
+      <td class="col-pct ${pClass(qu,50,35)} ${cls}">${fmtP(qu)}</td>
+      <td class="col-pct ${pClass(cw,12,7)} ${cls}">${fmtP(cw)}</td>
+      <td class="col-rev${last ? '' : ' col-last'} ${cls}">${fmtR(rev)}</td>`;
+  }).join('');
+}
+
+function buildTable(months, allData) {
+  const nMonths = months.length;
+
+  // Month header — each th gets the mc class for hiding
+  let monthHead = `<th class="col-funnel-head" rowspan="2">Funnel</th>`;
+  months.forEach((m, i) => {
+    const last = i === months.length - 1;
+    const cls  = mcClass(m.month_key);
+    monthHead += `<th colspan="5" class="${cls}" style="${last ? '' : 'border-right:2px solid var(--border);'}">${m.label}</th>`;
+  });
+
+  // Sub-header
+  let subHead = '';
+  months.forEach((m, i) => {
+    const last = i === months.length - 1;
+    const cls  = mcClass(m.month_key);
+    subHead += `
+      <th class="col-num ${cls}">Booked</th>
+      <th class="col-pct ${cls}">Show %</th>
+      <th class="col-pct ${cls}">Qual %</th>
+      <th class="col-pct ${cls}">CW %</th>
+      <th class="col-rev${last ? '' : ' last-in-group'} ${cls}">Revenue</th>`;
+  });
+
+  // Build funnel lookup
+  const funnelData = {};
+  months.forEach(m => {
+    const d = allData[m.month_key];
+    if (!d) return;
+    Object.entries(d.funnels || {}).forEach(([fn, vals]) => {
+      if (!funnelData[fn]) funnelData[fn] = {};
+      funnelData[fn][m.month_key] = vals;
+    });
+  });
+
+  const allFunnels = new Set([...FUNNEL_ORDER, ...Object.keys(funnelData)]);
+  let rows = '';
+  let claimedFunnels = new Set();
+
+  Object.entries(GROUPS).forEach(([groupName, groupFunnels]) => {
+    const activeInGroup = groupFunnels.filter(fn =>
+      Object.values(funnelData[fn] || {}).some(v => v.booked > 0 || v.closed > 0)
+    );
+    if (activeInGroup.length === 0) return;
+
+    rows += `<tr class="section-row"><td colspan="${1 + nMonths * 5}">Funnel Breakdown — ${groupName}</td></tr>`;
+
+    groupFunnels.forEach(fn => {
+      claimedFunnels.add(fn);
+      const hasData = Object.values(funnelData[fn] || {}).some(v => v && (v.booked > 0 || v.closed > 0));
+      if (!hasData && !EXCLUDED.has(fn)) return;
+      const isExcl = EXCLUDED.has(fn);
+      rows += `<tr class="data-row${isExcl ? ' excl-row' : ''}">
+        <td class="col-funnel">${isExcl ? fn + ' *' : fn}</td>
+        ${funnelCells(funnelData[fn], months)}
+      </tr>`;
+    });
+  });
+
+  // Other
+  const extras = [...allFunnels].filter(fn => !claimedFunnels.has(fn) && !EXCLUDED.has(fn));
+  const activeExtras = extras.filter(fn =>
+    Object.values(funnelData[fn] || {}).some(v => v && (v.booked > 0 || v.closed > 0))
+  );
+  if (activeExtras.length > 0) {
+    rows += `<tr class="section-row"><td colspan="${1 + nMonths * 5}">Funnel Breakdown — Other</td></tr>`;
+    activeExtras.forEach(fn => {
+      rows += `<tr class="data-row"><td class="col-funnel">${fn}</td>${funnelCells(funnelData[fn], months)}</tr>`;
+    });
   }
 
-  .shadow-tag{display:inline-block;margin-left:9px;padding:3px 7px;border:1px solid #c7d2fe;border-radius:4px;background:#eef2ff;color:var(--accent);font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;vertical-align:middle}
-  [hidden]{display:none!important}
-  .col-goal{white-space:nowrap}
-  .funnel-row .expand-link{color:inherit;font-size:inherit;text-align:left}
-  .section-header-row .expand-link{font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-  .report-actions{display:flex;gap:8px;flex-wrap:wrap}
-  .kpi .kpi-sub{line-height:1.35}
-  .kpi .goal-target{display:inline-block;font-size:15px;font-weight:400;color:var(--muted);margin-left:10px;line-height:1.6}
-  .kpi .recurring-revenue{color:#449d75;font-weight:600}
-  .kpi .monthly-goal-label{font-size:12px}
-  .compact-stats{flex-wrap:wrap}
-  .report-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:0 36px 20px;color:var(--muted);font-size:11px;line-height:1.7}
-  .section-note{padding:0 36px 10px;color:var(--muted2);font-size:11px}
-  .utm-row .col-name{padding-left:30px!important;color:var(--muted2);font-weight:400}
-  .utm-content-row{display:none;background:rgba(79,70,229,.018)}
-  .utm-content-row.open{display:table-row}
-  .utm-content-row td{padding:8px 12px;border-top:1px solid var(--border2)}
-  .utm-content-row .col-name{padding-left:48px!important;color:var(--muted2);font-weight:400}
-  .channel-meta{font-size:10px;font-weight:400;color:var(--muted);padding:3px 0 0 17px;white-space:nowrap}
-  .expand-link{border:0;background:transparent;color:var(--accent);font:inherit;font-size:11px;cursor:pointer}
-  .expand-link:hover{text-decoration:underline}
-  .meeting-drawer{display:none;background:#faf9ff;padding:10px 14px;border-top:1px solid var(--border2)}
-  .meeting-drawer.open{display:block}
-  .meeting-drawer table{box-shadow:none;border-radius:0;min-width:800px;background:transparent}
-  .meeting-drawer th{font-size:9px;text-align:left;padding:6px 8px}
-  .meeting-drawer td{font-size:11px;text-align:left;padding:7px 8px;color:var(--muted2)}
-  .meeting-drawer a{color:var(--accent);text-decoration:none}
-  .meeting-drawer a:hover{text-decoration:underline}
-  .unavailable{color:var(--muted);font-size:11px;padding:0 36px 30px;line-height:1.5}
-  @media(max-width:960px){.section-note,.unavailable{padding-left:16px;padding-right:16px}.table-wrap{padding-left:16px;padding-right:16px}.kpis{gap:10px;padding-left:16px;padding-right:16px}}
+  // Totals
+  const totalCells = months.map((m, i) => {
+    const d   = allData[m.month_key];
+    const g   = d ? d.grand : null;
+    const last = i === months.length - 1;
+    const cls  = mcClass(m.month_key);
+    const bo  = g ? g.booked : null;
+    const sh  = g && bo ? g.showed / bo * 100    : null;
+    const qu  = g && g.showed ? g.qualified / g.showed * 100 : null;
+    const cw  = g && bo ? g.closed / bo * 100    : null;
+    const rv  = g ? g.revenue : null;
+    return `
+      <td class="col-num ${cls}">${fmt(bo)}</td>
+      <td class="col-pct ${pClass(sh,65,50)} ${cls}">${fmtP(sh)}</td>
+      <td class="col-pct ${pClass(qu,50,35)} ${cls}">${fmtP(qu)}</td>
+      <td class="col-pct ${pClass(cw,12,7)} ${cls}">${fmtP(cw)}</td>
+      <td class="col-rev${last ? '' : ' col-last'} ${cls}">${fmtR(rv)}</td>`;
+  }).join('');
 
-.month-toggles{padding:24px 36px;display:flex;gap:14px;flex-wrap:wrap}.month-toggles label{display:flex;gap:6px;align-items:center}.comparison-note{padding:10px 36px 24px;color:var(--muted2)}.header a{color:var(--accent)}
-</style></head><body>
-<div class="header"><div class="header-left"><h1>Month over Month <span class="shadow-tag">V2</span></h1><p class="sub">Funnel performance using V2 booking and attribution rules · October 2026 onward</p></div><a href="../index.html">← Back to V2</a></div>
-<div class="month-toggles" id="months"></div>
-<p class="comparison-note" id="note"></p><div class="table-wrap"><table><thead id="head"></thead><tbody id="rows"></tbody></table></div>
-<script id="comparison-data" type="application/json">[{"view": {"key": "2026-10", "kind": "month", "month": "2026-10", "start": "2026-10-01", "end": "2026-10-30", "end_exclusive": "2026-11-01", "frozen": false, "label": "October 2026"}, "channels": [{"channel": "Internal Webinar", "leads_created": 2456, "bookings": 209, "marketing": 94, "lane2": 102, "social_dms": 13, "showed": 87, "qualified": 64, "closed_won": 16, "revenue": 116302.0, "unrecoverable_booked_leads": 0, "drilldowns": [{"value": "oct06_end_cta", "bookings": 28, "marketing": 28, "lane2": 0, "social_dms": 0, "showed": 22, "qualified": 16, "closed_won": 3, "revenue": 25341.0, "formats": {"show": "78.6%", "qualified": "72.7%", "qualified_booked": "57.1%", "close": "10.7%", "qualified_close": "18.8%", "revenue": "$25,341", "average": "$8,447"}}, {"value": "oct06", "bookings": 23, "marketing": 4, "lane2": 16, "social_dms": 3, "showed": 7, "qualified": 10, "closed_won": 1, "revenue": 8997.0, "formats": {"show": "30.4%", "qualified": "142.9%", "qualified_booked": "43.5%", "close": "4.3%", "qualified_close": "10.0%", "revenue": "$8,997", "average": "$8,997"}}, {"value": "oct27", "bookings": 22, "marketing": 20, "lane2": 2, "social_dms": 0, "showed": 8, "qualified": 4, "closed_won": 0, "revenue": 0, "formats": {"show": "36.4%", "qualified": "50.0%", "qualified_booked": "18.2%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "oct20_end_cta", "bookings": 12, "marketing": 12, "lane2": 0, "social_dms": 0, "showed": 6, "qualified": 5, "closed_won": 2, "revenue": 11997.0, "formats": {"show": "50.0%", "qualified": "83.3%", "qualified_booked": "41.7%", "close": "16.7%", "qualified_close": "40.0%", "revenue": "$11,997", "average": "$5,998"}}, {"value": "aug25", "bookings": 12, "marketing": 0, "lane2": 11, "social_dms": 1, "showed": 5, "qualified": 2, "closed_won": 1, "revenue": 8997.0, "formats": {"show": "41.7%", "qualified": "40.0%", "qualified_booked": "16.7%", "close": "8.3%", "qualified_close": "50.0%", "revenue": "$8,997", "average": "$8,997"}}, {"value": "sept22", "bookings": 11, "marketing": 0, "lane2": 11, "social_dms": 0, "showed": 3, "qualified": 1, "closed_won": 1, "revenue": 1188.0, "formats": {"show": "27.3%", "qualified": "33.3%", "qualified_booked": "9.1%", "close": "9.1%", "qualified_close": "100.0%", "revenue": "$1,188", "average": "$1,188"}}, {"value": "sept29", "bookings": 9, "marketing": 1, "lane2": 7, "social_dms": 1, "showed": 4, "qualified": 4, "closed_won": 2, "revenue": 17997.0, "formats": {"show": "44.4%", "qualified": "100.0%", "qualified_booked": "44.4%", "close": "22.2%", "qualified_close": "50.0%", "revenue": "$17,997", "average": "$8,998"}}, {"value": "oct13_end_cta", "bookings": 9, "marketing": 9, "lane2": 0, "social_dms": 0, "showed": 2, "qualified": 3, "closed_won": 1, "revenue": 5997.0, "formats": {"show": "22.2%", "qualified": "150.0%", "qualified_booked": "33.3%", "close": "11.1%", "qualified_close": "33.3%", "revenue": "$5,997", "average": "$5,997"}}, {"value": "oct13", "bookings": 9, "marketing": 4, "lane2": 4, "social_dms": 1, "showed": 2, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "22.2%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "July29", "bookings": 8, "marketing": 0, "lane2": 8, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 1, "revenue": 6897.0, "formats": {"show": "12.5%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "12.5%", "qualified_close": "—", "revenue": "$6,897", "average": "$6,897"}}, {"value": "mariam", "bookings": 7, "marketing": 0, "lane2": 0, "social_dms": 7, "showed": 6, "qualified": 3, "closed_won": 1, "revenue": 6897.0, "formats": {"show": "85.7%", "qualified": "50.0%", "qualified_booked": "42.9%", "close": "14.3%", "qualified_close": "33.3%", "revenue": "$6,897", "average": "$6,897"}}, {"value": "oct20", "bookings": 7, "marketing": 3, "lane2": 4, "social_dms": 0, "showed": 1, "qualified": 2, "closed_won": 0, "revenue": 0, "formats": {"show": "14.3%", "qualified": "200.0%", "qualified_booked": "28.6%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "sept15", "bookings": 7, "marketing": 1, "lane2": 6, "social_dms": 0, "showed": 4, "qualified": 3, "closed_won": 0, "revenue": 0, "formats": {"show": "57.1%", "qualified": "75.0%", "qualified_booked": "42.9%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "sept01", "bookings": 6, "marketing": 0, "lane2": 6, "social_dms": 0, "showed": 3, "qualified": 2, "closed_won": 0, "revenue": 0, "formats": {"show": "50.0%", "qualified": "66.7%", "qualified_booked": "33.3%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "june16_end_cta", "bookings": 4, "marketing": 0, "lane2": 4, "social_dms": 0, "showed": 0, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "25.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "aug11", "bookings": 3, "marketing": 0, "lane2": 3, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 8997.0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "33.3%", "qualified_close": "—", "revenue": "$8,997", "average": "$8,997"}}, {"value": "june30_end_cta", "bookings": 3, "marketing": 0, "lane2": 3, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 1, "revenue": 5997.0, "formats": {"show": "33.3%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "33.3%", "qualified_close": "—", "revenue": "$5,997", "average": "$5,997"}}, {"value": "oct27_end_cta", "bookings": 3, "marketing": 3, "lane2": 0, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "33.3%", "qualified": "100.0%", "qualified_booked": "33.3%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "sept08", "bookings": 3, "marketing": 0, "lane2": 3, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "33.3%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "sept15_end_cta", "bookings": 3, "marketing": 3, "lane2": 0, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "33.3%", "qualified": "100.0%", "qualified_booked": "33.3%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "_____", "bookings": 2, "marketing": 2, "lane2": 0, "social_dms": 0, "showed": 2, "qualified": 2, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "aug18", "bookings": 2, "marketing": 0, "lane2": 2, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "50.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "feb24_end_cta", "bookings": 2, "marketing": 0, "lane2": 2, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "50.0%", "qualified": "100.0%", "qualified_booked": "50.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "july14", "bookings": 2, "marketing": 1, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "50.0%", "qualified": "100.0%", "qualified_booked": "50.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "mar24_end_cta", "bookings": 2, "marketing": 0, "lane2": 2, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "50.0%", "qualified": "100.0%", "qualified_booked": "50.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "120244489618170338", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "120251611309120338", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "July23", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "May19", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "apr21_end_cta", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "cef82523-c39f-4c02-9f60-fab286c6dfc9", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "feb3_end_cta", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "free-market-analysis", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "may19_end_cta", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "sept29_end_cta", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "aug25_end_cta", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 7000.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$7,000", "average": "$7,000"}}], "packages": [{"value": "Silver - $8,997 · Basic", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 6, "revenue": 55332.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$55,332", "average": "$9,222"}}, {"value": "Bronze - $5,997 · Community", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 7, "revenue": 44785.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$44,785", "average": "$6,398"}}, {"value": "Silver - $8,997 · Free", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 9000.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$9,000", "average": "$9,000"}}, {"value": "Bronze - $5,997 · Basic", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 5997.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$5,997", "average": "$5,997"}}, {"value": "VendHub - Basic $1,188 · Community", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 1188.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$1,188", "average": "$1,188"}}], "display": {"projected": 216, "goal": 70, "goal_pct": 299, "pace": "pace-exceed"}, "formats": {"show": "41.6%", "qualified": "73.6%", "qualified_booked": "30.6%", "close": "7.7%", "qualified_close": "25.0%", "revenue": "$116,302", "average": "$7,269"}}, {"channel": "Unknown (Needs Review)", "leads_created": 22621, "bookings": 169, "marketing": 49, "lane2": 117, "social_dms": 3, "showed": 61, "qualified": 64, "closed_won": 11, "revenue": 104964.0, "unrecoverable_booked_leads": 165, "drilldowns": [{"value": "Unattributed", "bookings": 152, "marketing": 39, "lane2": 110, "social_dms": 3, "showed": 53, "qualified": 57, "closed_won": 11, "revenue": 104964.0, "formats": {"show": "34.9%", "qualified": "107.5%", "qualified_booked": "37.5%", "close": "7.2%", "qualified_close": "19.3%", "revenue": "$104,964", "average": "$9,542"}}, {"value": "_____", "bookings": 10, "marketing": 8, "lane2": 2, "social_dms": 0, "showed": 4, "qualified": 4, "closed_won": 0, "revenue": 0, "formats": {"show": "40.0%", "qualified": "100.0%", "qualified_booked": "40.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "email", "bookings": 2, "marketing": 1, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "50.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "VSL Leads campaign", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "book_meeting", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 0, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "lc", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "new-follower", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "wescale", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}], "packages": [{"value": "Scale - $14,997 · Pro", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 3, "revenue": 50997.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$50,997", "average": "$16,999"}}, {"value": "Silver - $8,997 · Basic", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 3, "revenue": 26991.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$26,991", "average": "$8,997"}}, {"value": "Bronze - $5,997 · Community", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 4, "revenue": 25788.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$25,788", "average": "$6,447"}}, {"value": "VendHub - Basic $1,188 · Community", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 1188.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$1,188", "average": "$1,188"}}], "display": {"projected": 175, "goal": null, "goal_pct": null, "pace": ""}, "formats": {"show": "36.1%", "qualified": "104.9%", "qualified_booked": "37.9%", "close": "6.5%", "qualified_close": "17.2%", "revenue": "$104,964", "average": "$9,542"}}, {"channel": "Google Ads", "leads_created": 80, "bookings": 66, "marketing": 31, "lane2": 35, "social_dms": 0, "showed": 28, "qualified": 16, "closed_won": 2, "revenue": 14994.0, "unrecoverable_booked_leads": 0, "drilldowns": [{"value": "23805931083", "bookings": 41, "marketing": 19, "lane2": 22, "social_dms": 0, "showed": 17, "qualified": 7, "closed_won": 2, "revenue": 14994.0, "formats": {"show": "41.5%", "qualified": "41.2%", "qualified_booked": "17.1%", "close": "4.9%", "qualified_close": "28.6%", "revenue": "$14,994", "average": "$7,497"}}, {"value": "23815771816", "bookings": 24, "marketing": 11, "lane2": 13, "social_dms": 0, "showed": 10, "qualified": 9, "closed_won": 0, "revenue": 0, "formats": {"show": "41.7%", "qualified": "90.0%", "qualified_booked": "37.5%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "23883800856", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}], "packages": [{"value": "Silver - $8,997 · Basic", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 8997.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$8,997", "average": "$8,997"}}, {"value": "Bronze - $5,997 · Community", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 5997.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$5,997", "average": "$5,997"}}], "display": {"projected": 68, "goal": null, "goal_pct": null, "pace": ""}, "formats": {"show": "42.4%", "qualified": "57.1%", "qualified_booked": "24.2%", "close": "3.0%", "qualified_close": "12.5%", "revenue": "$14,994", "average": "$7,497"}}, {"channel": "YouTube", "leads_created": 73, "bookings": 66, "marketing": 37, "lane2": 29, "social_dms": 0, "showed": 31, "qualified": 26, "closed_won": 12, "revenue": 85411.0, "unrecoverable_booked_leads": 0, "drilldowns": [{"value": "youtube-home", "bookings": 12, "marketing": 7, "lane2": 5, "social_dms": 0, "showed": 7, "qualified": 5, "closed_won": 2, "revenue": 10188.0, "formats": {"show": "58.3%", "qualified": "71.4%", "qualified_booked": "41.7%", "close": "16.7%", "qualified_close": "40.0%", "revenue": "$10,188", "average": "$5,094"}}, {"value": "start-vending-business", "bookings": 4, "marketing": 2, "lane2": 2, "social_dms": 0, "showed": 1, "qualified": 2, "closed_won": 1, "revenue": 5997.0, "formats": {"show": "25.0%", "qualified": "200.0%", "qualified_booked": "50.0%", "close": "25.0%", "qualified_close": "50.0%", "revenue": "$5,997", "average": "$5,997"}}, {"value": "start_vending_2026", "bookings": 4, "marketing": 3, "lane2": 1, "social_dms": 0, "showed": 3, "qualified": 3, "closed_won": 1, "revenue": 5997.0, "formats": {"show": "75.0%", "qualified": "100.0%", "qualified_booked": "75.0%", "close": "25.0%", "qualified_close": "33.3%", "revenue": "$5,997", "average": "$5,997"}}, {"value": "vending-101", "bookings": 3, "marketing": 2, "lane2": 1, "social_dms": 0, "showed": 2, "qualified": 1, "closed_won": 2, "revenue": 11997.0, "formats": {"show": "66.7%", "qualified": "50.0%", "qualified_booked": "33.3%", "close": "66.7%", "qualified_close": "200.0%", "revenue": "$11,997", "average": "$5,998"}}, {"value": "best-contract-vending", "bookings": 3, "marketing": 1, "lane2": 2, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "buy-first-machine", "bookings": 3, "marketing": 2, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "33.3%", "qualified": "100.0%", "qualified_booked": "33.3%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "first-vending-machine", "bookings": 3, "marketing": 1, "lane2": 2, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "33.3%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "negotiate-vending-deals", "bookings": 3, "marketing": 2, "lane2": 1, "social_dms": 0, "showed": 2, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "66.7%", "qualified": "50.0%", "qualified_booked": "33.3%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "start-vending-2025", "bookings": 2, "marketing": 1, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 2, "revenue": 15894.0, "formats": {"show": "50.0%", "qualified": "100.0%", "qualified_booked": "50.0%", "close": "100.0%", "qualified_close": "200.0%", "revenue": "$15,894", "average": "$7,947"}}, {"value": "anthony", "bookings": 2, "marketing": 2, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "build-from-zero", "bookings": 2, "marketing": 0, "lane2": 2, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "dont-start-vending", "bookings": 2, "marketing": 1, "lane2": 1, "social_dms": 0, "showed": 2, "qualified": 2, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "lc", "bookings": 2, "marketing": 0, "lane2": 2, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "50.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "married-couple-36k", "bookings": 2, "marketing": 1, "lane2": 1, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "shouldnt-start-vending", "bookings": 2, "marketing": 2, "lane2": 0, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "50.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "vending-legal", "bookings": 2, "marketing": 2, "lane2": 0, "social_dms": 0, "showed": 2, "qualified": 2, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "vending-machine-location", "bookings": 2, "marketing": 0, "lane2": 2, "social_dms": 0, "showed": 2, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "book-a-call", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 1, "revenue": 5997.0, "formats": {"show": "100.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "100.0%", "qualified_close": "—", "revenue": "$5,997", "average": "$5,997"}}, {"value": "10-mistakes-vending", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "100-vending-locations", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "50k-1-year", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "flop", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "high-margin-products", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "how-to-start-a-vending-machine-business-in-2025-free-course", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 0, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "how-to-start-a-vending-machine-business-step-by-step-with-0", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "laid-off-102k", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "moosa-saidy", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 0, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "pokemon", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "should_you_buy_or_build_a_vending_route", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "why-you-shouldnt-start-2025", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "diy", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 11347.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$11,347", "average": "$11,347"}}, {"value": "book_meeting", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 8997.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$8,997", "average": "$8,997"}}, {"value": "routes-scaled-500", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 8997.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$8,997", "average": "$8,997"}}], "packages": [{"value": "Bronze - $5,997 · Community", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 5, "revenue": 30888.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$30,888", "average": "$6,178"}}, {"value": "Silver - $8,997 · Basic", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 3, "revenue": 26994.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$26,994", "average": "$8,998"}}, {"value": "Silver - $8,997 · Community", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 2, "revenue": 20344.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$20,344", "average": "$10,172"}}, {"value": "Bronze - $5,997 · Basic", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 5997.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$5,997", "average": "$5,997"}}, {"value": "Unknown", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 1188.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$1,188", "average": "$1,188"}}], "display": {"projected": 68, "goal": 132, "goal_pct": 50, "pace": "pace-behind"}, "formats": {"show": "47.0%", "qualified": "83.9%", "qualified_booked": "39.4%", "close": "18.2%", "qualified_close": "46.2%", "revenue": "$85,411", "average": "$7,118"}}, {"channel": "Instagram", "leads_created": 33, "bookings": 30, "marketing": 2, "lane2": 13, "social_dms": 15, "showed": 18, "qualified": 15, "closed_won": 5, "revenue": 43338.0, "unrecoverable_booked_leads": 0, "drilldowns": [{"value": "book-call", "bookings": 7, "marketing": 0, "lane2": 1, "social_dms": 6, "showed": 4, "qualified": 2, "closed_won": 1, "revenue": 5997.0, "formats": {"show": "57.1%", "qualified": "50.0%", "qualified_booked": "28.6%", "close": "14.3%", "qualified_close": "50.0%", "revenue": "$5,997", "average": "$5,997"}}, {"value": "mh-ig-bio", "bookings": 5, "marketing": 0, "lane2": 0, "social_dms": 5, "showed": 3, "qualified": 3, "closed_won": 0, "revenue": 0, "formats": {"show": "60.0%", "qualified": "100.0%", "qualified_booked": "60.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "new-follower", "bookings": 5, "marketing": 0, "lane2": 5, "social_dms": 0, "showed": 4, "qualified": 2, "closed_won": 0, "revenue": 0, "formats": {"show": "80.0%", "qualified": "50.0%", "qualified_booked": "40.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "6/23 Call Booking Campaign", "bookings": 3, "marketing": 0, "lane2": 3, "social_dms": 0, "showed": 1, "qualified": 2, "closed_won": 0, "revenue": 0, "formats": {"show": "33.3%", "qualified": "200.0%", "qualified_booked": "66.7%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "Unattributed", "bookings": 2, "marketing": 2, "lane2": 0, "social_dms": 0, "showed": 2, "qualified": 1, "closed_won": 2, "revenue": 17997.0, "formats": {"show": "100.0%", "qualified": "50.0%", "qualified_booked": "50.0%", "close": "100.0%", "qualified_close": "200.0%", "revenue": "$17,997", "average": "$8,998"}}, {"value": "90-day-checklist", "bookings": 2, "marketing": 0, "lane2": 0, "social_dms": 2, "showed": 0, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "50.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "route-builder", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 1, "revenue": 10347.0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "100.0%", "qualified_close": "100.0%", "revenue": "$10,347", "average": "$10,347"}}, {"value": "1388784661", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 1, "revenue": 8997.0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "100.0%", "qualified_close": "100.0%", "revenue": "$8,997", "average": "$8,997"}}, {"value": "120229205352460662", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "1998114993", "bookings": 1, "marketing": 0, "lane2": 0, "social_dms": 1, "showed": 0, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "@utm_campaign", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "mh-ig-story", "bookings": 1, "marketing": 0, "lane2": 0, "social_dms": 1, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}], "packages": [{"value": "Silver - $8,997 · Basic", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 2, "revenue": 19344.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$19,344", "average": "$9,672"}}, {"value": "Bronze - $5,997 · Community", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 2, "revenue": 15494.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$15,494", "average": "$7,747"}}, {"value": "Silver - $8,997 · Free", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 8500.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$8,500", "average": "$8,500"}}], "display": {"projected": 31, "goal": 300, "goal_pct": 10, "pace": "pace-behind"}, "formats": {"show": "60.0%", "qualified": "83.3%", "qualified_booked": "50.0%", "close": "16.7%", "qualified_close": "33.3%", "revenue": "$43,338", "average": "$8,668"}}, {"channel": "Website", "leads_created": 23, "bookings": 27, "marketing": 22, "lane2": 5, "social_dms": 0, "showed": 16, "qualified": 10, "closed_won": 2, "revenue": 12894.0, "unrecoverable_booked_leads": 0, "drilldowns": [{"value": "Unattributed", "bookings": 21, "marketing": 20, "lane2": 1, "social_dms": 0, "showed": 12, "qualified": 8, "closed_won": 1, "revenue": 5997.0, "formats": {"show": "57.1%", "qualified": "66.7%", "qualified_booked": "38.1%", "close": "4.8%", "qualified_close": "12.5%", "revenue": "$5,997", "average": "$5,997"}}, {"value": "apply_now", "bookings": 5, "marketing": 1, "lane2": 4, "social_dms": 0, "showed": 4, "qualified": 2, "closed_won": 0, "revenue": 0, "formats": {"show": "80.0%", "qualified": "50.0%", "qualified_booked": "40.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "23805931083", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "cohort_seats", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 6897.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$6,897", "average": "$6,897"}}], "packages": [{"value": "Bronze - $5,997 · Community", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 2, "revenue": 12894.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$12,894", "average": "$6,447"}}], "display": {"projected": 28, "goal": 100, "goal_pct": 27, "pace": "pace-behind"}, "formats": {"show": "59.3%", "qualified": "62.5%", "qualified_booked": "37.0%", "close": "7.4%", "qualified_close": "20.0%", "revenue": "$12,894", "average": "$6,447"}}, {"channel": "Meta Ads", "leads_created": 11, "bookings": 25, "marketing": 4, "lane2": 21, "social_dms": 0, "showed": 9, "qualified": 7, "closed_won": 1, "revenue": 10347.0, "unrecoverable_booked_leads": 0, "drilldowns": [{"value": "VSL Leads campaign", "bookings": 5, "marketing": 1, "lane2": 4, "social_dms": 0, "showed": 2, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "40.0%", "qualified": "50.0%", "qualified_booked": "20.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "120229205352460662", "bookings": 4, "marketing": 0, "lane2": 4, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "25.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "6/23 Call Booking Campaign", "bookings": 4, "marketing": 0, "lane2": 4, "social_dms": 0, "showed": 2, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "50.0%", "qualified": "50.0%", "qualified_booked": "25.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "Anthony Webinar Leads Campaign 8/12", "bookings": 3, "marketing": 0, "lane2": 3, "social_dms": 0, "showed": 0, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "33.3%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "adset-120250400565610740", "bookings": 2, "marketing": 0, "lane2": 2, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "23815771816", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 1, "revenue": 10347.0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "100.0%", "qualified_close": "100.0%", "revenue": "$10,347", "average": "$10,347"}}, {"value": "120231435583070662", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "Anthony Webinar Leads Campaign 7/15", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "adset-120250281905390740", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "adset-120250281905490740", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"value": "book_meeting", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "100.0%", "qualified": "100.0%", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "ltf_buyers", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 0, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "100.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}], "packages": [{"value": "Silver - $8,997 · Basic", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 10347.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$10,347", "average": "$10,347"}}], "display": {"projected": 26, "goal": 44, "goal_pct": 57, "pace": "pace-behind"}, "formats": {"show": "36.0%", "qualified": "77.8%", "qualified_booked": "28.0%", "close": "4.0%", "qualified_close": "14.3%", "revenue": "$10,347", "average": "$10,347"}}, {"channel": "LTF - In-House", "leads_created": 0, "bookings": 6, "marketing": 3, "lane2": 3, "social_dms": 0, "showed": 4, "qualified": 4, "closed_won": 3, "revenue": 21194.0, "unrecoverable_booked_leads": 0, "drilldowns": [{"value": "book_meeting", "bookings": 3, "marketing": 3, "lane2": 0, "social_dms": 0, "showed": 2, "qualified": 1, "closed_won": 1, "revenue": 10997.0, "formats": {"show": "66.7%", "qualified": "50.0%", "qualified_booked": "33.3%", "close": "33.3%", "qualified_close": "100.0%", "revenue": "$10,997", "average": "$10,997"}}, {"value": "wescale", "bookings": 3, "marketing": 0, "lane2": 3, "social_dms": 0, "showed": 2, "qualified": 3, "closed_won": 1, "revenue": 8997.0, "formats": {"show": "66.7%", "qualified": "150.0%", "qualified_booked": "100.0%", "close": "33.3%", "qualified_close": "33.3%", "revenue": "$8,997", "average": "$8,997"}}, {"value": "Unattributed", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 1200.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$1,200", "average": "$1,200"}}], "packages": [{"value": "Silver - $8,997 · Basic", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 2, "revenue": 19994.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$19,994", "average": "$9,997"}}, {"value": "Vendhub Renewal- $1,200 · Community", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 1200.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$1,200", "average": "$1,200"}}], "display": {"projected": 6, "goal": null, "goal_pct": null, "pace": ""}, "formats": {"show": "66.7%", "qualified": "100.0%", "qualified_booked": "66.7%", "close": "50.0%", "qualified_close": "75.0%", "revenue": "$21,194", "average": "$7,065"}}, {"channel": "Linkedin", "leads_created": 4, "bookings": 6, "marketing": 4, "lane2": 2, "social_dms": 0, "showed": 2, "qualified": 3, "closed_won": 0, "revenue": 0.0, "unrecoverable_booked_leads": 0, "drilldowns": [{"value": "book-call", "bookings": 6, "marketing": 4, "lane2": 2, "social_dms": 0, "showed": 2, "qualified": 3, "closed_won": 0, "revenue": 0, "formats": {"show": "33.3%", "qualified": "150.0%", "qualified_booked": "50.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}], "packages": [], "display": {"projected": 6, "goal": 10, "goal_pct": 60, "pace": "pace-behind"}, "formats": {"show": "33.3%", "qualified": "150.0%", "qualified_booked": "50.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"channel": "WWWS", "leads_created": 0, "bookings": 3, "marketing": 3, "lane2": 0, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0.0, "unrecoverable_booked_leads": 0, "drilldowns": [{"value": "book_meeting", "bookings": 2, "marketing": 2, "lane2": 0, "social_dms": 0, "showed": 1, "qualified": 1, "closed_won": 0, "revenue": 0, "formats": {"show": "50.0%", "qualified": "100.0%", "qualified_booked": "50.0%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"value": "Unattributed", "bookings": 1, "marketing": 1, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}], "packages": [], "display": {"projected": 3, "goal": 1, "goal_pct": 300, "pace": "pace-exceed"}, "formats": {"show": "33.3%", "qualified": "100.0%", "qualified_booked": "33.3%", "close": "0.0%", "qualified_close": "0.0%", "revenue": "$0", "average": "—"}}, {"channel": "GoHighLevel", "leads_created": 1, "bookings": 2, "marketing": 0, "lane2": 0, "social_dms": 2, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0.0, "unrecoverable_booked_leads": 0, "drilldowns": [{"value": "book-call", "bookings": 2, "marketing": 0, "lane2": 0, "social_dms": 2, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}], "packages": [], "display": {"projected": 2, "goal": null, "goal_pct": null, "pace": ""}, "formats": {"show": "0.0%", "qualified": "—", "qualified_booked": "0.0%", "close": "0.0%", "qualified_close": "—", "revenue": "$0", "average": "—"}}, {"channel": "VSL", "leads_created": 0, "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 1, "revenue": 5997.0, "unrecoverable_booked_leads": 0, "drilldowns": [{"value": "VSL Leads campaign", "bookings": 1, "marketing": 0, "lane2": 1, "social_dms": 0, "showed": 1, "qualified": 0, "closed_won": 1, "revenue": 5997.0, "formats": {"show": "100.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "100.0%", "qualified_close": "—", "revenue": "$5,997", "average": "$5,997"}}], "packages": [{"value": "Bronze - $5,997 · Basic", "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 1, "revenue": 5997.0, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$5,997", "average": "$5,997"}}], "display": {"projected": 1, "goal": 110, "goal_pct": 1, "pace": "pace-behind"}, "formats": {"show": "100.0%", "qualified": "0.0%", "qualified_booked": "0.0%", "close": "100.0%", "qualified_close": "—", "revenue": "$5,997", "average": "$5,997"}}, {"channel": "Anthony IG", "leads_created": 1, "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0, "showed": 0, "qualified": 0, "closed_won": 0, "revenue": 0.0, "unrecoverable_booked_leads": 0, "drilldowns": [], "packages": [], "display": {"projected": null, "goal": null, "goal_pct": null, "pace": ""}, "formats": {"show": "—", "qualified": "—", "qualified_booked": "—", "close": "—", "qualified_close": "—", "revenue": "$0", "average": "—"}}], "totals": {"leads_created": 25303, "bookings": 610, "marketing": 249, "lane2": 328, "social_dms": 33, "showed": 258, "qualified": 210, "closed_won": 53, "revenue": 415441.0, "formats": {"show": "42.3%", "qualified": "81.4%", "qualified_booked": "34.4%", "close": "8.7%", "qualified_close": "25.2%", "revenue": "$415,441", "average": "$7,839"}}}]</script>
-<script>
-const months=JSON.parse(document.getElementById('comparison-data').textContent);
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const fmt=n=>new Intl.NumberFormat('en-US').format(n||0);
-const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n||0);
-const pct=(n,d)=>d?`${(100*n/d).toFixed(1)}%`:'—';
-document.getElementById('months').innerHTML=months.map(m=>`<label><input type="checkbox" value="${esc(m.view.key)}" checked>${esc(m.view.label)}${m.view.frozen?'':' · MTD'}</label>`).join('');
-document.getElementById('note').textContent=months.length===1?'October is the first V2 month. Future months will appear here automatically.':'Select months to compare. The current month shows month-to-date results; archived months show completed periods.';
-function render(){
- const selected=new Set([...document.querySelectorAll('#months input:checked')].map(input=>input.value));
- const active=months.filter(m=>selected.has(m.view.key));
- document.getElementById('head').innerHTML=`<tr><th rowspan="2" class="col-name">Funnel</th>${active.map(m=>`<th colspan="5">${esc(m.view.label)}${m.view.frozen?'':' · MTD'}</th>`).join('')}</tr><tr>${active.map(()=>'<th>Booked</th><th>Show %</th><th>Qual %</th><th>CW %</th><th>Revenue</th>').join('')}</tr>`;
- const names=[...new Set(active.flatMap(m=>m.channels.map(c=>c.channel)))].sort();
- document.getElementById('rows').innerHTML=[...names,'TOTAL'].map(name=>`<tr class="${name==='TOTAL'?'total-row':'funnel-row'}"><td class="col-name">${esc(name)}</td>${active.map(m=>{const c=name==='TOTAL'?m.totals:m.channels.find(c=>c.channel===name)||{};return `<td class="col-num">${fmt(c.bookings)}</td><td class="col-pct">${c.formats?.show||'—'}</td><td class="col-pct">${c.formats?.qualified||'—'}</td><td class="col-pct">${c.formats?.close||'—'}</td><td class="col-rev">${c.formats?.revenue||'$0'}</td>`;}).join('')}</tr>`).join('');
+  rows += `<tr class="total-row"><td class="col-funnel">TOTAL</td>${totalCells}</tr>`;
+
+  return `
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr class="month-header">${monthHead}</tr>
+        <tr class="sub-header">${subHead}</tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <p style="font-size:11px; color:var(--muted); margin-top:16px; padding:0 4px;">
+      * Funnel excluded from top-line totals. Totals reflect same exclusions as the live dashboard.
+    </p>
+  </div>`;
 }
-document.querySelectorAll('#months input').forEach(input=>input.addEventListener('change',render));render();
-</script></body></html>
+
+async function init() {
+  const content = document.getElementById('content');
+  try {
+    const navResp = await fetch(BASE + '/archives/picker-nav.json?t=' + Date.now());
+    if (!navResp.ok) throw new Error('Could not load nav.json');
+    const nav = await navResp.json();
+
+    const months = [];
+    const archiveMonths = (nav.months || []).filter(m => !m.is_live);
+    [...archiveMonths].reverse().forEach(m => months.push({ month_key: m.key, label: m.label }));
+    months.push({ month_key: nav.live_month, label: nav.live_month_label + ' (MTD)' });
+
+    const fetches = months.map(m => {
+      const fname = m.month_key === nav.live_month
+        ? `comparison-data-${nav.live_month}.json`
+        : `comparison-data-${m.month_key}.json`;
+      return fetch(`${BASE}/archives/${fname}?t=` + Date.now())
+        .then(r => r.ok ? r.json() : null).catch(() => null);
+    });
+
+    const results = await Promise.all(fetches);
+    const allData = {};
+    months.forEach((m, i) => { if (results[i]) allData[m.month_key] = results[i]; });
+
+    const validMonths = months.filter(m => allData[m.month_key]);
+    if (validMonths.length === 0) {
+      content.innerHTML = '<div class="state-msg">No monthly data files found yet.</div>';
+      return;
+    }
+
+    document.getElementById('subtitle').textContent =
+      `Vendingpreneurs · ${validMonths.map(m => m.label).join(' · ')}`;
+
+    content.innerHTML = buildTable(validMonths, allData);
+    renderToggles(validMonths);
+
+  } catch(e) {
+    content.innerHTML = `<div class="state-msg">Error loading data: ${e.message}</div>`;
+  }
+}
+
+init();
+</script>
+<!-- V2 booking and attribution rules; original MTD comparison UI. -->
+</body>
+</html>

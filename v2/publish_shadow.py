@@ -19,7 +19,6 @@ from reports import funnel_rows
 
 ROOT = Path(__file__).resolve().parent
 PRIVATE_DATA = ROOT / "public" / "data.json"
-TEMPLATE = ROOT / "public" / "index.template.html"
 OUTPUT = ROOT / "index.html"
 TOTAL_FIELDS = (
     "leads_created", "bookings", "marketing", "lane2", "social_dms",
@@ -45,6 +44,7 @@ def public_data(source: Path) -> dict[str, Any]:
         details = extra.get("channels", {}).get(channel["channel"], {})
         channel["drilldowns"] = safe_rows(details.get("drilldowns", []))
         channel["packages"] = safe_rows(details.get("packages", []))
+        channel["setters"] = safe_rows(details.get("setters", []))
         channels.append(channel)
     start = date.fromisoformat(raw["period"].split(" through ")[0])
     cutoff = raw.get("source_cutoff", raw["generated_at"])
@@ -73,11 +73,15 @@ def public_data(source: Path) -> dict[str, Any]:
 
 
 def render_report(data: dict[str, Any], output: Path, navigation: dict | None = None) -> None:
+    from archive_ui import render_current_ui
     page = {**data, "csv_rows": funnel_rows(data), "navigation": navigation or {"months": [], "weeks": []}}
     serialized = json.dumps(page, ensure_ascii=False, separators=(",", ":"))
     serialized = serialized.replace("<", "\\u003c").replace(">", "\\u003e")
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(TEMPLATE.read_text().replace("__V2_DATA__", serialized))
+    html = render_current_ui(data, output, navigation or {"months": [], "weeks": []})
+    # Machine-readable aggregate evidence has no effect on the current archive UI.
+    html = html.replace('</body>', f'<script id="v2-data" type="application/json">{serialized}</script>\n</body>')
+    output.write_text(html)
 
 
 def main() -> int:

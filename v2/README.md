@@ -2,6 +2,8 @@
 
 V2 is a shadow implementation of the MTD funnel report. Its files and hosted page live under `v2/`; the production report at the repository root is unchanged.
 
+V2 uses the **current MTD archive UI 1:1**, through its actual presentation functions and original month-comparison page. There is no separate V2 styling, badge, section layout, or extra button. Only V2 aggregates and V2-local navigation are supplied. The adapter loads presentation functions/constants only; legacy CRM extraction and booking selection are never run.
+
 ## Refresh and publish the shadow
 
 The dedicated [`update_v2.yml`](../.github/workflows/update_v2.yml) GitHub Actions workflow refreshes V2 using the repository's existing `CLOSE_API_KEY` secret. A separate cron-job.org job dispatches it on `main` every 15 minutes at :00, :15, :30, and :45 in `America/Los_Angeles`, matching the current MTD refresh cadence. It can also be run manually from the Actions tab.
@@ -13,8 +15,8 @@ The workflow runs `python3 v2/refresh.py`, refreshing the full month and current
 - **Month over Month** compares V2 source bookings, show/qualification/close rates, and revenue. October is the first month; additional months appear automatically. Legacy data is never mixed into V2 comparisons.
 - Source expansion shows full campaign metrics (or content metrics for Internal Webinar), including independently attributed won deals with no booking in the selected window. Qualification counts remain distinct booked leads within each group.
 - Revenue expansion shows aggregate program-tier and VendHub-plan counts, revenue, and average deal value.
-- The setter section preserves Lane 2, Social DM, and Marketing booking credits. Booking/show/qualification attribution follows the credited meeting's setter; won deals and revenue follow the lead's current setter independently of booking date. A setter's displayed conversion ratios therefore use those two independently defined cohorts, like the source-level report.
-- Funnel sections and setter sections can be collapsed. Both on-page and saved funnel CSVs include a TOTAL row. All rounding and money/rate formatting come from Python, matching the current MTD's rounding in pages and exports.
+- Setter detail appears inside the current UI's existing source expansion rows, with the same row styling. Lane 2 and Social DM booking credits remain separate in the saved setter CSVs. Booking/show/qualification attribution follows the credited meeting's setter; won deals and revenue follow the lead's current setter independently of booking date.
+- The current UI's funnel-section collapse, campaign expansion, revenue/package expansion, and CSV button are reused unchanged. Both on-page and saved funnel CSVs include a TOTAL row. Python performs the same archive rounding as the current MTD.
 - Each saved period includes a V2 funnel CSV and V2 team CSV. Team bookings, shows, and qualification use accepted V2 credits attributed to the current Lead Owner; won deals/revenue use the included V2 opportunities' owners. Closer subtotal, Other / Non-Closer, and all-V2 totals are separately labeled and reconciled. Qualified counts are distinct booked leads per owner.
 - Team CSVs retain revenue goals (booked × 13% × $7,000), rate goals, and the existing current pipeline definition. Only the current MTD's independent open-qualified-pipeline helper is reused; its legacy booking and won-record selectors are never used. Pipeline is a generation-time snapshot of current closer-owned qualified leads within the trailing 30 days, valued at $7,000 × 20%, and is labeled separately from the report week.
 

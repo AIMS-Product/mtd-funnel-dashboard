@@ -14,6 +14,7 @@ from publish_shadow import public_data, render_report
 from reporting import PACIFIC, ROOT, report_periods
 from aggregates import SCHEMA_VERSION
 from reports import pipeline_snapshot, write_exports, write_comparison
+from archive_ui import write_navigation
 
 ARCHIVES = ROOT / "archives"
 
@@ -53,6 +54,7 @@ def refresh(now: datetime | None = None, *, render_only: bool = False) -> None:
         "weeks": [r["view"] for r in reports if r["view"]["kind"] == "week"],
     }
     (ARCHIVES / "nav.json").write_text(json.dumps(navigation, indent=2) + "\n")
+    write_navigation(navigation, ARCHIVES)
     for report in reports:
         view = report["view"]
         render_report(report, ARCHIVES / f"{view['key']}.html", navigation)

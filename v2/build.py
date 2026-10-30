@@ -637,9 +637,8 @@ def main() -> int:
         output = ROOT / "public" / "data.json"
         serialized = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
         output.write_text(serialized + "\n")
-        template = (ROOT / "public" / "index.template.html").read_text()
-        safe_data = serialized.replace("<", "\\u003c").replace(">", "\\u003e")
-        (ROOT / "public" / "index.html").write_text(template.replace("__V2_DATA__", safe_data))
+        from publish_shadow import public_data, render_report
+        render_report(public_data(output), ROOT / "public" / "index.html")
         print(f"Built local V2 shadow preview: {ROOT / 'public' / 'index.html'}")
         print("Totals: " + json.dumps(data["totals"], sort_keys=True))
         print(f"Counted {data['counted_meetings']} qualifying first-call credits; no review rows emitted.")

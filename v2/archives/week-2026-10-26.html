@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex,follow">
-<title>MTD Funnel Performance — V2 Shadow</title>
+<title>MTD Funnel Performance — October 2026 · Oct 26–Nov 1</title>
 <style>
   :root {
     --bg:        #f4f6f9;
@@ -405,175 +404,1386 @@
     .header { flex-direction: column; gap: 12px; }
     .header-right { text-align: left; }
   }
-
-  .shadow-tag{display:inline-block;margin-left:9px;padding:3px 7px;border:1px solid #c7d2fe;border-radius:4px;background:#eef2ff;color:var(--accent);font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;vertical-align:middle}
-  [hidden]{display:none!important}
-  .col-goal{white-space:nowrap}
-  .funnel-row .expand-link{color:inherit;font-size:inherit;text-align:left}
-  .section-header-row .expand-link{font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-  .report-actions{display:flex;gap:8px;flex-wrap:wrap}
-  .kpi .kpi-sub{line-height:1.35}
-  .kpi .goal-target{display:inline-block;font-size:15px;font-weight:400;color:var(--muted);margin-left:10px;line-height:1.6}
-  .kpi .recurring-revenue{color:#449d75;font-weight:600}
-  .kpi .monthly-goal-label{font-size:12px}
-  .compact-stats{flex-wrap:wrap}
-  .report-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:0 36px 20px;color:var(--muted);font-size:11px;line-height:1.7}
-  .section-note{padding:0 36px 10px;color:var(--muted2);font-size:11px}
-  .utm-row .col-name{padding-left:30px!important;color:var(--muted2);font-weight:400}
-  .utm-content-row{display:none;background:rgba(79,70,229,.018)}
-  .utm-content-row.open{display:table-row}
-  .utm-content-row td{padding:8px 12px;border-top:1px solid var(--border2)}
-  .utm-content-row .col-name{padding-left:48px!important;color:var(--muted2);font-weight:400}
-  .channel-meta{font-size:10px;font-weight:400;color:var(--muted);padding:3px 0 0 17px;white-space:nowrap}
-  .expand-link{border:0;background:transparent;color:var(--accent);font:inherit;font-size:11px;cursor:pointer}
-  .expand-link:hover{text-decoration:underline}
-  .meeting-drawer{display:none;background:#faf9ff;padding:10px 14px;border-top:1px solid var(--border2)}
-  .meeting-drawer.open{display:block}
-  .meeting-drawer table{box-shadow:none;border-radius:0;min-width:800px;background:transparent}
-  .meeting-drawer th{font-size:9px;text-align:left;padding:6px 8px}
-  .meeting-drawer td{font-size:11px;text-align:left;padding:7px 8px;color:var(--muted2)}
-  .meeting-drawer a{color:var(--accent);text-decoration:none}
-  .meeting-drawer a:hover{text-decoration:underline}
-  .unavailable{color:var(--muted);font-size:11px;padding:0 36px 30px;line-height:1.5}
-  @media(max-width:960px){.section-note,.unavailable{padding-left:16px;padding-right:16px}.table-wrap{padding-left:16px;padding-right:16px}.kpis{gap:10px;padding-left:16px;padding-right:16px}}
 </style>
 </head>
 <body>
+
+<!-- Header -->
 <div class="header">
   <div class="header-left">
-    <h1>MTD Funnel Performance <span class="shadow-tag">V2 Shadow</span> <a id="mom-link" class="expand-link">Month over Month →</a></h1>
-    <p class="sub">Vendingpreneurs · All Sales Calls · <span id="month-label"></span></p>
+    <h1>MTD Funnel Performance
+      <a href="/mtd-funnel-dashboard/v2/archives/mom.html"
+         style="font-size:12px; font-weight:500; color:var(--accent); margin-left:14px;
+                text-decoration:none; vertical-align:middle;">
+        Month over Month →
+      </a>
+    </h1>
+    <p class="sub">Vendingpreneurs · All Sales Calls · October 2026 · Oct 26–Nov 1</p>
   </div>
   <div class="header-right">
     <div class="pickers-row">
-      <div class="compact-stats" id="period-progress"></div>
+      <div class="compact-stats">
+        <span class="cs-item">Day <strong>30/31</strong></span>
+        <span class="cs-sep">·</span>
+        <span class="cs-item">Working days <strong>22/22</strong></span>
+        <span class="cs-sep">·</span>
+        <span class="cs-item"><strong>100.0%</strong> elapsed</span>
+      </div>
       <span class="picker-divider">|</span>
-      <div class="month-picker"><select id="month-picker" aria-label="Reporting month"></select></div>
-      <span class="picker-divider">|</span>
-      <div class="week-picker"><select id="week-picker" aria-label="Reporting week"></select></div>
+      <div class="month-picker"><select onchange="window.location.href=this.value"><option value="/mtd-funnel-dashboard/v2/index.html" selected>October 2026</option></select></div><span class="picker-divider">|</span><div class="week-picker"><select onchange="window.location.href=this.value"><option value="/mtd-funnel-dashboard/v2/index.html">Full Month</option><option value="/mtd-funnel-dashboard/v2/archives/week-2026-10-26.html" selected>Oct 26–Nov 1</option><option value="/mtd-funnel-dashboard/v2/archives/week-2026-10-19.html" >Oct 19–25</option><option value="/mtd-funnel-dashboard/v2/archives/week-2026-10-12.html" >Oct 12–18</option><option value="/mtd-funnel-dashboard/v2/archives/week-2026-10-05.html" >Oct 5–11</option><option value="/mtd-funnel-dashboard/v2/archives/week-2026-09-28.html" >Oct 1–4</option></select></div>
     </div>
-    <span class="snapshot-label" id="snapshot-label">Snapshot</span>
-    <span id="snapshot"></span><br>
-  Source · Close CRM · V2 shadow rules
+    <span class="snapshot-label"><span class="archive-badge">Week View</span></span>
+    October 30, 2026 at 11:30 AM PT<br>
+    Source · Close CRM
   </div>
 </div>
-<div class="kpis" id="kpis"></div>
+
+<!-- KPI Cards -->
+<div class="kpis">
+  <div class="kpi" style="--kpi-accent:#6366f1; --kpi-color:#6366f1;">
+    <div class="label">Leads Created</div>
+    <div class="value">702</div>
+    <div class="kpi-sub">new leads MTD</div>
+  </div>
+  <div class="kpi" style="--kpi-accent:#4f46e5; --kpi-color:var(--text);">
+    <div class="kpi-goal-pct">10%</div>
+    <div class="label">Total Booked</div>
+    <div class="value">119<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ 1,241 <span style="font-size:12px;">goal</span></span></div>
+    <div class="kpi-sub">new first calls MTD</div>
+  </div>
+  <div class="kpi" style="--kpi-accent:#2563eb; --kpi-color:#2563eb;">
+    <div class="label">Showed</div>
+    <div class="value">33</div>
+    <div class="kpi-sub">27.7% show rate</div>
+  </div>
+  <div class="kpi" style="--kpi-accent:#7c3aed; --kpi-color:#7c3aed;">
+    <div class="label">Qualified</div>
+    <div class="value">23</div>
+    <div class="kpi-sub">69.7% qual rate · 19.3% of booked</div>
+  </div>
+  <div class="kpi" style="--kpi-accent:#d97706; --kpi-color:#d97706;">
+    <div class="label">Closed Won</div>
+    <div class="value">11</div>
+    <div class="kpi-sub">9.2% booked→close · 47.8% qual→close</div>
+  </div>
+  <div class="kpi" style="--kpi-accent:#0e9f6e; --kpi-color:#0e9f6e;">
+    <div class="kpi-goal-pct">10%</div>
+    <div class="label">Closed Revenue</div>
+    <div class="value">$75,661<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ $750,000</span></div>
+    <div class="kpi-sub">$6,878 avg deal  ·  <span style="color:#7bc4a0; font-weight:600;">ARR $22,178</span>  <span style="color:#7bc4a0; opacity:0.75; font-size:11px;">MRR $1,848</span></div>
+  </div>
+</div>
+
+<!-- Table -->
 <div class="section-label">Funnel Breakdown — Booked → Showed → Qualified → Closed Won → Revenue</div>
-<p class="section-note">Expand a lead source to see its attributed values. Lead and meeting-level details are excluded from this public shadow report.</p>
+
 <div class="table-wrap">
-<table id="funnel-table">
-<thead><tr>
-  <th class="col-name">Funnel</th><th class="col-num">Leads</th><th class="col-num">Booked</th>
-  <th class="col-pace">Projected</th><th class="col-goal">Goal %</th><th class="col-num">Showed</th>
-  <th class="col-pct">Show %</th><th class="col-num">Qualified</th><th class="col-pct">Qual %</th>
-  <th class="col-num">Closed</th><th class="col-pct">CW %</th><th class="col-rev">Revenue</th><th class="col-num">Rev / Close</th>
-</tr></thead><tbody id="funnel-body"></tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th class="col-name">Funnel</th>
+        <th class="col-num">Leads</th>
+        <th class="col-num">Booked</th>
+        <th class="col-pace">Projected</th>
+        <th class="col-goal">Goal %</th>
+        <th class="col-num">Showed</th>
+        <th class="col-pct">Show %</th>
+        <th class="col-num">Qualified</th>
+        <th class="col-pct">Qual %</th>
+        <th class="col-num">Closed</th>
+        <th class="col-pct">CW %</th>
+        <th class="col-rev">Revenue</th>
+        <th class="col-num">Rev / Close</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr class="section-header-row" onclick="toggleSection('lead_sources')">
+      <td colspan="13">
+        <span class="section-chevron open" id="secchev-lead_sources">›</span>FUNNEL BREAKDOWN — LEAD SOURCES
+      </td>
+    </tr>
+
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('youtube')" data-fid="youtube">
+      <td class="col-name">
+        <span class="chevron" id="chev-youtube">›</span>YouTube
+      </td>
+      <td class="col-num">8</td>
+      <td class="col-num">13</td>
+      <td class="col-pace pace-behind">13</td>
+      <td class="col-goal">10% (132)</td>
+      <td class="col-num">4</td>
+      <td class="col-pct bad">30.8%</td>
+      <td class="col-num">2</td>
+      <td class="col-pct mid">50.0%</td>
+      <td class="col-num">2</td>
+      <td class="col-pct good">15.4%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('youtube')" title="Click to see package breakdown">$11,994 <span class="pkg-chevron" id="pkgchev-youtube">›</span></td>
+      <td class="col-num">$5,997</td>
+    </tr>
+
+    <tr class="pkg-row" data-parent="youtube" style="display:none">
+      <td class="col-name col-pkg">↳ Bronze - $5,997 · Basic</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct"></td>
+      <td class="col-rev">$5,997</td>
+      <td class="col-num">$5,997</td>
+    </tr>
+
+    <tr class="pkg-row" data-parent="youtube" style="display:none">
+      <td class="col-name col-pkg">↳ Bronze - $5,997 · Community</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct"></td>
+      <td class="col-rev">$5,997</td>
+      <td class="col-num">$5,997</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="youtube">
+      <td class="col-name col-utm">↳ start-vending-business</td>
+      <td class="col-num">—</td>
+      <td class="col-num">2</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="youtube">
+      <td class="col-name col-utm">↳ book-a-call</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-rev">$5,997</td>
+      <td class="col-num">$5,997</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="youtube">
+      <td class="col-name col-utm">↳ vending-101</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-rev">$5,997</td>
+      <td class="col-num">$5,997</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="youtube">
+      <td class="col-name col-utm">↳ 10-mistakes-vending</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="youtube">
+      <td class="col-name col-utm">↳ anthony</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="youtube">
+      <td class="col-name col-utm">↳ best-contract-vending</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="youtube">
+      <td class="col-name col-utm">↳ buy-first-machine</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="youtube">
+      <td class="col-name col-utm">↳ how-to-start-a-vending-machine-business-step-by-step-with-0</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="youtube">
+      <td class="col-name col-utm">↳ lc</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="youtube">
+      <td class="col-name col-utm">↳ should_you_buy_or_build_a_vending_route</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="youtube">
+      <td class="col-name col-utm">↳ vending-legal</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="youtube">
+      <td class="col-name col-utm">↳ youtube-home</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('meta_ads')" data-fid="meta_ads">
+      <td class="col-name">
+        <span class="chevron" id="chev-meta_ads">›</span>Meta Ads
+      </td>
+      <td class="col-num">—</td>
+      <td class="col-num">6</td>
+      <td class="col-pace pace-behind">6</td>
+      <td class="col-goal">14% (44)</td>
+      <td class="col-num">1</td>
+      <td class="col-pct bad">16.7%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('meta_ads')" title="Click to see package breakdown">$0 <span class="pkg-chevron" id="pkgchev-meta_ads">›</span></td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="meta_ads">
+      <td class="col-name col-utm">↳ VSL Leads campaign</td>
+      <td class="col-num">—</td>
+      <td class="col-num">2</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="meta_ads">
+      <td class="col-name col-utm">↳ 120229205352460662</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="meta_ads">
+      <td class="col-name col-utm">↳ 6/23 Call Booking Campaign</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="meta_ads">
+      <td class="col-name col-utm">↳ Anthony Webinar Leads Campaign 7/15</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="meta_ads">
+      <td class="col-name col-utm">↳ adset-120250400565610740</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('vsl')" data-fid="vsl">
+      <td class="col-name">
+        <span class="chevron" id="chev-vsl">›</span>VSL
+      </td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace pace-muted">—</td>
+      <td class="col-goal">0% (110)</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pct ">—</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('vsl')" title="Click to see package breakdown">$5,997 <span class="pkg-chevron" id="pkgchev-vsl">›</span></td>
+      <td class="col-num">$5,997</td>
+    </tr>
+
+    <tr class="pkg-row" data-parent="vsl" style="display:none">
+      <td class="col-name col-pkg">↳ Bronze - $5,997 · Basic</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct"></td>
+      <td class="col-rev">$5,997</td>
+      <td class="col-num">$5,997</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="vsl">
+      <td class="col-name col-utm">↳ VSL Leads campaign</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pct ">—</td>
+      <td class="col-rev">$5,997</td>
+      <td class="col-num">$5,997</td>
+    </tr>
+
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('website')" data-fid="website">
+      <td class="col-name">
+        <span class="chevron" id="chev-website">›</span>Website
+      </td>
+      <td class="col-num">3</td>
+      <td class="col-num">4</td>
+      <td class="col-pace pace-behind">4</td>
+      <td class="col-goal">4% (100)</td>
+      <td class="col-num">3</td>
+      <td class="col-pct good">75.0%</td>
+      <td class="col-num">3</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('website')" title="Click to see package breakdown">$0 <span class="pkg-chevron" id="pkgchev-website">›</span></td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="website">
+      <td class="col-name col-utm">↳ Unattributed</td>
+      <td class="col-num">—</td>
+      <td class="col-num">3</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">2</td>
+      <td class="col-pct mid">66.7%</td>
+      <td class="col-num">2</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="website">
+      <td class="col-name col-utm">↳ apply_now</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('internal_webinar')" data-fid="internal_webinar">
+      <td class="col-name">
+        <span class="chevron" id="chev-internal_webinar">›</span>Internal Webinar
+      </td>
+      <td class="col-num">487</td>
+      <td class="col-num">44</td>
+      <td class="col-pace pace-behind">45</td>
+      <td class="col-goal">63% (70)</td>
+      <td class="col-num">11</td>
+      <td class="col-pct bad">25.0%</td>
+      <td class="col-num">7</td>
+      <td class="col-pct mid">63.6%</td>
+      <td class="col-num">2</td>
+      <td class="col-pct bad">4.5%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('internal_webinar')" title="Click to see package breakdown">$10,185 <span class="pkg-chevron" id="pkgchev-internal_webinar">›</span></td>
+      <td class="col-num">$5,092</td>
+    </tr>
+
+    <tr class="pkg-row" data-parent="internal_webinar" style="display:none">
+      <td class="col-name col-pkg">↳ Silver - $8,997 · Basic</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct"></td>
+      <td class="col-rev">$8,997</td>
+      <td class="col-num">$8,997</td>
+    </tr>
+
+    <tr class="pkg-row" data-parent="internal_webinar" style="display:none">
+      <td class="col-name col-pkg">↳ VendHub - Basic $1,188 · Community</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct"></td>
+      <td class="col-rev">$1,188</td>
+      <td class="col-num">$1,188</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ oct27</td>
+      <td class="col-num">—</td>
+      <td class="col-num">22</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">8</td>
+      <td class="col-pct bad">36.4%</td>
+      <td class="col-num">4</td>
+      <td class="col-pct mid">50.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ aug11</td>
+      <td class="col-num">—</td>
+      <td class="col-num">3</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">33.3%</td>
+      <td class="col-rev">$8,997</td>
+      <td class="col-num">$8,997</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ oct27_end_cta</td>
+      <td class="col-num">—</td>
+      <td class="col-num">3</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct bad">33.3%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ sept29</td>
+      <td class="col-num">—</td>
+      <td class="col-num">3</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ sept22</td>
+      <td class="col-num">—</td>
+      <td class="col-num">2</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct mid">50.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">50.0%</td>
+      <td class="col-rev">$1,188</td>
+      <td class="col-num">$1,188</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ July29</td>
+      <td class="col-num">—</td>
+      <td class="col-num">2</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ sept15</td>
+      <td class="col-num">—</td>
+      <td class="col-num">2</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct mid">50.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ aug18</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ feb3_end_cta</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ may19_end_cta</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ oct13</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ oct20</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ sept01</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ sept08</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('wwws')" data-fid="wwws">
+      <td class="col-name">
+        <span class="chevron" id="chev-wwws">›</span>WWWS
+      </td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace pace-on">1</td>
+      <td class="col-goal">100% (1)</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('wwws')" title="Click to see package breakdown">$0 <span class="pkg-chevron" id="pkgchev-wwws">›</span></td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="wwws">
+      <td class="col-name col-utm">↳ Unattributed</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('google_ads')" data-fid="google_ads">
+      <td class="col-name">
+        <span class="chevron" id="chev-google_ads">›</span>Google Ads
+      </td>
+      <td class="col-num">11</td>
+      <td class="col-num">14</td>
+      <td class="col-pace pace-muted">14</td>
+      <td class="col-goal">—</td>
+      <td class="col-num">5</td>
+      <td class="col-pct bad">35.7%</td>
+      <td class="col-num">4</td>
+      <td class="col-pct good">80.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('google_ads')" title="Click to see package breakdown">$0 <span class="pkg-chevron" id="pkgchev-google_ads">›</span></td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="google_ads">
+      <td class="col-name col-utm">↳ 23805931083</td>
+      <td class="col-num">—</td>
+      <td class="col-num">7</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">2</td>
+      <td class="col-pct bad">28.6%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct mid">50.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="google_ads">
+      <td class="col-name col-utm">↳ 23815771816</td>
+      <td class="col-num">—</td>
+      <td class="col-num">6</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">2</td>
+      <td class="col-pct bad">33.3%</td>
+      <td class="col-num">3</td>
+      <td class="col-pct good">150.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="google_ads">
+      <td class="col-name col-utm">↳ 23883800856</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('ltf___in_house')" data-fid="ltf___in_house">
+      <td class="col-name">
+        <span class="chevron" id="chev-ltf___in_house">›</span>LTF - In-House
+      </td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace pace-muted">1</td>
+      <td class="col-goal">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('ltf___in_house')" title="Click to see package breakdown">$8,997 <span class="pkg-chevron" id="pkgchev-ltf___in_house">›</span></td>
+      <td class="col-num">$8,997</td>
+    </tr>
+
+    <tr class="pkg-row" data-parent="ltf___in_house" style="display:none">
+      <td class="col-name col-pkg">↳ Silver - $8,997 · Basic</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct"></td>
+      <td class="col-rev">$8,997</td>
+      <td class="col-num">$8,997</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="ltf___in_house">
+      <td class="col-name col-utm">↳ wescale</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-rev">$8,997</td>
+      <td class="col-num">$8,997</td>
+    </tr>
+
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('instagram')" data-fid="instagram">
+      <td class="col-name">
+        <span class="chevron" id="chev-instagram">›</span>Instagram
+      </td>
+      <td class="col-num">4</td>
+      <td class="col-num">7</td>
+      <td class="col-pace pace-behind">7</td>
+      <td class="col-goal">2% (300)</td>
+      <td class="col-num">3</td>
+      <td class="col-pct bad">42.9%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct bad">33.3%</td>
+      <td class="col-num">2</td>
+      <td class="col-pct good">28.6%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('instagram')" title="Click to see package breakdown">$14,497 <span class="pkg-chevron" id="pkgchev-instagram">›</span></td>
+      <td class="col-num">$7,248</td>
+    </tr>
+
+    <tr class="pkg-row" data-parent="instagram" style="display:none">
+      <td class="col-name col-pkg">↳ Silver - $8,997 · Free</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct"></td>
+      <td class="col-rev">$8,500</td>
+      <td class="col-num">$8,500</td>
+    </tr>
+
+    <tr class="pkg-row" data-parent="instagram" style="display:none">
+      <td class="col-name col-pkg">↳ Bronze - $5,997 · Community</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct"></td>
+      <td class="col-rev">$5,997</td>
+      <td class="col-num">$5,997</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="instagram">
+      <td class="col-name col-utm">↳ book-call</td>
+      <td class="col-num">—</td>
+      <td class="col-num">3</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct bad">33.3%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">33.3%</td>
+      <td class="col-rev">$5,997</td>
+      <td class="col-num">$5,997</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="instagram">
+      <td class="col-name col-utm">↳ mh-ig-bio</td>
+      <td class="col-num">—</td>
+      <td class="col-num">2</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct mid">50.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="instagram">
+      <td class="col-name col-utm">↳ 120229205352460662</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="instagram">
+      <td class="col-name col-utm">↳ new-follower</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="instagram">
+      <td class="col-name col-utm">↳ Unattributed</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pct ">—</td>
+      <td class="col-rev">$8,500</td>
+      <td class="col-num">$8,500</td>
+    </tr>
+
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('linkedin')" data-fid="linkedin">
+      <td class="col-name">
+        <span class="chevron" id="chev-linkedin">›</span>Linkedin
+      </td>
+      <td class="col-num">1</td>
+      <td class="col-num">3</td>
+      <td class="col-pace pace-behind">3</td>
+      <td class="col-goal">30% (10)</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('linkedin')" title="Click to see package breakdown">$0 <span class="pkg-chevron" id="pkgchev-linkedin">›</span></td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="linkedin">
+      <td class="col-name col-utm">↳ book-call</td>
+      <td class="col-num">—</td>
+      <td class="col-num">3</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="funnel-row funnel-row-excluded" onclick="toggleUTM('ltf___quiz_funnel')" data-fid="ltf___quiz_funnel">
+      <td class="col-name">
+        <span class="chevron" id="chev-ltf___quiz_funnel">›</span>LTF - Quiz Funnel *
+      </td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace pace-muted">—</td>
+      <td class="col-goal">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('ltf___quiz_funnel')" title="Click to see package breakdown">$0 <span class="pkg-chevron" id="pkgchev-ltf___quiz_funnel">›</span></td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="section-header-row" onclick="toggleSection('uncategorized')">
+      <td colspan="13">
+        <span class="section-chevron open" id="secchev-uncategorized">›</span>FUNNEL BREAKDOWN — UNCATEGORIZED
+      </td>
+    </tr>
+
+    <tr class="funnel-row" data-section="uncategorized" onclick="toggleUTM('unknown__needs_review_')" data-fid="unknown__needs_review_">
+      <td class="col-name">
+        <span class="chevron" id="chev-unknown__needs_review_">›</span>Unknown (Needs Review)
+      </td>
+      <td class="col-num">188</td>
+      <td class="col-num">26</td>
+      <td class="col-pace pace-muted">27</td>
+      <td class="col-goal">—</td>
+      <td class="col-num">6</td>
+      <td class="col-pct bad">23.1%</td>
+      <td class="col-num">4</td>
+      <td class="col-pct mid">66.7%</td>
+      <td class="col-num">3</td>
+      <td class="col-pct mid">11.5%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('unknown__needs_review_')" title="Click to see package breakdown">$23,991 <span class="pkg-chevron" id="pkgchev-unknown__needs_review_">›</span></td>
+      <td class="col-num">$7,997</td>
+    </tr>
+
+    <tr class="pkg-row" data-parent="unknown__needs_review_" style="display:none">
+      <td class="col-name col-pkg">↳ Silver - $8,997 · Basic</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">2</td>
+      <td class="col-pct"></td>
+      <td class="col-rev">$17,994</td>
+      <td class="col-num">$8,997</td>
+    </tr>
+
+    <tr class="pkg-row" data-parent="unknown__needs_review_" style="display:none">
+      <td class="col-name col-pkg">↳ Bronze - $5,997 · Community</td>
+      <td class="col-num">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct"></td>
+      <td class="col-rev">$5,997</td>
+      <td class="col-num">$5,997</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="unknown__needs_review_">
+      <td class="col-name col-utm">↳ Unattributed</td>
+      <td class="col-num">—</td>
+      <td class="col-num">22</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">4</td>
+      <td class="col-pct bad">18.2%</td>
+      <td class="col-num">2</td>
+      <td class="col-pct mid">50.0%</td>
+      <td class="col-num">3</td>
+      <td class="col-pct mid">13.6%</td>
+      <td class="col-rev">$23,991</td>
+      <td class="col-num">$7,997</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="unknown__needs_review_">
+      <td class="col-name col-utm">↳ _____</td>
+      <td class="col-num">—</td>
+      <td class="col-num">2</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="unknown__needs_review_">
+      <td class="col-name col-utm">↳ new-follower</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="unknown__needs_review_">
+      <td class="col-name col-utm">↳ wescale</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">1</td>
+      <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="total-row">
+      <td class="col-name">TOTAL</td>
+      <td class="col-num">702</td>
+      <td class="col-num">119</td>
+      <td class="col-pace">—</td>
+      <td class="col-goal">—</td>
+      <td class="col-num">33</td>
+      <td class="col-pct bad">27.7%</td>
+      <td class="col-num">23</td>
+      <td class="col-pct mid">69.7%</td>
+      <td class="col-num">11</td>
+      <td class="col-pct mid">9.2%</td>
+      <td class="col-rev">$75,661</td>
+      <td class="col-num">$6,878</td>
+    </tr>
+    </tbody>
+  </table>
 </div>
-<div class="report-footer">
-  <p>Projected — monthly pace reference: (Booked ÷ Days Elapsed) × Days in Month.<br>Green = above goal · Yellow = on goal · Red = below goal. Weekly views retain monthly goals and pace references.</p>
-  <div class="report-actions"><button class="csv-download-btn" id="download-csv" type="button">↓ Funnel CSV</button><a class="csv-download-btn" id="team-csv" download>↓ Team CSV</a></div>
-</div>
-<p class="unavailable" id="source-note"></p>
-<script id="v2-data" type="application/json">{"schema_version":2,"setters":[{"value":"Marketing","bookings":49,"marketing":49,"lane2":0,"social_dms":0,"showed":16,"qualified":9,"closed_won":0,"revenue":0,"formats":{"show":"32.7%","qualified":"56.2%","qualified_booked":"18.4%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Brad Savage","bookings":15,"marketing":0,"lane2":15,"social_dms":0,"showed":4,"qualified":5,"closed_won":0,"revenue":0,"formats":{"show":"26.7%","qualified":"125.0%","qualified_booked":"33.3%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Rob Maxfield","bookings":15,"marketing":0,"lane2":15,"social_dms":0,"showed":3,"qualified":2,"closed_won":0,"revenue":0,"formats":{"show":"20.0%","qualified":"66.7%","qualified_booked":"13.3%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Vince Bartolini","bookings":11,"marketing":0,"lane2":11,"social_dms":0,"showed":3,"qualified":4,"closed_won":2,"revenue":17994.0,"formats":{"show":"27.3%","qualified":"133.3%","qualified_booked":"36.4%","close":"18.2%","qualified_close":"50.0%","revenue":"$17,994","average":"$8,997"}},{"value":"August Young","bookings":10,"marketing":0,"lane2":10,"social_dms":0,"showed":4,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"40.0%","qualified":"25.0%","qualified_booked":"10.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Pearl Sathekge","bookings":5,"marketing":0,"lane2":0,"social_dms":5,"showed":2,"qualified":1,"closed_won":2,"revenue":14497.0,"formats":{"show":"40.0%","qualified":"50.0%","qualified_booked":"20.0%","close":"40.0%","qualified_close":"200.0%","revenue":"$14,497","average":"$7,248"}},{"value":"Tony Parton","bookings":5,"marketing":0,"lane2":5,"social_dms":0,"showed":1,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"20.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Cassie Caraballo","bookings":4,"marketing":0,"lane2":4,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Ariella Irvine","bookings":2,"marketing":0,"lane2":2,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Igor Trojanowski","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"100.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Kaylane Nunes","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Monde Janzen","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Marketing / Unassigned","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":4,"revenue":25179.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$25,179","average":"$6,295"}},{"value":"Connor George","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":2,"revenue":11994.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$11,994","average":"$5,997"}},{"value":"Charlie Ingram","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"team":[{"value":"Luke Herman","bookings":25,"marketing":11,"lane2":12,"social_dms":2,"showed":8,"qualified":7,"closed_won":0,"revenue":0,"formats":{"show":"32.0%","qualified":"87.5%","qualified_booked":"28.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Christian Hartwell","bookings":20,"marketing":7,"lane2":12,"social_dms":1,"showed":6,"qualified":4,"closed_won":3,"revenue":19182.0,"formats":{"show":"30.0%","qualified":"66.7%","qualified_booked":"20.0%","close":"15.0%","qualified_close":"75.0%","revenue":"$19,182","average":"$6,394"}},{"value":"Scott Seymour","bookings":18,"marketing":12,"lane2":5,"social_dms":1,"showed":6,"qualified":5,"closed_won":3,"revenue":20991.0,"formats":{"show":"33.3%","qualified":"83.3%","qualified_booked":"27.8%","close":"16.7%","qualified_close":"60.0%","revenue":"$20,991","average":"$6,997"}},{"value":"Ariella Irvine","bookings":14,"marketing":2,"lane2":12,"social_dms":0,"showed":3,"qualified":1,"closed_won":2,"revenue":11994.0,"formats":{"show":"21.4%","qualified":"33.3%","qualified_booked":"7.1%","close":"14.3%","qualified_close":"200.0%","revenue":"$11,994","average":"$5,997"}},{"value":"Robin Perkins","bookings":12,"marketing":2,"lane2":9,"social_dms":1,"showed":4,"qualified":4,"closed_won":0,"revenue":0,"formats":{"show":"33.3%","qualified":"100.0%","qualified_booked":"33.3%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Other / Non-Closer","bookings":10,"marketing":2,"lane2":8,"social_dms":0,"showed":1,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"10.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Joe Vaughan","bookings":9,"marketing":6,"lane2":3,"social_dms":0,"showed":2,"qualified":1,"closed_won":1,"revenue":8500.0,"formats":{"show":"22.2%","qualified":"50.0%","qualified_booked":"11.1%","close":"11.1%","qualified_close":"100.0%","revenue":"$8,500","average":"$8,500"}},{"value":"Shreya Bechra","bookings":6,"marketing":2,"lane2":4,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":8997.0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"16.7%","qualified_close":"—","revenue":"$8,997","average":"$8,997"}},{"value":"Joe Dysert","bookings":5,"marketing":5,"lane2":0,"social_dms":0,"showed":3,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"60.0%","qualified":"33.3%","qualified_booked":"20.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Eric Piccione","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"generated_at":"2026-10-30T11:30:19.371483-07:00","source_cutoff":"2026-10-30T11:30:19.371483-07:00","vendhub_arr":22178.0,"progress":{"day":30,"days":31,"working_days":22,"working_elapsed":22,"elapsed_pct":100.0},"goals":{"bookings":1241,"revenue":750000,"channels":{"Instagram":300,"Low Ticket Funnel":200,"VSL":110,"Website":100,"YouTube":132,"Internal Webinar":70,"Mike Newsletter":10,"X":10,"Linkedin":10,"Meta Ads":44,"Tik Tok":5,"Side Hustle Nation":1,"WWWS":1}},"period":"2026-10-26 through 2026-10-30 PT","rules_version":"booked_calls.v2.6-scheduled-anchor-candidate+any-meeting-clock+william-consult-retired-20261014","counted_meetings":119,"excluded_repeat_candidates":10,"attribution_reviewed_at":"2026-10-30T11:30:19.371483-07:00","lead_source_note":"Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.","totals":{"leads_created":702,"bookings":119,"marketing":49,"lane2":65,"social_dms":5,"showed":33,"qualified":23,"closed_won":11,"revenue":75661.0,"formats":{"show":"27.7%","qualified":"69.7%","qualified_booked":"19.3%","close":"9.2%","qualified_close":"47.8%","revenue":"$75,661","average":"$6,878"}},"channels":[{"channel":"Internal Webinar","leads_created":487,"bookings":44,"marketing":25,"lane2":19,"social_dms":0,"showed":11,"qualified":7,"closed_won":2,"revenue":10185.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"oct27","bookings":22,"marketing":20,"lane2":2,"social_dms":0,"showed":8,"qualified":4,"closed_won":0,"revenue":0,"formats":{"show":"36.4%","qualified":"50.0%","qualified_booked":"18.2%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"aug11","bookings":3,"marketing":0,"lane2":3,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":8997.0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"33.3%","qualified_close":"—","revenue":"$8,997","average":"$8,997"}},{"value":"oct27_end_cta","bookings":3,"marketing":3,"lane2":0,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"33.3%","qualified":"100.0%","qualified_booked":"33.3%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"sept29","bookings":3,"marketing":0,"lane2":3,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"sept22","bookings":2,"marketing":0,"lane2":2,"social_dms":0,"showed":1,"qualified":1,"closed_won":1,"revenue":1188.0,"formats":{"show":"50.0%","qualified":"100.0%","qualified_booked":"50.0%","close":"50.0%","qualified_close":"100.0%","revenue":"$1,188","average":"$1,188"}},{"value":"July29","bookings":2,"marketing":0,"lane2":2,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"sept15","bookings":2,"marketing":1,"lane2":1,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"50.0%","qualified":"100.0%","qualified_booked":"50.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"aug18","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"feb3_end_cta","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"may19_end_cta","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"oct13","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"oct20","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"sept01","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"sept08","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}}],"packages":[{"value":"Silver - $8,997 · Basic","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":8997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$8,997","average":"$8,997"}},{"value":"VendHub - Basic $1,188 · Community","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":1188.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$1,188","average":"$1,188"}}],"display":{"projected":45,"goal":70,"goal_pct":63,"pace":"pace-behind"},"formats":{"show":"25.0%","qualified":"63.6%","qualified_booked":"15.9%","close":"4.5%","qualified_close":"28.6%","revenue":"$10,185","average":"$5,092"}},{"channel":"Unknown (Needs Review)","leads_created":188,"bookings":26,"marketing":3,"lane2":23,"social_dms":0,"showed":6,"qualified":4,"closed_won":3,"revenue":23991.0,"unrecoverable_booked_leads":26,"drilldowns":[{"value":"Unattributed","bookings":22,"marketing":2,"lane2":20,"social_dms":0,"showed":4,"qualified":2,"closed_won":3,"revenue":23991.0,"formats":{"show":"18.2%","qualified":"50.0%","qualified_booked":"9.1%","close":"13.6%","qualified_close":"150.0%","revenue":"$23,991","average":"$7,997"}},{"value":"_____","bookings":2,"marketing":1,"lane2":1,"social_dms":0,"showed":0,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"50.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"new-follower","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":1,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"wescale","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"100.0%","qualified_booked":"100.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}}],"packages":[{"value":"Silver - $8,997 · Basic","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":2,"revenue":17994.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$17,994","average":"$8,997"}},{"value":"Bronze - $5,997 · Community","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"display":{"projected":27,"goal":null,"goal_pct":null,"pace":""},"formats":{"show":"23.1%","qualified":"66.7%","qualified_booked":"15.4%","close":"11.5%","qualified_close":"75.0%","revenue":"$23,991","average":"$7,997"}},{"channel":"Google Ads","leads_created":11,"bookings":14,"marketing":5,"lane2":9,"social_dms":0,"showed":5,"qualified":4,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"23805931083","bookings":7,"marketing":3,"lane2":4,"social_dms":0,"showed":2,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"28.6%","qualified":"50.0%","qualified_booked":"14.3%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"23815771816","bookings":6,"marketing":1,"lane2":5,"social_dms":0,"showed":2,"qualified":3,"closed_won":0,"revenue":0,"formats":{"show":"33.3%","qualified":"150.0%","qualified_booked":"50.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"23883800856","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":1,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}}],"packages":[],"display":{"projected":14,"goal":null,"goal_pct":null,"pace":""},"formats":{"show":"35.7%","qualified":"80.0%","qualified_booked":"28.6%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"channel":"YouTube","leads_created":8,"bookings":13,"marketing":9,"lane2":4,"social_dms":0,"showed":4,"qualified":2,"closed_won":2,"revenue":11994.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"start-vending-business","bookings":2,"marketing":1,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"book-a-call","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":1,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"100.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"100.0%","qualified_close":"—","revenue":"$5,997","average":"$5,997"}},{"value":"vending-101","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":1,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"100.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"100.0%","qualified_close":"—","revenue":"$5,997","average":"$5,997"}},{"value":"10-mistakes-vending","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"anthony","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"best-contract-vending","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"buy-first-machine","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"how-to-start-a-vending-machine-business-step-by-step-with-0","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"100.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"lc","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":1,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"should_you_buy_or_build_a_vending_route","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"vending-legal","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"100.0%","qualified_booked":"100.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"youtube-home","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}}],"packages":[{"value":"Bronze - $5,997 · Basic","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}},{"value":"Bronze - $5,997 · Community","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"display":{"projected":13,"goal":132,"goal_pct":10,"pace":"pace-behind"},"formats":{"show":"30.8%","qualified":"50.0%","qualified_booked":"15.4%","close":"15.4%","qualified_close":"100.0%","revenue":"$11,994","average":"$5,997"}},{"channel":"Instagram","leads_created":4,"bookings":7,"marketing":0,"lane2":2,"social_dms":5,"showed":3,"qualified":1,"closed_won":2,"revenue":14497.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"book-call","bookings":3,"marketing":0,"lane2":0,"social_dms":3,"showed":1,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"33.3%","qualified":"0.0%","qualified_booked":"0.0%","close":"33.3%","qualified_close":"—","revenue":"$5,997","average":"$5,997"}},{"value":"mh-ig-bio","bookings":2,"marketing":0,"lane2":0,"social_dms":2,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"50.0%","qualified":"100.0%","qualified_booked":"50.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"120229205352460662","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":1,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"new-follower","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Unattributed","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":8500.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$8,500","average":"$8,500"}}],"packages":[{"value":"Silver - $8,997 · Free","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":8500.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$8,500","average":"$8,500"}},{"value":"Bronze - $5,997 · Community","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"display":{"projected":7,"goal":300,"goal_pct":2,"pace":"pace-behind"},"formats":{"show":"42.9%","qualified":"33.3%","qualified_booked":"14.3%","close":"28.6%","qualified_close":"200.0%","revenue":"$14,497","average":"$7,248"}},{"channel":"Meta Ads","leads_created":0,"bookings":6,"marketing":0,"lane2":6,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"VSL Leads campaign","bookings":2,"marketing":0,"lane2":2,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"120229205352460662","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"6/23 Call Booking Campaign","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Anthony Webinar Leads Campaign 7/15","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"100.0%","qualified_booked":"100.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"adset-120250400565610740","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}}],"packages":[],"display":{"projected":6,"goal":44,"goal_pct":14,"pace":"pace-behind"},"formats":{"show":"16.7%","qualified":"100.0%","qualified_booked":"16.7%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"channel":"Website","leads_created":3,"bookings":4,"marketing":3,"lane2":1,"social_dms":0,"showed":3,"qualified":3,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"Unattributed","bookings":3,"marketing":3,"lane2":0,"social_dms":0,"showed":2,"qualified":2,"closed_won":0,"revenue":0,"formats":{"show":"66.7%","qualified":"100.0%","qualified_booked":"66.7%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"apply_now","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"100.0%","qualified_booked":"100.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}}],"packages":[],"display":{"projected":4,"goal":100,"goal_pct":4,"pace":"pace-behind"},"formats":{"show":"75.0%","qualified":"100.0%","qualified_booked":"75.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"channel":"Linkedin","leads_created":1,"bookings":3,"marketing":3,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"book-call","bookings":3,"marketing":3,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}}],"packages":[],"display":{"projected":3,"goal":10,"goal_pct":30,"pace":"pace-behind"},"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"channel":"LTF - In-House","leads_created":0,"bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":1,"closed_won":1,"revenue":8997.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"wescale","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":1,"closed_won":1,"revenue":8997.0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"100.0%","close":"100.0%","qualified_close":"100.0%","revenue":"$8,997","average":"$8,997"}}],"packages":[{"value":"Silver - $8,997 · Basic","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":8997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$8,997","average":"$8,997"}}],"display":{"projected":1,"goal":null,"goal_pct":null,"pace":""},"formats":{"show":"0.0%","qualified":"—","qualified_booked":"100.0%","close":"100.0%","qualified_close":"100.0%","revenue":"$8,997","average":"$8,997"}},{"channel":"WWWS","leads_created":0,"bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"Unattributed","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}}],"packages":[],"display":{"projected":1,"goal":1,"goal_pct":100,"pace":"pace-on"},"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"channel":"VSL","leads_created":0,"bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"VSL Leads campaign","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"packages":[{"value":"Bronze - $5,997 · Basic","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"display":{"projected":null,"goal":110,"goal_pct":0,"pace":""},"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"goal_percentages":{"bookings":10,"revenue":10},"arr_display":{"arr":"$22,178","mrr":"$1,848"},"view":{"key":"week-2026-10-26","kind":"week","month":"2026-10","start":"2026-10-26","end":"2026-10-30","end_exclusive":"2026-11-02","frozen":false,"label":"Oct 26 – Oct 30, 2026"},"pipeline":{"generated_at":"2026-10-30T11:30:19.371483-07:00","counts":{"Christian Hartwell":31,"Scott Seymour":14,"Robin Perkins":24,"Eric Piccione":21,"Joe Vaughan":24,"Shreya Bechra":0,"Luke Herman":21,"Ariella Irvine":8,"Oscar Pugh":10,"Joe Dysert":5},"basis":"Current open qualified leads owned within trailing 30 days; $7,000 × 20% per lead. Independent of report week."},"csv_rows":[["Funnel","Leads","Booked","Projected","Goal %","Showed","Show %","Qualified","Qual %","Closed","CW %","Revenue","Rev / Close"],["Internal Webinar",487,44,45,"63% (70)",11,"25.0%",7,"63.6%",2,"4.5%","$10,185","$5,092"],["Unknown (Needs Review)",188,26,27,"—",6,"23.1%",4,"66.7%",3,"11.5%","$23,991","$7,997"],["Google Ads",11,14,14,"—",5,"35.7%",4,"80.0%",0,"0.0%","$0","—"],["YouTube",8,13,13,"10% (132)",4,"30.8%",2,"50.0%",2,"15.4%","$11,994","$5,997"],["Instagram",4,7,7,"2% (300)",3,"42.9%",1,"33.3%",2,"28.6%","$14,497","$7,248"],["Meta Ads",0,6,6,"14% (44)",1,"16.7%",1,"100.0%",0,"0.0%","$0","—"],["Website",3,4,4,"4% (100)",3,"75.0%",3,"100.0%",0,"0.0%","$0","—"],["Linkedin",1,3,3,"30% (10)",0,"0.0%",0,"—",0,"0.0%","$0","—"],["LTF - In-House",0,1,1,"—",0,"0.0%",1,"—",1,"100.0%","$8,997","$8,997"],["WWWS",0,1,1,"100% (1)",0,"0.0%",0,"—",0,"0.0%","$0","—"],["VSL",0,0,"—","0% (110)",0,"—",0,"—",1,"—","$5,997","$5,997"],["TOTAL",702,119,"—","—",33,"27.7%",23,"69.7%",11,"9.2%","$75,661","$6,878"]],"navigation":{"months":[{"key":"2026-10","kind":"month","month":"2026-10","start":"2026-10-01","end":"2026-10-30","end_exclusive":"2026-11-01","frozen":false,"label":"October 2026","live":true}],"weeks":[{"key":"week-2026-09-28","kind":"week","month":"2026-10","start":"2026-10-01","end":"2026-10-04","end_exclusive":"2026-10-05","frozen":true,"label":"Oct 1 – Oct 4, 2026"},{"key":"week-2026-10-05","kind":"week","month":"2026-10","start":"2026-10-05","end":"2026-10-11","end_exclusive":"2026-10-12","frozen":true,"label":"Oct 5 – Oct 11, 2026"},{"key":"week-2026-10-12","kind":"week","month":"2026-10","start":"2026-10-12","end":"2026-10-18","end_exclusive":"2026-10-19","frozen":true,"label":"Oct 12 – Oct 18, 2026"},{"key":"week-2026-10-19","kind":"week","month":"2026-10","start":"2026-10-19","end":"2026-10-25","end_exclusive":"2026-10-26","frozen":true,"label":"Oct 19 – Oct 25, 2026"},{"key":"week-2026-10-26","kind":"week","month":"2026-10","start":"2026-10-26","end":"2026-10-30","end_exclusive":"2026-11-02","frozen":false,"label":"Oct 26 – Oct 30, 2026"}]}}</script>
+
+<script src="/mtd-funnel-dashboard/v2/archives/picker.js"></script>
 <script>
-const report=JSON.parse(document.getElementById('v2-data').textContent);
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const fmt=n=>new Intl.NumberFormat('en-US').format(Number(n||0));
-const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(Number(n||0));
-const pct=(a,b)=>b?`${(100*a/b).toFixed(1)}%`:'—';
-const pctClass=(n,d,high=.70,low=.50)=>d?(n/d>=high?'good':n/d<low?'bad':'mid'):'';
-const stamp=new Date(report.generated_at);
-const [periodStart,periodEnd]=report.period.split(' through ');
-const localDate=iso=>{const [y,m,d]=iso.split('-').map(Number);return new Intl.DateTimeFormat('en-US',{timeZone:'UTC',month:'short',day:'numeric',year:'numeric'}).format(new Date(Date.UTC(y,m-1,d,12)));};
-const view=report.view||{kind:'month',month:periodStart.slice(0,7),key:periodStart.slice(0,7),frozen:false};
-const progress=report.progress, goals=report.goals;
-document.getElementById('month-label').textContent=`${view.kind==='week'?'Week':'MTD'} ${localDate(periodStart)} – ${localDate(periodEnd.replace(' PT',''))} PT`;
-document.getElementById('snapshot-label').textContent=view.frozen?'Archived · Reconstructed from Close records':view.kind==='week'?'Current Week · Snapshot':'Snapshot';
-document.getElementById('period-progress').innerHTML=`<span>Day <strong>${progress.day}/${progress.days}</strong></span><span class="cs-sep">·</span><span>Working days <strong>${progress.working_elapsed}/${progress.working_days}</strong></span><span class="cs-sep">·</span><span><strong>${progress.elapsed_pct.toFixed(1)}%</strong> elapsed</span>`;
-document.getElementById('snapshot').textContent=stamp.toLocaleString('en-US',{timeZone:'America/Los_Angeles',month:'long',day:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})+' PT';
-const navigation=report.navigation;
-const base=new URL(location.pathname.includes('/archives/')?'../':'./',location.href);
-document.getElementById('mom-link').href=new URL('archives/mom.html',base).href;
-document.getElementById('team-csv').href=new URL(`reports/team-${view.key}.csv`,base).href;
-const monthURL=m=>new URL(m.live?'index.html':`archives/${m.key}.html`,base).href;
-const monthPicker=document.getElementById('month-picker'), weekPicker=document.getElementById('week-picker');
-monthPicker.innerHTML=[...navigation.months].reverse().map(m=>`<option value="${esc(monthURL(m))}" ${m.key===view.month?'selected':''}>${esc(m.label)}</option>`).join('');
-const selectedMonth=navigation.months.find(m=>m.key===view.month);
-const relevantWeeks=navigation.weeks.filter(w=>w.start.slice(0,7)<=view.month&&w.end.slice(0,7)>=view.month);
-weekPicker.innerHTML=`<option value="${esc(selectedMonth?monthURL(selectedMonth):new URL('index.html',base).href)}">Full Month</option>`+[...relevantWeeks].reverse().map(w=>`<option value="${esc(new URL(`archives/${w.key}.html`,base).href)}" ${view.kind==='week'&&view.key===w.key?'selected':''}>${esc(w.label)}${w.frozen?'':' · Current'}</option>`).join('');
-for(const picker of [monthPicker,weekPicker])picker.addEventListener('change',()=>{location.href=picker.value;});
-const t=report.totals;
-const bookingMix=`Lane 2 ${fmt(t.lane2)} · Marketing ${fmt(t.marketing)} · Social DMs ${fmt(t.social_dms)}`;
-const periodWord=view.kind==='week'?'this week':'MTD';
-const arr=report.vendhub_arr||0;
-const cards=[
- ['Leads Created',fmt(t.leads_created),`new leads ${periodWord}`,'#6366f1'],
- ['Total Booked',fmt(t.bookings),`new first calls ${periodWord}`,'#4f46e5',goals.bookings],
- ['Showed',fmt(t.showed),`${t.formats.show} show rate`,'#2563eb'],
- ['Qualified',fmt(t.qualified),`${t.formats.qualified} qual rate · ${t.formats.qualified_booked} of booked`,'#7c3aed'],
- ['Closed Won',fmt(t.closed_won),`${t.formats.close} booked→close · ${t.formats.qualified_close} qual→close`,'#d97706'],
- ['Closed Revenue',t.formats.revenue,`${t.formats.average} avg deal`,'#0e9f6e',goals.revenue]
-];
-document.getElementById('kpis').innerHTML=cards.map(([label,value,sub,color,goal],i)=>{
- const target=goal?`<span class="goal-target">/ ${i===5?money(goal):fmt(goal)} <span class="monthly-goal-label">${view.kind==='week'?'monthly goal':'goal'}</span></span>`:'';
- const corner=goal?`<div class="kpi-goal-pct">${report.goal_percentages[i===5?'revenue':'bookings']}%</div>`:'';
- const extra=i===1?`<div class="kpi-sub">${esc(bookingMix)}</div>`:i===5&&arr?` · <span class="recurring-revenue">ARR ${report.arr_display.arr} <span style="opacity:.75">MRR ${report.arr_display.mrr}</span></span>`:'';
- return `<div class="kpi" style="--kpi-accent:${color};--kpi-color:${i===1?'var(--text)':color}">${corner}<div class="label">${esc(label)}</div><div class="value">${esc(value)}${target}</div><div class="kpi-sub">${esc(sub)}${i===5?extra:''}</div>${i===1?extra:''}</div>`;
-}).join('');
-function rowCells(c, total=false, detail=false){
- const show=c.formats.show, qual=c.formats.qualified, close=c.formats.close;
- const display=detail?{}:c.display||{};
- const projected=display.projected, goal=display.goal;
- return `<td class="col-name">${total?'TOTAL':esc(c.channel??c.value)}</td><td class="col-num">${detail?'—':fmt(c.leads_created)}</td><td class="col-num">${fmt(c.bookings)}</td><td class="col-pace ${display.pace||''}">${projected==null?'—':fmt(projected)}</td><td class="col-goal">${goal?`${display.goal_pct}% (${fmt(goal)})`:'—'}</td><td class="col-num">${fmt(c.showed)}</td><td class="col-pct ${pctClass(c.showed,c.bookings)}">${show}</td><td class="col-num">${fmt(c.qualified)}</td><td class="col-pct ${pctClass(c.qualified,c.showed)}">${qual}</td><td class="col-num">${fmt(c.closed_won)}</td><td class="col-pct ${pctClass(c.closed_won,c.bookings,.15,.07)}">${close}</td><td class="col-rev">${c.formats.revenue}</td><td class="col-num">${c.formats.average}</td>`;
-}
-const body=document.getElementById('funnel-body');
-function sectionHeader(section,label){
- body.insertAdjacentHTML('beforeend',`<tr class="section-header-row"><td colspan="13"><button class="expand-link" data-section-toggle="${section}" aria-expanded="true"><span class="section-chevron open">›</span>${esc(label)}</button></td></tr>`);
-}
-let sourceIndex=0;
-for(const [section,channels] of [['lead_sources',report.channels.filter(c=>c.channel!=='Unknown (Needs Review)')],['uncategorized',report.channels.filter(c=>c.channel==='Unknown (Needs Review)')]]){
- if(!channels.length)continue;
- sectionHeader(section,section==='lead_sources'?'FUNNEL BREAKDOWN — LEAD SOURCES':'FUNNEL BREAKDOWN — UNCATEGORIZED');
- for(const c of channels){
-  const sid=`s${sourceIndex++}`;
-  const buckets=`Marketing ${fmt(c.marketing)} · Lane 2 ${fmt(c.lane2)} · Social DMs ${fmt(c.social_dms)}`;
-  const reviewNote=c.channel==='Unknown (Needs Review)'&&c.unrecoverable_booked_leads?`<div class="channel-meta">${fmt(c.unrecoverable_booked_leads)} unique booked leads remain unresolved under V2 source rules</div>`:'';
-  const metrics=rowCells(c);
-  body.insertAdjacentHTML('beforeend',`<tr class="funnel-row" data-section="${section}"><td class="col-name"><button class="expand-link" data-toggle="${sid}" aria-expanded="false"><span class="chevron">›</span>${esc(c.channel)}</button><div class="channel-meta">${buckets}</div>${reviewNote}</td>${metrics.slice(metrics.indexOf('</td>')+5)}</tr>`);
-  const parent=body.lastElementChild;
-  const revenue=parent.querySelector('.col-rev');
-  if(c.packages.length)revenue.innerHTML=`<button class="expand-link" data-package-toggle="${sid}" aria-expanded="false" title="View package and VendHub plan breakdown">${c.formats.revenue} ›</button>`;
-  for(const value of c.drilldowns)body.insertAdjacentHTML('beforeend',`<tr class="utm-row" data-section="${section}" data-parent="${sid}">${rowCells(value,false,true)}</tr>`);
-  for(const pack of c.packages)body.insertAdjacentHTML('beforeend',`<tr class="pkg-row" data-section="${section}" data-package-parent="${sid}">${rowCells(pack,false,true)}</tr>`);
- }
-}
-body.insertAdjacentHTML('beforeend',`<tr class="total-row">${rowCells(t,true)}</tr>`);
-if(report.setters.length){
- sectionHeader('setters','BOOKING ATTRIBUTION — SETTERS');
- body.insertAdjacentHTML('beforeend','<tr data-section="setters"><td colspan="13" class="section-note">Bookings, shows and qualification follow the credited V2 meeting setter. Won revenue follows the current lead setter and won date independently. Lane 2 and Social DM counts remain separate in each row.</td></tr>');
- for(const setter of report.setters){
-  const metrics=rowCells(setter,false,true);
-  body.insertAdjacentHTML('beforeend',`<tr class="funnel-row" data-section="setters"><td class="col-name">${esc(setter.value)}<div class="channel-meta">Lane 2 ${fmt(setter.lane2)} · Social DMs ${fmt(setter.social_dms)} · Marketing ${fmt(setter.marketing)}</div></td>${metrics.slice(metrics.indexOf('</td>')+5)}</tr>`);
- }
-}
-for(const button of document.querySelectorAll('[data-toggle],[data-package-toggle]'))button.addEventListener('click',()=>{
- const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));
- const pack=button.dataset.packageToggle;
- document.querySelectorAll(pack?`[data-package-parent="${pack}"]`:`.utm-row[data-parent="${button.dataset.toggle}"]`).forEach(row=>row.classList.toggle('open',open));
- const chevron=button.querySelector('.chevron');if(chevron)chevron.classList.toggle('open',open);
-});
-for(const button of document.querySelectorAll('[data-section-toggle]'))button.addEventListener('click',()=>{
- const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));
- button.querySelector('.section-chevron').classList.toggle('open',open);
- document.querySelectorAll(`[data-section="${button.dataset.sectionToggle}"]`).forEach(row=>{row.hidden=!open;});
-});
-document.getElementById('download-csv').addEventListener('click',()=>{
- const csv=report.csv_rows.map(row=>row.map(value=>`"${String(value).replace(/"/g,'""')}"`).join(',')).join('\r\n');
- const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));
- const link=document.createElement('a');link.href=url;link.download=`mtd-v2-${view.key}.csv`;link.click();URL.revokeObjectURL(url);
-});
-document.getElementById('source-note').textContent=`${report.lead_source_note} Reporting cutoff (exclusive): ${report.source_cutoff}. Rules: ${report.rules_version}. ${fmt(report.excluded_repeat_candidates)} candidate bookings fell inside an existing 30-day window. Snapshot includes ${fmt(report.counted_meetings)} qualifying first-call credits. ${view.frozen?'Historical views were reconstructed from Close records available when the archive was generated.':''}`;
+  function togglePkg(fid) {
+    const pkgRows = document.querySelectorAll(`.pkg-row[data-parent="${fid}"]`);
+    const chevron = document.getElementById("pkgchev-" + fid);
+    const isOpen  = chevron && chevron.classList.contains("open");
+    pkgRows.forEach(r => {
+      r.style.display = isOpen ? "none" : "table-row";
+      r.classList.toggle("open", !isOpen);
+    });
+    if (chevron) chevron.classList.toggle("open", !isOpen);
+  }
+
+  function toggleUTM(fid) {
+    const utmRows = document.querySelectorAll(`.utm-row[data-parent="${fid}"]`);
+    const chevron = document.getElementById("chev-" + fid);
+    const isOpen  = chevron.classList.contains("open");
+    utmRows.forEach(r => r.classList.toggle("open", !isOpen));
+    chevron.classList.toggle("open", !isOpen);
+  }
+
+  function toggleSection(grpId) {
+    const chevron  = document.getElementById("secchev-" + grpId);
+    const isOpen   = chevron.classList.contains("open");
+    // All funnel rows and their utm sub-rows in this section
+    const funnelRows = document.querySelectorAll(`.funnel-row[data-section="${grpId}"]`);
+    funnelRows.forEach(row => {
+      row.style.display = isOpen ? "none" : "";
+      // Also collapse any open UTM sub-rows within this section
+      const fid = row.dataset.fid;
+      if (fid) {
+        const utmRows = document.querySelectorAll(`.utm-row[data-parent="${fid}"]`);
+        if (isOpen) {
+          utmRows.forEach(r => r.classList.remove("open"));
+          const utmChev = document.getElementById("chev-" + fid);
+          if (utmChev) utmChev.classList.remove("open");
+        }
+      }
+    });
+    chevron.classList.toggle("open", !isOpen);
+  }
+
+  function csvEscape(value) {
+    const s = String(value == null ? "" : value);
+    if (/["\n,]/.test(s)) {
+      return '"' + s.replace(/"/g, '""') + '"';
+    }
+    return s;
+  }
+
+  function downloadFunnelCSV() {
+    const table = document.querySelector(".table-wrap table");
+    if (!table) return;
+
+    const headerCells = Array.from(table.querySelectorAll("thead th"))
+      .map(th => th.textContent.replace(/\s+/g, " ").trim());
+    const rows = [headerCells];
+
+    table.querySelectorAll("tbody tr").forEach(tr => {
+      // Only export top-level funnel rows and the TOTAL row — skip section
+      // headers and the collapsible UTM/package sub-rows.
+      if (!tr.classList.contains("funnel-row") && !tr.classList.contains("total-row")) return;
+      const cells = Array.from(tr.children).map(td =>
+        td.textContent.replace(/[›▶]/g, "").replace(/\s+/g, " ").trim()
+      );
+      rows.push(cells);
+    });
+
+    const csv = rows.map(r => r.map(csvEscape).join(",")).join("\r\n");
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "mtd-funnel-october-2026-oct-26-nov-1.csv";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
 </script>
+
+<div style="padding: 24px 36px 32px; border-top: 1px solid var(--border); margin-top: 8px; display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+  <p style="font-size: 11px; color: var(--muted); line-height: 1.7; max-width: 640px; margin:0;">
+    <strong style="color: var(--muted2);">Projected</strong> — End-of-month estimate based on current daily booking pace:
+    <em>(Booked ÷ Days Elapsed) × Days in Month</em>. Color reflects projected vs goal.
+    &nbsp;&nbsp;<strong style="color: var(--muted2);">*</strong> — Funnel excluded from top-line totals and KPI tiles.
+    <span style="color: var(--green); font-weight:600;">Green</span> = exceeding pace &nbsp;·&nbsp;
+    <span style="color: #ca8a04; font-weight:600;">Yellow</span> = on pace &nbsp;·&nbsp;
+    <span style="color: var(--red); font-weight:600;">Red</span> = behind pace.
+    Funnels without a goal show —.
+    Goals are updated monthly in <code style="font-size:10.5px; background:var(--surface2); padding:1px 4px; border-radius:3px;">goals.json</code>.
+  </p>
+  <button type="button" class="csv-download-btn" onclick="downloadFunnelCSV()">⬇ Download CSV</button>
+</div>
+
+<script id="v2-data" type="application/json">{"schema_version":2,"setters":[{"value":"Marketing","bookings":49,"marketing":49,"lane2":0,"social_dms":0,"showed":16,"qualified":9,"closed_won":0,"revenue":0,"formats":{"show":"32.7%","qualified":"56.2%","qualified_booked":"18.4%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Brad Savage","bookings":15,"marketing":0,"lane2":15,"social_dms":0,"showed":4,"qualified":5,"closed_won":0,"revenue":0,"formats":{"show":"26.7%","qualified":"125.0%","qualified_booked":"33.3%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Rob Maxfield","bookings":15,"marketing":0,"lane2":15,"social_dms":0,"showed":3,"qualified":2,"closed_won":0,"revenue":0,"formats":{"show":"20.0%","qualified":"66.7%","qualified_booked":"13.3%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Vince Bartolini","bookings":11,"marketing":0,"lane2":11,"social_dms":0,"showed":3,"qualified":4,"closed_won":2,"revenue":17994.0,"formats":{"show":"27.3%","qualified":"133.3%","qualified_booked":"36.4%","close":"18.2%","qualified_close":"50.0%","revenue":"$17,994","average":"$8,997"}},{"value":"August Young","bookings":10,"marketing":0,"lane2":10,"social_dms":0,"showed":4,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"40.0%","qualified":"25.0%","qualified_booked":"10.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Pearl Sathekge","bookings":5,"marketing":0,"lane2":0,"social_dms":5,"showed":2,"qualified":1,"closed_won":2,"revenue":14497.0,"formats":{"show":"40.0%","qualified":"50.0%","qualified_booked":"20.0%","close":"40.0%","qualified_close":"200.0%","revenue":"$14,497","average":"$7,248"}},{"value":"Tony Parton","bookings":5,"marketing":0,"lane2":5,"social_dms":0,"showed":1,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"20.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Cassie Caraballo","bookings":4,"marketing":0,"lane2":4,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Ariella Irvine","bookings":2,"marketing":0,"lane2":2,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Igor Trojanowski","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"100.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Kaylane Nunes","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Monde Janzen","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Marketing / Unassigned","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":4,"revenue":25179.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$25,179","average":"$6,295"}},{"value":"Connor George","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":2,"revenue":11994.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$11,994","average":"$5,997"}},{"value":"Charlie Ingram","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"team":[{"value":"Luke Herman","bookings":25,"marketing":11,"lane2":12,"social_dms":2,"showed":8,"qualified":7,"closed_won":0,"revenue":0,"formats":{"show":"32.0%","qualified":"87.5%","qualified_booked":"28.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Christian Hartwell","bookings":20,"marketing":7,"lane2":12,"social_dms":1,"showed":6,"qualified":4,"closed_won":3,"revenue":19182.0,"formats":{"show":"30.0%","qualified":"66.7%","qualified_booked":"20.0%","close":"15.0%","qualified_close":"75.0%","revenue":"$19,182","average":"$6,394"}},{"value":"Scott Seymour","bookings":18,"marketing":12,"lane2":5,"social_dms":1,"showed":6,"qualified":5,"closed_won":3,"revenue":20991.0,"formats":{"show":"33.3%","qualified":"83.3%","qualified_booked":"27.8%","close":"16.7%","qualified_close":"60.0%","revenue":"$20,991","average":"$6,997"}},{"value":"Ariella Irvine","bookings":14,"marketing":2,"lane2":12,"social_dms":0,"showed":3,"qualified":1,"closed_won":2,"revenue":11994.0,"formats":{"show":"21.4%","qualified":"33.3%","qualified_booked":"7.1%","close":"14.3%","qualified_close":"200.0%","revenue":"$11,994","average":"$5,997"}},{"value":"Robin Perkins","bookings":12,"marketing":2,"lane2":9,"social_dms":1,"showed":4,"qualified":4,"closed_won":0,"revenue":0,"formats":{"show":"33.3%","qualified":"100.0%","qualified_booked":"33.3%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Other / Non-Closer","bookings":10,"marketing":2,"lane2":8,"social_dms":0,"showed":1,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"10.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Joe Vaughan","bookings":9,"marketing":6,"lane2":3,"social_dms":0,"showed":2,"qualified":1,"closed_won":1,"revenue":8500.0,"formats":{"show":"22.2%","qualified":"50.0%","qualified_booked":"11.1%","close":"11.1%","qualified_close":"100.0%","revenue":"$8,500","average":"$8,500"}},{"value":"Shreya Bechra","bookings":6,"marketing":2,"lane2":4,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":8997.0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"16.7%","qualified_close":"—","revenue":"$8,997","average":"$8,997"}},{"value":"Joe Dysert","bookings":5,"marketing":5,"lane2":0,"social_dms":0,"showed":3,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"60.0%","qualified":"33.3%","qualified_booked":"20.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"Eric Piccione","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"generated_at":"2026-10-30T11:30:19.371483-07:00","source_cutoff":"2026-10-30T11:30:19.371483-07:00","vendhub_arr":22178.0,"progress":{"day":30,"days":31,"working_days":22,"working_elapsed":22,"elapsed_pct":100.0},"goals":{"bookings":1241,"revenue":750000,"channels":{"Instagram":300,"Low Ticket Funnel":200,"VSL":110,"Website":100,"YouTube":132,"Internal Webinar":70,"Mike Newsletter":10,"X":10,"Linkedin":10,"Meta Ads":44,"Tik Tok":5,"Side Hustle Nation":1,"WWWS":1}},"period":"2026-10-26 through 2026-10-30 PT","rules_version":"booked_calls.v2.6-scheduled-anchor-candidate+any-meeting-clock+william-consult-retired-20261014","counted_meetings":119,"excluded_repeat_candidates":10,"attribution_reviewed_at":"2026-10-30T11:30:19.371483-07:00","lead_source_note":"Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.","totals":{"leads_created":702,"bookings":119,"marketing":49,"lane2":65,"social_dms":5,"showed":33,"qualified":23,"closed_won":11,"revenue":75661.0,"formats":{"show":"27.7%","qualified":"69.7%","qualified_booked":"19.3%","close":"9.2%","qualified_close":"47.8%","revenue":"$75,661","average":"$6,878"}},"channels":[{"channel":"Internal Webinar","leads_created":487,"bookings":44,"marketing":25,"lane2":19,"social_dms":0,"showed":11,"qualified":7,"closed_won":2,"revenue":10185.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"oct27","bookings":22,"marketing":20,"lane2":2,"social_dms":0,"showed":8,"qualified":4,"closed_won":0,"revenue":0,"formats":{"show":"36.4%","qualified":"50.0%","qualified_booked":"18.2%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"aug11","bookings":3,"marketing":0,"lane2":3,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":8997.0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"33.3%","qualified_close":"—","revenue":"$8,997","average":"$8,997"}},{"value":"oct27_end_cta","bookings":3,"marketing":3,"lane2":0,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"33.3%","qualified":"100.0%","qualified_booked":"33.3%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"sept29","bookings":3,"marketing":0,"lane2":3,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"sept22","bookings":2,"marketing":0,"lane2":2,"social_dms":0,"showed":1,"qualified":1,"closed_won":1,"revenue":1188.0,"formats":{"show":"50.0%","qualified":"100.0%","qualified_booked":"50.0%","close":"50.0%","qualified_close":"100.0%","revenue":"$1,188","average":"$1,188"}},{"value":"July29","bookings":2,"marketing":0,"lane2":2,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"sept15","bookings":2,"marketing":1,"lane2":1,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"50.0%","qualified":"100.0%","qualified_booked":"50.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"aug18","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"feb3_end_cta","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"may19_end_cta","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"oct13","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"oct20","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"sept01","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"sept08","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}}],"packages":[{"value":"Silver - $8,997 · Basic","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":8997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$8,997","average":"$8,997"}},{"value":"VendHub - Basic $1,188 · Community","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":1188.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$1,188","average":"$1,188"}}],"display":{"projected":45,"goal":70,"goal_pct":63,"pace":"pace-behind"},"formats":{"show":"25.0%","qualified":"63.6%","qualified_booked":"15.9%","close":"4.5%","qualified_close":"28.6%","revenue":"$10,185","average":"$5,092"}},{"channel":"Unknown (Needs Review)","leads_created":188,"bookings":26,"marketing":3,"lane2":23,"social_dms":0,"showed":6,"qualified":4,"closed_won":3,"revenue":23991.0,"unrecoverable_booked_leads":26,"drilldowns":[{"value":"Unattributed","bookings":22,"marketing":2,"lane2":20,"social_dms":0,"showed":4,"qualified":2,"closed_won":3,"revenue":23991.0,"formats":{"show":"18.2%","qualified":"50.0%","qualified_booked":"9.1%","close":"13.6%","qualified_close":"150.0%","revenue":"$23,991","average":"$7,997"}},{"value":"_____","bookings":2,"marketing":1,"lane2":1,"social_dms":0,"showed":0,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"50.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"new-follower","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":1,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"wescale","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"100.0%","qualified_booked":"100.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}}],"packages":[{"value":"Silver - $8,997 · Basic","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":2,"revenue":17994.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$17,994","average":"$8,997"}},{"value":"Bronze - $5,997 · Community","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"display":{"projected":27,"goal":null,"goal_pct":null,"pace":""},"formats":{"show":"23.1%","qualified":"66.7%","qualified_booked":"15.4%","close":"11.5%","qualified_close":"75.0%","revenue":"$23,991","average":"$7,997"}},{"channel":"Google Ads","leads_created":11,"bookings":14,"marketing":5,"lane2":9,"social_dms":0,"showed":5,"qualified":4,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"23805931083","bookings":7,"marketing":3,"lane2":4,"social_dms":0,"showed":2,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"28.6%","qualified":"50.0%","qualified_booked":"14.3%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"23815771816","bookings":6,"marketing":1,"lane2":5,"social_dms":0,"showed":2,"qualified":3,"closed_won":0,"revenue":0,"formats":{"show":"33.3%","qualified":"150.0%","qualified_booked":"50.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"23883800856","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":1,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}}],"packages":[],"display":{"projected":14,"goal":null,"goal_pct":null,"pace":""},"formats":{"show":"35.7%","qualified":"80.0%","qualified_booked":"28.6%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"channel":"YouTube","leads_created":8,"bookings":13,"marketing":9,"lane2":4,"social_dms":0,"showed":4,"qualified":2,"closed_won":2,"revenue":11994.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"start-vending-business","bookings":2,"marketing":1,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"book-a-call","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":1,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"100.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"100.0%","qualified_close":"—","revenue":"$5,997","average":"$5,997"}},{"value":"vending-101","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":1,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"100.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"100.0%","qualified_close":"—","revenue":"$5,997","average":"$5,997"}},{"value":"10-mistakes-vending","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"anthony","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"best-contract-vending","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"buy-first-machine","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"how-to-start-a-vending-machine-business-step-by-step-with-0","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"100.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"lc","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":1,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"should_you_buy_or_build_a_vending_route","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"vending-legal","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"100.0%","qualified_booked":"100.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"youtube-home","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}}],"packages":[{"value":"Bronze - $5,997 · Basic","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}},{"value":"Bronze - $5,997 · Community","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"display":{"projected":13,"goal":132,"goal_pct":10,"pace":"pace-behind"},"formats":{"show":"30.8%","qualified":"50.0%","qualified_booked":"15.4%","close":"15.4%","qualified_close":"100.0%","revenue":"$11,994","average":"$5,997"}},{"channel":"Instagram","leads_created":4,"bookings":7,"marketing":0,"lane2":2,"social_dms":5,"showed":3,"qualified":1,"closed_won":2,"revenue":14497.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"book-call","bookings":3,"marketing":0,"lane2":0,"social_dms":3,"showed":1,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"33.3%","qualified":"0.0%","qualified_booked":"0.0%","close":"33.3%","qualified_close":"—","revenue":"$5,997","average":"$5,997"}},{"value":"mh-ig-bio","bookings":2,"marketing":0,"lane2":0,"social_dms":2,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"50.0%","qualified":"100.0%","qualified_booked":"50.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"120229205352460662","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":1,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"0.0%","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"new-follower","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Unattributed","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":8500.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$8,500","average":"$8,500"}}],"packages":[{"value":"Silver - $8,997 · Free","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":8500.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$8,500","average":"$8,500"}},{"value":"Bronze - $5,997 · Community","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"display":{"projected":7,"goal":300,"goal_pct":2,"pace":"pace-behind"},"formats":{"show":"42.9%","qualified":"33.3%","qualified_booked":"14.3%","close":"28.6%","qualified_close":"200.0%","revenue":"$14,497","average":"$7,248"}},{"channel":"Meta Ads","leads_created":0,"bookings":6,"marketing":0,"lane2":6,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"VSL Leads campaign","bookings":2,"marketing":0,"lane2":2,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"120229205352460662","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"6/23 Call Booking Campaign","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"value":"Anthony Webinar Leads Campaign 7/15","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"100.0%","qualified_booked":"100.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"adset-120250400565610740","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}}],"packages":[],"display":{"projected":6,"goal":44,"goal_pct":14,"pace":"pace-behind"},"formats":{"show":"16.7%","qualified":"100.0%","qualified_booked":"16.7%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"channel":"Website","leads_created":3,"bookings":4,"marketing":3,"lane2":1,"social_dms":0,"showed":3,"qualified":3,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"Unattributed","bookings":3,"marketing":3,"lane2":0,"social_dms":0,"showed":2,"qualified":2,"closed_won":0,"revenue":0,"formats":{"show":"66.7%","qualified":"100.0%","qualified_booked":"66.7%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"value":"apply_now","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0,"formats":{"show":"100.0%","qualified":"100.0%","qualified_booked":"100.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}}],"packages":[],"display":{"projected":4,"goal":100,"goal_pct":4,"pace":"pace-behind"},"formats":{"show":"75.0%","qualified":"100.0%","qualified_booked":"75.0%","close":"0.0%","qualified_close":"0.0%","revenue":"$0","average":"—"}},{"channel":"Linkedin","leads_created":1,"bookings":3,"marketing":3,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"book-call","bookings":3,"marketing":3,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}}],"packages":[],"display":{"projected":3,"goal":10,"goal_pct":30,"pace":"pace-behind"},"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"channel":"LTF - In-House","leads_created":0,"bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":1,"closed_won":1,"revenue":8997.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"wescale","bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":0,"qualified":1,"closed_won":1,"revenue":8997.0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"100.0%","close":"100.0%","qualified_close":"100.0%","revenue":"$8,997","average":"$8,997"}}],"packages":[{"value":"Silver - $8,997 · Basic","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":8997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$8,997","average":"$8,997"}}],"display":{"projected":1,"goal":null,"goal_pct":null,"pace":""},"formats":{"show":"0.0%","qualified":"—","qualified_booked":"100.0%","close":"100.0%","qualified_close":"100.0%","revenue":"$8,997","average":"$8,997"}},{"channel":"WWWS","leads_created":0,"bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"Unattributed","bookings":1,"marketing":1,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0,"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}}],"packages":[],"display":{"projected":1,"goal":1,"goal_pct":100,"pace":"pace-on"},"formats":{"show":"0.0%","qualified":"—","qualified_booked":"0.0%","close":"0.0%","qualified_close":"—","revenue":"$0","average":"—"}},{"channel":"VSL","leads_created":0,"bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"VSL Leads campaign","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"packages":[{"value":"Bronze - $5,997 · Basic","bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":1,"revenue":5997.0,"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"display":{"projected":null,"goal":110,"goal_pct":0,"pace":""},"formats":{"show":"—","qualified":"—","qualified_booked":"—","close":"—","qualified_close":"—","revenue":"$5,997","average":"$5,997"}}],"goal_percentages":{"bookings":10,"revenue":10},"arr_display":{"arr":"$22,178","mrr":"$1,848"},"view":{"key":"week-2026-10-26","kind":"week","month":"2026-10","start":"2026-10-26","end":"2026-10-30","end_exclusive":"2026-11-02","frozen":false,"label":"Oct 26 – Oct 30, 2026"},"pipeline":{"generated_at":"2026-10-30T11:30:19.371483-07:00","counts":{"Christian Hartwell":31,"Scott Seymour":14,"Robin Perkins":24,"Eric Piccione":21,"Joe Vaughan":24,"Shreya Bechra":0,"Luke Herman":21,"Ariella Irvine":8,"Oscar Pugh":10,"Joe Dysert":5},"basis":"Current open qualified leads owned within trailing 30 days; $7,000 × 20% per lead. Independent of report week."},"csv_rows":[["Funnel","Leads","Booked","Projected","Goal %","Showed","Show %","Qualified","Qual %","Closed","CW %","Revenue","Rev / Close"],["Internal Webinar",487,44,45,"63% (70)",11,"25.0%",7,"63.6%",2,"4.5%","$10,185","$5,092"],["Unknown (Needs Review)",188,26,27,"—",6,"23.1%",4,"66.7%",3,"11.5%","$23,991","$7,997"],["Google Ads",11,14,14,"—",5,"35.7%",4,"80.0%",0,"0.0%","$0","—"],["YouTube",8,13,13,"10% (132)",4,"30.8%",2,"50.0%",2,"15.4%","$11,994","$5,997"],["Instagram",4,7,7,"2% (300)",3,"42.9%",1,"33.3%",2,"28.6%","$14,497","$7,248"],["Meta Ads",0,6,6,"14% (44)",1,"16.7%",1,"100.0%",0,"0.0%","$0","—"],["Website",3,4,4,"4% (100)",3,"75.0%",3,"100.0%",0,"0.0%","$0","—"],["Linkedin",1,3,3,"30% (10)",0,"0.0%",0,"—",0,"0.0%","$0","—"],["LTF - In-House",0,1,1,"—",0,"0.0%",1,"—",1,"100.0%","$8,997","$8,997"],["WWWS",0,1,1,"100% (1)",0,"0.0%",0,"—",0,"0.0%","$0","—"],["VSL",0,0,"—","0% (110)",0,"—",0,"—",1,"—","$5,997","$5,997"],["TOTAL",702,119,"—","—",33,"27.7%",23,"69.7%",11,"9.2%","$75,661","$6,878"]],"navigation":{"months":[{"key":"2026-10","kind":"month","month":"2026-10","start":"2026-10-01","end":"2026-10-30","end_exclusive":"2026-11-01","frozen":false,"label":"October 2026","live":true}],"weeks":[{"key":"week-2026-09-28","kind":"week","month":"2026-10","start":"2026-10-01","end":"2026-10-04","end_exclusive":"2026-10-05","frozen":true,"label":"Oct 1 – Oct 4, 2026"},{"key":"week-2026-10-05","kind":"week","month":"2026-10","start":"2026-10-05","end":"2026-10-11","end_exclusive":"2026-10-12","frozen":true,"label":"Oct 5 – Oct 11, 2026"},{"key":"week-2026-10-12","kind":"week","month":"2026-10","start":"2026-10-12","end":"2026-10-18","end_exclusive":"2026-10-19","frozen":true,"label":"Oct 12 – Oct 18, 2026"},{"key":"week-2026-10-19","kind":"week","month":"2026-10","start":"2026-10-19","end":"2026-10-25","end_exclusive":"2026-10-26","frozen":true,"label":"Oct 19 – Oct 25, 2026"},{"key":"week-2026-10-26","kind":"week","month":"2026-10","start":"2026-10-26","end":"2026-10-30","end_exclusive":"2026-11-02","frozen":false,"label":"Oct 26 – Oct 30, 2026"}]}}</script>
 </body>
 </html>

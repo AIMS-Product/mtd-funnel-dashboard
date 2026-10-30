@@ -148,9 +148,34 @@ class FeatureParityTests(unittest.TestCase):
             out = Path(directory)/'mom.html'
             write_comparison([data], out)
             html = out.read_text()
-            self.assertIn('October 2026', html)
+            saved = json.loads((Path(directory)/'comparison-data-2026-10.json').read_text())
+            self.assertEqual(saved['month_key'], '2026-10')
+            original = (Path(__file__).resolve().parent.parent/'archives/mom.html').read_text()
+            self.assertEqual(html.split('<style>')[1].split('</style>')[0], original.split('<style>')[1].split('</style>')[0])
             self.assertIn('V2 booking and attribution rules', html)
             self.assertNotIn('PRIVATE_LEAD', html)
+
+    def test_archives_use_the_current_mtd_ui_without_custom_v2_styling(self):
+        from archive_ui import presentation_namespace, adapter
+        from reporting import ReportPeriod
+        raw = public_fixture()
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory)/'private.json'; source.write_text(json.dumps(raw))
+            data = public_data(source)
+            now = datetime(2026,10,30,tzinfo=PACIFIC)
+            data['view'] = ReportPeriod('week', now.date().replace(day=19), now.date().replace(day=26), 'week-2026-10-19').view(now)
+            out = Path(directory)/'week.html'
+            render_report(data, out)
+            html = out.read_text()
+        ui = presentation_namespace()
+        reference = ui['generate_html'](adapter(data, ui))
+        self.assertEqual(html.split('<style>')[1].split('</style>')[0], reference.split('<style>')[1].split('</style>')[0])
+        self.assertEqual(html.count('class="kpi"'), 6)
+        self.assertIn('class="archive-badge">Week View', html)
+        self.assertIn('Setter · Charlie Ingram', html)
+        self.assertNotIn('shadow-tag', html)
+        self.assertNotIn('BOOKING ATTRIBUTION', html)
+        self.assertNotIn('↓ Team CSV', html)
 
 
 if __name__ == '__main__':
