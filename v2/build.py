@@ -19,6 +19,8 @@ from zoneinfo import ZoneInfo
 
 import requests
 
+from aggregates import build_breakdowns
+
 ROOT = Path(__file__).resolve().parent
 PACIFIC = ZoneInfo("America/Los_Angeles")
 UTC = timezone.utc
@@ -28,6 +30,8 @@ UTM_CAMPAIGN_FIELD = "cf_jnbd0xzUY3tuxzxiGxBs2hONuExeXMvAoTUM2R64Lq3"
 UTM_CONTENT_FIELD = "cf_R7o66i0XPycLQHlxOLbIqk6c6j3oB8CzxF3e3apI1hn"
 QUALIFIED_FIELD = "cf_ZDx7NBQaDzV1yYrFcBMzt6cIYj81dAcswpNN0CQzCPS"
 PROGRAM_TIER_FIELD = "cf_XvdC8hcwyfkoOFn6ElNdGEWbd567Th65m4spLuugYm3"
+VENDHUB_PLAN_FIELD = "cf_Y3lcmlnhjmmCCfDgWfoNbA7gXZgvTX7fCcvNNxD9TSp"
+LEAD_OWNER_FIELD = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"
 # The existing MTD's VendHub contribution per won opportunity.
 VENDHUB_ONLY_TIERS = {"VendHub - Basic $1,188", "VendHub - Pro $2,999", "Vendhub Renewal- $1,200"}
 ARR_BY_TIER = {"Bronze - $5,997": 1200.0, "Silver - $8,997": 2998.0, "Scale - $14,997": 2998.0}
@@ -176,12 +180,15 @@ def request_fields(record: dict[str, Any]) -> dict[str, Any]:
         "setter_name": custom(record, RULES["lead_fields"]["setter_name"]),
         "qualified": custom(record, QUALIFIED_FIELD),
         "program_tier": custom(record, PROGRAM_TIER_FIELD),
+        "vendhub_plan": custom(record, VENDHUB_PLAN_FIELD),
+        "lead_owner": record.get(f"custom.{LEAD_OWNER_FIELD}", (record.get("custom") or {}).get(LEAD_OWNER_FIELD)),
         "business_line": custom(record, RULES["lead_fields"]["offer"]),
     }
 
 
 def fetch_lead(reader: CloseReader, lead_id: str) -> dict[str, Any]:
     fields = ["id", "display_name", "date_created", "status_id", f"custom.{RULES['lead_fields']['funnel']}", f"custom.{RULES['lead_fields']['setter_name']}", f"custom.{QUALIFIED_FIELD}", f"custom.{RULES['lead_fields']['offer']}", f"custom.{PROGRAM_TIER_FIELD}"]
+    fields.extend([f"custom.{VENDHUB_PLAN_FIELD}", f"custom.{LEAD_OWNER_FIELD}"])
     result = reader.get(f"lead/{lead_id}/", {"_fields": ",".join(fields)})
     return request_fields(result)
 
@@ -385,6 +392,7 @@ def fetch_created_leads(reader: CloseReader, start_date: date, as_of: datetime) 
     start_utc, end_utc = utc_window(start_date, as_of)
     query = f'date_created >= "{start_utc}" AND date_created <= "{end_utc}"'
     fields = f"id,display_name,date_created,status_id,custom.{RULES['lead_fields']['funnel']},custom.{RULES['lead_fields']['setter_name']},custom.{QUALIFIED_FIELD},custom.{RULES['lead_fields']['offer']},custom.{PROGRAM_TIER_FIELD}"
+    fields += f",custom.{VENDHUB_PLAN_FIELD},custom.{LEAD_OWNER_FIELD}"
     return reader.pages("lead/", {"query": query, "_fields": fields})
 
 
@@ -467,10 +475,8 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
     # won leads only. The Close contacts list endpoint cannot filter the MTD
     # creation window or accept a bulk list of lead IDs, so scanning every
     # unbooked MTD lead would require one API request per lead.
-    contact_ids = candidate_lead_ids | {
-        lead_id for lead_id in won_lead_ids
-        if not recognized_lead_source(lead_cache.get(lead_id, {}))
-    }
+    # Won leads also need campaign/content attribution for revenue drilldowns.
+    contact_ids = candidate_lead_ids | won_lead_ids
     contact_cache: dict[str, list[dict[str, Any]]] = defaultdict(list)
     print(f"Reading contact attribution for {len(contact_ids)} booked or won leads...", flush=True)
     if contact_ids:
@@ -509,6 +515,7 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
             "close_url": f"https://app.close.com/lead/{lead_id}/",
             "showed": normalized(outcome) == "completed",
             "qualified": yes(lead.get("qualified")),
+            "owner": lead.get("lead_owner"),
         })
     counted, suppressions = choose_bucket_credits(candidate_rows, meeting_history, outcomes)
 
@@ -544,6 +551,7 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
 
     excluded_closers = set(RULES.get("excluded_closers", []))
     vendhub_arr = 0.0
+    accepted_won = []
     for opportunity in won:
         lead_id = str(opportunity.get("lead_id") or "")
         if not lead_id or opportunity.get("user_id") in excluded_closers:
@@ -563,6 +571,15 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
         channel_rows[channel]["revenue"] += value
         tier = lead.get("program_tier")
         vendhub_arr += value if tier in VENDHUB_ONLY_TIERS else ARR_BY_TIER.get(tier, 0.0)
+        campaign, content = contact_utm(contact_cache.get(lead_id, []))
+        plan = lead.get("vendhub_plan")
+        accepted_won.append({
+            "lead_id": lead_id, "channel": channel, "revenue": value,
+            "utm_campaign": campaign, "utm_content": content,
+            "package": (tier or "Unknown") + (f" · {plan}" if plan else ""),
+            "setter": lead.get("setter_name") or "Marketing / Unassigned",
+            "owner": opportunity.get("user_id"),
+        })
 
     output_rows = []
     for channel, entry in sorted(channel_rows.items(), key=lambda item: (-item[1]["bookings"], item[0])):
@@ -582,11 +599,16 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
             ]
         output_rows.append({"channel": channel, **entry})
     totals = {key: sum(row[key] for row in output_rows) for key in ("leads_created", "bookings", "marketing", "lane2", "social_dms", "showed", "qualified", "closed_won", "revenue")}
+    users = {row["id"]: " ".join(filter(None, [row.get("first_name"), row.get("last_name")]))
+             for row in reader.pages("user/")}
+    # These rollups consume the already-selected credits and won cohort above.
+    breakdowns = build_breakdowns(counted, accepted_won, users)
     return {
         "generated_at": as_of.isoformat(), "cutoff_pt": as_of.strftime("%b %-d, %Y %I:%M %p PT"),
         "source_cutoff": as_of.isoformat(),
         "period": f"{start_date.isoformat()} through {(as_of - timedelta(microseconds=1)).date().isoformat()} PT",
         "vendhub_arr": vendhub_arr,
+        "breakdowns": breakdowns,
         "rules_version": RULES["version"], "mtd_meetings_scanned": len(mtd_meetings),
         "meeting_history_rows_loaded": len(meeting_history),
         "candidate_meetings": len(candidate_rows), "counted_meetings": len(counted),

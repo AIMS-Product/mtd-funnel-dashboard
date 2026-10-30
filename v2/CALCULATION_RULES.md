@@ -134,6 +134,12 @@ Fetch leads whose Close `date_created` is in `[Pacific month start, as_of)`. Exc
 
 ## 10. Refresh, privacy, and reproducibility
 
+Expanded drilldowns, setter rollups, package rollups, and team reports all consume the already-selected V2 credits and included won opportunities. They do not select bookings using legacy lead-date fields or change the title, cancellation, attribution, or 720-hour rules. Campaign/content revenue uses won leads' contact attribution even when those leads have no booked meeting in the period. Child qualification counts use distinct qualified booked leads within each group; they are not booking-event counts. Program-tier and VendHub-plan breakdowns use fields on the lead, matching the current MTD.
+
+Setter booking attribution uses the approved meeting-title rule's credited setter (with Marketing and Social DMs preserved); won revenue uses the lead's current setter independently by won date. Team booking metrics use the current Lead Owner, while won metrics use opportunity owner. The known closer subtotal and Other / Non-Closer rows reconcile to all V2 totals. Current pipeline retains the original report's independent trailing-30-day ownership/open-qualified definition; no legacy booking selector is used. Historical team reports label pipeline as a generation-time snapshot.
+
+All displayed rate/currency formatting, goal percentages, and projections are precomputed in Python. This preserves the current MTD's rounding, including exact-half values, across the dashboard, comparison page, and CSVs. CSVs include TOTAL rows. The month comparison reads only V2 monthly snapshots beginning October 2026. Each refresh maintains comparison navigation and aggregate funnel/team CSVs.
+
 Use the exact `rules.json` and `build.py` from the same commit. The scheduled workflow refreshes the live month and week, fills missing October-onward history, and maintains aggregate-only archives:
 
 ```bash

@@ -120,6 +120,9 @@ class SourceWindowTests(unittest.TestCase):
             def meeting_history_for_leads(self, ids):
                 return []
 
+            def get(self, endpoint, params=None):
+                return {"data": [], "has_more": False}
+
         reader = Reader()
         result = build.build_dataset(reader, datetime(2026, 10, 12, tzinfo=PACIFIC), date(2026, 10, 5))
         self.assertEqual(result['totals']['leads_created'], 1)

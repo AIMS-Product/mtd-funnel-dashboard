@@ -6,7 +6,25 @@ V2 is a shadow implementation of the MTD funnel report. Its files and hosted pag
 
 The dedicated [`update_v2.yml`](../.github/workflows/update_v2.yml) GitHub Actions workflow refreshes V2 using the repository's existing `CLOSE_API_KEY` secret. A separate cron-job.org job dispatches it on `main` every 15 minutes at :00, :15, :30, and :45 in `America/Los_Angeles`, matching the current MTD refresh cadence. It can also be run manually from the Actions tab.
 
-The workflow runs `python3 v2/refresh.py`, refreshing the full month and current week while maintaining V2's own monthly and weekly archives. It commits only `v2/index.html` and aggregate-only files under `v2/archives/` for GitHub Pages. Its concurrency group prevents overlapping V2 builds, and it rebases before pushing to preserve updates from other dashboard jobs. The current MTD workflow, schedule, root dashboard, and root archives are unchanged.
+The workflow runs `python3 v2/refresh.py`, refreshing the full month and current week while maintaining V2's own monthly and weekly archives. It commits only `v2/index.html` and aggregate-only files under `v2/archives/` and `v2/reports/` for GitHub Pages. Its concurrency group prevents overlapping V2 builds, and it rebases before pushing to preserve updates from other dashboard jobs. The current MTD workflow, schedule, root dashboard, root reports, and root archives are unchanged.
+
+## Expanded reporting
+
+- **Month over Month** compares V2 source bookings, show/qualification/close rates, and revenue. October is the first month; additional months appear automatically. Legacy data is never mixed into V2 comparisons.
+- Source expansion shows full campaign metrics (or content metrics for Internal Webinar), including independently attributed won deals with no booking in the selected window. Qualification counts remain distinct booked leads within each group.
+- Revenue expansion shows aggregate program-tier and VendHub-plan counts, revenue, and average deal value.
+- The setter section preserves Lane 2, Social DM, and Marketing booking credits. Booking/show/qualification attribution follows the credited meeting's setter; won deals and revenue follow the lead's current setter independently of booking date. A setter's displayed conversion ratios therefore use those two independently defined cohorts, like the source-level report.
+- Funnel sections and setter sections can be collapsed. Both on-page and saved funnel CSVs include a TOTAL row. All rounding and money/rate formatting come from Python, matching the current MTD's rounding in pages and exports.
+- Each saved period includes a V2 funnel CSV and V2 team CSV. Team bookings, shows, and qualification use accepted V2 credits attributed to the current Lead Owner; won deals/revenue use the included V2 opportunities' owners. Closer subtotal, Other / Non-Closer, and all-V2 totals are separately labeled and reconciled. Qualified counts are distinct booked leads per owner.
+- Team CSVs retain revenue goals (booked × 13% × $7,000), rate goals, and the existing current pipeline definition. Only the current MTD's independent open-qualified-pipeline helper is reused; its legacy booking and won-record selectors are never used. Pipeline is a generation-time snapshot of current closer-owned qualified leads within the trailing 30 days, valued at $7,000 × 20%, and is labeled separately from the report week.
+
+The dedicated **Generate V2 Weekly and Team Reports** Actions workflow accepts start/end dates and generates both CSVs from a single V2 pull. It also supports custom reporting windows from October onward:
+
+```bash
+python3 v2/reports.py --start 2026-10-19 --end 2026-10-25
+```
+
+Existing October aggregate snapshots are upgraded once to add the new detail. Future refreshes retain finalized snapshots after that upgrade.
 
 ## Goals, projections, and archives
 
@@ -59,6 +77,6 @@ The detailed replication guide is [`CALCULATION_RULES.md`](CALCULATION_RULES.md)
 - Only active/eligible Lane 2 title mappings earn Lane 2 credit. Canceled and declined meetings do not count as bookings and do not start the repeat clock.
 - The 30-day repeat clock is anchored to scheduled meeting start. Any non-canceled scheduled meeting starts or advances the clock, even when its title does not earn booking credit. Exactly 720 elapsed hours remains inside the window; a new qualifying credit is eligible only after 720 hours.
 - A qualifying no-show keeps its booking credit. A reschedule earns no second credit. A canceled meeting loses its credit; a later qualifying replacement may earn one under the repeat-clock rule.
-- The public shadow shows aggregate totals and plain attributed-value rows under each source: campaign values generally, and UTM Content values for Internal Webinar. It omits campaign/content labels and hierarchy, lead names, meeting titles, Close links, IDs, and meeting-level drilldowns.
+- The public shadow shows aggregate totals and plain attributed-value rows under each source: campaign values generally, and UTM Content values for Internal Webinar. It also includes aggregate staff and package breakdowns. It omits lead names, meeting titles, Close links, IDs, and meeting-level drilldowns.
 
 The pinned rule configuration is recorded in `rules.json`. Raw Close response data and the local detailed preview remain private and are not committed.

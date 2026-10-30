@@ -46,7 +46,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -- v2/index.html v2/archives/
+          git add -- v2/index.html v2/archives/ v2/reports/
           if git diff --cached --quiet; then
             echo "V2 page is already current."
             exit 0
@@ -54,7 +54,7 @@ jobs:
           python3 - <<'PY'
           import subprocess
           paths = subprocess.check_output(["git", "diff", "--cached", "--name-only"], text=True).splitlines()
-          assert all(path == "v2/index.html" or path.startswith("v2/archives/") for path in paths), paths
+          assert all(path == "v2/index.html" or path.startswith(("v2/archives/", "v2/reports/")) for path in paths), paths
           PY
           git commit -m "Update MTD V2 dashboard [$(date -u '+%Y-%m-%d %H:%M UTC')]"
           # Other dashboard jobs can update main while the V2 build is running.

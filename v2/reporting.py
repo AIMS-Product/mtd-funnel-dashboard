@@ -75,3 +75,39 @@ def current_goals() -> dict:
         "revenue": MONTHLY_REVENUE_GOAL,
         "channels": json.loads((ROOT.parent / "goals.json").read_text()),
     }
+
+
+def presentation(data: dict) -> dict:
+    """Use Python's legacy rounding for both rendered pages and CSV exports."""
+    goals, progress = data["goals"], data["progress"]
+    for row in data["channels"]:
+        goal = goals["channels"].get(row["channel"])
+        projected = round(row["bookings"] / progress["day"] * progress["days"]) if row["bookings"] and progress["day"] else None
+        row["display"] = {
+            "projected": projected, "goal": goal,
+            "goal_pct": round(100 * row["bookings"] / goal) if goal else None,
+            "pace": "" if not goal or projected is None else "pace-exceed" if projected > goal else "pace-on" if projected == goal else "pace-behind",
+        }
+    data["goal_percentages"] = {
+        "bookings": round(100 * data["totals"]["bookings"] / goals["bookings"]),
+        "revenue": round(100 * data["totals"]["revenue"] / goals["revenue"]),
+    }
+    def formats(row):
+        def percentage(numerator, denominator):
+            return f"{100 * numerator / denominator:.1f}%" if denominator else "—"
+        row["formats"] = {
+            "show": percentage(row["showed"], row["bookings"]),
+            "qualified": percentage(row["qualified"], row["showed"]),
+            "qualified_booked": percentage(row["qualified"], row["bookings"]),
+            "close": percentage(row["closed_won"], row["bookings"]),
+            "qualified_close": percentage(row["closed_won"], row["qualified"]),
+            "revenue": f"${row['revenue']:,.0f}",
+            "average": f"${row['revenue'] / row['closed_won']:,.0f}" if row["closed_won"] else "—",
+        }
+    for row in [data["totals"], *data["channels"], *data.get("setters", []), *data.get("team", [])]:
+        formats(row)
+    for channel in data["channels"]:
+        for row in channel["drilldowns"] + channel["packages"]:
+            formats(row)
+    data["arr_display"] = {"arr": f"${data['vendhub_arr']:,.0f}", "mrr": f"${data['vendhub_arr'] / 12:,.0f}"}
+    return data

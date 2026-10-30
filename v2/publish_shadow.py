@@ -13,7 +13,9 @@ from pathlib import Path
 from typing import Any
 
 from datetime import date, datetime
-from reporting import current_goals, display_metadata
+from reporting import current_goals, display_metadata, presentation
+from aggregates import SCHEMA_VERSION, METRICS
+from reports import funnel_rows
 
 ROOT = Path(__file__).resolve().parent
 PRIVATE_DATA = ROOT / "public" / "data.json"
@@ -33,36 +35,23 @@ CHANNEL_FIELDS = (
 def public_data(source: Path) -> dict[str, Any]:
     raw = json.loads(source.read_text())
     totals = {key: raw["totals"][key] for key in TOTAL_FIELDS}
+    def safe_rows(rows):
+        return [{"value": row["value"], **{key: row.get(key, 0) for key in METRICS}} for row in rows]
+
     channels = []
+    extra = raw.get("breakdowns", {})
     for row in raw["channels"]:
         channel = {key: row[key] for key in CHANNEL_FIELDS}
-        channel["drilldowns"] = []
-        if channel["channel"] == "Internal Webinar":
-            # Webinar attribution is reviewed at the content level; omit the
-            # campaign layer and show each UTM content value directly.
-            values: dict[str, int] = {}
-            for campaign in row.get("drilldowns", []):
-                for content in campaign.get("content", []):
-                    value = content["name"]
-                    values[value] = values.get(value, 0) + content["bookings"]
-            channel["drilldowns"] = [
-                {"value": value, "bookings": bookings}
-                for value, bookings in sorted(values.items(), key=lambda item: (-item[1], item[0]))
-            ]
-            channels.append(channel)
-            continue
-        for campaign in row.get("drilldowns", []):
-            campaign_bookings = 0
-            for content in campaign.get("content", []):
-                campaign_bookings += content["bookings"]
-            channel["drilldowns"].append({
-                "value": campaign["campaign"],
-                "bookings": campaign_bookings,
-            })
+        details = extra.get("channels", {}).get(channel["channel"], {})
+        channel["drilldowns"] = safe_rows(details.get("drilldowns", []))
+        channel["packages"] = safe_rows(details.get("packages", []))
         channels.append(channel)
     start = date.fromisoformat(raw["period"].split(" through ")[0])
     cutoff = raw.get("source_cutoff", raw["generated_at"])
-    return {
+    data = {
+        "schema_version": SCHEMA_VERSION,
+        "setters": safe_rows(extra.get("setters", [])),
+        "team": safe_rows(extra.get("team", [])),
         "generated_at": raw["generated_at"],
         "source_cutoff": cutoff,
         "vendhub_arr": raw.get("vendhub_arr", 0.0),
@@ -80,10 +69,11 @@ def public_data(source: Path) -> dict[str, Any]:
         "totals": totals,
         "channels": channels,
     }
+    return presentation(data)
 
 
 def render_report(data: dict[str, Any], output: Path, navigation: dict | None = None) -> None:
-    page = {**data, "navigation": navigation or {"months": [], "weeks": []}}
+    page = {**data, "csv_rows": funnel_rows(data), "navigation": navigation or {"months": [], "weeks": []}}
     serialized = json.dumps(page, ensure_ascii=False, separators=(",", ":"))
     serialized = serialized.replace("<", "\\u003c").replace(">", "\\u003e")
     output.parent.mkdir(parents=True, exist_ok=True)
