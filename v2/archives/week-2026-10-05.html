@@ -538,8 +538,9 @@ for(const [section,channels] of [['lead_sources',report.channels.filter(c=>c.cha
  for(const c of channels){
   const sid=`s${sourceIndex++}`;
   const buckets=`Marketing ${fmt(c.marketing)} · Lane 2 ${fmt(c.lane2)} · Social DMs ${fmt(c.social_dms)}`;
+  const reviewNote=c.channel==='Unknown (Needs Review)'&&c.unrecoverable_booked_leads?`<div class="channel-meta">${fmt(c.unrecoverable_booked_leads)} unique booked leads remain unresolved under V2 source rules</div>`:'';
   const metrics=rowCells(c);
-  body.insertAdjacentHTML('beforeend',`<tr class="funnel-row" data-section="${section}"><td class="col-name"><button class="expand-link" data-toggle="${sid}" aria-expanded="false"><span class="chevron">›</span>${esc(c.channel)}</button><div class="channel-meta">${buckets}</div></td>${metrics.slice(metrics.indexOf('</td>')+5)}</tr>`);
+  body.insertAdjacentHTML('beforeend',`<tr class="funnel-row" data-section="${section}"><td class="col-name"><button class="expand-link" data-toggle="${sid}" aria-expanded="false"><span class="chevron">›</span>${esc(c.channel)}</button><div class="channel-meta">${buckets}</div>${reviewNote}</td>${metrics.slice(metrics.indexOf('</td>')+5)}</tr>`);
   const parent=body.lastElementChild;
   const revenue=parent.querySelector('.col-rev');
   if(c.packages.length)revenue.innerHTML=`<button class="expand-link" data-package-toggle="${sid}" aria-expanded="false" title="View package and VendHub plan breakdown">${c.formats.revenue} ›</button>`;
