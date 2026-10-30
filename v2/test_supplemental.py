@@ -42,6 +42,8 @@ class SupplementalTests(unittest.TestCase):
                 self.assertIn(f'src="{PICKER_SCRIPT}"', copied)
                 self.assertIn('Historical · Original MTD rules', copied)
                 self.assertNotIn('v2/v2/', copied)
+                if row['key'] in ('2026-01', '2026-02', '2026-03'):
+                    self.assertNotIn('<div class="week-picker">', copied)
                 for href in re.findall(r'(?:href|value)="(/[^"]+)"', copied):
                     self.assertTrue(href.startswith(BASE+'/'), href)
             frozen = (archives/'supplemental/2026-09.html').read_bytes()

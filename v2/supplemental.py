@@ -5,7 +5,7 @@ import json
 import re
 from datetime import date, timedelta
 
-from archive_ui import BASE, PICKER_SCRIPT, picker_html, presentation_namespace
+from archive_ui import BASE, PICKER_SCRIPT, picker_html, presentation_namespace, weeks_for_month
 from reporting import ARCHIVE_START, ROOT
 
 
@@ -44,10 +44,14 @@ def retain_history(navigation, directory, source=None):
     ui = presentation_namespace()
     for row in history['months'] + history['weeks']:
         output = destination / f"{row['key']}.html"
+        month = next(month for month in history['months'] if month['key'] == row['month'])
+        has_weeks = bool(weeks_for_month(combined, month))
         if output.exists():
             # Only navigation assets may change; all historical figures stay frozen.
             html = output.read_text()
             updated = html.replace(f'src="{BASE}/archives/picker.js"', f'src="{PICKER_SCRIPT}"')
+            if not has_weeks:
+                updated = re.sub(r'<span class="picker-divider">\|</span><div class="week-picker">.*?</select></div>', '', updated, flags=re.S)
             if updated != html:
                 output.write_text(updated)
             continue
@@ -56,6 +60,8 @@ def retain_history(navigation, directory, source=None):
             raise ValueError(f"Historical source changed before snapshot restoration: {row['source']}")
         html = original.decode().replace('/mtd-funnel-dashboard/', BASE + '/')
         monthly, weekly = picker_html(dict(view=row, period=row['start']), combined, ui)
+        if not has_weeks:
+            weekly = ''
         has_week_picker = '<div class="week-picker">' in html
         html = re.sub(r'<div class="month-picker">.*?</select></div>',
                       lambda _: monthly if has_week_picker else monthly + weekly, html, count=1, flags=re.S)
