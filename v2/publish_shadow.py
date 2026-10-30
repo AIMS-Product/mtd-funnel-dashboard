@@ -12,6 +12,9 @@ import json
 from pathlib import Path
 from typing import Any
 
+from datetime import date, datetime
+from reporting import current_goals, display_metadata
+
 ROOT = Path(__file__).resolve().parent
 PRIVATE_DATA = ROOT / "public" / "data.json"
 TEMPLATE = ROOT / "public" / "index.template.html"
@@ -57,8 +60,14 @@ def public_data(source: Path) -> dict[str, Any]:
                 "bookings": campaign_bookings,
             })
         channels.append(channel)
+    start = date.fromisoformat(raw["period"].split(" through ")[0])
+    cutoff = raw.get("source_cutoff", raw["generated_at"])
     return {
         "generated_at": raw["generated_at"],
+        "source_cutoff": cutoff,
+        "vendhub_arr": raw.get("vendhub_arr", 0.0),
+        "progress": display_metadata(start, datetime.fromisoformat(cutoff)),
+        "goals": current_goals(),
         "period": raw["period"],
         "rules_version": raw["rules_version"],
         "counted_meetings": raw["counted_meetings"],
@@ -73,6 +82,14 @@ def public_data(source: Path) -> dict[str, Any]:
     }
 
 
+def render_report(data: dict[str, Any], output: Path, navigation: dict | None = None) -> None:
+    page = {**data, "navigation": navigation or {"months": [], "weeks": []}}
+    serialized = json.dumps(page, ensure_ascii=False, separators=(",", ":"))
+    serialized = serialized.replace("<", "\\u003c").replace(">", "\\u003e")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(TEMPLATE.read_text().replace("__V2_DATA__", serialized))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build the aggregate-only public V2 shadow page")
     parser.add_argument("--source", type=Path, default=PRIVATE_DATA, help="Private local data.json from build.py")
@@ -81,10 +98,7 @@ def main() -> int:
         parser.error(f"Private V2 snapshot not found: {args.source}")
 
     data = public_data(args.source)
-    serialized = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
-    serialized = serialized.replace("<", "\\u003c").replace(">", "\\u003e")
-    html = TEMPLATE.read_text().replace("__V2_DATA__", serialized)
-    OUTPUT.write_text(html)
+    render_report(data, OUTPUT)
     print(f"Built public-safe V2 page: {OUTPUT}")
     print(f"Snapshot: {data['generated_at']}; qualifying bookings: {data['totals']['bookings']}")
     print("Output contains aggregate metrics only; lead and meeting rows are excluded.")

@@ -6,7 +6,31 @@ V2 is a shadow implementation of the MTD funnel report. Its files and hosted pag
 
 The dedicated [`update_v2.yml`](../.github/workflows/update_v2.yml) GitHub Actions workflow refreshes V2 using the repository's existing `CLOSE_API_KEY` secret. A separate cron-job.org job dispatches it on `main` every 15 minutes at :00, :15, :30, and :45 in `America/Los_Angeles`, matching the current MTD refresh cadence. It can also be run manually from the Actions tab.
 
-The workflow builds a fresh Close snapshot, renders the aggregate-only public page, and commits only `v2/index.html` for GitHub Pages. Its own concurrency group prevents overlapping V2 builds, and it rebases before pushing to preserve updates from other dashboard jobs. The current MTD workflow, schedule, root dashboard, and archives are unchanged.
+The workflow runs `python3 v2/refresh.py`, refreshing the full month and current week while maintaining V2's own monthly and weekly archives. It commits only `v2/index.html` and aggregate-only files under `v2/archives/` for GitHub Pages. Its concurrency group prevents overlapping V2 builds, and it rebases before pushing to preserve updates from other dashboard jobs. The current MTD workflow, schedule, root dashboard, and root archives are unchanged.
+
+## Goals, projections, and archives
+
+- The header shows calendar-day progress, Monday–Friday working-day progress, and percentage of working days elapsed in Pacific time.
+- Bookings and revenue use the existing MTD monthly targets: **1,241 bookings** and **$750,000 revenue**. Source-level goals are read from the existing root `goals.json` without modifying it. Weekly views retain full monthly targets and monthly pace references, matching the current MTD.
+- Projected bookings use `(bookings / calendar day elapsed) × days in month`. The colors compare projected bookings to each source's goal. Conversion subtext includes show rate, qualification rate, booked-to-close, qualified-to-close, and average deal value.
+- ARR uses the current MTD's VendHub-only tiers and package contributions, counted only for V2's included USD won opportunities. MRR is ARR divided by 12; no booking or revenue inclusion rules change.
+- Archive coverage begins **October 1, 2026**. The opening partial week covers October 1–4 (its Monday-based filename is `week-2026-09-28`). Later weeks run Monday–Sunday. The current week updates with every refresh.
+- A completed week or month is rebuilt once at rollover, then its aggregate snapshot is retained. Missing completed periods are filled automatically. Historical views are reconstructed from current Close records for their reporting window; they are not claims about the CRM's state at the original historical cutoff.
+- All month/week navigation stays inside V2. Archived goals and figures remain tied to the saved aggregate snapshot. CSV exports contain source-level aggregates only.
+
+To refresh V2, generate missing October-onward archives, and render all navigation:
+
+```bash
+python3 v2/refresh.py
+```
+
+To update presentation from saved aggregate archives without any Close reads:
+
+```bash
+python3 v2/refresh.py --render-only
+```
+
+Regression checks: `python3 -m unittest discover -s v2 -p 'test*.py'`.
 
 To run the same refresh locally:
 
@@ -17,7 +41,7 @@ python3 v2/build.py
 python3 v2/publish_shadow.py
 ```
 
-`build.py` performs read-only Close API pulls and writes a private local snapshot and preview under `v2/public/`. Those files include lead and meeting details and are excluded from Git. `publish_shadow.py` copies only approved aggregate metrics into the familiar MTD dashboard layout and writes `v2/index.html`. For a script chain, publish only `v2/index.html`; never add the private `v2/public/` outputs.
+`build.py` performs read-only Close API pulls and writes a private local snapshot and preview under `v2/public/`. Those files include lead and meeting details and are excluded from Git. `publish_shadow.py` copies only approved aggregate metrics into the familiar MTD dashboard layout and writes `v2/index.html`. The automated `refresh.py` uses that same whitelist, keeping detailed snapshots in a temporary private directory. Never add the private `v2/public/` outputs.
 
 To regenerate the public page from an existing local snapshot without another Close pull:
 

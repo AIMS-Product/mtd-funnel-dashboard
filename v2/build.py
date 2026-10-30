@@ -27,6 +27,10 @@ API_ROOT = "https://api.close.com/api/v1/"
 UTM_CAMPAIGN_FIELD = "cf_jnbd0xzUY3tuxzxiGxBs2hONuExeXMvAoTUM2R64Lq3"
 UTM_CONTENT_FIELD = "cf_R7o66i0XPycLQHlxOLbIqk6c6j3oB8CzxF3e3apI1hn"
 QUALIFIED_FIELD = "cf_ZDx7NBQaDzV1yYrFcBMzt6cIYj81dAcswpNN0CQzCPS"
+PROGRAM_TIER_FIELD = "cf_XvdC8hcwyfkoOFn6ElNdGEWbd567Th65m4spLuugYm3"
+# The existing MTD's VendHub contribution per won opportunity.
+VENDHUB_ONLY_TIERS = {"VendHub - Basic $1,188", "VendHub - Pro $2,999", "Vendhub Renewal- $1,200"}
+ARR_BY_TIER = {"Bronze - $5,997": 1200.0, "Silver - $8,997": 2998.0, "Scale - $14,997": 2998.0}
 COMPLETED_OUTCOME_ID = "outcome_032Djn4dfeNuEoCunojA7K"
 PAGE_SIZE = 100
 MAX_WORKERS = 5
@@ -171,12 +175,13 @@ def request_fields(record: dict[str, Any]) -> dict[str, Any]:
         "funnel": custom(record, RULES["lead_fields"]["funnel"]),
         "setter_name": custom(record, RULES["lead_fields"]["setter_name"]),
         "qualified": custom(record, QUALIFIED_FIELD),
+        "program_tier": custom(record, PROGRAM_TIER_FIELD),
         "business_line": custom(record, RULES["lead_fields"]["offer"]),
     }
 
 
 def fetch_lead(reader: CloseReader, lead_id: str) -> dict[str, Any]:
-    fields = ["id", "display_name", "date_created", "status_id", f"custom.{RULES['lead_fields']['funnel']}", f"custom.{RULES['lead_fields']['setter_name']}", f"custom.{QUALIFIED_FIELD}", f"custom.{RULES['lead_fields']['offer']}"]
+    fields = ["id", "display_name", "date_created", "status_id", f"custom.{RULES['lead_fields']['funnel']}", f"custom.{RULES['lead_fields']['setter_name']}", f"custom.{QUALIFIED_FIELD}", f"custom.{RULES['lead_fields']['offer']}", f"custom.{PROGRAM_TIER_FIELD}"]
     result = reader.get(f"lead/{lead_id}/", {"_fields": ",".join(fields)})
     return request_fields(result)
 
@@ -379,13 +384,13 @@ def choose_bucket_credits(
 def fetch_created_leads(reader: CloseReader, start_date: date, as_of: datetime) -> list[dict[str, Any]]:
     start_utc, end_utc = utc_window(start_date, as_of)
     query = f'date_created >= "{start_utc}" AND date_created <= "{end_utc}"'
-    fields = f"id,display_name,date_created,status_id,custom.{RULES['lead_fields']['funnel']},custom.{RULES['lead_fields']['setter_name']},custom.{QUALIFIED_FIELD},custom.{RULES['lead_fields']['offer']}"
+    fields = f"id,display_name,date_created,status_id,custom.{RULES['lead_fields']['funnel']},custom.{RULES['lead_fields']['setter_name']},custom.{QUALIFIED_FIELD},custom.{RULES['lead_fields']['offer']},custom.{PROGRAM_TIER_FIELD}"
     return reader.pages("lead/", {"query": query, "_fields": fields})
 
 
 def fetch_won_opportunities(reader: CloseReader, start_date: date, as_of: datetime) -> list[dict[str, Any]]:
     start = datetime.combine(start_date, day_time.min, tzinfo=PACIFIC).date().isoformat()
-    end = as_of.astimezone(PACIFIC).date().isoformat()
+    end = (as_of.astimezone(PACIFIC) - timedelta(microseconds=1)).date().isoformat()
     return reader.pages("opportunity/", {
         "status_type": "won", "date_won__gte": start, "date_won__lte": end,
         "_fields": "id,lead_id,value,date_won,user_id,currency",
@@ -404,9 +409,14 @@ def safe_money(raw: Any) -> float:
         return 0.0
 
 
-def build_dataset(reader: CloseReader, as_of: datetime | None = None) -> dict[str, Any]:
+def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date: date | None = None) -> dict[str, Any]:
     as_of = as_of or datetime.now(PACIFIC)
-    start_date = as_of.date().replace(day=1)
+    if as_of.tzinfo is None:
+        raise ValueError("The source cutoff must include a timezone")
+    as_of = as_of.astimezone(PACIFIC)
+    start_date = start_date or as_of.date().replace(day=1)
+    if datetime.combine(start_date, day_time.min, tzinfo=PACIFIC) >= as_of:
+        raise ValueError("The report start must precede its exclusive cutoff")
     start_utc, end_utc = utc_window(start_date, as_of)
     start_bound = datetime.fromisoformat(start_utc.replace("Z", "+00:00"))
     end_bound = as_of.astimezone(UTC)
@@ -533,6 +543,7 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None) -> dict[st
         details["rows"].append(row)
 
     excluded_closers = set(RULES.get("excluded_closers", []))
+    vendhub_arr = 0.0
     for opportunity in won:
         lead_id = str(opportunity.get("lead_id") or "")
         if not lead_id or opportunity.get("user_id") in excluded_closers:
@@ -548,7 +559,10 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None) -> dict[st
         if currency and currency != "USD":
             continue
         channel_rows[channel]["closed_won"] += 1
-        channel_rows[channel]["revenue"] += safe_money(opportunity.get("value"))
+        value = safe_money(opportunity.get("value"))
+        channel_rows[channel]["revenue"] += value
+        tier = lead.get("program_tier")
+        vendhub_arr += value if tier in VENDHUB_ONLY_TIERS else ARR_BY_TIER.get(tier, 0.0)
 
     output_rows = []
     for channel, entry in sorted(channel_rows.items(), key=lambda item: (-item[1]["bookings"], item[0])):
@@ -570,7 +584,9 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None) -> dict[st
     totals = {key: sum(row[key] for row in output_rows) for key in ("leads_created", "bookings", "marketing", "lane2", "social_dms", "showed", "qualified", "closed_won", "revenue")}
     return {
         "generated_at": as_of.isoformat(), "cutoff_pt": as_of.strftime("%b %-d, %Y %I:%M %p PT"),
-        "period": f"{start_date.isoformat()} through {as_of.astimezone(PACIFIC).date().isoformat()} PT",
+        "source_cutoff": as_of.isoformat(),
+        "period": f"{start_date.isoformat()} through {(as_of - timedelta(microseconds=1)).date().isoformat()} PT",
+        "vendhub_arr": vendhub_arr,
         "rules_version": RULES["version"], "mtd_meetings_scanned": len(mtd_meetings),
         "meeting_history_rows_loaded": len(meeting_history),
         "candidate_meetings": len(candidate_rows), "counted_meetings": len(counted),

@@ -32,26 +32,30 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Build fresh V2 snapshot
+      - name: Check V2 reporting windows and archive rollover
+        run: python3 -m unittest discover -s v2 -p 'test*.py' -q
+
+      - name: Refresh V2 and maintain monthly and weekly archives
         env:
           CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
-        run: python3 -u v2/build.py
+        run: python3 -u v2/refresh.py
 
-      - name: Render aggregate-only V2 page
-        run: python3 -u v2/publish_shadow.py
-
-      - name: Commit and push only the public V2 page
+      - name: Commit and push only public V2 reports
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -- v2/index.html
+          git add -- v2/index.html v2/archives/
           if git diff --cached --quiet; then
             echo "V2 page is already current."
             exit 0
           fi
-          test "$(git diff --cached --name-only)" = "v2/index.html"
+          python3 - <<'PY'
+          import subprocess
+          paths = subprocess.check_output(["git", "diff", "--cached", "--name-only"], text=True).splitlines()
+          assert all(path == "v2/index.html" or path.startswith("v2/archives/") for path in paths), paths
+          PY
           git commit -m "Update MTD V2 dashboard [$(date -u '+%Y-%m-%d %H:%M UTC')]"
           # Other dashboard jobs can update main while the V2 build is running.
           for attempt in 1 2 3 4 5; do

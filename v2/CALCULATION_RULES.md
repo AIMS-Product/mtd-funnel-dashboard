@@ -121,20 +121,25 @@ Fetch leads whose Close `date_created` is in `[Pacific month start, as_of)`. Exc
 - Percentages are computed as `100 × numerator / denominator`, to one decimal place. A zero denominator displays `—`.
 - Show rate = showed ÷ booked.
 - Qualification rates = qualified ÷ showed and qualified ÷ booked.
-- Close rate = closed won ÷ booked.
+- Close rates = closed won ÷ booked and closed won ÷ qualified.
 - Revenue / Close = revenue ÷ closed won.
 - Show and qualification rate colors: green at 70% or more; amber at 50% to under 70%; red below 50%.
 - Close-rate colors: green at 15% or more; amber at 7% to under 15%; red below 7%.
-- Projected, Goal %, and goal pacing are placeholders on V2 and display dashes; they are not calculated.
+- Header progress uses the reporting month's calendar day and total days; working-day progress counts Monday–Friday through that day. Percentage elapsed is working days elapsed ÷ working days in the month.
+- Projected bookings = round(booked ÷ calendar day elapsed × days in month). Goal % = rounded booked ÷ the source's monthly goal × 100, with the target shown in parentheses. Sources without a target have no goal percentage or pace color. Total rows omit projection and goal percentage.
+- Monthly targets remain 1,241 bookings and $750,000 revenue. Per-source targets come from the existing root `goals.json`. Weekly views retain the same full monthly targets and monthly pace reference, matching the current MTD. Saved archive snapshots retain their goals.
+- Projected bookings above target are green, equal to target yellow, and below target red.
+- ARR follows the current MTD's VendHub package contributions: VendHub-only tiers contribute the full included won opportunity value; Bronze contributes $1,200, Silver and Scale $2,998 each. MRR = ARR ÷ 12. These are calculated over the same included USD won opportunities as V2 revenue.
 - Currency and counts use US formatting; the top Closed Revenue KPI rounds to whole dollars.
 
 ## 10. Refresh, privacy, and reproducibility
 
-Use the exact `rules.json` and `build.py` from the same commit. To refresh and publish:
+Use the exact `rules.json` and `build.py` from the same commit. The scheduled workflow refreshes the live month and week, fills missing October-onward history, and maintains aggregate-only archives:
 
 ```bash
-python3 v2/build.py
-python3 v2/publish_shadow.py
+python3 v2/refresh.py
 ```
 
-`build.py` uses read-only Close GET requests and writes private row-level output under `v2/public/`. `publish_shadow.py` whitelists only aggregate values for `v2/index.html`. Do not publish or commit `v2/public/data.json` or `v2/public/index.html`; they contain lead and meeting details. For an exact historical reproduction, retain the snapshot's `generated_at`/`as_of` value and the same Close source state, because the CRM can change after a report is built.
+Archive coverage starts October 1, 2026, including the partial October 1–4 week. All intervals use an exclusive Pacific midnight cutoff after their last day, including daylight-saving transitions. Completed periods are finalized once at rollover and retained; the current month/week continue refreshing. Historical periods are reconstructed from current Close records within those windows, including the outcomes and attribution available when rebuilt. They do not reproduce an unavailable historical CRM state. `generated_at` records the actual rebuild time, while `source_cutoff` records the reporting-window boundary.
+
+`build.py` uses read-only Close GET requests. The standalone builder writes private row-level output under `v2/public/`; automated refreshes keep that data in temporary private storage. `publish_shadow.py` whitelists only aggregate values for `v2/index.html` and V2's HTML/JSON archives. Do not publish or commit `v2/public/data.json` or `v2/public/index.html`; they contain lead and meeting details. The current MTD and its archives remain unchanged.
