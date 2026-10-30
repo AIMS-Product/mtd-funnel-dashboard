@@ -63,19 +63,19 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 12,
+      "bookings": 13,
       "marketing": 0,
-      "lane2": 12,
+      "lane2": 13,
       "social_dms": 0,
       "showed": 3,
       "qualified": 5,
       "closed_won": 2,
       "revenue": 17994.0,
       "formats": {
-        "show": "25.0%",
+        "show": "23.1%",
         "qualified": "166.7%",
-        "qualified_booked": "41.7%",
-        "close": "16.7%",
+        "qualified_booked": "38.5%",
+        "close": "15.4%",
         "qualified_close": "40.0%",
         "revenue": "$17,994",
         "average": "$8,997"
@@ -405,16 +405,16 @@
     },
     {
       "value": "Other / Non-Closer",
-      "bookings": 11,
+      "bookings": 12,
       "marketing": 2,
-      "lane2": 9,
+      "lane2": 10,
       "social_dms": 0,
       "showed": 1,
       "qualified": 0,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "9.1%",
+        "show": "8.3%",
         "qualified": "0.0%",
         "qualified_booked": "0.0%",
         "close": "0.0%",
@@ -504,8 +504,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-30T16:15:16.604367-07:00",
-  "source_cutoff": "2026-10-30T16:15:16.604367-07:00",
+  "generated_at": "2026-10-30T16:30:21.399570-07:00",
+  "source_cutoff": "2026-10-30T16:30:21.399570-07:00",
   "vendhub_arr": 27564.0,
   "progress": {
     "day": 30,
@@ -535,25 +535,25 @@
   },
   "period": "2026-10-26 through 2026-10-30 PT",
   "rules_version": "booked_calls.v2.6-scheduled-anchor-candidate+any-meeting-clock+william-consult-retired-20261014",
-  "counted_meetings": 123,
+  "counted_meetings": 124,
   "excluded_repeat_candidates": 11,
-  "attribution_reviewed_at": "2026-10-30T16:15:16.604367-07:00",
+  "attribution_reviewed_at": "2026-10-30T16:30:21.399570-07:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 706,
-    "bookings": 123,
+    "bookings": 124,
     "marketing": 49,
-    "lane2": 68,
+    "lane2": 69,
     "social_dms": 6,
     "showed": 37,
     "qualified": 26,
     "closed_won": 14,
     "revenue": 91843.0,
     "formats": {
-      "show": "30.1%",
+      "show": "29.8%",
       "qualified": "70.3%",
-      "qualified_booked": "21.1%",
-      "close": "11.4%",
+      "qualified_booked": "21.0%",
+      "close": "11.3%",
       "qualified_close": "53.8%",
       "revenue": "$91,843",
       "average": "$6,560"
@@ -563,9 +563,9 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 487,
-      "bookings": 46,
+      "bookings": 47,
       "marketing": 26,
-      "lane2": 20,
+      "lane2": 21,
       "social_dms": 0,
       "showed": 14,
       "qualified": 9,
@@ -794,6 +794,26 @@
           }
         },
         {
+          "value": "nov03",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
+        },
+        {
           "value": "oct13",
           "bookings": 1,
           "marketing": 1,
@@ -940,23 +960,23 @@
           "revenue": 0
         },
         {
+          "value": "Vince Bartolini",
+          "bookings": 6,
+          "marketing": 0,
+          "lane2": 6,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
           "value": "August Young",
           "bookings": 5,
           "marketing": 0,
           "lane2": 5,
           "social_dms": 0,
           "showed": 2,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0
-        },
-        {
-          "value": "Vince Bartolini",
-          "bookings": 5,
-          "marketing": 0,
-          "lane2": 5,
-          "social_dms": 0,
-          "showed": 0,
           "qualified": 1,
           "closed_won": 0,
           "revenue": 0
@@ -996,16 +1016,16 @@
         }
       ],
       "display": {
-        "projected": 48,
+        "projected": 49,
         "goal": 70,
-        "goal_pct": 66,
+        "goal_pct": 67,
         "pace": "pace-behind"
       },
       "formats": {
-        "show": "30.4%",
+        "show": "29.8%",
         "qualified": "64.3%",
-        "qualified_booked": "19.6%",
-        "close": "8.7%",
+        "qualified_booked": "19.1%",
+        "close": "8.5%",
         "qualified_close": "44.4%",
         "revenue": "$25,179",
         "average": "$6,295"
@@ -2621,7 +2641,7 @@
     "label": "Oct 26 – Oct 30, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-10-30T16:15:16.604367-07:00",
+    "generated_at": "2026-10-30T16:30:21.399570-07:00",
     "counts": {
       "Christian Hartwell": 32,
       "Scott Seymour": 14,
