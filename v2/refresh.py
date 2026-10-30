@@ -15,6 +15,7 @@ from reporting import PACIFIC, ROOT, report_periods
 from aggregates import SCHEMA_VERSION
 from reports import pipeline_snapshot, write_exports, write_comparison
 from archive_ui import write_navigation
+from supplemental import retain_history
 
 ARCHIVES = ROOT / "archives"
 
@@ -53,6 +54,7 @@ def refresh(now: datetime | None = None, *, render_only: bool = False) -> None:
         "months": [{**r["view"], "live": r["view"]["key"] == live_month} for r in reports if r["view"]["kind"] == "month"],
         "weeks": [r["view"] for r in reports if r["view"]["kind"] == "week"],
     }
+    navigation = retain_history(navigation, ARCHIVES)
     (ARCHIVES / "nav.json").write_text(json.dumps(navigation, indent=2) + "\n")
     write_navigation(navigation, ARCHIVES)
     for report in reports:

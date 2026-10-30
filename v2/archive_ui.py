@@ -86,21 +86,33 @@ def adapter(data, ui):
     }
 
 
+def month_href(row):
+    return row.get('href') or (BASE + '/index.html' if row.get('live') else f"{BASE}/archives/{row['key']}.html")
+
+
+def week_href(row):
+    return row.get('href') or f"{BASE}/archives/{row['key']}.html"
+
+
+def weeks_for_month(navigation, month):
+    return [week for week in reversed(navigation['weeks'])
+            if bool(week.get('supplemental')) == bool(month.get('supplemental'))
+            and (week['month'] == month['key'] if month.get('supplemental')
+                 else week['start'][:7] <= month['key'] <= week['end'][:7])]
+
+
 def picker_html(data, navigation, ui):
     view = data.get('view', {})
     month = view.get('month', data['period'][:7])
     options = []
     for row in reversed(navigation['months']):
-        href = '/index.html' if row.get('live') else f"/archives/{row['key']}.html"
-        options.append(f'<option value="/mtd-funnel-dashboard{href}" {"selected" if row["key"] == month else ""}>{escape(row["label"])}</option>')
+        options.append(f'<option value="{month_href(row)}" {"selected" if row["key"] == month else ""}>{escape(row["label"])}</option>')
     monthly = '<div class="month-picker"><select onchange="window.location.href=this.value">' + ''.join(options) + '</select></div>'
-    live = next((row['key'] for row in navigation['months'] if row.get('live')), month)
-    href = '/index.html' if month == live else f'/archives/{month}.html'
-    weeks = [f'<option value="/mtd-funnel-dashboard{href}">Full Month</option>']
-    for row in reversed(navigation['weeks']):
-        if row['start'][:7] <= month <= row['end'][:7]:
-            label = ui['week_display_label'](date.fromisoformat(row['start']), date.fromisoformat(row['end_exclusive']) - timedelta(days=1))
-            weeks.append(f'<option value="/mtd-funnel-dashboard/archives/{row["key"]}.html" {"selected" if view.get("key") == row["key"] else ""}>{label}</option>')
+    selected_month = next((row for row in navigation['months'] if row['key'] == month), dict(key=month, live=True))
+    weeks = [f'<option value="{month_href(selected_month)}">Full Month</option>']
+    for row in weeks_for_month(navigation, selected_month):
+        label = ui['week_display_label'](date.fromisoformat(row['start']), date.fromisoformat(row['end_exclusive']) - timedelta(days=1))
+        weeks.append(f'<option value="{week_href(row)}" {"selected" if view.get("key") == row["key"] else ""}>{label}</option>')
     weekly = '<span class="picker-divider">|</span><div class="week-picker"><select onchange="window.location.href=this.value">' + ''.join(weeks) + '</select></div>'
     return monthly, weekly
 
@@ -109,7 +121,7 @@ def render_current_ui(data, output, navigation):
     ui = presentation_namespace()
     adapted = adapter(data, ui)
     month_picker, week_picker = picker_html(data, navigation, ui)
-    return ui['generate_html'](adapted, month_picker, week_picker).replace('/mtd-funnel-dashboard/', BASE + '/')
+    return re.sub(r'/mtd-funnel-dashboard/(?!v2/)', BASE + '/', ui['generate_html'](adapted, month_picker, week_picker))
 
 
 def write_navigation(navigation, directory):
@@ -118,23 +130,26 @@ def write_navigation(navigation, directory):
     weeks = {}
     for month in navigation['months']:
         entries = []
-        for week in reversed(navigation['weeks']):
-            if week['start'][:7] <= month['key'] <= week['end'][:7]:
-                label = ui['week_display_label'](date.fromisoformat(week['start']), date.fromisoformat(week['end_exclusive']) - timedelta(days=1))
-                entries.append(dict(key=week['key'], label=label, is_current=False))
+        for week in weeks_for_month(navigation, month):
+            label = ui['week_display_label'](date.fromisoformat(week['start']), date.fromisoformat(week['end_exclusive']) - timedelta(days=1))
+            entries.append(dict(key=week['key'], label=label, is_current=False, href=week_href(week)))
         for week in navigation['weeks']:
             if not week['frozen'] and month.get('live'):
                 entries.append(dict(key='week-current', label=ui['week_display_label'](date.fromisoformat(week['start']), date.fromisoformat(week['end'])) + ' ▶', is_current=True))
         weeks[month['key']] = entries
     nav = dict(live_month=live['key'] if live else '', live_month_label=live['label'] if live else '',
-               months=[dict(key=m['key'], label=m['label'], is_live=m.get('live', False)) for m in reversed(navigation['months'])], weeks=weeks,
-               week_months={week['key']: week['month'] for week in navigation['weeks']})
+               months=[dict(key=m['key'], label=m['label'], is_live=m.get('live', False), href=month_href(m), supplemental=m.get('supplemental', False)) for m in reversed(navigation['months'])], weeks=weeks,
+               week_months={week['key']: week['month'] for week in navigation['weeks'] if not week.get('supplemental')})
     (directory/'picker-nav.json').write_text(json.dumps(nav, indent=2)+'\n')
     ui['ARCHIVES_DIR'] = directory
     ui['write_picker_js']()
     path = directory/'picker.js'
     script = path.read_text().replace("'/mtd-funnel-dashboard'", repr(BASE)).replace('/archives/nav.json', '/archives/picker-nav.json')
-    script = script.replace('// Month picker —', 'curMonth = nav.week_months[curWeek] || curMonth;\n\n    // Month picker —')
+    script = script.replace(r'archives\/', r'archives\/(?:supplemental\/)?')
+    script = script.replace('// Month picker —', "if (!path.includes('/supplemental/')) curMonth = nav.week_months[curWeek] || curMonth;\n\n    // Month picker —")
+    script = script.replace("m.is_live ? BASE+'/index.html' : BASE+'/archives/'+m.key+'.html'", "m.href || (m.is_live ? BASE+'/index.html' : BASE+'/archives/'+m.key+'.html')")
+    script = script.replace("isLive ? BASE+'/index.html' : BASE+'/archives/'+curMonth+'.html'", "(nav.months.find(m => m.key === curMonth) || {}).href || (isLive ? BASE+'/index.html' : BASE+'/archives/'+curMonth+'.html')")
+    script = script.replace("${BASE+'/archives/'+w.key+'.html'}", "${w.href || BASE+'/archives/'+w.key+'.html'}")
     path.write_text(script)
 
 
@@ -159,6 +174,7 @@ def write_current_comparison(reports, path):
     html = (ROOT.parent/'archives/mom.html').read_text()
     html = html.replace('/mtd-funnel-dashboard', BASE).replace('/archives/nav.json', '/archives/picker-nav.json')
     html = html.replace('`data-${', '`comparison-data-${')
+    html = html.replace('filter(m => !m.is_live)', 'filter(m => !m.is_live && !m.supplemental)')
     # Keep V2's qualified/showed definition in the TOTAL row as well as source rows.
     html = html.replace('g && bo ? g.qualified / bo * 100 : null', 'g && g.showed ? g.qualified / g.showed * 100 : null')
     html = html.replace('</body>', '<!-- V2 booking and attribution rules; original MTD comparison UI. -->\n</body>')

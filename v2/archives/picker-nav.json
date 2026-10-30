@@ -5,35 +5,276 @@
     {
       "key": "2026-10",
       "label": "October 2026",
-      "is_live": true
+      "is_live": true,
+      "href": "/mtd-funnel-dashboard/v2/index.html",
+      "supplemental": false
+    },
+    {
+      "key": "2026-09",
+      "label": "September 2026 (Historical)",
+      "is_live": false,
+      "href": "/mtd-funnel-dashboard/v2/archives/supplemental/2026-09.html",
+      "supplemental": true
+    },
+    {
+      "key": "2026-08",
+      "label": "August 2026 (Historical)",
+      "is_live": false,
+      "href": "/mtd-funnel-dashboard/v2/archives/supplemental/2026-08.html",
+      "supplemental": true
+    },
+    {
+      "key": "2026-07",
+      "label": "July 2026 (Historical)",
+      "is_live": false,
+      "href": "/mtd-funnel-dashboard/v2/archives/supplemental/2026-07.html",
+      "supplemental": true
+    },
+    {
+      "key": "2026-06",
+      "label": "June 2026 (Historical)",
+      "is_live": false,
+      "href": "/mtd-funnel-dashboard/v2/archives/supplemental/2026-06.html",
+      "supplemental": true
+    },
+    {
+      "key": "2026-05",
+      "label": "May 2026 (Historical)",
+      "is_live": false,
+      "href": "/mtd-funnel-dashboard/v2/archives/supplemental/2026-05.html",
+      "supplemental": true
+    },
+    {
+      "key": "2026-04",
+      "label": "April 2026 (Historical)",
+      "is_live": false,
+      "href": "/mtd-funnel-dashboard/v2/archives/supplemental/2026-04.html",
+      "supplemental": true
+    },
+    {
+      "key": "2026-03",
+      "label": "March 2026 (Historical)",
+      "is_live": false,
+      "href": "/mtd-funnel-dashboard/v2/archives/supplemental/2026-03.html",
+      "supplemental": true
+    },
+    {
+      "key": "2026-02",
+      "label": "February 2026 (Historical)",
+      "is_live": false,
+      "href": "/mtd-funnel-dashboard/v2/archives/supplemental/2026-02.html",
+      "supplemental": true
+    },
+    {
+      "key": "2026-01",
+      "label": "January 2026 (Historical)",
+      "is_live": false,
+      "href": "/mtd-funnel-dashboard/v2/archives/supplemental/2026-01.html",
+      "supplemental": true
     }
   ],
   "weeks": {
+    "2026-01": [],
+    "2026-02": [],
+    "2026-03": [],
+    "2026-04": [
+      {
+        "key": "week-2026-04-27",
+        "label": "Apr 27\u2013May 3",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-04-27.html"
+      },
+      {
+        "key": "week-2026-04-20",
+        "label": "Apr 20\u201326",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-04-20.html"
+      },
+      {
+        "key": "week-2026-04-13",
+        "label": "Apr 13\u201319",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-04-13.html"
+      },
+      {
+        "key": "week-2026-04-06",
+        "label": "Apr 6\u201312",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-04-06.html"
+      }
+    ],
+    "2026-05": [
+      {
+        "key": "week-2026-05-25",
+        "label": "May 25\u201331",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-05-25.html"
+      },
+      {
+        "key": "week-2026-05-18",
+        "label": "May 18\u201324",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-05-18.html"
+      },
+      {
+        "key": "week-2026-05-11",
+        "label": "May 11\u201317",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-05-11.html"
+      },
+      {
+        "key": "week-2026-05-04",
+        "label": "May 4\u201310",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-05-04.html"
+      }
+    ],
+    "2026-06": [
+      {
+        "key": "week-2026-06-29",
+        "label": "Jun 29\u2013Jul 5",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-06-29.html"
+      },
+      {
+        "key": "week-2026-06-22",
+        "label": "Jun 22\u201328",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-06-22.html"
+      },
+      {
+        "key": "week-2026-06-15",
+        "label": "Jun 15\u201321",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-06-15.html"
+      },
+      {
+        "key": "week-2026-06-08",
+        "label": "Jun 8\u201314",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-06-08.html"
+      },
+      {
+        "key": "week-2026-06-01",
+        "label": "Jun 1\u20137",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-06-01.html"
+      }
+    ],
+    "2026-07": [
+      {
+        "key": "week-2026-07-27",
+        "label": "Jul 27\u2013Aug 2",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-07-27.html"
+      },
+      {
+        "key": "week-2026-07-20",
+        "label": "Jul 20\u201326",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-07-20.html"
+      },
+      {
+        "key": "week-2026-07-13",
+        "label": "Jul 13\u201319",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-07-13.html"
+      },
+      {
+        "key": "week-2026-07-06",
+        "label": "Jul 6\u201312",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-07-06.html"
+      }
+    ],
+    "2026-08": [
+      {
+        "key": "week-2026-08-31",
+        "label": "Aug 31\u2013Sep 6",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-08-31.html"
+      },
+      {
+        "key": "week-2026-08-24",
+        "label": "Aug 24\u201330",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-08-24.html"
+      },
+      {
+        "key": "week-2026-08-17",
+        "label": "Aug 17\u201323",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-08-17.html"
+      },
+      {
+        "key": "week-2026-08-10",
+        "label": "Aug 10\u201316",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-08-10.html"
+      },
+      {
+        "key": "week-2026-08-03",
+        "label": "Aug 3\u20139",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-08-03.html"
+      }
+    ],
+    "2026-09": [
+      {
+        "key": "week-2026-09-28",
+        "label": "Sep 28\u2013Oct 4",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-09-28.html"
+      },
+      {
+        "key": "week-2026-09-21",
+        "label": "Sep 21\u201327",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-09-21.html"
+      },
+      {
+        "key": "week-2026-09-14",
+        "label": "Sep 14\u201320",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-09-14.html"
+      },
+      {
+        "key": "week-2026-09-07",
+        "label": "Sep 7\u201313",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/supplemental/week-2026-09-07.html"
+      }
+    ],
     "2026-10": [
       {
         "key": "week-2026-10-26",
         "label": "Oct 26\u2013Nov 1",
-        "is_current": false
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/week-2026-10-26.html"
       },
       {
         "key": "week-2026-10-19",
         "label": "Oct 19\u201325",
-        "is_current": false
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/week-2026-10-19.html"
       },
       {
         "key": "week-2026-10-12",
         "label": "Oct 12\u201318",
-        "is_current": false
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/week-2026-10-12.html"
       },
       {
         "key": "week-2026-10-05",
         "label": "Oct 5\u201311",
-        "is_current": false
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/week-2026-10-05.html"
       },
       {
         "key": "week-2026-09-28",
         "label": "Oct 1\u20134",
-        "is_current": false
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/week-2026-09-28.html"
       },
       {
         "key": "week-current",

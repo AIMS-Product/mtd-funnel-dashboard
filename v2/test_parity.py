@@ -153,6 +153,7 @@ class FeatureParityTests(unittest.TestCase):
             original = (Path(__file__).resolve().parent.parent/'archives/mom.html').read_text()
             self.assertEqual(html.split('<style>')[1].split('</style>')[0], original.split('<style>')[1].split('</style>')[0])
             self.assertIn('V2 booking and attribution rules', html)
+            self.assertIn('filter(m => !m.is_live && !m.supplemental)', html)
             self.assertNotIn('PRIVATE_LEAD', html)
 
     def test_archives_use_the_current_mtd_ui_without_custom_v2_styling(self):

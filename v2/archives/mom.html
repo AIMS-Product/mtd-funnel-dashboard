@@ -365,7 +365,7 @@ async function init() {
     const nav = await navResp.json();
 
     const months = [];
-    const archiveMonths = (nav.months || []).filter(m => !m.is_live);
+    const archiveMonths = (nav.months || []).filter(m => !m.is_live && !m.supplemental);
     [...archiveMonths].reverse().forEach(m => months.push({ month_key: m.key, label: m.label }));
     months.push({ month_key: nav.live_month, label: nav.live_month_label + ' (MTD)' });
 

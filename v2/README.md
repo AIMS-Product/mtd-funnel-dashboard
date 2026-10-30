@@ -38,6 +38,12 @@ Existing October aggregate snapshots are upgraded once to add the new detail. Fu
 - A completed week or month is rebuilt once at rollover, then its aggregate snapshot is retained. Missing completed periods are filled automatically. Historical views are reconstructed from current Close records for their reporting window; they are not claims about the CRM's state at the original historical cutoff.
 - All month/week navigation stays inside V2. Archived goals and figures remain tied to the saved aggregate snapshot. CSV exports contain source-level aggregates only.
 
+### Supplemental historical archives
+
+The same selectors also provide the original MTD's January–September 2026 monthly archives and its available April–September weekly archives. These are frozen copies under `v2/archives/supplemental/`, labeled **Historical · Original MTD rules** in the existing archive badge and **(Historical)** in the month selector. Their numbers, original snapshot timestamps, table details, CSV calculations, and UI are preserved; they are not recalculated with V2 rules. A manifest records each source page and its hash. Every refresh retains these copies and maintains navigation inside V2.
+
+The September 28–October 4 legacy week has its own supplemental URL, separate from V2's October 1–4 partial week. Supplemental history is excluded from V2's month comparison. October onward continues to use V2 rules and V2's existing retention process.
+
 To refresh V2, generate missing October-onward archives, and render all navigation:
 
 ```bash

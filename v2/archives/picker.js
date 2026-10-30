@@ -10,15 +10,15 @@
     // Detect page context from URL
     let curMonth = nav.live_month;
     let curWeek  = null;
-    const mMatch = path.match(/archives\/(\d{4}-\d{2})\.html/);
-    const wMatch = path.match(/archives\/(week-[\d-]+)\.html/);
+    const mMatch = path.match(/archives\/(?:supplemental\/)?(\d{4}-\d{2})\.html/);
+    const wMatch = path.match(/archives\/(?:supplemental\/)?(week-[\d-]+)\.html/);
     const wCur   = path.includes('week-current.html');
 
     if (mMatch)      { curMonth = mMatch[1]; }
     else if (wMatch) { curWeek = wMatch[1]; curMonth = wMatch[1].replace('week-','').substring(0,7); }
     else if (wCur)   { curWeek = 'week-current'; curMonth = nav.live_month; }
 
-    curMonth = nav.week_months[curWeek] || curMonth;
+    if (!path.includes('/supplemental/')) curMonth = nav.week_months[curWeek] || curMonth;
 
     // Month picker — disabled placeholder so every click fires onchange
     const mSel = document.querySelector('.month-picker select');
@@ -26,7 +26,7 @@
       const curLabel = (nav.months.find(m => m.key === curMonth) || {}).label || 'Select month';
       let opts = `<option value="" disabled selected>${curLabel}</option>`;
       opts += nav.months.map(m => {
-        const href = m.is_live ? BASE+'/index.html' : BASE+'/archives/'+m.key+'.html';
+        const href = m.href || (m.is_live ? BASE+'/index.html' : BASE+'/archives/'+m.key+'.html');
         return `<option value="${href}">${m.label}</option>`;
       }).join('');
       mSel.innerHTML = opts;
@@ -38,11 +38,11 @@
     if (wSel) {
       const weeks  = nav.weeks[curMonth] || [];
       const isLive = curMonth === nav.live_month;
-      const fullHref = isLive ? BASE+'/index.html' : BASE+'/archives/'+curMonth+'.html';
+      const fullHref = (nav.months.find(m => m.key === curMonth) || {}).href || (isLive ? BASE+'/index.html' : BASE+'/archives/'+curMonth+'.html');
 
       const opts = [`<option value="${fullHref}">Full Month</option>`];
       weeks.forEach(w => {
-        opts.push(`<option value="${BASE+'/archives/'+w.key+'.html'}">${w.label}</option>`);
+        opts.push(`<option value="${w.href || BASE+'/archives/'+w.key+'.html'}">${w.label}</option>`);
       });
       wSel.innerHTML = opts.join('');
 
