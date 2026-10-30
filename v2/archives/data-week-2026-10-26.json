@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "setters": [
     {
       "value": "Marketing",
@@ -504,8 +504,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-30T11:30:19.371483-07:00",
-  "source_cutoff": "2026-10-30T11:30:19.371483-07:00",
+  "generated_at": "2026-10-30T11:34:03.897705-07:00",
+  "source_cutoff": "2026-10-30T11:34:03.897705-07:00",
   "vendhub_arr": 22178.0,
   "progress": {
     "day": 30,
@@ -537,7 +537,7 @@
   "rules_version": "booked_calls.v2.6-scheduled-anchor-candidate+any-meeting-clock+william-consult-retired-20261014",
   "counted_meetings": 119,
   "excluded_repeat_candidates": 10,
-  "attribution_reviewed_at": "2026-10-30T11:30:19.371483-07:00",
+  "attribution_reviewed_at": "2026-10-30T11:34:03.897705-07:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 702,
@@ -896,6 +896,85 @@
           }
         }
       ],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 25,
+          "marketing": 25,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 9,
+          "qualified": 5,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Rob Maxfield",
+          "bookings": 6,
+          "marketing": 0,
+          "lane2": 6,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "August Young",
+          "bookings": 5,
+          "marketing": 0,
+          "lane2": 5,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Vince Bartolini",
+          "bookings": 5,
+          "marketing": 0,
+          "lane2": 5,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Ariella Irvine",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Cassie Caraballo",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Marketing / Unassigned",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 2,
+          "revenue": 10185.0
+        }
+      ],
       "display": {
         "projected": 45,
         "goal": 70,
@@ -1048,6 +1127,118 @@
           }
         }
       ],
+      "setters": [
+        {
+          "value": "Brad Savage",
+          "bookings": 5,
+          "marketing": 0,
+          "lane2": 5,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Tony Parton",
+          "bookings": 5,
+          "marketing": 0,
+          "lane2": 5,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Vince Bartolini",
+          "bookings": 4,
+          "marketing": 0,
+          "lane2": 4,
+          "social_dms": 0,
+          "showed": 2,
+          "qualified": 3,
+          "closed_won": 2,
+          "revenue": 17994.0
+        },
+        {
+          "value": "Rob Maxfield",
+          "bookings": 4,
+          "marketing": 0,
+          "lane2": 4,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Marketing",
+          "bookings": 3,
+          "marketing": 3,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "August Young",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 2,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Cassie Caraballo",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Kaylane Nunes",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Monde Janzen",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Connor George",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 5997.0
+        }
+      ],
       "display": {
         "projected": 27,
         "goal": null,
@@ -1139,6 +1330,30 @@
         }
       ],
       "packages": [],
+      "setters": [
+        {
+          "value": "Brad Savage",
+          "bookings": 9,
+          "marketing": 0,
+          "lane2": 9,
+          "social_dms": 0,
+          "showed": 3,
+          "qualified": 4,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Marketing",
+          "bookings": 5,
+          "marketing": 5,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 2,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
       "display": {
         "projected": 14,
         "goal": null,
@@ -1451,6 +1666,85 @@
           }
         }
       ],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 9,
+          "marketing": 9,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 3,
+          "qualified": 2,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "August Young",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Brad Savage",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Cassie Caraballo",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Rob Maxfield",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Charlie Ingram",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 5997.0
+        },
+        {
+          "value": "Connor George",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 5997.0
+        }
+      ],
       "display": {
         "projected": 13,
         "goal": 132,
@@ -1623,6 +1917,41 @@
           }
         }
       ],
+      "setters": [
+        {
+          "value": "Pearl Sathekge",
+          "bookings": 5,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 5,
+          "showed": 2,
+          "qualified": 1,
+          "closed_won": 2,
+          "revenue": 14497.0
+        },
+        {
+          "value": "August Young",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Rob Maxfield",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
       "display": {
         "projected": 7,
         "goal": 300,
@@ -1754,6 +2083,52 @@
         }
       ],
       "packages": [],
+      "setters": [
+        {
+          "value": "Rob Maxfield",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Vince Bartolini",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "August Young",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Cassie Caraballo",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
       "display": {
         "projected": 6,
         "goal": 44,
@@ -1825,6 +2200,30 @@
         }
       ],
       "packages": [],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 3,
+          "marketing": 3,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 2,
+          "qualified": 2,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Rob Maxfield",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
       "display": {
         "projected": 4,
         "goal": 100,
@@ -1876,6 +2275,19 @@
         }
       ],
       "packages": [],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 3,
+          "marketing": 3,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
       "display": {
         "projected": 3,
         "goal": 10,
@@ -1948,6 +2360,30 @@
           }
         }
       ],
+      "setters": [
+        {
+          "value": "Igor Trojanowski",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Marketing / Unassigned",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 8997.0
+        }
+      ],
       "display": {
         "projected": 1,
         "goal": null,
@@ -1999,6 +2435,19 @@
         }
       ],
       "packages": [],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
       "display": {
         "projected": 1,
         "goal": 1,
@@ -2071,6 +2520,19 @@
           }
         }
       ],
+      "setters": [
+        {
+          "value": "Marketing / Unassigned",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 5997.0
+        }
+      ],
       "display": {
         "projected": null,
         "goal": 110,
@@ -2107,7 +2569,7 @@
     "label": "Oct 26 – Oct 30, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-10-30T11:30:19.371483-07:00",
+    "generated_at": "2026-10-30T11:34:03.897705-07:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 14,

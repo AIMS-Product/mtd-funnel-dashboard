@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "setters": [
     {
       "value": "Marketing",
@@ -484,7 +484,7 @@
       }
     }
   ],
-  "generated_at": "2026-10-30T11:19:37.908728-07:00",
+  "generated_at": "2026-10-30T11:34:03.897705-07:00",
   "source_cutoff": "2026-10-05T00:00:00-07:00",
   "vendhub_arr": 6598.0,
   "progress": {
@@ -816,6 +816,85 @@
           }
         }
       ],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 7,
+          "marketing": 7,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "William Nowak",
+          "bookings": 6,
+          "marketing": 0,
+          "lane2": 6,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Charlie Ingram",
+          "bookings": 3,
+          "marketing": 0,
+          "lane2": 3,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Pearl Sathekge",
+          "bookings": 3,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 3,
+          "showed": 3,
+          "qualified": 3,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Ariella Irvine",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Connor George",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Marketing / Unassigned",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 2,
+          "revenue": 16000.0
+        }
+      ],
       "display": {
         "projected": 170,
         "goal": 70,
@@ -907,6 +986,85 @@
         }
       ],
       "packages": [],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 3,
+          "marketing": 3,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Vince Bartolini",
+          "bookings": 3,
+          "marketing": 0,
+          "lane2": 3,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Connor George",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 2,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Naria Torres",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 2,
+          "qualified": 2,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Catalina Villalba-Gallego",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Josh Stoffel",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Rob Maxfield",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
       "display": {
         "projected": 101,
         "goal": null,
@@ -1099,6 +1257,63 @@
           }
         }
       ],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 5,
+          "marketing": 5,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Brad Savage",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Charlie Ingram",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "William Nowak",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Marketing / Unassigned",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 6897.0
+        }
+      ],
       "display": {
         "projected": 62,
         "goal": 132,
@@ -1170,6 +1385,41 @@
         }
       ],
       "packages": [],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 4,
+          "marketing": 4,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 2,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Naria Torres",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "William Nowak",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
       "display": {
         "projected": 46,
         "goal": 100,
@@ -1221,6 +1471,41 @@
         }
       ],
       "packages": [],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 2,
+          "marketing": 2,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 2,
+          "qualified": 2,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Connor George",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "William Nowak",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
       "display": {
         "projected": 31,
         "goal": null,
@@ -1312,6 +1597,41 @@
         }
       ],
       "packages": [],
+      "setters": [
+        {
+          "value": "Brad Savage",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Marketing",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Owen Hart",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
       "display": {
         "projected": 23,
         "goal": 44,
@@ -1383,6 +1703,30 @@
         }
       ],
       "packages": [],
+      "setters": [
+        {
+          "value": "Charlie Ingram",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Pearl Sathekge",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 1,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
       "display": {
         "projected": 16,
         "goal": 300,
@@ -1475,6 +1819,30 @@
           }
         }
       ],
+      "setters": [
+        {
+          "value": "Vince Bartolini",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Marketing / Unassigned",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 1200.0
+        }
+      ],
       "display": {
         "projected": 8,
         "goal": null,
@@ -1526,6 +1894,19 @@
         }
       ],
       "packages": [],
+      "setters": [
+        {
+          "value": "Connor George",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
       "display": {
         "projected": 8,
         "goal": 10,
@@ -1556,6 +1937,7 @@
       "unrecoverable_booked_leads": 0,
       "drilldowns": [],
       "packages": [],
+      "setters": [],
       "display": {
         "projected": null,
         "goal": null,
@@ -1592,7 +1974,7 @@
     "label": "Oct 1 – Oct 4, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-10-30T11:19:37.908728-07:00",
+    "generated_at": "2026-10-30T11:34:03.897705-07:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 14,
@@ -1601,7 +1983,7 @@
       "Joe Vaughan": 24,
       "Shreya Bechra": 0,
       "Luke Herman": 21,
-      "Ariella Irvine": 9,
+      "Ariella Irvine": 8,
       "Oscar Pugh": 10,
       "Joe Dysert": 5
     },
