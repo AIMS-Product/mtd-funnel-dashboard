@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,follow">
+<title>MTD Funnel Performance — V2 Shadow</title>
+<style>
+  :root {
+    --bg:        #f4f6f9;
+    --surface:   #ffffff;
+    --surface2:  #f0f2f7;
+    --border:    #dde1ea;
+    --border2:   #e8eaf0;
+    --text:      #1a1f36;
+    --muted:     #8792a2;
+    --muted2:    #5c6680;
+    --green:     #0e9f6e;
+    --green-dim: #0e9f6e20;
+    --red:       #e02424;
+    --red-dim:   #e0242420;
+    --amber:     #d97706;
+    --blue:      #2563eb;
+    --purple:    #7c3aed;
+    --accent:    #4f46e5;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 13px;
+    min-height: 100vh;
+  }
+
+  /* Light mode card shadow */
+  .kpi {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
+  }
+  table {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* ── Header ── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 28px 36px 0;
+  }
+  .header-left h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .header-left .sub {
+    font-size: 11.5px;
+    color: var(--muted2);
+    margin-top: 3px;
+  }
+  .header-right {
+    text-align: right;
+    font-size: 11px;
+    color: var(--muted2);
+    line-height: 1.6;
+  }
+  .header-right .snapshot-label {
+    font-weight: 600;
+    color: var(--muted2);
+    display: block;
+  }
+
+  /* ── KPI Cards ── */
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+    padding: 24px 36px;
+  }
+  .kpi {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .kpi::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--kpi-accent, var(--accent));
+    opacity: 0.6;
+  }
+  .kpi .label {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--muted2);
+    margin-bottom: 8px;
+  }
+  .kpi .value {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--kpi-color, var(--text));
+  }
+  .kpi .kpi-sub {
+    font-size: 11px;
+    color: var(--muted2);
+    margin-top: 5px;
+  }
+  .kpi-goal-pct {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted2);
+  }
+  .kpi-split {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+    padding-top: 9px;
+    border-top: 1px solid var(--border);
+  }
+  .kpi-split-item {
+    flex: 1;
+    background: var(--surface2);
+    border-radius: 6px;
+    padding: 6px 8px;
+  }
+  .kpi-split-item .split-label {
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .kpi-split-item .split-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+  }
+  .compact-stats {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--muted2);
+  }
+  .compact-stats strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .cs-sep {
+    color: var(--border);
+    font-size: 14px;
+  }
+
+  .kpi-split-item .split-rate {
+    font-size: 10px;
+    color: var(--muted2);
+    margin-top: 1px;
+  }
+
+  /* ── Section label ── */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 36px 10px;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+  .section-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── Table ── */
+  .table-wrap {
+    padding: 0 36px 40px;
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead th {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  thead th.col-num,
+  thead th.col-pct,
+  thead th.col-rev { text-align: right; }
+
+  /* Funnel parent rows */
+  .funnel-row {
+    cursor: pointer;
+    border-top: 1px solid var(--border2);
+    transition: background 0.1s;
+  }
+  .funnel-row:hover { background: rgba(79,70,229,0.04); }
+  .funnel-row td { padding: 11px 12px; }
+
+  /* UTM sub-rows */
+  .utm-row {
+    display: none;
+    background: rgba(79,70,229,0.025);
+  }
+  .utm-row.open { display: table-row; }
+  .utm-row td { padding: 7px 12px; }
+  .utm-row + .utm-row td { border-top: 1px solid var(--border2); }
+
+  .pkg-row { display: none; background: #faf9ff; }
+  .pkg-row.open { display: table-row; }
+  .pkg-row td {
+    padding: 10px 12px;
+    color: var(--muted) !important;
+    font-weight: 400 !important;
+  }
+  .pkg-row + .pkg-row td { border-top: 1px solid var(--border2); }
+  .pkg-row .col-rev  { color: #7bc4a0 !important; font-weight: 400 !important; }
+  .pkg-row .col-num  { color: var(--muted) !important; }
+  .col-pkg {
+    color: var(--muted2) !important;
+    font-size: 12px;
+    padding-left: 28px !important;
+  }
+  .pkg-trigger { cursor: pointer; user-select: none; }
+  .pkg-trigger:hover { opacity: 0.75; }
+  .pkg-chevron {
+    font-size: 11px; color: #c0c8d4; margin-left: 4px;
+    display: inline-block; transition: transform 0.15s;
+  }
+  .pkg-chevron.open { transform: rotate(90deg); color: var(--muted2); }
+
+  /* Total row */
+  .total-row {
+    border-top: 2px solid var(--border);
+    font-weight: 700;
+    background: var(--surface2);
+    color: var(--text);
+  }
+  .total-row td { padding: 12px 12px; }
+
+  /* Cell types */
+  .col-name   { min-width: 190px; font-weight: 500; white-space: nowrap; }
+  .col-utm    { color: var(--muted2); padding-left: 32px !important; font-weight: 400; }
+  .col-num    { text-align: right; color: var(--text); }
+  .col-pct    { text-align: right; font-weight: 500; }
+  .col-rev    { text-align: right; color: var(--green); font-weight: 500; }
+
+  /* Excluded-from-totals funnel rows — grayed out */
+  .funnel-row-excluded td { color: var(--muted) !important; }
+  .funnel-row-excluded .col-rev { color: var(--muted) !important; }
+  .funnel-row-excluded .col-pct { color: var(--muted) !important; }
+  .funnel-row-excluded .col-pace { color: var(--muted) !important; }
+  .funnel-row-excluded .col-goal { color: var(--muted) !important; }
+
+  .col-pct.good { color: var(--green); }
+  .col-pct.bad  { color: var(--red); }
+  .col-pct.mid  { color: var(--amber); }
+
+  .col-pace  { text-align: right; font-size: 12px; color: var(--muted); }
+  .col-goal  { text-align: right; font-size: 12px; color: var(--muted); }
+  .col-pace.pace-exceed  { color: var(--green); font-weight: 600; }
+  .col-pace.pace-on      { color: #ca8a04;      font-weight: 500; }
+  .col-pace.pace-behind  { color: var(--red);   font-weight: 500; }
+
+  /* Chevron toggle */
+  .chevron {
+    display: inline-block;
+    width: 16px;
+    color: var(--muted);
+    font-size: 14px;
+    transition: transform 0.15s ease;
+    transform: rotate(0deg);
+    line-height: 1;
+  }
+  .chevron.open { transform: rotate(90deg); color: var(--accent); }
+
+  /* Section header rows */
+  .section-header-row td {
+    padding: 16px 12px 6px;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    font-weight: 700;
+    border-top: 2px solid var(--border);
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+  }
+  .section-header-row td:hover { color: #a5b4fc; }
+  .section-header-row:first-child td { border-top: none; }
+  .section-chevron {
+    display: inline-block;
+    width: 14px;
+    margin-right: 4px;
+    transition: transform 0.15s ease;
+    opacity: 0.7;
+  }
+  .section-chevron.open { transform: rotate(90deg); }
+
+  /* Progress bar mini (optional decoration on booked column) */
+  /* Pickers row */
+  .pickers-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  /* Month picker */
+  .month-picker {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .month-picker select, .week-picker select {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+  }
+  .month-picker select:hover, .week-picker select:hover {
+    border-color: var(--accent);
+  }
+  /* Week picker */
+  .week-picker {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .picker-divider {
+    color: var(--border);
+    font-size: 16px;
+    line-height: 1;
+    margin: 0 2px;
+  }
+  .archive-badge {
+    display: inline-block;
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  /* CSV download button */
+  .csv-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface);
+    color: var(--muted2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .csv-download-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  @media (max-width: 960px) {
+    .kpis { grid-template-columns: repeat(2, 1fr); }
+    .header { flex-direction: column; gap: 12px; }
+    .header-right { text-align: left; }
+  }
+
+  .shadow-tag{display:inline-block;margin-left:9px;padding:3px 7px;border:1px solid #c7d2fe;border-radius:4px;background:#eef2ff;color:var(--accent);font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;vertical-align:middle}
+  .kpi .kpi-sub{line-height:1.35}
+  .kpi .goal-target{font-size:15px;font-weight:400;color:var(--muted);margin-left:10px;line-height:1.6}
+  .kpi .recurring-revenue{color:#449d75;font-weight:600}
+  .kpi .monthly-goal-label{font-size:12px}
+  .compact-stats{flex-wrap:wrap}
+  .report-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:0 36px 20px;color:var(--muted);font-size:11px;line-height:1.7}
+  .section-note{padding:0 36px 10px;color:var(--muted2);font-size:11px}
+  .utm-row .col-name{padding-left:30px!important;color:var(--muted2);font-weight:400}
+  .utm-content-row{display:none;background:rgba(79,70,229,.018)}
+  .utm-content-row.open{display:table-row}
+  .utm-content-row td{padding:8px 12px;border-top:1px solid var(--border2)}
+  .utm-content-row .col-name{padding-left:48px!important;color:var(--muted2);font-weight:400}
+  .channel-meta{font-size:10px;font-weight:400;color:var(--muted);padding:3px 0 0 17px;white-space:nowrap}
+  .expand-link{border:0;background:transparent;color:var(--accent);font:inherit;font-size:11px;cursor:pointer}
+  .expand-link:hover{text-decoration:underline}
+  .meeting-drawer{display:none;background:#faf9ff;padding:10px 14px;border-top:1px solid var(--border2)}
+  .meeting-drawer.open{display:block}
+  .meeting-drawer table{box-shadow:none;border-radius:0;min-width:800px;background:transparent}
+  .meeting-drawer th{font-size:9px;text-align:left;padding:6px 8px}
+  .meeting-drawer td{font-size:11px;text-align:left;padding:7px 8px;color:var(--muted2)}
+  .meeting-drawer a{color:var(--accent);text-decoration:none}
+  .meeting-drawer a:hover{text-decoration:underline}
+  .unavailable{color:var(--muted);font-size:11px;padding:0 36px 30px;line-height:1.5}
+  @media(max-width:960px){.section-note,.unavailable{padding-left:16px;padding-right:16px}.table-wrap{padding-left:16px;padding-right:16px}.kpis{gap:10px;padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="header-left">
+    <h1>MTD Funnel Performance <span class="shadow-tag">V2 Shadow</span></h1>
+    <p class="sub">Vendingpreneurs · All Sales Calls · <span id="month-label"></span></p>
+  </div>
+  <div class="header-right">
+    <div class="pickers-row">
+      <div class="compact-stats" id="period-progress"></div>
+      <span class="picker-divider">|</span>
+      <div class="month-picker"><select id="month-picker" aria-label="Reporting month"></select></div>
+      <span class="picker-divider">|</span>
+      <div class="week-picker"><select id="week-picker" aria-label="Reporting week"></select></div>
+    </div>
+    <span class="snapshot-label" id="snapshot-label">Snapshot</span>
+    <span id="snapshot"></span><br>
+  Source · Close CRM · V2 shadow rules
+  </div>
+</div>
+<div class="kpis" id="kpis"></div>
+<div class="section-label">Funnel Breakdown — Booked → Showed → Qualified → Closed Won → Revenue</div>
+<p class="section-note">Expand a lead source to see its attributed values. Lead and meeting-level details are excluded from this public shadow report.</p>
+<div class="table-wrap">
+<table id="funnel-table">
+<thead><tr>
+  <th class="col-name">Funnel</th><th class="col-num">Leads</th><th class="col-num">Booked</th>
+  <th class="col-pace">Projected</th><th class="col-goal">Goal %</th><th class="col-num">Showed</th>
+  <th class="col-pct">Show %</th><th class="col-num">Qualified</th><th class="col-pct">Qual %</th>
+  <th class="col-num">Closed</th><th class="col-pct">CW %</th><th class="col-rev">Revenue</th><th class="col-num">Rev / Close</th>
+</tr></thead><tbody id="funnel-body"></tbody>
+</table>
+</div>
+<div class="report-footer">
+  <p>Projected — monthly pace reference: (Booked ÷ Days Elapsed) × Days in Month.<br>Green = above goal · Yellow = on goal · Red = below goal. Weekly views retain monthly goals and pace references.</p>
+  <button class="csv-download-btn" id="download-csv" type="button">↓ Download CSV</button>
+</div>
+<p class="unavailable" id="source-note"></p>
+<script id="v2-data" type="application/json">{"generated_at":"2026-10-30T08:04:10.412768-07:00","source_cutoff":"2026-10-30T08:04:10.412768-07:00","vendhub_arr":107326.0,"progress":{"day":30,"days":31,"working_days":22,"working_elapsed":22,"elapsed_pct":100.0},"goals":{"bookings":1241,"revenue":750000,"channels":{"Instagram":300,"Low Ticket Funnel":200,"VSL":110,"Website":100,"YouTube":132,"Internal Webinar":70,"Mike Newsletter":10,"X":10,"Linkedin":10,"Meta Ads":44,"Tik Tok":5,"Side Hustle Nation":1,"WWWS":1}},"period":"2026-10-01 through 2026-10-30 PT","rules_version":"booked_calls.v2.6-scheduled-anchor-candidate+any-meeting-clock+william-consult-retired-20261014","counted_meetings":607,"excluded_repeat_candidates":93,"attribution_reviewed_at":"2026-10-30T08:04:10.412768-07:00","lead_source_note":"Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.","totals":{"leads_created":25303,"bookings":607,"marketing":248,"lane2":326,"social_dms":33,"showed":256,"qualified":210,"closed_won":53,"revenue":415441.0},"channels":[{"channel":"Internal Webinar","leads_created":2457,"bookings":210,"marketing":94,"lane2":103,"social_dms":13,"showed":87,"qualified":64,"closed_won":16,"revenue":116302.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"oct06_end_cta","bookings":28},{"value":"oct06","bookings":23},{"value":"oct27","bookings":22},{"value":"aug25","bookings":12},{"value":"oct20_end_cta","bookings":12},{"value":"sept22","bookings":11},{"value":"sept29","bookings":10},{"value":"oct13","bookings":9},{"value":"oct13_end_cta","bookings":9},{"value":"July29","bookings":8},{"value":"mariam","bookings":7},{"value":"oct20","bookings":7},{"value":"sept15","bookings":7},{"value":"sept01","bookings":6},{"value":"june16_end_cta","bookings":4},{"value":"aug11","bookings":3},{"value":"june30_end_cta","bookings":3},{"value":"oct27_end_cta","bookings":3},{"value":"sept08","bookings":3},{"value":"sept15_end_cta","bookings":3},{"value":"_____","bookings":2},{"value":"aug18","bookings":2},{"value":"feb24_end_cta","bookings":2},{"value":"july14","bookings":2},{"value":"mar24_end_cta","bookings":2},{"value":"120244489618170338","bookings":1},{"value":"120251611309120338","bookings":1},{"value":"July23","bookings":1},{"value":"May19","bookings":1},{"value":"apr21_end_cta","bookings":1},{"value":"cef82523-c39f-4c02-9f60-fab286c6dfc9","bookings":1},{"value":"feb3_end_cta","bookings":1},{"value":"free-market-analysis","bookings":1},{"value":"may19_end_cta","bookings":1},{"value":"sept29_end_cta","bookings":1}]},{"channel":"Unknown (Needs Review)","leads_created":22623,"bookings":168,"marketing":48,"lane2":117,"social_dms":3,"showed":61,"qualified":64,"closed_won":11,"revenue":104964.0,"unrecoverable_booked_leads":164,"drilldowns":[{"value":"Unattributed","bookings":151},{"value":"_____","bookings":10},{"value":"email","bookings":2},{"value":"VSL Leads campaign","bookings":1},{"value":"book_meeting","bookings":1},{"value":"lc","bookings":1},{"value":"new-follower","bookings":1},{"value":"wescale","bookings":1}]},{"channel":"YouTube","leads_created":73,"bookings":66,"marketing":37,"lane2":29,"social_dms":0,"showed":31,"qualified":26,"closed_won":12,"revenue":85411.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"youtube-home","bookings":12},{"value":"start-vending-business","bookings":4},{"value":"start_vending_2026","bookings":4},{"value":"best-contract-vending","bookings":3},{"value":"buy-first-machine","bookings":3},{"value":"first-vending-machine","bookings":3},{"value":"negotiate-vending-deals","bookings":3},{"value":"vending-101","bookings":3},{"value":"anthony","bookings":2},{"value":"build-from-zero","bookings":2},{"value":"dont-start-vending","bookings":2},{"value":"lc","bookings":2},{"value":"married-couple-36k","bookings":2},{"value":"shouldnt-start-vending","bookings":2},{"value":"start-vending-2025","bookings":2},{"value":"vending-legal","bookings":2},{"value":"vending-machine-location","bookings":2},{"value":"10-mistakes-vending","bookings":1},{"value":"100-vending-locations","bookings":1},{"value":"50k-1-year","bookings":1},{"value":"book-a-call","bookings":1},{"value":"flop","bookings":1},{"value":"high-margin-products","bookings":1},{"value":"how-to-start-a-vending-machine-business-in-2025-free-course","bookings":1},{"value":"how-to-start-a-vending-machine-business-step-by-step-with-0","bookings":1},{"value":"laid-off-102k","bookings":1},{"value":"moosa-saidy","bookings":1},{"value":"pokemon","bookings":1},{"value":"should_you_buy_or_build_a_vending_route","bookings":1},{"value":"why-you-shouldnt-start-2025","bookings":1}]},{"channel":"Google Ads","leads_created":77,"bookings":64,"marketing":31,"lane2":33,"social_dms":0,"showed":27,"qualified":17,"closed_won":2,"revenue":14994.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"23805931083","bookings":41},{"value":"23815771816","bookings":22},{"value":"23883800856","bookings":1}]},{"channel":"Instagram","leads_created":33,"bookings":30,"marketing":2,"lane2":13,"social_dms":15,"showed":18,"qualified":15,"closed_won":5,"revenue":43338.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"book-call","bookings":7},{"value":"mh-ig-bio","bookings":5},{"value":"new-follower","bookings":5},{"value":"6/23 Call Booking Campaign","bookings":3},{"value":"90-day-checklist","bookings":2},{"value":"Unattributed","bookings":2},{"value":"120229205352460662","bookings":1},{"value":"1388784661","bookings":1},{"value":"1998114993","bookings":1},{"value":"@utm_campaign","bookings":1},{"value":"mh-ig-story","bookings":1},{"value":"route-builder","bookings":1}]},{"channel":"Website","leads_created":23,"bookings":27,"marketing":22,"lane2":5,"social_dms":0,"showed":15,"qualified":9,"closed_won":2,"revenue":12894.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"Unattributed","bookings":21},{"value":"apply_now","bookings":5},{"value":"23805931083","bookings":1}]},{"channel":"Meta Ads","leads_created":11,"bookings":24,"marketing":4,"lane2":20,"social_dms":0,"showed":9,"qualified":7,"closed_won":1,"revenue":10347.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"VSL Leads campaign","bookings":5},{"value":"120229205352460662","bookings":4},{"value":"6/23 Call Booking Campaign","bookings":4},{"value":"Anthony Webinar Leads Campaign 8/12","bookings":3},{"value":"120231435583070662","bookings":1},{"value":"23815771816","bookings":1},{"value":"Anthony Webinar Leads Campaign 7/15","bookings":1},{"value":"adset-120250281905390740","bookings":1},{"value":"adset-120250281905490740","bookings":1},{"value":"adset-120250400565610740","bookings":1},{"value":"book_meeting","bookings":1},{"value":"ltf_buyers","bookings":1}]},{"channel":"LTF - In-House","leads_created":0,"bookings":6,"marketing":3,"lane2":3,"social_dms":0,"showed":4,"qualified":4,"closed_won":3,"revenue":21194.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"book_meeting","bookings":3},{"value":"wescale","bookings":3}]},{"channel":"Linkedin","leads_created":4,"bookings":6,"marketing":4,"lane2":2,"social_dms":0,"showed":2,"qualified":3,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"book-call","bookings":6}]},{"channel":"WWWS","leads_created":0,"bookings":3,"marketing":3,"lane2":0,"social_dms":0,"showed":1,"qualified":1,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"book_meeting","bookings":2},{"value":"Unattributed","bookings":1}]},{"channel":"GoHighLevel","leads_created":1,"bookings":2,"marketing":0,"lane2":0,"social_dms":2,"showed":0,"qualified":0,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"book-call","bookings":2}]},{"channel":"VSL","leads_created":0,"bookings":1,"marketing":0,"lane2":1,"social_dms":0,"showed":1,"qualified":0,"closed_won":1,"revenue":5997.0,"unrecoverable_booked_leads":0,"drilldowns":[{"value":"VSL Leads campaign","bookings":1}]},{"channel":"Anthony IG","leads_created":1,"bookings":0,"marketing":0,"lane2":0,"social_dms":0,"showed":0,"qualified":0,"closed_won":0,"revenue":0.0,"unrecoverable_booked_leads":0,"drilldowns":[]}],"view":{"key":"2026-10","kind":"month","month":"2026-10","start":"2026-10-01","end":"2026-10-30","end_exclusive":"2026-11-01","frozen":false,"label":"October 2026"},"navigation":{"months":[{"key":"2026-10","kind":"month","month":"2026-10","start":"2026-10-01","end":"2026-10-30","end_exclusive":"2026-11-01","frozen":false,"label":"October 2026","live":true}],"weeks":[{"key":"week-2026-09-28","kind":"week","month":"2026-10","start":"2026-10-01","end":"2026-10-04","end_exclusive":"2026-10-05","frozen":true,"label":"Oct 1 – Oct 4, 2026"},{"key":"week-2026-10-05","kind":"week","month":"2026-10","start":"2026-10-05","end":"2026-10-11","end_exclusive":"2026-10-12","frozen":true,"label":"Oct 5 – Oct 11, 2026"},{"key":"week-2026-10-12","kind":"week","month":"2026-10","start":"2026-10-12","end":"2026-10-18","end_exclusive":"2026-10-19","frozen":true,"label":"Oct 12 – Oct 18, 2026"},{"key":"week-2026-10-19","kind":"week","month":"2026-10","start":"2026-10-19","end":"2026-10-25","end_exclusive":"2026-10-26","frozen":true,"label":"Oct 19 – Oct 25, 2026"},{"key":"week-2026-10-26","kind":"week","month":"2026-10","start":"2026-10-26","end":"2026-10-30","end_exclusive":"2026-11-02","frozen":false,"label":"Oct 26 – Oct 30, 2026"}]}}</script>
+<script>
+const report=JSON.parse(document.getElementById('v2-data').textContent);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=n=>new Intl.NumberFormat('en-US').format(Number(n||0));
+const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(Number(n||0));
+const pct=(a,b)=>b?`${(100*a/b).toFixed(1)}%`:'—';
+const pctClass=(n,d,high=.70,low=.50)=>d?(n/d>=high?'good':n/d<low?'bad':'mid'):'';
+const stamp=new Date(report.generated_at);
+const [periodStart,periodEnd]=report.period.split(' through ');
+const localDate=iso=>{const [y,m,d]=iso.split('-').map(Number);return new Intl.DateTimeFormat('en-US',{timeZone:'UTC',month:'short',day:'numeric',year:'numeric'}).format(new Date(Date.UTC(y,m-1,d,12)));};
+const view=report.view||{kind:'month',month:periodStart.slice(0,7),key:periodStart.slice(0,7),frozen:false};
+const progress=report.progress, goals=report.goals;
+document.getElementById('month-label').textContent=`${view.kind==='week'?'Week':'MTD'} ${localDate(periodStart)} – ${localDate(periodEnd.replace(' PT',''))} PT`;
+document.getElementById('snapshot-label').textContent=view.frozen?'Archived · Reconstructed from Close records':view.kind==='week'?'Current Week · Snapshot':'Snapshot';
+document.getElementById('period-progress').innerHTML=`<span>Day <strong>${progress.day}/${progress.days}</strong></span><span class="cs-sep">·</span><span>Working days <strong>${progress.working_elapsed}/${progress.working_days}</strong></span><span class="cs-sep">·</span><span><strong>${progress.elapsed_pct.toFixed(1)}%</strong> elapsed</span>`;
+document.getElementById('snapshot').textContent=stamp.toLocaleString('en-US',{timeZone:'America/Los_Angeles',month:'long',day:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})+' PT';
+const navigation=report.navigation;
+const base=new URL(location.pathname.includes('/archives/')?'../':'./',location.href);
+const monthURL=m=>new URL(m.live?'index.html':`archives/${m.key}.html`,base).href;
+const monthPicker=document.getElementById('month-picker'), weekPicker=document.getElementById('week-picker');
+monthPicker.innerHTML=[...navigation.months].reverse().map(m=>`<option value="${esc(monthURL(m))}" ${m.key===view.month?'selected':''}>${esc(m.label)}</option>`).join('');
+const selectedMonth=navigation.months.find(m=>m.key===view.month);
+const relevantWeeks=navigation.weeks.filter(w=>w.start.slice(0,7)<=view.month&&w.end.slice(0,7)>=view.month);
+weekPicker.innerHTML=`<option value="${esc(selectedMonth?monthURL(selectedMonth):new URL('index.html',base).href)}">Full Month</option>`+[...relevantWeeks].reverse().map(w=>`<option value="${esc(new URL(`archives/${w.key}.html`,base).href)}" ${view.kind==='week'&&view.key===w.key?'selected':''}>${esc(w.label)}${w.frozen?'':' · Current'}</option>`).join('');
+for(const picker of [monthPicker,weekPicker])picker.addEventListener('change',()=>{location.href=picker.value;});
+const t=report.totals;
+const bookingMix=`Lane 2 ${fmt(t.lane2)} · Marketing ${fmt(t.marketing)} · Social DMs ${fmt(t.social_dms)}`;
+const periodWord=view.kind==='week'?'this week':'MTD';
+const arr=report.vendhub_arr||0;
+const cards=[
+ ['Leads Created',fmt(t.leads_created),`new leads ${periodWord}`,'#6366f1'],
+ ['Total Booked',fmt(t.bookings),`new first calls ${periodWord}`,'#4f46e5',goals.bookings],
+ ['Showed',fmt(t.showed),`${pct(t.showed,t.bookings)} show rate`,'#2563eb'],
+ ['Qualified',fmt(t.qualified),`${pct(t.qualified,t.showed)} qual rate · ${pct(t.qualified,t.bookings)} of booked`,'#7c3aed'],
+ ['Closed Won',fmt(t.closed_won),`${pct(t.closed_won,t.bookings)} booked→close · ${pct(t.closed_won,t.qualified)} qual→close`,'#d97706'],
+ ['Closed Revenue',money(t.revenue),`${t.closed_won?money(t.revenue/t.closed_won):money(0)} avg deal`,'#0e9f6e',goals.revenue]
+];
+document.getElementById('kpis').innerHTML=cards.map(([label,value,sub,color,goal],i)=>{
+ const target=goal?`<span class="goal-target">/ ${i===5?money(goal):fmt(goal)} <span class="monthly-goal-label">${view.kind==='week'?'monthly goal':'goal'}</span></span>`:'';
+ const corner=goal?`<div class="kpi-goal-pct">${Math.round(100*(i===5?t.revenue:t.bookings)/goal)}%</div>`:'';
+ const extra=i===1?`<div class="kpi-sub">${esc(bookingMix)}</div>`:i===5&&arr?` · <span class="recurring-revenue">ARR ${money(arr)} <span style="opacity:.75">MRR ${money(arr/12)}</span></span>`:'';
+ return `<div class="kpi" style="--kpi-accent:${color};--kpi-color:${i===1?'var(--text)':color}">${corner}<div class="label">${esc(label)}</div><div class="value">${esc(value)}${target}</div><div class="kpi-sub">${esc(sub)}${i===5?extra:''}</div>${i===1?extra:''}</div>`;
+}).join('');
+function rowCells(c, total=false){
+ const show=pct(c.showed,c.bookings), qual=pct(c.qualified,c.showed), close=pct(c.closed_won,c.bookings);
+ const projected=!total&&c.bookings&&progress.day?Math.round(c.bookings/progress.day*progress.days):null;
+ const goal=total?null:goals.channels[c.channel];
+ const pace=goal&&projected!==null?(projected>goal?'pace-exceed':projected===goal?'pace-on':'pace-behind'):'';
+ return `<td class="col-name">${total?'TOTAL':esc(c.channel)}</td><td class="col-num">${fmt(c.leads_created)}</td><td class="col-num">${fmt(c.bookings)}</td><td class="col-pace ${pace}">${projected===null?'—':fmt(projected)}</td><td class="col-goal">${goal?`${Math.round(100*c.bookings/goal)}% (${fmt(goal)})`:'—'}</td><td class="col-num">${fmt(c.showed)}</td><td class="col-pct ${pctClass(c.showed,c.bookings)}">${show}</td><td class="col-num">${fmt(c.qualified)}</td><td class="col-pct ${pctClass(c.qualified,c.showed)}">${qual}</td><td class="col-num">${fmt(c.closed_won)}</td><td class="col-pct ${pctClass(c.closed_won,c.bookings,.15,.07)}">${close}</td><td class="col-rev">${money(c.revenue)}</td><td class="col-num">${c.closed_won?money(c.revenue/c.closed_won):'—'}</td>`;
+}
+const body=document.getElementById('funnel-body');
+let sourceIndex=0;
+for(const [section,channels] of [['lead_sources',report.channels.filter(c=>c.channel!=='Unknown (Needs Review)')],['uncategorized',report.channels.filter(c=>c.channel==='Unknown (Needs Review)')]]){
+ if(!channels.length) continue;
+ const sectionLabel=section==='lead_sources'?'FUNNEL BREAKDOWN — LEAD SOURCES':'FUNNEL BREAKDOWN — UNCATEGORIZED';
+ body.insertAdjacentHTML('beforeend',`<tr class="section-header-row"><td colspan="13"><span class="section-chevron open">›</span>${sectionLabel}</td></tr>`);
+ for(const c of channels){
+  const sid=`s${sourceIndex++}`;
+  const buckets=`Marketing ${fmt(c.marketing)} · Lane 2 ${fmt(c.lane2)} · Social DMs ${fmt(c.social_dms)}`;
+  const reviewNote=c.channel==='Unknown (Needs Review)'&&c.unrecoverable_booked_leads?`${fmt(c.unrecoverable_booked_leads)} unique booked leads individually reviewed; unrecoverable under current V2 source rules`:'';
+  body.insertAdjacentHTML('beforeend',`<tr class="funnel-row" data-channel="${sid}"><td class="col-name"><span class="chevron" id="chev-${sid}">›</span>${esc(c.channel)}<div class="channel-meta">${buckets}</div>${reviewNote?`<div class="channel-meta">${esc(reviewNote)}</div>`:''}</td>${rowCells(c).slice(rowCells(c).indexOf('</td>')+5)}</tr>`);
+  for(const value of c.drilldowns){
+   body.insertAdjacentHTML('beforeend',`<tr class="utm-row" data-parent="${sid}"><td class="col-name">${esc(value.value)}</td><td class="col-num">—</td><td class="col-num">${fmt(value.bookings)}</td><td class="col-pace"></td><td class="col-goal"></td><td class="col-num"></td><td class="col-pct"></td><td class="col-num"></td><td class="col-pct"></td><td class="col-num"></td><td class="col-pct"></td><td class="col-rev"></td><td class="col-num"></td></tr>`);
+  }
+ }
+}
+body.insertAdjacentHTML('beforeend',`<tr class="total-row">${rowCells({channel:'TOTAL',...t,showed:t.showed,qualified:t.qualified,closed_won:t.closed_won,revenue:t.revenue},true)}</tr>`);
+document.querySelectorAll('.funnel-row').forEach(tr=>tr.addEventListener('click',()=>{const id=tr.dataset.channel;const open=tr.dataset.open==='1';tr.dataset.open=open?'0':'1';document.getElementById(`chev-${id}`).classList.toggle('open',!open);document.querySelectorAll(`.utm-row[data-parent="${id}"]`).forEach(x=>x.classList.toggle('open',!open));}));
+document.getElementById('download-csv').addEventListener('click',()=>{
+ const rows=[['Funnel','Leads','Booked','Projected (monthly pace)','Monthly goal','Goal %','Showed','Show %','Qualified','Qual %','Closed','CW %','Revenue','Revenue / Close'],...report.channels.map(c=>[c.channel,c.leads_created,c.bookings,c.bookings?Math.round(c.bookings/progress.day*progress.days):'',goals.channels[c.channel]||'',goals.channels[c.channel]?pct(c.bookings,goals.channels[c.channel]):'',c.showed,pct(c.showed,c.bookings),c.qualified,pct(c.qualified,c.showed),c.closed_won,pct(c.closed_won,c.bookings),c.revenue,c.closed_won?c.revenue/c.closed_won:''])];
+ const csv=rows.map(row=>row.map(value=>`"${String(value).replace(/"/g,'""')}"`).join(',')).join('\r\n');
+ const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));
+ const link=document.createElement('a');link.href=url;link.download=`mtd-v2-${view.key}.csv`;link.click();URL.revokeObjectURL(url);
+});
+document.getElementById('source-note').textContent=`${report.lead_source_note} Reporting cutoff (exclusive): ${report.source_cutoff}. Rules: ${report.rules_version}. ${fmt(report.excluded_repeat_candidates)} candidate bookings fell inside an existing 30-day window. Snapshot includes ${fmt(report.counted_meetings)} qualifying first-call credits. ${view.frozen?'Historical views were reconstructed using Close records available at the snapshot time; later CRM changes are not time-traveled.':''}`;
+</script>
+</body>
+</html>
