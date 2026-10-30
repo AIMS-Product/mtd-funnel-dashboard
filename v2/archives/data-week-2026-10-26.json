@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-30T08:30:20.841136-07:00",
-  "source_cutoff": "2026-10-30T08:30:20.841136-07:00",
+  "generated_at": "2026-10-30T08:45:19.109811-07:00",
+  "source_cutoff": "2026-10-30T08:45:19.109811-07:00",
   "vendhub_arr": 22178.0,
   "progress": {
     "day": 30,
@@ -30,15 +30,15 @@
   },
   "period": "2026-10-26 through 2026-10-30 PT",
   "rules_version": "booked_calls.v2.6-scheduled-anchor-candidate+any-meeting-clock+william-consult-retired-20261014",
-  "counted_meetings": 115,
+  "counted_meetings": 116,
   "excluded_repeat_candidates": 10,
-  "attribution_reviewed_at": "2026-10-30T08:30:20.841136-07:00",
+  "attribution_reviewed_at": "2026-10-30T08:45:19.109811-07:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 702,
-    "bookings": 115,
+    "bookings": 116,
     "marketing": 48,
-    "lane2": 62,
+    "lane2": 63,
     "social_dms": 5,
     "showed": 32,
     "qualified": 24,
@@ -149,6 +149,33 @@
       ]
     },
     {
+      "channel": "Google Ads",
+      "leads_created": 11,
+      "bookings": 13,
+      "marketing": 5,
+      "lane2": 8,
+      "social_dms": 0,
+      "showed": 4,
+      "qualified": 5,
+      "closed_won": 0,
+      "revenue": 0.0,
+      "unrecoverable_booked_leads": 0,
+      "drilldowns": [
+        {
+          "value": "23805931083",
+          "bookings": 7
+        },
+        {
+          "value": "23815771816",
+          "bookings": 5
+        },
+        {
+          "value": "23883800856",
+          "bookings": 1
+        }
+      ]
+    },
+    {
       "channel": "YouTube",
       "leads_created": 8,
       "bookings": 13,
@@ -207,33 +234,6 @@
         },
         {
           "value": "youtube-home",
-          "bookings": 1
-        }
-      ]
-    },
-    {
-      "channel": "Google Ads",
-      "leads_created": 11,
-      "bookings": 12,
-      "marketing": 5,
-      "lane2": 7,
-      "social_dms": 0,
-      "showed": 4,
-      "qualified": 5,
-      "closed_won": 0,
-      "revenue": 0.0,
-      "unrecoverable_booked_leads": 0,
-      "drilldowns": [
-        {
-          "value": "23805931083",
-          "bookings": 7
-        },
-        {
-          "value": "23815771816",
-          "bookings": 4
-        },
-        {
-          "value": "23883800856",
           "bookings": 1
         }
       ]
