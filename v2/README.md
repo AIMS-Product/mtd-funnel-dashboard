@@ -4,6 +4,12 @@ V2 is a shadow implementation of the MTD funnel report. Its files and hosted pag
 
 ## Refresh and publish the shadow
 
+The dedicated [`update_v2.yml`](../.github/workflows/update_v2.yml) GitHub Actions workflow refreshes V2 using the repository's existing `CLOSE_API_KEY` secret. A separate cron-job.org job dispatches it on `main` every 15 minutes at :00, :15, :30, and :45 in `America/Los_Angeles`, matching the current MTD refresh cadence. It can also be run manually from the Actions tab.
+
+The workflow builds a fresh Close snapshot, renders the aggregate-only public page, and commits only `v2/index.html` for GitHub Pages. Its own concurrency group prevents overlapping V2 builds, and it rebases before pushing to preserve updates from other dashboard jobs. The current MTD workflow, schedule, root dashboard, and archives are unchanged.
+
+To run the same refresh locally:
+
 Set `CLOSE_API_KEY` in the runner environment, then run:
 
 ```bash
