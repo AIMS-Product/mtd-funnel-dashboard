@@ -624,8 +624,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-30T14:30:21.432133-07:00",
-  "source_cutoff": "2026-10-30T14:30:21.432133-07:00",
+  "generated_at": "2026-10-30T14:45:15.443714-07:00",
+  "source_cutoff": "2026-10-30T14:45:15.443714-07:00",
   "vendhub_arr": 112712.0,
   "progress": {
     "day": 30,
@@ -657,7 +657,7 @@
   "rules_version": "booked_calls.v2.6-scheduled-anchor-candidate+any-meeting-clock+william-consult-retired-20261014",
   "counted_meetings": 614,
   "excluded_repeat_candidates": 94,
-  "attribution_reviewed_at": "2026-10-30T14:30:21.432133-07:00",
+  "attribution_reviewed_at": "2026-10-30T14:45:15.443714-07:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 25306,
@@ -1690,31 +1690,31 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 22624,
-      "bookings": 169,
+      "leads_created": 22625,
+      "bookings": 170,
       "marketing": 49,
-      "lane2": 117,
+      "lane2": 118,
       "social_dms": 3,
       "showed": 61,
       "qualified": 65,
       "closed_won": 11,
       "revenue": 104964.0,
-      "unrecoverable_booked_leads": 165,
+      "unrecoverable_booked_leads": 166,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 152,
+          "bookings": 153,
           "marketing": 39,
-          "lane2": 110,
+          "lane2": 111,
           "social_dms": 3,
           "showed": 53,
           "qualified": 58,
           "closed_won": 11,
           "revenue": 104964.0,
           "formats": {
-            "show": "34.9%",
+            "show": "34.6%",
             "qualified": "109.4%",
-            "qualified_booked": "38.2%",
+            "qualified_booked": "37.9%",
             "close": "7.2%",
             "qualified_close": "19.0%",
             "revenue": "$104,964",
@@ -1969,9 +1969,9 @@
         },
         {
           "value": "Rob Maxfield",
-          "bookings": 17,
+          "bookings": 18,
           "marketing": 0,
-          "lane2": 17,
+          "lane2": 18,
           "social_dms": 0,
           "showed": 9,
           "qualified": 9,
@@ -2145,15 +2145,15 @@
         }
       ],
       "display": {
-        "projected": 175,
+        "projected": 176,
         "goal": null,
         "goal_pct": null,
         "pace": ""
       },
       "formats": {
-        "show": "36.1%",
+        "show": "35.9%",
         "qualified": "106.6%",
-        "qualified_booked": "38.5%",
+        "qualified_booked": "38.2%",
         "close": "6.5%",
         "qualified_close": "16.9%",
         "revenue": "$104,964",
@@ -3308,7 +3308,7 @@
     },
     {
       "channel": "Instagram",
-      "leads_created": 33,
+      "leads_created": 32,
       "bookings": 31,
       "marketing": 2,
       "lane2": 13,
@@ -4390,9 +4390,9 @@
     {
       "channel": "LTF - In-House",
       "leads_created": 0,
-      "bookings": 7,
+      "bookings": 6,
       "marketing": 3,
-      "lane2": 4,
+      "lane2": 3,
       "social_dms": 0,
       "showed": 4,
       "qualified": 4,
@@ -4442,19 +4442,19 @@
         },
         {
           "value": "Unattributed",
-          "bookings": 1,
+          "bookings": 0,
           "marketing": 0,
-          "lane2": 1,
+          "lane2": 0,
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
           "closed_won": 1,
           "revenue": 1200.0,
           "formats": {
-            "show": "0.0%",
+            "show": "—",
             "qualified": "—",
-            "qualified_booked": "0.0%",
-            "close": "100.0%",
+            "qualified_booked": "—",
+            "close": "—",
             "qualified_close": "—",
             "revenue": "$1,200",
             "average": "$1,200"
@@ -4538,17 +4538,6 @@
           "revenue": 0
         },
         {
-          "value": "Rob Maxfield",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0
-        },
-        {
           "value": "Marketing / Unassigned",
           "bookings": 0,
           "marketing": 0,
@@ -4561,16 +4550,16 @@
         }
       ],
       "display": {
-        "projected": 7,
+        "projected": 6,
         "goal": null,
         "goal_pct": null,
         "pace": ""
       },
       "formats": {
-        "show": "57.1%",
+        "show": "66.7%",
         "qualified": "100.0%",
-        "qualified_booked": "57.1%",
-        "close": "42.9%",
+        "qualified_booked": "66.7%",
+        "close": "50.0%",
         "qualified_close": "75.0%",
         "revenue": "$21,194",
         "average": "$7,065"
@@ -4957,11 +4946,11 @@
     "label": "October 2026"
   },
   "pipeline": {
-    "generated_at": "2026-10-30T14:30:21.432133-07:00",
+    "generated_at": "2026-10-30T14:45:15.443714-07:00",
     "counts": {
       "Christian Hartwell": 32,
       "Scott Seymour": 14,
-      "Robin Perkins": 24,
+      "Robin Perkins": 25,
       "Eric Piccione": 21,
       "Joe Vaughan": 23,
       "Shreya Bechra": 0,
