@@ -14,6 +14,7 @@ from pathlib import Path
 from reporting import PACIFIC, ROOT
 
 BASE = '/mtd-funnel-dashboard/v2'
+PICKER_SCRIPT = BASE + '/archives/picker.js?v=supplemental-1'
 FUNCTIONS = {
     'pct', 'pct_class', 'fmt_currency', 'rev_per_close', 'funnel_slug',
     'calc_on_pace', 'pace_class', 'pace_label', 'goal_pct_label', 'goal_pct_corner',
@@ -121,7 +122,8 @@ def render_current_ui(data, output, navigation):
     ui = presentation_namespace()
     adapted = adapter(data, ui)
     month_picker, week_picker = picker_html(data, navigation, ui)
-    return re.sub(r'/mtd-funnel-dashboard/(?!v2/)', BASE + '/', ui['generate_html'](adapted, month_picker, week_picker))
+    html = re.sub(r'/mtd-funnel-dashboard/(?!v2/)', BASE + '/', ui['generate_html'](adapted, month_picker, week_picker))
+    return html.replace(f'src="{BASE}/archives/picker.js"', f'src="{PICKER_SCRIPT}"')
 
 
 def write_navigation(navigation, directory):

@@ -5,7 +5,7 @@ import json
 import re
 from datetime import date, timedelta
 
-from archive_ui import BASE, picker_html, presentation_namespace
+from archive_ui import BASE, PICKER_SCRIPT, picker_html, presentation_namespace
 from reporting import ARCHIVE_START, ROOT
 
 
@@ -45,6 +45,11 @@ def retain_history(navigation, directory, source=None):
     for row in history['months'] + history['weeks']:
         output = destination / f"{row['key']}.html"
         if output.exists():
+            # Only navigation assets may change; all historical figures stay frozen.
+            html = output.read_text()
+            updated = html.replace(f'src="{BASE}/archives/picker.js"', f'src="{PICKER_SCRIPT}"')
+            if updated != html:
+                output.write_text(updated)
             continue
         original = (source / f"{row['key']}.html").read_bytes()
         if hashlib.sha256(original).hexdigest() != row['source_sha256']:
@@ -61,6 +66,7 @@ def retain_history(navigation, directory, source=None):
                       r'\1Historical · Original MTD rules\2', html, count=1)
         if f'{BASE}/archives/picker.js' not in html:
             html = html.replace('<script>', f'<script src="{BASE}/archives/picker.js"></script>\n<script>', 1)
+        html = html.replace(f'src="{BASE}/archives/picker.js"', f'src="{PICKER_SCRIPT}"')
         output.write_text(html)
     manifest_path.write_text(json.dumps(history, indent=2) + '\n')
     return combined

@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from archive_ui import BASE, write_navigation
+from archive_ui import BASE, PICKER_SCRIPT, write_navigation
 from reporting import ROOT
 from supplemental import retain_history
 
@@ -39,7 +39,7 @@ class SupplementalTests(unittest.TestCase):
                                  copied.split('<!-- KPI Cards -->')[1].split('<script')[0])
                 self.assertEqual(re.findall(r'<script>(.*?)</script>', original, re.S),
                                  re.findall(r'<script>(.*?)</script>', copied, re.S))
-                self.assertIn(f'{BASE}/archives/picker.js', copied)
+                self.assertIn(f'src="{PICKER_SCRIPT}"', copied)
                 self.assertIn('Historical · Original MTD rules', copied)
                 self.assertNotIn('v2/v2/', copied)
                 for href in re.findall(r'(?:href|value)="(/[^"]+)"', copied):
