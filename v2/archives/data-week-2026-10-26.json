@@ -22,6 +22,26 @@
       }
     },
     {
+      "value": "Rob Maxfield",
+      "bookings": 16,
+      "marketing": 0,
+      "lane2": 16,
+      "social_dms": 0,
+      "showed": 3,
+      "qualified": 2,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "18.8%",
+        "qualified": "66.7%",
+        "qualified_booked": "12.5%",
+        "close": "0.0%",
+        "qualified_close": "0.0%",
+        "revenue": "$0",
+        "average": "—"
+      }
+    },
+    {
       "value": "Brad Savage",
       "bookings": 15,
       "marketing": 0,
@@ -35,26 +55,6 @@
         "show": "26.7%",
         "qualified": "150.0%",
         "qualified_booked": "40.0%",
-        "close": "0.0%",
-        "qualified_close": "0.0%",
-        "revenue": "$0",
-        "average": "—"
-      }
-    },
-    {
-      "value": "Rob Maxfield",
-      "bookings": 15,
-      "marketing": 0,
-      "lane2": 15,
-      "social_dms": 0,
-      "showed": 3,
-      "qualified": 2,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "20.0%",
-        "qualified": "66.7%",
-        "qualified_booked": "13.3%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -365,19 +365,19 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 15,
+      "bookings": 14,
       "marketing": 2,
-      "lane2": 13,
+      "lane2": 12,
       "social_dms": 0,
       "showed": 3,
       "qualified": 1,
       "closed_won": 2,
       "revenue": 11994.0,
       "formats": {
-        "show": "20.0%",
+        "show": "21.4%",
         "qualified": "33.3%",
-        "qualified_booked": "6.7%",
-        "close": "13.3%",
+        "qualified_booked": "7.1%",
+        "close": "14.3%",
         "qualified_close": "200.0%",
         "revenue": "$11,994",
         "average": "$5,997"
@@ -425,16 +425,16 @@
     },
     {
       "value": "Other / Non-Closer",
-      "bookings": 10,
+      "bookings": 11,
       "marketing": 2,
-      "lane2": 8,
+      "lane2": 9,
       "social_dms": 0,
       "showed": 1,
       "qualified": 0,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "10.0%",
+        "show": "9.1%",
         "qualified": "0.0%",
         "qualified_booked": "0.0%",
         "close": "0.0%",
@@ -445,9 +445,9 @@
     },
     {
       "value": "Shreya Bechra",
-      "bookings": 6,
+      "bookings": 7,
       "marketing": 2,
-      "lane2": 4,
+      "lane2": 5,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -457,7 +457,7 @@
         "show": "0.0%",
         "qualified": "—",
         "qualified_booked": "0.0%",
-        "close": "16.7%",
+        "close": "14.3%",
         "qualified_close": "—",
         "revenue": "$8,997",
         "average": "$8,997"
@@ -504,8 +504,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-30T14:15:21.019429-07:00",
-  "source_cutoff": "2026-10-30T14:15:21.019429-07:00",
+  "generated_at": "2026-10-30T14:30:21.432133-07:00",
+  "source_cutoff": "2026-10-30T14:30:21.432133-07:00",
   "vendhub_arr": 27564.0,
   "progress": {
     "day": 30,
@@ -535,25 +535,25 @@
   },
   "period": "2026-10-26 through 2026-10-30 PT",
   "rules_version": "booked_calls.v2.6-scheduled-anchor-candidate+any-meeting-clock+william-consult-retired-20261014",
-  "counted_meetings": 122,
+  "counted_meetings": 123,
   "excluded_repeat_candidates": 11,
-  "attribution_reviewed_at": "2026-10-30T14:15:21.019429-07:00",
+  "attribution_reviewed_at": "2026-10-30T14:30:21.432133-07:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 705,
-    "bookings": 122,
+    "bookings": 123,
     "marketing": 50,
-    "lane2": 66,
+    "lane2": 67,
     "social_dms": 6,
     "showed": 35,
     "qualified": 25,
     "closed_won": 14,
     "revenue": 91843.0,
     "formats": {
-      "show": "28.7%",
+      "show": "28.5%",
       "qualified": "71.4%",
-      "qualified_booked": "20.5%",
-      "close": "11.5%",
+      "qualified_booked": "20.3%",
+      "close": "11.4%",
       "qualified_close": "56.0%",
       "revenue": "$91,843",
       "average": "$6,560"
@@ -2359,9 +2359,9 @@
     {
       "channel": "LTF - In-House",
       "leads_created": 0,
-      "bookings": 1,
+      "bookings": 2,
       "marketing": 0,
-      "lane2": 1,
+      "lane2": 2,
       "social_dms": 0,
       "showed": 0,
       "qualified": 1,
@@ -2387,6 +2387,26 @@
             "qualified_close": "100.0%",
             "revenue": "$8,997",
             "average": "$8,997"
+          }
+        },
+        {
+          "value": "Unattributed",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
           }
         }
       ],
@@ -2425,6 +2445,17 @@
           "revenue": 0
         },
         {
+          "value": "Rob Maxfield",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
           "value": "Marketing / Unassigned",
           "bookings": 0,
           "marketing": 0,
@@ -2437,7 +2468,7 @@
         }
       ],
       "display": {
-        "projected": 1,
+        "projected": 2,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -2445,8 +2476,8 @@
       "formats": {
         "show": "0.0%",
         "qualified": "—",
-        "qualified_booked": "100.0%",
-        "close": "100.0%",
+        "qualified_booked": "50.0%",
+        "close": "50.0%",
         "qualified_close": "100.0%",
         "revenue": "$8,997",
         "average": "$8,997"
@@ -2621,7 +2652,7 @@
     "label": "Oct 26 – Oct 30, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-10-30T14:15:21.019429-07:00",
+    "generated_at": "2026-10-30T14:30:21.432133-07:00",
     "counts": {
       "Christian Hartwell": 32,
       "Scott Seymour": 14,
