@@ -178,6 +178,36 @@ class FeatureParityTests(unittest.TestCase):
         self.assertNotIn('BOOKING ATTRIBUTION', html)
         self.assertNotIn('↓ Team CSV', html)
 
+    def test_booking_breakdowns_render_from_each_saved_period_and_source(self):
+        from reporting import ReportPeriod
+        from archive_ui import adapter, presentation_namespace
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory)/'private.json'
+            source.write_text(json.dumps(public_fixture()))
+            data = public_data(source)
+            # Distinct total/source figures detect accidental reuse of the KPI totals per row.
+            data['totals'].update(bookings=6, marketing=2, lane2=3, social_dms=1)
+            data['channels'][0].update(bookings=3, marketing=1, lane2=2, social_dms=0)
+            now = datetime(2026, 10, 30, tzinfo=PACIFIC)
+            periods = [ReportPeriod('month', now.date().replace(day=1), now.date().replace(month=11, day=1), '2026-10'),
+                       ReportPeriod('week', now.date().replace(day=19), now.date().replace(day=26), 'week-2026-10-19')]
+            for period in periods:
+                data['view'] = period.view(now)
+                out = Path(directory)/'report.html'
+                render_report(data, out)
+                html = out.read_text()
+                self.assertEqual(html.count('Marketing 2 · Lane 2 3 · Social DMs 1'), 1)
+                self.assertEqual(html.count('Marketing 1 · Lane 2 2 · Social DMs 0'), 1)
+                self.assertIn('new first calls MTD', html)
+                self.assertEqual(data['totals']['bookings'], 6)
+                self.assertEqual(data['channels'][0]['bookings'], 3)
+                self.assertEqual(html.count('class="kpi"'), 6)
+                self.assertNotIn('PRIVATE_LEAD', html)
+                ui = presentation_namespace()
+                reference = ui['generate_html'](adapter(data, ui))
+                self.assertEqual(html.split('<style>')[1].split('</style>')[0],
+                                 reference.split('<style>')[1].split('</style>')[0])
+
 
 if __name__ == '__main__':
     unittest.main()

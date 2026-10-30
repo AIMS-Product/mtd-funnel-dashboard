@@ -123,7 +123,26 @@ def render_current_ui(data, output, navigation):
     adapted = adapter(data, ui)
     month_picker, week_picker = picker_html(data, navigation, ui)
     html = re.sub(r'/mtd-funnel-dashboard/(?!v2/)', BASE + '/', ui['generate_html'](adapted, month_picker, week_picker))
+    html = add_booking_breakdowns(html, data, ui)
     return html.replace(f'src="{BASE}/archives/picker.js"', f'src="{PICKER_SCRIPT}"')
+
+
+def booking_breakdown(row):
+    return f"Marketing {row['marketing']:,} · Lane 2 {row['lane2']:,} · Social DMs {row['social_dms']:,}"
+
+
+def add_booking_breakdowns(html, data, ui):
+    """Display the saved V2 booking credits inside the original KPI and source rows."""
+    booked_subtext = '<div class="kpi-sub">new first calls MTD</div>'
+    html = html.replace(booked_subtext, booked_subtext +
+                        f'<div class="kpi-sub">{booking_breakdown(data["totals"])}</div>', 1)
+    for channel in data['channels']:
+        name = escape(channel['channel'])
+        marker = f'<span class="chevron" id="chev-{ui["funnel_slug"](name)}">›</span>{name}'
+        subtext = ('<div style="font-size:11px; font-weight:400; color:var(--muted2); margin-left:16px;">'
+                   + booking_breakdown(channel) + '</div>')
+        html = html.replace(marker, marker + subtext, 1)
+    return html
 
 
 def write_navigation(navigation, directory):
