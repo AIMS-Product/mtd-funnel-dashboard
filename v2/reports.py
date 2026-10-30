@@ -105,7 +105,7 @@ def write_csv(path, rows):
 
 def write_exports(data, directory, key):
     write_csv(directory / f"funnel-{key}.csv", funnel_rows(data))
-    if data.get("team"):
+    if data.get("team") or not any(data["totals"][key] for key in ("bookings", "showed", "qualified", "closed_won", "revenue")):
         write_csv(directory / f"team-{key}.csv", team_rows(data))
 
 

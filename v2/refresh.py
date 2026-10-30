@@ -40,7 +40,7 @@ def refresh(now: datetime | None = None, *, render_only: bool = False) -> None:
                 source = Path(directory) / "data.json"
                 source.write_text(json.dumps(raw))
                 saved = {**public_data(source), "view": view}
-            if saved.get("team"):
+            if raw.get("breakdowns") is not None:
                 pipeline = pipeline or pipeline_snapshot(reader, now)
                 saved["pipeline"] = pipeline
             path.write_text(json.dumps(saved, ensure_ascii=False, indent=2) + "\n")

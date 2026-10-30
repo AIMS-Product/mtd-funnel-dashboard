@@ -10,7 +10,7 @@ import build
 from aggregates import CLOSERS, OTHER_OWNER, build_breakdowns
 from publish_shadow import public_data, render_report
 from reporting import PACIFIC, presentation
-from reports import funnel_rows, pipeline_snapshot, team_rows, write_comparison
+from reports import funnel_rows, pipeline_snapshot, team_rows, write_comparison, write_exports
 from test_reporting import private_snapshot
 
 
@@ -96,6 +96,22 @@ class FeatureParityTests(unittest.TestCase):
         presentation(data)
         self.assertEqual(data['channels'][0]['display']['goal_pct'], 0)
         self.assertEqual(data['goal_percentages']['bookings'], 0)
+        data['totals'].update(revenue=5997, closed_won=2)
+        presentation(data)
+        self.assertEqual(data['totals']['formats']['average'], '$2,998')
+
+    def test_zero_activity_period_still_has_team_and_funnel_exports(self):
+        raw = public_fixture()
+        raw['totals'] = dict.fromkeys(raw['totals'], 0)
+        raw['channels'] = []
+        raw['breakdowns'] = dict(channels={}, setters=[], team=[])
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root/'private.json'; source.write_text(json.dumps(raw))
+            data = public_data(source)
+            write_exports(data, root/'reports', 'empty')
+            self.assertTrue((root/'reports/team-empty.csv').exists())
+            self.assertIn('TOTAL', (root/'reports/funnel-empty.csv').read_text())
 
     def test_v2_repeat_boundary_and_cancellation_policy_unchanged(self):
         start = datetime(2026, 10, 1, 9, tzinfo=PACIFIC)
