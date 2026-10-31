@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 50,
-      "marketing": 50,
+      "bookings": 51,
+      "marketing": 51,
       "lane2": 0,
       "social_dms": 0,
       "showed": 23,
@@ -12,9 +12,9 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "46.0%",
+        "show": "45.1%",
         "qualified": "56.5%",
-        "qualified_booked": "26.0%",
+        "qualified_booked": "25.5%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -425,8 +425,8 @@
     },
     {
       "value": "Joe Vaughan",
-      "bookings": 10,
-      "marketing": 6,
+      "bookings": 11,
+      "marketing": 7,
       "lane2": 3,
       "social_dms": 1,
       "showed": 4,
@@ -434,10 +434,10 @@
       "closed_won": 1,
       "revenue": 8500.0,
       "formats": {
-        "show": "40.0%",
+        "show": "36.4%",
         "qualified": "25.0%",
-        "qualified_booked": "10.0%",
-        "close": "10.0%",
+        "qualified_booked": "9.1%",
+        "close": "9.1%",
         "qualified_close": "100.0%",
         "revenue": "$8,500",
         "average": "$8,500"
@@ -504,8 +504,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-31T10:30:19.667969-07:00",
-  "source_cutoff": "2026-10-31T10:30:19.667969-07:00",
+  "generated_at": "2026-10-31T10:45:17.706935-07:00",
+  "source_cutoff": "2026-10-31T10:45:17.706935-07:00",
   "vendhub_arr": 27564.0,
   "progress": {
     "day": 31,
@@ -535,14 +535,14 @@
   },
   "period": "2026-10-26 through 2026-10-31 PT",
   "rules_version": "booked_calls.v2.6-scheduled-anchor-candidate+any-meeting-clock+william-consult-retired-20261014",
-  "counted_meetings": 125,
+  "counted_meetings": 126,
   "excluded_repeat_candidates": 12,
-  "attribution_reviewed_at": "2026-10-31T10:30:19.667969-07:00",
+  "attribution_reviewed_at": "2026-10-31T10:45:17.706935-07:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 712,
-    "bookings": 125,
-    "marketing": 50,
+    "leads_created": 713,
+    "bookings": 126,
+    "marketing": 51,
     "lane2": 69,
     "social_dms": 6,
     "showed": 45,
@@ -550,10 +550,10 @@
     "closed_won": 14,
     "revenue": 91843.0,
     "formats": {
-      "show": "36.0%",
+      "show": "35.7%",
       "qualified": "71.1%",
-      "qualified_booked": "25.6%",
-      "close": "11.2%",
+      "qualified_booked": "25.4%",
+      "close": "11.1%",
       "qualified_close": "43.8%",
       "revenue": "$91,843",
       "average": "$6,560"
@@ -1033,21 +1033,21 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 198,
-      "bookings": 29,
-      "marketing": 4,
+      "leads_created": 199,
+      "bookings": 30,
+      "marketing": 5,
       "lane2": 25,
       "social_dms": 0,
       "showed": 7,
       "qualified": 6,
       "closed_won": 3,
       "revenue": 23991.0,
-      "unrecoverable_booked_leads": 29,
+      "unrecoverable_booked_leads": 30,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 25,
-          "marketing": 3,
+          "bookings": 26,
+          "marketing": 4,
           "lane2": 22,
           "social_dms": 0,
           "showed": 5,
@@ -1055,10 +1055,10 @@
           "closed_won": 3,
           "revenue": 23991.0,
           "formats": {
-            "show": "20.0%",
+            "show": "19.2%",
             "qualified": "80.0%",
-            "qualified_booked": "16.0%",
-            "close": "12.0%",
+            "qualified_booked": "15.4%",
+            "close": "11.5%",
             "qualified_close": "75.0%",
             "revenue": "$23,991",
             "average": "$7,997"
@@ -1191,6 +1191,17 @@
           "revenue": 0
         },
         {
+          "value": "Marketing",
+          "bookings": 5,
+          "marketing": 5,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
           "value": "Rob Maxfield",
           "bookings": 5,
           "marketing": 0,
@@ -1209,17 +1220,6 @@
           "social_dms": 0,
           "showed": 2,
           "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0
-        },
-        {
-          "value": "Marketing",
-          "bookings": 4,
-          "marketing": 4,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
           "closed_won": 0,
           "revenue": 0
         },
@@ -1280,16 +1280,16 @@
         }
       ],
       "display": {
-        "projected": 29,
+        "projected": 30,
         "goal": null,
         "goal_pct": null,
         "pace": ""
       },
       "formats": {
-        "show": "24.1%",
+        "show": "23.3%",
         "qualified": "85.7%",
-        "qualified_booked": "20.7%",
-        "close": "10.3%",
+        "qualified_booked": "20.0%",
+        "close": "10.0%",
         "qualified_close": "50.0%",
         "revenue": "$23,991",
         "average": "$7,997"
@@ -2641,7 +2641,7 @@
     "label": "Oct 26 – Oct 31, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-10-31T10:30:19.667969-07:00",
+    "generated_at": "2026-10-31T10:45:17.706935-07:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 14,
