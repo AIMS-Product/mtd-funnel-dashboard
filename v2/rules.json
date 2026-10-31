@@ -1,5 +1,5 @@
 {
-  "version": "booked_calls.v2.6-scheduled-anchor-candidate+any-meeting-clock+william-consult-retired-20261014",
+  "version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "timezone": "America/Los_Angeles",
   "repeat_days": 30,
   "repeat_boundary": "A new qualifying credit is eligible only when scheduled-start time is strictly more than 720 elapsed hours after the prior non-canceled meeting.",
@@ -284,6 +284,30 @@
       "pattern": "vendingpren[eu]+rs?\\s+pinnacle\\s*-?\\s*next\\s+steps",
       "setter_name": "Monde Janzen",
       "setter_user_id": null,
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "eduardo_santos_acquisition_ace_launch_next_steps",
+      "pattern": "acquisition\\s+ace\\s+launch\\s*-?\\s*next\\s+steps",
+      "setter_name": "Eduardo Santos",
+      "setter_user_id": null,
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "tara_hall_vendingpreneurs_visionary_next_steps",
+      "pattern": "vendingpren[eu]+rs?\\s+visionary\\s*[-\u2013]?\\s*next\\s+steps",
+      "setter_name": "Tara Hall",
+      "setter_user_id": "user_eQU8NtY1DEGcWY0KikTakVlAxVG420UmEQGJV1I8UpV",
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "pearl_sathekge_stewart_mcclain_vendingpreneurs_consultation",
+      "pattern": "stewart\\s+mcclain\\s+and\\s+vendingpren[eu]+rs?\\s+consultation$",
+      "setter_name": "Pearl Sathekge",
+      "setter_user_id": "user_0SuNg0OWd2reYMeyuDVqiVvjiGcRiFheKKOXXZpyaPZ",
       "required_setter": null,
       "historical": false
     }
