@@ -289,16 +289,16 @@
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
-      "closed_won": 7,
-      "revenue": 47070.0,
+      "closed_won": 8,
+      "revenue": 56067.0,
       "formats": {
         "show": "—",
         "qualified": "—",
         "qualified_booked": "—",
         "close": "—",
         "qualified_close": "—",
-        "revenue": "$47,070",
-        "average": "$6,724"
+        "revenue": "$56,067",
+        "average": "$7,008"
       }
     },
     {
@@ -351,16 +351,16 @@
       "social_dms": 1,
       "showed": 10,
       "qualified": 8,
-      "closed_won": 1,
-      "revenue": 6897.0,
+      "closed_won": 2,
+      "revenue": 15894.0,
       "formats": {
         "show": "38.5%",
         "qualified": "80.0%",
         "qualified_booked": "30.8%",
-        "close": "3.8%",
-        "qualified_close": "12.5%",
-        "revenue": "$6,897",
-        "average": "$6,897"
+        "close": "7.7%",
+        "qualified_close": "25.0%",
+        "revenue": "$15,894",
+        "average": "$7,947"
       }
     },
     {
@@ -544,9 +544,9 @@
       }
     }
   ],
-  "generated_at": "2026-10-31T15:00:21.581890-07:00",
-  "source_cutoff": "2026-10-31T15:00:21.581890-07:00",
-  "vendhub_arr": 28764.0,
+  "generated_at": "2026-10-31T15:15:18.410274-07:00",
+  "source_cutoff": "2026-10-31T15:15:18.410274-07:00",
+  "vendhub_arr": 31762.0,
   "progress": {
     "day": 31,
     "days": 31,
@@ -577,7 +577,7 @@
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "counted_meetings": 140,
   "excluded_repeat_candidates": 13,
-  "attribution_reviewed_at": "2026-10-31T15:00:21.581890-07:00",
+  "attribution_reviewed_at": "2026-10-31T15:15:18.410274-07:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 717,
@@ -587,16 +587,16 @@
     "social_dms": 5,
     "showed": 50,
     "qualified": 40,
-    "closed_won": 15,
-    "revenue": 98740.0,
+    "closed_won": 16,
+    "revenue": 107737.0,
     "formats": {
       "show": "35.7%",
       "qualified": "80.0%",
       "qualified_booked": "28.6%",
-      "close": "10.7%",
-      "qualified_close": "37.5%",
-      "revenue": "$98,740",
-      "average": "$6,583"
+      "close": "11.4%",
+      "qualified_close": "40.0%",
+      "revenue": "$107,737",
+      "average": "$6,734"
     }
   },
   "channels": [
@@ -1386,8 +1386,8 @@
       "social_dms": 0,
       "showed": 5,
       "qualified": 4,
-      "closed_won": 1,
-      "revenue": 1188.0,
+      "closed_won": 2,
+      "revenue": 10185.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
         {
@@ -1418,16 +1418,16 @@
           "social_dms": 0,
           "showed": 2,
           "qualified": 3,
-          "closed_won": 0,
-          "revenue": 0,
+          "closed_won": 1,
+          "revenue": 8997.0,
           "formats": {
             "show": "33.3%",
             "qualified": "150.0%",
             "qualified_booked": "50.0%",
-            "close": "0.0%",
-            "qualified_close": "0.0%",
-            "revenue": "$0",
-            "average": "—"
+            "close": "16.7%",
+            "qualified_close": "33.3%",
+            "revenue": "$8,997",
+            "average": "$8,997"
           }
         },
         {
@@ -1473,6 +1473,26 @@
       ],
       "packages": [
         {
+          "value": "Silver - $8,997 · Basic",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 8997.0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "qualified_booked": "—",
+            "close": "—",
+            "qualified_close": "—",
+            "revenue": "$8,997",
+            "average": "$8,997"
+          }
+        },
+        {
           "value": "VendHub - Basic $1,188 · Community",
           "bookings": 0,
           "marketing": 0,
@@ -1517,6 +1537,17 @@
           "revenue": 0
         },
         {
+          "value": "Marketing / Unassigned",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 8997.0
+        },
+        {
           "value": "Charlie Ingram",
           "bookings": 0,
           "marketing": 0,
@@ -1538,10 +1569,10 @@
         "show": "33.3%",
         "qualified": "80.0%",
         "qualified_booked": "26.7%",
-        "close": "6.7%",
-        "qualified_close": "25.0%",
-        "revenue": "$1,188",
-        "average": "$1,188"
+        "close": "13.3%",
+        "qualified_close": "50.0%",
+        "revenue": "$10,185",
+        "average": "$5,092"
       }
     },
     {
@@ -2737,11 +2768,11 @@
   ],
   "goal_percentages": {
     "bookings": 11,
-    "revenue": 13
+    "revenue": 14
   },
   "arr_display": {
-    "arr": "$28,764",
-    "mrr": "$2,397"
+    "arr": "$31,762",
+    "mrr": "$2,647"
   },
   "view": {
     "key": "week-2026-10-26",
@@ -2754,7 +2785,7 @@
     "label": "Oct 26 – Oct 31, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-10-31T15:00:21.581890-07:00",
+    "generated_at": "2026-10-31T15:15:18.410274-07:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 14,
@@ -2762,7 +2793,7 @@
       "Eric Piccione": 18,
       "Joe Vaughan": 21,
       "Shreya Bechra": 0,
-      "Luke Herman": 20,
+      "Luke Herman": 19,
       "Ariella Irvine": 9,
       "Oscar Pugh": 8,
       "Joe Dysert": 7
