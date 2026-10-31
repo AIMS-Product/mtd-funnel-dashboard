@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 249,
-      "marketing": 249,
+      "bookings": 250,
+      "marketing": 250,
       "lane2": 0,
       "social_dms": 0,
       "showed": 115,
@@ -12,9 +12,9 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "46.2%",
+        "show": "46.0%",
         "qualified": "80.9%",
-        "qualified_booked": "37.3%",
+        "qualified_booked": "37.2%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -504,6 +504,26 @@
       }
     },
     {
+      "value": "Scott Seymour",
+      "bookings": 56,
+      "marketing": 32,
+      "lane2": 20,
+      "social_dms": 4,
+      "showed": 37,
+      "qualified": 27,
+      "closed_won": 9,
+      "revenue": 88476.0,
+      "formats": {
+        "show": "66.1%",
+        "qualified": "73.0%",
+        "qualified_booked": "48.2%",
+        "close": "16.1%",
+        "qualified_close": "33.3%",
+        "revenue": "$88,476",
+        "average": "$9,831"
+      }
+    },
+    {
       "value": "Ariella Irvine",
       "bookings": 56,
       "marketing": 7,
@@ -521,26 +541,6 @@
         "qualified_close": "58.3%",
         "revenue": "$64,482",
         "average": "$9,212"
-      }
-    },
-    {
-      "value": "Scott Seymour",
-      "bookings": 55,
-      "marketing": 31,
-      "lane2": 20,
-      "social_dms": 4,
-      "showed": 37,
-      "qualified": 27,
-      "closed_won": 9,
-      "revenue": 88476.0,
-      "formats": {
-        "show": "67.3%",
-        "qualified": "73.0%",
-        "qualified_booked": "49.1%",
-        "close": "16.4%",
-        "qualified_close": "33.3%",
-        "revenue": "$88,476",
-        "average": "$9,831"
       }
     },
     {
@@ -624,8 +624,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-31T10:00:25.014333-07:00",
-  "source_cutoff": "2026-10-31T10:00:25.014333-07:00",
+  "generated_at": "2026-10-31T10:15:20.761402-07:00",
+  "source_cutoff": "2026-10-31T10:15:20.761402-07:00",
   "vendhub_arr": 112712.0,
   "progress": {
     "day": 31,
@@ -655,14 +655,14 @@
   },
   "period": "2026-10-01 through 2026-10-31 PT",
   "rules_version": "booked_calls.v2.6-scheduled-anchor-candidate+any-meeting-clock+william-consult-retired-20261014",
-  "counted_meetings": 615,
+  "counted_meetings": 616,
   "excluded_repeat_candidates": 95,
-  "attribution_reviewed_at": "2026-10-31T10:00:25.014333-07:00",
+  "attribution_reviewed_at": "2026-10-31T10:15:20.761402-07:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 25313,
-    "bookings": 615,
-    "marketing": 249,
+    "bookings": 616,
+    "marketing": 250,
     "lane2": 332,
     "social_dms": 34,
     "showed": 270,
@@ -670,7 +670,7 @@
     "closed_won": 56,
     "revenue": 431623.0,
     "formats": {
-      "show": "43.9%",
+      "show": "43.8%",
       "qualified": "81.1%",
       "qualified_booked": "35.6%",
       "close": "9.1%",
@@ -1711,20 +1711,20 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 22631,
-      "bookings": 171,
-      "marketing": 49,
+      "bookings": 172,
+      "marketing": 50,
       "lane2": 119,
       "social_dms": 3,
       "showed": 62,
       "qualified": 66,
       "closed_won": 11,
       "revenue": 104964.0,
-      "unrecoverable_booked_leads": 167,
+      "unrecoverable_booked_leads": 168,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 154,
-          "marketing": 39,
+          "bookings": 155,
+          "marketing": 40,
           "lane2": 112,
           "social_dms": 3,
           "showed": 54,
@@ -1732,9 +1732,9 @@
           "closed_won": 11,
           "revenue": 104964.0,
           "formats": {
-            "show": "35.1%",
+            "show": "34.8%",
             "qualified": "109.3%",
-            "qualified_booked": "38.3%",
+            "qualified_booked": "38.1%",
             "close": "7.1%",
             "qualified_close": "18.6%",
             "revenue": "$104,964",
@@ -1967,8 +1967,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 49,
-          "marketing": 49,
+          "bookings": 50,
+          "marketing": 50,
           "lane2": 0,
           "social_dms": 0,
           "showed": 8,
@@ -2165,15 +2165,15 @@
         }
       ],
       "display": {
-        "projected": 171,
+        "projected": 172,
         "goal": null,
         "goal_pct": null,
         "pace": ""
       },
       "formats": {
-        "show": "36.3%",
+        "show": "36.0%",
         "qualified": "106.5%",
-        "qualified_booked": "38.6%",
+        "qualified_booked": "38.4%",
         "close": "6.4%",
         "qualified_close": "16.7%",
         "revenue": "$104,964",
@@ -4966,7 +4966,7 @@
     "label": "October 2026"
   },
   "pipeline": {
-    "generated_at": "2026-10-31T10:00:25.014333-07:00",
+    "generated_at": "2026-10-31T10:15:20.761402-07:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 14,
