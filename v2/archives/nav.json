@@ -142,8 +142,19 @@
       "start": "2026-10-01",
       "end": "2026-10-31",
       "end_exclusive": "2026-11-01",
-      "frozen": false,
+      "frozen": true,
       "label": "October 2026",
+      "live": false
+    },
+    {
+      "key": "2026-11",
+      "kind": "month",
+      "month": "2026-11",
+      "start": "2026-11-01",
+      "end": "2026-11-01",
+      "end_exclusive": "2026-12-01",
+      "frozen": false,
+      "label": "November 2026",
       "live": true
     }
   ],
@@ -583,10 +594,10 @@
       "kind": "week",
       "month": "2026-10",
       "start": "2026-10-26",
-      "end": "2026-10-31",
+      "end": "2026-11-01",
       "end_exclusive": "2026-11-02",
       "frozen": false,
-      "label": "Oct 26 \u2013 Oct 31, 2026"
+      "label": "Oct 26 \u2013 Nov 1, 2026"
     }
   ]
 }

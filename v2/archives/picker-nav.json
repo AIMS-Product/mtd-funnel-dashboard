@@ -1,12 +1,19 @@
 {
-  "live_month": "2026-10",
-  "live_month_label": "October 2026",
+  "live_month": "2026-11",
+  "live_month_label": "November 2026",
   "months": [
+    {
+      "key": "2026-11",
+      "label": "November 2026",
+      "is_live": true,
+      "href": "/mtd-funnel-dashboard/v2/index.html",
+      "supplemental": false
+    },
     {
       "key": "2026-10",
       "label": "October 2026",
-      "is_live": true,
-      "href": "/mtd-funnel-dashboard/v2/index.html",
+      "is_live": false,
+      "href": "/mtd-funnel-dashboard/v2/archives/2026-10.html",
       "supplemental": false
     },
     {
@@ -275,10 +282,18 @@
         "label": "Oct 1\u20134",
         "is_current": false,
         "href": "/mtd-funnel-dashboard/v2/archives/week-2026-09-28.html"
+      }
+    ],
+    "2026-11": [
+      {
+        "key": "week-2026-10-26",
+        "label": "Oct 26\u2013Nov 1",
+        "is_current": false,
+        "href": "/mtd-funnel-dashboard/v2/archives/week-2026-10-26.html"
       },
       {
         "key": "week-current",
-        "label": "Oct 26\u201331 \u25b6",
+        "label": "Oct 26\u2013Nov 1 \u25b6",
         "is_current": true
       }
     ]
