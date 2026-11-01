@@ -48,13 +48,13 @@
       "lane2": 15,
       "social_dms": 0,
       "showed": 3,
-      "qualified": 2,
+      "qualified": 3,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
         "show": "20.0%",
-        "qualified": "66.7%",
-        "qualified_booked": "13.3%",
+        "qualified": "100.0%",
+        "qualified_booked": "20.0%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -490,15 +490,15 @@
       "lane2": 5,
       "social_dms": 0,
       "showed": 0,
-      "qualified": 0,
+      "qualified": 1,
       "closed_won": 1,
       "revenue": 8997.0,
       "formats": {
         "show": "0.0%",
         "qualified": "—",
-        "qualified_booked": "0.0%",
+        "qualified_booked": "14.3%",
         "close": "14.3%",
-        "qualified_close": "—",
+        "qualified_close": "100.0%",
         "revenue": "$8,997",
         "average": "$8,997"
       }
@@ -544,8 +544,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-01T08:00:25.013850-08:00",
-  "source_cutoff": "2026-11-01T08:00:25.013850-08:00",
+  "generated_at": "2026-11-01T08:15:17.584297-08:00",
+  "source_cutoff": "2026-11-01T08:15:17.584297-08:00",
   "vendhub_arr": 32962.0,
   "progress": {
     "day": 31,
@@ -577,7 +577,7 @@
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "counted_meetings": 142,
   "excluded_repeat_candidates": 13,
-  "attribution_reviewed_at": "2026-11-01T08:00:25.013850-08:00",
+  "attribution_reviewed_at": "2026-11-01T08:15:17.584297-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 720,
@@ -586,15 +586,15 @@
     "lane2": 83,
     "social_dms": 5,
     "showed": 50,
-    "qualified": 40,
+    "qualified": 41,
     "closed_won": 17,
     "revenue": 114634.0,
     "formats": {
       "show": "35.2%",
-      "qualified": "80.0%",
-      "qualified_booked": "28.2%",
+      "qualified": "82.0%",
+      "qualified_booked": "28.9%",
       "close": "12.0%",
-      "qualified_close": "42.5%",
+      "qualified_close": "41.5%",
       "revenue": "$114,634",
       "average": "$6,743"
     }
@@ -1110,7 +1110,7 @@
       "lane2": 36,
       "social_dms": 0,
       "showed": 10,
-      "qualified": 13,
+      "qualified": 14,
       "closed_won": 3,
       "revenue": 23991.0,
       "unrecoverable_booked_leads": 39,
@@ -1122,15 +1122,15 @@
           "lane2": 33,
           "social_dms": 0,
           "showed": 8,
-          "qualified": 11,
+          "qualified": 12,
           "closed_won": 3,
           "revenue": 23991.0,
           "formats": {
             "show": "22.9%",
-            "qualified": "137.5%",
-            "qualified_booked": "31.4%",
+            "qualified": "150.0%",
+            "qualified_booked": "34.3%",
             "close": "8.6%",
-            "qualified_close": "27.3%",
+            "qualified_close": "25.0%",
             "revenue": "$23,991",
             "average": "$7,997"
           }
@@ -1290,7 +1290,7 @@
           "lane2": 4,
           "social_dms": 0,
           "showed": 0,
-          "qualified": 0,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0
         },
@@ -1369,10 +1369,10 @@
       },
       "formats": {
         "show": "25.6%",
-        "qualified": "130.0%",
-        "qualified_booked": "33.3%",
+        "qualified": "140.0%",
+        "qualified_booked": "35.9%",
         "close": "7.7%",
-        "qualified_close": "23.1%",
+        "qualified_close": "21.4%",
         "revenue": "$23,991",
         "average": "$7,997"
       }
@@ -2816,14 +2816,14 @@
     "label": "Oct 26 – Nov 1, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-01T08:00:25.013850-08:00",
+    "generated_at": "2026-11-01T08:15:17.584297-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 14,
       "Robin Perkins": 23,
       "Eric Piccione": 16,
       "Joe Vaughan": 21,
-      "Shreya Bechra": 0,
+      "Shreya Bechra": 1,
       "Luke Herman": 18,
       "Ariella Irvine": 9,
       "Oscar Pugh": 8,
