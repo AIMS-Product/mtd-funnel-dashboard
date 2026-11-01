@@ -69,16 +69,16 @@
       "social_dms": 0,
       "showed": 4,
       "qualified": 5,
-      "closed_won": 2,
-      "revenue": 17994.0,
+      "closed_won": 3,
+      "revenue": 24891.0,
       "formats": {
         "show": "30.8%",
         "qualified": "125.0%",
         "qualified_booked": "38.5%",
-        "close": "15.4%",
-        "qualified_close": "40.0%",
-        "revenue": "$17,994",
-        "average": "$8,997"
+        "close": "23.1%",
+        "qualified_close": "60.0%",
+        "revenue": "$24,891",
+        "average": "$8,297"
       }
     },
     {
@@ -351,16 +351,16 @@
       "social_dms": 1,
       "showed": 10,
       "qualified": 8,
-      "closed_won": 2,
-      "revenue": 15894.0,
+      "closed_won": 3,
+      "revenue": 22791.0,
       "formats": {
         "show": "38.5%",
         "qualified": "80.0%",
         "qualified_booked": "30.8%",
-        "close": "7.7%",
-        "qualified_close": "25.0%",
-        "revenue": "$15,894",
-        "average": "$7,947"
+        "close": "11.5%",
+        "qualified_close": "37.5%",
+        "revenue": "$22,791",
+        "average": "$7,597"
       }
     },
     {
@@ -544,9 +544,9 @@
       }
     }
   ],
-  "generated_at": "2026-10-31T19:00:22.631511-07:00",
-  "source_cutoff": "2026-10-31T19:00:22.631511-07:00",
-  "vendhub_arr": 31762.0,
+  "generated_at": "2026-10-31T19:15:19.030207-07:00",
+  "source_cutoff": "2026-10-31T19:15:19.030207-07:00",
+  "vendhub_arr": 32962.0,
   "progress": {
     "day": 31,
     "days": 31,
@@ -577,7 +577,7 @@
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "counted_meetings": 141,
   "excluded_repeat_candidates": 13,
-  "attribution_reviewed_at": "2026-10-31T19:00:22.631511-07:00",
+  "attribution_reviewed_at": "2026-10-31T19:15:19.030207-07:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 718,
@@ -587,16 +587,16 @@
     "social_dms": 5,
     "showed": 50,
     "qualified": 40,
-    "closed_won": 16,
-    "revenue": 107737.0,
+    "closed_won": 17,
+    "revenue": 114634.0,
     "formats": {
       "show": "35.5%",
       "qualified": "80.0%",
       "qualified_booked": "28.4%",
-      "close": "11.3%",
-      "qualified_close": "40.0%",
-      "revenue": "$107,737",
-      "average": "$6,734"
+      "close": "12.1%",
+      "qualified_close": "42.5%",
+      "revenue": "$114,634",
+      "average": "$6,743"
     }
   },
   "channels": [
@@ -1986,8 +1986,8 @@
       "social_dms": 5,
       "showed": 4,
       "qualified": 2,
-      "closed_won": 2,
-      "revenue": 14497.0,
+      "closed_won": 3,
+      "revenue": 21394.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
         {
@@ -2089,9 +2089,49 @@
             "revenue": "$8,500",
             "average": "$8,500"
           }
+        },
+        {
+          "value": "@utm_campaign",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 6897.0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "qualified_booked": "—",
+            "close": "—",
+            "qualified_close": "—",
+            "revenue": "$6,897",
+            "average": "$6,897"
+          }
         }
       ],
       "packages": [
+        {
+          "value": "Bronze - $5,997 · Community",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 2,
+          "revenue": 12894.0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "qualified_booked": "—",
+            "close": "—",
+            "qualified_close": "—",
+            "revenue": "$12,894",
+            "average": "$6,447"
+          }
+        },
         {
           "value": "Silver - $8,997 · Free",
           "bookings": 0,
@@ -2110,26 +2150,6 @@
             "qualified_close": "—",
             "revenue": "$8,500",
             "average": "$8,500"
-          }
-        },
-        {
-          "value": "Bronze - $5,997 · Community",
-          "bookings": 0,
-          "marketing": 0,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 1,
-          "revenue": 5997.0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "qualified_booked": "—",
-            "close": "—",
-            "qualified_close": "—",
-            "revenue": "$5,997",
-            "average": "$5,997"
           }
         }
       ],
@@ -2166,6 +2186,17 @@
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0
+        },
+        {
+          "value": "Vince Bartolini",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 6897.0
         }
       ],
       "display": {
@@ -2178,10 +2209,10 @@
         "show": "57.1%",
         "qualified": "50.0%",
         "qualified_booked": "28.6%",
-        "close": "28.6%",
-        "qualified_close": "100.0%",
-        "revenue": "$14,497",
-        "average": "$7,248"
+        "close": "42.9%",
+        "qualified_close": "150.0%",
+        "revenue": "$21,394",
+        "average": "$7,131"
       }
     },
     {
@@ -2768,11 +2799,11 @@
   ],
   "goal_percentages": {
     "bookings": 11,
-    "revenue": 14
+    "revenue": 15
   },
   "arr_display": {
-    "arr": "$31,762",
-    "mrr": "$2,647"
+    "arr": "$32,962",
+    "mrr": "$2,747"
   },
   "view": {
     "key": "week-2026-10-26",
@@ -2785,7 +2816,7 @@
     "label": "Oct 26 – Oct 31, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-10-31T19:00:22.631511-07:00",
+    "generated_at": "2026-10-31T19:15:19.030207-07:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 14,
@@ -2793,7 +2824,7 @@
       "Eric Piccione": 18,
       "Joe Vaughan": 21,
       "Shreya Bechra": 0,
-      "Luke Herman": 19,
+      "Luke Herman": 18,
       "Ariella Irvine": 9,
       "Oscar Pugh": 8,
       "Joe Dysert": 7
