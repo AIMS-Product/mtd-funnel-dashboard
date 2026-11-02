@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 9,
-      "marketing": 9,
+      "bookings": 10,
+      "marketing": 10,
       "lane2": 0,
       "social_dms": 0,
       "showed": 1,
@@ -12,9 +12,9 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "11.1%",
+        "show": "10.0%",
         "qualified": "100.0%",
-        "qualified_booked": "11.1%",
+        "qualified_booked": "10.0%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -23,6 +23,26 @@
     },
     {
       "value": "Rob Maxfield",
+      "bookings": 3,
+      "marketing": 0,
+      "lane2": 3,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "0.0%",
+        "qualified": "—",
+        "qualified_booked": "0.0%",
+        "close": "0.0%",
+        "qualified_close": "—",
+        "revenue": "$0",
+        "average": "—"
+      }
+    },
+    {
+      "value": "Vince Bartolini",
       "bookings": 2,
       "marketing": 0,
       "lane2": 2,
@@ -60,33 +80,13 @@
         "revenue": "$0",
         "average": "—"
       }
-    },
-    {
-      "value": "Vince Bartolini",
-      "bookings": 1,
-      "marketing": 0,
-      "lane2": 1,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "0.0%",
-        "qualified": "—",
-        "qualified_booked": "0.0%",
-        "close": "0.0%",
-        "qualified_close": "—",
-        "revenue": "$0",
-        "average": "—"
-      }
     }
   ],
   "team": [
     {
       "value": "Shreya Bechra",
-      "bookings": 4,
-      "marketing": 3,
+      "bookings": 5,
+      "marketing": 4,
       "lane2": 1,
       "social_dms": 0,
       "showed": 1,
@@ -94,9 +94,9 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "25.0%",
+        "show": "20.0%",
         "qualified": "100.0%",
-        "qualified_booked": "25.0%",
+        "qualified_booked": "20.0%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -105,8 +105,8 @@
     },
     {
       "value": "Robin Perkins",
-      "bookings": 3,
-      "marketing": 2,
+      "bookings": 4,
+      "marketing": 3,
       "lane2": 1,
       "social_dms": 0,
       "showed": 0,
@@ -125,9 +125,9 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 2,
+      "bookings": 3,
       "marketing": 1,
-      "lane2": 1,
+      "lane2": 2,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -144,11 +144,11 @@
       }
     },
     {
-      "value": "Scott Seymour",
+      "value": "Luke Herman",
       "bookings": 2,
       "marketing": 1,
-      "lane2": 0,
-      "social_dms": 1,
+      "lane2": 1,
+      "social_dms": 0,
       "showed": 0,
       "qualified": 0,
       "closed_won": 0,
@@ -184,11 +184,11 @@
       }
     },
     {
-      "value": "Luke Herman",
+      "value": "Scott Seymour",
       "bookings": 1,
-      "marketing": 1,
+      "marketing": 0,
       "lane2": 0,
-      "social_dms": 0,
+      "social_dms": 1,
       "showed": 0,
       "qualified": 0,
       "closed_won": 0,
@@ -204,8 +204,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-02T09:00:25.059688-08:00",
-  "source_cutoff": "2026-11-02T09:00:25.059688-08:00",
+  "generated_at": "2026-11-02T09:15:21.578919-08:00",
+  "source_cutoff": "2026-11-02T09:15:21.578919-08:00",
   "vendhub_arr": 0.0,
   "progress": {
     "day": 2,
@@ -236,24 +236,24 @@
   "period": "2026-11-01 through 2026-11-02 PT",
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 13,
+  "counted_meetings": 16,
   "excluded_repeat_candidates": 0,
-  "attribution_reviewed_at": "2026-11-02T09:00:25.059688-08:00",
+  "attribution_reviewed_at": "2026-11-02T09:15:21.578919-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 24,
-    "bookings": 13,
-    "marketing": 9,
-    "lane2": 3,
+    "bookings": 16,
+    "marketing": 10,
+    "lane2": 5,
     "social_dms": 1,
     "showed": 1,
     "qualified": 1,
     "closed_won": 0,
     "revenue": 0.0,
     "formats": {
-      "show": "7.7%",
+      "show": "6.2%",
       "qualified": "100.0%",
-      "qualified_booked": "7.7%",
+      "qualified_booked": "6.2%",
       "close": "0.0%",
       "qualified_close": "0.0%",
       "revenue": "$0",
@@ -398,9 +398,9 @@
     },
     {
       "channel": "Google Ads",
-      "leads_created": 3,
-      "bookings": 3,
-      "marketing": 3,
+      "leads_created": 4,
+      "bookings": 4,
+      "marketing": 4,
       "lane2": 0,
       "social_dms": 0,
       "showed": 1,
@@ -428,14 +428,34 @@
             "revenue": "$0",
             "average": "—"
           }
+        },
+        {
+          "value": "23805931083",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
         }
       ],
       "packages": [],
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 3,
-          "marketing": 3,
+          "bookings": 4,
+          "marketing": 4,
           "lane2": 0,
           "social_dms": 0,
           "showed": 1,
@@ -445,17 +465,187 @@
         }
       ],
       "display": {
-        "projected": 45,
+        "projected": 60,
         "goal": null,
         "goal_pct": null,
         "pace": ""
       },
       "formats": {
-        "show": "33.3%",
+        "show": "25.0%",
         "qualified": "100.0%",
-        "qualified_booked": "33.3%",
+        "qualified_booked": "25.0%",
         "close": "0.0%",
         "qualified_close": "0.0%",
+        "revenue": "$0",
+        "average": "—"
+      }
+    },
+    {
+      "channel": "Unknown (Needs Review)",
+      "leads_created": 18,
+      "bookings": 2,
+      "marketing": 0,
+      "lane2": 2,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0.0,
+      "unrecoverable_booked_leads": 2,
+      "drilldowns": [
+        {
+          "value": "Unattributed",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
+        }
+      ],
+      "packages": [],
+      "setters": [
+        {
+          "value": "Rob Maxfield",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Vince Bartolini",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
+      "display": {
+        "projected": 30,
+        "goal": null,
+        "goal_pct": null,
+        "pace": ""
+      },
+      "formats": {
+        "show": "0.0%",
+        "qualified": "—",
+        "qualified_booked": "0.0%",
+        "close": "0.0%",
+        "qualified_close": "—",
+        "revenue": "$0",
+        "average": "—"
+      }
+    },
+    {
+      "channel": "Website",
+      "leads_created": 0,
+      "bookings": 2,
+      "marketing": 1,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0.0,
+      "unrecoverable_booked_leads": 0,
+      "drilldowns": [
+        {
+          "value": "Unattributed",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
+        },
+        {
+          "value": "_____",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
+        }
+      ],
+      "packages": [],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Vince Bartolini",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
+      "display": {
+        "projected": 30,
+        "goal": 100,
+        "goal_pct": 2,
+        "pace": "pace-behind"
+      },
+      "formats": {
+        "show": "0.0%",
+        "qualified": "—",
+        "qualified_booked": "0.0%",
+        "close": "0.0%",
+        "qualified_close": "—",
         "revenue": "$0",
         "average": "—"
       }
@@ -512,134 +702,6 @@
         "projected": 15,
         "goal": 300,
         "goal_pct": 0,
-        "pace": "pace-behind"
-      },
-      "formats": {
-        "show": "0.0%",
-        "qualified": "—",
-        "qualified_booked": "0.0%",
-        "close": "0.0%",
-        "qualified_close": "—",
-        "revenue": "$0",
-        "average": "—"
-      }
-    },
-    {
-      "channel": "Unknown (Needs Review)",
-      "leads_created": 19,
-      "bookings": 1,
-      "marketing": 0,
-      "lane2": 1,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0.0,
-      "unrecoverable_booked_leads": 1,
-      "drilldowns": [
-        {
-          "value": "Unattributed",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "0.0%",
-            "qualified": "—",
-            "qualified_booked": "0.0%",
-            "close": "0.0%",
-            "qualified_close": "—",
-            "revenue": "$0",
-            "average": "—"
-          }
-        }
-      ],
-      "packages": [],
-      "setters": [
-        {
-          "value": "Vince Bartolini",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0
-        }
-      ],
-      "display": {
-        "projected": 15,
-        "goal": null,
-        "goal_pct": null,
-        "pace": ""
-      },
-      "formats": {
-        "show": "0.0%",
-        "qualified": "—",
-        "qualified_booked": "0.0%",
-        "close": "0.0%",
-        "qualified_close": "—",
-        "revenue": "$0",
-        "average": "—"
-      }
-    },
-    {
-      "channel": "Website",
-      "leads_created": 0,
-      "bookings": 1,
-      "marketing": 1,
-      "lane2": 0,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0.0,
-      "unrecoverable_booked_leads": 0,
-      "drilldowns": [
-        {
-          "value": "Unattributed",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "0.0%",
-            "qualified": "—",
-            "qualified_booked": "0.0%",
-            "close": "0.0%",
-            "qualified_close": "—",
-            "revenue": "$0",
-            "average": "—"
-          }
-        }
-      ],
-      "packages": [],
-      "setters": [
-        {
-          "value": "Marketing",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0
-        }
-      ],
-      "display": {
-        "projected": 15,
-        "goal": 100,
-        "goal_pct": 1,
         "pace": "pace-behind"
       },
       "formats": {
@@ -736,7 +798,7 @@
     "label": "November 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-02T09:00:25.059688-08:00",
+    "generated_at": "2026-11-02T09:15:21.578919-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 14,
