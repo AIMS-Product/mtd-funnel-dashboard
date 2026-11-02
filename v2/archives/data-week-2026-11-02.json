@@ -22,10 +22,10 @@
       }
     },
     {
-      "value": "Marketing",
-      "bookings": 3,
-      "marketing": 3,
-      "lane2": 0,
+      "value": "Vince Bartolini",
+      "bookings": 4,
+      "marketing": 0,
+      "lane2": 4,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -42,10 +42,10 @@
       }
     },
     {
-      "value": "Vince Bartolini",
+      "value": "Marketing",
       "bookings": 3,
-      "marketing": 0,
-      "lane2": 3,
+      "marketing": 3,
+      "lane2": 0,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -85,9 +85,9 @@
   "team": [
     {
       "value": "Luke Herman",
-      "bookings": 3,
+      "bookings": 4,
       "marketing": 0,
-      "lane2": 3,
+      "lane2": 4,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -184,8 +184,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-02T10:30:22.649047-08:00",
-  "source_cutoff": "2026-11-02T10:30:22.649047-08:00",
+  "generated_at": "2026-11-02T10:45:20.050962-08:00",
+  "source_cutoff": "2026-11-02T10:45:20.050962-08:00",
   "vendhub_arr": 0.0,
   "progress": {
     "day": 2,
@@ -216,15 +216,15 @@
   "period": "2026-11-02 through 2026-11-02 PT",
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 11,
+  "counted_meetings": 12,
   "excluded_repeat_candidates": 0,
-  "attribution_reviewed_at": "2026-11-02T10:30:22.649047-08:00",
+  "attribution_reviewed_at": "2026-11-02T10:45:20.050962-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 12,
-    "bookings": 11,
+    "bookings": 12,
     "marketing": 3,
-    "lane2": 8,
+    "lane2": 9,
     "social_dms": 0,
     "showed": 0,
     "qualified": 0,
@@ -244,9 +244,9 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 0,
-      "bookings": 5,
+      "bookings": 6,
       "marketing": 1,
-      "lane2": 4,
+      "lane2": 5,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -258,6 +258,26 @@
           "value": "oct20",
           "bookings": 2,
           "marketing": 1,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
+        },
+        {
+          "value": "July23",
+          "bookings": 1,
+          "marketing": 0,
           "lane2": 1,
           "social_dms": 0,
           "showed": 0,
@@ -369,12 +389,23 @@
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0
+        },
+        {
+          "value": "Vince Bartolini",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
         }
       ],
       "display": {
-        "projected": 75,
+        "projected": 90,
         "goal": 70,
-        "goal_pct": 7,
+        "goal_pct": 9,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -725,7 +756,7 @@
     "label": "Nov 2 – Nov 2, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-02T10:30:22.649047-08:00",
+    "generated_at": "2026-11-02T10:45:20.050962-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 13,
