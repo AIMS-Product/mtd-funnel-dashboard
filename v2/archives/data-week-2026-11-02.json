@@ -2,10 +2,10 @@
   "schema_version": 3,
   "setters": [
     {
-      "value": "Marketing",
-      "bookings": 3,
-      "marketing": 3,
-      "lane2": 0,
+      "value": "Rob Maxfield",
+      "bookings": 4,
+      "marketing": 0,
+      "lane2": 4,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -22,10 +22,10 @@
       }
     },
     {
-      "value": "Rob Maxfield",
+      "value": "Marketing",
       "bookings": 3,
-      "marketing": 0,
-      "lane2": 3,
+      "marketing": 3,
+      "lane2": 0,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -84,6 +84,26 @@
   ],
   "team": [
     {
+      "value": "Robin Perkins",
+      "bookings": 3,
+      "marketing": 1,
+      "lane2": 2,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "0.0%",
+        "qualified": "—",
+        "qualified_booked": "0.0%",
+        "close": "0.0%",
+        "qualified_close": "—",
+        "revenue": "$0",
+        "average": "—"
+      }
+    },
+    {
       "value": "Ariella Irvine",
       "bookings": 2,
       "marketing": 0,
@@ -108,26 +128,6 @@
       "bookings": 2,
       "marketing": 0,
       "lane2": 2,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "0.0%",
-        "qualified": "—",
-        "qualified_booked": "0.0%",
-        "close": "0.0%",
-        "qualified_close": "—",
-        "revenue": "$0",
-        "average": "—"
-      }
-    },
-    {
-      "value": "Robin Perkins",
-      "bookings": 2,
-      "marketing": 1,
-      "lane2": 1,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -184,8 +184,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-02T09:45:17.682821-08:00",
-  "source_cutoff": "2026-11-02T09:45:17.682821-08:00",
+  "generated_at": "2026-11-02T10:00:25.043991-08:00",
+  "source_cutoff": "2026-11-02T10:00:25.043991-08:00",
   "vendhub_arr": 0.0,
   "progress": {
     "day": 2,
@@ -216,15 +216,15 @@
   "period": "2026-11-02 through 2026-11-02 PT",
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 9,
+  "counted_meetings": 10,
   "excluded_repeat_candidates": 0,
-  "attribution_reviewed_at": "2026-11-02T09:45:17.682821-08:00",
+  "attribution_reviewed_at": "2026-11-02T10:00:25.043991-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 11,
-    "bookings": 9,
+    "bookings": 10,
     "marketing": 3,
-    "lane2": 6,
+    "lane2": 7,
     "social_dms": 0,
     "showed": 0,
     "qualified": 0,
@@ -244,9 +244,9 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 0,
-      "bookings": 4,
+      "bookings": 5,
       "marketing": 1,
-      "lane2": 3,
+      "lane2": 4,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -254,6 +254,26 @@
       "revenue": 0.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
+        {
+          "value": "oct20",
+          "bookings": 2,
+          "marketing": 1,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
+        },
         {
           "value": "July29",
           "bookings": 1,
@@ -295,26 +315,6 @@
           }
         },
         {
-          "value": "oct20",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "0.0%",
-            "qualified": "—",
-            "qualified_booked": "0.0%",
-            "close": "0.0%",
-            "qualified_close": "—",
-            "revenue": "$0",
-            "average": "—"
-          }
-        },
-        {
           "value": "sept15",
           "bookings": 1,
           "marketing": 0,
@@ -339,9 +339,9 @@
       "setters": [
         {
           "value": "Rob Maxfield",
-          "bookings": 2,
+          "bookings": 3,
           "marketing": 0,
-          "lane2": 2,
+          "lane2": 3,
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
@@ -372,10 +372,10 @@
         }
       ],
       "display": {
-        "projected": 60,
+        "projected": 75,
         "goal": 70,
-        "goal_pct": 6,
-        "pace": "pace-behind"
+        "goal_pct": 7,
+        "pace": "pace-exceed"
       },
       "formats": {
         "show": "0.0%",
@@ -661,10 +661,10 @@
     "label": "Nov 2 – Nov 2, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-02T09:45:17.682821-08:00",
+    "generated_at": "2026-11-02T10:00:25.043991-08:00",
     "counts": {
       "Christian Hartwell": 33,
-      "Scott Seymour": 14,
+      "Scott Seymour": 13,
       "Robin Perkins": 21,
       "Eric Piccione": 15,
       "Joe Vaughan": 19,
