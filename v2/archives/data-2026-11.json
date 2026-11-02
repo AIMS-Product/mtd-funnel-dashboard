@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 8,
-      "marketing": 8,
+      "bookings": 9,
+      "marketing": 9,
       "lane2": 0,
       "social_dms": 0,
       "showed": 1,
@@ -12,9 +12,9 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "12.5%",
+        "show": "11.1%",
         "qualified": "100.0%",
-        "qualified_booked": "12.5%",
+        "qualified_booked": "11.1%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -42,11 +42,11 @@
       }
     },
     {
-      "value": "August Young",
+      "value": "Pearl Sathekge",
       "bookings": 1,
       "marketing": 0,
-      "lane2": 1,
-      "social_dms": 0,
+      "lane2": 0,
+      "social_dms": 1,
       "showed": 0,
       "qualified": 0,
       "closed_won": 0,
@@ -62,11 +62,11 @@
       }
     },
     {
-      "value": "Pearl Sathekge",
+      "value": "Vince Bartolini",
       "bookings": 1,
       "marketing": 0,
-      "lane2": 0,
-      "social_dms": 1,
+      "lane2": 1,
+      "social_dms": 0,
       "showed": 0,
       "qualified": 0,
       "closed_won": 0,
@@ -105,6 +105,26 @@
     },
     {
       "value": "Robin Perkins",
+      "bookings": 3,
+      "marketing": 2,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "0.0%",
+        "qualified": "—",
+        "qualified_booked": "0.0%",
+        "close": "0.0%",
+        "qualified_close": "—",
+        "revenue": "$0",
+        "average": "—"
+      }
+    },
+    {
+      "value": "Ariella Irvine",
       "bookings": 2,
       "marketing": 1,
       "lane2": 1,
@@ -129,46 +149,6 @@
       "marketing": 1,
       "lane2": 0,
       "social_dms": 1,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "0.0%",
-        "qualified": "—",
-        "qualified_booked": "0.0%",
-        "close": "0.0%",
-        "qualified_close": "—",
-        "revenue": "$0",
-        "average": "—"
-      }
-    },
-    {
-      "value": "Ariella Irvine",
-      "bookings": 1,
-      "marketing": 1,
-      "lane2": 0,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "0.0%",
-        "qualified": "—",
-        "qualified_booked": "0.0%",
-        "close": "0.0%",
-        "qualified_close": "—",
-        "revenue": "$0",
-        "average": "—"
-      }
-    },
-    {
-      "value": "Christian Hartwell",
-      "bookings": 1,
-      "marketing": 0,
-      "lane2": 1,
-      "social_dms": 0,
       "showed": 0,
       "qualified": 0,
       "closed_won": 0,
@@ -224,8 +204,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-02T08:45:24.900628-08:00",
-  "source_cutoff": "2026-11-02T08:45:24.900628-08:00",
+  "generated_at": "2026-11-02T09:00:25.059688-08:00",
+  "source_cutoff": "2026-11-02T09:00:25.059688-08:00",
   "vendhub_arr": 0.0,
   "progress": {
     "day": 2,
@@ -256,14 +236,14 @@
   "period": "2026-11-01 through 2026-11-02 PT",
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 12,
+  "counted_meetings": 13,
   "excluded_repeat_candidates": 0,
-  "attribution_reviewed_at": "2026-11-02T08:45:24.900628-08:00",
+  "attribution_reviewed_at": "2026-11-02T09:00:25.059688-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 21,
-    "bookings": 12,
-    "marketing": 8,
+    "leads_created": 24,
+    "bookings": 13,
+    "marketing": 9,
     "lane2": 3,
     "social_dms": 1,
     "showed": 1,
@@ -271,9 +251,9 @@
     "closed_won": 0,
     "revenue": 0.0,
     "formats": {
-      "show": "8.3%",
+      "show": "7.7%",
       "qualified": "100.0%",
-      "qualified_booked": "8.3%",
+      "qualified_booked": "7.7%",
       "close": "0.0%",
       "qualified_close": "0.0%",
       "revenue": "$0",
@@ -284,8 +264,8 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 0,
-      "bookings": 5,
-      "marketing": 3,
+      "bookings": 6,
+      "marketing": 4,
       "lane2": 2,
       "social_dms": 0,
       "showed": 0,
@@ -353,14 +333,34 @@
             "revenue": "$0",
             "average": "—"
           }
+        },
+        {
+          "value": "oct20",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
         }
       ],
       "packages": [],
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 3,
-          "marketing": 3,
+          "bookings": 4,
+          "marketing": 4,
           "lane2": 0,
           "social_dms": 0,
           "showed": 0,
@@ -381,9 +381,9 @@
         }
       ],
       "display": {
-        "projected": 75,
+        "projected": 90,
         "goal": 70,
-        "goal_pct": 7,
+        "goal_pct": 9,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -461,101 +461,6 @@
       }
     },
     {
-      "channel": "YouTube",
-      "leads_created": 1,
-      "bookings": 2,
-      "marketing": 1,
-      "lane2": 1,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0.0,
-      "unrecoverable_booked_leads": 0,
-      "drilldowns": [
-        {
-          "value": "hunter",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "0.0%",
-            "qualified": "—",
-            "qualified_booked": "0.0%",
-            "close": "0.0%",
-            "qualified_close": "—",
-            "revenue": "$0",
-            "average": "—"
-          }
-        },
-        {
-          "value": "is-traditional-vending-dead",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "0.0%",
-            "qualified": "—",
-            "qualified_booked": "0.0%",
-            "close": "0.0%",
-            "qualified_close": "—",
-            "revenue": "$0",
-            "average": "—"
-          }
-        }
-      ],
-      "packages": [],
-      "setters": [
-        {
-          "value": "August Young",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0
-        },
-        {
-          "value": "Marketing",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0
-        }
-      ],
-      "display": {
-        "projected": 30,
-        "goal": 132,
-        "goal_pct": 2,
-        "pace": "pace-behind"
-      },
-      "formats": {
-        "show": "0.0%",
-        "qualified": "—",
-        "qualified_booked": "0.0%",
-        "close": "0.0%",
-        "qualified_close": "—",
-        "revenue": "$0",
-        "average": "—"
-      }
-    },
-    {
       "channel": "Instagram",
       "leads_created": 1,
       "bookings": 1,
@@ -608,6 +513,70 @@
         "goal": 300,
         "goal_pct": 0,
         "pace": "pace-behind"
+      },
+      "formats": {
+        "show": "0.0%",
+        "qualified": "—",
+        "qualified_booked": "0.0%",
+        "close": "0.0%",
+        "qualified_close": "—",
+        "revenue": "$0",
+        "average": "—"
+      }
+    },
+    {
+      "channel": "Unknown (Needs Review)",
+      "leads_created": 19,
+      "bookings": 1,
+      "marketing": 0,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0.0,
+      "unrecoverable_booked_leads": 1,
+      "drilldowns": [
+        {
+          "value": "Unattributed",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
+        }
+      ],
+      "packages": [],
+      "setters": [
+        {
+          "value": "Vince Bartolini",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
+      "display": {
+        "projected": 15,
+        "goal": null,
+        "goal_pct": null,
+        "pace": ""
       },
       "formats": {
         "show": "0.0%",
@@ -684,10 +653,10 @@
       }
     },
     {
-      "channel": "Unknown (Needs Review)",
-      "leads_created": 16,
-      "bookings": 0,
-      "marketing": 0,
+      "channel": "YouTube",
+      "leads_created": 1,
+      "bookings": 1,
+      "marketing": 1,
       "lane2": 0,
       "social_dms": 0,
       "showed": 0,
@@ -695,20 +664,53 @@
       "closed_won": 0,
       "revenue": 0.0,
       "unrecoverable_booked_leads": 0,
-      "drilldowns": [],
+      "drilldowns": [
+        {
+          "value": "is-traditional-vending-dead",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
+        }
+      ],
       "packages": [],
-      "setters": [],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
       "display": {
-        "projected": null,
-        "goal": null,
-        "goal_pct": null,
-        "pace": ""
+        "projected": 15,
+        "goal": 132,
+        "goal_pct": 1,
+        "pace": "pace-behind"
       },
       "formats": {
-        "show": "—",
+        "show": "0.0%",
         "qualified": "—",
-        "qualified_booked": "—",
-        "close": "—",
+        "qualified_booked": "0.0%",
+        "close": "0.0%",
         "qualified_close": "—",
         "revenue": "$0",
         "average": "—"
@@ -734,7 +736,7 @@
     "label": "November 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-02T08:45:24.900628-08:00",
+    "generated_at": "2026-11-02T09:00:25.059688-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 14,
