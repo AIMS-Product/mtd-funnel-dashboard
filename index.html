@@ -423,11 +423,11 @@
   <div class="header-right">
     <div class="pickers-row">
       <div class="compact-stats">
-        <span class="cs-item">Day <strong>1/30</strong></span>
+        <span class="cs-item">Day <strong>2/30</strong></span>
         <span class="cs-sep">·</span>
-        <span class="cs-item">Working days <strong>0/21</strong></span>
+        <span class="cs-item">Working days <strong>1/21</strong></span>
         <span class="cs-sep">·</span>
-        <span class="cs-item"><strong>0.0%</strong> elapsed</span>
+        <span class="cs-item"><strong>4.8%</strong> elapsed</span>
       </div>
       <span class="picker-divider">|</span>
       <div class="month-picker"><select onchange="window.location.href=this.value"><option value="/index.html" selected>November 2026</option>
@@ -442,10 +442,10 @@
       <option value="/archives/2026-02.html" >February 2026</option>
       <option value="/archives/2026-01.html" >January 2026</option>
       </select></div><span class="picker-divider">|</span><div class="week-picker"><select onchange="window.location.href=this.value"><option value="/index.html" selected>Full Month</option>
-      <option value="/archives/week-current.html" >Oct 26–Nov 1 ▶</option></select></div>
+      <option value="/archives/week-current.html" >Nov 2–2 ▶</option></select></div>
     </div>
     <span class="snapshot-label">Snapshot</span>
-    November 01, 2026 at 11:45 PM PT<br>
+    November 02, 2026 at 12:00 AM PT<br>
     Source · Close CRM
   </div>
 </div>
@@ -458,20 +458,20 @@
     <div class="kpi-sub">new leads MTD</div>
   </div>
   <div class="kpi" style="--kpi-accent:#4f46e5; --kpi-color:var(--text);">
-    <div class="kpi-goal-pct">0%</div>
+    <div class="kpi-goal-pct">1%</div>
     <div class="label">Total Booked</div>
-    <div class="value">3<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ 1,241 <span style="font-size:12px;">goal</span></span></div>
+    <div class="value">16<span style="font-size:15px; font-weight:400; color:var(--muted); margin-left:10px;">/ 1,241 <span style="font-size:12px;">goal</span></span></div>
     <div class="kpi-sub">new first calls MTD</div>
   </div>
   <div class="kpi" style="--kpi-accent:#2563eb; --kpi-color:#2563eb;">
     <div class="label">Showed</div>
     <div class="value">1</div>
-    <div class="kpi-sub">33.3% show rate</div>
+    <div class="kpi-sub">6.2% show rate</div>
   </div>
   <div class="kpi" style="--kpi-accent:#7c3aed; --kpi-color:#7c3aed;">
     <div class="label">Qualified</div>
     <div class="value">1</div>
-    <div class="kpi-sub">100.0% qual rate · 33.3% of booked</div>
+    <div class="kpi-sub">100.0% qual rate · 6.2% of booked</div>
   </div>
   <div class="kpi" style="--kpi-accent:#d97706; --kpi-color:#d97706;">
     <div class="label">Closed Won</div>
@@ -516,14 +516,48 @@
       </td>
     </tr>
 
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('website')" data-fid="website">
+      <td class="col-name">
+        <span class="chevron" id="chev-website">›</span>Website
+      </td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace pace-behind">15</td>
+      <td class="col-goal">1% (100)</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('website')" title="Click to see package breakdown">$0 <span class="pkg-chevron" id="pkgchev-website">›</span></td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="website">
+      <td class="col-name col-utm">↳ Unattributed</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
     <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('internal_webinar')" data-fid="internal_webinar">
       <td class="col-name">
         <span class="chevron" id="chev-internal_webinar">›</span>Internal Webinar
       </td>
       <td class="col-num">—</td>
-      <td class="col-num">1</td>
-      <td class="col-pace pace-behind">30</td>
-      <td class="col-goal">1% (70)</td>
+      <td class="col-num">3</td>
+      <td class="col-pace pace-behind">45</td>
+      <td class="col-goal">4% (70)</td>
       <td class="col-num">—</td>
       <td class="col-pct bad">0.0%</td>
       <td class="col-num">—</td>
@@ -536,6 +570,22 @@
 
     <tr class="utm-row" data-parent="internal_webinar">
       <td class="col-name col-utm">↳ oct27</td>
+      <td class="col-num">—</td>
+      <td class="col-num">2</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="internal_webinar">
+      <td class="col-name col-utm">↳ oct13</td>
       <td class="col-num">—</td>
       <td class="col-num">1</td>
       <td class="col-pace"></td>
@@ -555,11 +605,11 @@
         <span class="chevron" id="chev-reactivation_scrapers">›</span>Reactivation Scrapers
       </td>
       <td class="col-num">—</td>
-      <td class="col-num">2</td>
-      <td class="col-pace pace-muted">60</td>
+      <td class="col-num">7</td>
+      <td class="col-pace pace-muted">105</td>
       <td class="col-goal">—</td>
       <td class="col-num">1</td>
-      <td class="col-pct mid">50.0%</td>
+      <td class="col-pct bad">14.3%</td>
       <td class="col-num">1</td>
       <td class="col-pct good">100.0%</td>
       <td class="col-num">—</td>
@@ -571,13 +621,113 @@
     <tr class="utm-row" data-parent="reactivation_scrapers">
       <td class="col-name col-utm">↳ Unattributed</td>
       <td class="col-num">—</td>
-      <td class="col-num">2</td>
+      <td class="col-num">6</td>
       <td class="col-pace"></td>
       <td class="col-goal"></td>
       <td class="col-num">1</td>
-      <td class="col-pct mid">50.0%</td>
+      <td class="col-pct bad">16.7%</td>
       <td class="col-num">1</td>
       <td class="col-pct good">100.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="reactivation_scrapers">
+      <td class="col-name col-utm">↳ lc</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('google_ads')" data-fid="google_ads">
+      <td class="col-name">
+        <span class="chevron" id="chev-google_ads">›</span>Google Ads
+      </td>
+      <td class="col-num">3</td>
+      <td class="col-num">3</td>
+      <td class="col-pace pace-muted">45</td>
+      <td class="col-goal">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('google_ads')" title="Click to see package breakdown">$0 <span class="pkg-chevron" id="pkgchev-google_ads">›</span></td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="google_ads">
+      <td class="col-name col-utm">↳ 23815771816</td>
+      <td class="col-num">—</td>
+      <td class="col-num">2</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="google_ads">
+      <td class="col-name col-utm">↳ 23805931083</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="funnel-row" data-section="lead_sources" onclick="toggleUTM('linkedin')" data-fid="linkedin">
+      <td class="col-name">
+        <span class="chevron" id="chev-linkedin">›</span>Linkedin
+      </td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace pace-exceed">15</td>
+      <td class="col-goal">10% (10)</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('linkedin')" title="Click to see package breakdown">$0 <span class="pkg-chevron" id="pkgchev-linkedin">›</span></td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="linkedin">
+      <td class="col-name col-utm">↳ book-call</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
       <td class="col-num">—</td>
       <td class="col-pct bad">0.0%</td>
       <td class="col-rev">$0</td>
@@ -608,14 +758,48 @@
       </td>
     </tr>
 
+    <tr class="funnel-row" data-section="uncategorized" onclick="toggleUTM('unknown__needs_review_')" data-fid="unknown__needs_review_">
+      <td class="col-name">
+        <span class="chevron" id="chev-unknown__needs_review_">›</span>Unknown (Needs Review)
+      </td>
+      <td class="col-num">10</td>
+      <td class="col-num">1</td>
+      <td class="col-pace pace-muted">15</td>
+      <td class="col-goal">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev pkg-trigger" onclick="event.stopPropagation();togglePkg('unknown__needs_review_')" title="Click to see package breakdown">$0 <span class="pkg-chevron" id="pkgchev-unknown__needs_review_">›</span></td>
+      <td class="col-num">—</td>
+    </tr>
+
+    <tr class="utm-row" data-parent="unknown__needs_review_">
+      <td class="col-name col-utm">↳ is-traditional-vending-dead</td>
+      <td class="col-num">—</td>
+      <td class="col-num">1</td>
+      <td class="col-pace"></td>
+      <td class="col-goal"></td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-num">—</td>
+      <td class="col-pct ">—</td>
+      <td class="col-num">—</td>
+      <td class="col-pct bad">0.0%</td>
+      <td class="col-rev">$0</td>
+      <td class="col-num">—</td>
+    </tr>
+
     <tr class="total-row">
       <td class="col-name">TOTAL</td>
       <td class="col-num">13</td>
-      <td class="col-num">3</td>
+      <td class="col-num">16</td>
       <td class="col-pace">—</td>
       <td class="col-goal">—</td>
       <td class="col-num">1</td>
-      <td class="col-pct bad">33.3%</td>
+      <td class="col-pct bad">6.2%</td>
       <td class="col-num">1</td>
       <td class="col-pct good">100.0%</td>
       <td class="col-num">0</td>
