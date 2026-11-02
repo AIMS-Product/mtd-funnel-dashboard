@@ -78,6 +78,28 @@ python3 v2/publish_shadow.py --source v2/public/data.json
 
 ## V2 rules
 
+Booking totals now include only leads owned by the nine VP closers on the sales
+dashboard: Christian Hartwell, Scott Seymour, Robin Perkins, Eric Piccione,
+Joe Vaughan, Shreya Bechra, Luke Herman, Ariella Irvine, and Joe Dysert. Oscar
+Pugh, other owners, and unassigned leads are excluded from booking/show/qualified
+rollups. The complete meeting history is still evaluated before this owner filter.
+Lead-created, opportunity wins, revenue, packages, ARR and pipeline retain their
+independent definitions. The report subtitle identifies the booking scope.
+
+October's month-end ownership is preserved: **482 booked, 234 showed, 192
+qualified**, split into **190 Marketing, 266 Lane 2, and 26 Social DMs**. Historical
+detail was reconstructed from the CRM event history and reconciled to every saved
+owner, source, campaign/content and setter booking rollup before applying the
+roster. The archive's original reporting cutoff and generation time are retained;
+separate scope-change metadata records this revision. Frozen weekly snapshots keep
+their original all-owner figures and are explicitly labeled as historical
+all-owner bookings. Open month/week reports and new reports use the nine VP closers.
+
+`rescope_archive.py` requires private reconstructed rows to match a frozen
+archive before writing any aggregate revision. A fresh pull that differs from the
+historical archive cannot silently replace it. Raw audit records remain outside
+the repository and web-serving paths.
+
 The detailed replication guide is [`CALCULATION_RULES.md`](CALCULATION_RULES.md). It documents the time windows, meeting qualification and credit logic, lead-source attribution, metric formulas, display calculations, and implementation caveats. The exact machine-readable mappings and policy constants remain in [`rules.json`](rules.json), and [`build.py`](build.py) is the executable reference.
 
 - Reporting period is based on Close meeting creation time in America/Los_Angeles.

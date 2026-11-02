@@ -12,6 +12,7 @@ from html import escape
 from pathlib import Path
 
 from reporting import PACIFIC, ROOT
+from aggregates import BOOKING_SCOPE
 
 BASE = '/mtd-funnel-dashboard/v2'
 PICKER_SCRIPT = BASE + '/archives/picker.js?v=supplemental-1'
@@ -124,6 +125,8 @@ def render_current_ui(data, output, navigation):
     month_picker, week_picker = picker_html(data, navigation, ui)
     html = re.sub(r'/mtd-funnel-dashboard/(?!v2/)', BASE + '/', ui['generate_html'](adapted, month_picker, week_picker))
     html = add_booking_breakdowns(html, data, ui)
+    scope = 'VP closer bookings' if data.get('booking_scope') == BOOKING_SCOPE else 'All-owner bookings · historical snapshot'
+    html = html.replace('Vendingpreneurs · All Sales Calls ·', f'Vendingpreneurs · {scope} ·')
     return html.replace(f'src="{BASE}/archives/picker.js"', f'src="{PICKER_SCRIPT}"')
 
 

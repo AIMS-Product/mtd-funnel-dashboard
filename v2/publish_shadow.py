@@ -59,6 +59,7 @@ def public_data(source: Path) -> dict[str, Any]:
         "goals": current_goals(),
         "period": raw["period"],
         "rules_version": raw["rules_version"],
+        "booking_scope": raw.get("booking_scope", "all-owners.v1"),
         "counted_meetings": raw["counted_meetings"],
         "excluded_repeat_candidates": raw["excluded_repeat_candidates"],
         "attribution_reviewed_at": raw.get("attribution_reviewed_at"),

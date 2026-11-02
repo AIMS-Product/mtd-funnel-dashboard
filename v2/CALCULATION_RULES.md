@@ -60,6 +60,24 @@ Thus the clock is a rolling 30 × 24-hour clock anchored to scheduled meeting st
 
 ## 4. Booked counts and bucket splits
 
+### VP closer scope (November 2, 2026)
+
+After the full-history booking decisions, keep only credits whose current Lead
+Owner resolves to one of `VP_BOOKING_CLOSERS` in `aggregates.py`: Christian
+Hartwell, Scott Seymour, Robin Perkins, Eric Piccione, Joe Vaughan, Shreya Bechra,
+Luke Herman, Ariella Irvine, and Joe Dysert. Missing/unresolved owners, Oscar Pugh,
+and all other owners do not enter booking, showed, qualification or bucket counts.
+The roster never filters history before the repeat-clock decision. All source,
+campaign/content, setter and team booking breakdowns use this same subset.
+`booking_scope=vp-closers.v1` records the scope separately from title-rule version.
+
+This is a booking-cohort filter. Leads Created, Closed Won, revenue, ARR, packages,
+and pipeline retain the independent definitions below. October monthly uses the
+reconciled month-end records, preserving 482 bookings / 234 shows / 192 qualified
+and its original cutoff, rather than replacing month-end ownership with today's
+CRM state. Earlier frozen weekly snapshots remain explicitly labeled all-owner
+historical snapshots. Open and future periods use the VP closer subset.
+
 - Each row in `counted` is one meeting credit.
 - `Marketing` candidates are counted once per qualifying meeting activity.
 - `Lane 2` and `Social DMs` candidates are counted only if selected as the one eligible qualifying candidate in an episode.

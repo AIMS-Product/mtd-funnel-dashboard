@@ -19,7 +19,7 @@ from zoneinfo import ZoneInfo
 
 import requests
 
-from aggregates import build_breakdowns
+from aggregates import BOOKING_SCOPE, build_breakdowns, vp_closer_bookings
 
 ROOT = Path(__file__).resolve().parent
 PACIFIC = ZoneInfo("America/Los_Angeles")
@@ -518,6 +518,10 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
             "owner": lead.get("lead_owner"),
         })
     counted, suppressions = choose_bucket_credits(candidate_rows, meeting_history, outcomes)
+    users = {row["id"]: " ".join(filter(None, [row.get("first_name"), row.get("last_name")]))
+             for row in reader.pages("user/")}
+    all_owner_count = len(counted)
+    counted = vp_closer_bookings(counted, users)
 
     channel_rows: dict[str, dict[str, Any]] = defaultdict(lambda: {
         "leads_created": 0, "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0,
@@ -599,8 +603,6 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
             ]
         output_rows.append({"channel": channel, **entry})
     totals = {key: sum(row[key] for row in output_rows) for key in ("leads_created", "bookings", "marketing", "lane2", "social_dms", "showed", "qualified", "closed_won", "revenue")}
-    users = {row["id"]: " ".join(filter(None, [row.get("first_name"), row.get("last_name")]))
-             for row in reader.pages("user/")}
     # These rollups consume the already-selected credits and won cohort above.
     breakdowns = build_breakdowns(counted, accepted_won, users)
     return {
@@ -610,6 +612,8 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
         "vendhub_arr": vendhub_arr,
         "breakdowns": breakdowns,
         "rules_version": RULES["version"], "mtd_meetings_scanned": len(mtd_meetings),
+        "booking_scope": BOOKING_SCOPE,
+        "excluded_owner_bookings": all_owner_count - len(counted),
         "meeting_history_rows_loaded": len(meeting_history),
         "candidate_meetings": len(candidate_rows), "counted_meetings": len(counted),
         "excluded_repeat_candidates": suppressions.get("within_30_day_episode", 0),

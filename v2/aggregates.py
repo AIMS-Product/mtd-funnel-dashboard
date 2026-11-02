@@ -3,6 +3,11 @@
 from collections import defaultdict
 
 SCHEMA_VERSION = 3
+BOOKING_SCOPE = "vp-closers.v1"
+VP_BOOKING_CLOSERS = (
+    "Christian Hartwell", "Scott Seymour", "Robin Perkins", "Eric Piccione",
+    "Joe Vaughan", "Shreya Bechra", "Luke Herman", "Ariella Irvine", "Joe Dysert",
+)
 CLOSERS = (
     "Christian Hartwell", "Scott Seymour", "Robin Perkins", "Eric Piccione",
     "Joe Vaughan", "Shreya Bechra", "Luke Herman", "Ariella Irvine",
@@ -20,6 +25,11 @@ def owner_name(value, users):
     value = " ".join(str(value or "").split())
     # Unresolved user IDs never appear in public reports.
     return users.get(value, "Unassigned" if value.startswith("user_") or not value else value)
+
+
+def vp_closer_bookings(bookings, users):
+    """Apply sales roster scope after the complete-history booking decisions."""
+    return [row for row in bookings if owner_name(row.get("owner"), users) in VP_BOOKING_CLOSERS]
 
 
 def rollup(bookings, won, key):
