@@ -2,7 +2,7 @@
   "month_key": "2026-11",
   "month_label": "November 2026",
   "grand": {
-    "leads_created": 51,
+    "leads_created": 55,
     "booked": 33,
     "showed": 11,
     "qualified": 6,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 18,
+      "leads_created": 20,
       "booked": 31,
       "showed": 11,
       "qualified": 6,
@@ -19,7 +19,7 @@
       "revenue": 5997.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 33,
+      "leads_created": 35,
       "booked": 2,
       "showed": 0,
       "qualified": 0,
@@ -28,6 +28,30 @@
     }
   },
   "funnels": {
+    "Unknown (Needs Review)": {
+      "leads_created": 35,
+      "booked": 2,
+      "book_pct": 5.7,
+      "showed": 0,
+      "show_pct": 0.0,
+      "qualified": 0,
+      "qual_pct": 0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Google Ads": {
+      "leads_created": 5,
+      "booked": 7,
+      "book_pct": 140.0,
+      "showed": 5,
+      "show_pct": 71.4,
+      "qualified": 4,
+      "qual_pct": 80.0,
+      "closed": 1,
+      "cw_pct": 14.3,
+      "revenue": 5997.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 1,
       "booked": 15,
@@ -52,34 +76,10 @@
       "cw_pct": 0.0,
       "revenue": 0.0
     },
-    "Google Ads": {
-      "leads_created": 5,
-      "booked": 7,
-      "book_pct": 140.0,
-      "showed": 5,
-      "show_pct": 71.4,
-      "qualified": 4,
-      "qual_pct": 80.0,
-      "closed": 1,
-      "cw_pct": 14.3,
-      "revenue": 5997.0
-    },
-    "Unknown (Needs Review)": {
-      "leads_created": 33,
-      "booked": 2,
-      "book_pct": 6.1,
-      "showed": 0,
-      "show_pct": 0.0,
-      "qualified": 0,
-      "qual_pct": 0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Internal Webinar": {
-      "leads_created": 9,
+      "leads_created": 11,
       "booked": 4,
-      "book_pct": 44.4,
+      "book_pct": 36.4,
       "showed": 2,
       "show_pct": 50.0,
       "qualified": 0,
