@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 6,
-      "marketing": 6,
+      "bookings": 7,
+      "marketing": 7,
       "lane2": 0,
       "social_dms": 0,
       "showed": 0,
@@ -164,7 +164,7 @@
       }
     },
     {
-      "value": "Shreya Bechra",
+      "value": "Christian Hartwell",
       "bookings": 2,
       "marketing": 1,
       "lane2": 1,
@@ -184,9 +184,9 @@
       }
     },
     {
-      "value": "Christian Hartwell",
-      "bookings": 1,
-      "marketing": 0,
+      "value": "Shreya Bechra",
+      "bookings": 2,
+      "marketing": 1,
       "lane2": 1,
       "social_dms": 0,
       "showed": 0,
@@ -204,8 +204,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-03T07:30:24.899961-08:00",
-  "source_cutoff": "2026-11-03T07:30:24.899961-08:00",
+  "generated_at": "2026-11-03T07:45:20.612612-08:00",
+  "source_cutoff": "2026-11-03T07:45:20.612612-08:00",
   "vendhub_arr": 0.0,
   "progress": {
     "day": 3,
@@ -236,14 +236,14 @@
   "period": "2026-11-02 through 2026-11-03 PT",
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 17,
+  "counted_meetings": 18,
   "excluded_repeat_candidates": 1,
-  "attribution_reviewed_at": "2026-11-03T07:30:24.899961-08:00",
+  "attribution_reviewed_at": "2026-11-03T07:45:20.612612-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 23,
-    "bookings": 17,
-    "marketing": 6,
+    "bookings": 18,
+    "marketing": 7,
     "lane2": 11,
     "social_dms": 0,
     "showed": 0,
@@ -481,20 +481,20 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 19,
-      "bookings": 3,
-      "marketing": 0,
+      "bookings": 4,
+      "marketing": 1,
       "lane2": 3,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
       "closed_won": 0,
       "revenue": 0.0,
-      "unrecoverable_booked_leads": 3,
+      "unrecoverable_booked_leads": 4,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 2,
-          "marketing": 0,
+          "bookings": 3,
+          "marketing": 1,
           "lane2": 2,
           "social_dms": 0,
           "showed": 0,
@@ -546,6 +546,17 @@
           "revenue": 0
         },
         {
+          "value": "Marketing",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
           "value": "Rob Maxfield",
           "bookings": 1,
           "marketing": 0,
@@ -558,7 +569,7 @@
         }
       ],
       "display": {
-        "projected": 30,
+        "projected": 40,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -880,7 +891,7 @@
     "label": "Nov 2 – Nov 3, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-03T07:30:24.899961-08:00",
+    "generated_at": "2026-11-03T07:45:20.612612-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 13,
