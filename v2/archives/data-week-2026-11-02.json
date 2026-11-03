@@ -8,15 +8,15 @@
       "lane2": 0,
       "social_dms": 0,
       "showed": 0,
-      "qualified": 0,
+      "qualified": 1,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
         "show": "0.0%",
         "qualified": "—",
-        "qualified_booked": "0.0%",
+        "qualified_booked": "12.5%",
         "close": "0.0%",
-        "qualified_close": "—",
+        "qualified_close": "0.0%",
         "revenue": "$0",
         "average": "—"
       }
@@ -170,15 +170,15 @@
       "lane2": 2,
       "social_dms": 0,
       "showed": 0,
-      "qualified": 0,
+      "qualified": 1,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
         "show": "0.0%",
         "qualified": "—",
-        "qualified_booked": "0.0%",
+        "qualified_booked": "25.0%",
         "close": "0.0%",
-        "qualified_close": "—",
+        "qualified_close": "0.0%",
         "revenue": "$0",
         "average": "—"
       }
@@ -224,8 +224,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-03T12:30:22.302716-08:00",
-  "source_cutoff": "2026-11-03T12:30:22.302716-08:00",
+  "generated_at": "2026-11-03T12:45:35.629384-08:00",
+  "source_cutoff": "2026-11-03T12:45:35.629384-08:00",
   "vendhub_arr": 1200.0,
   "progress": {
     "day": 3,
@@ -258,24 +258,24 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 22,
   "excluded_repeat_candidates": 1,
-  "attribution_reviewed_at": "2026-11-03T12:30:22.302716-08:00",
+  "attribution_reviewed_at": "2026-11-03T12:45:35.629384-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 794,
+    "leads_created": 796,
     "bookings": 22,
     "marketing": 8,
     "lane2": 14,
     "social_dms": 0,
     "showed": 0,
-    "qualified": 0,
+    "qualified": 1,
     "closed_won": 1,
     "revenue": 5997.0,
     "formats": {
       "show": "0.0%",
       "qualified": "—",
-      "qualified_booked": "0.0%",
+      "qualified_booked": "4.5%",
       "close": "4.5%",
-      "qualified_close": "—",
+      "qualified_close": "100.0%",
       "revenue": "$5,997",
       "average": "$5,997"
     }
@@ -283,13 +283,13 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 762,
+      "leads_created": 763,
       "bookings": 9,
       "marketing": 1,
       "lane2": 8,
       "social_dms": 0,
       "showed": 0,
-      "qualified": 0,
+      "qualified": 1,
       "closed_won": 0,
       "revenue": 0.0,
       "unrecoverable_booked_leads": 0,
@@ -301,15 +301,15 @@
           "lane2": 1,
           "social_dms": 0,
           "showed": 0,
-          "qualified": 0,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
           "formats": {
             "show": "0.0%",
             "qualified": "—",
-            "qualified_booked": "0.0%",
+            "qualified_booked": "50.0%",
             "close": "0.0%",
-            "qualified_close": "—",
+            "qualified_close": "0.0%",
             "revenue": "$0",
             "average": "—"
           }
@@ -477,7 +477,7 @@
           "lane2": 0,
           "social_dms": 0,
           "showed": 0,
-          "qualified": 0,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0
         }
@@ -491,16 +491,16 @@
       "formats": {
         "show": "0.0%",
         "qualified": "—",
-        "qualified_booked": "0.0%",
+        "qualified_booked": "11.1%",
         "close": "0.0%",
-        "qualified_close": "—",
+        "qualified_close": "0.0%",
         "revenue": "$0",
         "average": "—"
       }
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 27,
+      "leads_created": 28,
       "bookings": 6,
       "marketing": 1,
       "lane2": 5,
@@ -974,11 +974,11 @@
     "label": "Nov 2 – Nov 3, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-03T12:30:22.302716-08:00",
+    "generated_at": "2026-11-03T12:45:35.629384-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 13,
-      "Robin Perkins": 22,
+      "Robin Perkins": 23,
       "Eric Piccione": 15,
       "Joe Vaughan": 19,
       "Shreya Bechra": 1,
