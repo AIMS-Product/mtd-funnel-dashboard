@@ -244,15 +244,15 @@
       }
     }
   ],
-  "generated_at": "2026-11-02T23:45:20.694215-08:00",
-  "source_cutoff": "2026-11-02T23:45:20.694215-08:00",
+  "generated_at": "2026-11-03T00:00:24.651983-08:00",
+  "source_cutoff": "2026-11-03T00:00:24.651983-08:00",
   "vendhub_arr": 0.0,
   "progress": {
-    "day": 2,
+    "day": 3,
     "days": 30,
     "working_days": 21,
-    "working_elapsed": 1,
-    "elapsed_pct": 4.8
+    "working_elapsed": 2,
+    "elapsed_pct": 9.5
   },
   "goals": {
     "bookings": 1241,
@@ -273,15 +273,15 @@
       "WWWS": 1
     }
   },
-  "period": "2026-11-01 through 2026-11-02 PT",
+  "period": "2026-11-01 through 2026-11-03 PT",
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 25,
   "excluded_repeat_candidates": 1,
-  "attribution_reviewed_at": "2026-11-02T23:45:20.694215-08:00",
+  "attribution_reviewed_at": "2026-11-03T00:00:24.651983-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 33,
+    "leads_created": 34,
     "bookings": 25,
     "marketing": 13,
     "lane2": 11,
@@ -523,7 +523,7 @@
         }
       ],
       "display": {
-        "projected": 165,
+        "projected": 110,
         "goal": 70,
         "goal_pct": 16,
         "pace": "pace-exceed"
@@ -607,7 +607,7 @@
         }
       ],
       "display": {
-        "projected": 60,
+        "projected": 40,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -624,7 +624,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 25,
+      "leads_created": 26,
       "bookings": 3,
       "marketing": 0,
       "lane2": 3,
@@ -702,7 +702,7 @@
         }
       ],
       "display": {
-        "projected": 45,
+        "projected": 30,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -806,7 +806,7 @@
         }
       ],
       "display": {
-        "projected": 45,
+        "projected": 30,
         "goal": 132,
         "goal_pct": 2,
         "pace": "pace-behind"
@@ -881,7 +881,7 @@
         }
       ],
       "display": {
-        "projected": 30,
+        "projected": 20,
         "goal": 44,
         "goal_pct": 5,
         "pace": "pace-behind"
@@ -945,7 +945,7 @@
         }
       ],
       "display": {
-        "projected": 15,
+        "projected": 10,
         "goal": 300,
         "goal_pct": 0,
         "pace": "pace-behind"
@@ -1009,7 +1009,7 @@
         }
       ],
       "display": {
-        "projected": 15,
+        "projected": 10,
         "goal": 100,
         "goal_pct": 1,
         "pace": "pace-behind"
@@ -1038,13 +1038,13 @@
     "kind": "month",
     "month": "2026-11",
     "start": "2026-11-01",
-    "end": "2026-11-02",
+    "end": "2026-11-03",
     "end_exclusive": "2026-12-01",
     "frozen": false,
     "label": "November 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-02T23:45:20.694215-08:00",
+    "generated_at": "2026-11-03T00:00:24.651983-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 13,
