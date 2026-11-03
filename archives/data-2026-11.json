@@ -2,7 +2,7 @@
   "month_key": "2026-11",
   "month_label": "November 2026",
   "grand": {
-    "leads_created": 823,
+    "leads_created": 825,
     "booked": 33,
     "showed": 14,
     "qualified": 8,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 785,
+      "leads_created": 787,
       "booked": 31,
       "showed": 12,
       "qualified": 7,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Internal Webinar": {
+      "leads_created": 778,
+      "booked": 4,
+      "book_pct": 0.5,
+      "showed": 3,
+      "show_pct": 75.0,
+      "qualified": 1,
+      "qual_pct": 33.3,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 1,
       "booked": 15,
@@ -63,18 +75,6 @@
       "closed": 1,
       "cw_pct": 14.3,
       "revenue": 5997.0
-    },
-    "Internal Webinar": {
-      "leads_created": 776,
-      "booked": 4,
-      "book_pct": 0.5,
-      "showed": 3,
-      "show_pct": 75.0,
-      "qualified": 1,
-      "qual_pct": 33.3,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "Instagram": {
       "leads_created": 1,
