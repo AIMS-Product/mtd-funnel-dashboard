@@ -43,9 +43,9 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 4,
+      "bookings": 5,
       "marketing": 0,
-      "lane2": 4,
+      "lane2": 5,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -204,6 +204,26 @@
       }
     },
     {
+      "value": "Christian Hartwell",
+      "bookings": 1,
+      "marketing": 0,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "0.0%",
+        "qualified": "—",
+        "qualified_booked": "0.0%",
+        "close": "0.0%",
+        "qualified_close": "—",
+        "revenue": "$0",
+        "average": "—"
+      }
+    },
+    {
       "value": "Scott Seymour",
       "bookings": 1,
       "marketing": 0,
@@ -224,8 +244,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-02T16:45:19.085426-08:00",
-  "source_cutoff": "2026-11-02T16:45:19.085426-08:00",
+  "generated_at": "2026-11-02T17:00:22.888648-08:00",
+  "source_cutoff": "2026-11-02T17:00:22.888648-08:00",
   "vendhub_arr": 0.0,
   "progress": {
     "day": 2,
@@ -256,24 +276,24 @@
   "period": "2026-11-01 through 2026-11-02 PT",
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 23,
+  "counted_meetings": 24,
   "excluded_repeat_candidates": 1,
-  "attribution_reviewed_at": "2026-11-02T16:45:19.085426-08:00",
+  "attribution_reviewed_at": "2026-11-02T17:00:22.888648-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 28,
-    "bookings": 23,
+    "bookings": 24,
     "marketing": 12,
-    "lane2": 10,
+    "lane2": 11,
     "social_dms": 1,
     "showed": 3,
     "qualified": 2,
     "closed_won": 0,
     "revenue": 0.0,
     "formats": {
-      "show": "13.0%",
+      "show": "12.5%",
       "qualified": "66.7%",
-      "qualified_booked": "8.7%",
+      "qualified_booked": "8.3%",
       "close": "0.0%",
       "qualified_close": "0.0%",
       "revenue": "$0",
@@ -284,9 +304,9 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 0,
-      "bookings": 10,
+      "bookings": 11,
       "marketing": 4,
-      "lane2": 6,
+      "lane2": 7,
       "social_dms": 0,
       "showed": 1,
       "qualified": 0,
@@ -415,6 +435,26 @@
           }
         },
         {
+          "value": "nov03",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
+        },
+        {
           "value": "sept15",
           "bookings": 1,
           "marketing": 0,
@@ -460,10 +500,10 @@
           "revenue": 0
         },
         {
-          "value": "August Young",
-          "bookings": 1,
+          "value": "Vince Bartolini",
+          "bookings": 2,
           "marketing": 0,
-          "lane2": 1,
+          "lane2": 2,
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
@@ -471,7 +511,7 @@
           "revenue": 0
         },
         {
-          "value": "Vince Bartolini",
+          "value": "August Young",
           "bookings": 1,
           "marketing": 0,
           "lane2": 1,
@@ -483,13 +523,13 @@
         }
       ],
       "display": {
-        "projected": 150,
+        "projected": 165,
         "goal": 70,
-        "goal_pct": 14,
+        "goal_pct": 16,
         "pace": "pace-exceed"
       },
       "formats": {
-        "show": "10.0%",
+        "show": "9.1%",
         "qualified": "0.0%",
         "qualified_booked": "0.0%",
         "close": "0.0%",
@@ -984,7 +1024,7 @@
     "label": "November 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-02T16:45:19.085426-08:00",
+    "generated_at": "2026-11-02T17:00:22.888648-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 13,
@@ -992,7 +1032,7 @@
       "Eric Piccione": 15,
       "Joe Vaughan": 19,
       "Shreya Bechra": 1,
-      "Luke Herman": 18,
+      "Luke Herman": 19,
       "Ariella Irvine": 10,
       "Oscar Pugh": 7,
       "Joe Dysert": 6
