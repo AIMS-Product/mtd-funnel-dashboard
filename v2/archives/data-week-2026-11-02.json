@@ -67,18 +67,18 @@
       "marketing": 0,
       "lane2": 7,
       "social_dms": 0,
-      "showed": 1,
-      "qualified": 1,
-      "closed_won": 0,
-      "revenue": 0,
+      "showed": 2,
+      "qualified": 3,
+      "closed_won": 1,
+      "revenue": 6897.0,
       "formats": {
-        "show": "14.3%",
-        "qualified": "100.0%",
-        "qualified_booked": "14.3%",
-        "close": "0.0%",
-        "qualified_close": "0.0%",
-        "revenue": "$0",
-        "average": "—"
+        "show": "28.6%",
+        "qualified": "150.0%",
+        "qualified_booked": "42.9%",
+        "close": "14.3%",
+        "qualified_close": "33.3%",
+        "revenue": "$6,897",
+        "average": "$6,897"
       }
     },
     {
@@ -129,18 +129,18 @@
       "marketing": 3,
       "lane2": 8,
       "social_dms": 0,
-      "showed": 1,
-      "qualified": 1,
-      "closed_won": 0,
-      "revenue": 0,
+      "showed": 2,
+      "qualified": 2,
+      "closed_won": 1,
+      "revenue": 6897.0,
       "formats": {
-        "show": "9.1%",
+        "show": "18.2%",
         "qualified": "100.0%",
-        "qualified_booked": "9.1%",
-        "close": "0.0%",
-        "qualified_close": "0.0%",
-        "revenue": "$0",
-        "average": "—"
+        "qualified_booked": "18.2%",
+        "close": "9.1%",
+        "qualified_close": "50.0%",
+        "revenue": "$6,897",
+        "average": "$6,897"
       }
     },
     {
@@ -210,15 +210,15 @@
       "lane2": 3,
       "social_dms": 0,
       "showed": 0,
-      "qualified": 0,
+      "qualified": 1,
       "closed_won": 1,
       "revenue": 5997.0,
       "formats": {
         "show": "0.0%",
         "qualified": "—",
-        "qualified_booked": "0.0%",
+        "qualified_booked": "20.0%",
         "close": "20.0%",
-        "qualified_close": "—",
+        "qualified_close": "100.0%",
         "revenue": "$5,997",
         "average": "$5,997"
       }
@@ -264,9 +264,9 @@
       }
     }
   ],
-  "generated_at": "2026-11-04T10:45:19.601032-08:00",
-  "source_cutoff": "2026-11-04T10:45:19.601032-08:00",
-  "vendhub_arr": 1200.0,
+  "generated_at": "2026-11-04T11:00:24.436263-08:00",
+  "source_cutoff": "2026-11-04T11:00:24.436263-08:00",
+  "vendhub_arr": 2400.0,
   "progress": {
     "day": 4,
     "days": 30,
@@ -298,7 +298,7 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 47,
   "excluded_repeat_candidates": 1,
-  "attribution_reviewed_at": "2026-11-04T10:45:19.601032-08:00",
+  "attribution_reviewed_at": "2026-11-04T11:00:24.436263-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 934,
@@ -306,18 +306,18 @@
     "marketing": 16,
     "lane2": 31,
     "social_dms": 0,
-    "showed": 6,
-    "qualified": 3,
-    "closed_won": 1,
-    "revenue": 5997.0,
+    "showed": 7,
+    "qualified": 5,
+    "closed_won": 2,
+    "revenue": 12894.0,
     "formats": {
-      "show": "12.8%",
-      "qualified": "50.0%",
-      "qualified_booked": "6.4%",
-      "close": "2.1%",
-      "qualified_close": "33.3%",
-      "revenue": "$5,997",
-      "average": "$5,997"
+      "show": "14.9%",
+      "qualified": "71.4%",
+      "qualified_booked": "10.6%",
+      "close": "4.3%",
+      "qualified_close": "40.0%",
+      "revenue": "$12,894",
+      "average": "$6,447"
     }
   },
   "channels": [
@@ -329,7 +329,7 @@
       "lane2": 17,
       "social_dms": 0,
       "showed": 2,
-      "qualified": 1,
+      "qualified": 2,
       "closed_won": 0,
       "revenue": 0.0,
       "unrecoverable_booked_leads": 0,
@@ -341,15 +341,15 @@
           "lane2": 6,
           "social_dms": 0,
           "showed": 0,
-          "qualified": 0,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
           "formats": {
             "show": "0.0%",
             "qualified": "—",
-            "qualified_booked": "0.0%",
+            "qualified_booked": "8.3%",
             "close": "0.0%",
-            "qualified_close": "—",
+            "qualified_close": "0.0%",
             "revenue": "$0",
             "average": "—"
           }
@@ -528,7 +528,7 @@
           "lane2": 2,
           "social_dms": 0,
           "showed": 0,
-          "qualified": 0,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0
         }
@@ -541,8 +541,8 @@
       },
       "formats": {
         "show": "8.3%",
-        "qualified": "50.0%",
-        "qualified_booked": "4.2%",
+        "qualified": "100.0%",
+        "qualified_booked": "8.3%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -556,10 +556,10 @@
       "marketing": 1,
       "lane2": 9,
       "social_dms": 0,
-      "showed": 2,
-      "qualified": 1,
-      "closed_won": 0,
-      "revenue": 0.0,
+      "showed": 3,
+      "qualified": 2,
+      "closed_won": 1,
+      "revenue": 6897.0,
       "unrecoverable_booked_leads": 10,
       "drilldowns": [
         {
@@ -588,22 +588,43 @@
           "marketing": 0,
           "lane2": 1,
           "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 1,
+          "revenue": 6897.0,
           "formats": {
-            "show": "0.0%",
-            "qualified": "—",
-            "qualified_booked": "0.0%",
-            "close": "0.0%",
-            "qualified_close": "—",
-            "revenue": "$0",
-            "average": "—"
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "qualified_booked": "100.0%",
+            "close": "100.0%",
+            "qualified_close": "100.0%",
+            "revenue": "$6,897",
+            "average": "$6,897"
           }
         }
       ],
-      "packages": [],
+      "packages": [
+        {
+          "value": "Bronze - $5,997 · Community",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 6897.0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "qualified_booked": "—",
+            "close": "—",
+            "qualified_close": "—",
+            "revenue": "$6,897",
+            "average": "$6,897"
+          }
+        }
+      ],
       "setters": [
         {
           "value": "Vince Bartolini",
@@ -611,10 +632,10 @@
           "marketing": 0,
           "lane2": 4,
           "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0
+          "showed": 2,
+          "qualified": 2,
+          "closed_won": 1,
+          "revenue": 6897.0
         },
         {
           "value": "August Young",
@@ -668,13 +689,13 @@
         "pace": ""
       },
       "formats": {
-        "show": "20.0%",
-        "qualified": "50.0%",
-        "qualified_booked": "10.0%",
-        "close": "0.0%",
-        "qualified_close": "0.0%",
-        "revenue": "$0",
-        "average": "—"
+        "show": "30.0%",
+        "qualified": "66.7%",
+        "qualified_booked": "20.0%",
+        "close": "10.0%",
+        "qualified_close": "50.0%",
+        "revenue": "$6,897",
+        "average": "$6,897"
       }
     },
     {
@@ -1209,11 +1230,11 @@
   ],
   "goal_percentages": {
     "bookings": 4,
-    "revenue": 1
+    "revenue": 2
   },
   "arr_display": {
-    "arr": "$1,200",
-    "mrr": "$100"
+    "arr": "$2,400",
+    "mrr": "$200"
   },
   "view": {
     "key": "week-2026-11-02",
@@ -1226,7 +1247,7 @@
     "label": "Nov 2 – Nov 4, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-04T10:45:19.601032-08:00",
+    "generated_at": "2026-11-04T11:00:24.436263-08:00",
     "counts": {
       "Christian Hartwell": 35,
       "Scott Seymour": 16,
