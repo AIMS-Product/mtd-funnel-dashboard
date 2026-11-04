@@ -63,19 +63,19 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 6,
+      "bookings": 7,
       "marketing": 0,
-      "lane2": 6,
+      "lane2": 7,
       "social_dms": 0,
       "showed": 3,
       "qualified": 4,
       "closed_won": 1,
       "revenue": 6897.0,
       "formats": {
-        "show": "50.0%",
+        "show": "42.9%",
         "qualified": "133.3%",
-        "qualified_booked": "66.7%",
-        "close": "16.7%",
+        "qualified_booked": "57.1%",
+        "close": "14.3%",
         "qualified_close": "25.0%",
         "revenue": "$6,897",
         "average": "$6,897"
@@ -145,19 +145,19 @@
   "team": [
     {
       "value": "Luke Herman",
-      "bookings": 12,
+      "bookings": 13,
       "marketing": 4,
-      "lane2": 8,
+      "lane2": 9,
       "social_dms": 0,
       "showed": 2,
       "qualified": 3,
       "closed_won": 1,
       "revenue": 6897.0,
       "formats": {
-        "show": "16.7%",
+        "show": "15.4%",
         "qualified": "150.0%",
-        "qualified_booked": "25.0%",
-        "close": "8.3%",
+        "qualified_booked": "23.1%",
+        "close": "7.7%",
         "qualified_close": "33.3%",
         "revenue": "$6,897",
         "average": "$6,897"
@@ -284,8 +284,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-04T13:45:17.310580-08:00",
-  "source_cutoff": "2026-11-04T13:45:17.310580-08:00",
+  "generated_at": "2026-11-04T14:00:26.411678-08:00",
+  "source_cutoff": "2026-11-04T14:00:26.411678-08:00",
   "vendhub_arr": 2400.0,
   "progress": {
     "day": 4,
@@ -316,25 +316,25 @@
   "period": "2026-11-01 through 2026-11-04 PT",
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 54,
+  "counted_meetings": 55,
   "excluded_repeat_candidates": 2,
-  "attribution_reviewed_at": "2026-11-04T13:45:17.310580-08:00",
+  "attribution_reviewed_at": "2026-11-04T14:00:26.411678-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 966,
-    "bookings": 54,
+    "leads_created": 968,
+    "bookings": 55,
     "marketing": 23,
-    "lane2": 30,
+    "lane2": 31,
     "social_dms": 1,
     "showed": 13,
     "qualified": 11,
     "closed_won": 2,
     "revenue": 12894.0,
     "formats": {
-      "show": "24.1%",
+      "show": "23.6%",
       "qualified": "84.6%",
-      "qualified_booked": "20.4%",
-      "close": "3.7%",
+      "qualified_booked": "20.0%",
+      "close": "3.6%",
       "qualified_close": "18.2%",
       "revenue": "$12,894",
       "average": "$6,447"
@@ -343,10 +343,10 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 905,
-      "bookings": 26,
+      "leads_created": 906,
+      "bookings": 27,
       "marketing": 9,
-      "lane2": 17,
+      "lane2": 18,
       "social_dms": 0,
       "showed": 4,
       "qualified": 3,
@@ -475,6 +475,26 @@
           }
         },
         {
+          "value": "Unattributed",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
+        },
+        {
           "value": "aug11",
           "bookings": 1,
           "marketing": 0,
@@ -551,6 +571,17 @@
           "revenue": 0
         },
         {
+          "value": "Vince Bartolini",
+          "bookings": 3,
+          "marketing": 0,
+          "lane2": 3,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
           "value": "Tara Hall",
           "bookings": 2,
           "marketing": 0,
@@ -560,29 +591,18 @@
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0
-        },
-        {
-          "value": "Vince Bartolini",
-          "bookings": 2,
-          "marketing": 0,
-          "lane2": 2,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0
         }
       ],
       "display": {
-        "projected": 195,
+        "projected": 202,
         "goal": 70,
-        "goal_pct": 37,
+        "goal_pct": 39,
         "pace": "pace-exceed"
       },
       "formats": {
-        "show": "15.4%",
+        "show": "14.8%",
         "qualified": "75.0%",
-        "qualified_booked": "11.5%",
+        "qualified_booked": "11.1%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -591,7 +611,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 48,
+      "leads_created": 49,
       "bookings": 9,
       "marketing": 1,
       "lane2": 8,
@@ -1318,7 +1338,7 @@
     "label": "November 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-04T13:45:17.310580-08:00",
+    "generated_at": "2026-11-04T14:00:26.411678-08:00",
     "counts": {
       "Christian Hartwell": 35,
       "Scott Seymour": 17,
