@@ -7,13 +7,13 @@
       "marketing": 23,
       "lane2": 0,
       "social_dms": 0,
-      "showed": 8,
+      "showed": 9,
       "qualified": 5,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "34.8%",
-        "qualified": "62.5%",
+        "show": "39.1%",
+        "qualified": "55.6%",
         "qualified_booked": "21.7%",
         "close": "0.0%",
         "qualified_close": "0.0%",
@@ -67,16 +67,16 @@
       "marketing": 0,
       "lane2": 7,
       "social_dms": 0,
-      "showed": 3,
-      "qualified": 4,
+      "showed": 4,
+      "qualified": 5,
       "closed_won": 1,
       "revenue": 6897.0,
       "formats": {
-        "show": "42.9%",
-        "qualified": "133.3%",
-        "qualified_booked": "57.1%",
+        "show": "57.1%",
+        "qualified": "125.0%",
+        "qualified_booked": "71.4%",
         "close": "14.3%",
-        "qualified_close": "25.0%",
+        "qualified_close": "20.0%",
         "revenue": "$6,897",
         "average": "$6,897"
       }
@@ -149,16 +149,16 @@
       "marketing": 4,
       "lane2": 9,
       "social_dms": 0,
-      "showed": 2,
-      "qualified": 3,
+      "showed": 3,
+      "qualified": 4,
       "closed_won": 1,
       "revenue": 6897.0,
       "formats": {
-        "show": "15.4%",
-        "qualified": "150.0%",
-        "qualified_booked": "23.1%",
+        "show": "23.1%",
+        "qualified": "133.3%",
+        "qualified_booked": "30.8%",
         "close": "7.7%",
-        "qualified_close": "33.3%",
+        "qualified_close": "25.0%",
         "revenue": "$6,897",
         "average": "$6,897"
       }
@@ -169,13 +169,13 @@
       "marketing": 4,
       "lane2": 5,
       "social_dms": 0,
-      "showed": 2,
+      "showed": 3,
       "qualified": 1,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "22.2%",
-        "qualified": "50.0%",
+        "show": "33.3%",
+        "qualified": "33.3%",
         "qualified_booked": "11.1%",
         "close": "0.0%",
         "qualified_close": "0.0%",
@@ -204,26 +204,6 @@
       }
     },
     {
-      "value": "Shreya Bechra",
-      "bookings": 7,
-      "marketing": 4,
-      "lane2": 3,
-      "social_dms": 0,
-      "showed": 3,
-      "qualified": 3,
-      "closed_won": 1,
-      "revenue": 5997.0,
-      "formats": {
-        "show": "42.9%",
-        "qualified": "100.0%",
-        "qualified_booked": "42.9%",
-        "close": "14.3%",
-        "qualified_close": "33.3%",
-        "revenue": "$5,997",
-        "average": "$5,997"
-      }
-    },
-    {
       "value": "Ariella Irvine",
       "bookings": 7,
       "marketing": 2,
@@ -241,6 +221,26 @@
         "qualified_close": "0.0%",
         "revenue": "$0",
         "average": "—"
+      }
+    },
+    {
+      "value": "Shreya Bechra",
+      "bookings": 6,
+      "marketing": 4,
+      "lane2": 2,
+      "social_dms": 0,
+      "showed": 2,
+      "qualified": 2,
+      "closed_won": 1,
+      "revenue": 5997.0,
+      "formats": {
+        "show": "33.3%",
+        "qualified": "100.0%",
+        "qualified_booked": "33.3%",
+        "close": "16.7%",
+        "qualified_close": "50.0%",
+        "revenue": "$5,997",
+        "average": "$5,997"
       }
     },
     {
@@ -265,18 +265,18 @@
     },
     {
       "value": "Joe Vaughan",
-      "bookings": 4,
+      "bookings": 5,
       "marketing": 3,
-      "lane2": 1,
+      "lane2": 2,
       "social_dms": 0,
-      "showed": 1,
-      "qualified": 1,
+      "showed": 2,
+      "qualified": 2,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "25.0%",
+        "show": "40.0%",
         "qualified": "100.0%",
-        "qualified_booked": "25.0%",
+        "qualified_booked": "40.0%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -284,8 +284,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-04T14:30:23.006605-08:00",
-  "source_cutoff": "2026-11-04T14:30:23.006605-08:00",
+  "generated_at": "2026-11-04T14:45:17.836172-08:00",
+  "source_cutoff": "2026-11-04T14:45:17.836172-08:00",
   "vendhub_arr": 2400.0,
   "progress": {
     "day": 4,
@@ -318,24 +318,24 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 55,
   "excluded_repeat_candidates": 2,
-  "attribution_reviewed_at": "2026-11-04T14:30:23.006605-08:00",
+  "attribution_reviewed_at": "2026-11-04T14:45:17.836172-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 972,
+    "leads_created": 976,
     "bookings": 55,
     "marketing": 23,
     "lane2": 31,
     "social_dms": 1,
-    "showed": 13,
-    "qualified": 11,
+    "showed": 15,
+    "qualified": 12,
     "closed_won": 2,
     "revenue": 12894.0,
     "formats": {
-      "show": "23.6%",
-      "qualified": "84.6%",
-      "qualified_booked": "20.0%",
+      "show": "27.3%",
+      "qualified": "80.0%",
+      "qualified_booked": "21.8%",
       "close": "3.6%",
-      "qualified_close": "18.2%",
+      "qualified_close": "16.7%",
       "revenue": "$12,894",
       "average": "$6,447"
     }
@@ -343,13 +343,13 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 909,
+      "leads_created": 913,
       "bookings": 26,
       "marketing": 9,
       "lane2": 17,
       "social_dms": 0,
-      "showed": 4,
-      "qualified": 3,
+      "showed": 5,
+      "qualified": 4,
       "closed_won": 0,
       "revenue": 0.0,
       "unrecoverable_booked_leads": 0,
@@ -460,16 +460,16 @@
           "marketing": 0,
           "lane2": 1,
           "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
+          "showed": 1,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
           "formats": {
-            "show": "0.0%",
-            "qualified": "—",
-            "qualified_booked": "0.0%",
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "qualified_booked": "100.0%",
             "close": "0.0%",
-            "qualified_close": "—",
+            "qualified_close": "0.0%",
             "revenue": "$0",
             "average": "—"
           }
@@ -567,8 +567,8 @@
           "marketing": 0,
           "lane2": 2,
           "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
+          "showed": 2,
+          "qualified": 2,
           "closed_won": 0,
           "revenue": 0
         }
@@ -580,9 +580,9 @@
         "pace": "pace-exceed"
       },
       "formats": {
-        "show": "15.4%",
-        "qualified": "75.0%",
-        "qualified_booked": "11.5%",
+        "show": "19.2%",
+        "qualified": "80.0%",
+        "qualified_booked": "15.4%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -745,7 +745,7 @@
       "marketing": 7,
       "lane2": 0,
       "social_dms": 0,
-      "showed": 2,
+      "showed": 3,
       "qualified": 2,
       "closed_won": 1,
       "revenue": 5997.0,
@@ -757,13 +757,13 @@
           "marketing": 4,
           "lane2": 0,
           "social_dms": 0,
-          "showed": 0,
+          "showed": 1,
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0,
           "formats": {
-            "show": "0.0%",
-            "qualified": "—",
+            "show": "25.0%",
+            "qualified": "0.0%",
             "qualified_booked": "0.0%",
             "close": "0.0%",
             "qualified_close": "—",
@@ -821,7 +821,7 @@
           "marketing": 7,
           "lane2": 0,
           "social_dms": 0,
-          "showed": 2,
+          "showed": 3,
           "qualified": 2,
           "closed_won": 0,
           "revenue": 0
@@ -845,8 +845,8 @@
         "pace": ""
       },
       "formats": {
-        "show": "28.6%",
-        "qualified": "100.0%",
+        "show": "42.9%",
+        "qualified": "66.7%",
         "qualified_booked": "28.6%",
         "close": "14.3%",
         "qualified_close": "50.0%",
@@ -1318,7 +1318,7 @@
     "label": "November 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-04T14:30:23.006605-08:00",
+    "generated_at": "2026-11-04T14:45:17.836172-08:00",
     "counts": {
       "Christian Hartwell": 35,
       "Scott Seymour": 17,
