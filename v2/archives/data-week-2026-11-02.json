@@ -68,24 +68,24 @@
       "lane2": 7,
       "social_dms": 0,
       "showed": 1,
-      "qualified": 0,
+      "qualified": 1,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
         "show": "14.3%",
-        "qualified": "0.0%",
-        "qualified_booked": "0.0%",
+        "qualified": "100.0%",
+        "qualified_booked": "14.3%",
         "close": "0.0%",
-        "qualified_close": "—",
+        "qualified_close": "0.0%",
         "revenue": "$0",
         "average": "—"
       }
     },
     {
       "value": "Tara Hall",
-      "bookings": 2,
+      "bookings": 3,
       "marketing": 0,
-      "lane2": 2,
+      "lane2": 3,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -125,20 +125,20 @@
   "team": [
     {
       "value": "Luke Herman",
-      "bookings": 10,
+      "bookings": 11,
       "marketing": 3,
-      "lane2": 7,
+      "lane2": 8,
       "social_dms": 0,
       "showed": 1,
-      "qualified": 0,
+      "qualified": 1,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "10.0%",
-        "qualified": "0.0%",
-        "qualified_booked": "0.0%",
+        "show": "9.1%",
+        "qualified": "100.0%",
+        "qualified_booked": "9.1%",
         "close": "0.0%",
-        "qualified_close": "—",
+        "qualified_close": "0.0%",
         "revenue": "$0",
         "average": "—"
       }
@@ -264,8 +264,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-04T10:30:23.153742-08:00",
-  "source_cutoff": "2026-11-04T10:30:23.153742-08:00",
+  "generated_at": "2026-11-04T10:45:19.601032-08:00",
+  "source_cutoff": "2026-11-04T10:45:19.601032-08:00",
   "vendhub_arr": 1200.0,
   "progress": {
     "day": 4,
@@ -296,26 +296,26 @@
   "period": "2026-11-02 through 2026-11-04 PT",
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 46,
+  "counted_meetings": 47,
   "excluded_repeat_candidates": 1,
-  "attribution_reviewed_at": "2026-11-04T10:30:23.153742-08:00",
+  "attribution_reviewed_at": "2026-11-04T10:45:19.601032-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 931,
-    "bookings": 46,
+    "leads_created": 934,
+    "bookings": 47,
     "marketing": 16,
-    "lane2": 30,
+    "lane2": 31,
     "social_dms": 0,
     "showed": 6,
-    "qualified": 2,
+    "qualified": 3,
     "closed_won": 1,
     "revenue": 5997.0,
     "formats": {
-      "show": "13.0%",
-      "qualified": "33.3%",
-      "qualified_booked": "4.3%",
-      "close": "2.2%",
-      "qualified_close": "50.0%",
+      "show": "12.8%",
+      "qualified": "50.0%",
+      "qualified_booked": "6.4%",
+      "close": "2.1%",
+      "qualified_close": "33.3%",
       "revenue": "$5,997",
       "average": "$5,997"
     }
@@ -323,10 +323,10 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 883,
-      "bookings": 23,
+      "leads_created": 886,
+      "bookings": 24,
       "marketing": 7,
-      "lane2": 16,
+      "lane2": 17,
       "social_dms": 0,
       "showed": 2,
       "qualified": 1,
@@ -376,9 +376,9 @@
         },
         {
           "value": "July29",
-          "bookings": 2,
+          "bookings": 3,
           "marketing": 0,
-          "lane2": 2,
+          "lane2": 3,
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
@@ -511,7 +511,7 @@
           "revenue": 0
         },
         {
-          "value": "Vince Bartolini",
+          "value": "Tara Hall",
           "bookings": 2,
           "marketing": 0,
           "lane2": 2,
@@ -522,10 +522,10 @@
           "revenue": 0
         },
         {
-          "value": "Tara Hall",
-          "bookings": 1,
+          "value": "Vince Bartolini",
+          "bookings": 2,
           "marketing": 0,
-          "lane2": 1,
+          "lane2": 2,
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
@@ -534,15 +534,15 @@
         }
       ],
       "display": {
-        "projected": 172,
+        "projected": 180,
         "goal": 70,
-        "goal_pct": 33,
+        "goal_pct": 34,
         "pace": "pace-exceed"
       },
       "formats": {
-        "show": "8.7%",
+        "show": "8.3%",
         "qualified": "50.0%",
-        "qualified_booked": "4.3%",
+        "qualified_booked": "4.2%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -557,7 +557,7 @@
       "lane2": 9,
       "social_dms": 0,
       "showed": 2,
-      "qualified": 0,
+      "qualified": 1,
       "closed_won": 0,
       "revenue": 0.0,
       "unrecoverable_booked_leads": 10,
@@ -569,15 +569,15 @@
           "lane2": 8,
           "social_dms": 0,
           "showed": 2,
-          "qualified": 0,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
           "formats": {
             "show": "22.2%",
-            "qualified": "0.0%",
-            "qualified_booked": "0.0%",
+            "qualified": "50.0%",
+            "qualified_booked": "11.1%",
             "close": "0.0%",
-            "qualified_close": "—",
+            "qualified_close": "0.0%",
             "revenue": "$0",
             "average": "—"
           }
@@ -612,7 +612,7 @@
           "lane2": 4,
           "social_dms": 0,
           "showed": 1,
-          "qualified": 0,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0
         },
@@ -669,10 +669,10 @@
       },
       "formats": {
         "show": "20.0%",
-        "qualified": "0.0%",
-        "qualified_booked": "0.0%",
+        "qualified": "50.0%",
+        "qualified_booked": "10.0%",
         "close": "0.0%",
-        "qualified_close": "—",
+        "qualified_close": "0.0%",
         "revenue": "$0",
         "average": "—"
       }
@@ -1226,7 +1226,7 @@
     "label": "Nov 2 – Nov 4, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-04T10:30:23.153742-08:00",
+    "generated_at": "2026-11-04T10:45:19.601032-08:00",
     "counts": {
       "Christian Hartwell": 35,
       "Scott Seymour": 16,
@@ -1234,10 +1234,10 @@
       "Eric Piccione": 13,
       "Joe Vaughan": 19,
       "Shreya Bechra": 1,
-      "Luke Herman": 20,
+      "Luke Herman": 21,
       "Ariella Irvine": 10,
       "Oscar Pugh": 7,
-      "Joe Dysert": 9
+      "Joe Dysert": 8
     },
     "basis": "Current open qualified leads owned within trailing 30 days; $7,000 × 20% per lead. Independent of report week."
   }
