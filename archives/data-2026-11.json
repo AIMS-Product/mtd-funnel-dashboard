@@ -2,24 +2,24 @@
   "month_key": "2026-11",
   "month_label": "November 2026",
   "grand": {
-    "leads_created": 1070,
+    "leads_created": 1073,
     "booked": 56,
     "showed": 26,
-    "qualified": 16,
+    "qualified": 17,
     "closed": 2,
     "revenue": 12894.0
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1011,
+      "leads_created": 1012,
       "booked": 53,
       "showed": 24,
-      "qualified": 15,
+      "qualified": 16,
       "closed": 2,
       "revenue": 12894.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 59,
+      "leads_created": 61,
       "booked": 3,
       "showed": 2,
       "qualified": 1,
@@ -28,8 +28,32 @@
     }
   },
   "funnels": {
+    "Reactivation Scrapers": {
+      "leads_created": 8,
+      "booked": 28,
+      "book_pct": 350.0,
+      "showed": 12,
+      "show_pct": 42.9,
+      "qualified": 10,
+      "qual_pct": 83.3,
+      "closed": 1,
+      "cw_pct": 3.6,
+      "revenue": 6897.0
+    },
+    "YouTube": {
+      "leads_created": 3,
+      "booked": 4,
+      "book_pct": 133.3,
+      "showed": 2,
+      "show_pct": 50.0,
+      "qualified": 1,
+      "qual_pct": 50.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Internal Webinar": {
-      "leads_created": 990,
+      "leads_created": 991,
       "booked": 8,
       "book_pct": 0.8,
       "showed": 3,
@@ -41,35 +65,11 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 59,
+      "leads_created": 61,
       "booked": 3,
-      "book_pct": 5.1,
+      "book_pct": 4.9,
       "showed": 2,
       "show_pct": 66.7,
-      "qualified": 1,
-      "qual_pct": 50.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Reactivation Scrapers": {
-      "leads_created": 8,
-      "booked": 28,
-      "book_pct": 350.0,
-      "showed": 12,
-      "show_pct": 42.9,
-      "qualified": 9,
-      "qual_pct": 75.0,
-      "closed": 1,
-      "cw_pct": 3.6,
-      "revenue": 6897.0
-    },
-    "YouTube": {
-      "leads_created": 3,
-      "booked": 4,
-      "book_pct": 133.3,
-      "showed": 2,
-      "show_pct": 50.0,
       "qualified": 1,
       "qual_pct": 50.0,
       "closed": 0,
