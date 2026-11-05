@@ -103,9 +103,9 @@
     },
     {
       "value": "Tara Hall",
-      "bookings": 3,
+      "bookings": 4,
       "marketing": 0,
-      "lane2": 3,
+      "lane2": 4,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -264,6 +264,26 @@
       }
     },
     {
+      "value": "Ariella Irvine",
+      "bookings": 8,
+      "marketing": 1,
+      "lane2": 7,
+      "social_dms": 0,
+      "showed": 1,
+      "qualified": 1,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "12.5%",
+        "qualified": "100.0%",
+        "qualified_booked": "12.5%",
+        "close": "0.0%",
+        "qualified_close": "0.0%",
+        "revenue": "$0",
+        "average": "—"
+      }
+    },
+    {
       "value": "Robin Perkins",
       "bookings": 8,
       "marketing": 4,
@@ -277,26 +297,6 @@
         "show": "25.0%",
         "qualified": "50.0%",
         "qualified_booked": "12.5%",
-        "close": "0.0%",
-        "qualified_close": "0.0%",
-        "revenue": "$0",
-        "average": "—"
-      }
-    },
-    {
-      "value": "Ariella Irvine",
-      "bookings": 7,
-      "marketing": 1,
-      "lane2": 6,
-      "social_dms": 0,
-      "showed": 1,
-      "qualified": 1,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "14.3%",
-        "qualified": "100.0%",
-        "qualified_booked": "14.3%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -344,8 +344,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-05T11:45:18.698273-08:00",
-  "source_cutoff": "2026-11-05T11:45:18.698273-08:00",
+  "generated_at": "2026-11-05T12:00:25.117782-08:00",
+  "source_cutoff": "2026-11-05T12:00:25.117782-08:00",
   "vendhub_arr": 3600.0,
   "progress": {
     "day": 5,
@@ -376,25 +376,25 @@
   "period": "2026-11-02 through 2026-11-05 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 72,
+  "counted_meetings": 73,
   "excluded_repeat_candidates": 7,
-  "attribution_reviewed_at": "2026-11-05T11:45:18.698273-08:00",
+  "attribution_reviewed_at": "2026-11-05T12:00:25.117782-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1132,
-    "bookings": 72,
+    "leads_created": 1135,
+    "bookings": 73,
     "marketing": 28,
-    "lane2": 44,
+    "lane2": 45,
     "social_dms": 0,
     "showed": 14,
     "qualified": 17,
     "closed_won": 3,
     "revenue": 18891.0,
     "formats": {
-      "show": "19.4%",
+      "show": "19.2%",
       "qualified": "121.4%",
-      "qualified_booked": "23.6%",
-      "close": "4.2%",
+      "qualified_booked": "23.3%",
+      "close": "4.1%",
       "qualified_close": "17.6%",
       "revenue": "$18,891",
       "average": "$6,297"
@@ -403,7 +403,7 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1060,
+      "leads_created": 1062,
       "bookings": 30,
       "marketing": 9,
       "lane2": 21,
@@ -682,7 +682,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 56,
+      "leads_created": 57,
       "bookings": 14,
       "marketing": 2,
       "lane2": 12,
@@ -1001,9 +1001,9 @@
     {
       "channel": "YouTube",
       "leads_created": 8,
-      "bookings": 9,
+      "bookings": 10,
       "marketing": 6,
-      "lane2": 3,
+      "lane2": 4,
       "social_dms": 0,
       "showed": 4,
       "qualified": 3,
@@ -1172,6 +1172,26 @@
           }
         },
         {
+          "value": "vending-legal",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
+        },
+        {
           "value": "why-you-shouldnt-start-2025",
           "bookings": 0,
           "marketing": 0,
@@ -1260,6 +1280,17 @@
           "revenue": 0
         },
         {
+          "value": "Tara Hall",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
           "value": "Cassie Caraballo",
           "bookings": 0,
           "marketing": 0,
@@ -1272,16 +1303,16 @@
         }
       ],
       "display": {
-        "projected": 54,
+        "projected": 60,
         "goal": 132,
-        "goal_pct": 7,
+        "goal_pct": 8,
         "pace": "pace-behind"
       },
       "formats": {
-        "show": "44.4%",
+        "show": "40.0%",
         "qualified": "75.0%",
-        "qualified_booked": "33.3%",
-        "close": "11.1%",
+        "qualified_booked": "30.0%",
+        "close": "10.0%",
         "qualified_close": "33.3%",
         "revenue": "$5,997",
         "average": "$5,997"
@@ -1689,11 +1720,11 @@
     "label": "Nov 2 – Nov 5, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-05T11:45:18.698273-08:00",
+    "generated_at": "2026-11-05T12:00:25.117782-08:00",
     "counts": {
       "Christian Hartwell": 36,
-      "Scott Seymour": 15,
-      "Robin Perkins": 21,
+      "Scott Seymour": 17,
+      "Robin Perkins": 22,
       "Eric Piccione": 13,
       "Joe Vaughan": 18,
       "Shreya Bechra": 1,
