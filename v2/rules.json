@@ -1,5 +1,5 @@
 {
-  "version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
+  "version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "timezone": "America/Los_Angeles",
   "repeat_days": 30,
   "repeat_boundary": "A new qualifying credit is eligible only when scheduled-start time is strictly more than 720 elapsed hours after the prior non-canceled meeting.",
@@ -121,6 +121,14 @@
     {
       "key": "naria_torres_vendingpreneurs_pathway_next_steps_booked",
       "pattern": "vendingpren[eu]+rs?\\s+pathway\\s*-?\\s*next\\s+steps",
+      "setter_name": "Naria Torres",
+      "setter_user_id": "user_PBMfAYkPSkMaYK58gXuG70Vu1SLd2bsG3Mvys6RZNgY",
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "naria_torres_vendingpreneurs_navigator_next_steps_booked",
+      "pattern": "vendingpren[eu]+rs?\\s+navigator\\s*-?\\s*next\\s+steps",
       "setter_name": "Naria Torres",
       "setter_user_id": "user_PBMfAYkPSkMaYK58gXuG70Vu1SLd2bsG3Mvys6RZNgY",
       "required_setter": null,
@@ -297,7 +305,7 @@
     },
     {
       "key": "tara_hall_vendingpreneurs_visionary_next_steps",
-      "pattern": "vendingpren[eu]+rs?\\s+visionary\\s*[-\u2013]?\\s*next\\s+steps",
+      "pattern": "vendingpren[eu]+rs?\\s+visionary\\s*[-–]?\\s*next\\s+steps",
       "setter_name": "Tara Hall",
       "setter_user_id": "user_eQU8NtY1DEGcWY0KikTakVlAxVG420UmEQGJV1I8UpV",
       "required_setter": null,
@@ -423,12 +431,13 @@
     "deployed_metric_version": "lane2_outreach_response.v5",
     "deployed_title_count": 33,
     "roster_count": 25,
-    "regular_title_count": 25,
+    "regular_title_count": 26,
     "historical_exception_count": 5,
     "william_setter_fallback_retired_before": "2026-09-15T00:00:00-07:00",
     "ariella_horizon_reference": "https://calendly.com/d/d3pd-kx9-c6d/vendingpreneurs-horizon-next-steps",
     "source_alias_revision": "User-approved alignment of yt, fb/facebook, ig, internal_webinar, website, and web with medium home; October 13, 2026. No Resource Tag or newsletter precedence change.",
-    "source_recovery_revision": "User instruction: recover sources using only contact utm_source. No Resource Tag or utm_medium fallback, override, or conflict. Keep all-contact conflict review and established valid origin authority. October 13, 2026."
+    "source_recovery_revision": "User instruction: recover sources using only contact utm_source. No Resource Tag or utm_medium fallback, override, or conflict. Keep all-contact conflict review and established valid origin authority. October 13, 2026.",
+    "naria_navigator_title_revision": "Added Naria Torres title “Vendingpreneurs Navigator - Next Steps” as a separate active Lane 2 mapping; November 2, 2026."
   },
   "repeat_reference_scope": "all_scheduled_close_meetings_for_lead",
   "repeat_basis": "scheduled_meeting_start_elapsed_30x24h",
