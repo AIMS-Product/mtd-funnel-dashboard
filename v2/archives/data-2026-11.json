@@ -7,14 +7,14 @@
       "marketing": 34,
       "lane2": 0,
       "social_dms": 0,
-      "showed": 11,
-      "qualified": 6,
+      "showed": 12,
+      "qualified": 7,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "32.4%",
-        "qualified": "54.5%",
-        "qualified_booked": "17.6%",
+        "show": "35.3%",
+        "qualified": "58.3%",
+        "qualified_booked": "20.6%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -122,6 +122,26 @@
       }
     },
     {
+      "value": "Finley Eastlake",
+      "bookings": 1,
+      "marketing": 0,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "0.0%",
+        "qualified": "—",
+        "qualified_booked": "0.0%",
+        "close": "0.0%",
+        "qualified_close": "—",
+        "revenue": "$0",
+        "average": "—"
+      }
+    },
+    {
       "value": "Pearl Sathekge",
       "bookings": 1,
       "marketing": 0,
@@ -139,6 +159,26 @@
         "qualified_close": "—",
         "revenue": "$0",
         "average": "—"
+      }
+    },
+    {
+      "value": "Cassie Caraballo",
+      "bookings": 0,
+      "marketing": 0,
+      "lane2": 0,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 1,
+      "revenue": 5997.0,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "qualified_booked": "—",
+        "close": "—",
+        "qualified_close": "—",
+        "revenue": "$5,997",
+        "average": "$5,997"
       }
     },
     {
@@ -191,16 +231,16 @@
       "social_dms": 1,
       "showed": 0,
       "qualified": 5,
-      "closed_won": 0,
-      "revenue": 0,
+      "closed_won": 1,
+      "revenue": 5997.0,
       "formats": {
         "show": "0.0%",
         "qualified": "—",
         "qualified_booked": "38.5%",
-        "close": "0.0%",
-        "qualified_close": "0.0%",
-        "revenue": "$0",
-        "average": "—"
+        "close": "7.7%",
+        "qualified_close": "20.0%",
+        "revenue": "$5,997",
+        "average": "$5,997"
       }
     },
     {
@@ -225,18 +265,18 @@
     },
     {
       "value": "Christian Hartwell",
-      "bookings": 10,
+      "bookings": 11,
       "marketing": 5,
-      "lane2": 5,
+      "lane2": 6,
       "social_dms": 0,
-      "showed": 3,
-      "qualified": 1,
+      "showed": 4,
+      "qualified": 2,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "30.0%",
-        "qualified": "33.3%",
-        "qualified_booked": "10.0%",
+        "show": "36.4%",
+        "qualified": "50.0%",
+        "qualified_booked": "18.2%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -324,9 +364,9 @@
       }
     }
   ],
-  "generated_at": "2026-11-05T10:45:21.692538-08:00",
-  "source_cutoff": "2026-11-05T10:45:21.692538-08:00",
-  "vendhub_arr": 2400.0,
+  "generated_at": "2026-11-05T11:00:27.100234-08:00",
+  "source_cutoff": "2026-11-05T11:00:27.100234-08:00",
+  "vendhub_arr": 3600.0,
   "progress": {
     "day": 5,
     "days": 30,
@@ -356,34 +396,34 @@
   "period": "2026-11-01 through 2026-11-05 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 78,
+  "counted_meetings": 79,
   "excluded_repeat_candidates": 7,
-  "attribution_reviewed_at": "2026-11-05T10:45:21.692538-08:00",
+  "attribution_reviewed_at": "2026-11-05T11:00:27.100234-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1136,
-    "bookings": 78,
+    "leads_created": 1137,
+    "bookings": 79,
     "marketing": 34,
-    "lane2": 43,
+    "lane2": 44,
     "social_dms": 1,
-    "showed": 18,
-    "qualified": 20,
-    "closed_won": 2,
-    "revenue": 12894.0,
+    "showed": 19,
+    "qualified": 21,
+    "closed_won": 3,
+    "revenue": 18891.0,
     "formats": {
-      "show": "23.1%",
-      "qualified": "111.1%",
-      "qualified_booked": "25.6%",
-      "close": "2.6%",
-      "qualified_close": "10.0%",
-      "revenue": "$12,894",
-      "average": "$6,447"
+      "show": "24.1%",
+      "qualified": "110.5%",
+      "qualified_booked": "26.6%",
+      "close": "3.8%",
+      "qualified_close": "14.3%",
+      "revenue": "$18,891",
+      "average": "$6,297"
     }
   },
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1051,
+      "leads_created": 1052,
       "bookings": 32,
       "marketing": 11,
       "lane2": 21,
@@ -681,6 +721,177 @@
       }
     },
     {
+      "channel": "Unknown (Needs Review)",
+      "leads_created": 65,
+      "bookings": 14,
+      "marketing": 2,
+      "lane2": 12,
+      "social_dms": 0,
+      "showed": 3,
+      "qualified": 3,
+      "closed_won": 1,
+      "revenue": 6897.0,
+      "unrecoverable_booked_leads": 14,
+      "drilldowns": [
+        {
+          "value": "Unattributed",
+          "bookings": 13,
+          "marketing": 2,
+          "lane2": 11,
+          "social_dms": 0,
+          "showed": 2,
+          "qualified": 2,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "15.4%",
+            "qualified": "100.0%",
+            "qualified_booked": "15.4%",
+            "close": "0.0%",
+            "qualified_close": "0.0%",
+            "revenue": "$0",
+            "average": "—"
+          }
+        },
+        {
+          "value": "_____",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 1,
+          "revenue": 6897.0,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "qualified_booked": "100.0%",
+            "close": "100.0%",
+            "qualified_close": "100.0%",
+            "revenue": "$6,897",
+            "average": "$6,897"
+          }
+        }
+      ],
+      "packages": [
+        {
+          "value": "Bronze - $5,997 · Community",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 6897.0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "qualified_booked": "—",
+            "close": "—",
+            "qualified_close": "—",
+            "revenue": "$6,897",
+            "average": "$6,897"
+          }
+        }
+      ],
+      "setters": [
+        {
+          "value": "Vince Bartolini",
+          "bookings": 4,
+          "marketing": 0,
+          "lane2": 4,
+          "social_dms": 0,
+          "showed": 2,
+          "qualified": 2,
+          "closed_won": 1,
+          "revenue": 6897.0
+        },
+        {
+          "value": "August Young",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Marketing",
+          "bookings": 2,
+          "marketing": 2,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Naria Torres",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Rob Maxfield",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Finley Eastlake",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Tara Hall",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
+      "display": {
+        "projected": 84,
+        "goal": null,
+        "goal_pct": null,
+        "pace": ""
+      },
+      "formats": {
+        "show": "21.4%",
+        "qualified": "100.0%",
+        "qualified_booked": "21.4%",
+        "close": "7.1%",
+        "qualified_close": "33.3%",
+        "revenue": "$6,897",
+        "average": "$6,897"
+      }
+    },
+    {
       "channel": "Google Ads",
       "leads_created": 9,
       "bookings": 13,
@@ -828,166 +1039,6 @@
       }
     },
     {
-      "channel": "Unknown (Needs Review)",
-      "leads_created": 65,
-      "bookings": 13,
-      "marketing": 2,
-      "lane2": 11,
-      "social_dms": 0,
-      "showed": 3,
-      "qualified": 3,
-      "closed_won": 1,
-      "revenue": 6897.0,
-      "unrecoverable_booked_leads": 13,
-      "drilldowns": [
-        {
-          "value": "Unattributed",
-          "bookings": 12,
-          "marketing": 2,
-          "lane2": 10,
-          "social_dms": 0,
-          "showed": 2,
-          "qualified": 2,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "16.7%",
-            "qualified": "100.0%",
-            "qualified_booked": "16.7%",
-            "close": "0.0%",
-            "qualified_close": "0.0%",
-            "revenue": "$0",
-            "average": "—"
-          }
-        },
-        {
-          "value": "_____",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 1,
-          "revenue": 6897.0,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "100.0%",
-            "qualified_booked": "100.0%",
-            "close": "100.0%",
-            "qualified_close": "100.0%",
-            "revenue": "$6,897",
-            "average": "$6,897"
-          }
-        }
-      ],
-      "packages": [
-        {
-          "value": "Bronze - $5,997 · Community",
-          "bookings": 0,
-          "marketing": 0,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 1,
-          "revenue": 6897.0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "qualified_booked": "—",
-            "close": "—",
-            "qualified_close": "—",
-            "revenue": "$6,897",
-            "average": "$6,897"
-          }
-        }
-      ],
-      "setters": [
-        {
-          "value": "Vince Bartolini",
-          "bookings": 4,
-          "marketing": 0,
-          "lane2": 4,
-          "social_dms": 0,
-          "showed": 2,
-          "qualified": 2,
-          "closed_won": 1,
-          "revenue": 6897.0
-        },
-        {
-          "value": "August Young",
-          "bookings": 2,
-          "marketing": 0,
-          "lane2": 2,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0
-        },
-        {
-          "value": "Marketing",
-          "bookings": 2,
-          "marketing": 2,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0
-        },
-        {
-          "value": "Naria Torres",
-          "bookings": 2,
-          "marketing": 0,
-          "lane2": 2,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0
-        },
-        {
-          "value": "Rob Maxfield",
-          "bookings": 2,
-          "marketing": 0,
-          "lane2": 2,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0
-        },
-        {
-          "value": "Tara Hall",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0
-        }
-      ],
-      "display": {
-        "projected": 78,
-        "goal": null,
-        "goal_pct": null,
-        "pace": ""
-      },
-      "formats": {
-        "show": "23.1%",
-        "qualified": "100.0%",
-        "qualified_booked": "23.1%",
-        "close": "7.7%",
-        "qualified_close": "33.3%",
-        "revenue": "$6,897",
-        "average": "$6,897"
-      }
-    },
-    {
       "channel": "YouTube",
       "leads_created": 8,
       "bookings": 10,
@@ -996,8 +1047,8 @@
       "social_dms": 0,
       "showed": 5,
       "qualified": 4,
-      "closed_won": 0,
-      "revenue": 0.0,
+      "closed_won": 1,
+      "revenue": 5997.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
         {
@@ -1179,9 +1230,50 @@
             "revenue": "$0",
             "average": "—"
           }
+        },
+        {
+          "value": "why-you-shouldnt-start-2025",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 5997.0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "qualified_booked": "—",
+            "close": "—",
+            "qualified_close": "—",
+            "revenue": "$5,997",
+            "average": "$5,997"
+          }
         }
       ],
-      "packages": [],
+      "packages": [
+        {
+          "value": "Bronze - $5,997 · Community",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 5997.0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "qualified_booked": "—",
+            "close": "—",
+            "qualified_close": "—",
+            "revenue": "$5,997",
+            "average": "$5,997"
+          }
+        }
+      ],
       "setters": [
         {
           "value": "Marketing",
@@ -1226,6 +1318,17 @@
           "qualified": 1,
           "closed_won": 0,
           "revenue": 0
+        },
+        {
+          "value": "Cassie Caraballo",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 5997.0
         }
       ],
       "display": {
@@ -1238,10 +1341,10 @@
         "show": "50.0%",
         "qualified": "80.0%",
         "qualified_booked": "40.0%",
-        "close": "0.0%",
-        "qualified_close": "0.0%",
-        "revenue": "$0",
-        "average": "—"
+        "close": "10.0%",
+        "qualified_close": "25.0%",
+        "revenue": "$5,997",
+        "average": "$5,997"
       }
     },
     {
@@ -1516,8 +1619,8 @@
       "marketing": 1,
       "lane2": 0,
       "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
+      "showed": 1,
+      "qualified": 1,
       "closed_won": 0,
       "revenue": 0.0,
       "unrecoverable_booked_leads": 0,
@@ -1528,16 +1631,16 @@
           "marketing": 1,
           "lane2": 0,
           "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
+          "showed": 1,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
           "formats": {
-            "show": "0.0%",
-            "qualified": "—",
-            "qualified_booked": "0.0%",
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "qualified_booked": "100.0%",
             "close": "0.0%",
-            "qualified_close": "—",
+            "qualified_close": "0.0%",
             "revenue": "$0",
             "average": "—"
           }
@@ -1551,8 +1654,8 @@
           "marketing": 1,
           "lane2": 0,
           "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
+          "showed": 1,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0
         }
@@ -1564,11 +1667,11 @@
         "pace": ""
       },
       "formats": {
-        "show": "0.0%",
-        "qualified": "—",
-        "qualified_booked": "0.0%",
+        "show": "100.0%",
+        "qualified": "100.0%",
+        "qualified_booked": "100.0%",
         "close": "0.0%",
-        "qualified_close": "—",
+        "qualified_close": "0.0%",
         "revenue": "$0",
         "average": "—"
       }
@@ -1640,11 +1743,11 @@
   ],
   "goal_percentages": {
     "bookings": 6,
-    "revenue": 2
+    "revenue": 3
   },
   "arr_display": {
-    "arr": "$2,400",
-    "mrr": "$200"
+    "arr": "$3,600",
+    "mrr": "$300"
   },
   "view": {
     "key": "2026-11",
@@ -1657,15 +1760,15 @@
     "label": "November 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-05T10:45:21.692538-08:00",
+    "generated_at": "2026-11-05T11:00:27.100234-08:00",
     "counts": {
-      "Christian Hartwell": 35,
-      "Scott Seymour": 17,
+      "Christian Hartwell": 36,
+      "Scott Seymour": 15,
       "Robin Perkins": 21,
       "Eric Piccione": 13,
       "Joe Vaughan": 18,
       "Shreya Bechra": 1,
-      "Luke Herman": 21,
+      "Luke Herman": 20,
       "Ariella Irvine": 12,
       "Oscar Pugh": 5,
       "Joe Dysert": 8
