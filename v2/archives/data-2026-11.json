@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 31,
-      "marketing": 31,
+      "bookings": 30,
+      "marketing": 30,
       "lane2": 0,
       "social_dms": 0,
       "showed": 9,
@@ -12,9 +12,9 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "29.0%",
+        "show": "30.0%",
         "qualified": "55.6%",
-        "qualified_booked": "16.1%",
+        "qualified_booked": "16.7%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -145,8 +145,8 @@
   "team": [
     {
       "value": "Luke Herman",
-      "bookings": 15,
-      "marketing": 6,
+      "bookings": 14,
+      "marketing": 5,
       "lane2": 9,
       "social_dms": 0,
       "showed": 4,
@@ -154,10 +154,10 @@
       "closed_won": 1,
       "revenue": 6897.0,
       "formats": {
-        "show": "26.7%",
+        "show": "28.6%",
         "qualified": "100.0%",
-        "qualified_booked": "26.7%",
-        "close": "6.7%",
+        "qualified_booked": "28.6%",
+        "close": "7.1%",
         "qualified_close": "25.0%",
         "revenue": "$6,897",
         "average": "$6,897"
@@ -284,8 +284,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-05T05:15:18.423491-08:00",
-  "source_cutoff": "2026-11-05T05:15:18.423491-08:00",
+  "generated_at": "2026-11-05T05:30:21.004818-08:00",
+  "source_cutoff": "2026-11-05T05:30:21.004818-08:00",
   "vendhub_arr": 2400.0,
   "progress": {
     "day": 5,
@@ -316,14 +316,14 @@
   "period": "2026-11-01 through 2026-11-05 PT",
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 63,
+  "counted_meetings": 62,
   "excluded_repeat_candidates": 5,
-  "attribution_reviewed_at": "2026-11-05T05:15:18.423491-08:00",
+  "attribution_reviewed_at": "2026-11-05T05:30:21.004818-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1069,
-    "bookings": 63,
-    "marketing": 31,
+    "leads_created": 1070,
+    "bookings": 62,
+    "marketing": 30,
     "lane2": 31,
     "social_dms": 1,
     "showed": 16,
@@ -331,9 +331,9 @@
     "closed_won": 2,
     "revenue": 12894.0,
     "formats": {
-      "show": "25.4%",
+      "show": "25.8%",
       "qualified": "75.0%",
-      "qualified_booked": "19.0%",
+      "qualified_booked": "19.4%",
       "close": "3.2%",
       "qualified_close": "16.7%",
       "revenue": "$12,894",
@@ -343,9 +343,9 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 993,
-      "bookings": 29,
-      "marketing": 12,
+      "leads_created": 994,
+      "bookings": 28,
+      "marketing": 11,
       "lane2": 17,
       "social_dms": 0,
       "showed": 5,
@@ -356,8 +356,8 @@
       "drilldowns": [
         {
           "value": "nov03",
-          "bookings": 15,
-          "marketing": 9,
+          "bookings": 14,
+          "marketing": 8,
           "lane2": 6,
           "social_dms": 0,
           "showed": 1,
@@ -365,9 +365,9 @@
           "closed_won": 0,
           "revenue": 0,
           "formats": {
-            "show": "6.7%",
+            "show": "7.1%",
             "qualified": "100.0%",
-            "qualified_booked": "6.7%",
+            "qualified_booked": "7.1%",
             "close": "0.0%",
             "qualified_close": "0.0%",
             "revenue": "$0",
@@ -519,8 +519,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 12,
-          "marketing": 12,
+          "bookings": 11,
+          "marketing": 11,
           "lane2": 0,
           "social_dms": 0,
           "showed": 2,
@@ -574,15 +574,15 @@
         }
       ],
       "display": {
-        "projected": 174,
+        "projected": 168,
         "goal": 70,
-        "goal_pct": 41,
+        "goal_pct": 40,
         "pace": "pace-exceed"
       },
       "formats": {
-        "show": "17.2%",
+        "show": "17.9%",
         "qualified": "80.0%",
-        "qualified_booked": "13.8%",
+        "qualified_booked": "14.3%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -1402,7 +1402,7 @@
     "label": "November 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-05T05:15:18.423491-08:00",
+    "generated_at": "2026-11-05T05:30:21.004818-08:00",
     "counts": {
       "Christian Hartwell": 35,
       "Scott Seymour": 18,
@@ -1413,7 +1413,7 @@
       "Luke Herman": 21,
       "Ariella Irvine": 11,
       "Oscar Pugh": 6,
-      "Joe Dysert": 8
+      "Joe Dysert": 9
     },
     "basis": "Current open qualified leads owned within trailing 30 days; $7,000 × 20% per lead. Independent of report week."
   }
