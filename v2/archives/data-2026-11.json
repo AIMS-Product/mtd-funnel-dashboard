@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 25,
-      "marketing": 25,
+      "bookings": 26,
+      "marketing": 26,
       "lane2": 0,
       "social_dms": 0,
       "showed": 9,
@@ -12,9 +12,9 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "36.0%",
+        "show": "34.6%",
         "qualified": "55.6%",
-        "qualified_booked": "20.0%",
+        "qualified_booked": "19.2%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -145,8 +145,8 @@
   "team": [
     {
       "value": "Luke Herman",
-      "bookings": 13,
-      "marketing": 4,
+      "bookings": 15,
+      "marketing": 6,
       "lane2": 9,
       "social_dms": 0,
       "showed": 4,
@@ -154,10 +154,10 @@
       "closed_won": 1,
       "revenue": 6897.0,
       "formats": {
-        "show": "30.8%",
+        "show": "26.7%",
         "qualified": "100.0%",
-        "qualified_booked": "30.8%",
-        "close": "7.7%",
+        "qualified_booked": "26.7%",
+        "close": "6.7%",
         "qualified_close": "25.0%",
         "revenue": "$6,897",
         "average": "$6,897"
@@ -204,26 +204,6 @@
       }
     },
     {
-      "value": "Joe Vaughan",
-      "bookings": 8,
-      "marketing": 5,
-      "lane2": 2,
-      "social_dms": 1,
-      "showed": 2,
-      "qualified": 2,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "25.0%",
-        "qualified": "100.0%",
-        "qualified_booked": "25.0%",
-        "close": "0.0%",
-        "qualified_close": "0.0%",
-        "revenue": "$0",
-        "average": "—"
-      }
-    },
-    {
       "value": "Ariella Irvine",
       "bookings": 7,
       "marketing": 2,
@@ -237,6 +217,26 @@
         "show": "28.6%",
         "qualified": "50.0%",
         "qualified_booked": "14.3%",
+        "close": "0.0%",
+        "qualified_close": "0.0%",
+        "revenue": "$0",
+        "average": "—"
+      }
+    },
+    {
+      "value": "Joe Vaughan",
+      "bookings": 7,
+      "marketing": 4,
+      "lane2": 2,
+      "social_dms": 1,
+      "showed": 2,
+      "qualified": 2,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "28.6%",
+        "qualified": "100.0%",
+        "qualified_booked": "28.6%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -284,8 +284,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-04T18:15:18.941254-08:00",
-  "source_cutoff": "2026-11-04T18:15:18.941254-08:00",
+  "generated_at": "2026-11-04T18:30:21.295909-08:00",
+  "source_cutoff": "2026-11-04T18:30:21.295909-08:00",
   "vendhub_arr": 2400.0,
   "progress": {
     "day": 4,
@@ -316,14 +316,14 @@
   "period": "2026-11-01 through 2026-11-04 PT",
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 58,
-  "excluded_repeat_candidates": 3,
-  "attribution_reviewed_at": "2026-11-04T18:15:18.941254-08:00",
+  "counted_meetings": 59,
+  "excluded_repeat_candidates": 4,
+  "attribution_reviewed_at": "2026-11-04T18:30:21.295909-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1008,
-    "bookings": 58,
-    "marketing": 25,
+    "leads_created": 1012,
+    "bookings": 59,
+    "marketing": 26,
     "lane2": 31,
     "social_dms": 2,
     "showed": 16,
@@ -331,9 +331,9 @@
     "closed_won": 2,
     "revenue": 12894.0,
     "formats": {
-      "show": "27.6%",
+      "show": "27.1%",
       "qualified": "75.0%",
-      "qualified_booked": "20.7%",
+      "qualified_booked": "20.3%",
       "close": "3.4%",
       "qualified_close": "16.7%",
       "revenue": "$12,894",
@@ -343,9 +343,9 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 939,
-      "bookings": 27,
-      "marketing": 10,
+      "leads_created": 942,
+      "bookings": 28,
+      "marketing": 11,
       "lane2": 17,
       "social_dms": 0,
       "showed": 5,
@@ -356,8 +356,8 @@
       "drilldowns": [
         {
           "value": "nov03",
-          "bookings": 13,
-          "marketing": 7,
+          "bookings": 14,
+          "marketing": 8,
           "lane2": 6,
           "social_dms": 0,
           "showed": 1,
@@ -365,9 +365,9 @@
           "closed_won": 0,
           "revenue": 0,
           "formats": {
-            "show": "7.7%",
+            "show": "7.1%",
             "qualified": "100.0%",
-            "qualified_booked": "7.7%",
+            "qualified_booked": "7.1%",
             "close": "0.0%",
             "qualified_close": "0.0%",
             "revenue": "$0",
@@ -519,8 +519,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 10,
-          "marketing": 10,
+          "bookings": 11,
+          "marketing": 11,
           "lane2": 0,
           "social_dms": 0,
           "showed": 2,
@@ -574,15 +574,15 @@
         }
       ],
       "display": {
-        "projected": 202,
+        "projected": 210,
         "goal": 70,
-        "goal_pct": 39,
+        "goal_pct": 40,
         "pace": "pace-exceed"
       },
       "formats": {
-        "show": "18.5%",
+        "show": "17.9%",
         "qualified": "80.0%",
-        "qualified_booked": "14.8%",
+        "qualified_booked": "14.3%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -591,7 +591,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 55,
+      "leads_created": 56,
       "bookings": 11,
       "marketing": 2,
       "lane2": 9,
@@ -1318,7 +1318,7 @@
     "label": "November 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-04T18:15:18.941254-08:00",
+    "generated_at": "2026-11-04T18:30:21.295909-08:00",
     "counts": {
       "Christian Hartwell": 36,
       "Scott Seymour": 18,
