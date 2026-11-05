@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 30,
-      "marketing": 30,
+      "bookings": 31,
+      "marketing": 31,
       "lane2": 0,
       "social_dms": 0,
       "showed": 9,
@@ -12,9 +12,9 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "30.0%",
+        "show": "29.0%",
         "qualified": "55.6%",
-        "qualified_booked": "16.7%",
+        "qualified_booked": "16.1%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -165,8 +165,8 @@
     },
     {
       "value": "Christian Hartwell",
-      "bookings": 9,
-      "marketing": 4,
+      "bookings": 10,
+      "marketing": 5,
       "lane2": 5,
       "social_dms": 0,
       "showed": 3,
@@ -174,9 +174,9 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "33.3%",
+        "show": "30.0%",
         "qualified": "33.3%",
-        "qualified_booked": "11.1%",
+        "qualified_booked": "10.0%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -284,8 +284,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-05T04:30:23.694875-08:00",
-  "source_cutoff": "2026-11-05T04:30:23.694875-08:00",
+  "generated_at": "2026-11-05T04:45:20.607286-08:00",
+  "source_cutoff": "2026-11-05T04:45:20.607286-08:00",
   "vendhub_arr": 2400.0,
   "progress": {
     "day": 5,
@@ -316,14 +316,14 @@
   "period": "2026-11-01 through 2026-11-05 PT",
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 62,
+  "counted_meetings": 63,
   "excluded_repeat_candidates": 5,
-  "attribution_reviewed_at": "2026-11-05T04:30:23.694875-08:00",
+  "attribution_reviewed_at": "2026-11-05T04:45:20.607286-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 1067,
-    "bookings": 62,
-    "marketing": 30,
+    "bookings": 63,
+    "marketing": 31,
     "lane2": 31,
     "social_dms": 1,
     "showed": 16,
@@ -331,9 +331,9 @@
     "closed_won": 2,
     "revenue": 12894.0,
     "formats": {
-      "show": "25.8%",
+      "show": "25.4%",
       "qualified": "75.0%",
-      "qualified_booked": "19.4%",
+      "qualified_booked": "19.0%",
       "close": "3.2%",
       "qualified_close": "16.7%",
       "revenue": "$12,894",
@@ -1255,6 +1255,70 @@
       }
     },
     {
+      "channel": "Anthony IG",
+      "leads_created": 0,
+      "bookings": 1,
+      "marketing": 1,
+      "lane2": 0,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0.0,
+      "unrecoverable_booked_leads": 0,
+      "drilldowns": [
+        {
+          "value": "book-call",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "0.0%",
+            "close": "0.0%",
+            "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
+        }
+      ],
+      "packages": [],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
+      "display": {
+        "projected": 6,
+        "goal": null,
+        "goal_pct": null,
+        "pace": ""
+      },
+      "formats": {
+        "show": "0.0%",
+        "qualified": "—",
+        "qualified_booked": "0.0%",
+        "close": "0.0%",
+        "qualified_close": "—",
+        "revenue": "$0",
+        "average": "—"
+      }
+    },
+    {
       "channel": "GoHighLevel",
       "leads_created": 1,
       "bookings": 1,
@@ -1338,7 +1402,7 @@
     "label": "November 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-05T04:30:23.694875-08:00",
+    "generated_at": "2026-11-05T04:45:20.607286-08:00",
     "counts": {
       "Christian Hartwell": 35,
       "Scott Seymour": 18,
