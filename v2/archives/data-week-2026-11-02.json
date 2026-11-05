@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 18,
-      "marketing": 18,
+      "bookings": 17,
+      "marketing": 17,
       "lane2": 0,
       "social_dms": 0,
       "showed": 5,
@@ -12,9 +12,9 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "27.8%",
+        "show": "29.4%",
         "qualified": "40.0%",
-        "qualified_booked": "11.1%",
+        "qualified_booked": "11.8%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -205,8 +205,8 @@
     },
     {
       "value": "Joe Vaughan",
-      "bookings": 6,
-      "marketing": 4,
+      "bookings": 5,
+      "marketing": 3,
       "lane2": 2,
       "social_dms": 0,
       "showed": 2,
@@ -214,9 +214,9 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "33.3%",
+        "show": "40.0%",
         "qualified": "100.0%",
-        "qualified_booked": "33.3%",
+        "qualified_booked": "40.0%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -264,8 +264,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-04T17:30:30.605014-08:00",
-  "source_cutoff": "2026-11-04T17:30:30.605014-08:00",
+  "generated_at": "2026-11-04T17:45:16.379807-08:00",
+  "source_cutoff": "2026-11-04T17:45:16.379807-08:00",
   "vendhub_arr": 2400.0,
   "progress": {
     "day": 4,
@@ -296,14 +296,14 @@
   "period": "2026-11-02 through 2026-11-04 PT",
   "rules_version": "booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 49,
+  "counted_meetings": 48,
   "excluded_repeat_candidates": 3,
-  "attribution_reviewed_at": "2026-11-04T17:30:30.605014-08:00",
+  "attribution_reviewed_at": "2026-11-04T17:45:16.379807-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 987,
-    "bookings": 49,
-    "marketing": 18,
+    "bookings": 48,
+    "marketing": 17,
     "lane2": 31,
     "social_dms": 0,
     "showed": 12,
@@ -311,10 +311,10 @@
     "closed_won": 2,
     "revenue": 12894.0,
     "formats": {
-      "show": "24.5%",
+      "show": "25.0%",
       "qualified": "75.0%",
-      "qualified_booked": "18.4%",
-      "close": "4.1%",
+      "qualified_booked": "18.8%",
+      "close": "4.2%",
       "qualified_close": "22.2%",
       "revenue": "$12,894",
       "average": "$6,447"
@@ -323,7 +323,7 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 933,
+      "leads_created": 934,
       "bookings": 24,
       "marketing": 7,
       "lane2": 17,
@@ -551,21 +551,21 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 45,
-      "bookings": 11,
-      "marketing": 2,
+      "leads_created": 44,
+      "bookings": 10,
+      "marketing": 1,
       "lane2": 9,
       "social_dms": 0,
       "showed": 3,
       "qualified": 2,
       "closed_won": 1,
       "revenue": 6897.0,
-      "unrecoverable_booked_leads": 11,
+      "unrecoverable_booked_leads": 10,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 10,
-          "marketing": 2,
+          "bookings": 9,
+          "marketing": 1,
           "lane2": 8,
           "social_dms": 0,
           "showed": 2,
@@ -573,9 +573,9 @@
           "closed_won": 0,
           "revenue": 0,
           "formats": {
-            "show": "20.0%",
+            "show": "22.2%",
             "qualified": "50.0%",
-            "qualified_booked": "10.0%",
+            "qualified_booked": "11.1%",
             "close": "0.0%",
             "qualified_close": "0.0%",
             "revenue": "$0",
@@ -649,23 +649,23 @@
           "revenue": 0
         },
         {
-          "value": "Marketing",
-          "bookings": 2,
-          "marketing": 2,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0
-        },
-        {
           "value": "Rob Maxfield",
           "bookings": 2,
           "marketing": 0,
           "lane2": 2,
           "social_dms": 0,
           "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0
+        },
+        {
+          "value": "Marketing",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 1,
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0
@@ -683,16 +683,16 @@
         }
       ],
       "display": {
-        "projected": 82,
+        "projected": 75,
         "goal": null,
         "goal_pct": null,
         "pace": ""
       },
       "formats": {
-        "show": "27.3%",
+        "show": "30.0%",
         "qualified": "66.7%",
-        "qualified_booked": "18.2%",
-        "close": "9.1%",
+        "qualified_booked": "20.0%",
+        "close": "10.0%",
         "qualified_close": "50.0%",
         "revenue": "$6,897",
         "average": "$6,897"
@@ -1247,7 +1247,7 @@
     "label": "Nov 2 – Nov 4, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-04T17:30:30.605014-08:00",
+    "generated_at": "2026-11-04T17:45:16.379807-08:00",
     "counts": {
       "Christian Hartwell": 36,
       "Scott Seymour": 18,
