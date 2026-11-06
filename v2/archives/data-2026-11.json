@@ -8,13 +8,13 @@
       "lane2": 0,
       "social_dms": 0,
       "showed": 16,
-      "qualified": 9,
+      "qualified": 10,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
         "show": "43.2%",
-        "qualified": "56.2%",
-        "qualified_booked": "24.3%",
+        "qualified": "62.5%",
+        "qualified_booked": "27.0%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -210,15 +210,15 @@
       "lane2": 12,
       "social_dms": 0,
       "showed": 7,
-      "qualified": 6,
+      "qualified": 7,
       "closed_won": 1,
       "revenue": 6897.0,
       "formats": {
         "show": "38.9%",
-        "qualified": "85.7%",
-        "qualified_booked": "33.3%",
+        "qualified": "100.0%",
+        "qualified_booked": "38.9%",
         "close": "5.6%",
-        "qualified_close": "16.7%",
+        "qualified_close": "14.3%",
         "revenue": "$6,897",
         "average": "$6,897"
       }
@@ -364,8 +364,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-06T13:45:20.130413-08:00",
-  "source_cutoff": "2026-11-06T13:45:20.130413-08:00",
+  "generated_at": "2026-11-06T14:00:26.382258-08:00",
+  "source_cutoff": "2026-11-06T14:00:26.382258-08:00",
   "vendhub_arr": 7799.0,
   "progress": {
     "day": 6,
@@ -397,25 +397,25 @@
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 98,
-  "excluded_repeat_candidates": 10,
-  "attribution_reviewed_at": "2026-11-06T13:45:20.130413-08:00",
+  "excluded_repeat_candidates": 11,
+  "attribution_reviewed_at": "2026-11-06T14:00:26.382258-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1328,
+    "leads_created": 1330,
     "bookings": 98,
     "marketing": 37,
     "lane2": 59,
     "social_dms": 2,
     "showed": 24,
-    "qualified": 27,
+    "qualified": 28,
     "closed_won": 5,
     "revenue": 27887.0,
     "formats": {
       "show": "24.5%",
-      "qualified": "112.5%",
-      "qualified_booked": "27.6%",
+      "qualified": "116.7%",
+      "qualified_booked": "28.6%",
       "close": "5.1%",
-      "qualified_close": "18.5%",
+      "qualified_close": "17.9%",
       "revenue": "$27,887",
       "average": "$5,577"
     }
@@ -423,13 +423,13 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1220,
+      "leads_created": 1222,
       "bookings": 34,
       "marketing": 9,
       "lane2": 25,
       "social_dms": 0,
       "showed": 8,
-      "qualified": 7,
+      "qualified": 8,
       "closed_won": 0,
       "revenue": 0.0,
       "unrecoverable_booked_leads": 0,
@@ -441,13 +441,13 @@
           "lane2": 8,
           "social_dms": 0,
           "showed": 3,
-          "qualified": 2,
+          "qualified": 3,
           "closed_won": 0,
           "revenue": 0,
           "formats": {
             "show": "21.4%",
-            "qualified": "66.7%",
-            "qualified_booked": "14.3%",
+            "qualified": "100.0%",
+            "qualified_booked": "21.4%",
             "close": "0.0%",
             "qualified_close": "0.0%",
             "revenue": "$0",
@@ -675,7 +675,7 @@
           "lane2": 0,
           "social_dms": 0,
           "showed": 4,
-          "qualified": 1,
+          "qualified": 2,
           "closed_won": 0,
           "revenue": 0
         },
@@ -732,8 +732,8 @@
       },
       "formats": {
         "show": "23.5%",
-        "qualified": "87.5%",
-        "qualified_booked": "20.6%",
+        "qualified": "100.0%",
+        "qualified_booked": "23.5%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -2130,7 +2130,7 @@
     "label": "November 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-06T13:45:20.130413-08:00",
+    "generated_at": "2026-11-06T14:00:26.382258-08:00",
     "counts": {
       "Christian Hartwell": 36,
       "Scott Seymour": 9,
@@ -2138,7 +2138,7 @@
       "Eric Piccione": 13,
       "Joe Vaughan": 16,
       "Shreya Bechra": 2,
-      "Luke Herman": 26,
+      "Luke Herman": 27,
       "Ariella Irvine": 10,
       "Oscar Pugh": 3,
       "Joe Dysert": 6
