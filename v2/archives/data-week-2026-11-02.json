@@ -42,6 +42,26 @@
       }
     },
     {
+      "value": "Vince Bartolini",
+      "bookings": 11,
+      "marketing": 0,
+      "lane2": 11,
+      "social_dms": 0,
+      "showed": 4,
+      "qualified": 6,
+      "closed_won": 2,
+      "revenue": 12894.0,
+      "formats": {
+        "show": "36.4%",
+        "qualified": "150.0%",
+        "qualified_booked": "54.5%",
+        "close": "18.2%",
+        "qualified_close": "33.3%",
+        "revenue": "$12,894",
+        "average": "$6,447"
+      }
+    },
+    {
       "value": "Naria Torres",
       "bookings": 11,
       "marketing": 0,
@@ -79,26 +99,6 @@
         "qualified_close": "0.0%",
         "revenue": "$0",
         "average": "—"
-      }
-    },
-    {
-      "value": "Vince Bartolini",
-      "bookings": 10,
-      "marketing": 0,
-      "lane2": 10,
-      "social_dms": 0,
-      "showed": 4,
-      "qualified": 5,
-      "closed_won": 2,
-      "revenue": 12894.0,
-      "formats": {
-        "show": "40.0%",
-        "qualified": "125.0%",
-        "qualified_booked": "50.0%",
-        "close": "20.0%",
-        "qualified_close": "40.0%",
-        "revenue": "$12,894",
-        "average": "$6,447"
       }
     },
     {
@@ -204,6 +204,26 @@
       }
     },
     {
+      "value": "Ariella Irvine",
+      "bookings": 13,
+      "marketing": 1,
+      "lane2": 12,
+      "social_dms": 0,
+      "showed": 1,
+      "qualified": 2,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "7.7%",
+        "qualified": "200.0%",
+        "qualified_booked": "15.4%",
+        "close": "0.0%",
+        "qualified_close": "0.0%",
+        "revenue": "$0",
+        "average": "—"
+      }
+    },
+    {
       "value": "Christian Hartwell",
       "bookings": 12,
       "marketing": 6,
@@ -241,26 +261,6 @@
         "qualified_close": "20.0%",
         "revenue": "$5,997",
         "average": "$5,997"
-      }
-    },
-    {
-      "value": "Ariella Irvine",
-      "bookings": 12,
-      "marketing": 1,
-      "lane2": 11,
-      "social_dms": 0,
-      "showed": 1,
-      "qualified": 1,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "8.3%",
-        "qualified": "100.0%",
-        "qualified_booked": "8.3%",
-        "close": "0.0%",
-        "qualified_close": "0.0%",
-        "revenue": "$0",
-        "average": "—"
       }
     },
     {
@@ -344,8 +344,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-05T19:30:24.444774-08:00",
-  "source_cutoff": "2026-11-05T19:30:24.444774-08:00",
+  "generated_at": "2026-11-05T19:45:17.246827-08:00",
+  "source_cutoff": "2026-11-05T19:45:17.246827-08:00",
   "vendhub_arr": 7799.0,
   "progress": {
     "day": 5,
@@ -376,26 +376,26 @@
   "period": "2026-11-02 through 2026-11-05 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 79,
+  "counted_meetings": 80,
   "excluded_repeat_candidates": 7,
-  "attribution_reviewed_at": "2026-11-05T19:30:24.444774-08:00",
+  "attribution_reviewed_at": "2026-11-05T19:45:17.246827-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1179,
-    "bookings": 79,
+    "leads_created": 1182,
+    "bookings": 80,
     "marketing": 28,
-    "lane2": 51,
+    "lane2": 52,
     "social_dms": 0,
     "showed": 15,
-    "qualified": 17,
+    "qualified": 18,
     "closed_won": 5,
     "revenue": 27887.0,
     "formats": {
-      "show": "19.0%",
-      "qualified": "113.3%",
-      "qualified_booked": "21.5%",
-      "close": "6.3%",
-      "qualified_close": "29.4%",
+      "show": "18.8%",
+      "qualified": "120.0%",
+      "qualified_booked": "22.5%",
+      "close": "6.2%",
+      "qualified_close": "27.8%",
       "revenue": "$27,887",
       "average": "$5,577"
     }
@@ -403,7 +403,7 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1105,
+      "leads_created": 1108,
       "bookings": 32,
       "marketing": 9,
       "lane2": 23,
@@ -1810,6 +1810,70 @@
         "revenue": "$0",
         "average": "—"
       }
+    },
+    {
+      "channel": "LTF - In-House",
+      "leads_created": 0,
+      "bookings": 1,
+      "marketing": 0,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 1,
+      "closed_won": 0,
+      "revenue": 0.0,
+      "unrecoverable_booked_leads": 0,
+      "drilldowns": [
+        {
+          "value": "wescale",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "100.0%",
+            "close": "0.0%",
+            "qualified_close": "0.0%",
+            "revenue": "$0",
+            "average": "—"
+          }
+        }
+      ],
+      "packages": [],
+      "setters": [
+        {
+          "value": "Vince Bartolini",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0
+        }
+      ],
+      "display": {
+        "projected": 6,
+        "goal": null,
+        "goal_pct": null,
+        "pace": ""
+      },
+      "formats": {
+        "show": "0.0%",
+        "qualified": "—",
+        "qualified_booked": "100.0%",
+        "close": "0.0%",
+        "qualified_close": "0.0%",
+        "revenue": "$0",
+        "average": "—"
+      }
     }
   ],
   "goal_percentages": {
@@ -1831,7 +1895,7 @@
     "label": "Nov 2 – Nov 5, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-05T19:30:24.444774-08:00",
+    "generated_at": "2026-11-05T19:45:17.246827-08:00",
     "counts": {
       "Christian Hartwell": 35,
       "Scott Seymour": 11,
@@ -1840,7 +1904,7 @@
       "Joe Vaughan": 17,
       "Shreya Bechra": 2,
       "Luke Herman": 24,
-      "Ariella Irvine": 11,
+      "Ariella Irvine": 12,
       "Oscar Pugh": 5,
       "Joe Dysert": 6
     },
