@@ -63,19 +63,19 @@
     },
     {
       "value": "Naria Torres",
-      "bookings": 11,
+      "bookings": 10,
       "marketing": 0,
-      "lane2": 11,
+      "lane2": 10,
       "social_dms": 0,
       "showed": 1,
       "qualified": 7,
       "closed_won": 1,
       "revenue": 2999.0,
       "formats": {
-        "show": "9.1%",
+        "show": "10.0%",
         "qualified": "700.0%",
-        "qualified_booked": "63.6%",
-        "close": "9.1%",
+        "qualified_booked": "70.0%",
+        "close": "10.0%",
         "qualified_close": "14.3%",
         "revenue": "$2,999",
         "average": "$2,999"
@@ -225,19 +225,19 @@
     },
     {
       "value": "Christian Hartwell",
-      "bookings": 19,
+      "bookings": 18,
       "marketing": 9,
-      "lane2": 10,
+      "lane2": 9,
       "social_dms": 0,
       "showed": 6,
       "qualified": 5,
       "closed_won": 1,
       "revenue": 5997.0,
       "formats": {
-        "show": "31.6%",
+        "show": "33.3%",
         "qualified": "83.3%",
-        "qualified_booked": "26.3%",
-        "close": "5.3%",
+        "qualified_booked": "27.8%",
+        "close": "5.6%",
         "qualified_close": "20.0%",
         "revenue": "$5,997",
         "average": "$5,997"
@@ -364,8 +364,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-07T09:30:20.244123-08:00",
-  "source_cutoff": "2026-11-07T09:30:20.244123-08:00",
+  "generated_at": "2026-11-07T09:45:17.287030-08:00",
+  "source_cutoff": "2026-11-07T09:45:17.287030-08:00",
   "vendhub_arr": 7799.0,
   "progress": {
     "day": 7,
@@ -396,25 +396,25 @@
   "period": "2026-11-01 through 2026-11-07 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 104,
+  "counted_meetings": 103,
   "excluded_repeat_candidates": 11,
-  "attribution_reviewed_at": "2026-11-07T09:30:20.244123-08:00",
+  "attribution_reviewed_at": "2026-11-07T09:45:17.287030-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1468,
-    "bookings": 104,
+    "leads_created": 1471,
+    "bookings": 103,
     "marketing": 40,
-    "lane2": 62,
+    "lane2": 61,
     "social_dms": 2,
     "showed": 31,
     "qualified": 32,
     "closed_won": 5,
     "revenue": 27887.0,
     "formats": {
-      "show": "29.8%",
+      "show": "30.1%",
       "qualified": "103.2%",
-      "qualified_booked": "30.8%",
-      "close": "4.8%",
+      "qualified_booked": "31.1%",
+      "close": "4.9%",
       "qualified_close": "15.6%",
       "revenue": "$27,887",
       "average": "$5,577"
@@ -423,7 +423,7 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1354,
+      "leads_created": 1356,
       "bookings": 33,
       "marketing": 9,
       "lane2": 24,
@@ -722,16 +722,16 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 53,
-      "bookings": 22,
+      "leads_created": 54,
+      "bookings": 21,
       "marketing": 3,
-      "lane2": 19,
+      "lane2": 18,
       "social_dms": 0,
       "showed": 6,
       "qualified": 6,
       "closed_won": 2,
       "revenue": 12894.0,
-      "unrecoverable_booked_leads": 22,
+      "unrecoverable_booked_leads": 21,
       "drilldowns": [
         {
           "value": "Unattributed",
@@ -812,26 +812,6 @@
             "revenue": "$0",
             "average": "—"
           }
-        },
-        {
-          "value": "route-builder",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "0.0%",
-            "qualified": "—",
-            "qualified_booked": "0.0%",
-            "close": "0.0%",
-            "qualified_close": "—",
-            "revenue": "$0",
-            "average": "—"
-          }
         }
       ],
       "packages": [
@@ -892,9 +872,9 @@
         },
         {
           "value": "Naria Torres",
-          "bookings": 3,
+          "bookings": 2,
           "marketing": 0,
-          "lane2": 3,
+          "lane2": 2,
           "social_dms": 0,
           "showed": 0,
           "qualified": 1,
@@ -936,16 +916,16 @@
         }
       ],
       "display": {
-        "projected": 94,
+        "projected": 90,
         "goal": null,
         "goal_pct": null,
         "pace": ""
       },
       "formats": {
-        "show": "27.3%",
+        "show": "28.6%",
         "qualified": "100.0%",
-        "qualified_booked": "27.3%",
-        "close": "9.1%",
+        "qualified_booked": "28.6%",
+        "close": "9.5%",
         "qualified_close": "33.3%",
         "revenue": "$12,894",
         "average": "$6,447"
@@ -2181,7 +2161,7 @@
     "label": "November 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-07T09:30:20.244123-08:00",
+    "generated_at": "2026-11-07T09:45:17.287030-08:00",
     "counts": {
       "Christian Hartwell": 32,
       "Scott Seymour": 9,
