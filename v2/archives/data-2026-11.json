@@ -72,9 +72,9 @@
     },
     {
       "value": "Naria Torres",
-      "bookings": 10,
+      "bookings": 11,
       "marketing": 0,
-      "lane2": 10,
+      "lane2": 11,
       "social_dms": 0,
       "showed": 6,
       "qualified": 4,
@@ -327,9 +327,9 @@
     },
     {
       "value": "Christian Hartwell",
-      "bookings": 18,
+      "bookings": 19,
       "marketing": 9,
-      "lane2": 9,
+      "lane2": 10,
       "social_dms": 0,
       "showed": 11,
       "qualified": 5,
@@ -510,8 +510,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-07T15:15:17.797801-08:00",
-  "source_cutoff": "2026-11-07T15:15:17.797801-08:00",
+  "generated_at": "2026-11-07T15:30:21.992951-08:00",
+  "source_cutoff": "2026-11-07T15:30:21.992951-08:00",
   "vendhub_arr": 7799.0,
   "progress": {
     "day": 7,
@@ -542,15 +542,15 @@
   "period": "2026-11-01 through 2026-11-07 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 103,
+  "counted_meetings": 104,
   "excluded_repeat_candidates": 12,
-  "attribution_reviewed_at": "2026-11-07T15:15:17.797801-08:00",
+  "attribution_reviewed_at": "2026-11-07T15:30:21.992951-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1509,
-    "bookings": 103,
+    "leads_created": 1510,
+    "bookings": 104,
     "marketing": 40,
-    "lane2": 61,
+    "lane2": 62,
     "social_dms": 2,
     "showed": 53,
     "qualified": 35,
@@ -572,10 +572,10 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1393,
-      "bookings": 33,
+      "leads_created": 1394,
+      "bookings": 34,
       "marketing": 9,
-      "lane2": 24,
+      "lane2": 25,
       "social_dms": 0,
       "showed": 14,
       "qualified": 8,
@@ -791,6 +791,29 @@
           "unresolved_calls": 0
         },
         {
+          "value": "oct06_end_cta",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "sept29",
           "bookings": 1,
           "marketing": 0,
@@ -947,6 +970,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Naria Torres",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "0.0%",
+            "qualified_occurred": "100.0%"
+          },
+          "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Tara Hall",
           "bookings": 2,
           "marketing": 0,
@@ -966,33 +1010,12 @@
           "occurred_calls": 2,
           "no_shows": 2,
           "unresolved_calls": 0
-        },
-        {
-          "value": "Naria Torres",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 1,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "100.0%",
-            "close": "0.0%",
-            "qualified_occurred": "100.0%"
-          },
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 0
         }
       ],
       "display": {
-        "projected": 141,
+        "projected": 146,
         "goal": 70,
-        "goal_pct": 47,
+        "goal_pct": 49,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -3156,9 +3179,9 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-07T15:15:17.797801-08:00",
+    "generated_at": "2026-11-07T15:30:21.992951-08:00",
     "counts": {
-      "Christian Hartwell": 33,
+      "Christian Hartwell": 34,
       "Scott Seymour": 9,
       "Robin Perkins": 16,
       "Eric Piccione": 11,
