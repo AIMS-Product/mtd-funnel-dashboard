@@ -328,9 +328,9 @@ function buildTable(months, allData) {
     const last = i === months.length - 1;
     const cls  = mcClass(m.month_key);
     const bo  = g ? g.booked : null;
-    const sh  = g && bo ? g.showed / bo * 100    : null;
-    const qu  = g && g.showed ? g.qualified / g.showed * 100 : null;
-    const cw  = g && bo ? g.closed / bo * 100    : null;
+    const sh  = g ? g.show_pct : null;
+    const qu  = g ? g.qual_pct : null;
+    const cw  = g ? g.cw_pct : null;
     const rv  = g ? g.revenue : null;
     return `
       <td class="col-num ${cls}">${fmt(bo)}</td>
