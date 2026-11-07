@@ -2,7 +2,7 @@
   "month_key": "2026-11",
   "month_label": "November 2026",
   "grand": {
-    "leads_created": 1490,
+    "leads_created": 1492,
     "booked": 85,
     "showed": 43,
     "qualified": 31,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1437,
+      "leads_created": 1439,
       "booked": 81,
       "showed": 40,
       "qualified": 29,
@@ -28,8 +28,20 @@
     }
   },
   "funnels": {
+    "Google Ads": {
+      "leads_created": 44,
+      "booked": 12,
+      "book_pct": 27.3,
+      "showed": 7,
+      "show_pct": 58.3,
+      "qualified": 5,
+      "qual_pct": 71.4,
+      "closed": 1,
+      "cw_pct": 8.3,
+      "revenue": 5997.0
+    },
     "Internal Webinar": {
-      "leads_created": 1369,
+      "leads_created": 1371,
       "booked": 11,
       "book_pct": 0.8,
       "showed": 6,
@@ -75,18 +87,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Google Ads": {
-      "leads_created": 44,
-      "booked": 12,
-      "book_pct": 27.3,
-      "showed": 7,
-      "show_pct": 58.3,
-      "qualified": 5,
-      "qual_pct": 71.4,
-      "closed": 1,
-      "cw_pct": 8.3,
-      "revenue": 5997.0
     },
     "Anthony IG": {
       "leads_created": 0,
