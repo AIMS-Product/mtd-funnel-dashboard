@@ -8,13 +8,13 @@
       "lane2": 0,
       "social_dms": 0,
       "showed": 16,
-      "qualified": 10,
+      "qualified": 11,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
         "show": "40.0%",
-        "qualified": "62.5%",
-        "qualified_booked": "25.0%",
+        "qualified": "68.8%",
+        "qualified_booked": "27.5%",
         "close": "0.0%",
         "qualified_close": "0.0%",
         "revenue": "$0",
@@ -230,15 +230,15 @@
       "lane2": 9,
       "social_dms": 0,
       "showed": 6,
-      "qualified": 5,
+      "qualified": 6,
       "closed_won": 1,
       "revenue": 5997.0,
       "formats": {
         "show": "33.3%",
-        "qualified": "83.3%",
-        "qualified_booked": "27.8%",
+        "qualified": "100.0%",
+        "qualified_booked": "33.3%",
         "close": "5.6%",
-        "qualified_close": "20.0%",
+        "qualified_close": "16.7%",
         "revenue": "$5,997",
         "average": "$5,997"
       }
@@ -364,8 +364,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-07T11:00:22.989147-08:00",
-  "source_cutoff": "2026-11-07T11:00:22.989147-08:00",
+  "generated_at": "2026-11-07T11:15:18.590419-08:00",
+  "source_cutoff": "2026-11-07T11:15:18.590419-08:00",
   "vendhub_arr": 7799.0,
   "progress": {
     "day": 7,
@@ -398,24 +398,24 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 103,
   "excluded_repeat_candidates": 11,
-  "attribution_reviewed_at": "2026-11-07T11:00:22.989147-08:00",
+  "attribution_reviewed_at": "2026-11-07T11:15:18.590419-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1483,
+    "leads_created": 1484,
     "bookings": 103,
     "marketing": 40,
     "lane2": 61,
     "social_dms": 2,
     "showed": 34,
-    "qualified": 32,
+    "qualified": 33,
     "closed_won": 5,
     "revenue": 27887.0,
     "formats": {
       "show": "33.0%",
-      "qualified": "94.1%",
-      "qualified_booked": "31.1%",
+      "qualified": "97.1%",
+      "qualified_booked": "32.0%",
       "close": "4.9%",
-      "qualified_close": "15.6%",
+      "qualified_close": "15.2%",
       "revenue": "$27,887",
       "average": "$5,577"
     }
@@ -423,7 +423,7 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1367,
+      "leads_created": 1368,
       "bookings": 33,
       "marketing": 9,
       "lane2": 24,
@@ -728,7 +728,7 @@
       "lane2": 18,
       "social_dms": 0,
       "showed": 8,
-      "qualified": 6,
+      "qualified": 7,
       "closed_won": 2,
       "revenue": 12894.0,
       "unrecoverable_booked_leads": 21,
@@ -800,15 +800,15 @@
           "lane2": 0,
           "social_dms": 0,
           "showed": 0,
-          "qualified": 0,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
           "formats": {
             "show": "0.0%",
             "qualified": "—",
-            "qualified_booked": "0.0%",
+            "qualified_booked": "100.0%",
             "close": "0.0%",
-            "qualified_close": "—",
+            "qualified_close": "0.0%",
             "revenue": "$0",
             "average": "—"
           }
@@ -866,7 +866,7 @@
           "lane2": 0,
           "social_dms": 0,
           "showed": 1,
-          "qualified": 0,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0
         },
@@ -923,10 +923,10 @@
       },
       "formats": {
         "show": "38.1%",
-        "qualified": "75.0%",
-        "qualified_booked": "28.6%",
+        "qualified": "87.5%",
+        "qualified_booked": "33.3%",
         "close": "9.5%",
-        "qualified_close": "33.3%",
+        "qualified_close": "28.6%",
         "revenue": "$12,894",
         "average": "$6,447"
       }
@@ -2161,9 +2161,9 @@
     "label": "November 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-07T11:00:22.989147-08:00",
+    "generated_at": "2026-11-07T11:15:18.590419-08:00",
     "counts": {
-      "Christian Hartwell": 32,
+      "Christian Hartwell": 33,
       "Scott Seymour": 9,
       "Robin Perkins": 17,
       "Eric Piccione": 11,
