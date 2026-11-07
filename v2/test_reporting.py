@@ -61,6 +61,9 @@ class ReportingTests(unittest.TestCase):
             archives = root / "archives"
             with patch.object(refresh, "ROOT", root), patch.object(refresh, "ARCHIVES", archives), \
                  patch.object(refresh, "load_api_key", return_value="test"), \
+                 patch.object(refresh, "scheduled_dataset", return_value={"rows": []}), \
+                 patch.object(refresh, "occurred_dataset", return_value={}), \
+                 patch.object(refresh, "apply_occurred_mtd", side_effect=lambda public, *_: public), \
                  patch.object(refresh, "build_dataset", side_effect=private_snapshot) as builder:
                 refresh.refresh(now)
                 self.assertEqual(builder.call_count, 6)

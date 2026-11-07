@@ -10,6 +10,33 @@ The dedicated [`update_v2.yml`](../.github/workflows/update_v2.yml) GitHub Actio
 
 The workflow runs `python3 v2/refresh.py`, refreshing the full month and current week while maintaining V2's own monthly and weekly archives. It commits only `v2/index.html` and aggregate-only files under `v2/archives/` and `v2/reports/` for GitHub Pages. Its concurrency group prevents overlapping V2 builds, and it rebases before pushing to preserve updates from other dashboard jobs. The current MTD workflow, schedule, root dashboard, root reports, and root archives are unchanged.
 
+
+## Calls Occurred reporting (November 2026)
+
+The reporting selector is pinned to MTD V2 v2.8, including complete meeting histories,
+30-day repeat credit, title mappings, VP owner scope, source attribution and cancellations.
+Calls Occurred are accepted calls scheduled in the elapsed Pacific reporting window
+with the meeting's native **Completed** or **No Show** outcome. Blank, unresolved,
+rescheduled and future meetings do not enter this denominator. Shown uses native
+Completed; the lead's First Call Show Up field is not consulted.
+
+Qualified counts distinct currently qualified leads in the occurred cohort, retaining
+native group deduplication. This release does not reset qualification or write to Close.
+Show, qualification and primary close rates divide by occurred calls; zero calls is
+undefined. Won leads/opportunities and revenue retain the dashboard's native date-won,
+owner, currency and deduplication definitions, independent of meeting dates. Process
+adherence retains its existing scheduled-date cohort and scoring.
+
+All CRM requests are read-only, using existing credentials. Private input snapshots
+and reconciliation rows are not committed. Existing finalized snapshots retain their
+original definitions; live/new reports carry `calls-occurred.v1` metadata. To roll back,
+revert the release code commit and rerun the dashboard's existing refresh workflow;
+do not restore an old data snapshot over newer source results.
+
+MTD V2 retains creation-date Total Booked and adds a separate Calls Occurred KPI.
+Both the visible funnel and its exports use the occurred denominator. Historical
+reports without this metric retain their saved display and rate definitions.
+
 ## Expanded reporting
 
 - **Month over Month** compares V2 source bookings, show/qualification/close rates, and revenue. October is the first month; additional months appear automatically. Legacy data is never mixed into V2 comparisons.

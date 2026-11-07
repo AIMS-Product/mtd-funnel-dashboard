@@ -24,7 +24,7 @@ FUNCTIONS = {
 CONSTANTS = {'FUNNEL_GROUPS', 'EXCLUDED_FROM_TOTALS_FUNNELS', 'MONTHLY_BOOKED_GOAL', 'MONTHLY_REVENUE_GOAL'}
 
 
-def presentation_namespace():
+def presentation_namespace(*, outcomes=False):
     """Load only pure UI functions/constants; legacy fetching code is never executed."""
     source = ROOT.parent / 'fetch_and_build.py'
     with warnings.catch_warnings():
@@ -41,13 +41,23 @@ def presentation_namespace():
     if {node.name for node in functions} != FUNCTIONS:
         raise ValueError('The current MTD presentation contract changed')
     exec(compile(ast.Module(body=functions, type_ignores=[]), str(source), 'exec'), namespace)
+    if outcomes:
+        outcome_tree = ast.parse((ROOT / 'outcome_ui.py').read_text())
+        replacements = [node for node in outcome_tree.body if isinstance(node, ast.FunctionDef)]
+        if {node.name for node in replacements} != {'build_funnel_rows', 'generate_html'}:
+            raise ValueError('Outcome presentation contract changed')
+        exec(compile(ast.Module(body=replacements, type_ignores=[]), 'outcome_ui', 'exec'), namespace)
     return namespace
 
 
 def legacy_metrics(row):
-    return {key: row.get(key, 0) for key in ('leads_created', 'showed', 'qualified', 'revenue')} | {
+    metrics = {key: row.get(key, 0) for key in ('leads_created', 'showed', 'qualified', 'revenue')} | {
         'booked': row['bookings'], 'closed': row['closed_won'],
     }
+    for field, alias in [('occurred_calls', 'occurred'), ('no_shows', 'no_shows'), ('unresolved_calls', 'unresolved')]:
+        if field in row:
+            metrics[alias] = row[field]
+    return metrics
 
 
 def adapter(data, ui):
@@ -120,7 +130,7 @@ def picker_html(data, navigation, ui):
 
 
 def render_current_ui(data, output, navigation):
-    ui = presentation_namespace()
+    ui = presentation_namespace(outcomes='occurred_calls' in data['totals'])
     adapted = adapter(data, ui)
     month_picker, week_picker = picker_html(data, navigation, ui)
     html = re.sub(r'/mtd-funnel-dashboard/(?!v2/)', BASE + '/', ui['generate_html'](adapted, month_picker, week_picker))
@@ -185,14 +195,20 @@ def write_current_comparison(reports, path):
         for row in report['channels']:
             metrics = legacy_metrics(row)
             metrics.update(
-                show_pct=round(100 * row['showed'] / row['bookings'], 1) if row['bookings'] else None,
-                qual_pct=round(100 * row['qualified'] / row['showed'], 1) if row['showed'] else None,
-                cw_pct=round(100 * row['closed_won'] / row['bookings'], 1) if row['bookings'] else None,
+                show_pct=round(100 * row['showed'] / row.get('occurred_calls', row['bookings']), 1) if row.get('occurred_calls', row['bookings']) else None,
+                qual_pct=round(100 * row['qualified'] / row.get('occurred_calls', row['showed']), 1) if row.get('occurred_calls', row['showed']) else None,
+                cw_pct=round(100 * row['closed_won'] / row.get('occurred_calls', row['bookings']), 1) if row.get('occurred_calls', row['bookings']) else None,
                 revenue=round(row['revenue']),
             )
             funnels[escape(row['channel'])] = metrics
         grand = legacy_metrics(report['totals'])
         grand['revenue'] = round(grand['revenue'])
+        denominator = report['totals'].get('occurred_calls', report['totals']['bookings'])
+        qual_denominator = report['totals'].get('occurred_calls', report['totals']['showed'])
+        grand['show_pct'] = round(100 * grand['showed'] / denominator, 1) if denominator else None
+        grand['qual_pct'] = round(100 * grand['qualified'] / qual_denominator, 1) if qual_denominator else None
+        grand['cw_pct'] = round(100 * grand['closed'] / denominator, 1) if denominator else None
+
         payload = dict(month_key=report['view']['key'], grand=grand, funnels=funnels)
         (path.parent/f"comparison-data-{report['view']['key']}.json").write_text(json.dumps(payload, indent=2)+'\n')
     html = (ROOT.parent/'archives/mom.html').read_text()
@@ -201,5 +217,8 @@ def write_current_comparison(reports, path):
     html = html.replace('filter(m => !m.is_live)', 'filter(m => !m.is_live && !m.supplemental)')
     # Keep V2's qualified/showed definition in the TOTAL row as well as source rows.
     html = html.replace('g && bo ? g.qualified / bo * 100 : null', 'g && g.showed ? g.qualified / g.showed * 100 : null')
+    html = html.replace('g && bo ? g.showed / bo * 100    : null', 'g ? g.show_pct : null')
+    html = html.replace('g && g.showed ? g.qualified / g.showed * 100 : null', 'g ? g.qual_pct : null')
+    html = html.replace('g && bo ? g.closed / bo * 100    : null', 'g ? g.cw_pct : null')
     html = html.replace('</body>', '<!-- V2 booking and attribution rules; original MTD comparison UI. -->\n</body>')
     path.write_text(html)

@@ -13,6 +13,8 @@ from build import CloseReader, build_dataset, load_api_key
 from publish_shadow import public_data, render_report
 from reporting import PACIFIC, ROOT, report_periods
 from aggregates import SCHEMA_VERSION
+from outcome_core import ReportingReader, scheduled_dataset, occurred_dataset
+from outcome_public import apply_occurred_mtd
 from reports import pipeline_snapshot, write_exports, write_comparison
 from archive_ui import write_navigation
 from supplemental import retain_history
@@ -33,7 +35,7 @@ def refresh(now: datetime | None = None, *, render_only: bool = False) -> None:
         view = period.view(now)
         # Re-read the just-completed period once at rollover, then retain it.
         if not render_only and (not saved or saved.get("schema_version") != SCHEMA_VERSION or not saved["view"]["frozen"]):
-            reader = reader or CloseReader(load_api_key())
+            reader = reader or ReportingReader(CloseReader(load_api_key()).get, period.start, now)
             print(f"Building V2 {period.key}: {period.start} through {view['end']}", flush=True)
             raw = build_dataset(reader, period.cutoff(now), period.start)
             raw["generated_at"] = now.isoformat()
@@ -41,7 +43,12 @@ def refresh(now: datetime | None = None, *, render_only: bool = False) -> None:
             with tempfile.TemporaryDirectory(prefix="mtd-v2-private-") as directory:
                 source = Path(directory) / "data.json"
                 source.write_text(json.dumps(raw))
-                saved = {**public_data(source), "view": view}
+                reader.start = period.start.isoformat()
+                reader.cutoff = period.cutoff(now)
+                scheduled = scheduled_dataset(reader)
+                occurred = occurred_dataset(scheduled)
+                saved = {**apply_occurred_mtd(public_data(source), occurred, scheduled), "view": view,
+                         "metric_version": "calls-occurred.v1"}
             if raw.get("breakdowns") is not None:
                 pipeline = pipeline or pipeline_snapshot(reader, now)
                 saved["pipeline"] = pipeline
