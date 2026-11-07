@@ -62,6 +62,26 @@
       }
     },
     {
+      "value": "Naria Torres",
+      "bookings": 10,
+      "marketing": 0,
+      "lane2": 10,
+      "social_dms": 0,
+      "showed": 1,
+      "qualified": 7,
+      "closed_won": 1,
+      "revenue": 2999.0,
+      "formats": {
+        "show": "10.0%",
+        "qualified": "700.0%",
+        "qualified_booked": "70.0%",
+        "close": "10.0%",
+        "qualified_close": "14.3%",
+        "revenue": "$2,999",
+        "average": "$2,999"
+      }
+    },
+    {
       "value": "August Young",
       "bookings": 10,
       "marketing": 0,
@@ -79,26 +99,6 @@
         "qualified_close": "0.0%",
         "revenue": "$0",
         "average": "—"
-      }
-    },
-    {
-      "value": "Naria Torres",
-      "bookings": 9,
-      "marketing": 0,
-      "lane2": 9,
-      "social_dms": 0,
-      "showed": 1,
-      "qualified": 6,
-      "closed_won": 1,
-      "revenue": 2999.0,
-      "formats": {
-        "show": "11.1%",
-        "qualified": "600.0%",
-        "qualified_booked": "66.7%",
-        "close": "11.1%",
-        "qualified_close": "16.7%",
-        "revenue": "$2,999",
-        "average": "$2,999"
       }
     },
     {
@@ -225,20 +225,20 @@
     },
     {
       "value": "Christian Hartwell",
-      "bookings": 17,
+      "bookings": 18,
       "marketing": 9,
-      "lane2": 8,
+      "lane2": 9,
       "social_dms": 0,
       "showed": 6,
-      "qualified": 4,
+      "qualified": 5,
       "closed_won": 1,
       "revenue": 5997.0,
       "formats": {
-        "show": "35.3%",
-        "qualified": "66.7%",
-        "qualified_booked": "23.5%",
-        "close": "5.9%",
-        "qualified_close": "25.0%",
+        "show": "33.3%",
+        "qualified": "83.3%",
+        "qualified_booked": "27.8%",
+        "close": "5.6%",
+        "qualified_close": "20.0%",
         "revenue": "$5,997",
         "average": "$5,997"
       }
@@ -364,8 +364,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-07T08:45:19.172273-08:00",
-  "source_cutoff": "2026-11-07T08:45:19.172273-08:00",
+  "generated_at": "2026-11-07T09:00:22.742564-08:00",
+  "source_cutoff": "2026-11-07T09:00:22.742564-08:00",
   "vendhub_arr": 7799.0,
   "progress": {
     "day": 7,
@@ -396,26 +396,26 @@
   "period": "2026-11-02 through 2026-11-07 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 95,
+  "counted_meetings": 96,
   "excluded_repeat_candidates": 11,
-  "attribution_reviewed_at": "2026-11-07T08:45:19.172273-08:00",
+  "attribution_reviewed_at": "2026-11-07T09:00:22.742564-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 1451,
-    "bookings": 95,
+    "bookings": 96,
     "marketing": 34,
-    "lane2": 60,
+    "lane2": 61,
     "social_dms": 1,
     "showed": 26,
-    "qualified": 27,
+    "qualified": 28,
     "closed_won": 5,
     "revenue": 27887.0,
     "formats": {
-      "show": "27.4%",
-      "qualified": "103.8%",
-      "qualified_booked": "28.4%",
-      "close": "5.3%",
-      "qualified_close": "18.5%",
+      "show": "27.1%",
+      "qualified": "107.7%",
+      "qualified_booked": "29.2%",
+      "close": "5.2%",
+      "qualified_close": "17.9%",
       "revenue": "$27,887",
       "average": "$5,577"
     }
@@ -914,12 +914,12 @@
     {
       "channel": "YouTube",
       "leads_created": 12,
-      "bookings": 16,
+      "bookings": 17,
       "marketing": 10,
-      "lane2": 6,
+      "lane2": 7,
       "social_dms": 0,
       "showed": 5,
-      "qualified": 4,
+      "qualified": 5,
       "closed_won": 1,
       "revenue": 5997.0,
       "unrecoverable_booked_leads": 0,
@@ -940,6 +940,26 @@
             "qualified_booked": "0.0%",
             "close": "0.0%",
             "qualified_close": "—",
+            "revenue": "$0",
+            "average": "—"
+          }
+        },
+        {
+          "value": "start-vending-business",
+          "bookings": 2,
+          "marketing": 1,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "—",
+            "qualified_booked": "50.0%",
+            "close": "0.0%",
+            "qualified_close": "0.0%",
             "revenue": "$0",
             "average": "—"
           }
@@ -1125,26 +1145,6 @@
           }
         },
         {
-          "value": "start-vending-business",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "0.0%",
-            "qualified": "—",
-            "qualified_booked": "0.0%",
-            "close": "0.0%",
-            "qualified_close": "—",
-            "revenue": "$0",
-            "average": "—"
-          }
-        },
-        {
           "value": "tom-canterino",
           "bookings": 1,
           "marketing": 1,
@@ -1261,12 +1261,12 @@
         },
         {
           "value": "Naria Torres",
-          "bookings": 2,
+          "bookings": 3,
           "marketing": 0,
-          "lane2": 2,
+          "lane2": 3,
           "social_dms": 0,
           "showed": 0,
-          "qualified": 1,
+          "qualified": 2,
           "closed_won": 0,
           "revenue": 0
         },
@@ -1327,17 +1327,17 @@
         }
       ],
       "display": {
-        "projected": 69,
+        "projected": 73,
         "goal": 132,
-        "goal_pct": 12,
+        "goal_pct": 13,
         "pace": "pace-behind"
       },
       "formats": {
-        "show": "31.2%",
-        "qualified": "80.0%",
-        "qualified_booked": "25.0%",
-        "close": "6.2%",
-        "qualified_close": "25.0%",
+        "show": "29.4%",
+        "qualified": "100.0%",
+        "qualified_booked": "29.4%",
+        "close": "5.9%",
+        "qualified_close": "20.0%",
         "revenue": "$5,997",
         "average": "$5,997"
       }
@@ -2121,13 +2121,13 @@
     "label": "Nov 2 – Nov 7, 2026"
   },
   "pipeline": {
-    "generated_at": "2026-11-07T08:45:19.172273-08:00",
+    "generated_at": "2026-11-07T09:00:22.742564-08:00",
     "counts": {
-      "Christian Hartwell": 32,
+      "Christian Hartwell": 33,
       "Scott Seymour": 9,
       "Robin Perkins": 17,
       "Eric Piccione": 11,
-      "Joe Vaughan": 14,
+      "Joe Vaughan": 13,
       "Shreya Bechra": 1,
       "Luke Herman": 21,
       "Ariella Irvine": 17,
