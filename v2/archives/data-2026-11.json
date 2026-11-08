@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 40,
-      "marketing": 40,
+      "bookings": 41,
+      "marketing": 41,
       "lane2": 0,
       "social_dms": 0,
       "showed": 24,
@@ -304,8 +304,8 @@
   "team": [
     {
       "value": "Luke Herman",
-      "bookings": 20,
-      "marketing": 7,
+      "bookings": 21,
+      "marketing": 8,
       "lane2": 13,
       "social_dms": 0,
       "showed": 10,
@@ -510,8 +510,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-07T21:00:23.044947-08:00",
-  "source_cutoff": "2026-11-07T21:00:23.044947-08:00",
+  "generated_at": "2026-11-07T21:15:18.517798-08:00",
+  "source_cutoff": "2026-11-07T21:15:18.517798-08:00",
   "vendhub_arr": 7799.0,
   "progress": {
     "day": 7,
@@ -542,14 +542,14 @@
   "period": "2026-11-01 through 2026-11-07 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 103,
+  "counted_meetings": 104,
   "excluded_repeat_candidates": 12,
-  "attribution_reviewed_at": "2026-11-07T21:00:23.044947-08:00",
+  "attribution_reviewed_at": "2026-11-07T21:15:18.517798-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 1544,
-    "bookings": 103,
-    "marketing": 40,
+    "bookings": 104,
+    "marketing": 41,
     "lane2": 61,
     "social_dms": 2,
     "showed": 53,
@@ -1033,7 +1033,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 54,
+      "leads_created": 53,
       "bookings": 20,
       "marketing": 3,
       "lane2": 17,
@@ -2521,9 +2521,9 @@
     },
     {
       "channel": "Meta Ads",
-      "leads_created": 0,
-      "bookings": 4,
-      "marketing": 1,
+      "leads_created": 1,
+      "bookings": 5,
+      "marketing": 2,
       "lane2": 3,
       "social_dms": 0,
       "showed": 2,
@@ -2602,6 +2602,29 @@
           "unresolved_calls": 0
         },
         {
+          "value": "VP-Masterclass",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "adset-120250400565610740",
           "bookings": 0,
           "marketing": 0,
@@ -2650,8 +2673,8 @@
         },
         {
           "value": "Marketing",
-          "bookings": 1,
-          "marketing": 1,
+          "bookings": 2,
+          "marketing": 2,
           "lane2": 0,
           "social_dms": 0,
           "showed": 1,
@@ -2671,9 +2694,9 @@
         }
       ],
       "display": {
-        "projected": 17,
+        "projected": 21,
         "goal": 44,
-        "goal_pct": 9,
+        "goal_pct": 11,
         "pace": "pace-behind"
       },
       "formats": {
@@ -3158,7 +3181,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-07T21:00:23.044947-08:00",
+    "generated_at": "2026-11-07T21:15:18.517798-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 9,
