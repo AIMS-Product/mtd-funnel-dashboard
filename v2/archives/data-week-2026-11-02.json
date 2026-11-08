@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 35,
-      "marketing": 35,
+      "bookings": 36,
+      "marketing": 36,
       "lane2": 0,
       "social_dms": 0,
       "showed": 24,
@@ -327,8 +327,8 @@
     },
     {
       "value": "Christian Hartwell",
-      "bookings": 19,
-      "marketing": 9,
+      "bookings": 20,
+      "marketing": 10,
       "lane2": 10,
       "social_dms": 0,
       "showed": 11,
@@ -510,8 +510,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-08T10:15:22.245556-08:00",
-  "source_cutoff": "2026-11-08T10:15:22.245556-08:00",
+  "generated_at": "2026-11-08T10:30:23.116320-08:00",
+  "source_cutoff": "2026-11-08T10:30:23.116320-08:00",
   "vendhub_arr": 7799.0,
   "progress": {
     "day": 8,
@@ -542,14 +542,14 @@
   "period": "2026-11-02 through 2026-11-08 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 97,
+  "counted_meetings": 98,
   "excluded_repeat_candidates": 12,
-  "attribution_reviewed_at": "2026-11-08T10:15:22.245556-08:00",
+  "attribution_reviewed_at": "2026-11-08T10:30:23.116320-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1616,
-    "bookings": 97,
-    "marketing": 35,
+    "leads_created": 1619,
+    "bookings": 98,
+    "marketing": 36,
     "lane2": 61,
     "social_dms": 1,
     "showed": 51,
@@ -572,7 +572,7 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1512,
+      "leads_created": 1514,
       "bookings": 32,
       "marketing": 7,
       "lane2": 25,
@@ -1415,9 +1415,9 @@
     },
     {
       "channel": "YouTube",
-      "leads_created": 12,
-      "bookings": 17,
-      "marketing": 10,
+      "leads_created": 13,
+      "bookings": 18,
+      "marketing": 11,
       "lane2": 7,
       "social_dms": 0,
       "showed": 9,
@@ -1426,6 +1426,29 @@
       "revenue": 5997.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
+        {
+          "value": "book-a-call",
+          "bookings": 2,
+          "marketing": 2,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "0.0%"
+          },
+          "scheduled_calls": 1,
+          "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
         {
           "value": "first-vending-machine",
           "bookings": 2,
@@ -1517,29 +1540,6 @@
           "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 1
-        },
-        {
-          "value": "book-a-call",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "0.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "0.0%"
-          },
-          "scheduled_calls": 1,
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 0
         },
         {
           "value": "dont-start-vending",
@@ -1889,8 +1889,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 10,
-          "marketing": 10,
+          "bookings": 11,
+          "marketing": 11,
           "lane2": 0,
           "social_dms": 0,
           "showed": 4,
@@ -2057,9 +2057,9 @@
         }
       ],
       "display": {
-        "projected": 64,
+        "projected": 68,
         "goal": 132,
-        "goal_pct": 13,
+        "goal_pct": 14,
         "pace": "pace-behind"
       },
       "formats": {
@@ -3158,7 +3158,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-08T10:15:22.245556-08:00",
+    "generated_at": "2026-11-08T10:30:23.116320-08:00",
     "counts": {
       "Christian Hartwell": 32,
       "Scott Seymour": 9,
@@ -3166,7 +3166,7 @@
       "Eric Piccione": 10,
       "Joe Vaughan": 13,
       "Shreya Bechra": 1,
-      "Luke Herman": 21,
+      "Luke Herman": 20,
       "Ariella Irvine": 14,
       "Oscar Pugh": 1,
       "Joe Dysert": 8
