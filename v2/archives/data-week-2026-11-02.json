@@ -95,9 +95,9 @@
     },
     {
       "value": "August Young",
-      "bookings": 10,
+      "bookings": 9,
       "marketing": 0,
-      "lane2": 10,
+      "lane2": 9,
       "social_dms": 0,
       "showed": 1,
       "qualified": 1,
@@ -349,29 +349,6 @@
       "unresolved_calls": 3
     },
     {
-      "value": "Ariella Irvine",
-      "bookings": 15,
-      "marketing": 0,
-      "lane2": 15,
-      "social_dms": 0,
-      "showed": 5,
-      "qualified": 2,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "71.4%",
-        "qualified": "28.6%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "28.6%"
-      },
-      "scheduled_calls": 8,
-      "occurred_calls": 7,
-      "no_shows": 2,
-      "unresolved_calls": 1
-    },
-    {
       "value": "Scott Seymour",
       "bookings": 14,
       "marketing": 2,
@@ -393,6 +370,29 @@
       "occurred_calls": 7,
       "no_shows": 3,
       "unresolved_calls": 2
+    },
+    {
+      "value": "Ariella Irvine",
+      "bookings": 14,
+      "marketing": 0,
+      "lane2": 14,
+      "social_dms": 0,
+      "showed": 5,
+      "qualified": 2,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "71.4%",
+        "qualified": "28.6%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "28.6%"
+      },
+      "scheduled_calls": 8,
+      "occurred_calls": 7,
+      "no_shows": 2,
+      "unresolved_calls": 1
     },
     {
       "value": "Joe Vaughan",
@@ -510,8 +510,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-07T20:30:20.677003-08:00",
-  "source_cutoff": "2026-11-07T20:30:20.677003-08:00",
+  "generated_at": "2026-11-07T21:00:23.044947-08:00",
+  "source_cutoff": "2026-11-07T21:00:23.044947-08:00",
   "vendhub_arr": 7799.0,
   "progress": {
     "day": 7,
@@ -542,15 +542,15 @@
   "period": "2026-11-02 through 2026-11-07 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 97,
+  "counted_meetings": 96,
   "excluded_repeat_candidates": 12,
-  "attribution_reviewed_at": "2026-11-07T20:30:20.677003-08:00",
+  "attribution_reviewed_at": "2026-11-07T21:00:23.044947-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1526,
-    "bookings": 97,
+    "leads_created": 1531,
+    "bookings": 96,
     "marketing": 34,
-    "lane2": 62,
+    "lane2": 61,
     "social_dms": 1,
     "showed": 51,
     "qualified": 35,
@@ -572,7 +572,7 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1423,
+      "leads_created": 1428,
       "bookings": 32,
       "marketing": 7,
       "lane2": 25,
@@ -1034,21 +1034,21 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 48,
-      "bookings": 21,
+      "bookings": 20,
       "marketing": 3,
-      "lane2": 18,
+      "lane2": 17,
       "social_dms": 0,
       "showed": 13,
       "qualified": 8,
       "closed_won": 2,
       "revenue": 12894.0,
-      "unrecoverable_booked_leads": 21,
+      "unrecoverable_booked_leads": 20,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 18,
+          "bookings": 17,
           "marketing": 2,
-          "lane2": 16,
+          "lane2": 15,
           "social_dms": 0,
           "showed": 11,
           "qualified": 6,
@@ -1268,27 +1268,6 @@
           "unresolved_calls": 1
         },
         {
-          "value": "August Young",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
-          },
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "Finley Eastlake",
           "bookings": 1,
           "marketing": 0,
@@ -1416,7 +1395,7 @@
         }
       ],
       "display": {
-        "projected": 90,
+        "projected": 86,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -3156,7 +3135,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-07T20:30:20.677003-08:00",
+    "generated_at": "2026-11-07T21:00:23.044947-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 9,
