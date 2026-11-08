@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 43,
-      "marketing": 43,
+      "bookings": 44,
+      "marketing": 44,
       "lane2": 0,
       "social_dms": 0,
       "showed": 24,
@@ -396,8 +396,8 @@
     },
     {
       "value": "Robin Perkins",
-      "bookings": 13,
-      "marketing": 8,
+      "bookings": 14,
+      "marketing": 9,
       "lane2": 5,
       "social_dms": 0,
       "showed": 8,
@@ -510,8 +510,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-08T14:45:17.629637-08:00",
-  "source_cutoff": "2026-11-08T14:45:17.629637-08:00",
+  "generated_at": "2026-11-08T15:00:26.021849-08:00",
+  "source_cutoff": "2026-11-08T15:00:26.021849-08:00",
   "vendhub_arr": 7799.0,
   "progress": {
     "day": 8,
@@ -542,14 +542,14 @@
   "period": "2026-11-01 through 2026-11-08 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 107,
+  "counted_meetings": 108,
   "excluded_repeat_candidates": 12,
-  "attribution_reviewed_at": "2026-11-08T14:45:17.629637-08:00",
+  "attribution_reviewed_at": "2026-11-08T15:00:26.021849-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1666,
-    "bookings": 107,
-    "marketing": 43,
+    "leads_created": 1671,
+    "bookings": 108,
+    "marketing": 44,
     "lane2": 61,
     "social_dms": 3,
     "showed": 53,
@@ -572,7 +572,7 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1545,
+      "leads_created": 1549,
       "bookings": 34,
       "marketing": 9,
       "lane2": 25,
@@ -1033,7 +1033,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 54,
+      "leads_created": 55,
       "bookings": 21,
       "marketing": 4,
       "lane2": 17,
@@ -2331,8 +2331,8 @@
     {
       "channel": "Instagram",
       "leads_created": 5,
-      "bookings": 6,
-      "marketing": 0,
+      "bookings": 7,
+      "marketing": 1,
       "lane2": 3,
       "social_dms": 3,
       "showed": 1,
@@ -2362,6 +2362,29 @@
           "scheduled_calls": 2,
           "occurred_calls": 2,
           "no_shows": 2,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "1821308313",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
           "unresolved_calls": 0
         },
         {
@@ -2498,10 +2521,31 @@
           "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 0
+        },
+        {
+          "value": "Marketing",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
         }
       ],
       "display": {
-        "projected": 22,
+        "projected": 26,
         "goal": 300,
         "goal_pct": 2,
         "pace": "pace-behind"
@@ -3181,7 +3225,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-08T14:45:17.629637-08:00",
+    "generated_at": "2026-11-08T15:00:26.021849-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 9,
