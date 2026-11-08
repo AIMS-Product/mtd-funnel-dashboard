@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 36,
-      "marketing": 36,
+      "bookings": 37,
+      "marketing": 37,
       "lane2": 0,
       "social_dms": 0,
       "showed": 24,
@@ -419,8 +419,8 @@
     },
     {
       "value": "Robin Perkins",
-      "bookings": 10,
-      "marketing": 5,
+      "bookings": 11,
+      "marketing": 6,
       "lane2": 5,
       "social_dms": 0,
       "showed": 8,
@@ -510,8 +510,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-08T14:15:19.161259-08:00",
-  "source_cutoff": "2026-11-08T14:15:19.161259-08:00",
+  "generated_at": "2026-11-08T14:30:19.728894-08:00",
+  "source_cutoff": "2026-11-08T14:30:19.728894-08:00",
   "vendhub_arr": 7799.0,
   "progress": {
     "day": 8,
@@ -542,14 +542,14 @@
   "period": "2026-11-02 through 2026-11-08 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 99,
+  "counted_meetings": 100,
   "excluded_repeat_candidates": 12,
-  "attribution_reviewed_at": "2026-11-08T14:15:19.161259-08:00",
+  "attribution_reviewed_at": "2026-11-08T14:30:19.728894-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1649,
-    "bookings": 99,
-    "marketing": 36,
+    "leads_created": 1651,
+    "bookings": 100,
+    "marketing": 37,
     "lane2": 61,
     "social_dms": 2,
     "showed": 51,
@@ -572,7 +572,7 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1542,
+      "leads_created": 1543,
       "bookings": 32,
       "marketing": 7,
       "lane2": 25,
@@ -1033,16 +1033,16 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 47,
-      "bookings": 20,
-      "marketing": 3,
+      "leads_created": 48,
+      "bookings": 21,
+      "marketing": 4,
       "lane2": 17,
       "social_dms": 0,
       "showed": 13,
       "qualified": 8,
       "closed_won": 2,
       "revenue": 12894.0,
-      "unrecoverable_booked_leads": 20,
+      "unrecoverable_booked_leads": 21,
       "drilldowns": [
         {
           "value": "Unattributed",
@@ -1069,8 +1069,8 @@
         },
         {
           "value": "_____",
-          "bookings": 1,
-          "marketing": 0,
+          "bookings": 2,
+          "marketing": 1,
           "lane2": 1,
           "social_dms": 0,
           "showed": 1,
@@ -1205,6 +1205,27 @@
           "unresolved_calls": 1
         },
         {
+          "value": "Marketing",
+          "bookings": 4,
+          "marketing": 4,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 4,
+          "qualified": 3,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 5,
+          "formats": {
+            "show": "80.0%",
+            "qualified": "60.0%",
+            "close": "0.0%",
+            "qualified_occurred": "60.0%"
+          },
+          "occurred_calls": 5,
+          "no_shows": 1,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Rob Maxfield",
           "bookings": 4,
           "marketing": 0,
@@ -1223,27 +1244,6 @@
           },
           "occurred_calls": 1,
           "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
-          "value": "Marketing",
-          "bookings": 3,
-          "marketing": 3,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 4,
-          "qualified": 3,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 5,
-          "formats": {
-            "show": "80.0%",
-            "qualified": "60.0%",
-            "close": "0.0%",
-            "qualified_occurred": "60.0%"
-          },
-          "occurred_calls": 5,
-          "no_shows": 1,
           "unresolved_calls": 0
         },
         {
@@ -1395,7 +1395,7 @@
         }
       ],
       "display": {
-        "projected": 75,
+        "projected": 79,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -3158,7 +3158,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-08T14:15:19.161259-08:00",
+    "generated_at": "2026-11-08T14:30:19.728894-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 9,
