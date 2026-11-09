@@ -2,6 +2,29 @@
   "schema_version": 3,
   "setters": [
     {
+      "value": "Marketing",
+      "bookings": 1,
+      "marketing": 1,
+      "lane2": 0,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 0,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Rob Maxfield",
       "bookings": 1,
       "marketing": 0,
@@ -73,6 +96,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Luke Herman",
+      "bookings": 1,
+      "marketing": 1,
+      "lane2": 0,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 0,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Shreya Bechra",
       "bookings": 0,
       "marketing": 0,
@@ -96,8 +142,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-09T07:45:18.525022-08:00",
-  "source_cutoff": "2026-11-09T07:45:18.525022-08:00",
+  "generated_at": "2026-11-09T08:00:27.436931-08:00",
+  "source_cutoff": "2026-11-09T08:00:27.436931-08:00",
   "vendhub_arr": 0.0,
   "progress": {
     "day": 9,
@@ -128,14 +174,14 @@
   "period": "2026-11-09 through 2026-11-09 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 1,
+  "counted_meetings": 2,
   "excluded_repeat_candidates": 1,
-  "attribution_reviewed_at": "2026-11-09T07:45:18.525022-08:00",
+  "attribution_reviewed_at": "2026-11-09T08:00:27.436931-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 38,
-    "bookings": 1,
-    "marketing": 0,
+    "leads_created": 39,
+    "bookings": 2,
+    "marketing": 1,
     "lane2": 1,
     "social_dms": 0,
     "showed": 0,
@@ -237,8 +283,88 @@
       "unresolved_calls": 0
     },
     {
+      "channel": "Linkedin",
+      "leads_created": 1,
+      "bookings": 1,
+      "marketing": 1,
+      "lane2": 0,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0.0,
+      "unrecoverable_booked_leads": 0,
+      "drilldowns": [
+        {
+          "value": "book-call",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        }
+      ],
+      "packages": [],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        }
+      ],
+      "display": {
+        "projected": 3,
+        "goal": 10,
+        "goal_pct": 10,
+        "pace": "pace-behind"
+      },
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 0,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 0
+    },
+    {
       "channel": "Google Ads",
-      "leads_created": 3,
+      "leads_created": 4,
       "bookings": 0,
       "marketing": 0,
       "lane2": 0,
@@ -352,7 +478,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 2,
+      "leads_created": 1,
       "bookings": 0,
       "marketing": 0,
       "lane2": 0,
@@ -409,7 +535,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-09T07:45:18.525022-08:00",
+    "generated_at": "2026-11-09T08:00:27.436931-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 9,
