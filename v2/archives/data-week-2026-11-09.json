@@ -1,0 +1,104 @@
+{
+  "schema_version": 3,
+  "setters": [],
+  "team": [],
+  "generated_at": "2026-11-09T00:00:24.941440-08:00",
+  "source_cutoff": "2026-11-09T00:00:24.941440-08:00",
+  "vendhub_arr": 0.0,
+  "progress": {
+    "day": 9,
+    "days": 30,
+    "working_days": 21,
+    "working_elapsed": 6,
+    "elapsed_pct": 28.6
+  },
+  "goals": {
+    "bookings": 1241,
+    "revenue": 750000,
+    "channels": {
+      "Instagram": 300,
+      "Low Ticket Funnel": 200,
+      "VSL": 110,
+      "Website": 100,
+      "YouTube": 132,
+      "Internal Webinar": 70,
+      "Mike Newsletter": 10,
+      "X": 10,
+      "Linkedin": 10,
+      "Meta Ads": 44,
+      "Tik Tok": 5,
+      "Side Hustle Nation": 1,
+      "WWWS": 1
+    }
+  },
+  "period": "2026-11-09 through 2026-11-09 PT",
+  "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
+  "booking_scope": "vp-closers.v1",
+  "counted_meetings": 0,
+  "excluded_repeat_candidates": 0,
+  "attribution_reviewed_at": "2026-11-09T00:00:24.941440-08:00",
+  "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
+  "totals": {
+    "leads_created": 0,
+    "bookings": 0,
+    "marketing": 0,
+    "lane2": 0,
+    "social_dms": 0,
+    "showed": 0,
+    "qualified": 0,
+    "closed_won": 0,
+    "revenue": 0,
+    "formats": {
+      "show": "—",
+      "qualified": "—",
+      "close": "—",
+      "revenue": "$0",
+      "average": "—",
+      "qualified_occurred": "—"
+    },
+    "scheduled_calls": 0,
+    "occurred_calls": 0,
+    "no_shows": 0,
+    "unresolved_calls": 0
+  },
+  "channels": [],
+  "goal_percentages": {
+    "bookings": 0,
+    "revenue": 0
+  },
+  "arr_display": {
+    "arr": "$0",
+    "mrr": "$0"
+  },
+  "scheduled_outcome_basis": "Accepted v2.8 calls scheduled in [Pacific period start, cutoff), with native Completed or No Show outcome; independent of creation date",
+  "qualification_evidence": "Current lead flag; the separate reset automation has not been applied",
+  "occurred_basis": "Accepted v2.8 calls scheduled in [Pacific period start, cutoff), with native Completed or No Show outcome; independent of creation date",
+  "closed_won_basis": "Native date_won in reporting period; no booking or scheduled-call join",
+  "view": {
+    "key": "week-2026-11-09",
+    "kind": "week",
+    "month": "2026-11",
+    "start": "2026-11-09",
+    "end": "2026-11-09",
+    "end_exclusive": "2026-11-16",
+    "frozen": false,
+    "label": "Nov 9 – Nov 9, 2026"
+  },
+  "metric_version": "calls-occurred.v1",
+  "pipeline": {
+    "generated_at": "2026-11-09T00:00:24.941440-08:00",
+    "counts": {
+      "Christian Hartwell": 31,
+      "Scott Seymour": 9,
+      "Robin Perkins": 16,
+      "Eric Piccione": 10,
+      "Joe Vaughan": 13,
+      "Shreya Bechra": 1,
+      "Luke Herman": 20,
+      "Ariella Irvine": 14,
+      "Oscar Pugh": 1,
+      "Joe Dysert": 8
+    },
+    "basis": "Current open qualified leads owned within trailing 30 days; $7,000 × 20% per lead. Independent of report week."
+  }
+}
