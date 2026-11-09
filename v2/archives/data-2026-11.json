@@ -72,9 +72,9 @@
     },
     {
       "value": "Naria Torres",
-      "bookings": 11,
+      "bookings": 12,
       "marketing": 0,
-      "lane2": 11,
+      "lane2": 12,
       "social_dms": 0,
       "showed": 7,
       "qualified": 5,
@@ -88,10 +88,10 @@
         "average": "$2,999",
         "qualified_occurred": "71.4%"
       },
-      "scheduled_calls": 10,
+      "scheduled_calls": 9,
       "occurred_calls": 7,
       "no_shows": 0,
-      "unresolved_calls": 3
+      "unresolved_calls": 2
     },
     {
       "value": "August Young",
@@ -327,9 +327,9 @@
     },
     {
       "value": "Christian Hartwell",
-      "bookings": 22,
+      "bookings": 23,
       "marketing": 11,
-      "lane2": 11,
+      "lane2": 12,
       "social_dms": 0,
       "showed": 11,
       "qualified": 5,
@@ -366,10 +366,10 @@
         "average": "$7,497",
         "qualified_occurred": "42.9%"
       },
-      "scheduled_calls": 12,
+      "scheduled_calls": 11,
       "occurred_calls": 7,
       "no_shows": 3,
-      "unresolved_calls": 5
+      "unresolved_calls": 4
     },
     {
       "value": "Ariella Irvine",
@@ -510,8 +510,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-09T11:00:24.339806-08:00",
-  "source_cutoff": "2026-11-09T11:00:24.339806-08:00",
+  "generated_at": "2026-11-09T11:15:21.851075-08:00",
+  "source_cutoff": "2026-11-09T11:15:21.851075-08:00",
   "vendhub_arr": 13795.0,
   "progress": {
     "day": 9,
@@ -542,15 +542,15 @@
   "period": "2026-11-01 through 2026-11-09 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 115,
+  "counted_meetings": 116,
   "excluded_repeat_candidates": 13,
-  "attribution_reviewed_at": "2026-11-09T11:00:24.339806-08:00",
+  "attribution_reviewed_at": "2026-11-09T11:15:21.851075-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1800,
-    "bookings": 115,
+    "leads_created": 1801,
+    "bookings": 116,
     "marketing": 45,
-    "lane2": 66,
+    "lane2": 67,
     "social_dms": 4,
     "showed": 55,
     "qualified": 36,
@@ -564,18 +564,18 @@
       "average": "$6,554",
       "qualified_occurred": "42.9%"
     },
-    "scheduled_calls": 107,
+    "scheduled_calls": 106,
     "occurred_calls": 84,
     "no_shows": 29,
-    "unresolved_calls": 23
+    "unresolved_calls": 22
   },
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1661,
-      "bookings": 36,
+      "leads_created": 1662,
+      "bookings": 37,
       "marketing": 9,
-      "lane2": 27,
+      "lane2": 28,
       "social_dms": 0,
       "showed": 15,
       "qualified": 8,
@@ -764,6 +764,29 @@
           },
           "scheduled_calls": 1,
           "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "aug25",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 0
         },
@@ -1038,9 +1061,9 @@
         },
         {
           "value": "Naria Torres",
-          "bookings": 2,
+          "bookings": 3,
           "marketing": 0,
-          "lane2": 2,
+          "lane2": 3,
           "social_dms": 0,
           "showed": 1,
           "qualified": 1,
@@ -1101,9 +1124,9 @@
         }
       ],
       "display": {
-        "projected": 120,
+        "projected": 123,
         "goal": 70,
-        "goal_pct": 51,
+        "goal_pct": 53,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -2730,10 +2753,10 @@
             "average": "—",
             "qualified_occurred": "—"
           },
-          "scheduled_calls": 1,
+          "scheduled_calls": 0,
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 1
+          "unresolved_calls": 0
         },
         {
           "value": "1322502513",
@@ -2792,7 +2815,7 @@
           "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 3,
+          "scheduled_calls": 2,
           "formats": {
             "show": "100.0%",
             "qualified": "100.0%",
@@ -2801,7 +2824,7 @@
           },
           "occurred_calls": 1,
           "no_shows": 0,
-          "unresolved_calls": 2
+          "unresolved_calls": 1
         },
         {
           "value": "August Young",
@@ -2839,10 +2862,10 @@
         "average": "—",
         "qualified_occurred": "25.0%"
       },
-      "scheduled_calls": 7,
+      "scheduled_calls": 6,
       "occurred_calls": 4,
       "no_shows": 3,
-      "unresolved_calls": 3
+      "unresolved_calls": 2
     },
     {
       "channel": "Website",
@@ -3393,7 +3416,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-09T11:00:24.339806-08:00",
+    "generated_at": "2026-11-09T11:15:21.851075-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 9,
