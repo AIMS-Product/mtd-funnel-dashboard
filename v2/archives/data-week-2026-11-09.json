@@ -99,22 +99,22 @@
       "marketing": 0,
       "lane2": 3,
       "social_dms": 0,
-      "showed": 1,
+      "showed": 2,
       "qualified": 1,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
         "show": "100.0%",
-        "qualified": "100.0%",
+        "qualified": "50.0%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "100.0%"
+        "qualified_occurred": "50.0%"
       },
       "scheduled_calls": 4,
-      "occurred_calls": 1,
+      "occurred_calls": 2,
       "no_shows": 0,
-      "unresolved_calls": 3
+      "unresolved_calls": 2
     },
     {
       "value": "Ariella Irvine",
@@ -207,6 +207,29 @@
       "occurred_calls": 1,
       "no_shows": 1,
       "unresolved_calls": 0
+    },
+    {
+      "value": "Tara Hall",
+      "bookings": 0,
+      "marketing": 0,
+      "lane2": 0,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "scheduled_calls": 1,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 1
     }
   ],
   "team": [
@@ -251,10 +274,10 @@
         "average": "—",
         "qualified_occurred": "0.0%"
       },
-      "scheduled_calls": 2,
+      "scheduled_calls": 3,
       "occurred_calls": 1,
       "no_shows": 1,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Christian Hartwell",
@@ -331,22 +354,22 @@
       "marketing": 0,
       "lane2": 0,
       "social_dms": 0,
-      "showed": 1,
+      "showed": 2,
       "qualified": 0,
       "closed_won": 1,
       "revenue": 8997.0,
       "formats": {
         "show": "100.0%",
         "qualified": "0.0%",
-        "close": "100.0%",
+        "close": "50.0%",
         "revenue": "$8,997",
         "average": "$8,997",
         "qualified_occurred": "0.0%"
       },
       "scheduled_calls": 3,
-      "occurred_calls": 1,
+      "occurred_calls": 2,
       "no_shows": 0,
-      "unresolved_calls": 2
+      "unresolved_calls": 1
     },
     {
       "value": "Joe Dysert",
@@ -395,8 +418,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-09T15:15:17.345975-08:00",
-  "source_cutoff": "2026-11-09T15:15:17.345975-08:00",
+  "generated_at": "2026-11-09T15:30:22.225626-08:00",
+  "source_cutoff": "2026-11-09T15:30:22.225626-08:00",
   "vendhub_arr": 7196.0,
   "progress": {
     "day": 9,
@@ -429,7 +452,7 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 21,
   "excluded_repeat_candidates": 3,
-  "attribution_reviewed_at": "2026-11-09T15:15:17.345975-08:00",
+  "attribution_reviewed_at": "2026-11-09T15:30:22.225626-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 76,
@@ -437,20 +460,20 @@
     "marketing": 4,
     "lane2": 17,
     "social_dms": 0,
-    "showed": 6,
+    "showed": 7,
     "qualified": 4,
     "closed_won": 3,
     "revenue": 23391.0,
     "formats": {
-      "show": "66.7%",
-      "qualified": "44.4%",
-      "close": "33.3%",
+      "show": "70.0%",
+      "qualified": "40.0%",
+      "close": "30.0%",
       "revenue": "$23,391",
       "average": "$7,797",
-      "qualified_occurred": "44.4%"
+      "qualified_occurred": "40.0%"
     },
-    "scheduled_calls": 14,
-    "occurred_calls": 9,
+    "scheduled_calls": 15,
+    "occurred_calls": 10,
     "no_shows": 3,
     "unresolved_calls": 5
   },
@@ -829,7 +852,7 @@
       "marketing": 0,
       "lane2": 5,
       "social_dms": 0,
-      "showed": 2,
+      "showed": 3,
       "qualified": 1,
       "closed_won": 0,
       "revenue": 0.0,
@@ -841,22 +864,22 @@
           "marketing": 0,
           "lane2": 4,
           "social_dms": 0,
-          "showed": 1,
+          "showed": 2,
           "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
           "formats": {
             "show": "100.0%",
-            "qualified": "100.0%",
+            "qualified": "50.0%",
             "close": "0.0%",
             "revenue": "$0",
             "average": "—",
-            "qualified_occurred": "100.0%"
+            "qualified_occurred": "50.0%"
           },
           "scheduled_calls": 3,
-          "occurred_calls": 1,
+          "occurred_calls": 2,
           "no_shows": 0,
-          "unresolved_calls": 2
+          "unresolved_calls": 1
         },
         {
           "value": "wescale",
@@ -976,20 +999,20 @@
           "marketing": 0,
           "lane2": 0,
           "social_dms": 0,
-          "showed": 1,
+          "showed": 2,
           "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
           "scheduled_calls": 3,
           "formats": {
             "show": "100.0%",
-            "qualified": "100.0%",
+            "qualified": "50.0%",
             "close": "0.0%",
-            "qualified_occurred": "100.0%"
+            "qualified_occurred": "50.0%"
           },
-          "occurred_calls": 1,
+          "occurred_calls": 2,
           "no_shows": 0,
-          "unresolved_calls": 2
+          "unresolved_calls": 1
         }
       ],
       "display": {
@@ -1000,16 +1023,16 @@
       },
       "formats": {
         "show": "100.0%",
-        "qualified": "50.0%",
+        "qualified": "33.3%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "50.0%"
+        "qualified_occurred": "33.3%"
       },
       "scheduled_calls": 4,
-      "occurred_calls": 2,
+      "occurred_calls": 3,
       "no_shows": 0,
-      "unresolved_calls": 2
+      "unresolved_calls": 1
     },
     {
       "channel": "Google Ads",
@@ -1264,6 +1287,29 @@
           "occurred_calls": 1,
           "no_shows": 1,
           "unresolved_calls": 0
+        },
+        {
+          "value": "vending-legal",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 1
         }
       ],
       "packages": [
@@ -1372,6 +1418,27 @@
           "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
+        },
+        {
+          "value": "Tara Hall",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 1
         }
       ],
       "display": {
@@ -1388,10 +1455,10 @@
         "average": "$5,397",
         "qualified_occurred": "0.0%"
       },
-      "scheduled_calls": 2,
+      "scheduled_calls": 3,
       "occurred_calls": 2,
       "no_shows": 1,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "channel": "GoHighLevel",
@@ -1904,7 +1971,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-09T15:15:17.345975-08:00",
+    "generated_at": "2026-11-09T15:30:22.225626-08:00",
     "counts": {
       "Christian Hartwell": 29,
       "Scott Seymour": 8,
