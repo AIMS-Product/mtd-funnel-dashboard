@@ -26,9 +26,9 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 23,
+      "bookings": 24,
       "marketing": 0,
-      "lane2": 23,
+      "lane2": 24,
       "social_dms": 0,
       "showed": 8,
       "qualified": 6,
@@ -72,9 +72,9 @@
     },
     {
       "value": "Naria Torres",
-      "bookings": 12,
+      "bookings": 13,
       "marketing": 0,
-      "lane2": 12,
+      "lane2": 13,
       "social_dms": 0,
       "showed": 7,
       "qualified": 5,
@@ -304,9 +304,9 @@
   "team": [
     {
       "value": "Christian Hartwell",
-      "bookings": 24,
+      "bookings": 25,
       "marketing": 11,
-      "lane2": 13,
+      "lane2": 14,
       "social_dms": 0,
       "showed": 11,
       "qualified": 5,
@@ -327,9 +327,9 @@
     },
     {
       "value": "Luke Herman",
-      "bookings": 23,
+      "bookings": 24,
       "marketing": 9,
-      "lane2": 14,
+      "lane2": 15,
       "social_dms": 0,
       "showed": 10,
       "qualified": 8,
@@ -510,8 +510,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-09T12:00:27.593563-08:00",
-  "source_cutoff": "2026-11-09T12:00:27.593563-08:00",
+  "generated_at": "2026-11-09T12:15:21.137782-08:00",
+  "source_cutoff": "2026-11-09T12:15:21.137782-08:00",
   "vendhub_arr": 13795.0,
   "progress": {
     "day": 9,
@@ -542,15 +542,15 @@
   "period": "2026-11-01 through 2026-11-09 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 117,
+  "counted_meetings": 119,
   "excluded_repeat_candidates": 13,
-  "attribution_reviewed_at": "2026-11-09T12:00:27.593563-08:00",
+  "attribution_reviewed_at": "2026-11-09T12:15:21.137782-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 1808,
-    "bookings": 117,
+    "bookings": 119,
     "marketing": 45,
-    "lane2": 68,
+    "lane2": 70,
     "social_dms": 4,
     "showed": 55,
     "qualified": 36,
@@ -1144,22 +1144,22 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 63,
-      "bookings": 23,
+      "leads_created": 62,
+      "bookings": 24,
       "marketing": 4,
-      "lane2": 19,
+      "lane2": 20,
       "social_dms": 0,
       "showed": 15,
       "qualified": 10,
       "closed_won": 2,
       "revenue": 12894.0,
-      "unrecoverable_booked_leads": 23,
+      "unrecoverable_booked_leads": 24,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 19,
+          "bookings": 20,
           "marketing": 2,
-          "lane2": 17,
+          "lane2": 18,
           "social_dms": 0,
           "showed": 13,
           "qualified": 8,
@@ -1359,9 +1359,9 @@
         },
         {
           "value": "Naria Torres",
-          "bookings": 2,
+          "bookings": 3,
           "marketing": 0,
-          "lane2": 2,
+          "lane2": 3,
           "social_dms": 0,
           "showed": 2,
           "qualified": 1,
@@ -1506,7 +1506,7 @@
         }
       ],
       "display": {
-        "projected": 77,
+        "projected": 80,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -1527,9 +1527,9 @@
     {
       "channel": "YouTube",
       "leads_created": 12,
-      "bookings": 18,
+      "bookings": 19,
       "marketing": 11,
-      "lane2": 7,
+      "lane2": 8,
       "social_dms": 0,
       "showed": 10,
       "qualified": 7,
@@ -1627,6 +1627,29 @@
           "scheduled_calls": 2,
           "occurred_calls": 2,
           "no_shows": 1,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "youtube-home",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
           "unresolved_calls": 0
         },
         {
@@ -1837,29 +1860,6 @@
           "unresolved_calls": 0
         },
         {
-          "value": "youtube-home",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "—"
-          },
-          "scheduled_calls": 0,
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "why-you-shouldnt-start-2025",
           "bookings": 0,
           "marketing": 0,
@@ -2041,6 +2041,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Vince Bartolini",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "August Young",
           "bookings": 1,
           "marketing": 0,
@@ -2104,27 +2125,6 @@
           "unresolved_calls": 0
         },
         {
-          "value": "Vince Bartolini",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
-          },
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "Cassie Caraballo",
           "bookings": 0,
           "marketing": 0,
@@ -2168,7 +2168,7 @@
         }
       ],
       "display": {
-        "projected": 60,
+        "projected": 63,
         "goal": 132,
         "goal_pct": 14,
         "pace": "pace-behind"
@@ -2188,7 +2188,7 @@
     },
     {
       "channel": "Google Ads",
-      "leads_created": 56,
+      "leads_created": 57,
       "bookings": 16,
       "marketing": 14,
       "lane2": 2,
@@ -3391,7 +3391,7 @@
     }
   ],
   "goal_percentages": {
-    "bookings": 9,
+    "bookings": 10,
     "revenue": 6
   },
   "arr_display": {
@@ -3414,9 +3414,9 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-09T12:00:27.593563-08:00",
+    "generated_at": "2026-11-09T12:15:21.137782-08:00",
     "counts": {
-      "Christian Hartwell": 33,
+      "Christian Hartwell": 32,
       "Scott Seymour": 9,
       "Robin Perkins": 16,
       "Eric Piccione": 10,
