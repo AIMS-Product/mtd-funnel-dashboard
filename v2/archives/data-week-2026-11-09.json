@@ -48,6 +48,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Naria Torres",
+      "bookings": 2,
+      "marketing": 0,
+      "lane2": 2,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 2,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 2
+    },
+    {
       "value": "Rob Maxfield",
       "bookings": 2,
       "marketing": 0,
@@ -92,29 +115,6 @@
       "occurred_calls": 0,
       "no_shows": 0,
       "unresolved_calls": 0
-    },
-    {
-      "value": "Naria Torres",
-      "bookings": 1,
-      "marketing": 0,
-      "lane2": 1,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "—",
-        "qualified": "—",
-        "close": "—",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "—"
-      },
-      "scheduled_calls": 2,
-      "occurred_calls": 0,
-      "no_shows": 0,
-      "unresolved_calls": 2
     },
     {
       "value": "Marketing / Unassigned",
@@ -184,6 +184,29 @@
       "occurred_calls": 1,
       "no_shows": 1,
       "unresolved_calls": 0
+    },
+    {
+      "value": "Tara Hall",
+      "bookings": 0,
+      "marketing": 0,
+      "lane2": 0,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "scheduled_calls": 1,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 1
     }
   ],
   "team": [
@@ -205,10 +228,33 @@
         "average": "$8,997",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 0,
+      "scheduled_calls": 1,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
+    },
+    {
+      "value": "Christian Hartwell",
+      "bookings": 3,
+      "marketing": 0,
+      "lane2": 3,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 2,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 2
     },
     {
       "value": "Ariella Irvine",
@@ -232,29 +278,6 @@
       "occurred_calls": 0,
       "no_shows": 0,
       "unresolved_calls": 0
-    },
-    {
-      "value": "Christian Hartwell",
-      "bookings": 2,
-      "marketing": 0,
-      "lane2": 2,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "—",
-        "qualified": "—",
-        "close": "—",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "—"
-      },
-      "scheduled_calls": 2,
-      "occurred_calls": 0,
-      "no_shows": 0,
-      "unresolved_calls": 2
     },
     {
       "value": "Joe Vaughan",
@@ -372,8 +395,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-09T11:45:20.725305-08:00",
-  "source_cutoff": "2026-11-09T11:45:20.725305-08:00",
+  "generated_at": "2026-11-09T12:00:27.593563-08:00",
+  "source_cutoff": "2026-11-09T12:00:27.593563-08:00",
   "vendhub_arr": 5996.0,
   "progress": {
     "day": 9,
@@ -404,15 +427,15 @@
   "period": "2026-11-09 through 2026-11-09 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 11,
+  "counted_meetings": 12,
   "excluded_repeat_candidates": 1,
-  "attribution_reviewed_at": "2026-11-09T11:45:20.725305-08:00",
+  "attribution_reviewed_at": "2026-11-09T12:00:27.593563-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 60,
-    "bookings": 11,
+    "leads_created": 64,
+    "bookings": 12,
     "marketing": 2,
-    "lane2": 9,
+    "lane2": 10,
     "social_dms": 0,
     "showed": 0,
     "qualified": 0,
@@ -426,18 +449,18 @@
       "average": "$8,997",
       "qualified_occurred": "0.0%"
     },
-    "scheduled_calls": 6,
+    "scheduled_calls": 7,
     "occurred_calls": 1,
     "no_shows": 1,
-    "unresolved_calls": 5
+    "unresolved_calls": 6
   },
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 46,
-      "bookings": 4,
+      "leads_created": 48,
+      "bookings": 5,
       "marketing": 0,
-      "lane2": 4,
+      "lane2": 5,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -463,10 +486,10 @@
             "average": "—",
             "qualified_occurred": "—"
           },
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "July23",
@@ -493,6 +516,29 @@
         },
         {
           "value": "june16_end_cta",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "oct06",
           "bookings": 1,
           "marketing": 0,
           "lane2": 1,
@@ -627,6 +673,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Naria Torres",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Marketing / Unassigned",
           "bookings": 0,
           "marketing": 0,
@@ -667,12 +734,33 @@
           "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 1
+        },
+        {
+          "value": "Tara Hall",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 1
         }
       ],
       "display": {
-        "projected": 13,
+        "projected": 17,
         "goal": 70,
-        "goal_pct": 6,
+        "goal_pct": 7,
         "pace": "pace-behind"
       },
       "formats": {
@@ -683,14 +771,14 @@
         "average": "$8,997",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 1,
+      "scheduled_calls": 2,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 4,
+      "leads_created": 5,
       "bookings": 3,
       "marketing": 0,
       "lane2": 3,
@@ -936,7 +1024,7 @@
     },
     {
       "channel": "Google Ads",
-      "leads_created": 7,
+      "leads_created": 8,
       "bookings": 1,
       "marketing": 1,
       "lane2": 0,
@@ -1378,7 +1466,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-09T11:45:20.725305-08:00",
+    "generated_at": "2026-11-09T12:00:27.593563-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 9,
