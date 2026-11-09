@@ -1,7 +1,7 @@
 ## REPORT METADATA
 Report,V2 Team Performance
 Period,2026-11-09 through 2026-11-09 PT
-Generated At,2026-11-09T10:30:25.705358-08:00
+Generated At,2026-11-09T10:45:19.655873-08:00
 Booking Rules,booked_calls.v2.8-naria-navigator-title-20261102
 Booking Scope,Nine VP closers
 Attribution,Booking/show/qualified by current Lead Owner; won deals/revenue by opportunity owner.
@@ -9,18 +9,18 @@ Qualification,Distinct currently qualified leads among occurred calls per owner.
 
 ## TEAM KPI TILES
 Metric,Actual,Goal
-Closer Revenue,$0,"$7,280"
+Closer Revenue,"$8,997","$7,280"
 Closer Show Rate,0.0%,65.0%
-Closer Close Rate / Occurred,0.0%,13.0%
+Closer Close Rate / Occurred,100.0%,13.0%
 Closer Close Rate / Qualified,—,20.0%
-Pipeline,"$170,800","$840,000"
-Pipeline snapshot,2026-11-09T10:30:25.705358-08:00
+Pipeline,"$169,400","$840,000"
+Pipeline snapshot,2026-11-09T10:45:19.655873-08:00
 Pipeline basis,"Current open qualified leads owned within trailing 30 days; $7,000 × 20% per lead. Independent of report week."
 
 ## REP BREAKDOWN
 Rep,Booked,Calls Occurred,Showed,Show %,Qualified,Qual %,Closed Won,CW %,Qualified to Close %,Revenue,Avg Deal,Revenue Goal,Pipeline,Open Qualified
 Christian Hartwell,1,0,0,—,0,—,0,—,—,$0,—,$910,"$44,800",32
-Scott Seymour,0,0,0,—,0,—,0,—,—,$0,—,$0,"$14,000",10
+Scott Seymour,0,0,0,—,0,—,1,—,—,"$8,997","$8,997",$0,"$12,600",9
 Robin Perkins,1,0,0,—,0,—,0,—,—,$0,—,$910,"$22,400",16
 Eric Piccione,0,0,0,—,0,—,0,—,—,$0,—,$0,"$14,000",10
 Joe Vaughan,2,0,0,—,0,—,0,—,—,$0,—,"$1,820","$14,000",10
@@ -30,8 +30,8 @@ Ariella Irvine,1,0,0,—,0,—,0,—,—,$0,—,$910,"$21,000",15
 Oscar Pugh,0,0,0,—,0,—,0,—,—,$0,—,$0,"$1,400",1
 Joe Dysert,0,0,0,—,0,—,0,—,—,$0,—,$0,"$11,200",8
 Other / Non-Closer,0,0,0,—,0,—,0,—,—,$0,—,$0,—,—
-CLOSERS TOTAL,8,1,0,0.0%,0,0.0%,0,0.0%,—,$0,—,"$7,280","$170,800",122
-ALL V2 TOTAL,8,1,0,0.0%,0,0.0%,0,0.0%,—,$0,—,"$7,280",—,—
+CLOSERS TOTAL,8,1,0,0.0%,0,0.0%,1,100.0%,—,"$8,997","$8,997","$7,280","$169,400",121
+ALL V2 TOTAL,8,1,0,0.0%,0,0.0%,1,100.0%,—,"$8,997","$8,997","$7,280",—,—
 
 ## RECONCILIATION
 Metric,Rep sum including Other,V2 funnel total,Match
@@ -39,5 +39,5 @@ bookings,8,8,YES
 occurred_calls,1,1,YES
 showed,0,0,YES
 qualified,0,0,YES
-closed_won,0,0,YES
-revenue,0,0.0,YES
+closed_won,1,1,YES
+revenue,8997.0,8997.0,YES
