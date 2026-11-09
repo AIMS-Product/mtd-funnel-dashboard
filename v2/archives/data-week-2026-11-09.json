@@ -101,13 +101,13 @@
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
-      "closed_won": 1,
-      "revenue": 8997.0,
+      "closed_won": 2,
+      "revenue": 17994.0,
       "formats": {
         "show": "—",
         "qualified": "—",
         "close": "—",
-        "revenue": "$8,997",
+        "revenue": "$17,994",
         "average": "$8,997",
         "qualified_occurred": "—"
       },
@@ -149,7 +149,7 @@
       "qualified": 0,
       "closed_won": 0,
       "revenue": 0,
-      "scheduled_calls": 2,
+      "scheduled_calls": 3,
       "formats": {
         "show": "—",
         "qualified": "—",
@@ -160,7 +160,7 @@
       },
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 2
+      "unresolved_calls": 3
     },
     {
       "value": "Pearl Sathekge",
@@ -195,14 +195,14 @@
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
+      "closed_won": 1,
+      "revenue": 8997.0,
       "formats": {
         "show": "—",
         "qualified": "—",
         "close": "—",
-        "revenue": "$0",
-        "average": "—",
+        "revenue": "$8,997",
+        "average": "$8,997",
         "qualified_occurred": "—"
       },
       "scheduled_calls": 0,
@@ -320,10 +320,10 @@
         "average": "$8,997",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 2,
+      "scheduled_calls": 3,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 2
+      "unresolved_calls": 3
     },
     {
       "value": "Joe Dysert",
@@ -372,9 +372,9 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-09T10:45:19.655873-08:00",
-  "source_cutoff": "2026-11-09T10:45:19.655873-08:00",
-  "vendhub_arr": 2998.0,
+  "generated_at": "2026-11-09T11:00:24.339806-08:00",
+  "source_cutoff": "2026-11-09T11:00:24.339806-08:00",
+  "vendhub_arr": 5996.0,
   "progress": {
     "day": 9,
     "days": 30,
@@ -406,43 +406,43 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 8,
   "excluded_repeat_candidates": 1,
-  "attribution_reviewed_at": "2026-11-09T10:45:19.655873-08:00",
+  "attribution_reviewed_at": "2026-11-09T11:00:24.339806-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 54,
+    "leads_created": 56,
     "bookings": 8,
     "marketing": 2,
     "lane2": 6,
     "social_dms": 0,
     "showed": 0,
     "qualified": 0,
-    "closed_won": 1,
-    "revenue": 8997.0,
+    "closed_won": 2,
+    "revenue": 17994.0,
     "formats": {
       "show": "0.0%",
       "qualified": "0.0%",
-      "close": "100.0%",
-      "revenue": "$8,997",
+      "close": "200.0%",
+      "revenue": "$17,994",
       "average": "$8,997",
       "qualified_occurred": "0.0%"
     },
-    "scheduled_calls": 6,
+    "scheduled_calls": 7,
     "occurred_calls": 1,
     "no_shows": 1,
-    "unresolved_calls": 5
+    "unresolved_calls": 6
   },
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 42,
+      "leads_created": 43,
       "bookings": 3,
       "marketing": 0,
       "lane2": 3,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
-      "closed_won": 1,
-      "revenue": 8997.0,
+      "closed_won": 2,
+      "revenue": 17994.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
         {
@@ -536,11 +536,9 @@
           "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 1
-        }
-      ],
-      "packages": [
+        },
         {
-          "value": "Silver - $8,997 · Basic",
+          "value": "sept22_end_cta",
           "bookings": 0,
           "marketing": 0,
           "lane2": 0,
@@ -552,10 +550,35 @@
           "formats": {
             "show": "—",
             "qualified": "—",
+            "close": "—",
+            "revenue": "$8,997",
+            "average": "$8,997",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        }
+      ],
+      "packages": [
+        {
+          "value": "Silver - $8,997 · Basic",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 2,
+          "revenue": 17994.0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
             "qualified_booked": "—",
             "close": "—",
             "qualified_close": "—",
-            "revenue": "$8,997",
+            "revenue": "$17,994",
             "average": "$8,997"
           }
         }
@@ -611,8 +634,8 @@
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
-          "closed_won": 1,
-          "revenue": 8997.0,
+          "closed_won": 2,
+          "revenue": 17994.0,
           "scheduled_calls": 0,
           "formats": {
             "show": "—",
@@ -656,7 +679,7 @@
         "show": "—",
         "qualified": "—",
         "close": "—",
-        "revenue": "$8,997",
+        "revenue": "$17,994",
         "average": "$8,997",
         "qualified_occurred": "—"
       },
@@ -667,7 +690,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 2,
+      "leads_created": 3,
       "bookings": 2,
       "marketing": 0,
       "lane2": 2,
@@ -1108,6 +1131,29 @@
           "occurred_calls": 1,
           "no_shows": 1,
           "unresolved_calls": 1
+        },
+        {
+          "value": "new-follower",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 1
         }
       ],
       "packages": [],
@@ -1143,7 +1189,7 @@
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 1,
+          "scheduled_calls": 2,
           "formats": {
             "show": "—",
             "qualified": "—",
@@ -1152,7 +1198,7 @@
           },
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 1
+          "unresolved_calls": 2
         },
         {
           "value": "Pearl Sathekge",
@@ -1190,10 +1236,10 @@
         "average": "—",
         "qualified_occurred": "0.0%"
       },
-      "scheduled_calls": 3,
+      "scheduled_calls": 4,
       "occurred_calls": 1,
       "no_shows": 1,
-      "unresolved_calls": 2
+      "unresolved_calls": 3
     },
     {
       "channel": "Website",
@@ -1312,11 +1358,11 @@
   ],
   "goal_percentages": {
     "bookings": 1,
-    "revenue": 1
+    "revenue": 2
   },
   "arr_display": {
-    "arr": "$2,998",
-    "mrr": "$250"
+    "arr": "$5,996",
+    "mrr": "$500"
   },
   "scheduled_outcome_basis": "Accepted v2.8 calls scheduled in [Pacific period start, cutoff), with native Completed or No Show outcome; independent of creation date",
   "qualification_evidence": "Current lead flag; the separate reset automation has not been applied",
@@ -1334,9 +1380,9 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-09T10:45:19.655873-08:00",
+    "generated_at": "2026-11-09T11:00:24.339806-08:00",
     "counts": {
-      "Christian Hartwell": 32,
+      "Christian Hartwell": 33,
       "Scott Seymour": 9,
       "Robin Perkins": 16,
       "Eric Piccione": 10,
