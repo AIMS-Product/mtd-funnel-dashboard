@@ -99,22 +99,22 @@
       "marketing": 0,
       "lane2": 3,
       "social_dms": 0,
-      "showed": 1,
-      "qualified": 0,
+      "showed": 2,
+      "qualified": 1,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
         "show": "100.0%",
-        "qualified": "0.0%",
+        "qualified": "50.0%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "0.0%"
+        "qualified_occurred": "50.0%"
       },
       "scheduled_calls": 2,
-      "occurred_calls": 1,
+      "occurred_calls": 2,
       "no_shows": 0,
-      "unresolved_calls": 1
+      "unresolved_calls": 0
     },
     {
       "value": "Ariella Irvine",
@@ -377,22 +377,22 @@
       "marketing": 0,
       "lane2": 0,
       "social_dms": 0,
-      "showed": 1,
-      "qualified": 0,
+      "showed": 2,
+      "qualified": 1,
       "closed_won": 0,
       "revenue": 0,
       "scheduled_calls": 3,
       "formats": {
         "show": "100.0%",
-        "qualified": "0.0%",
+        "qualified": "50.0%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "0.0%"
+        "qualified_occurred": "50.0%"
       },
-      "occurred_calls": 1,
+      "occurred_calls": 2,
       "no_shows": 0,
-      "unresolved_calls": 2
+      "unresolved_calls": 1
     },
     {
       "value": "Shreya Bechra",
@@ -418,8 +418,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-09T17:00:25.191258-08:00",
-  "source_cutoff": "2026-11-09T17:00:25.191258-08:00",
+  "generated_at": "2026-11-09T17:15:18.474719-08:00",
+  "source_cutoff": "2026-11-09T17:15:18.474719-08:00",
   "vendhub_arr": 7196.0,
   "progress": {
     "day": 9,
@@ -452,35 +452,35 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 26,
   "excluded_repeat_candidates": 3,
-  "attribution_reviewed_at": "2026-11-09T17:00:25.191258-08:00",
+  "attribution_reviewed_at": "2026-11-09T17:15:18.474719-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 90,
+    "leads_created": 93,
     "bookings": 26,
     "marketing": 7,
     "lane2": 19,
     "social_dms": 0,
-    "showed": 8,
-    "qualified": 4,
+    "showed": 9,
+    "qualified": 5,
     "closed_won": 3,
     "revenue": 23391.0,
     "formats": {
-      "show": "66.7%",
-      "qualified": "33.3%",
-      "close": "25.0%",
+      "show": "69.2%",
+      "qualified": "38.5%",
+      "close": "23.1%",
       "revenue": "$23,391",
       "average": "$7,797",
-      "qualified_occurred": "33.3%"
+      "qualified_occurred": "38.5%"
     },
     "scheduled_calls": 16,
-    "occurred_calls": 12,
+    "occurred_calls": 13,
     "no_shows": 4,
-    "unresolved_calls": 4
+    "unresolved_calls": 3
   },
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 61,
+      "leads_created": 64,
       "bookings": 7,
       "marketing": 0,
       "lane2": 7,
@@ -1772,8 +1772,8 @@
       "marketing": 0,
       "lane2": 0,
       "social_dms": 0,
-      "showed": 1,
-      "qualified": 1,
+      "showed": 2,
+      "qualified": 2,
       "closed_won": 0,
       "revenue": 0.0,
       "unrecoverable_booked_leads": 0,
@@ -1807,22 +1807,22 @@
           "marketing": 0,
           "lane2": 0,
           "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
+          "showed": 1,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
           "scheduled_calls": 1,
           "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "0.0%",
             "revenue": "$0",
             "average": "—",
-            "qualified_occurred": "—"
+            "qualified_occurred": "100.0%"
           },
-          "occurred_calls": 0,
+          "occurred_calls": 1,
           "no_shows": 0,
-          "unresolved_calls": 1
+          "unresolved_calls": 0
         }
       ],
       "packages": [],
@@ -1854,20 +1854,20 @@
           "marketing": 0,
           "lane2": 0,
           "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
+          "showed": 1,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
           "scheduled_calls": 1,
           "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "0.0%",
+            "qualified_occurred": "100.0%"
           },
-          "occurred_calls": 0,
+          "occurred_calls": 1,
           "no_shows": 0,
-          "unresolved_calls": 1
+          "unresolved_calls": 0
         },
         {
           "value": "Pearl Sathekge",
@@ -1898,17 +1898,17 @@
         "pace": ""
       },
       "formats": {
-        "show": "50.0%",
-        "qualified": "50.0%",
+        "show": "66.7%",
+        "qualified": "66.7%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "50.0%"
+        "qualified_occurred": "66.7%"
       },
       "scheduled_calls": 3,
-      "occurred_calls": 2,
+      "occurred_calls": 3,
       "no_shows": 1,
-      "unresolved_calls": 1
+      "unresolved_calls": 0
     },
     {
       "channel": "Website",
@@ -2015,7 +2015,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-09T17:00:25.191258-08:00",
+    "generated_at": "2026-11-09T17:15:18.474719-08:00",
     "counts": {
       "Christian Hartwell": 29,
       "Scott Seymour": 8,
@@ -2023,7 +2023,7 @@
       "Eric Piccione": 10,
       "Joe Vaughan": 10,
       "Shreya Bechra": 1,
-      "Luke Herman": 20,
+      "Luke Herman": 21,
       "Ariella Irvine": 15,
       "Oscar Pugh": 1,
       "Joe Dysert": 9
