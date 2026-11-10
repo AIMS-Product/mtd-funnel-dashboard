@@ -42,10 +42,10 @@
         "average": "—",
         "qualified_occurred": "33.3%"
       },
-      "scheduled_calls": 3,
+      "scheduled_calls": 4,
       "occurred_calls": 3,
       "no_shows": 1,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "value": "Rob Maxfield",
@@ -343,10 +343,10 @@
         "average": "—",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 0,
+      "scheduled_calls": 1,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "value": "Scott Seymour",
@@ -418,8 +418,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-10T05:45:18.979107-08:00",
-  "source_cutoff": "2026-11-10T05:45:18.979107-08:00",
+  "generated_at": "2026-11-10T06:00:28.355295-08:00",
+  "source_cutoff": "2026-11-10T06:00:28.355295-08:00",
   "vendhub_arr": 7196.0,
   "progress": {
     "day": 10,
@@ -452,10 +452,10 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 28,
   "excluded_repeat_candidates": 4,
-  "attribution_reviewed_at": "2026-11-10T05:45:18.979107-08:00",
+  "attribution_reviewed_at": "2026-11-10T06:00:28.355295-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 147,
+    "leads_created": 148,
     "bookings": 28,
     "marketing": 7,
     "lane2": 21,
@@ -472,10 +472,10 @@
       "average": "$7,797",
       "qualified_occurred": "40.0%"
     },
-    "scheduled_calls": 16,
+    "scheduled_calls": 17,
     "occurred_calls": 15,
     "no_shows": 4,
-    "unresolved_calls": 1
+    "unresolved_calls": 2
   },
   "channels": [
     {
@@ -509,10 +509,10 @@
             "average": "—",
             "qualified_occurred": "100.0%"
           },
-          "scheduled_calls": 1,
+          "scheduled_calls": 2,
           "occurred_calls": 1,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "23805931083",
@@ -550,7 +550,7 @@
           "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 1,
+          "scheduled_calls": 2,
           "formats": {
             "show": "100.0%",
             "qualified": "100.0%",
@@ -559,7 +559,7 @@
           },
           "occurred_calls": 1,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "Rob Maxfield",
@@ -597,14 +597,14 @@
         "average": "—",
         "qualified_occurred": "100.0%"
       },
-      "scheduled_calls": 1,
+      "scheduled_calls": 2,
       "occurred_calls": 1,
       "no_shows": 0,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "channel": "Internal Webinar",
-      "leads_created": 109,
+      "leads_created": 110,
       "bookings": 7,
       "marketing": 0,
       "lane2": 7,
@@ -2080,7 +2080,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-10T05:45:18.979107-08:00",
+    "generated_at": "2026-11-10T06:00:28.355295-08:00",
     "counts": {
       "Christian Hartwell": 28,
       "Scott Seymour": 8,
