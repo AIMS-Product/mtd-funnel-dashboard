@@ -26,9 +26,9 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 28,
+      "bookings": 29,
       "marketing": 0,
-      "lane2": 28,
+      "lane2": 29,
       "social_dms": 0,
       "showed": 7,
       "qualified": 7,
@@ -373,9 +373,9 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 24,
+      "bookings": 25,
       "marketing": 1,
-      "lane2": 23,
+      "lane2": 24,
       "social_dms": 0,
       "showed": 7,
       "qualified": 4,
@@ -533,8 +533,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-10T10:30:23.555829-08:00",
-  "source_cutoff": "2026-11-10T10:30:23.555829-08:00",
+  "generated_at": "2026-11-10T10:45:21.120978-08:00",
+  "source_cutoff": "2026-11-10T10:45:21.120978-08:00",
   "vendhub_arr": 16195.0,
   "progress": {
     "day": 10,
@@ -565,15 +565,15 @@
   "period": "2026-11-01 through 2026-11-10 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 138,
+  "counted_meetings": 139,
   "excluded_repeat_candidates": 15,
-  "attribution_reviewed_at": "2026-11-10T10:30:23.555829-08:00",
+  "attribution_reviewed_at": "2026-11-10T10:45:21.120978-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1919,
-    "bookings": 138,
+    "leads_created": 1922,
+    "bookings": 139,
     "marketing": 51,
-    "lane2": 83,
+    "lane2": 84,
     "social_dms": 4,
     "showed": 64,
     "qualified": 44,
@@ -595,10 +595,10 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1750,
-      "bookings": 40,
+      "leads_created": 1753,
+      "bookings": 41,
       "marketing": 9,
-      "lane2": 31,
+      "lane2": 32,
       "social_dms": 0,
       "showed": 16,
       "qualified": 10,
@@ -787,6 +787,29 @@
           },
           "scheduled_calls": 2,
           "occurred_calls": 2,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "Unattributed",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 0
         },
@@ -1065,9 +1088,9 @@
         },
         {
           "value": "Vince Bartolini",
-          "bookings": 6,
+          "bookings": 7,
           "marketing": 0,
-          "lane2": 6,
+          "lane2": 7,
           "social_dms": 0,
           "showed": 2,
           "qualified": 2,
@@ -1191,9 +1214,9 @@
         }
       ],
       "display": {
-        "projected": 120,
+        "projected": 123,
         "goal": 70,
-        "goal_pct": 57,
+        "goal_pct": 59,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -3600,11 +3623,11 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-10T10:30:23.555829-08:00",
+    "generated_at": "2026-11-10T10:45:21.120978-08:00",
     "counts": {
       "Christian Hartwell": 30,
       "Scott Seymour": 10,
-      "Robin Perkins": 15,
+      "Robin Perkins": 16,
       "Eric Piccione": 10,
       "Joe Vaughan": 10,
       "Shreya Bechra": 1,
