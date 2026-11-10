@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 49,
-      "marketing": 49,
+      "bookings": 48,
+      "marketing": 48,
       "lane2": 0,
       "social_dms": 0,
       "showed": 26,
@@ -26,9 +26,9 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 26,
+      "bookings": 27,
       "marketing": 0,
-      "lane2": 26,
+      "lane2": 27,
       "social_dms": 0,
       "showed": 8,
       "qualified": 6,
@@ -326,29 +326,6 @@
   ],
   "team": [
     {
-      "value": "Luke Herman",
-      "bookings": 26,
-      "marketing": 10,
-      "lane2": 16,
-      "social_dms": 0,
-      "showed": 11,
-      "qualified": 9,
-      "closed_won": 2,
-      "revenue": 15894.0,
-      "formats": {
-        "show": "68.8%",
-        "qualified": "56.2%",
-        "close": "12.5%",
-        "revenue": "$15,894",
-        "average": "$7,947",
-        "qualified_occurred": "56.2%"
-      },
-      "scheduled_calls": 18,
-      "occurred_calls": 16,
-      "no_shows": 5,
-      "unresolved_calls": 2
-    },
-    {
       "value": "Christian Hartwell",
       "bookings": 26,
       "marketing": 11,
@@ -372,10 +349,33 @@
       "unresolved_calls": 3
     },
     {
+      "value": "Luke Herman",
+      "bookings": 25,
+      "marketing": 9,
+      "lane2": 16,
+      "social_dms": 0,
+      "showed": 11,
+      "qualified": 9,
+      "closed_won": 2,
+      "revenue": 15894.0,
+      "formats": {
+        "show": "68.8%",
+        "qualified": "56.2%",
+        "close": "12.5%",
+        "revenue": "$15,894",
+        "average": "$7,947",
+        "qualified_occurred": "56.2%"
+      },
+      "scheduled_calls": 18,
+      "occurred_calls": 16,
+      "no_shows": 5,
+      "unresolved_calls": 2
+    },
+    {
       "value": "Ariella Irvine",
-      "bookings": 20,
+      "bookings": 21,
       "marketing": 1,
-      "lane2": 19,
+      "lane2": 20,
       "social_dms": 0,
       "showed": 6,
       "qualified": 2,
@@ -533,8 +533,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-09T17:30:21.989767-08:00",
-  "source_cutoff": "2026-11-09T17:30:21.989767-08:00",
+  "generated_at": "2026-11-09T17:45:18.817907-08:00",
+  "source_cutoff": "2026-11-09T17:45:18.817907-08:00",
   "vendhub_arr": 14995.0,
   "progress": {
     "day": 9,
@@ -567,13 +567,13 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 131,
   "excluded_repeat_candidates": 14,
-  "attribution_reviewed_at": "2026-11-09T17:30:21.989767-08:00",
+  "attribution_reviewed_at": "2026-11-09T17:45:18.817907-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1838,
+    "leads_created": 1842,
     "bookings": 131,
-    "marketing": 49,
-    "lane2": 78,
+    "marketing": 48,
+    "lane2": 79,
     "social_dms": 4,
     "showed": 64,
     "qualified": 41,
@@ -595,7 +595,7 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1683,
+      "leads_created": 1687,
       "bookings": 39,
       "marketing": 9,
       "lane2": 30,
@@ -2598,8 +2598,8 @@
       "channel": "Meta Ads",
       "leads_created": 1,
       "bookings": 7,
-      "marketing": 2,
-      "lane2": 4,
+      "marketing": 1,
+      "lane2": 5,
       "social_dms": 1,
       "showed": 2,
       "qualified": 1,
@@ -2607,6 +2607,29 @@
       "revenue": 0.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
+        {
+          "value": "6/23 Call Booking Campaign",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
         {
           "value": "VSL Leads campaign",
           "bookings": 2,
@@ -2654,56 +2677,10 @@
           "unresolved_calls": 0
         },
         {
-          "value": "6/23 Call Booking Campaign",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "—"
-          },
-          "scheduled_calls": 0,
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "Anthony Webinar Leads 9/2",
           "bookings": 1,
           "marketing": 0,
           "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "—"
-          },
-          "scheduled_calls": 0,
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
-          "value": "VP-Masterclass",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
@@ -2773,9 +2750,9 @@
       "setters": [
         {
           "value": "Vince Bartolini",
-          "bookings": 4,
+          "bookings": 5,
           "marketing": 0,
-          "lane2": 4,
+          "lane2": 5,
           "social_dms": 0,
           "showed": 1,
           "qualified": 1,
@@ -2794,8 +2771,8 @@
         },
         {
           "value": "Marketing",
-          "bookings": 2,
-          "marketing": 2,
+          "bookings": 1,
+          "marketing": 1,
           "lane2": 0,
           "social_dms": 0,
           "showed": 1,
@@ -3615,7 +3592,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-09T17:30:21.989767-08:00",
+    "generated_at": "2026-11-09T17:45:18.817907-08:00",
     "counts": {
       "Christian Hartwell": 29,
       "Scott Seymour": 8,
