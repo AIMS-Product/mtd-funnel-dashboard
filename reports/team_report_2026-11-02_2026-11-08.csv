@@ -2,72 +2,71 @@
 Report,Team Performance — Closers
 Start Date,2026-11-02
 End Date,2026-11-08
-Week Ending,"November 8th, 2026"
-Date Range Label,"November 2 – November 8, 2026"
-Generated At,"November 9, 2026 at 5:29 AM PT"
-Pipeline Value Per Qualified Opp,"$7,000"
-Pipeline Weight,20%
-Pipeline Basis,"Open qualified leads with Current Owner Since in the 30 days before Generated At; snapshot, not limited to the report week"
-Revenue Goal Basis,"Booked × 13% × $7,000 = 10.8 deals × $7,000"
-Closers,Christian Hartwell; Scott Seymour; Robin Perkins; Eric Piccione; Joe Vaughan; Shreya Bechra; Luke Herman; Ariella Irvine; Oscar Pugh; Joe Dysert
+Generated At,2026-11-10T00:24:52.173454-08:00
+Source Snapshot,v2/archives/data-week-2026-11-02.json
+Source SHA-256,d400e145c0a8764c4d0ce3a2e510bc50f264d1a7c163fb50c0c48a81cbb9036b
+Source Generated At,2026-11-09T00:00:24.941440-08:00
+Source Cutoff (exclusive),2026-11-09T00:00:00-08:00
+Timezone,America/Los_Angeles
+Booking Rules,booked_calls.v2.8-naria-navigator-title-20261102
+Closers,Christian Hartwell; Scott Seymour; Robin Perkins; Eric Piccione; Joe Vaughan; Shreya Bechra; Luke Herman; Ariella Irvine; Joe Dysert
+Booked Basis,Calls Occurred: qualifying scheduled calls with native Completed or No Show outcome
+Shown Basis,Native Completed meeting outcome; not First Call Show Up
+Qualified Basis,Distinct currently qualified leads in occurred-call cohort per owner
+Won / Revenue Basis,Included V2 opportunities by date_won and opportunity owner; independent of meeting dates
+Win Units,Opportunities; Rep/Manager may count distinct owner/lead wins instead
+MTD V2 Booked Difference,MTD V2 Total Booked is creation-date credits; compare this Booked to MTD V2 Calls Occurred
+Pipeline Snapshot,2026-11-09T00:00:24.941440-08:00
+Pipeline Basis,"Current open qualified leads owned within trailing 30 days; $7,000 × 20% per lead. Independent of report week."
+Revenue Goal Basis,"Booked (occurred calls) × 13% × $7,000"
 
 ## TEAM KPI TILES
 Tile,Actual,Goal,% of Goal,Status,Numerator,Denominator,Definition
-Team Revenue Closed,"$27,887","$75,530",37%,Below Goal,5,83,"Won opp value in window (numerator = deals). Goal = Booked × 13% × $7,000 (denominator = booked)"
-Team Pipeline,"$169,400","$840,000",20%,Below Goal,121,,"Open qualified leads owned by closers in the trailing 30 days by Current Owner Since × $7,000 × 20%"
-Team Show Rate,50.6%,65.0%,78%,Below Goal,42,83,Showed ÷ Booked
-"Team Close Rate (Booked → Closed, Net)",6.0%,13.0%,46%,Below Goal,5,83,Closed Won ÷ Booked (net of Canceled / Outside US)
-Team Close Rate (Qualified → Closed),16.1%,20.0%,81%,Below Goal,5,31,Closed Won ÷ Qualified
+Team Revenue Closed,"$27,887","$69,160",40%,Below Goal,5,76,"Date-won revenue; goal = occurred calls × 13% × $7,000"
+Team Pipeline,"$170,800","$840,000",20%,Below Goal,122,,"Saved trailing-30-day qualified-owner snapshot × $7,000 × 20%"
+Team Show Rate,67.1%,65.0%,103%,On / Above Goal,51,76,Native Completed ÷ Calls Occurred
+"Team Close Rate (Booked → Closed, Net)",6.6%,13.0%,51%,Below Goal,5,76,Date-won opportunities ÷ Calls Occurred
+Team Close Rate (Qualified → Closed),14.3%,20.0%,71%,Below Goal,5,35,Secondary ratio: date-won opportunities ÷ qualified leads
 
 ## TEAM COUNTS
 Metric,Value
-Booked,83
-Showed,42
-Qualified,31
-Qual Rate (Qualified ÷ Showed),73.8%
-Open Qualified Opps (Closers),121
-"Pipeline (Gross, before 20%)","$847,000"
-Revenue Goal (Deals Needed),10.8
+Booked,76
+Showed,51
+Qualified,35
+Qual Rate (Qualified ÷ Booked),46.1%
+Open Qualified Opps (Closers),122
+"Pipeline (Gross, before 20%)","$854,000"
+Revenue Goal (Deals Needed),9.9
 Closed Won,5
 Avg Deal,"$5,577"
 
 ## REP BREAKDOWN
 Rep,Revenue,Revenue Goal,% of Rev Goal,Closed Won,Avg Deal,Pipeline,Open Qualified Opps,Booked,Showed,Show %,Qualified,Qual %,"Close % (Booked → Closed, Net)",Close % (Qualified → Closed)
-Luke Herman,"$6,897","$15,470",45%,1,"$6,897","$26,600",19,17,10,58.8%,8,80.0%,5.9%,12.5%
-Christian Hartwell,"$5,997","$12,740",47%,1,"$5,997","$43,400",31,14,8,57.1%,6,75.0%,7.1%,16.7%
-Scott Seymour,"$5,997","$8,190",73%,1,"$5,997","$12,600",9,9,6,66.7%,4,66.7%,11.1%,25.0%
-Shreya Bechra,"$5,997","$8,190",73%,1,"$5,997","$1,400",1,9,2,22.2%,2,100.0%,11.1%,50.0%
-Joe Dysert,"$2,999",$0,,1,"$2,999","$11,200",8,0,0,,0,,,
-Robin Perkins,$0,"$11,830",0%,0,,"$22,400",16,13,8,61.5%,4,50.0%,0.0%,0.0%
-Joe Vaughan,$0,"$10,010",0%,0,,"$16,800",12,11,3,27.3%,4,133.3%,0.0%,0.0%
-Ariella Irvine,$0,"$8,190",0%,0,,"$19,600",14,9,5,55.6%,3,60.0%,0.0%,0.0%
-Eric Piccione,$0,$910,0%,0,,"$14,000",10,1,0,0.0%,0,,0.0%,
-Oscar Pugh,$0,$0,,0,,"$1,400",1,0,0,,0,,,
-EXCLUDED — Other / Non-Closer,$0,"$9,100",0%,0,,,,10,2,20.0%,2,100.0%,0.0%,0.0%
-TOTAL,"$27,887","$75,530",37%,5,"$5,577","$169,400",121,83,42,50.6%,31,73.8%,6.0%,16.1%
+Luke Herman,"$6,897","$12,740",54%,1,"$6,897","$28,000",20,14,10,71.4%,8,57.1%,7.1%,12.5%
+Christian Hartwell,"$5,997","$13,650",44%,1,"$5,997","$43,400",31,15,11,73.3%,6,40.0%,6.7%,16.7%
+Scott Seymour,"$5,997","$6,370",94%,1,"$5,997","$12,600",9,7,4,57.1%,3,42.9%,14.3%,33.3%
+Shreya Bechra,"$5,997","$5,460",110%,1,"$5,997","$1,400",1,6,2,33.3%,2,33.3%,16.7%,50.0%
+Joe Dysert,"$2,999","$6,370",47%,1,"$2,999","$11,200",8,7,6,85.7%,5,71.4%,14.3%,20.0%
+Robin Perkins,$0,"$10,920",0%,0,—,"$22,400",16,12,8,66.7%,5,41.7%,0.0%,0.0%
+Joe Vaughan,$0,"$7,280",0%,0,—,"$18,200",13,8,5,62.5%,4,50.0%,0.0%,0.0%
+Ariella Irvine,$0,"$6,370",0%,0,—,"$19,600",14,7,5,71.4%,2,28.6%,0.0%,0.0%
+Eric Piccione,$0,$0,—,0,—,"$14,000",10,0,0,—,0,—,—,—
+EXCLUDED — Other / Non-Closer,$0,$0,—,0,—,,,0,0,—,0,—,—,—
+TOTAL,"$27,887","$69,160",40%,5,"$5,577","$170,800",122,76,51,67.1%,35,46.1%,6.6%,14.3%
 
 ## RECONCILIATION
-No weekly funnel CSV found at reports/report_2026-11-02_2026-11-08.csv — run Generate Weekly Report for the same dates to reconcile.
+Metric,This Report — Closers,MTD V2 Same Snapshot — All Owners,Other / Non-Closer,Match Including Other
+Booked / Calls Occurred,76,76,0,YES
+Showed,51,51,0,YES
+Qualified,35,35,0,YES
+Closed Won,5,5,0,YES
+Revenue,27887.0,27887.0,0,YES
 
 ## DATA NOTES
-Booked leads excluded — Canceled / Outside US status,6
-Booked leads excluded — business line (TLG/PPA),3
-Booked leads excluded — LTF - Quiz Funnel,0
-Booked leads with no Lead Owner (excluded from team totals),0
-Other / Non-Closer bookings excluded from Team totals,10
-Closer qualified leads not in Pipeline — Current Owner Since outside 30 days,69
-Closer qualified leads not in Pipeline — closed lead status,570
-Closer qualified leads not in Pipeline — has won opp,0
-Closer qualified leads not in Pipeline — missing Current Owner Since,29
-Won opps excluded — excluded owner,0
-Won opps excluded — business line (TLG/PPA),0
-Won opps excluded — LTF - Quiz Funnel,0
-Excluded Other / Non-Closer — booked owned by Eduardo Santos,4
-Excluded Other / Non-Closer — booked owned by Rob Maxfield,3
-Excluded Other / Non-Closer — booked owned by Sreeteja Pampati,1
-Excluded Other / Non-Closer — booked owned by Vince Bartolini,1
-Excluded Other / Non-Closer — booked owned by Wes Wan,1
+Source selection,Same saved V2 snapshot where available; no independent lead-field booking/show calculation
+Reporting windows,Compare identical start/end dates and Source Cutoff; a weekly report is not the current full MTD
+Excluded roster,Only the nine approved VP closers appear; other owners are audit-only
+Native definition differences,"Win opportunity/lead units, owner scope and trailing-30-day pipeline remain explicitly separate"
 
 ## WARNINGS
-⚠️ Eduardo Santos owns 4 booked calls but isn't in CLOSERS — new closer?
-⚠️ Rob Maxfield owns 3 booked calls but isn't in CLOSERS — new closer?
+None
