@@ -11,6 +11,33 @@ The dedicated [`update_v2.yml`](../.github/workflows/update_v2.yml) GitHub Actio
 The workflow runs `python3 v2/refresh.py`, refreshing the full month and current week while maintaining V2's own monthly and weekly archives. It commits only `v2/index.html` and aggregate-only files under `v2/archives/` and `v2/reports/` for GitHub Pages. Its concurrency group prevents overlapping V2 builds, and it rebases before pushing to preserve updates from other dashboard jobs. The current MTD workflow, schedule, root dashboard, root reports, and root archives are unchanged.
 
 
+
+## Established GitHub team report
+
+The **Generate Team Performance Report** workflow and existing
+`generate_team_report.py --start ... --end ...` entry point now use the approved
+V2 outcome definitions for October 2026 onward. Output keeps its familiar team
+KPI/rep-breakdown sections and `reports/team_report_START_END.csv` filename.
+It supports weekly and month-to-date windows.
+
+**Booked means Calls Occurred**, matching Rep and Sales Manager. Shown is native
+Completed; qualified is the saved qualified occurred cohort. Primary rates divide
+by occurred calls. MTD V2 Total Booked remains its separate creation-date metric.
+Wins/revenue use independent native V2 date-won opportunity units; distinct-lead
+win counts on other dashboards can differ. Only the nine approved closers appear;
+other-owner contributions remain an audit-only aggregate.
+
+A matching saved V2 snapshot is reused, including its cutoff, rule version, hash
+and point-in-time trailing-30-day pipeline. No separate lead-field show/booked
+calculation or redundant CRM pull is made. Custom windows without a matching
+snapshot use the exact current V2 read-only builder. Frozen snapshots are not
+modified. Pre-October dates (or explicit `--legacy`) retain the original report
+path and definitions. The historical helper roster remains importable solely for
+existing V2 pipeline/legacy compatibility; it is not the active report roster.
+
+This change does not consolidate repositories or change any dashboard schedule,
+refresh script, page, CRM record or archived source data.
+
 ## Calls Occurred reporting (November 2026)
 
 The reporting selector is pinned to MTD V2 v2.8, including complete meeting histories,

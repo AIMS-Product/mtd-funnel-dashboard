@@ -5,7 +5,12 @@ generate_team_report.py — Weekly Team Performance report (closer tiles + per-r
 Usage:  python3 generate_team_report.py --start YYYY-MM-DD --end YYYY-MM-DD
 Output: reports/team_report_YYYY-MM-DD_YYYY-MM-DD.csv
 
-The window must be a FULL WEEK: exactly 7 consecutive days (end = start + 6).
+October 2026 onward uses v2/team_report.py by default: Booked is Calls
+Occurred, native outcomes drive shows, and a matching saved V2 snapshot is
+reused. The helpers and definitions below apply only to legacy historical
+runs (before October, or explicit --legacy).
+
+The LEGACY window must be a FULL WEEK: exactly 7 consecutive days (end = start + 6).
 Any start weekday is accepted (Fri–Thu to pair with the weekly funnel CSV,
 or Mon–Sun to pair with the weekly archives).
 
@@ -52,6 +57,27 @@ metrics; Pipeline is closers-only by definition.
 import os, sys, csv, argparse
 from datetime import datetime, date, timedelta
 from pathlib import Path
+
+# The existing workflow/filename now uses the approved dashboard definitions.
+# Keep the legacy helpers importable: V2 independently reuses only its pipeline
+# calculation, and pre-October historical CLI runs retain their original rules.
+if __name__ == "__main__":
+    early = argparse.ArgumentParser(add_help=False)
+    early.add_argument("--start")
+    early.add_argument("--legacy", action="store_true")
+    selected, _ = early.parse_known_args()
+    aligned = not selected.legacy
+    if selected.start:
+        try:
+            aligned = aligned and date.fromisoformat(selected.start) >= date(2026, 10, 1)
+        except ValueError:
+            pass  # The aligned argument parser reports malformed date input.
+    if aligned:
+        sys.path.insert(0, str(Path(__file__).resolve().parent / "v2"))
+        from team_report import main as aligned_main
+        raise SystemExit(aligned_main())
+    if "--legacy" in sys.argv:
+        sys.argv.remove("--legacy")
 
 # Shared rules + helpers — single source of truth with the weekly funnel CSV.
 import generate_report as gr

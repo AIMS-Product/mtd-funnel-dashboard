@@ -4,18 +4,22 @@ on:
   workflow_dispatch:
     inputs:
       start_date:
-        description: "Week start date (YYYY-MM-DD) — any weekday"
+        description: "Report start date (YYYY-MM-DD) — October onward uses aligned dashboard rules"
         required: true
         type: string
       end_date:
-        description: "Week end date (YYYY-MM-DD) — must be start + 6 days"
+        description: "Report end date (YYYY-MM-DD), inclusive; supports a week or MTD"
         required: true
         type: string
+
+concurrency:
+  group: aligned-team-report-publication
+  cancel-in-progress: false
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     permissions:
       contents: write
 
@@ -25,6 +29,9 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
@@ -34,20 +41,34 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
+      - name: Verify aligned reporting rules
+        run: python3 -m unittest discover -s v2 -p 'test*.py' -q
+
       - name: Fetch data and generate CSV
         env:
           CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+          START: ${{ inputs.start_date }}
+          END: ${{ inputs.end_date }}
         run: |
           python3 -u generate_team_report.py \
-            --start ${{ github.event.inputs.start_date }} \
-            --end   ${{ github.event.inputs.end_date }}
+            --start "$START" \
+            --end "$END"
 
       - name: Commit and push CSV
+        env:
+          START: ${{ inputs.start_date }}
+          END: ${{ inputs.end_date }}
         run: |
+          set -euo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports/
+          git add -- "reports/team_report_${START}_${END}.csv"
           git diff --staged --quiet || \
-            git commit -m "Team performance CSV: ${{ github.event.inputs.start_date }} → ${{ github.event.inputs.end_date }}"
-          git pull --rebase --strategy-option=ours
-          git push
+            git commit -m "Aligned team performance CSV: ${START} to ${END}"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
