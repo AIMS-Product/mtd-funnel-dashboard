@@ -7,22 +7,22 @@
       "marketing": 0,
       "lane2": 10,
       "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
+      "showed": 1,
+      "qualified": 1,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "0.0%",
-        "qualified": "0.0%",
+        "show": "50.0%",
+        "qualified": "50.0%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "0.0%"
+        "qualified_occurred": "50.0%"
       },
       "scheduled_calls": 4,
-      "occurred_calls": 1,
+      "occurred_calls": 2,
       "no_shows": 1,
-      "unresolved_calls": 3
+      "unresolved_calls": 2
     },
     {
       "value": "Marketing",
@@ -308,22 +308,22 @@
       "marketing": 0,
       "lane2": 5,
       "social_dms": 0,
-      "showed": 3,
-      "qualified": 3,
+      "showed": 4,
+      "qualified": 4,
       "closed_won": 1,
       "revenue": 5397.0,
       "formats": {
         "show": "100.0%",
         "qualified": "100.0%",
-        "close": "33.3%",
+        "close": "25.0%",
         "revenue": "$5,397",
         "average": "$5,397",
         "qualified_occurred": "100.0%"
       },
       "scheduled_calls": 5,
-      "occurred_calls": 3,
+      "occurred_calls": 4,
       "no_shows": 0,
-      "unresolved_calls": 2
+      "unresolved_calls": 1
     },
     {
       "value": "Joe Vaughan",
@@ -418,8 +418,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-10T10:00:28.183244-08:00",
-  "source_cutoff": "2026-11-10T10:00:28.183244-08:00",
+  "generated_at": "2026-11-10T10:15:19.412833-08:00",
+  "source_cutoff": "2026-11-10T10:15:19.412833-08:00",
   "vendhub_arr": 8396.0,
   "progress": {
     "day": 10,
@@ -452,7 +452,7 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 33,
   "excluded_repeat_candidates": 4,
-  "attribution_reviewed_at": "2026-11-10T10:00:28.183244-08:00",
+  "attribution_reviewed_at": "2026-11-10T10:15:19.412833-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 174,
@@ -460,22 +460,22 @@
     "marketing": 8,
     "lane2": 25,
     "social_dms": 0,
-    "showed": 11,
-    "qualified": 8,
+    "showed": 12,
+    "qualified": 9,
     "closed_won": 4,
     "revenue": 30288.0,
     "formats": {
-      "show": "73.3%",
-      "qualified": "53.3%",
-      "close": "26.7%",
+      "show": "75.0%",
+      "qualified": "56.2%",
+      "close": "25.0%",
       "revenue": "$30,288",
       "average": "$7,572",
-      "qualified_occurred": "53.3%"
+      "qualified_occurred": "56.2%"
     },
     "scheduled_calls": 26,
-    "occurred_calls": 15,
+    "occurred_calls": 16,
     "no_shows": 4,
-    "unresolved_calls": 11
+    "unresolved_calls": 10
   },
   "channels": [
     {
@@ -2238,8 +2238,8 @@
       "marketing": 0,
       "lane2": 0,
       "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
+      "showed": 1,
+      "qualified": 1,
       "closed_won": 0,
       "revenue": 0,
       "unrecoverable_booked_leads": 0,
@@ -2250,22 +2250,22 @@
           "marketing": 0,
           "lane2": 0,
           "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
+          "showed": 1,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
           "scheduled_calls": 1,
           "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "0.0%",
             "revenue": "$0",
             "average": "—",
-            "qualified_occurred": "—"
+            "qualified_occurred": "100.0%"
           },
-          "occurred_calls": 0,
+          "occurred_calls": 1,
           "no_shows": 0,
-          "unresolved_calls": 1
+          "unresolved_calls": 0
         }
       ],
       "packages": [],
@@ -2276,20 +2276,20 @@
           "marketing": 0,
           "lane2": 0,
           "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
+          "showed": 1,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
           "scheduled_calls": 1,
           "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "0.0%",
+            "qualified_occurred": "100.0%"
           },
-          "occurred_calls": 0,
+          "occurred_calls": 1,
           "no_shows": 0,
-          "unresolved_calls": 1
+          "unresolved_calls": 0
         }
       ],
       "scheduled_calls": 1,
@@ -2300,16 +2300,16 @@
         "pace": ""
       },
       "formats": {
-        "show": "—",
-        "qualified": "—",
-        "close": "—",
+        "show": "100.0%",
+        "qualified": "100.0%",
+        "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "—"
+        "qualified_occurred": "100.0%"
       },
-      "occurred_calls": 0,
+      "occurred_calls": 1,
       "no_shows": 0,
-      "unresolved_calls": 1
+      "unresolved_calls": 0
     }
   ],
   "goal_percentages": {
@@ -2336,7 +2336,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-10T10:00:28.183244-08:00",
+    "generated_at": "2026-11-10T10:15:19.412833-08:00",
     "counts": {
       "Christian Hartwell": 30,
       "Scott Seymour": 9,
