@@ -134,10 +134,10 @@
         "average": "—",
         "qualified_occurred": "100.0%"
       },
-      "scheduled_calls": 2,
+      "scheduled_calls": 3,
       "occurred_calls": 1,
       "no_shows": 0,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Pearl Sathekge",
@@ -232,6 +232,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Monde Janzen",
+      "bookings": 1,
+      "marketing": 0,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "0.0%",
+        "qualified": "0.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "0.0%"
+      },
+      "scheduled_calls": 1,
+      "occurred_calls": 1,
+      "no_shows": 1,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Marketing / Unassigned",
       "bookings": 0,
       "marketing": 0,
@@ -278,29 +301,6 @@
       "unresolved_calls": 1
     },
     {
-      "value": "Monde Janzen",
-      "bookings": 0,
-      "marketing": 0,
-      "lane2": 0,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "scheduled_calls": 1,
-      "formats": {
-        "show": "0.0%",
-        "qualified": "0.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "0.0%"
-      },
-      "occurred_calls": 1,
-      "no_shows": 1,
-      "unresolved_calls": 0
-    },
-    {
       "value": "Tony Parton",
       "bookings": 0,
       "marketing": 0,
@@ -327,9 +327,9 @@
   "team": [
     {
       "value": "Luke Herman",
-      "bookings": 27,
+      "bookings": 28,
       "marketing": 11,
-      "lane2": 16,
+      "lane2": 17,
       "social_dms": 0,
       "showed": 11,
       "qualified": 9,
@@ -435,10 +435,10 @@
         "average": "$6,897",
         "qualified_occurred": "55.6%"
       },
-      "scheduled_calls": 16,
+      "scheduled_calls": 17,
       "occurred_calls": 9,
       "no_shows": 3,
-      "unresolved_calls": 7
+      "unresolved_calls": 8
     },
     {
       "value": "Scott Seymour",
@@ -533,8 +533,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-10T11:15:18.934017-08:00",
-  "source_cutoff": "2026-11-10T11:15:18.934017-08:00",
+  "generated_at": "2026-11-10T11:30:31.005453-08:00",
+  "source_cutoff": "2026-11-10T11:30:31.005453-08:00",
   "vendhub_arr": 16195.0,
   "progress": {
     "day": 10,
@@ -565,15 +565,15 @@
   "period": "2026-11-01 through 2026-11-10 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 137,
+  "counted_meetings": 138,
   "excluded_repeat_candidates": 15,
-  "attribution_reviewed_at": "2026-11-10T11:15:18.934017-08:00",
+  "attribution_reviewed_at": "2026-11-10T11:30:31.005453-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1923,
-    "bookings": 137,
+    "leads_created": 1925,
+    "bookings": 138,
     "marketing": 51,
-    "lane2": 82,
+    "lane2": 83,
     "social_dms": 4,
     "showed": 67,
     "qualified": 47,
@@ -587,15 +587,15 @@
       "average": "$6,464",
       "qualified_occurred": "47.5%"
     },
-    "scheduled_calls": 125,
+    "scheduled_calls": 126,
     "occurred_calls": 99,
     "no_shows": 32,
-    "unresolved_calls": 26
+    "unresolved_calls": 27
   },
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1753,
+      "leads_created": 1755,
       "bookings": 39,
       "marketing": 9,
       "lane2": 30,
@@ -2103,10 +2103,10 @@
             "average": "—",
             "qualified_occurred": "—"
           },
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "shouldnt-start-vending",
@@ -2500,7 +2500,7 @@
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "formats": {
             "show": "—",
             "qualified": "—",
@@ -2509,7 +2509,7 @@
           },
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "Tara Hall",
@@ -2589,10 +2589,10 @@
         "average": "$5,697",
         "qualified_occurred": "40.0%"
       },
-      "scheduled_calls": 18,
+      "scheduled_calls": 19,
       "occurred_calls": 15,
       "no_shows": 5,
-      "unresolved_calls": 3
+      "unresolved_calls": 4
     },
     {
       "channel": "Instagram",
@@ -2899,9 +2899,9 @@
     {
       "channel": "Meta Ads",
       "leads_created": 1,
-      "bookings": 6,
+      "bookings": 7,
       "marketing": 1,
-      "lane2": 4,
+      "lane2": 5,
       "social_dms": 1,
       "showed": 1,
       "qualified": 1,
@@ -2909,6 +2909,29 @@
       "revenue": 0.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
+        {
+          "value": "6/23 Call Booking Campaign",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 1,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 1
+        },
         {
           "value": "VSL Leads campaign",
           "bookings": 2,
@@ -2954,29 +2977,6 @@
           "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 0
-        },
-        {
-          "value": "6/23 Call Booking Campaign",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "—"
-          },
-          "scheduled_calls": 1,
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 1
         },
         {
           "value": "Anthony Webinar Leads 9/2",
@@ -3070,6 +3070,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Monde Janzen",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Pearl Sathekge",
           "bookings": 1,
           "marketing": 0,
@@ -3092,9 +3113,9 @@
         }
       ],
       "display": {
-        "projected": 18,
+        "projected": 21,
         "goal": 44,
-        "goal_pct": 14,
+        "goal_pct": 16,
         "pace": "pace-behind"
       },
       "formats": {
@@ -3600,7 +3621,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-10T11:15:18.934017-08:00",
+    "generated_at": "2026-11-10T11:30:31.005453-08:00",
     "counts": {
       "Christian Hartwell": 30,
       "Scott Seymour": 11,
