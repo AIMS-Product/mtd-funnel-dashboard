@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 49,
-      "marketing": 49,
+      "bookings": 50,
+      "marketing": 50,
       "lane2": 0,
       "social_dms": 0,
       "showed": 26,
@@ -395,6 +395,29 @@
       "unresolved_calls": 1
     },
     {
+      "value": "Robin Perkins",
+      "bookings": 17,
+      "marketing": 9,
+      "lane2": 8,
+      "social_dms": 0,
+      "showed": 8,
+      "qualified": 4,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "66.7%",
+        "qualified": "33.3%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "33.3%"
+      },
+      "scheduled_calls": 14,
+      "occurred_calls": 12,
+      "no_shows": 4,
+      "unresolved_calls": 2
+    },
+    {
       "value": "Joe Vaughan",
       "bookings": 16,
       "marketing": 12,
@@ -416,29 +439,6 @@
       "occurred_calls": 8,
       "no_shows": 3,
       "unresolved_calls": 6
-    },
-    {
-      "value": "Robin Perkins",
-      "bookings": 16,
-      "marketing": 8,
-      "lane2": 8,
-      "social_dms": 0,
-      "showed": 8,
-      "qualified": 4,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "66.7%",
-        "qualified": "33.3%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "33.3%"
-      },
-      "scheduled_calls": 14,
-      "occurred_calls": 12,
-      "no_shows": 4,
-      "unresolved_calls": 2
     },
     {
       "value": "Scott Seymour",
@@ -533,8 +533,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-10T07:30:22.710715-08:00",
-  "source_cutoff": "2026-11-10T07:30:22.710715-08:00",
+  "generated_at": "2026-11-10T07:45:24.392166-08:00",
+  "source_cutoff": "2026-11-10T07:45:24.392166-08:00",
   "vendhub_arr": 16195.0,
   "progress": {
     "day": 10,
@@ -565,14 +565,14 @@
   "period": "2026-11-01 through 2026-11-10 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 131,
+  "counted_meetings": 132,
   "excluded_repeat_candidates": 15,
-  "attribution_reviewed_at": "2026-11-10T07:30:22.710715-08:00",
+  "attribution_reviewed_at": "2026-11-10T07:45:24.392166-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1904,
-    "bookings": 131,
-    "marketing": 49,
+    "leads_created": 1907,
+    "bookings": 132,
+    "marketing": 50,
     "lane2": 78,
     "social_dms": 4,
     "showed": 63,
@@ -595,7 +595,7 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1739,
+      "leads_created": 1740,
       "bookings": 39,
       "marketing": 9,
       "lane2": 30,
@@ -1211,7 +1211,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 72,
+      "leads_created": 73,
       "bookings": 27,
       "marketing": 4,
       "lane2": 23,
@@ -3269,6 +3269,86 @@
       "unresolved_calls": 1
     },
     {
+      "channel": "Linkedin",
+      "leads_created": 2,
+      "bookings": 2,
+      "marketing": 2,
+      "lane2": 0,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0.0,
+      "unrecoverable_booked_leads": 0,
+      "drilldowns": [
+        {
+          "value": "book-call",
+          "bookings": 2,
+          "marketing": 2,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        }
+      ],
+      "packages": [],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 2,
+          "marketing": 2,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        }
+      ],
+      "display": {
+        "projected": 6,
+        "goal": 10,
+        "goal_pct": 20,
+        "pace": "pace-behind"
+      },
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 0,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 0
+    },
+    {
       "channel": "Anthony IG",
       "leads_created": 0,
       "bookings": 1,
@@ -3345,86 +3425,6 @@
       },
       "scheduled_calls": 1,
       "occurred_calls": 1,
-      "no_shows": 0,
-      "unresolved_calls": 0
-    },
-    {
-      "channel": "Linkedin",
-      "leads_created": 1,
-      "bookings": 1,
-      "marketing": 1,
-      "lane2": 0,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0.0,
-      "unrecoverable_booked_leads": 0,
-      "drilldowns": [
-        {
-          "value": "book-call",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "—"
-          },
-          "scheduled_calls": 0,
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        }
-      ],
-      "packages": [],
-      "setters": [
-        {
-          "value": "Marketing",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
-          },
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        }
-      ],
-      "display": {
-        "projected": 3,
-        "goal": 10,
-        "goal_pct": 10,
-        "pace": "pace-behind"
-      },
-      "formats": {
-        "show": "—",
-        "qualified": "—",
-        "close": "—",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "—"
-      },
-      "scheduled_calls": 0,
-      "occurred_calls": 0,
       "no_shows": 0,
       "unresolved_calls": 0
     },
@@ -3533,7 +3533,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-10T07:30:22.710715-08:00",
+    "generated_at": "2026-11-10T07:45:24.392166-08:00",
     "counts": {
       "Christian Hartwell": 28,
       "Scott Seymour": 8,
