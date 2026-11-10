@@ -147,14 +147,14 @@
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
-      "closed_won": 3,
-      "revenue": 23391.0,
+      "closed_won": 4,
+      "revenue": 30288.0,
       "formats": {
         "show": "—",
         "qualified": "—",
         "close": "—",
-        "revenue": "$23,391",
-        "average": "$7,797",
+        "revenue": "$30,288",
+        "average": "$7,572",
         "qualified_occurred": "—"
       },
       "scheduled_calls": 0,
@@ -333,14 +333,14 @@
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
+      "closed_won": 1,
+      "revenue": 6897.0,
       "formats": {
         "show": "—",
         "qualified": "—",
         "close": "—",
-        "revenue": "$0",
-        "average": "—",
+        "revenue": "$6,897",
+        "average": "$6,897",
         "qualified_occurred": "—"
       },
       "scheduled_calls": 1,
@@ -418,9 +418,9 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-10T06:45:21.042586-08:00",
-  "source_cutoff": "2026-11-10T06:45:21.042586-08:00",
-  "vendhub_arr": 7196.0,
+  "generated_at": "2026-11-10T07:00:26.484944-08:00",
+  "source_cutoff": "2026-11-10T07:00:26.484944-08:00",
+  "vendhub_arr": 8396.0,
   "progress": {
     "day": 10,
     "days": 30,
@@ -452,24 +452,24 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 28,
   "excluded_repeat_candidates": 4,
-  "attribution_reviewed_at": "2026-11-10T06:45:21.042586-08:00",
+  "attribution_reviewed_at": "2026-11-10T07:00:26.484944-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 151,
+    "leads_created": 154,
     "bookings": 28,
     "marketing": 7,
     "lane2": 21,
     "social_dms": 0,
     "showed": 11,
     "qualified": 6,
-    "closed_won": 3,
-    "revenue": 23391.0,
+    "closed_won": 4,
+    "revenue": 30288.0,
     "formats": {
       "show": "73.3%",
       "qualified": "40.0%",
-      "close": "20.0%",
-      "revenue": "$23,391",
-      "average": "$7,797",
+      "close": "26.7%",
+      "revenue": "$30,288",
+      "average": "$7,572",
       "qualified_occurred": "40.0%"
     },
     "scheduled_calls": 17,
@@ -487,8 +487,8 @@
       "social_dms": 0,
       "showed": 1,
       "qualified": 1,
-      "closed_won": 0,
-      "revenue": 0.0,
+      "closed_won": 1,
+      "revenue": 6897.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
         {
@@ -499,14 +499,14 @@
           "social_dms": 0,
           "showed": 1,
           "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
+          "closed_won": 1,
+          "revenue": 6897.0,
           "formats": {
             "show": "100.0%",
             "qualified": "100.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
+            "close": "100.0%",
+            "revenue": "$6,897",
+            "average": "$6,897",
             "qualified_occurred": "100.0%"
           },
           "scheduled_calls": 2,
@@ -538,7 +538,28 @@
           "unresolved_calls": 0
         }
       ],
-      "packages": [],
+      "packages": [
+        {
+          "value": "Bronze - $5,997 · Community",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 6897.0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "qualified_booked": "—",
+            "close": "—",
+            "qualified_close": "—",
+            "revenue": "$6,897",
+            "average": "$6,897"
+          }
+        }
+      ],
       "setters": [
         {
           "value": "Marketing",
@@ -581,6 +602,27 @@
           "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 0
+        },
+        {
+          "value": "Marketing / Unassigned",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 6897.0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
         }
       ],
       "display": {
@@ -592,9 +634,9 @@
       "formats": {
         "show": "100.0%",
         "qualified": "100.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
+        "close": "100.0%",
+        "revenue": "$6,897",
+        "average": "$6,897",
         "qualified_occurred": "100.0%"
       },
       "scheduled_calls": 2,
@@ -604,7 +646,7 @@
     },
     {
       "channel": "Internal Webinar",
-      "leads_created": 113,
+      "leads_created": 115,
       "bookings": 7,
       "marketing": 0,
       "lane2": 7,
@@ -971,7 +1013,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 16,
+      "leads_created": 17,
       "bookings": 6,
       "marketing": 0,
       "lane2": 6,
@@ -2058,11 +2100,11 @@
   ],
   "goal_percentages": {
     "bookings": 2,
-    "revenue": 3
+    "revenue": 4
   },
   "arr_display": {
-    "arr": "$7,196",
-    "mrr": "$600"
+    "arr": "$8,396",
+    "mrr": "$700"
   },
   "scheduled_outcome_basis": "Accepted v2.8 calls scheduled in [Pacific period start, cutoff), with native Completed or No Show outcome; independent of creation date",
   "qualification_evidence": "Current lead flag; the separate reset automation has not been applied",
@@ -2080,7 +2122,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-10T06:45:21.042586-08:00",
+    "generated_at": "2026-11-10T07:00:26.484944-08:00",
     "counts": {
       "Christian Hartwell": 28,
       "Scott Seymour": 8,
