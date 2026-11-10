@@ -1,0 +1,72 @@
+## REPORT METADATA
+Report,Team Performance — Closers
+Start Date,2026-11-01
+End Date,2026-11-10
+Generated At,2026-11-10T00:24:32.298074-08:00
+Source Snapshot,v2/archives/data-2026-11.json
+Source SHA-256,80737b69a18ba6a28c18911bf48951230a25a30fd8ad29c8d682a385710cdecb
+Source Generated At,2026-11-10T00:15:18.499157-08:00
+Source Cutoff (exclusive),2026-11-10T00:15:18.499157-08:00
+Timezone,America/Los_Angeles
+Booking Rules,booked_calls.v2.8-naria-navigator-title-20261102
+Closers,Christian Hartwell; Scott Seymour; Robin Perkins; Eric Piccione; Joe Vaughan; Shreya Bechra; Luke Herman; Ariella Irvine; Joe Dysert
+Booked Basis,Calls Occurred: qualifying scheduled calls with native Completed or No Show outcome
+Shown Basis,Native Completed meeting outcome; not First Call Show Up
+Qualified Basis,Distinct currently qualified leads in occurred-call cohort per owner
+Won / Revenue Basis,Included V2 opportunities by date_won and opportunity owner; independent of meeting dates
+Win Units,Opportunities; Rep/Manager may count distinct owner/lead wins instead
+MTD V2 Booked Difference,MTD V2 Total Booked is creation-date credits; compare this Booked to MTD V2 Calls Occurred
+Pipeline Snapshot,2026-11-10T00:15:18.499157-08:00
+Pipeline Basis,"Current open qualified leads owned within trailing 30 days; $7,000 × 20% per lead. Independent of report week."
+Revenue Goal Basis,"Booked (occurred calls) × 13% × $7,000"
+
+## TEAM KPI TILES
+Tile,Actual,Goal,% of Goal,Status,Numerator,Denominator,Definition
+Team Revenue Closed,"$51,278","$86,450",59%,Below Goal,8,95,"Date-won revenue; goal = occurred calls × 13% × $7,000"
+Team Pipeline,"$162,400","$840,000",19%,Below Goal,116,,"Saved trailing-30-day qualified-owner snapshot × $7,000 × 20%"
+Team Show Rate,66.3%,65.0%,102%,On / Above Goal,63,95,Native Completed ÷ Calls Occurred
+"Team Close Rate (Booked → Closed, Net)",8.4%,13.0%,65%,Below Goal,8,95,Date-won opportunities ÷ Calls Occurred
+Team Close Rate (Qualified → Closed),19.5%,20.0%,98%,Below Goal,8,41,Secondary ratio: date-won opportunities ÷ qualified leads
+
+## TEAM COUNTS
+Metric,Value
+Booked,95
+Showed,63
+Qualified,41
+Qual Rate (Qualified ÷ Booked),43.2%
+Open Qualified Opps (Closers),116
+"Pipeline (Gross, before 20%)","$812,000"
+Revenue Goal (Deals Needed),12.3
+Closed Won,8
+Avg Deal,"$6,410"
+
+## REP BREAKDOWN
+Rep,Revenue,Revenue Goal,% of Rev Goal,Closed Won,Avg Deal,Pipeline,Open Qualified Opps,Booked,Showed,Show %,Qualified,Qual %,"Close % (Booked → Closed, Net)",Close % (Qualified → Closed)
+Luke Herman,"$15,894","$14,560",109%,2,"$7,947","$28,000",20,16,11,68.8%,9,56.2%,12.5%,22.2%
+Scott Seymour,"$14,994","$8,190",183%,2,"$7,497","$11,200",8,9,6,66.7%,3,33.3%,22.2%,66.7%
+Christian Hartwell,"$11,394","$14,560",78%,2,"$5,697","$40,600",29,16,12,75.0%,8,50.0%,12.5%,25.0%
+Shreya Bechra,"$5,997","$10,920",55%,1,"$5,997","$1,400",1,12,4,33.3%,3,25.0%,8.3%,33.3%
+Joe Dysert,"$2,999","$10,010",30%,1,"$2,999","$12,600",9,11,10,90.9%,8,72.7%,9.1%,12.5%
+Robin Perkins,$0,"$10,920",0%,0,—,"$19,600",14,12,8,66.7%,4,33.3%,0.0%,0.0%
+Ariella Irvine,$0,"$10,010",0%,0,—,"$21,000",15,11,7,63.6%,2,18.2%,0.0%,0.0%
+Joe Vaughan,$0,"$7,280",0%,0,—,"$14,000",10,8,5,62.5%,4,50.0%,0.0%,0.0%
+Eric Piccione,$0,$0,—,0,—,"$14,000",10,0,0,—,0,—,—,—
+EXCLUDED — Other / Non-Closer,$0,$0,—,0,—,,,0,0,—,0,—,—,—
+TOTAL,"$51,278","$86,450",59%,8,"$6,410","$162,400",116,95,63,66.3%,41,43.2%,8.4%,19.5%
+
+## RECONCILIATION
+Metric,This Report — Closers,MTD V2 Same Snapshot — All Owners,Other / Non-Closer,Match Including Other
+Booked / Calls Occurred,95,95,0,YES
+Showed,63,63,0,YES
+Qualified,41,41,0,YES
+Closed Won,8,8,0,YES
+Revenue,51278.0,51278.0,0,YES
+
+## DATA NOTES
+Source selection,Same saved V2 snapshot where available; no independent lead-field booking/show calculation
+Reporting windows,Compare identical start/end dates and Source Cutoff; a weekly report is not the current full MTD
+Excluded roster,Only the nine approved VP closers appear; other owners are audit-only
+Native definition differences,"Win opportunity/lead units, owner scope and trailing-30-day pipeline remain explicitly separate"
+
+## WARNINGS
+None
