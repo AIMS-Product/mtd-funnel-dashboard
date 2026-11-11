@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 31,
-      "marketing": 31,
+      "bookings": 32,
+      "marketing": 32,
       "lane2": 0,
       "social_dms": 0,
       "showed": 6,
@@ -140,6 +140,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Pearl Sathekge",
+      "bookings": 2,
+      "marketing": 0,
+      "lane2": 0,
+      "social_dms": 2,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "0.0%",
+        "qualified": "0.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "0.0%"
+      },
+      "scheduled_calls": 1,
+      "occurred_calls": 1,
+      "no_shows": 1,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Monde Janzen",
       "bookings": 1,
       "marketing": 0,
@@ -160,29 +183,6 @@
       "scheduled_calls": 0,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 0
-    },
-    {
-      "value": "Pearl Sathekge",
-      "bookings": 1,
-      "marketing": 0,
-      "lane2": 0,
-      "social_dms": 1,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "0.0%",
-        "qualified": "0.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "0.0%"
-      },
-      "scheduled_calls": 1,
-      "occurred_calls": 1,
-      "no_shows": 1,
       "unresolved_calls": 0
     },
     {
@@ -304,10 +304,10 @@
     },
     {
       "value": "Robin Perkins",
-      "bookings": 12,
+      "bookings": 13,
       "marketing": 7,
       "lane2": 5,
-      "social_dms": 0,
+      "social_dms": 1,
       "showed": 3,
       "qualified": 2,
       "closed_won": 0,
@@ -327,8 +327,8 @@
     },
     {
       "value": "Joe Vaughan",
-      "bookings": 7,
-      "marketing": 5,
+      "bookings": 8,
+      "marketing": 6,
       "lane2": 2,
       "social_dms": 0,
       "showed": 3,
@@ -464,8 +464,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-11T08:30:25.956152-08:00",
-  "source_cutoff": "2026-11-11T08:30:25.956152-08:00",
+  "generated_at": "2026-11-11T08:45:16.814974-08:00",
+  "source_cutoff": "2026-11-11T08:45:16.814974-08:00",
   "vendhub_arr": 14392.0,
   "progress": {
     "day": 11,
@@ -496,16 +496,16 @@
   "period": "2026-11-09 through 2026-11-11 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 63,
+  "counted_meetings": 65,
   "excluded_repeat_candidates": 5,
-  "attribution_reviewed_at": "2026-11-11T08:30:25.956152-08:00",
+  "attribution_reviewed_at": "2026-11-11T08:45:16.814974-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 244,
-    "bookings": 63,
-    "marketing": 31,
+    "bookings": 65,
+    "marketing": 32,
     "lane2": 31,
-    "social_dms": 1,
+    "social_dms": 2,
     "showed": 24,
     "qualified": 18,
     "closed_won": 6,
@@ -1236,20 +1236,20 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 36,
-      "bookings": 9,
-      "marketing": 1,
+      "bookings": 10,
+      "marketing": 2,
       "lane2": 8,
       "social_dms": 0,
       "showed": 7,
       "qualified": 3,
       "closed_won": 0,
       "revenue": 0.0,
-      "unrecoverable_booked_leads": 9,
+      "unrecoverable_booked_leads": 10,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 8,
-          "marketing": 1,
+          "bookings": 9,
+          "marketing": 2,
           "lane2": 7,
           "social_dms": 0,
           "showed": 5,
@@ -1340,6 +1340,27 @@
           "unresolved_calls": 1
         },
         {
+          "value": "Marketing",
+          "bookings": 2,
+          "marketing": 2,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "qualified_occurred": "0.0%"
+          },
+          "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Naria Torres",
           "bookings": 2,
           "marketing": 0,
@@ -1382,27 +1403,6 @@
           "unresolved_calls": 0
         },
         {
-          "value": "Marketing",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 1,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "0.0%",
-            "close": "0.0%",
-            "qualified_occurred": "0.0%"
-          },
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "Rob Maxfield",
           "bookings": 1,
           "marketing": 0,
@@ -1425,7 +1425,7 @@
         }
       ],
       "display": {
-        "projected": 25,
+        "projected": 27,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -1903,10 +1903,10 @@
     {
       "channel": "Instagram",
       "leads_created": 3,
-      "bookings": 4,
+      "bookings": 5,
       "marketing": 0,
       "lane2": 3,
-      "social_dms": 1,
+      "social_dms": 2,
       "showed": 3,
       "qualified": 3,
       "closed_won": 0,
@@ -1960,6 +1960,29 @@
           "unresolved_calls": 0
         },
         {
+          "value": "book-call",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 1,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "100.0%"
+          },
+          "scheduled_calls": 1,
+          "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "mh-ig-bio",
           "bookings": 1,
           "marketing": 0,
@@ -2006,29 +2029,6 @@
           "unresolved_calls": 0
         },
         {
-          "value": "book-call",
-          "bookings": 0,
-          "marketing": 0,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 1,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "100.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "100.0%"
-          },
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "route-builder",
           "bookings": 0,
           "marketing": 0,
@@ -2054,6 +2054,27 @@
       ],
       "packages": [],
       "setters": [
+        {
+          "value": "Pearl Sathekge",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 2,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "qualified_occurred": "0.0%"
+          },
+          "occurred_calls": 1,
+          "no_shows": 1,
+          "unresolved_calls": 0
+        },
         {
           "value": "Ariella Irvine",
           "bookings": 1,
@@ -2094,27 +2115,6 @@
           },
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
-          "value": "Pearl Sathekge",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 0,
-          "social_dms": 1,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 1,
-          "formats": {
-            "show": "0.0%",
-            "qualified": "0.0%",
-            "close": "0.0%",
-            "qualified_occurred": "0.0%"
-          },
-          "occurred_calls": 1,
-          "no_shows": 1,
           "unresolved_calls": 0
         },
         {
@@ -2182,9 +2182,9 @@
         }
       ],
       "display": {
-        "projected": 11,
+        "projected": 14,
         "goal": 300,
-        "goal_pct": 1,
+        "goal_pct": 2,
         "pace": "pace-behind"
       },
       "formats": {
@@ -2921,7 +2921,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-11T08:30:25.956152-08:00",
+    "generated_at": "2026-11-11T08:45:16.814974-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 12,
