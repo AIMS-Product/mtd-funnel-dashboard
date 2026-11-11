@@ -48,6 +48,29 @@
       "unresolved_calls": 2
     },
     {
+      "value": "Rob Maxfield",
+      "bookings": 8,
+      "marketing": 0,
+      "lane2": 8,
+      "social_dms": 0,
+      "showed": 6,
+      "qualified": 4,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "100.0%",
+        "qualified": "66.7%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "66.7%"
+      },
+      "scheduled_calls": 8,
+      "occurred_calls": 6,
+      "no_shows": 0,
+      "unresolved_calls": 2
+    },
+    {
       "value": "Naria Torres",
       "bookings": 7,
       "marketing": 0,
@@ -69,29 +92,6 @@
       "occurred_calls": 6,
       "no_shows": 1,
       "unresolved_calls": 0
-    },
-    {
-      "value": "Rob Maxfield",
-      "bookings": 7,
-      "marketing": 0,
-      "lane2": 7,
-      "social_dms": 0,
-      "showed": 6,
-      "qualified": 4,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "100.0%",
-        "qualified": "66.7%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "66.7%"
-      },
-      "scheduled_calls": 8,
-      "occurred_calls": 6,
-      "no_shows": 0,
-      "unresolved_calls": 2
     },
     {
       "value": "Brad Savage",
@@ -304,9 +304,9 @@
     },
     {
       "value": "Robin Perkins",
-      "bookings": 13,
+      "bookings": 14,
       "marketing": 7,
-      "lane2": 5,
+      "lane2": 6,
       "social_dms": 1,
       "showed": 3,
       "qualified": 2,
@@ -464,8 +464,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-11T10:15:18.415093-08:00",
-  "source_cutoff": "2026-11-11T10:15:18.415093-08:00",
+  "generated_at": "2026-11-11T10:30:23.359320-08:00",
+  "source_cutoff": "2026-11-11T10:30:23.359320-08:00",
   "vendhub_arr": 14392.0,
   "progress": {
     "day": 11,
@@ -496,15 +496,15 @@
   "period": "2026-11-09 through 2026-11-11 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 65,
+  "counted_meetings": 66,
   "excluded_repeat_candidates": 5,
-  "attribution_reviewed_at": "2026-11-11T10:15:18.415093-08:00",
+  "attribution_reviewed_at": "2026-11-11T10:30:23.359320-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 481,
-    "bookings": 65,
+    "bookings": 66,
     "marketing": 32,
-    "lane2": 31,
+    "lane2": 32,
     "social_dms": 2,
     "showed": 24,
     "qualified": 18,
@@ -527,9 +527,9 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 177,
-      "bookings": 27,
+      "bookings": 28,
       "marketing": 17,
-      "lane2": 10,
+      "lane2": 11,
       "social_dms": 0,
       "showed": 5,
       "qualified": 4,
@@ -539,9 +539,9 @@
       "drilldowns": [
         {
           "value": "nov10",
-          "bookings": 17,
+          "bookings": 18,
           "marketing": 17,
-          "lane2": 0,
+          "lane2": 1,
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
@@ -882,6 +882,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Rob Maxfield",
+          "bookings": 5,
+          "marketing": 0,
+          "lane2": 5,
+          "social_dms": 0,
+          "showed": 3,
+          "qualified": 2,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 4,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "66.7%",
+            "close": "0.0%",
+            "qualified_occurred": "66.7%"
+          },
+          "occurred_calls": 3,
+          "no_shows": 0,
+          "unresolved_calls": 1
+        },
+        {
           "value": "Naria Torres",
           "bookings": 4,
           "marketing": 0,
@@ -901,27 +922,6 @@
           "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
-        },
-        {
-          "value": "Rob Maxfield",
-          "bookings": 4,
-          "marketing": 0,
-          "lane2": 4,
-          "social_dms": 0,
-          "showed": 3,
-          "qualified": 2,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 4,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "66.7%",
-            "close": "0.0%",
-            "qualified_occurred": "66.7%"
-          },
-          "occurred_calls": 3,
-          "no_shows": 0,
-          "unresolved_calls": 1
         },
         {
           "value": "Ariella Irvine",
@@ -1009,9 +1009,9 @@
         }
       ],
       "display": {
-        "projected": 74,
+        "projected": 76,
         "goal": 70,
-        "goal_pct": 39,
+        "goal_pct": 40,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -2923,7 +2923,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-11T10:15:18.415093-08:00",
+    "generated_at": "2026-11-11T10:30:23.359320-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 11,
