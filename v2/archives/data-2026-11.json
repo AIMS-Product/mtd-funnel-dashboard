@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 70,
-      "marketing": 70,
+      "bookings": 71,
+      "marketing": 71,
       "lane2": 0,
       "social_dms": 0,
       "showed": 30,
@@ -418,6 +418,29 @@
       "unresolved_calls": 3
     },
     {
+      "value": "Joe Vaughan",
+      "bookings": 18,
+      "marketing": 14,
+      "lane2": 4,
+      "social_dms": 0,
+      "showed": 8,
+      "qualified": 5,
+      "closed_won": 2,
+      "revenue": 15897.0,
+      "formats": {
+        "show": "72.7%",
+        "qualified": "45.5%",
+        "close": "18.2%",
+        "revenue": "$15,897",
+        "average": "$7,948",
+        "qualified_occurred": "45.5%"
+      },
+      "scheduled_calls": 17,
+      "occurred_calls": 11,
+      "no_shows": 3,
+      "unresolved_calls": 6
+    },
+    {
       "value": "Scott Seymour",
       "bookings": 18,
       "marketing": 3,
@@ -439,29 +462,6 @@
       "occurred_calls": 11,
       "no_shows": 4,
       "unresolved_calls": 3
-    },
-    {
-      "value": "Joe Vaughan",
-      "bookings": 17,
-      "marketing": 13,
-      "lane2": 4,
-      "social_dms": 0,
-      "showed": 8,
-      "qualified": 5,
-      "closed_won": 2,
-      "revenue": 15897.0,
-      "formats": {
-        "show": "72.7%",
-        "qualified": "45.5%",
-        "close": "18.2%",
-        "revenue": "$15,897",
-        "average": "$7,948",
-        "qualified_occurred": "45.5%"
-      },
-      "scheduled_calls": 17,
-      "occurred_calls": 11,
-      "no_shows": 3,
-      "unresolved_calls": 6
     },
     {
       "value": "Shreya Bechra",
@@ -533,8 +533,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-10T19:45:21.045851-08:00",
-  "source_cutoff": "2026-11-10T19:45:21.045851-08:00",
+  "generated_at": "2026-11-10T20:00:23.127921-08:00",
+  "source_cutoff": "2026-11-10T20:00:23.127921-08:00",
   "vendhub_arr": 22191.0,
   "progress": {
     "day": 10,
@@ -565,14 +565,14 @@
   "period": "2026-11-01 through 2026-11-10 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 163,
+  "counted_meetings": 164,
   "excluded_repeat_candidates": 15,
-  "attribution_reviewed_at": "2026-11-10T19:45:21.045851-08:00",
+  "attribution_reviewed_at": "2026-11-10T20:00:23.127921-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1971,
-    "bookings": 163,
-    "marketing": 70,
+    "leads_created": 1973,
+    "bookings": 164,
+    "marketing": 71,
     "lane2": 88,
     "social_dms": 5,
     "showed": 76,
@@ -595,9 +595,9 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1786,
-      "bookings": 60,
-      "marketing": 26,
+      "leads_created": 1788,
+      "bookings": 61,
+      "marketing": 27,
       "lane2": 34,
       "social_dms": 0,
       "showed": 19,
@@ -608,8 +608,8 @@
       "drilldowns": [
         {
           "value": "nov10",
-          "bookings": 17,
-          "marketing": 17,
+          "bookings": 18,
+          "marketing": 18,
           "lane2": 0,
           "social_dms": 0,
           "showed": 0,
@@ -1092,8 +1092,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 26,
-          "marketing": 26,
+          "bookings": 27,
+          "marketing": 27,
           "lane2": 0,
           "social_dms": 0,
           "showed": 5,
@@ -1260,9 +1260,9 @@
         }
       ],
       "display": {
-        "projected": 180,
+        "projected": 183,
         "goal": 70,
-        "goal_pct": 86,
+        "goal_pct": 87,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -3919,7 +3919,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-10T19:45:21.045851-08:00",
+    "generated_at": "2026-11-10T20:00:23.127921-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 12,
