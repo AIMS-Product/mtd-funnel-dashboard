@@ -19,10 +19,10 @@
         "average": "—",
         "qualified_occurred": "57.1%"
       },
-      "scheduled_calls": 9,
+      "scheduled_calls": 10,
       "occurred_calls": 7,
       "no_shows": 1,
-      "unresolved_calls": 2
+      "unresolved_calls": 3
     },
     {
       "value": "Vince Bartolini",
@@ -42,10 +42,10 @@
         "average": "—",
         "qualified_occurred": "42.9%"
       },
-      "scheduled_calls": 10,
+      "scheduled_calls": 11,
       "occurred_calls": 7,
       "no_shows": 3,
-      "unresolved_calls": 3
+      "unresolved_calls": 4
     },
     {
       "value": "Rob Maxfield",
@@ -274,10 +274,10 @@
         "average": "$8,997",
         "qualified_occurred": "25.0%"
       },
-      "scheduled_calls": 7,
+      "scheduled_calls": 8,
       "occurred_calls": 4,
       "no_shows": 2,
-      "unresolved_calls": 3
+      "unresolved_calls": 4
     },
     {
       "value": "Robin Perkins",
@@ -366,10 +366,10 @@
         "average": "$5,397",
         "qualified_occurred": "100.0%"
       },
-      "scheduled_calls": 8,
+      "scheduled_calls": 9,
       "occurred_calls": 8,
       "no_shows": 0,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "value": "Scott Seymour",
@@ -464,8 +464,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-11T10:45:18.596944-08:00",
-  "source_cutoff": "2026-11-11T10:45:18.596944-08:00",
+  "generated_at": "2026-11-11T11:00:25.335989-08:00",
+  "source_cutoff": "2026-11-11T11:00:25.335989-08:00",
   "vendhub_arr": 14392.0,
   "progress": {
     "day": 11,
@@ -498,7 +498,7 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 67,
   "excluded_repeat_candidates": 5,
-  "attribution_reviewed_at": "2026-11-11T10:45:18.596944-08:00",
+  "attribution_reviewed_at": "2026-11-11T11:00:25.335989-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 481,
@@ -518,10 +518,10 @@
       "average": "$8,048",
       "qualified_occurred": "58.1%"
     },
-    "scheduled_calls": 39,
+    "scheduled_calls": 41,
     "occurred_calls": 31,
     "no_shows": 7,
-    "unresolved_calls": 8
+    "unresolved_calls": 10
   },
   "channels": [
     {
@@ -1081,10 +1081,10 @@
             "average": "—",
             "qualified_occurred": "—"
           },
-          "scheduled_calls": 1,
+          "scheduled_calls": 2,
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 1
+          "unresolved_calls": 2
         }
       ],
       "packages": [
@@ -1120,7 +1120,7 @@
           "qualified": 3,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 5,
+          "scheduled_calls": 6,
           "formats": {
             "show": "100.0%",
             "qualified": "100.0%",
@@ -1129,7 +1129,7 @@
           },
           "occurred_calls": 3,
           "no_shows": 0,
-          "unresolved_calls": 2
+          "unresolved_calls": 3
         },
         {
           "value": "Rob Maxfield",
@@ -1230,10 +1230,10 @@
         "average": "$6,897",
         "qualified_occurred": "100.0%"
       },
-      "scheduled_calls": 6,
+      "scheduled_calls": 7,
       "occurred_calls": 4,
       "no_shows": 1,
-      "unresolved_calls": 2
+      "unresolved_calls": 3
     },
     {
       "channel": "Unknown (Needs Review)",
@@ -1266,10 +1266,10 @@
             "average": "—",
             "qualified_occurred": "60.0%"
           },
-          "scheduled_calls": 6,
+          "scheduled_calls": 7,
           "occurred_calls": 5,
           "no_shows": 0,
-          "unresolved_calls": 1
+          "unresolved_calls": 2
         },
         {
           "value": "wescale",
@@ -1330,7 +1330,7 @@
           "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 3,
+          "scheduled_calls": 4,
           "formats": {
             "show": "100.0%",
             "qualified": "50.0%",
@@ -1339,7 +1339,7 @@
           },
           "occurred_calls": 2,
           "no_shows": 0,
-          "unresolved_calls": 1
+          "unresolved_calls": 2
         },
         {
           "value": "Marketing",
@@ -1440,10 +1440,10 @@
         "average": "—",
         "qualified_occurred": "42.9%"
       },
-      "scheduled_calls": 8,
+      "scheduled_calls": 9,
       "occurred_calls": 7,
       "no_shows": 0,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "channel": "YouTube",
@@ -2946,7 +2946,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-11T10:45:18.596944-08:00",
+    "generated_at": "2026-11-11T11:00:25.335989-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 11,
