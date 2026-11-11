@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 24,
-      "marketing": 24,
+      "bookings": 30,
+      "marketing": 30,
       "lane2": 0,
       "social_dms": 0,
       "showed": 6,
@@ -258,8 +258,8 @@
   "team": [
     {
       "value": "Luke Herman",
-      "bookings": 17,
-      "marketing": 9,
+      "bookings": 18,
+      "marketing": 10,
       "lane2": 7,
       "social_dms": 1,
       "showed": 2,
@@ -281,8 +281,8 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 14,
-      "marketing": 5,
+      "bookings": 16,
+      "marketing": 7,
       "lane2": 9,
       "social_dms": 0,
       "showed": 2,
@@ -304,8 +304,8 @@
     },
     {
       "value": "Robin Perkins",
-      "bookings": 9,
-      "marketing": 4,
+      "bookings": 11,
+      "marketing": 6,
       "lane2": 5,
       "social_dms": 0,
       "showed": 3,
@@ -373,8 +373,8 @@
     },
     {
       "value": "Scott Seymour",
-      "bookings": 3,
-      "marketing": 0,
+      "bookings": 4,
+      "marketing": 1,
       "lane2": 3,
       "social_dms": 0,
       "showed": 3,
@@ -464,8 +464,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-10T18:45:19.227854-08:00",
-  "source_cutoff": "2026-11-10T18:45:19.227854-08:00",
+  "generated_at": "2026-11-10T19:00:24.786702-08:00",
+  "source_cutoff": "2026-11-10T19:00:24.786702-08:00",
   "vendhub_arr": 14392.0,
   "progress": {
     "day": 10,
@@ -496,14 +496,14 @@
   "period": "2026-11-09 through 2026-11-10 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 57,
+  "counted_meetings": 63,
   "excluded_repeat_candidates": 5,
-  "attribution_reviewed_at": "2026-11-10T18:45:19.227854-08:00",
+  "attribution_reviewed_at": "2026-11-10T19:00:24.786702-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 221,
-    "bookings": 57,
-    "marketing": 24,
+    "leads_created": 222,
+    "bookings": 63,
+    "marketing": 30,
     "lane2": 32,
     "social_dms": 1,
     "showed": 24,
@@ -526,9 +526,9 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 163,
-      "bookings": 23,
-      "marketing": 13,
+      "leads_created": 164,
+      "bookings": 29,
+      "marketing": 19,
       "lane2": 10,
       "social_dms": 0,
       "showed": 5,
@@ -539,8 +539,8 @@
       "drilldowns": [
         {
           "value": "nov10",
-          "bookings": 12,
-          "marketing": 12,
+          "bookings": 18,
+          "marketing": 18,
           "lane2": 0,
           "social_dms": 0,
           "showed": 0,
@@ -862,8 +862,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 13,
-          "marketing": 13,
+          "bookings": 19,
+          "marketing": 19,
           "lane2": 0,
           "social_dms": 0,
           "showed": 0,
@@ -1009,10 +1009,10 @@
         }
       ],
       "display": {
-        "projected": 69,
+        "projected": 87,
         "goal": 70,
-        "goal_pct": 33,
-        "pace": "pace-behind"
+        "goal_pct": 41,
+        "pace": "pace-exceed"
       },
       "formats": {
         "show": "62.5%",
@@ -2921,11 +2921,11 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-10T18:45:19.227854-08:00",
+    "generated_at": "2026-11-10T19:00:24.786702-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 12,
-      "Robin Perkins": 17,
+      "Robin Perkins": 16,
       "Eric Piccione": 10,
       "Joe Vaughan": 9,
       "Shreya Bechra": 1,

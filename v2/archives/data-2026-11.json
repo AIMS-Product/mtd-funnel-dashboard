@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 66,
-      "marketing": 66,
+      "bookings": 72,
+      "marketing": 72,
       "lane2": 0,
       "social_dms": 0,
       "showed": 30,
@@ -327,8 +327,8 @@
   "team": [
     {
       "value": "Luke Herman",
-      "bookings": 37,
-      "marketing": 16,
+      "bookings": 38,
+      "marketing": 17,
       "lane2": 20,
       "social_dms": 1,
       "showed": 13,
@@ -373,8 +373,8 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 25,
-      "marketing": 6,
+      "bookings": 27,
+      "marketing": 8,
       "lane2": 19,
       "social_dms": 0,
       "showed": 6,
@@ -396,8 +396,8 @@
     },
     {
       "value": "Robin Perkins",
-      "bookings": 21,
-      "marketing": 11,
+      "bookings": 23,
+      "marketing": 13,
       "lane2": 10,
       "social_dms": 0,
       "showed": 11,
@@ -414,6 +414,29 @@
       },
       "scheduled_calls": 18,
       "occurred_calls": 15,
+      "no_shows": 4,
+      "unresolved_calls": 3
+    },
+    {
+      "value": "Scott Seymour",
+      "bookings": 18,
+      "marketing": 3,
+      "lane2": 12,
+      "social_dms": 3,
+      "showed": 7,
+      "qualified": 5,
+      "closed_won": 2,
+      "revenue": 14994.0,
+      "formats": {
+        "show": "63.6%",
+        "qualified": "45.5%",
+        "close": "18.2%",
+        "revenue": "$14,994",
+        "average": "$7,497",
+        "qualified_occurred": "45.5%"
+      },
+      "scheduled_calls": 14,
+      "occurred_calls": 11,
       "no_shows": 4,
       "unresolved_calls": 3
     },
@@ -439,29 +462,6 @@
       "occurred_calls": 11,
       "no_shows": 3,
       "unresolved_calls": 6
-    },
-    {
-      "value": "Scott Seymour",
-      "bookings": 17,
-      "marketing": 2,
-      "lane2": 12,
-      "social_dms": 3,
-      "showed": 7,
-      "qualified": 5,
-      "closed_won": 2,
-      "revenue": 14994.0,
-      "formats": {
-        "show": "63.6%",
-        "qualified": "45.5%",
-        "close": "18.2%",
-        "revenue": "$14,994",
-        "average": "$7,497",
-        "qualified_occurred": "45.5%"
-      },
-      "scheduled_calls": 14,
-      "occurred_calls": 11,
-      "no_shows": 4,
-      "unresolved_calls": 3
     },
     {
       "value": "Shreya Bechra",
@@ -533,8 +533,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-10T18:45:19.227854-08:00",
-  "source_cutoff": "2026-11-10T18:45:19.227854-08:00",
+  "generated_at": "2026-11-10T19:00:24.786702-08:00",
+  "source_cutoff": "2026-11-10T19:00:24.786702-08:00",
   "vendhub_arr": 22191.0,
   "progress": {
     "day": 10,
@@ -565,14 +565,14 @@
   "period": "2026-11-01 through 2026-11-10 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 159,
+  "counted_meetings": 165,
   "excluded_repeat_candidates": 15,
-  "attribution_reviewed_at": "2026-11-10T18:45:19.227854-08:00",
+  "attribution_reviewed_at": "2026-11-10T19:00:24.786702-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1964,
-    "bookings": 159,
-    "marketing": 66,
+    "leads_created": 1965,
+    "bookings": 165,
+    "marketing": 72,
     "lane2": 88,
     "social_dms": 5,
     "showed": 76,
@@ -595,9 +595,9 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1780,
-      "bookings": 56,
-      "marketing": 22,
+      "leads_created": 1781,
+      "bookings": 62,
+      "marketing": 28,
       "lane2": 34,
       "social_dms": 0,
       "showed": 19,
@@ -606,6 +606,29 @@
       "revenue": 17994.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
+        {
+          "value": "nov10",
+          "bookings": 18,
+          "marketing": 18,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
         {
           "value": "nov03",
           "bookings": 13,
@@ -628,29 +651,6 @@
           "occurred_calls": 10,
           "no_shows": 4,
           "unresolved_calls": 3
-        },
-        {
-          "value": "nov10",
-          "bookings": 12,
-          "marketing": 12,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "—"
-          },
-          "scheduled_calls": 0,
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
         },
         {
           "value": "oct20",
@@ -1092,8 +1092,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 22,
-          "marketing": 22,
+          "bookings": 28,
+          "marketing": 28,
           "lane2": 0,
           "social_dms": 0,
           "showed": 5,
@@ -1260,9 +1260,9 @@
         }
       ],
       "display": {
-        "projected": 168,
+        "projected": 186,
         "goal": 70,
-        "goal_pct": 80,
+        "goal_pct": 89,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -3919,11 +3919,11 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-10T18:45:19.227854-08:00",
+    "generated_at": "2026-11-10T19:00:24.786702-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 12,
-      "Robin Perkins": 17,
+      "Robin Perkins": 16,
       "Eric Piccione": 10,
       "Joe Vaughan": 9,
       "Shreya Bechra": 1,
