@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1893,
+      "leads_created": 1894,
       "booked": 126,
       "showed": 57,
       "qualified": 41,
@@ -19,7 +19,7 @@
       "revenue": 76172.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 87,
+      "leads_created": 86,
       "booked": 5,
       "showed": 4,
       "qualified": 2,
@@ -28,10 +28,22 @@
     }
   },
   "funnels": {
+    "Reactivation Scrapers": {
+      "leads_created": 15,
+      "booked": 74,
+      "book_pct": 493.3,
+      "showed": 31,
+      "show_pct": 41.9,
+      "qualified": 25,
+      "qual_pct": 80.6,
+      "closed": 6,
+      "cw_pct": 8.1,
+      "revenue": 36284.0
+    },
     "YouTube": {
-      "leads_created": 11,
+      "leads_created": 12,
       "booked": 11,
-      "book_pct": 100.0,
+      "book_pct": 91.7,
       "showed": 6,
       "show_pct": 54.5,
       "qualified": 3,
@@ -41,9 +53,9 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 87,
+      "leads_created": 86,
       "booked": 5,
-      "book_pct": 5.7,
+      "book_pct": 5.8,
       "showed": 4,
       "show_pct": 80.0,
       "qualified": 2,
@@ -63,18 +75,6 @@
       "closed": 1,
       "cw_pct": 7.1,
       "revenue": 8997.0
-    },
-    "Reactivation Scrapers": {
-      "leads_created": 15,
-      "booked": 74,
-      "book_pct": 493.3,
-      "showed": 31,
-      "show_pct": 41.9,
-      "qualified": 25,
-      "qual_pct": 80.6,
-      "closed": 6,
-      "cw_pct": 8.1,
-      "revenue": 36284.0
     },
     "Google Ads": {
       "leads_created": 66,
