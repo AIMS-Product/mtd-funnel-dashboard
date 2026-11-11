@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 72,
-      "marketing": 72,
+      "bookings": 73,
+      "marketing": 73,
       "lane2": 0,
       "social_dms": 0,
       "showed": 30,
@@ -396,8 +396,8 @@
     },
     {
       "value": "Robin Perkins",
-      "bookings": 23,
-      "marketing": 13,
+      "bookings": 24,
+      "marketing": 14,
       "lane2": 10,
       "social_dms": 0,
       "showed": 11,
@@ -533,8 +533,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-11T05:15:22.190831-08:00",
-  "source_cutoff": "2026-11-11T05:15:22.190831-08:00",
+  "generated_at": "2026-11-11T05:30:21.515243-08:00",
+  "source_cutoff": "2026-11-11T05:30:21.515243-08:00",
   "vendhub_arr": 22191.0,
   "progress": {
     "day": 11,
@@ -565,14 +565,14 @@
   "period": "2026-11-01 through 2026-11-11 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 164,
+  "counted_meetings": 165,
   "excluded_repeat_candidates": 15,
-  "attribution_reviewed_at": "2026-11-11T05:15:22.190831-08:00",
+  "attribution_reviewed_at": "2026-11-11T05:30:21.515243-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 1981,
-    "bookings": 164,
-    "marketing": 72,
+    "leads_created": 1982,
+    "bookings": 165,
+    "marketing": 73,
     "lane2": 87,
     "social_dms": 5,
     "showed": 76,
@@ -1957,9 +1957,9 @@
     },
     {
       "channel": "YouTube",
-      "leads_created": 16,
-      "bookings": 22,
-      "marketing": 13,
+      "leads_created": 17,
+      "bookings": 23,
+      "marketing": 14,
       "lane2": 9,
       "social_dms": 0,
       "showed": 13,
@@ -1968,6 +1968,29 @@
       "revenue": 11394.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
+        {
+          "value": "youtube-home",
+          "bookings": 3,
+          "marketing": 1,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
         {
           "value": "book-a-call",
           "bookings": 2,
@@ -2058,29 +2081,6 @@
           "scheduled_calls": 2,
           "occurred_calls": 2,
           "no_shows": 1,
-          "unresolved_calls": 0
-        },
-        {
-          "value": "youtube-home",
-          "bookings": 2,
-          "marketing": 0,
-          "lane2": 2,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "—"
-          },
-          "scheduled_calls": 0,
-          "occurred_calls": 0,
-          "no_shows": 0,
           "unresolved_calls": 0
         },
         {
@@ -2523,8 +2523,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 13,
-          "marketing": 13,
+          "bookings": 14,
+          "marketing": 14,
           "lane2": 0,
           "social_dms": 0,
           "showed": 6,
@@ -2712,7 +2712,7 @@
         }
       ],
       "display": {
-        "projected": 60,
+        "projected": 63,
         "goal": 132,
         "goal_pct": 17,
         "pace": "pace-behind"
@@ -3942,7 +3942,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-11T05:15:22.190831-08:00",
+    "generated_at": "2026-11-11T05:30:21.515243-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 12,
