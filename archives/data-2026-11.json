@@ -4,7 +4,7 @@
   "grand": {
     "leads_created": 1981,
     "booked": 131,
-    "showed": 61,
+    "showed": 60,
     "qualified": 43,
     "closed": 11,
     "revenue": 76172.0
@@ -13,7 +13,7 @@
     "LEAD SOURCES": {
       "leads_created": 1894,
       "booked": 126,
-      "showed": 57,
+      "showed": 56,
       "qualified": 41,
       "closed": 11,
       "revenue": 76172.0
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Reactivation Scrapers": {
+      "leads_created": 15,
+      "booked": 74,
+      "book_pct": 493.3,
+      "showed": 30,
+      "show_pct": 40.5,
+      "qualified": 25,
+      "qual_pct": 83.3,
+      "closed": 6,
+      "cw_pct": 8.1,
+      "revenue": 36284.0
+    },
     "Google Ads": {
       "leads_created": 66,
       "booked": 20,
@@ -39,18 +51,6 @@
       "closed": 2,
       "cw_pct": 10.0,
       "revenue": 12894.0
-    },
-    "Reactivation Scrapers": {
-      "leads_created": 15,
-      "booked": 74,
-      "book_pct": 493.3,
-      "showed": 31,
-      "show_pct": 41.9,
-      "qualified": 25,
-      "qual_pct": 80.6,
-      "closed": 6,
-      "cw_pct": 8.1,
-      "revenue": 36284.0
     },
     "YouTube": {
       "leads_created": 12,
