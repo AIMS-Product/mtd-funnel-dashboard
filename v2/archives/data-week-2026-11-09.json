@@ -88,16 +88,16 @@
         "average": "—",
         "qualified_occurred": "66.7%"
       },
-      "scheduled_calls": 7,
+      "scheduled_calls": 8,
       "occurred_calls": 6,
       "no_shows": 0,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Brad Savage",
-      "bookings": 5,
+      "bookings": 4,
       "marketing": 0,
-      "lane2": 5,
+      "lane2": 4,
       "social_dms": 0,
       "showed": 1,
       "qualified": 0,
@@ -281,9 +281,9 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 15,
+      "bookings": 14,
       "marketing": 6,
-      "lane2": 9,
+      "lane2": 8,
       "social_dms": 0,
       "showed": 2,
       "qualified": 2,
@@ -320,10 +320,10 @@
         "average": "—",
         "qualified_occurred": "66.7%"
       },
-      "scheduled_calls": 4,
+      "scheduled_calls": 5,
       "occurred_calls": 3,
       "no_shows": 0,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Joe Vaughan",
@@ -464,8 +464,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-11T09:45:19.860010-08:00",
-  "source_cutoff": "2026-11-11T09:45:19.860010-08:00",
+  "generated_at": "2026-11-11T10:00:23.919912-08:00",
+  "source_cutoff": "2026-11-11T10:00:23.919912-08:00",
   "vendhub_arr": 14392.0,
   "progress": {
     "day": 11,
@@ -496,15 +496,15 @@
   "period": "2026-11-09 through 2026-11-11 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 66,
+  "counted_meetings": 65,
   "excluded_repeat_candidates": 5,
-  "attribution_reviewed_at": "2026-11-11T09:45:19.860010-08:00",
+  "attribution_reviewed_at": "2026-11-11T10:00:23.919912-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 244,
-    "bookings": 66,
+    "bookings": 65,
     "marketing": 32,
-    "lane2": 32,
+    "lane2": 31,
     "social_dms": 2,
     "showed": 24,
     "qualified": 18,
@@ -518,10 +518,10 @@
       "average": "$8,048",
       "qualified_occurred": "58.1%"
     },
-    "scheduled_calls": 37,
+    "scheduled_calls": 38,
     "occurred_calls": 31,
     "no_shows": 7,
-    "unresolved_calls": 6
+    "unresolved_calls": 7
   },
   "channels": [
     {
@@ -1030,9 +1030,9 @@
     {
       "channel": "Google Ads",
       "leads_created": 20,
-      "bookings": 11,
+      "bookings": 10,
       "marketing": 8,
-      "lane2": 3,
+      "lane2": 2,
       "social_dms": 0,
       "showed": 3,
       "qualified": 4,
@@ -1065,9 +1065,9 @@
         },
         {
           "value": "23805931083",
-          "bookings": 5,
+          "bookings": 4,
           "marketing": 3,
-          "lane2": 2,
+          "lane2": 1,
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
@@ -1130,27 +1130,6 @@
           "occurred_calls": 3,
           "no_shows": 0,
           "unresolved_calls": 2
-        },
-        {
-          "value": "Brad Savage",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
-          },
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
         },
         {
           "value": "Rob Maxfield",
@@ -1238,7 +1217,7 @@
         }
       ],
       "display": {
-        "projected": 30,
+        "projected": 27,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -1589,10 +1568,10 @@
             "average": "—",
             "qualified_occurred": "—"
           },
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "50k-1-year",
@@ -1808,7 +1787,7 @@
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "formats": {
             "show": "—",
             "qualified": "—",
@@ -1817,7 +1796,7 @@
           },
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "Vince Bartolini",
@@ -1918,10 +1897,10 @@
         "average": "$5,397",
         "qualified_occurred": "33.3%"
       },
-      "scheduled_calls": 6,
+      "scheduled_calls": 7,
       "occurred_calls": 6,
       "no_shows": 2,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "channel": "Instagram",
@@ -2944,7 +2923,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-11T09:45:19.860010-08:00",
+    "generated_at": "2026-11-11T10:00:23.919912-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 11,
