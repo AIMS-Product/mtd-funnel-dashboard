@@ -49,9 +49,9 @@
     },
     {
       "value": "Rob Maxfield",
-      "bookings": 9,
+      "bookings": 10,
       "marketing": 0,
-      "lane2": 9,
+      "lane2": 10,
       "social_dms": 0,
       "showed": 7,
       "qualified": 5,
@@ -349,6 +349,29 @@
       "unresolved_calls": 2
     },
     {
+      "value": "Christian Hartwell",
+      "bookings": 10,
+      "marketing": 3,
+      "lane2": 7,
+      "social_dms": 0,
+      "showed": 10,
+      "qualified": 10,
+      "closed_won": 3,
+      "revenue": 17391.0,
+      "formats": {
+        "show": "90.9%",
+        "qualified": "90.9%",
+        "close": "27.3%",
+        "revenue": "$17,391",
+        "average": "$5,797",
+        "qualified_occurred": "90.9%"
+      },
+      "scheduled_calls": 12,
+      "occurred_calls": 11,
+      "no_shows": 1,
+      "unresolved_calls": 1
+    },
+    {
       "value": "Joe Vaughan",
       "bookings": 10,
       "marketing": 7,
@@ -370,29 +393,6 @@
       "occurred_calls": 3,
       "no_shows": 0,
       "unresolved_calls": 2
-    },
-    {
-      "value": "Christian Hartwell",
-      "bookings": 9,
-      "marketing": 3,
-      "lane2": 6,
-      "social_dms": 0,
-      "showed": 10,
-      "qualified": 10,
-      "closed_won": 3,
-      "revenue": 17391.0,
-      "formats": {
-        "show": "90.9%",
-        "qualified": "90.9%",
-        "close": "27.3%",
-        "revenue": "$17,391",
-        "average": "$5,797",
-        "qualified_occurred": "90.9%"
-      },
-      "scheduled_calls": 12,
-      "occurred_calls": 11,
-      "no_shows": 1,
-      "unresolved_calls": 1
     },
     {
       "value": "Scott Seymour",
@@ -487,8 +487,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-11T15:15:21.087082-08:00",
-  "source_cutoff": "2026-11-11T15:15:21.087082-08:00",
+  "generated_at": "2026-11-11T15:30:20.879627-08:00",
+  "source_cutoff": "2026-11-11T15:30:20.879627-08:00",
   "vendhub_arr": 16792.0,
   "progress": {
     "day": 11,
@@ -519,15 +519,15 @@
   "period": "2026-11-09 through 2026-11-11 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 75,
+  "counted_meetings": 76,
   "excluded_repeat_candidates": 6,
-  "attribution_reviewed_at": "2026-11-11T15:15:21.087082-08:00",
+  "attribution_reviewed_at": "2026-11-11T15:30:20.879627-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 491,
-    "bookings": 75,
+    "bookings": 76,
     "marketing": 33,
-    "lane2": 40,
+    "lane2": 41,
     "social_dms": 2,
     "showed": 31,
     "qualified": 22,
@@ -550,9 +550,9 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 177,
-      "bookings": 32,
+      "bookings": 33,
       "marketing": 17,
-      "lane2": 15,
+      "lane2": 16,
       "social_dms": 0,
       "showed": 7,
       "qualified": 4,
@@ -580,6 +580,29 @@
           },
           "scheduled_calls": 2,
           "occurred_calls": 2,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "nov03",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 1,
+          "revenue": 8997.0,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "100.0%",
+            "revenue": "$8,997",
+            "average": "$8,997",
+            "qualified_occurred": "100.0%"
+          },
+          "scheduled_calls": 1,
+          "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
         },
@@ -649,29 +672,6 @@
           },
           "scheduled_calls": 0,
           "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
-          "value": "nov03",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 1,
-          "revenue": 8997.0,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "100.0%",
-            "close": "100.0%",
-            "revenue": "$8,997",
-            "average": "$8,997",
-            "qualified_occurred": "100.0%"
-          },
-          "scheduled_calls": 1,
-          "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
         },
@@ -929,9 +929,9 @@
         },
         {
           "value": "Rob Maxfield",
-          "bookings": 6,
+          "bookings": 7,
           "marketing": 0,
-          "lane2": 6,
+          "lane2": 7,
           "social_dms": 0,
           "showed": 3,
           "qualified": 2,
@@ -1055,9 +1055,9 @@
         }
       ],
       "display": {
-        "projected": 87,
+        "projected": 90,
         "goal": 70,
-        "goal_pct": 46,
+        "goal_pct": 47,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -3101,7 +3101,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-11T15:15:21.087082-08:00",
+    "generated_at": "2026-11-11T15:30:20.879627-08:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 11,
