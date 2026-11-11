@@ -31,16 +31,16 @@
       "lane2": 11,
       "social_dms": 0,
       "showed": 4,
-      "qualified": 2,
+      "qualified": 3,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
         "show": "50.0%",
-        "qualified": "25.0%",
+        "qualified": "37.5%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "25.0%"
+        "qualified_occurred": "37.5%"
       },
       "scheduled_calls": 9,
       "occurred_calls": 8,
@@ -286,16 +286,16 @@
       "lane2": 9,
       "social_dms": 0,
       "showed": 2,
-      "qualified": 1,
+      "qualified": 2,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
         "show": "40.0%",
-        "qualified": "20.0%",
+        "qualified": "40.0%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "20.0%"
+        "qualified_occurred": "40.0%"
       },
       "scheduled_calls": 5,
       "occurred_calls": 5,
@@ -464,8 +464,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-10T21:45:17.949539-08:00",
-  "source_cutoff": "2026-11-10T21:45:17.949539-08:00",
+  "generated_at": "2026-11-10T22:00:26.409887-08:00",
+  "source_cutoff": "2026-11-10T22:00:26.409887-08:00",
   "vendhub_arr": 14392.0,
   "progress": {
     "day": 10,
@@ -498,25 +498,25 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 62,
   "excluded_repeat_candidates": 5,
-  "attribution_reviewed_at": "2026-11-10T21:45:17.949539-08:00",
+  "attribution_reviewed_at": "2026-11-10T22:00:26.409887-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 235,
+    "leads_created": 236,
     "bookings": 62,
     "marketing": 29,
     "lane2": 32,
     "social_dms": 1,
     "showed": 24,
-    "qualified": 17,
+    "qualified": 18,
     "closed_won": 6,
     "revenue": 48285.0,
     "formats": {
       "show": "75.0%",
-      "qualified": "53.1%",
+      "qualified": "56.2%",
       "close": "18.8%",
       "revenue": "$48,285",
       "average": "$8,048",
-      "qualified_occurred": "53.1%"
+      "qualified_occurred": "56.2%"
     },
     "scheduled_calls": 37,
     "occurred_calls": 32,
@@ -526,7 +526,7 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 176,
+      "leads_created": 177,
       "bookings": 28,
       "marketing": 18,
       "lane2": 10,
@@ -2534,7 +2534,7 @@
       "lane2": 1,
       "social_dms": 0,
       "showed": 1,
-      "qualified": 0,
+      "qualified": 1,
       "closed_won": 1,
       "revenue": 9000.0,
       "unrecoverable_booked_leads": 0,
@@ -2569,16 +2569,16 @@
           "lane2": 0,
           "social_dms": 0,
           "showed": 1,
-          "qualified": 0,
+          "qualified": 1,
           "closed_won": 1,
           "revenue": 9000.0,
           "formats": {
             "show": "100.0%",
-            "qualified": "0.0%",
+            "qualified": "100.0%",
             "close": "100.0%",
             "revenue": "$9,000",
             "average": "$9,000",
-            "qualified_occurred": "0.0%"
+            "qualified_occurred": "100.0%"
           },
           "scheduled_calls": 1,
           "occurred_calls": 1,
@@ -2639,15 +2639,15 @@
           "lane2": 1,
           "social_dms": 0,
           "showed": 1,
-          "qualified": 0,
+          "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
           "scheduled_calls": 1,
           "formats": {
             "show": "100.0%",
-            "qualified": "0.0%",
+            "qualified": "100.0%",
             "close": "0.0%",
-            "qualified_occurred": "0.0%"
+            "qualified_occurred": "100.0%"
           },
           "occurred_calls": 1,
           "no_shows": 0,
@@ -2704,11 +2704,11 @@
       },
       "formats": {
         "show": "50.0%",
-        "qualified": "0.0%",
+        "qualified": "50.0%",
         "close": "50.0%",
         "revenue": "$9,000",
         "average": "$9,000",
-        "qualified_occurred": "0.0%"
+        "qualified_occurred": "50.0%"
       },
       "scheduled_calls": 2,
       "occurred_calls": 2,
@@ -2921,7 +2921,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-10T21:45:17.949539-08:00",
+    "generated_at": "2026-11-10T22:00:26.409887-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 12,
@@ -2930,7 +2930,7 @@
       "Joe Vaughan": 9,
       "Shreya Bechra": 1,
       "Luke Herman": 20,
-      "Ariella Irvine": 16,
+      "Ariella Irvine": 17,
       "Oscar Pugh": 1,
       "Joe Dysert": 7
     },
