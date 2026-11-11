@@ -26,25 +26,25 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 27,
+      "bookings": 26,
       "marketing": 0,
-      "lane2": 27,
+      "lane2": 26,
       "social_dms": 0,
       "showed": 10,
       "qualified": 9,
       "closed_won": 2,
       "revenue": 12894.0,
       "formats": {
-        "show": "62.5%",
-        "qualified": "56.2%",
-        "close": "12.5%",
+        "show": "66.7%",
+        "qualified": "60.0%",
+        "close": "13.3%",
         "revenue": "$12,894",
         "average": "$6,447",
-        "qualified_occurred": "56.2%"
+        "qualified_occurred": "60.0%"
       },
-      "scheduled_calls": 18,
-      "occurred_calls": 16,
-      "no_shows": 6,
+      "scheduled_calls": 17,
+      "occurred_calls": 15,
+      "no_shows": 5,
       "unresolved_calls": 2
     },
     {
@@ -350,25 +350,25 @@
     },
     {
       "value": "Christian Hartwell",
-      "bookings": 29,
+      "bookings": 28,
       "marketing": 13,
-      "lane2": 16,
+      "lane2": 15,
       "social_dms": 0,
       "showed": 17,
       "qualified": 13,
       "closed_won": 2,
       "revenue": 11394.0,
       "formats": {
-        "show": "77.3%",
-        "qualified": "59.1%",
-        "close": "9.1%",
+        "show": "81.0%",
+        "qualified": "61.9%",
+        "close": "9.5%",
         "revenue": "$11,394",
         "average": "$5,697",
-        "qualified_occurred": "59.1%"
+        "qualified_occurred": "61.9%"
       },
-      "scheduled_calls": 25,
-      "occurred_calls": 22,
-      "no_shows": 5,
+      "scheduled_calls": 24,
+      "occurred_calls": 21,
+      "no_shows": 4,
       "unresolved_calls": 3
     },
     {
@@ -533,8 +533,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-11T03:45:18.866870-08:00",
-  "source_cutoff": "2026-11-11T03:45:18.866870-08:00",
+  "generated_at": "2026-11-11T04:00:25.286596-08:00",
+  "source_cutoff": "2026-11-11T04:00:25.286596-08:00",
   "vendhub_arr": 22191.0,
   "progress": {
     "day": 11,
@@ -565,40 +565,40 @@
   "period": "2026-11-01 through 2026-11-11 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 165,
+  "counted_meetings": 164,
   "excluded_repeat_candidates": 15,
-  "attribution_reviewed_at": "2026-11-11T03:45:18.866870-08:00",
+  "attribution_reviewed_at": "2026-11-11T04:00:25.286596-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 1981,
-    "bookings": 165,
+    "bookings": 164,
     "marketing": 72,
-    "lane2": 88,
+    "lane2": 87,
     "social_dms": 5,
     "showed": 76,
     "qualified": 53,
     "closed_won": 11,
     "revenue": 76172.0,
     "formats": {
-      "show": "67.9%",
-      "qualified": "47.3%",
-      "close": "9.8%",
+      "show": "68.5%",
+      "qualified": "47.7%",
+      "close": "9.9%",
       "revenue": "$76,172",
       "average": "$6,925",
-      "qualified_occurred": "47.3%"
+      "qualified_occurred": "47.7%"
     },
-    "scheduled_calls": 134,
-    "occurred_calls": 112,
-    "no_shows": 36,
+    "scheduled_calls": 133,
+    "occurred_calls": 111,
+    "no_shows": 35,
     "unresolved_calls": 22
   },
   "channels": [
     {
       "channel": "Internal Webinar",
       "leads_created": 1794,
-      "bookings": 61,
+      "bookings": 60,
       "marketing": 27,
-      "lane2": 34,
+      "lane2": 33,
       "social_dms": 0,
       "showed": 19,
       "qualified": 12,
@@ -722,29 +722,6 @@
           "unresolved_calls": 0
         },
         {
-          "value": "July23",
-          "bookings": 2,
-          "marketing": 0,
-          "lane2": 2,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "50.0%",
-            "qualified": "50.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "50.0%"
-          },
-          "scheduled_calls": 2,
-          "occurred_calls": 2,
-          "no_shows": 1,
-          "unresolved_calls": 0
-        },
-        {
           "value": "june16_end_cta",
           "bookings": 2,
           "marketing": 0,
@@ -856,6 +833,29 @@
           },
           "scheduled_calls": 0,
           "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "July23",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "100.0%"
+          },
+          "scheduled_calls": 1,
+          "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
         },
@@ -1176,23 +1176,23 @@
         },
         {
           "value": "Vince Bartolini",
-          "bookings": 5,
+          "bookings": 4,
           "marketing": 0,
-          "lane2": 5,
+          "lane2": 4,
           "social_dms": 0,
           "showed": 2,
           "qualified": 2,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 5,
+          "scheduled_calls": 4,
           "formats": {
-            "show": "40.0%",
-            "qualified": "40.0%",
+            "show": "50.0%",
+            "qualified": "50.0%",
             "close": "0.0%",
-            "qualified_occurred": "40.0%"
+            "qualified_occurred": "50.0%"
           },
-          "occurred_calls": 5,
-          "no_shows": 3,
+          "occurred_calls": 4,
+          "no_shows": 2,
           "unresolved_calls": 0
         },
         {
@@ -1260,22 +1260,22 @@
         }
       ],
       "display": {
-        "projected": 166,
+        "projected": 164,
         "goal": 70,
-        "goal_pct": 87,
+        "goal_pct": 86,
         "pace": "pace-exceed"
       },
       "formats": {
-        "show": "51.4%",
-        "qualified": "32.4%",
-        "close": "5.4%",
+        "show": "52.8%",
+        "qualified": "33.3%",
+        "close": "5.6%",
         "revenue": "$17,994",
         "average": "$8,997",
-        "qualified_occurred": "32.4%"
+        "qualified_occurred": "33.3%"
       },
-      "scheduled_calls": 43,
-      "occurred_calls": 37,
-      "no_shows": 18,
+      "scheduled_calls": 42,
+      "occurred_calls": 36,
+      "no_shows": 17,
       "unresolved_calls": 6
     },
     {
@@ -3942,7 +3942,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-11T03:45:18.866870-08:00",
+    "generated_at": "2026-11-11T04:00:25.286596-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 12,
