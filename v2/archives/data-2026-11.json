@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 73,
-      "marketing": 73,
+      "bookings": 72,
+      "marketing": 72,
       "lane2": 0,
       "social_dms": 0,
       "showed": 30,
@@ -42,10 +42,10 @@
         "average": "$6,447",
         "qualified_occurred": "60.0%"
       },
-      "scheduled_calls": 17,
+      "scheduled_calls": 18,
       "occurred_calls": 15,
       "no_shows": 5,
-      "unresolved_calls": 2
+      "unresolved_calls": 3
     },
     {
       "value": "Rob Maxfield",
@@ -327,8 +327,8 @@
   "team": [
     {
       "value": "Luke Herman",
-      "bookings": 38,
-      "marketing": 17,
+      "bookings": 37,
+      "marketing": 16,
       "lane2": 20,
       "social_dms": 1,
       "showed": 13,
@@ -343,10 +343,10 @@
         "average": "$7,947",
         "qualified_occurred": "52.6%"
       },
-      "scheduled_calls": 23,
+      "scheduled_calls": 24,
       "occurred_calls": 19,
       "no_shows": 6,
-      "unresolved_calls": 4
+      "unresolved_calls": 5
     },
     {
       "value": "Christian Hartwell",
@@ -533,8 +533,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-11T05:45:21.982574-08:00",
-  "source_cutoff": "2026-11-11T05:45:21.982574-08:00",
+  "generated_at": "2026-11-11T06:00:23.321825-08:00",
+  "source_cutoff": "2026-11-11T06:00:23.321825-08:00",
   "vendhub_arr": 22191.0,
   "progress": {
     "day": 11,
@@ -565,14 +565,14 @@
   "period": "2026-11-01 through 2026-11-11 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 165,
+  "counted_meetings": 164,
   "excluded_repeat_candidates": 15,
-  "attribution_reviewed_at": "2026-11-11T05:45:21.982574-08:00",
+  "attribution_reviewed_at": "2026-11-11T06:00:23.321825-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 1983,
-    "bookings": 165,
-    "marketing": 73,
+    "bookings": 164,
+    "marketing": 72,
     "lane2": 87,
     "social_dms": 5,
     "showed": 76,
@@ -587,17 +587,17 @@
       "average": "$6,925",
       "qualified_occurred": "47.7%"
     },
-    "scheduled_calls": 133,
+    "scheduled_calls": 134,
     "occurred_calls": 111,
     "no_shows": 35,
-    "unresolved_calls": 22
+    "unresolved_calls": 23
   },
   "channels": [
     {
       "channel": "Internal Webinar",
       "leads_created": 1794,
-      "bookings": 60,
-      "marketing": 27,
+      "bookings": 59,
+      "marketing": 26,
       "lane2": 33,
       "social_dms": 0,
       "showed": 19,
@@ -608,8 +608,8 @@
       "drilldowns": [
         {
           "value": "nov10",
-          "bookings": 18,
-          "marketing": 18,
+          "bookings": 17,
+          "marketing": 17,
           "lane2": 0,
           "social_dms": 0,
           "showed": 0,
@@ -1092,8 +1092,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 27,
-          "marketing": 27,
+          "bookings": 26,
+          "marketing": 26,
           "lane2": 0,
           "social_dms": 0,
           "showed": 5,
@@ -1260,9 +1260,9 @@
         }
       ],
       "display": {
-        "projected": 164,
+        "projected": 161,
         "goal": 70,
-        "goal_pct": 86,
+        "goal_pct": 84,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -1309,10 +1309,10 @@
             "average": "$5,997",
             "qualified_occurred": "47.8%"
           },
-          "scheduled_calls": 24,
+          "scheduled_calls": 25,
           "occurred_calls": 23,
           "no_shows": 5,
-          "unresolved_calls": 1
+          "unresolved_calls": 2
         },
         {
           "value": "_____",
@@ -1463,7 +1463,7 @@
           "qualified": 4,
           "closed_won": 2,
           "revenue": 12894.0,
-          "scheduled_calls": 8,
+          "scheduled_calls": 9,
           "formats": {
             "show": "85.7%",
             "qualified": "57.1%",
@@ -1472,7 +1472,7 @@
           },
           "occurred_calls": 7,
           "no_shows": 1,
-          "unresolved_calls": 1
+          "unresolved_calls": 2
         },
         {
           "value": "Marketing",
@@ -1678,10 +1678,10 @@
         "average": "$6,447",
         "qualified_occurred": "48.1%"
       },
-      "scheduled_calls": 30,
+      "scheduled_calls": 31,
       "occurred_calls": 27,
       "no_shows": 5,
-      "unresolved_calls": 3
+      "unresolved_calls": 4
     },
     {
       "channel": "Google Ads",
@@ -3942,7 +3942,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-11T05:45:21.982574-08:00",
+    "generated_at": "2026-11-11T06:00:23.321825-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 12,
