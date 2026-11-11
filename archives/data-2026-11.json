@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 1896,
+      "leads_created": 1897,
       "booked": 127,
       "showed": 57,
       "qualified": 41,
@@ -19,7 +19,7 @@
       "revenue": 76172.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 90,
+      "leads_created": 89,
       "booked": 5,
       "showed": 4,
       "qualified": 2,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Google Ads": {
+      "leads_created": 68,
+      "booked": 21,
+      "book_pct": 30.9,
+      "showed": 12,
+      "show_pct": 57.1,
+      "qualified": 8,
+      "qual_pct": 66.7,
+      "closed": 2,
+      "cw_pct": 9.5,
+      "revenue": 12894.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 15,
       "booked": 74,
@@ -52,22 +64,10 @@
       "cw_pct": 7.1,
       "revenue": 8997.0
     },
-    "Google Ads": {
-      "leads_created": 68,
-      "booked": 21,
-      "book_pct": 30.9,
-      "showed": 12,
-      "show_pct": 57.1,
-      "qualified": 8,
-      "qual_pct": 66.7,
-      "closed": 2,
-      "cw_pct": 9.5,
-      "revenue": 12894.0
-    },
     "Instagram": {
-      "leads_created": 7,
+      "leads_created": 8,
       "booked": 3,
-      "book_pct": 42.9,
+      "book_pct": 37.5,
       "showed": 0,
       "show_pct": 0.0,
       "qualified": 0,
@@ -101,7 +101,7 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 90,
+      "leads_created": 89,
       "booked": 5,
       "book_pct": 5.6,
       "showed": 4,
