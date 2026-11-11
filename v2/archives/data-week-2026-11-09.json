@@ -26,9 +26,9 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 10,
+      "bookings": 11,
       "marketing": 0,
-      "lane2": 10,
+      "lane2": 11,
       "social_dms": 0,
       "showed": 4,
       "qualified": 3,
@@ -42,10 +42,10 @@
         "average": "—",
         "qualified_occurred": "42.9%"
       },
-      "scheduled_calls": 9,
+      "scheduled_calls": 10,
       "occurred_calls": 7,
       "no_shows": 3,
-      "unresolved_calls": 2
+      "unresolved_calls": 3
     },
     {
       "value": "Rob Maxfield",
@@ -280,6 +280,29 @@
       "unresolved_calls": 3
     },
     {
+      "value": "Robin Perkins",
+      "bookings": 15,
+      "marketing": 7,
+      "lane2": 7,
+      "social_dms": 1,
+      "showed": 3,
+      "qualified": 2,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "100.0%",
+        "qualified": "66.7%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "66.7%"
+      },
+      "scheduled_calls": 6,
+      "occurred_calls": 3,
+      "no_shows": 0,
+      "unresolved_calls": 3
+    },
+    {
       "value": "Ariella Irvine",
       "bookings": 14,
       "marketing": 6,
@@ -301,29 +324,6 @@
       "occurred_calls": 5,
       "no_shows": 3,
       "unresolved_calls": 0
-    },
-    {
-      "value": "Robin Perkins",
-      "bookings": 14,
-      "marketing": 7,
-      "lane2": 6,
-      "social_dms": 1,
-      "showed": 3,
-      "qualified": 2,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "100.0%",
-        "qualified": "66.7%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "66.7%"
-      },
-      "scheduled_calls": 5,
-      "occurred_calls": 3,
-      "no_shows": 0,
-      "unresolved_calls": 2
     },
     {
       "value": "Joe Vaughan",
@@ -464,8 +464,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-11T10:30:23.359320-08:00",
-  "source_cutoff": "2026-11-11T10:30:23.359320-08:00",
+  "generated_at": "2026-11-11T10:45:18.596944-08:00",
+  "source_cutoff": "2026-11-11T10:45:18.596944-08:00",
   "vendhub_arr": 14392.0,
   "progress": {
     "day": 11,
@@ -496,15 +496,15 @@
   "period": "2026-11-09 through 2026-11-11 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 66,
+  "counted_meetings": 67,
   "excluded_repeat_candidates": 5,
-  "attribution_reviewed_at": "2026-11-11T10:30:23.359320-08:00",
+  "attribution_reviewed_at": "2026-11-11T10:45:18.596944-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 481,
-    "bookings": 66,
+    "bookings": 67,
     "marketing": 32,
-    "lane2": 32,
+    "lane2": 33,
     "social_dms": 2,
     "showed": 24,
     "qualified": 18,
@@ -518,10 +518,10 @@
       "average": "$8,048",
       "qualified_occurred": "58.1%"
     },
-    "scheduled_calls": 38,
+    "scheduled_calls": 39,
     "occurred_calls": 31,
     "no_shows": 7,
-    "unresolved_calls": 7
+    "unresolved_calls": 8
   },
   "channels": [
     {
@@ -2205,9 +2205,9 @@
     {
       "channel": "Meta Ads",
       "leads_created": 0,
-      "bookings": 3,
+      "bookings": 4,
       "marketing": 0,
-      "lane2": 3,
+      "lane2": 4,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -2260,10 +2260,54 @@
           "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 0
+        },
+        {
+          "value": "VSL Leads campaign",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 1,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 1
         }
       ],
       "packages": [],
       "setters": [
+        {
+          "value": "Vince Bartolini",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 2,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 2
+        },
         {
           "value": "Brad Savage",
           "bookings": 1,
@@ -2305,33 +2349,12 @@
           "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 0
-        },
-        {
-          "value": "Vince Bartolini",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 1,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
-          },
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 1
         }
       ],
       "display": {
-        "projected": 8,
+        "projected": 11,
         "goal": 44,
-        "goal_pct": 7,
+        "goal_pct": 9,
         "pace": "pace-behind"
       },
       "formats": {
@@ -2342,10 +2365,10 @@
         "average": "—",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 1,
+      "scheduled_calls": 2,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "channel": "Linkedin",
@@ -2923,7 +2946,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-11T10:30:23.359320-08:00",
+    "generated_at": "2026-11-11T10:45:18.596944-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 11,
@@ -2934,7 +2957,7 @@
       "Luke Herman": 20,
       "Ariella Irvine": 17,
       "Oscar Pugh": 1,
-      "Joe Dysert": 7
+      "Joe Dysert": 6
     },
     "basis": "Current open qualified leads owned within trailing 30 days; $7,000 × 20% per lead. Independent of report week."
   }
