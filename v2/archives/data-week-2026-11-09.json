@@ -331,20 +331,20 @@
       "marketing": 6,
       "lane2": 10,
       "social_dms": 0,
-      "showed": 4,
-      "qualified": 2,
+      "showed": 5,
+      "qualified": 3,
       "closed_won": 1,
       "revenue": 200.0,
       "formats": {
-        "show": "57.1%",
-        "qualified": "28.6%",
-        "close": "14.3%",
+        "show": "62.5%",
+        "qualified": "37.5%",
+        "close": "12.5%",
         "revenue": "$200",
         "average": "$200",
-        "qualified_occurred": "28.6%"
+        "qualified_occurred": "37.5%"
       },
-      "scheduled_calls": 7,
-      "occurred_calls": 7,
+      "scheduled_calls": 8,
+      "occurred_calls": 8,
       "no_shows": 3,
       "unresolved_calls": 0
     },
@@ -354,20 +354,20 @@
       "marketing": 6,
       "lane2": 7,
       "social_dms": 1,
-      "showed": 6,
-      "qualified": 4,
+      "showed": 5,
+      "qualified": 3,
       "closed_won": 0,
       "revenue": 0,
       "formats": {
         "show": "100.0%",
-        "qualified": "66.7%",
+        "qualified": "60.0%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "66.7%"
+        "qualified_occurred": "60.0%"
       },
-      "scheduled_calls": 8,
-      "occurred_calls": 6,
+      "scheduled_calls": 7,
+      "occurred_calls": 5,
       "no_shows": 0,
       "unresolved_calls": 2
     },
@@ -510,8 +510,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-12T08:30:25.789190-08:00",
-  "source_cutoff": "2026-11-12T08:30:25.789190-08:00",
+  "generated_at": "2026-11-12T08:45:19.033008-08:00",
+  "source_cutoff": "2026-11-12T08:45:19.033008-08:00",
   "vendhub_arr": 16792.0,
   "progress": {
     "day": 12,
@@ -544,7 +544,7 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 78,
   "excluded_repeat_candidates": 8,
-  "attribution_reviewed_at": "2026-11-12T08:30:25.789190-08:00",
+  "attribution_reviewed_at": "2026-11-12T08:45:19.033008-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 510,
@@ -3247,7 +3247,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-12T08:30:25.789190-08:00",
+    "generated_at": "2026-11-12T08:45:19.033008-08:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 12,
