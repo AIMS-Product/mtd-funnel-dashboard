@@ -19,10 +19,10 @@
         "average": "—",
         "qualified_occurred": "46.0%"
       },
-      "scheduled_calls": 66,
+      "scheduled_calls": 65,
       "occurred_calls": 50,
       "no_shows": 13,
-      "unresolved_calls": 16
+      "unresolved_calls": 15
     },
     {
       "value": "Vince Bartolini",
@@ -435,10 +435,10 @@
         "average": "$200",
         "qualified_occurred": "28.6%"
       },
-      "scheduled_calls": 16,
+      "scheduled_calls": 15,
       "occurred_calls": 14,
       "no_shows": 5,
-      "unresolved_calls": 2
+      "unresolved_calls": 1
     },
     {
       "value": "Robin Perkins",
@@ -579,8 +579,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-12T10:00:24.874869-08:00",
-  "source_cutoff": "2026-11-12T10:00:24.874869-08:00",
+  "generated_at": "2026-11-12T10:15:21.123687-08:00",
+  "source_cutoff": "2026-11-12T10:15:21.123687-08:00",
   "vendhub_arr": 24591.0,
   "progress": {
     "day": 12,
@@ -613,7 +613,7 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 181,
   "excluded_repeat_candidates": 18,
-  "attribution_reviewed_at": "2026-11-12T10:00:24.874869-08:00",
+  "attribution_reviewed_at": "2026-11-12T10:15:21.123687-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2251,
@@ -633,10 +633,10 @@
       "average": "$6,312",
       "qualified_occurred": "46.9%"
     },
-    "scheduled_calls": 154,
+    "scheduled_calls": 153,
     "occurred_calls": 128,
     "no_shows": 38,
-    "unresolved_calls": 26
+    "unresolved_calls": 25
   },
   "channels": [
     {
@@ -670,10 +670,10 @@
             "average": "—",
             "qualified_occurred": "0.0%"
           },
-          "scheduled_calls": 4,
+          "scheduled_calls": 3,
           "occurred_calls": 3,
           "no_shows": 0,
-          "unresolved_calls": 1
+          "unresolved_calls": 0
         },
         {
           "value": "nov03",
@@ -1169,7 +1169,7 @@
           "qualified": 2,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 16,
+          "scheduled_calls": 15,
           "formats": {
             "show": "66.7%",
             "qualified": "16.7%",
@@ -1178,7 +1178,7 @@
           },
           "occurred_calls": 12,
           "no_shows": 4,
-          "unresolved_calls": 4
+          "unresolved_calls": 3
         },
         {
           "value": "Rob Maxfield",
@@ -1342,28 +1342,28 @@
         "average": "$8,997",
         "qualified_occurred": "32.5%"
       },
-      "scheduled_calls": 47,
+      "scheduled_calls": 46,
       "occurred_calls": 40,
       "no_shows": 17,
-      "unresolved_calls": 7
+      "unresolved_calls": 6
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 351,
-      "bookings": 31,
-      "marketing": 6,
+      "leads_created": 350,
+      "bookings": 30,
+      "marketing": 5,
       "lane2": 25,
       "social_dms": 0,
       "showed": 24,
       "qualified": 14,
       "closed_won": 2,
       "revenue": 12894.0,
-      "unrecoverable_booked_leads": 31,
+      "unrecoverable_booked_leads": 30,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 26,
-          "marketing": 4,
+          "bookings": 25,
+          "marketing": 3,
           "lane2": 22,
           "social_dms": 0,
           "showed": 20,
@@ -1545,8 +1545,8 @@
         },
         {
           "value": "Marketing",
-          "bookings": 6,
-          "marketing": 6,
+          "bookings": 5,
+          "marketing": 5,
           "lane2": 0,
           "social_dms": 0,
           "showed": 5,
@@ -1734,7 +1734,7 @@
         }
       ],
       "display": {
-        "projected": 78,
+        "projected": 75,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -3354,9 +3354,9 @@
     },
     {
       "channel": "Website",
-      "leads_created": 4,
-      "bookings": 6,
-      "marketing": 4,
+      "leads_created": 5,
+      "bookings": 7,
+      "marketing": 5,
       "lane2": 2,
       "social_dms": 0,
       "showed": 3,
@@ -3367,8 +3367,8 @@
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 4,
-          "marketing": 3,
+          "bookings": 5,
+          "marketing": 4,
           "lane2": 1,
           "social_dms": 0,
           "showed": 3,
@@ -3460,8 +3460,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 4,
-          "marketing": 4,
+          "bookings": 5,
+          "marketing": 5,
           "lane2": 0,
           "social_dms": 0,
           "showed": 2,
@@ -3523,9 +3523,9 @@
         }
       ],
       "display": {
-        "projected": 15,
+        "projected": 18,
         "goal": 100,
-        "goal_pct": 6,
+        "goal_pct": 7,
         "pace": "pace-behind"
       },
       "formats": {
@@ -4084,7 +4084,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-12T10:00:24.874869-08:00",
+    "generated_at": "2026-11-12T10:15:21.123687-08:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 12,
