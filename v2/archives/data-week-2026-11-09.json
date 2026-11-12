@@ -12,17 +12,17 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "84.2%",
-        "qualified": "42.1%",
+        "show": "80.0%",
+        "qualified": "40.0%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "42.1%"
+        "qualified_occurred": "40.0%"
       },
       "scheduled_calls": 22,
-      "occurred_calls": 19,
-      "no_shows": 3,
-      "unresolved_calls": 3
+      "occurred_calls": 20,
+      "no_shows": 4,
+      "unresolved_calls": 2
     },
     {
       "value": "Vince Bartolini",
@@ -428,17 +428,17 @@
       "closed_won": 1,
       "revenue": 8997.0,
       "formats": {
-        "show": "75.0%",
-        "qualified": "50.0%",
-        "close": "25.0%",
+        "show": "60.0%",
+        "qualified": "40.0%",
+        "close": "20.0%",
         "revenue": "$8,997",
         "average": "$8,997",
-        "qualified_occurred": "50.0%"
+        "qualified_occurred": "40.0%"
       },
       "scheduled_calls": 6,
-      "occurred_calls": 4,
-      "no_shows": 1,
-      "unresolved_calls": 2
+      "occurred_calls": 5,
+      "no_shows": 2,
+      "unresolved_calls": 1
     },
     {
       "value": "Eric Piccione",
@@ -510,8 +510,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-12T13:00:22.161466-08:00",
-  "source_cutoff": "2026-11-12T13:00:22.161466-08:00",
+  "generated_at": "2026-11-12T13:15:18.300708-08:00",
+  "source_cutoff": "2026-11-12T13:15:18.300708-08:00",
   "vendhub_arr": 16792.0,
   "progress": {
     "day": 12,
@@ -544,7 +544,7 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 81,
   "excluded_repeat_candidates": 8,
-  "attribution_reviewed_at": "2026-11-12T13:00:22.161466-08:00",
+  "attribution_reviewed_at": "2026-11-12T13:15:18.300708-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 516,
@@ -557,17 +557,17 @@
     "closed_won": 9,
     "revenue": 60479.0,
     "formats": {
-      "show": "80.4%",
-      "qualified": "51.0%",
-      "close": "17.6%",
+      "show": "78.8%",
+      "qualified": "50.0%",
+      "close": "17.3%",
       "revenue": "$60,479",
       "average": "$6,720",
-      "qualified_occurred": "51.0%"
+      "qualified_occurred": "50.0%"
     },
     "scheduled_calls": 61,
-    "occurred_calls": 51,
-    "no_shows": 10,
-    "unresolved_calls": 10
+    "occurred_calls": 52,
+    "no_shows": 11,
+    "unresolved_calls": 9
   },
   "channels": [
     {
@@ -594,7 +594,7 @@
           "closed_won": 0,
           "revenue": 0,
           "formats": {
-            "show": "100.0%",
+            "show": "80.0%",
             "qualified": "0.0%",
             "close": "0.0%",
             "revenue": "$0",
@@ -602,9 +602,9 @@
             "qualified_occurred": "0.0%"
           },
           "scheduled_calls": 5,
-          "occurred_calls": 4,
-          "no_shows": 0,
-          "unresolved_calls": 1
+          "occurred_calls": 5,
+          "no_shows": 1,
+          "unresolved_calls": 0
         },
         {
           "value": "nov03",
@@ -964,14 +964,14 @@
           "revenue": 0,
           "scheduled_calls": 5,
           "formats": {
-            "show": "100.0%",
+            "show": "80.0%",
             "qualified": "0.0%",
             "close": "0.0%",
             "qualified_occurred": "0.0%"
           },
-          "occurred_calls": 4,
-          "no_shows": 0,
-          "unresolved_calls": 1
+          "occurred_calls": 5,
+          "no_shows": 1,
+          "unresolved_calls": 0
         },
         {
           "value": "Rob Maxfield",
@@ -1107,17 +1107,17 @@
         "pace": "pace-exceed"
       },
       "formats": {
-        "show": "83.3%",
-        "qualified": "41.7%",
-        "close": "16.7%",
+        "show": "76.9%",
+        "qualified": "38.5%",
+        "close": "15.4%",
         "revenue": "$17,994",
         "average": "$8,997",
-        "qualified_occurred": "41.7%"
+        "qualified_occurred": "38.5%"
       },
       "scheduled_calls": 14,
-      "occurred_calls": 12,
-      "no_shows": 2,
-      "unresolved_calls": 2
+      "occurred_calls": 13,
+      "no_shows": 3,
+      "unresolved_calls": 1
     },
     {
       "channel": "Google Ads",
@@ -3348,7 +3348,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-12T13:00:22.161466-08:00",
+    "generated_at": "2026-11-12T13:15:18.300708-08:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 12,
