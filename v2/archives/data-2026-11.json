@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 76,
-      "marketing": 76,
+      "bookings": 77,
+      "marketing": 77,
       "lane2": 0,
       "social_dms": 0,
       "showed": 37,
@@ -373,8 +373,8 @@
   "team": [
     {
       "value": "Luke Herman",
-      "bookings": 37,
-      "marketing": 16,
+      "bookings": 38,
+      "marketing": 17,
       "lane2": 20,
       "social_dms": 1,
       "showed": 15,
@@ -579,8 +579,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-12T08:00:25.348018-08:00",
-  "source_cutoff": "2026-11-12T08:00:25.348018-08:00",
+  "generated_at": "2026-11-12T08:15:21.573834-08:00",
+  "source_cutoff": "2026-11-12T08:15:21.573834-08:00",
   "vendhub_arr": 24591.0,
   "progress": {
     "day": 12,
@@ -611,14 +611,14 @@
   "period": "2026-11-01 through 2026-11-12 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 179,
+  "counted_meetings": 180,
   "excluded_repeat_candidates": 18,
-  "attribution_reviewed_at": "2026-11-12T08:00:25.348018-08:00",
+  "attribution_reviewed_at": "2026-11-12T08:15:21.573834-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 2247,
-    "bookings": 179,
-    "marketing": 76,
+    "leads_created": 2248,
+    "bookings": 180,
+    "marketing": 77,
     "lane2": 97,
     "social_dms": 6,
     "showed": 90,
@@ -1349,7 +1349,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 349,
+      "leads_created": 348,
       "bookings": 30,
       "marketing": 5,
       "lane2": 25,
@@ -2067,9 +2067,9 @@
     },
     {
       "channel": "YouTube",
-      "leads_created": 18,
-      "bookings": 25,
-      "marketing": 15,
+      "leads_created": 19,
+      "bookings": 26,
+      "marketing": 16,
       "lane2": 10,
       "social_dms": 0,
       "showed": 17,
@@ -2078,6 +2078,29 @@
       "revenue": 11394.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
+        {
+          "value": "start_vending_2026",
+          "bookings": 3,
+          "marketing": 2,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "50.0%",
+            "qualified": "50.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "50.0%"
+          },
+          "scheduled_calls": 2,
+          "occurred_calls": 2,
+          "no_shows": 1,
+          "unresolved_calls": 0
+        },
         {
           "value": "youtube-home",
           "bookings": 3,
@@ -2192,29 +2215,6 @@
           "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 1
-        },
-        {
-          "value": "start_vending_2026",
-          "bookings": 2,
-          "marketing": 1,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "50.0%",
-            "qualified": "50.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "50.0%"
-          },
-          "scheduled_calls": 2,
-          "occurred_calls": 2,
-          "no_shows": 1,
-          "unresolved_calls": 0
         },
         {
           "value": "6-locations-earnings",
@@ -2633,8 +2633,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 15,
-          "marketing": 15,
+          "bookings": 16,
+          "marketing": 16,
           "lane2": 0,
           "social_dms": 0,
           "showed": 8,
@@ -2822,9 +2822,9 @@
         }
       ],
       "display": {
-        "projected": 63,
+        "projected": 65,
         "goal": 132,
-        "goal_pct": 19,
+        "goal_pct": 20,
         "pace": "pace-behind"
       },
       "formats": {
@@ -4024,10 +4024,44 @@
       "occurred_calls": 0,
       "no_shows": 0,
       "unresolved_calls": 0
+    },
+    {
+      "channel": "Mike Newsletter",
+      "leads_created": 1,
+      "bookings": 0,
+      "marketing": 0,
+      "lane2": 0,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0.0,
+      "unrecoverable_booked_leads": 0,
+      "drilldowns": [],
+      "packages": [],
+      "setters": [],
+      "display": {
+        "projected": null,
+        "goal": 10,
+        "goal_pct": 0,
+        "pace": ""
+      },
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 0,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 0
     }
   ],
   "goal_percentages": {
-    "bookings": 14,
+    "bookings": 15,
     "revenue": 12
   },
   "arr_display": {
@@ -4050,7 +4084,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-12T08:00:25.348018-08:00",
+    "generated_at": "2026-11-12T08:15:21.573834-08:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 12,
