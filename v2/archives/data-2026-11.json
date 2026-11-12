@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 74,
-      "marketing": 74,
+      "bookings": 75,
+      "marketing": 75,
       "lane2": 0,
       "social_dms": 0,
       "showed": 37,
@@ -465,8 +465,8 @@
     },
     {
       "value": "Joe Vaughan",
-      "bookings": 22,
-      "marketing": 17,
+      "bookings": 23,
+      "marketing": 18,
       "lane2": 5,
       "social_dms": 0,
       "showed": 11,
@@ -579,8 +579,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-12T03:45:19.132808-08:00",
-  "source_cutoff": "2026-11-12T03:45:19.132808-08:00",
+  "generated_at": "2026-11-12T04:00:26.274984-08:00",
+  "source_cutoff": "2026-11-12T04:00:26.274984-08:00",
   "vendhub_arr": 24591.0,
   "progress": {
     "day": 12,
@@ -611,14 +611,14 @@
   "period": "2026-11-01 through 2026-11-12 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 177,
+  "counted_meetings": 178,
   "excluded_repeat_candidates": 18,
-  "attribution_reviewed_at": "2026-11-12T03:45:19.132808-08:00",
+  "attribution_reviewed_at": "2026-11-12T04:00:26.274984-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 2245,
-    "bookings": 177,
-    "marketing": 74,
+    "leads_created": 2246,
+    "bookings": 178,
+    "marketing": 75,
     "lane2": 97,
     "social_dms": 6,
     "showed": 90,
@@ -641,9 +641,9 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1791,
-      "bookings": 65,
-      "marketing": 25,
+      "leads_created": 1792,
+      "bookings": 66,
+      "marketing": 26,
       "lane2": 40,
       "social_dms": 0,
       "showed": 23,
@@ -811,6 +811,29 @@
           "scheduled_calls": 1,
           "occurred_calls": 1,
           "no_shows": 1,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "oct06",
+          "bookings": 2,
+          "marketing": 1,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "100.0%"
+          },
+          "scheduled_calls": 1,
+          "occurred_calls": 1,
+          "no_shows": 0,
           "unresolved_calls": 0
         },
         {
@@ -998,29 +1021,6 @@
           "unresolved_calls": 0
         },
         {
-          "value": "oct06",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "100.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "100.0%"
-          },
-          "scheduled_calls": 1,
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "oct06_end_cta",
           "bookings": 1,
           "marketing": 0,
@@ -1161,8 +1161,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 25,
-          "marketing": 25,
+          "bookings": 26,
+          "marketing": 26,
           "lane2": 0,
           "social_dms": 0,
           "showed": 8,
@@ -1329,9 +1329,9 @@
         }
       ],
       "display": {
-        "projected": 162,
+        "projected": 165,
         "goal": 70,
-        "goal_pct": 93,
+        "goal_pct": 94,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -4094,11 +4094,11 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-12T03:45:19.132808-08:00",
+    "generated_at": "2026-11-12T04:00:26.274984-08:00",
     "counts": {
-      "Christian Hartwell": 35,
+      "Christian Hartwell": 34,
       "Scott Seymour": 11,
-      "Robin Perkins": 18,
+      "Robin Perkins": 17,
       "Eric Piccione": 10,
       "Joe Vaughan": 9,
       "Shreya Bechra": 1,
