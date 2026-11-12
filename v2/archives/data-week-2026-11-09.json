@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 33,
-      "marketing": 33,
+      "bookings": 34,
+      "marketing": 34,
       "lane2": 0,
       "social_dms": 0,
       "showed": 13,
@@ -396,8 +396,8 @@
     },
     {
       "value": "Christian Hartwell",
-      "bookings": 8,
-      "marketing": 1,
+      "bookings": 9,
+      "marketing": 2,
       "lane2": 7,
       "social_dms": 0,
       "showed": 12,
@@ -510,8 +510,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-12T04:00:26.274984-08:00",
-  "source_cutoff": "2026-11-12T04:00:26.274984-08:00",
+  "generated_at": "2026-11-12T04:15:21.411310-08:00",
+  "source_cutoff": "2026-11-12T04:15:21.411310-08:00",
   "vendhub_arr": 16792.0,
   "progress": {
     "day": 12,
@@ -542,14 +542,14 @@
   "period": "2026-11-09 through 2026-11-12 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 76,
+  "counted_meetings": 77,
   "excluded_repeat_candidates": 8,
-  "attribution_reviewed_at": "2026-11-12T04:00:26.274984-08:00",
+  "attribution_reviewed_at": "2026-11-12T04:15:21.411310-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 506,
-    "bookings": 76,
-    "marketing": 33,
+    "leads_created": 507,
+    "bookings": 77,
+    "marketing": 34,
     "lane2": 41,
     "social_dms": 2,
     "showed": 38,
@@ -2595,9 +2595,9 @@
     },
     {
       "channel": "Linkedin",
-      "leads_created": 2,
-      "bookings": 2,
-      "marketing": 2,
+      "leads_created": 3,
+      "bookings": 3,
+      "marketing": 3,
       "lane2": 0,
       "social_dms": 0,
       "showed": 0,
@@ -2608,8 +2608,8 @@
       "drilldowns": [
         {
           "value": "book-call",
-          "bookings": 2,
-          "marketing": 2,
+          "bookings": 3,
+          "marketing": 3,
           "lane2": 0,
           "social_dms": 0,
           "showed": 0,
@@ -2655,8 +2655,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 2,
-          "marketing": 2,
+          "bookings": 3,
+          "marketing": 3,
           "lane2": 0,
           "social_dms": 0,
           "showed": 0,
@@ -2697,9 +2697,9 @@
         }
       ],
       "display": {
-        "projected": 5,
+        "projected": 8,
         "goal": 10,
-        "goal_pct": 20,
+        "goal_pct": 30,
         "pace": "pace-behind"
       },
       "formats": {
@@ -3211,7 +3211,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-12T04:00:26.274984-08:00",
+    "generated_at": "2026-11-12T04:15:21.411310-08:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 11,
