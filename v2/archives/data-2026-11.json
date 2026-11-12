@@ -324,6 +324,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Connor George",
+      "bookings": 0,
+      "marketing": 0,
+      "lane2": 0,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 1,
+      "revenue": 200.0,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$200",
+        "average": "$200",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 0,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Tony Parton",
       "bookings": 0,
       "marketing": 0,
@@ -402,14 +425,14 @@
       "social_dms": 0,
       "showed": 8,
       "qualified": 3,
-      "closed_won": 0,
-      "revenue": 0,
+      "closed_won": 1,
+      "revenue": 200.0,
       "formats": {
         "show": "61.5%",
         "qualified": "23.1%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
+        "close": "7.7%",
+        "revenue": "$200",
+        "average": "$200",
         "qualified_occurred": "23.1%"
       },
       "scheduled_calls": 14,
@@ -556,8 +579,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-11T18:45:15.962247-08:00",
-  "source_cutoff": "2026-11-11T18:45:15.962247-08:00",
+  "generated_at": "2026-11-11T19:00:23.348270-08:00",
+  "source_cutoff": "2026-11-11T19:00:23.348270-08:00",
   "vendhub_arr": 24591.0,
   "progress": {
     "day": 11,
@@ -590,7 +613,7 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 177,
   "excluded_repeat_candidates": 18,
-  "attribution_reviewed_at": "2026-11-11T18:45:15.962247-08:00",
+  "attribution_reviewed_at": "2026-11-11T19:00:23.348270-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2241,
@@ -600,14 +623,14 @@
     "social_dms": 6,
     "showed": 88,
     "qualified": 60,
-    "closed_won": 13,
-    "revenue": 88166.0,
+    "closed_won": 14,
+    "revenue": 88366.0,
     "formats": {
       "show": "70.4%",
       "qualified": "48.0%",
-      "close": "10.4%",
-      "revenue": "$88,166",
-      "average": "$6,782",
+      "close": "11.2%",
+      "revenue": "$88,366",
+      "average": "$6,312",
       "qualified_occurred": "48.0%"
     },
     "scheduled_calls": 151,
@@ -1738,8 +1761,8 @@
       "social_dms": 0,
       "showed": 14,
       "qualified": 13,
-      "closed_won": 4,
-      "revenue": 21890.0,
+      "closed_won": 5,
+      "revenue": 22090.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
         {
@@ -1773,14 +1796,14 @@
           "social_dms": 0,
           "showed": 3,
           "qualified": 2,
-          "closed_won": 1,
-          "revenue": 2999.0,
+          "closed_won": 2,
+          "revenue": 3199.0,
           "formats": {
             "show": "50.0%",
             "qualified": "33.3%",
-            "close": "16.7%",
-            "revenue": "$2,999",
-            "average": "$2,999",
+            "close": "33.3%",
+            "revenue": "$3,199",
+            "average": "$1,600",
             "qualified_occurred": "33.3%"
           },
           "scheduled_calls": 10,
@@ -1851,6 +1874,26 @@
             "qualified_close": "—",
             "revenue": "$2,999",
             "average": "$2,999"
+          }
+        },
+        {
+          "value": "Unknown",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 200.0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "qualified_booked": "—",
+            "close": "—",
+            "qualified_close": "—",
+            "revenue": "$200",
+            "average": "$200"
           }
         }
       ],
@@ -1980,6 +2023,27 @@
           "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 0
+        },
+        {
+          "value": "Connor George",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 200.0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
         }
       ],
       "display": {
@@ -1991,9 +2055,9 @@
       "formats": {
         "show": "77.8%",
         "qualified": "72.2%",
-        "close": "22.2%",
-        "revenue": "$21,890",
-        "average": "$5,472",
+        "close": "27.8%",
+        "revenue": "$22,090",
+        "average": "$4,418",
         "qualified_occurred": "72.2%"
       },
       "scheduled_calls": 25,
@@ -4030,7 +4094,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-11T18:45:15.962247-08:00",
+    "generated_at": "2026-11-11T19:00:23.348270-08:00",
     "counts": {
       "Christian Hartwell": 35,
       "Scott Seymour": 11,
