@@ -42,16 +42,16 @@
         "average": "—",
         "qualified_occurred": "45.5%"
       },
-      "scheduled_calls": 14,
+      "scheduled_calls": 15,
       "occurred_calls": 11,
       "no_shows": 3,
-      "unresolved_calls": 3
+      "unresolved_calls": 4
     },
     {
       "value": "Rob Maxfield",
-      "bookings": 12,
+      "bookings": 13,
       "marketing": 0,
-      "lane2": 12,
+      "lane2": 13,
       "social_dms": 0,
       "showed": 7,
       "qualified": 5,
@@ -327,9 +327,9 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 18,
+      "bookings": 19,
       "marketing": 6,
-      "lane2": 12,
+      "lane2": 13,
       "social_dms": 0,
       "showed": 7,
       "qualified": 4,
@@ -343,10 +343,10 @@
         "average": "$200",
         "qualified_occurred": "40.0%"
       },
-      "scheduled_calls": 11,
+      "scheduled_calls": 12,
       "occurred_calls": 10,
       "no_shows": 3,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Robin Perkins",
@@ -510,8 +510,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-12T14:30:22.172100-08:00",
-  "source_cutoff": "2026-11-12T14:30:22.172100-08:00",
+  "generated_at": "2026-11-12T14:45:18.165695-08:00",
+  "source_cutoff": "2026-11-12T14:45:18.165695-08:00",
   "vendhub_arr": 16792.0,
   "progress": {
     "day": 12,
@@ -542,15 +542,15 @@
   "period": "2026-11-09 through 2026-11-12 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 83,
+  "counted_meetings": 84,
   "excluded_repeat_candidates": 8,
-  "attribution_reviewed_at": "2026-11-12T14:30:22.172100-08:00",
+  "attribution_reviewed_at": "2026-11-12T14:45:18.165695-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 517,
-    "bookings": 83,
+    "bookings": 84,
     "marketing": 37,
-    "lane2": 44,
+    "lane2": 45,
     "social_dms": 2,
     "showed": 43,
     "qualified": 27,
@@ -564,18 +564,18 @@
       "average": "$6,720",
       "qualified_occurred": "50.0%"
     },
-    "scheduled_calls": 63,
+    "scheduled_calls": 64,
     "occurred_calls": 54,
     "no_shows": 11,
-    "unresolved_calls": 9
+    "unresolved_calls": 10
   },
   "channels": [
     {
       "channel": "Internal Webinar",
       "leads_created": 178,
-      "bookings": 33,
+      "bookings": 34,
       "marketing": 17,
-      "lane2": 16,
+      "lane2": 17,
       "social_dms": 0,
       "showed": 10,
       "qualified": 5,
@@ -585,9 +585,9 @@
       "drilldowns": [
         {
           "value": "nov10",
-          "bookings": 17,
+          "bookings": 18,
           "marketing": 15,
-          "lane2": 2,
+          "lane2": 3,
           "social_dms": 0,
           "showed": 4,
           "qualified": 0,
@@ -975,9 +975,9 @@
         },
         {
           "value": "Rob Maxfield",
-          "bookings": 7,
+          "bookings": 8,
           "marketing": 0,
-          "lane2": 7,
+          "lane2": 8,
           "social_dms": 0,
           "showed": 3,
           "qualified": 2,
@@ -1101,9 +1101,9 @@
         }
       ],
       "display": {
-        "projected": 82,
+        "projected": 85,
         "goal": 70,
-        "goal_pct": 47,
+        "goal_pct": 49,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -2393,10 +2393,10 @@
             "average": "—",
             "qualified_occurred": "—"
           },
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "book-call",
@@ -2545,7 +2545,7 @@
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "formats": {
             "show": "—",
             "qualified": "—",
@@ -2554,7 +2554,7 @@
           },
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "August Young",
@@ -2613,10 +2613,10 @@
         "average": "—",
         "qualified_occurred": "60.0%"
       },
-      "scheduled_calls": 5,
+      "scheduled_calls": 6,
       "occurred_calls": 5,
       "no_shows": 1,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "channel": "Website",
@@ -3371,7 +3371,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-12T14:30:22.172100-08:00",
+    "generated_at": "2026-11-12T14:45:18.165695-08:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 12,
@@ -3380,7 +3380,7 @@
       "Joe Vaughan": 8,
       "Shreya Bechra": 1,
       "Luke Herman": 20,
-      "Ariella Irvine": 19,
+      "Ariella Irvine": 18,
       "Oscar Pugh": 1,
       "Joe Dysert": 6
     },
