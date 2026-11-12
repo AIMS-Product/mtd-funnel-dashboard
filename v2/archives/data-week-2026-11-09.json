@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 31,
-      "marketing": 31,
+      "bookings": 32,
+      "marketing": 32,
       "lane2": 0,
       "social_dms": 0,
       "showed": 10,
@@ -396,8 +396,8 @@
     },
     {
       "value": "Scott Seymour",
-      "bookings": 7,
-      "marketing": 1,
+      "bookings": 8,
+      "marketing": 2,
       "lane2": 6,
       "social_dms": 0,
       "showed": 3,
@@ -487,8 +487,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-11T16:15:18.006787-08:00",
-  "source_cutoff": "2026-11-11T16:15:18.006787-08:00",
+  "generated_at": "2026-11-11T16:30:21.212082-08:00",
+  "source_cutoff": "2026-11-11T16:30:21.212082-08:00",
   "vendhub_arr": 16792.0,
   "progress": {
     "day": 11,
@@ -519,14 +519,14 @@
   "period": "2026-11-09 through 2026-11-11 PT",
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 74,
+  "counted_meetings": 75,
   "excluded_repeat_candidates": 6,
-  "attribution_reviewed_at": "2026-11-11T16:15:18.006787-08:00",
+  "attribution_reviewed_at": "2026-11-11T16:30:21.212082-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 494,
-    "bookings": 74,
-    "marketing": 31,
+    "bookings": 75,
+    "marketing": 32,
     "lane2": 41,
     "social_dms": 2,
     "showed": 34,
@@ -550,8 +550,8 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 177,
-      "bookings": 31,
-      "marketing": 15,
+      "bookings": 32,
+      "marketing": 16,
       "lane2": 16,
       "social_dms": 0,
       "showed": 8,
@@ -814,6 +814,29 @@
           "unresolved_calls": 0
         },
         {
+          "value": "sept29",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "nov10_end_cta",
           "bookings": 0,
           "marketing": 0,
@@ -908,8 +931,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 15,
-          "marketing": 15,
+          "bookings": 16,
+          "marketing": 16,
           "lane2": 0,
           "social_dms": 0,
           "showed": 2,
@@ -1055,9 +1078,9 @@
         }
       ],
       "display": {
-        "projected": 85,
+        "projected": 87,
         "goal": 70,
-        "goal_pct": 44,
+        "goal_pct": 46,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -3124,7 +3147,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-11T16:15:18.006787-08:00",
+    "generated_at": "2026-11-11T16:30:21.212082-08:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 11,
