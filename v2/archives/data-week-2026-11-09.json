@@ -301,6 +301,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Andrea Harris",
+      "bookings": 1,
+      "marketing": 0,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 0,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Angel Rojo",
       "bookings": 1,
       "marketing": 0,
@@ -511,9 +534,9 @@
     },
     {
       "value": "Scott Seymour",
-      "bookings": 14,
+      "bookings": 15,
       "marketing": 2,
-      "lane2": 12,
+      "lane2": 13,
       "social_dms": 0,
       "showed": 4,
       "qualified": 2,
@@ -648,8 +671,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-13T11:00:25.043524-08:00",
-  "source_cutoff": "2026-11-13T11:00:25.043524-08:00",
+  "generated_at": "2026-11-13T11:15:18.851169-08:00",
+  "source_cutoff": "2026-11-13T11:15:18.851169-08:00",
   "vendhub_arr": 16792.0,
   "progress": {
     "day": 13,
@@ -680,15 +703,15 @@
   "period": "2026-11-09 through 2026-11-13 PT",
   "rules_version": "booked_calls.v2.9-steeltrap-titles-naria-repeat-exemption-20261113",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 110,
+  "counted_meetings": 111,
   "excluded_repeat_candidates": 7,
-  "attribution_reviewed_at": "2026-11-13T11:00:25.043524-08:00",
+  "attribution_reviewed_at": "2026-11-13T11:15:18.851169-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 534,
-    "bookings": 110,
+    "bookings": 111,
     "marketing": 39,
-    "lane2": 69,
+    "lane2": 70,
     "social_dms": 2,
     "showed": 49,
     "qualified": 30,
@@ -711,9 +734,9 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 178,
-      "bookings": 39,
+      "bookings": 40,
       "marketing": 18,
-      "lane2": 21,
+      "lane2": 22,
       "social_dms": 0,
       "showed": 10,
       "qualified": 5,
@@ -949,6 +972,29 @@
           "scheduled_calls": 1,
           "occurred_calls": 1,
           "no_shows": 1,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "oct13",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
           "unresolved_calls": 0
         },
         {
@@ -1217,6 +1263,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Andrea Harris",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Esther Cohen",
           "bookings": 1,
           "marketing": 0,
@@ -1302,9 +1369,9 @@
         }
       ],
       "display": {
-        "projected": 90,
+        "projected": 92,
         "goal": 70,
-        "goal_pct": 56,
+        "goal_pct": 57,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -3784,7 +3851,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-13T11:00:25.043524-08:00",
+    "generated_at": "2026-11-13T11:15:18.851169-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 12,

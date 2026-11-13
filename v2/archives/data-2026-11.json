@@ -324,6 +324,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Andrea Harris",
+      "bookings": 1,
+      "marketing": 0,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 0,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Angel Rojo",
       "bookings": 1,
       "marketing": 0,
@@ -603,9 +626,9 @@
     },
     {
       "value": "Scott Seymour",
-      "bookings": 29,
+      "bookings": 30,
       "marketing": 4,
-      "lane2": 22,
+      "lane2": 23,
       "social_dms": 3,
       "showed": 9,
       "qualified": 5,
@@ -717,8 +740,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-13T11:00:25.043524-08:00",
-  "source_cutoff": "2026-11-13T11:00:25.043524-08:00",
+  "generated_at": "2026-11-13T11:15:18.851169-08:00",
+  "source_cutoff": "2026-11-13T11:15:18.851169-08:00",
   "vendhub_arr": 24591.0,
   "progress": {
     "day": 13,
@@ -749,15 +772,15 @@
   "period": "2026-11-01 through 2026-11-13 PT",
   "rules_version": "booked_calls.v2.9-steeltrap-titles-naria-repeat-exemption-20261113",
   "booking_scope": "vp-closers.v1",
-  "counted_meetings": 220,
+  "counted_meetings": 221,
   "excluded_repeat_candidates": 17,
-  "attribution_reviewed_at": "2026-11-13T11:00:25.043524-08:00",
+  "attribution_reviewed_at": "2026-11-13T11:15:18.851169-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2272,
-    "bookings": 220,
+    "bookings": 221,
     "marketing": 81,
-    "lane2": 133,
+    "lane2": 134,
     "social_dms": 6,
     "showed": 104,
     "qualified": 66,
@@ -779,10 +802,10 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1791,
-      "bookings": 73,
+      "leads_created": 1790,
+      "bookings": 74,
       "marketing": 27,
-      "lane2": 46,
+      "lane2": 47,
       "social_dms": 0,
       "showed": 25,
       "qualified": 13,
@@ -1228,6 +1251,29 @@
           "unresolved_calls": 0
         },
         {
+          "value": "oct13",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "0.0%"
+          },
+          "scheduled_calls": 1,
+          "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "sept01",
           "bookings": 1,
           "marketing": 0,
@@ -1272,29 +1318,6 @@
           "occurred_calls": 1,
           "no_shows": 1,
           "unresolved_calls": 1
-        },
-        {
-          "value": "oct13",
-          "bookings": 0,
-          "marketing": 0,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 1,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "0.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "0.0%"
-          },
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 0
         }
       ],
       "packages": [
@@ -1489,6 +1512,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Andrea Harris",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Esther Cohen",
           "bookings": 1,
           "marketing": 0,
@@ -1553,9 +1597,9 @@
         }
       ],
       "display": {
-        "projected": 168,
+        "projected": 171,
         "goal": 70,
-        "goal_pct": 104,
+        "goal_pct": 106,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -1573,7 +1617,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 365,
+      "leads_created": 366,
       "bookings": 51,
       "marketing": 5,
       "lane2": 46,
@@ -4564,7 +4608,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-13T11:00:25.043524-08:00",
+    "generated_at": "2026-11-13T11:15:18.851169-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 12,
