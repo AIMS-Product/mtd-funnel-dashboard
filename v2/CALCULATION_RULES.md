@@ -1,6 +1,24 @@
 # MTD Funnel V2 calculation rules
 
-This document describes the report produced by [`build.py`](build.py) and the aggregate-only page produced by [`publish_shadow.py`](publish_shadow.py). It is pinned to rules version `booked_calls.v2.6-scheduled-anchor-candidate+any-meeting-clock+william-consult-retired-20261014`.
+## November 13 title and Naria alignment
+
+Current live/new reports use
+`booked_calls.v2.9-steeltrap-titles-naria-repeat-exemption-20261113`.
+The existing VP Lead Owner scope is retained. Approved SteelTrap title mappings
+are added for Adam (Apex), Claude (Beacon), Helena (Pathfinder), Andrea (Nexus),
+Angel (Atlas), Ariadna (Frontier), Reginald (Trailblazer) and Esther (Breakthrough).
+Their saved literal/regex matching and setter identities are preserved, including
+attendee suffixes and the approved whitespace handling.
+
+For bookings created on or after November 1, 2026 Pacific, only Naria's verified
+setter identity is exempt from temporal 720-hour suppression. This does not grant
+credit from her display name or current lead ownership. Title eligibility,
+cancellations, current status and calendar-event duplicate/reschedule checks
+remain required; all meetings continue to advance the shared repeat clock.
+Every other setter retains the strict greater-than-720-hour boundary. Frozen
+archives are retained by the existing refresh process.
+
+This document describes the report produced by [`build.py`](build.py) and the aggregate-only page produced by [`publish_shadow.py`](publish_shadow.py). The active rules version is recorded in `rules.json`; the sections below retain the original baseline explanation except where the November 13 alignment explicitly supersedes it.
 
 For exact title regular expressions, setters, caller exclusions, source aliases, Close field IDs, and cancellation settings, use [`rules.json`](rules.json) as the machine-readable authority. Apply title rules in array order. Do not reconstruct or maintain a second copy of those mappings from this prose. The builder is the executable authority where this document and implementation differ.
 
@@ -29,7 +47,7 @@ The title map takes precedence over the Pearl source fallback and Marketing patt
 
 For a rule with `required_setter`, the builder compares it case-insensitively to the lead's Setter Name custom field. `setter_user_id` is retained as roster provenance but is not a title-match condition. The runtime uses the checked-in title map; it does not fetch a roster file during report generation.
 
-The current map has 35 ordered title rules. None is flagged `historical`; the William Nowak `vending consult call` rule has an exclusive retirement timestamp of October 14, 2026 at 12:00 AM Pacific. The older historical cutoff in `rules.json` therefore does not exclude any current title rule.
+The current map has 47 ordered title rules. None is flagged `historical`; the William Nowak `vending consult call` rule has an exclusive retirement timestamp of October 14, 2026 at 12:00 AM Pacific. The older historical cutoff in `rules.json` therefore does not exclude any current title rule.
 
 Cancellation removes a candidate and excludes it from the repeat clock if **any** of these is true:
 

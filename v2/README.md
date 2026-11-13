@@ -1,5 +1,14 @@
 # MTD Funnel V2
 
+November 13 alignment adds the approved SteelTrap Apex, Beacon, Pathfinder,
+Nexus, Atlas, Frontier, Trailblazer and Breakthrough title mappings. Naria alone
+is exempt from the temporal 30-day repeat restriction for November 2026 onward;
+same-calendar-event duplicates/reschedules and cancellations remain excluded.
+The nine-closer Lead Owner filter remains in place. Appointment-closer scope is
+being evaluated separately and is not part of this release. Live/new reports
+carry `booked_calls.v2.9-steeltrap-titles-naria-repeat-exemption-20261113`;
+the existing refresh preserves frozen snapshots.
+
 V2 is a shadow implementation of the MTD funnel report. Its files and hosted page live under `v2/`; the production report at the repository root is unchanged.
 
 V2 uses the **current MTD archive UI 1:1**, through its actual presentation functions and original month-comparison page. There is no separate V2 styling, badge, section layout, or extra button. Only V2 aggregates and V2-local navigation are supplied. The adapter loads presentation functions/constants only; legacy CRM extraction and booking selection are never run.
