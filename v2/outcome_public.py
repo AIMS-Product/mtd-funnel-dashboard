@@ -20,6 +20,9 @@ def mtd_public_candidate(reference,scheduled):
         children=data[kind];present={r['value'] for r in children}
         for value in sorted({r[key] for r in rows}-present):children.append({'value':value,**dict.fromkeys(aggregates.METRICS,0)})
         for child in children:apply(child,[r for r in rows if r[key]==child['value']])
+        if kind == 'team' and data.get('booking_scope') == aggregates.APPOINTMENT_BOOKING_SCOPE:
+            qualified = aggregates.qualified_owner_counts(rows)
+            for child in children:child['qualified'] = qualified.get(child['value'], 0)
     data['scheduled_outcome_basis']=scheduled['placement']
     data['qualification_evidence']='Current lead flag; the separate reset automation has not been applied'
     from reporting import presentation

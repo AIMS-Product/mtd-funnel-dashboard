@@ -76,7 +76,19 @@ def rollup(bookings, won, key):
     return sorted(result, key=lambda row: (-row["bookings"], -row["revenue"], row["value"]))
 
 
-def build_breakdowns(bookings, won, users):
+def qualified_owner_counts(rows, owner_key=lambda row: row['owner']):
+    """Allocate the distinct source/lead cohort using its stable meeting identity."""
+    counts = defaultdict(int)
+    seen = set()
+    for row in sorted(rows, key=lambda row: row['meeting_id']):
+        identity = (row['channel'], row['lead_id'])
+        if row['qualified'] and identity not in seen:
+            counts[owner_key(row)] += 1
+            seen.add(identity)
+    return counts
+
+
+def build_breakdowns(bookings, won, users, *, appointment_qualification=False):
     channels = sorted({row["channel"] for row in bookings + won})
     details = {}
     for channel in channels:
@@ -91,4 +103,8 @@ def build_breakdowns(bookings, won, users):
     setters = rollup(bookings, won, lambda row: owner_name(row["setter"], users))
     team = rollup(bookings, won, lambda row: owner_name(row["owner"], users)
                   if owner_name(row["owner"], users) in CLOSERS else OTHER_OWNER)
+    if appointment_qualification:
+        qualified = qualified_owner_counts(bookings, lambda row: owner_name(row['owner'], users))
+        for row in team:
+            row['qualified'] = qualified.get(row['value'], 0)
     return {"channels": details, "setters": setters, "team": team}

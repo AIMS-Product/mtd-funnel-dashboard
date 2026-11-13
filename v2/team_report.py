@@ -117,7 +117,7 @@ def report_rows(data, start, end, *, source_label, source_hash, generated_at):
             ['Booking Rules', data['rules_version']], ['Closers', '; '.join(ACTIVE_CLOSERS)],
             ['Booked Basis', 'Calls Occurred: qualifying scheduled calls with native Completed or No Show outcome'],
             ['Shown Basis', 'Native Completed meeting outcome; not First Call Show Up'],
-            ['Qualified Basis', 'Distinct currently qualified leads in occurred-call cohort per owner'],
+            ['Qualified Basis', 'Distinct qualified source/lead cohort, allocated once to the canonical appointment closer' if data.get('booking_scope') == APPOINTMENT_BOOKING_SCOPE else 'Distinct currently qualified leads in occurred-call cohort per owner'],
             ['Won / Revenue Basis', 'Included V2 opportunities by date_won and opportunity owner; independent of meeting dates'],
             ['Win Units', 'Opportunities; Rep/Manager may count distinct owner/lead wins instead'],
             ['MTD V2 Booked Difference', 'MTD V2 Total Booked is creation-date credits; compare this Booked to MTD V2 Calls Occurred'],

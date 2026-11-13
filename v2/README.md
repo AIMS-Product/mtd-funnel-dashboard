@@ -61,7 +61,10 @@ rescheduled and future meetings do not enter this denominator. Shown uses native
 Completed; the lead's First Call Show Up field is not consulted.
 
 Qualified counts distinct currently qualified leads in the occurred cohort, retaining
-native group deduplication. This release does not reset qualification or write to Close.
+native group deduplication. Closer totals allocate each qualified source/lead once
+through its canonical meeting contribution, preventing duplicate qualification
+credit when a lead has calls with multiple closers. This release does not reset
+qualification or write to Close.
 Show, qualification and primary close rates divide by occurred calls; zero calls is
 undefined. Won leads/opportunities and revenue retain the dashboard's native date-won,
 owner, currency and deduplication definitions, independent of meeting dates. Process

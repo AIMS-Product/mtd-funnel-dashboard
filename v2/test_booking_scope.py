@@ -8,7 +8,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 import build
-from aggregates import BOOKING_SCOPE, APPOINTMENT_BOOKING_SCOPE, VP_BOOKING_CLOSERS, vp_closer_bookings, vp_appointment_bookings, booking_scope_label
+from aggregates import BOOKING_SCOPE, APPOINTMENT_BOOKING_SCOPE, VP_BOOKING_CLOSERS, vp_closer_bookings, vp_appointment_bookings, booking_scope_label, build_breakdowns
 from reporting import PACIFIC
 from publish_shadow import public_data
 from rescope_archive import rescope_saved_report
@@ -126,6 +126,36 @@ class BookingScopeTests(unittest.TestCase):
         self.assertIn('appointment closer', booking_scope_label(APPOINTMENT_BOOKING_SCOPE))
         self.assertIn('Lead Owner', booking_scope_label(BOOKING_SCOPE))
         self.assertIn('historical', booking_scope_label('all-owners.v1'))
+
+    def test_shared_qualified_lead_is_allocated_once_across_appointment_closers(self):
+        from outcome_core import annotate_qualification, occurred_dataset
+        from outcome_public import apply_occurred_mtd
+        from reports import team_rows
+        rows, _, _ = accepted_records()
+        first = {**rows[0], 'meeting_id': 'a', 'owner': 'Christian Hartwell',
+                 'outcome': 'Completed', 'status': 'completed'}
+        second = {**first, 'meeting_id': 'b', 'owner': 'Scott Seymour'}
+        cohort = [second, first]
+        # Exercise the native public overlay and CSV path using a complete fixture.
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)/'source.json';raw = public_fixture()
+            raw['booking_scope'] = APPOINTMENT_BOOKING_SCOPE
+            _, won, users = accepted_records()
+            raw['breakdowns'] = build_breakdowns(cohort, won, users, appointment_qualification=True)
+            raw['totals'].update(bookings=2, lane2=2, marketing=0, social_dms=0, showed=2, qualified=1)
+            raw['channels'][0].update(raw['totals'])
+            path.write_text(json.dumps(raw));reference = public_data(path)
+        annotate_qualification(cohort)
+        scheduled = {'rows': cohort, 'totals': {}, 'placement': 'test'}
+        public = apply_occurred_mtd(reference, occurred_dataset(scheduled), scheduled)
+        owners = {row['value']: row['qualified'] for row in public['team']}
+        self.assertEqual(public['totals']['qualified'], 1)
+        self.assertEqual(owners['Christian Hartwell'], 1)
+        self.assertEqual(owners['Scott Seymour'], 0)
+        self.assertEqual(sum(owners.values()), 1)
+        raw_team = build_breakdowns(cohort, [], {}, appointment_qualification=True)['team']
+        self.assertEqual(sum(row['qualified'] for row in raw_team), 1)
+        self.assertTrue(any(row and row[0] == 'qualified' and row[-1] == 'YES' for row in team_rows(public)))
 
 
 if __name__ == '__main__':

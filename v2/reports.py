@@ -12,7 +12,7 @@ import tempfile
 from datetime import date, datetime, time, timedelta
 from pathlib import Path
 
-from aggregates import CLOSERS, METRICS, OTHER_OWNER, booking_scope_label
+from aggregates import APPOINTMENT_BOOKING_SCOPE, CLOSERS, METRICS, OTHER_OWNER, booking_scope_label
 from reporting import ARCHIVE_START, PACIFIC, ROOT
 
 HEADERS = ["Funnel", "Leads", "Booked", "Projected", "Goal %", "Showed", "Show %", "Qualified", "Qual %", "Closed", "CW %", "Revenue", "Rev / Close"]
@@ -70,8 +70,8 @@ def team_rows(data):
             ["Period", data["period"]], ["Generated At", data["generated_at"]],
             ["Booking Rules", data["rules_version"]],
             ["Booking Scope", booking_scope_label(data.get("booking_scope"))],
-            ["Attribution", "Booking/show/qualified by current Lead Owner; won deals/revenue by opportunity owner."],
-            ["Qualification", "Distinct currently qualified leads among occurred calls per owner." if include_occurred else "Distinct qualified booked leads per owner, using the same V2 credits."], []]
+            ["Attribution", "Booking/show by appointment closer; distinct qualification credit by canonical meeting; won deals/revenue by opportunity owner." if data.get('booking_scope') == APPOINTMENT_BOOKING_SCOPE else "Booking/show/qualified by current Lead Owner; won deals/revenue by opportunity owner."],
+            ["Qualification", "Distinct qualified source/lead cohort, allocated once to the canonical meeting's closer." if data.get('booking_scope') == APPOINTMENT_BOOKING_SCOPE else "Distinct currently qualified leads among occurred calls per owner." if include_occurred else "Distinct qualified booked leads per owner, using the same V2 credits."], []]
     reps = {row["value"]: row for row in data.get("team", [])}
     metric_fields = (*METRICS, 'occurred_calls') if 'occurred_calls' in data['totals'] else METRICS
     empty = dict.fromkeys(metric_fields, 0)

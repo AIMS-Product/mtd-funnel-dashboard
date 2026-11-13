@@ -89,6 +89,12 @@ Missing/unknown appointment users do not fall back to current Lead Owner,
 creator identity or another attendee. A meeting with multiple VP participants
 uses its native primary `user_id` consistently.
 
+Qualification totals remain distinct source/lead units. When one qualified lead
+has calls with multiple closers, allocate that unit once using the cohort's
+existing stable meeting-ID order, matching its canonical qualification
+contribution. Do not sum the same qualified lead independently for each closer.
+This preserves the funnel's distinct total and exact team-export reconciliation.
+
 The selected booking's owner dimension is the appointment closer. This drives
 creation-date totals, source/campaign/content and setter/team breakdowns, and the
 shared scheduled/occurred outcome cohorts. Current Lead Owner is private source

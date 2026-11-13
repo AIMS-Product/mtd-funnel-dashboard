@@ -649,7 +649,7 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
         output_rows.append({"channel": channel, **entry})
     totals = {key: sum(row[key] for row in output_rows) for key in ("leads_created", "bookings", "marketing", "lane2", "social_dms", "showed", "qualified", "closed_won", "revenue")}
     # These rollups consume the already-selected credits and won cohort above.
-    breakdowns = build_breakdowns(counted, accepted_won, users)
+    breakdowns = build_breakdowns(counted, accepted_won, users, appointment_qualification=True)
     return {
         "generated_at": as_of.isoformat(), "cutoff_pt": as_of.strftime("%b %-d, %Y %I:%M %p PT"),
         "source_cutoff": as_of.isoformat(),
