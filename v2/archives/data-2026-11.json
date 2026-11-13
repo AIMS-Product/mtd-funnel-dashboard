@@ -579,8 +579,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-12T17:00:24.844725-08:00",
-  "source_cutoff": "2026-11-12T17:00:24.844725-08:00",
+  "generated_at": "2026-11-12T17:15:16.744688-08:00",
+  "source_cutoff": "2026-11-12T17:15:16.744688-08:00",
   "vendhub_arr": 24591.0,
   "progress": {
     "day": 12,
@@ -613,7 +613,7 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 189,
   "excluded_repeat_candidates": 18,
-  "attribution_reviewed_at": "2026-11-12T17:00:24.844725-08:00",
+  "attribution_reviewed_at": "2026-11-12T17:15:16.744688-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2255,
@@ -2843,9 +2843,9 @@
     {
       "channel": "Instagram",
       "leads_created": 8,
-      "bookings": 10,
+      "bookings": 11,
       "marketing": 0,
-      "lane2": 5,
+      "lane2": 6,
       "social_dms": 5,
       "showed": 6,
       "qualified": 5,
@@ -2877,6 +2877,29 @@
           "unresolved_calls": 0
         },
         {
+          "value": "6/23 Call Booking Campaign",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "100.0%"
+          },
+          "scheduled_calls": 1,
+          "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "book-call",
           "bookings": 2,
           "marketing": 0,
@@ -2896,29 +2919,6 @@
           },
           "scheduled_calls": 2,
           "occurred_calls": 2,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
-          "value": "6/23 Call Booking Campaign",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "100.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "100.0%"
-          },
-          "scheduled_calls": 1,
-          "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
         },
@@ -3037,6 +3037,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Vince Bartolini",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "0.0%",
+            "qualified_occurred": "100.0%"
+          },
+          "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Ariella Irvine",
           "bookings": 1,
           "marketing": 0,
@@ -3077,33 +3098,12 @@
           "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
-        },
-        {
-          "value": "Vince Bartolini",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 1,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "100.0%",
-            "close": "0.0%",
-            "qualified_occurred": "100.0%"
-          },
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 0
         }
       ],
       "display": {
-        "projected": 25,
+        "projected": 28,
         "goal": 300,
-        "goal_pct": 3,
+        "goal_pct": 4,
         "pace": "pace-behind"
       },
       "formats": {
@@ -3122,9 +3122,9 @@
     {
       "channel": "Meta Ads",
       "leads_created": 1,
-      "bookings": 10,
+      "bookings": 9,
       "marketing": 1,
-      "lane2": 8,
+      "lane2": 7,
       "social_dms": 1,
       "showed": 3,
       "qualified": 2,
@@ -3134,9 +3134,9 @@
       "drilldowns": [
         {
           "value": "6/23 Call Booking Campaign",
-          "bookings": 4,
+          "bookings": 3,
           "marketing": 0,
-          "lane2": 4,
+          "lane2": 3,
           "social_dms": 0,
           "showed": 2,
           "qualified": 1,
@@ -3252,9 +3252,9 @@
       "setters": [
         {
           "value": "Vince Bartolini",
-          "bookings": 5,
+          "bookings": 4,
           "marketing": 0,
-          "lane2": 5,
+          "lane2": 4,
           "social_dms": 0,
           "showed": 0,
           "qualified": 1,
@@ -3357,9 +3357,9 @@
         }
       ],
       "display": {
-        "projected": 25,
+        "projected": 22,
         "goal": 44,
-        "goal_pct": 23,
+        "goal_pct": 20,
         "pace": "pace-behind"
       },
       "formats": {
@@ -4128,7 +4128,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-12T17:00:24.844725-08:00",
+    "generated_at": "2026-11-12T17:15:16.744688-08:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 12,
