@@ -37,9 +37,11 @@ VENDHUB_ONLY_TIERS = {"VendHub - Basic $1,188", "VendHub - Pro $2,999", "Vendhub
 ARR_BY_TIER = {"Bronze - $5,997": 1200.0, "Silver - $8,997": 2998.0, "Scale - $14,997": 2998.0}
 COMPLETED_OUTCOME_ID = "outcome_032Djn4dfeNuEoCunojA7K"
 PAGE_SIZE = 100
+MEETING_FIELDS = "id,lead_id,user_id,title,date_created,starts_at,status,outcome_id,calendar_event_uids,provider_calendar_event_id,provider_calendar_type"
 MAX_WORKERS = 5
 REPEAT_WINDOW = timedelta(days=30)
 FOLLOWUP = re.compile(r"follow[-\s]?up|fallow\s+up|\bf/u\b|next\s+steps|reschedul", re.I)
+EXPLICIT_FOLLOWUP = re.compile(r"follow[-\s]?up|fallow\s+up|\bf/u\b|reschedul", re.I)
 NON_BOOKING = re.compile(r"enrollment|silver\s+start\s+up|bronze\s+enrollment|\bq\s*&\s*a\b|walkthrough", re.I)
 CANCEL_TITLE = re.compile(r"^\s*(canceled|cancelled)\b", re.I)
 
@@ -103,7 +105,7 @@ class CloseReader:
             skip += len(batch)
 
     def meeting_catalog(self) -> list[dict[str, Any]]:
-        fields = "id,lead_id,user_id,title,date_created,starts_at,status,outcome_id"
+        fields = MEETING_FIELDS
         rows = self.pages("activity/meeting/", {"_fields": fields})
         by_id: dict[str, dict[str, Any]] = {}
         for row in rows:
@@ -116,13 +118,13 @@ class CloseReader:
         return list(by_id.values())
 
     def meetings_created_in_window(self, start_utc: str, end_utc: str) -> list[dict[str, Any]]:
-        fields = "id,lead_id,user_id,title,date_created,starts_at,status,outcome_id"
+        fields = MEETING_FIELDS
         return self.pages("activity/meeting/", {
             "date_created__gte": start_utc, "date_created__lte": end_utc, "_fields": fields,
         })
 
     def meeting_history_for_leads(self, lead_ids: set[str]) -> list[dict[str, Any]]:
-        fields = "id,lead_id,user_id,title,date_created,starts_at,status,outcome_id"
+        fields = MEETING_FIELDS
         rows_by_id: dict[str, dict[str, Any]] = {}
         lead_list = sorted(lead_ids)
         for offset in range(0, len(lead_list), 25):
@@ -346,6 +348,43 @@ def is_current_active(meeting: dict[str, Any]) -> bool:
     return normalized(meeting.get("status")) in {"upcoming", "in-progress", "completed"}
 
 
+def calendar_keys(meeting: dict[str, Any]) -> set[tuple[str, ...]]:
+    uids = meeting.get("calendar_event_uids") or []
+    if not isinstance(uids, list) or any(not isinstance(uid, str) for uid in uids):
+        raise ValueError("Invalid meeting calendar identities")
+    keys = {("uid", uid) for uid in uids if uid}
+    event = meeting.get("provider_calendar_event_id")
+    if event:
+        if not isinstance(event, str):
+            raise ValueError("Invalid provider calendar identity")
+        keys.add(("event", str(meeting.get("provider_calendar_type") or ""), event))
+    return keys
+
+
+def repeat_exempt(candidate: dict[str, Any], meeting: dict[str, Any], history: list[dict[str, Any]]) -> bool:
+    """Naria's temporal exception preserves the shared clock and event deduplication."""
+    policy = RULES.get("repeat_exemption")
+    if not policy or candidate.get("bucket") != "Lane 2":
+        return False
+    rule = next((rule for rule in RULES["title_rules"] if rule["key"] == candidate.get("rule")), None)
+    if not rule or rule.get("setter_user_id") != policy["setter_user_id"]:
+        return False
+    if EXPLICIT_FOLLOWUP.search(str(meeting.get("title") or "")):
+        return False
+    booked = parse_time(meeting.get("date_created"))
+    if not booked or booked < parse_time(policy["effective_booked_at"]):
+        return False
+    keys = calendar_keys(meeting)
+    for prior in history:
+        if prior.get("id") == meeting.get("id"):
+            continue
+        previous = parse_time(prior.get("date_created"))
+        if previous and (previous, str(prior.get("id") or "")) < (booked, str(meeting.get("id") or "")):
+            if keys & calendar_keys(prior):
+                return False
+    return True
+
+
 def choose_bucket_credits(
     candidate_rows: list[dict[str, Any]], all_meetings: list[dict[str, Any]], outcomes: dict[str, str]
 ) -> tuple[list[dict[str, Any]], dict[str, int]]:
@@ -376,7 +415,10 @@ def choose_bucket_credits(
             candidate = next((row for row in rows if row["meeting_id"] == event.get("id")), None)
             if last_meeting_start is not None and start - last_meeting_start <= REPEAT_WINDOW:
                 if candidate:
-                    suppressed["within_30_day_episode"] += 1
+                    if repeat_exempt(candidate, event, events):
+                        chosen_ids.add(candidate["meeting_id"])
+                    else:
+                        suppressed["within_30_day_episode"] += 1
                 last_meeting_start = start
                 continue
             last_meeting_start = start
