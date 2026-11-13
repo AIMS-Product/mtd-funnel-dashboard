@@ -12,7 +12,7 @@ import tempfile
 from datetime import date, datetime, time, timedelta
 from pathlib import Path
 
-from aggregates import BOOKING_SCOPE, CLOSERS, METRICS, OTHER_OWNER
+from aggregates import CLOSERS, METRICS, OTHER_OWNER, booking_scope_label
 from reporting import ARCHIVE_START, PACIFIC, ROOT
 
 HEADERS = ["Funnel", "Leads", "Booked", "Projected", "Goal %", "Showed", "Show %", "Qualified", "Qual %", "Closed", "CW %", "Revenue", "Rev / Close"]
@@ -69,7 +69,7 @@ def team_rows(data):
     rows = [["## REPORT METADATA"], ["Report", "V2 Team Performance"],
             ["Period", data["period"]], ["Generated At", data["generated_at"]],
             ["Booking Rules", data["rules_version"]],
-            ["Booking Scope", "Nine VP closers" if data.get("booking_scope") == BOOKING_SCOPE else "All owners (historical snapshot)"],
+            ["Booking Scope", booking_scope_label(data.get("booking_scope"))],
             ["Attribution", "Booking/show/qualified by current Lead Owner; won deals/revenue by opportunity owner."],
             ["Qualification", "Distinct currently qualified leads among occurred calls per owner." if include_occurred else "Distinct qualified booked leads per owner, using the same V2 credits."], []]
     reps = {row["value"]: row for row in data.get("team", [])}

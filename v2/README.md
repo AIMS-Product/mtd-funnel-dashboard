@@ -4,10 +4,14 @@ November 13 alignment adds the approved SteelTrap Apex, Beacon, Pathfinder,
 Nexus, Atlas, Frontier, Trailblazer and Breakthrough title mappings. Naria alone
 is exempt from the temporal 30-day repeat restriction for November 2026 onward;
 same-calendar-event duplicates/reschedules and cancellations remain excluded.
-The nine-closer Lead Owner filter remains in place. Appointment-closer scope is
-being evaluated separately and is not part of this release. Live/new reports
-carry `booked_calls.v2.9-steeltrap-titles-naria-repeat-exemption-20261113`;
-the existing refresh preserves frozen snapshots.
+Live/new reports now use `vp-appointments.v2`: the meeting's primary Close
+`user_id` supplies closer attribution and must resolve to one of the nine VP
+closers. The lead's offer must be exactly Vendingpreneurs (VP) or blank under
+the existing VP blank-offer policy. Current Lead Owner does not control booking
+eligibility or booking/outcome closer credit. Explicit other offers are excluded.
+Title/repeat rules remain
+`booked_calls.v2.9-steeltrap-titles-naria-repeat-exemption-20261113`;
+the existing refresh preserves frozen snapshots and their saved scope labels.
 
 V2 is a shadow implementation of the MTD funnel report. Its files and hosted page live under `v2/`; the production report at the repository root is unchanged.
 
@@ -50,7 +54,7 @@ refresh script, page, CRM record or archived source data.
 ## Calls Occurred reporting (November 2026)
 
 The reporting selector is pinned to MTD V2 v2.8, including complete meeting histories,
-30-day repeat credit, title mappings, VP owner scope, source attribution and cancellations.
+30-day repeat credit, title mappings, VP appointment scope, source attribution and cancellations.
 Calls Occurred are accepted calls scheduled in the elapsed Pacific reporting window
 with the meeting's native **Completed** or **No Show** outcome. Blank, unresolved,
 rescheduled and future meetings do not enter this denominator. Shown uses native
@@ -141,11 +145,13 @@ python3 v2/publish_shadow.py --source v2/public/data.json
 
 ## V2 rules
 
-Booking totals now include only leads owned by the nine VP closers on the sales
+Live booking totals include VP/blank-offer leads booked with the nine VP closers on the sales
 dashboard: Christian Hartwell, Scott Seymour, Robin Perkins, Eric Piccione,
 Joe Vaughan, Shreya Bechra, Luke Herman, Ariella Irvine, and Joe Dysert. Oscar
-Pugh, other owners, and unassigned leads are excluded from booking/show/qualified
-rollups. The complete meeting history is still evaluated before this owner filter.
+Pugh, unknown meeting users and other appointment users are excluded from booking/show/qualified
+rollups. An appointment with a VP closer remains eligible when its lead is owned
+by a setter or has no current owner. Explicit BK/PPA/TLG/AOC and other non-VP
+offers are excluded. Complete meeting history is evaluated before this scope filter.
 Lead-created, opportunity wins, revenue, packages, ARR and pipeline retain their
 independent definitions. The report subtitle identifies the booking scope.
 

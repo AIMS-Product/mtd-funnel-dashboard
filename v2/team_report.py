@@ -10,7 +10,7 @@ import tempfile
 from datetime import date, datetime, time, timedelta
 from pathlib import Path
 
-from aggregates import BOOKING_SCOPE, VP_BOOKING_CLOSERS
+from aggregates import BOOKING_SCOPE, APPOINTMENT_BOOKING_SCOPE, VP_BOOKING_CLOSERS
 from reporting import ARCHIVE_START, PACIFIC, ROOT
 from reports import money, pipeline_snapshot, rate
 
@@ -27,7 +27,7 @@ PIPELINE_PER_LEAD = REVENUE_GOAL_AVG_DEAL * PIPELINE_WEIGHT
 
 
 def validate_source(data, start, end):
-    if data.get('booking_scope') != BOOKING_SCOPE:
+    if data.get('booking_scope') not in (BOOKING_SCOPE, APPOINTMENT_BOOKING_SCOPE):
         raise ValueError('Team report requires the approved VP booking scope')
     if data.get('rules_version') != json.loads((ROOT / 'rules.json').read_text())['version']:
         raise ValueError('Source booking rules do not match the approved V2 implementation')

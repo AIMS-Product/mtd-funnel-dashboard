@@ -1,9 +1,10 @@
-"""Aggregate drilldowns over the accepted V2 records; no booking selection here."""
+"""Shared reporting scopes and aggregate drilldowns over accepted V2 credits."""
 
 from collections import defaultdict
 
 SCHEMA_VERSION = 3
 BOOKING_SCOPE = "vp-closers.v1"
+APPOINTMENT_BOOKING_SCOPE = "vp-appointments.v2"
 VP_BOOKING_CLOSERS = (
     "Christian Hartwell", "Scott Seymour", "Robin Perkins", "Eric Piccione",
     "Joe Vaughan", "Shreya Bechra", "Luke Herman", "Ariella Irvine", "Joe Dysert",
@@ -28,8 +29,31 @@ def owner_name(value, users):
 
 
 def vp_closer_bookings(bookings, users):
-    """Apply sales roster scope after the complete-history booking decisions."""
+    """Historical Lead Owner scope, retained for reconciled frozen archives."""
     return [row for row in bookings if owner_name(row.get("owner"), users) in VP_BOOKING_CLOSERS]
+
+
+def vp_appointment_bookings(bookings, users):
+    """Scope live bookings to VP offers and attribute them to the meeting user."""
+    selected = []
+    for row in bookings:
+        if 'business_line' not in row:
+            raise ValueError('VP appointment scope requires the source offer field')
+        # The established offer policy reports verified blanks within VP.
+        if row['business_line'] not in (None, '', 'Vendingpreneurs (VP)'):
+            continue
+        closer = row.get('appointment_closer')
+        if isinstance(closer, str) and users.get(closer) in VP_BOOKING_CLOSERS:
+            selected.append({**row, 'owner': closer})
+    return selected
+
+
+def booking_scope_label(scope):
+    if scope == APPOINTMENT_BOOKING_SCOPE:
+        return 'VP leads · appointment closer'
+    if scope == BOOKING_SCOPE:
+        return 'VP closer bookings · Lead Owner'
+    return 'All-owner bookings · historical snapshot'
 
 
 def rollup(bookings, won, key):
