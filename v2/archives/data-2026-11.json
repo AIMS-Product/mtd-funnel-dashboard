@@ -58,17 +58,17 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "66.7%",
-        "qualified": "45.8%",
+        "show": "64.0%",
+        "qualified": "44.0%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "45.8%"
+        "qualified_occurred": "44.0%"
       },
       "scheduled_calls": 29,
-      "occurred_calls": 24,
-      "no_shows": 8,
-      "unresolved_calls": 5
+      "occurred_calls": 25,
+      "no_shows": 9,
+      "unresolved_calls": 4
     },
     {
       "value": "Naria Torres",
@@ -382,17 +382,17 @@
       "closed_won": 2,
       "revenue": 15894.0,
       "formats": {
-        "show": "64.0%",
-        "qualified": "44.0%",
-        "close": "8.0%",
+        "show": "61.5%",
+        "qualified": "42.3%",
+        "close": "7.7%",
         "revenue": "$15,894",
         "average": "$7,947",
-        "qualified_occurred": "44.0%"
+        "qualified_occurred": "42.3%"
       },
       "scheduled_calls": 32,
-      "occurred_calls": 25,
-      "no_shows": 9,
-      "unresolved_calls": 7
+      "occurred_calls": 26,
+      "no_shows": 10,
+      "unresolved_calls": 6
     },
     {
       "value": "Christian Hartwell",
@@ -579,8 +579,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-13T09:45:17.520339-08:00",
-  "source_cutoff": "2026-11-13T09:45:17.520339-08:00",
+  "generated_at": "2026-11-13T10:00:25.773144-08:00",
+  "source_cutoff": "2026-11-13T10:00:25.773144-08:00",
   "vendhub_arr": 24591.0,
   "progress": {
     "day": 13,
@@ -613,10 +613,10 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 192,
   "excluded_repeat_candidates": 21,
-  "attribution_reviewed_at": "2026-11-13T09:45:17.520339-08:00",
+  "attribution_reviewed_at": "2026-11-13T10:00:25.773144-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 2271,
+    "leads_created": 2272,
     "bookings": 192,
     "marketing": 81,
     "lane2": 105,
@@ -626,17 +626,17 @@
     "closed_won": 14,
     "revenue": 88366.0,
     "formats": {
-      "show": "69.7%",
-      "qualified": "45.1%",
-      "close": "9.9%",
+      "show": "69.2%",
+      "qualified": "44.8%",
+      "close": "9.8%",
       "revenue": "$88,366",
       "average": "$6,312",
-      "qualified_occurred": "45.1%"
+      "qualified_occurred": "44.8%"
     },
     "scheduled_calls": 169,
-    "occurred_calls": 142,
-    "no_shows": 43,
-    "unresolved_calls": 27
+    "occurred_calls": 143,
+    "no_shows": 44,
+    "unresolved_calls": 26
   },
   "channels": [
     {
@@ -778,7 +778,7 @@
           "closed_won": 0,
           "revenue": 0,
           "formats": {
-            "show": "100.0%",
+            "show": "50.0%",
             "qualified": "0.0%",
             "close": "0.0%",
             "revenue": "$0",
@@ -786,9 +786,9 @@
             "qualified_occurred": "0.0%"
           },
           "scheduled_calls": 2,
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 1
+          "occurred_calls": 2,
+          "no_shows": 1,
+          "unresolved_calls": 0
         },
         {
           "value": "june30_end_cta",
@@ -1192,14 +1192,14 @@
           "revenue": 0,
           "scheduled_calls": 19,
           "formats": {
-            "show": "53.3%",
-            "qualified": "33.3%",
+            "show": "50.0%",
+            "qualified": "31.2%",
             "close": "0.0%",
-            "qualified_occurred": "33.3%"
+            "qualified_occurred": "31.2%"
           },
-          "occurred_calls": 15,
-          "no_shows": 7,
-          "unresolved_calls": 4
+          "occurred_calls": 16,
+          "no_shows": 8,
+          "unresolved_calls": 3
         },
         {
           "value": "Naria Torres",
@@ -1356,21 +1356,21 @@
         "pace": "pace-exceed"
       },
       "formats": {
-        "show": "53.3%",
-        "qualified": "28.9%",
-        "close": "4.4%",
+        "show": "52.2%",
+        "qualified": "28.3%",
+        "close": "4.3%",
         "revenue": "$17,994",
         "average": "$8,997",
-        "qualified_occurred": "28.9%"
+        "qualified_occurred": "28.3%"
       },
       "scheduled_calls": 52,
-      "occurred_calls": 45,
-      "no_shows": 21,
-      "unresolved_calls": 7
+      "occurred_calls": 46,
+      "no_shows": 22,
+      "unresolved_calls": 6
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 365,
+      "leads_created": 366,
       "bookings": 31,
       "marketing": 5,
       "lane2": 26,
@@ -4172,15 +4172,15 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-13T09:45:17.520339-08:00",
+    "generated_at": "2026-11-13T10:00:25.773144-08:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 12,
-      "Robin Perkins": 16,
+      "Robin Perkins": 17,
       "Eric Piccione": 8,
       "Joe Vaughan": 8,
       "Shreya Bechra": 1,
-      "Luke Herman": 21,
+      "Luke Herman": 20,
       "Ariella Irvine": 18,
       "Oscar Pugh": 1,
       "Joe Dysert": 6
