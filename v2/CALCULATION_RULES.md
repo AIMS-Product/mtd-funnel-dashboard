@@ -4,7 +4,7 @@
 
 Current live/new reports use
 `booked_calls.v2.9-steeltrap-titles-naria-repeat-exemption-20261113`.
-The existing VP Lead Owner scope is retained. Approved SteelTrap title mappings
+Live/new reports use the VP appointment scope described below. Approved SteelTrap title mappings
 are added for Adam (Apex), Claude (Beacon), Helena (Pathfinder), Andrea (Nexus),
 Angel (Atlas), Ariadna (Frontier), Reginald (Trailblazer) and Esther (Breakthrough).
 Their saved literal/regex matching and setter identities are preserved, including
@@ -78,7 +78,33 @@ Thus the clock is a rolling 30 × 24-hour clock anchored to scheduled meeting st
 
 ## 4. Booked counts and bucket splits
 
-### VP closer scope (November 2, 2026)
+### VP appointment scope (November 13, 2026)
+
+After complete-history credit selection, `vp_appointment_bookings` admits a
+booking only when its primary Close meeting `user_id` resolves through the user
+directory to one of the nine `VP_BOOKING_CLOSERS`, and its source business-line
+field is exactly `Vendingpreneurs (VP)` or blank. The established blank-offer VP
+policy is preserved; explicit other offers are excluded even on a VP calendar.
+Missing/unknown appointment users do not fall back to current Lead Owner,
+creator identity or another attendee. A meeting with multiple VP participants
+uses its native primary `user_id` consistently.
+
+Qualification totals remain distinct source/lead units. When one qualified lead
+has calls with multiple closers, allocate that unit once using the cohort's
+existing stable meeting-ID order, matching its canonical qualification
+contribution. Do not sum the same qualified lead independently for each closer.
+This preserves the funnel's distinct total and exact team-export reconciliation.
+
+The selected booking's owner dimension is the appointment closer. This drives
+creation-date totals, source/campaign/content and setter/team breakdowns, and the
+shared scheduled/occurred outcome cohorts. Current Lead Owner is private source
+provenance, not a booking admission condition. No CRM owner is changed.
+`booking_scope=vp-appointments.v2` identifies this definition. The historical
+owner-scoped helper and its `vp-closers.v1` marker remain for frozen snapshots.
+Lead creation, native date-won opportunity ownership/revenue, ARR, packages and
+the separately captured current pipeline retain their independent definitions.
+
+### Historical VP Lead Owner scope (November 2, 2026)
 
 After the full-history booking decisions, keep only credits whose current Lead
 Owner resolves to one of `VP_BOOKING_CLOSERS` in `aggregates.py`: Christian

@@ -10,7 +10,7 @@ from datetime import date, datetime
 from pathlib import Path
 from unittest.mock import patch
 
-from aggregates import BOOKING_SCOPE, METRICS
+from aggregates import BOOKING_SCOPE, APPOINTMENT_BOOKING_SCOPE, METRICS
 from reporting import PACIFIC, ROOT
 from team_report import ACTIVE_CLOSERS, FIELDS, generate, report_rows, saved_source, validate_source
 
@@ -35,6 +35,15 @@ def fixture():
 
 
 class TeamReportTests(unittest.TestCase):
+    def test_current_appointment_scope_and_saved_owner_scope_keep_their_definitions(self):
+        for scope in (BOOKING_SCOPE, APPOINTMENT_BOOKING_SCOPE):
+            data = fixture()
+            data['booking_scope'] = scope
+            validate_source(data, START, END)
+        data['booking_scope'] = 'unrecognized-scope'
+        with self.assertRaisesRegex(ValueError, 'VP booking scope'):
+            validate_source(data, START, END)
+
     def rows(self, data=None):
         return report_rows(data or fixture(), START, END, source_label='saved-v2', source_hash='source-hash',
                            generated_at=datetime(2026, 11, 10, tzinfo=PACIFIC))
