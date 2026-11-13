@@ -3,18 +3,18 @@
   "month_label": "November 2026",
   "grand": {
     "leads_created": 2036,
-    "booked": 155,
-    "showed": 80,
-    "qualified": 51,
+    "booked": 152,
+    "showed": 81,
+    "qualified": 54,
     "closed": 14,
     "revenue": 88366.0
   },
   "groups": {
     "LEAD SOURCES": {
       "leads_created": 1909,
-      "booked": 149,
-      "showed": 76,
-      "qualified": 49,
+      "booked": 146,
+      "showed": 77,
+      "qualified": 52,
       "closed": 14,
       "revenue": 88366.0
     },
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Unknown (Needs Review)": {
+      "leads_created": 127,
+      "booked": 6,
+      "book_pct": 4.7,
+      "showed": 4,
+      "show_pct": 66.7,
+      "qualified": 2,
+      "qual_pct": 50.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Internal Webinar": {
       "leads_created": 1779,
       "booked": 20,
@@ -40,18 +52,6 @@
       "cw_pct": 5.0,
       "revenue": 8997.0
     },
-    "Reactivation Scrapers": {
-      "leads_created": 22,
-      "booked": 82,
-      "book_pct": 372.7,
-      "showed": 38,
-      "show_pct": 46.3,
-      "qualified": 28,
-      "qual_pct": 73.7,
-      "closed": 7,
-      "cw_pct": 8.5,
-      "revenue": 36484.0
-    },
     "YouTube": {
       "leads_created": 15,
       "booked": 14,
@@ -63,6 +63,18 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
+    },
+    "Reactivation Scrapers": {
+      "leads_created": 22,
+      "booked": 79,
+      "book_pct": 359.1,
+      "showed": 39,
+      "show_pct": 49.4,
+      "qualified": 31,
+      "qual_pct": 79.5,
+      "closed": 7,
+      "cw_pct": 8.9,
+      "revenue": 36484.0
     },
     "Google Ads": {
       "leads_created": 74,
@@ -87,18 +99,6 @@
       "closed": 1,
       "cw_pct": 33.3,
       "revenue": 5997.0
-    },
-    "Unknown (Needs Review)": {
-      "leads_created": 127,
-      "booked": 6,
-      "book_pct": 4.7,
-      "showed": 4,
-      "show_pct": 66.7,
-      "qualified": 2,
-      "qual_pct": 50.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "Website": {
       "leads_created": 5,
