@@ -141,9 +141,9 @@
     },
     {
       "value": "Adam Linn",
-      "bookings": 3,
+      "bookings": 4,
       "marketing": 0,
-      "lane2": 3,
+      "lane2": 4,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -534,9 +534,9 @@
     },
     {
       "value": "Scott Seymour",
-      "bookings": 20,
+      "bookings": 21,
       "marketing": 3,
-      "lane2": 17,
+      "lane2": 18,
       "social_dms": 0,
       "showed": 7,
       "qualified": 6,
@@ -671,8 +671,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-13T14:30:20.708162-08:00",
-  "source_cutoff": "2026-11-13T14:30:20.708162-08:00",
+  "generated_at": "2026-11-13T14:45:17.251691-08:00",
+  "source_cutoff": "2026-11-13T14:45:17.251691-08:00",
   "vendhub_arr": 16792.0,
   "progress": {
     "day": 13,
@@ -703,15 +703,15 @@
   "period": "2026-11-09 through 2026-11-13 PT",
   "rules_version": "booked_calls.v2.9-steeltrap-titles-naria-repeat-exemption-20261113",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 130,
+  "counted_meetings": 131,
   "excluded_repeat_candidates": 7,
-  "attribution_reviewed_at": "2026-11-13T14:30:20.708162-08:00",
+  "attribution_reviewed_at": "2026-11-13T14:45:17.251691-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 535,
-    "bookings": 130,
+    "leads_created": 536,
+    "bookings": 131,
     "marketing": 42,
-    "lane2": 86,
+    "lane2": 87,
     "social_dms": 2,
     "showed": 55,
     "qualified": 37,
@@ -1435,7 +1435,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 310,
+      "leads_created": 311,
       "bookings": 31,
       "marketing": 1,
       "lane2": 30,
@@ -3113,9 +3113,9 @@
     {
       "channel": "Meta Ads",
       "leads_created": 0,
-      "bookings": 5,
+      "bookings": 6,
       "marketing": 0,
-      "lane2": 5,
+      "lane2": 6,
       "social_dms": 0,
       "showed": 2,
       "qualified": 1,
@@ -3216,6 +3216,29 @@
           "unresolved_calls": 0
         },
         {
+          "value": "retargeting-lost-crm",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "120229205352460662",
           "bookings": 0,
           "marketing": 0,
@@ -3284,6 +3307,27 @@
           "unresolved_calls": 3
         },
         {
+          "value": "Adam Linn",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Monde Janzen",
           "bookings": 1,
           "marketing": 0,
@@ -3306,9 +3350,9 @@
         }
       ],
       "display": {
-        "projected": 12,
+        "projected": 14,
         "goal": 44,
-        "goal_pct": 11,
+        "goal_pct": 14,
         "pace": "pace-behind"
       },
       "formats": {
@@ -4075,7 +4119,7 @@
     }
   ],
   "goal_percentages": {
-    "bookings": 10,
+    "bookings": 11,
     "revenue": 8
   },
   "arr_display": {
@@ -4098,10 +4142,10 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-13T14:30:20.708162-08:00",
+    "generated_at": "2026-11-13T14:45:17.251691-08:00",
     "counts": {
       "Christian Hartwell": 34,
-      "Scott Seymour": 12,
+      "Scott Seymour": 13,
       "Robin Perkins": 18,
       "Eric Piccione": 7,
       "Joe Vaughan": 8,
