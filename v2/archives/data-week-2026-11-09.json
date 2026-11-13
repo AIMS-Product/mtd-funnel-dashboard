@@ -12,17 +12,17 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "72.7%",
-        "qualified": "36.4%",
+        "show": "69.6%",
+        "qualified": "34.8%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "36.4%"
+        "qualified_occurred": "34.8%"
       },
       "scheduled_calls": 26,
-      "occurred_calls": 22,
-      "no_shows": 6,
-      "unresolved_calls": 4
+      "occurred_calls": 23,
+      "no_shows": 7,
+      "unresolved_calls": 3
     },
     {
       "value": "Vince Bartolini",
@@ -313,17 +313,17 @@
       "closed_won": 1,
       "revenue": 8997.0,
       "formats": {
-        "show": "55.6%",
-        "qualified": "22.2%",
-        "close": "11.1%",
+        "show": "50.0%",
+        "qualified": "20.0%",
+        "close": "10.0%",
         "revenue": "$8,997",
         "average": "$8,997",
-        "qualified_occurred": "22.2%"
+        "qualified_occurred": "20.0%"
       },
       "scheduled_calls": 15,
-      "occurred_calls": 9,
-      "no_shows": 4,
-      "unresolved_calls": 6
+      "occurred_calls": 10,
+      "no_shows": 5,
+      "unresolved_calls": 5
     },
     {
       "value": "Robin Perkins",
@@ -510,8 +510,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-13T09:00:25.356399-08:00",
-  "source_cutoff": "2026-11-13T09:00:25.356399-08:00",
+  "generated_at": "2026-11-13T09:15:18.283864-08:00",
+  "source_cutoff": "2026-11-13T09:15:18.283864-08:00",
   "vendhub_arr": 16792.0,
   "progress": {
     "day": 13,
@@ -544,7 +544,7 @@
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 90,
   "excluded_repeat_candidates": 10,
-  "attribution_reviewed_at": "2026-11-13T09:00:25.356399-08:00",
+  "attribution_reviewed_at": "2026-11-13T09:15:18.283864-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 532,
@@ -557,17 +557,17 @@
     "closed_won": 9,
     "revenue": 60479.0,
     "formats": {
-      "show": "77.0%",
-      "qualified": "47.5%",
-      "close": "14.8%",
+      "show": "75.8%",
+      "qualified": "46.8%",
+      "close": "14.5%",
       "revenue": "$60,479",
       "average": "$6,720",
-      "qualified_occurred": "47.5%"
+      "qualified_occurred": "46.8%"
     },
     "scheduled_calls": 72,
-    "occurred_calls": 61,
-    "no_shows": 14,
-    "unresolved_calls": 11
+    "occurred_calls": 62,
+    "no_shows": 15,
+    "unresolved_calls": 10
   },
   "channels": [
     {
@@ -1187,17 +1187,17 @@
           "closed_won": 1,
           "revenue": 200.0,
           "formats": {
-            "show": "50.0%",
-            "qualified": "50.0%",
-            "close": "50.0%",
+            "show": "33.3%",
+            "qualified": "33.3%",
+            "close": "33.3%",
             "revenue": "$200",
             "average": "$200",
-            "qualified_occurred": "50.0%"
+            "qualified_occurred": "33.3%"
           },
           "scheduled_calls": 4,
-          "occurred_calls": 2,
-          "no_shows": 1,
-          "unresolved_calls": 2
+          "occurred_calls": 3,
+          "no_shows": 2,
+          "unresolved_calls": 1
         },
         {
           "value": "24410703799",
@@ -1278,14 +1278,14 @@
           "revenue": 0,
           "scheduled_calls": 10,
           "formats": {
-            "show": "71.4%",
-            "qualified": "71.4%",
+            "show": "62.5%",
+            "qualified": "62.5%",
             "close": "0.0%",
-            "qualified_occurred": "71.4%"
+            "qualified_occurred": "62.5%"
           },
-          "occurred_calls": 7,
-          "no_shows": 2,
-          "unresolved_calls": 3
+          "occurred_calls": 8,
+          "no_shows": 3,
+          "unresolved_calls": 2
         },
         {
           "value": "Brad Savage",
@@ -1421,17 +1421,17 @@
         "pace": ""
       },
       "formats": {
-        "show": "66.7%",
-        "qualified": "77.8%",
-        "close": "33.3%",
+        "show": "60.0%",
+        "qualified": "70.0%",
+        "close": "30.0%",
         "revenue": "$13,094",
         "average": "$4,365",
-        "qualified_occurred": "77.8%"
+        "qualified_occurred": "70.0%"
       },
       "scheduled_calls": 12,
-      "occurred_calls": 9,
-      "no_shows": 3,
-      "unresolved_calls": 3
+      "occurred_calls": 10,
+      "no_shows": 4,
+      "unresolved_calls": 2
     },
     {
       "channel": "Unknown (Needs Review)",
@@ -3415,7 +3415,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-13T09:00:25.356399-08:00",
+    "generated_at": "2026-11-13T09:15:18.283864-08:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 12,
