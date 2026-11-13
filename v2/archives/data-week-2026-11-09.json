@@ -327,9 +327,9 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 19,
+      "bookings": 18,
       "marketing": 6,
-      "lane2": 13,
+      "lane2": 12,
       "social_dms": 0,
       "showed": 9,
       "qualified": 5,
@@ -343,10 +343,10 @@
         "average": "$200",
         "qualified_occurred": "38.5%"
       },
-      "scheduled_calls": 14,
+      "scheduled_calls": 13,
       "occurred_calls": 13,
       "no_shows": 4,
-      "unresolved_calls": 1
+      "unresolved_calls": 0
     },
     {
       "value": "Robin Perkins",
@@ -373,9 +373,9 @@
     },
     {
       "value": "Joe Vaughan",
-      "bookings": 11,
+      "bookings": 12,
       "marketing": 8,
-      "lane2": 3,
+      "lane2": 4,
       "social_dms": 0,
       "showed": 6,
       "qualified": 2,
@@ -389,10 +389,10 @@
         "average": "$7,948",
         "qualified_occurred": "25.0%"
       },
-      "scheduled_calls": 9,
+      "scheduled_calls": 10,
       "occurred_calls": 8,
       "no_shows": 2,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Christian Hartwell",
@@ -510,8 +510,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-13T05:30:22.650924-08:00",
-  "source_cutoff": "2026-11-13T05:30:22.650924-08:00",
+  "generated_at": "2026-11-13T05:45:18.991766-08:00",
+  "source_cutoff": "2026-11-13T05:45:18.991766-08:00",
   "vendhub_arr": 16792.0,
   "progress": {
     "day": 13,
@@ -543,8 +543,8 @@
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 88,
-  "excluded_repeat_candidates": 9,
-  "attribution_reviewed_at": "2026-11-13T05:30:22.650924-08:00",
+  "excluded_repeat_candidates": 10,
+  "attribution_reviewed_at": "2026-11-13T05:45:18.991766-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 530,
@@ -3392,7 +3392,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-13T05:30:22.650924-08:00",
+    "generated_at": "2026-11-13T05:45:18.991766-08:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 12,

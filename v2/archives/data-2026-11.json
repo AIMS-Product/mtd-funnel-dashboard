@@ -419,9 +419,9 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 31,
+      "bookings": 30,
       "marketing": 7,
-      "lane2": 24,
+      "lane2": 23,
       "social_dms": 0,
       "showed": 13,
       "qualified": 6,
@@ -435,10 +435,10 @@
         "average": "$200",
         "qualified_occurred": "31.6%"
       },
-      "scheduled_calls": 21,
+      "scheduled_calls": 20,
       "occurred_calls": 19,
       "no_shows": 6,
-      "unresolved_calls": 2
+      "unresolved_calls": 1
     },
     {
       "value": "Robin Perkins",
@@ -464,6 +464,29 @@
       "unresolved_calls": 4
     },
     {
+      "value": "Joe Vaughan",
+      "bookings": 24,
+      "marketing": 18,
+      "lane2": 6,
+      "social_dms": 0,
+      "showed": 11,
+      "qualified": 6,
+      "closed_won": 2,
+      "revenue": 15897.0,
+      "formats": {
+        "show": "68.8%",
+        "qualified": "37.5%",
+        "close": "12.5%",
+        "revenue": "$15,897",
+        "average": "$7,948",
+        "qualified_occurred": "37.5%"
+      },
+      "scheduled_calls": 23,
+      "occurred_calls": 16,
+      "no_shows": 5,
+      "unresolved_calls": 7
+    },
+    {
       "value": "Scott Seymour",
       "bookings": 24,
       "marketing": 4,
@@ -485,29 +508,6 @@
       "occurred_calls": 13,
       "no_shows": 5,
       "unresolved_calls": 3
-    },
-    {
-      "value": "Joe Vaughan",
-      "bookings": 23,
-      "marketing": 18,
-      "lane2": 5,
-      "social_dms": 0,
-      "showed": 11,
-      "qualified": 6,
-      "closed_won": 2,
-      "revenue": 15897.0,
-      "formats": {
-        "show": "68.8%",
-        "qualified": "37.5%",
-        "close": "12.5%",
-        "revenue": "$15,897",
-        "average": "$7,948",
-        "qualified_occurred": "37.5%"
-      },
-      "scheduled_calls": 22,
-      "occurred_calls": 16,
-      "no_shows": 5,
-      "unresolved_calls": 6
     },
     {
       "value": "Shreya Bechra",
@@ -579,8 +579,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-13T05:30:22.650924-08:00",
-  "source_cutoff": "2026-11-13T05:30:22.650924-08:00",
+  "generated_at": "2026-11-13T05:45:18.991766-08:00",
+  "source_cutoff": "2026-11-13T05:45:18.991766-08:00",
   "vendhub_arr": 24591.0,
   "progress": {
     "day": 13,
@@ -612,8 +612,8 @@
   "rules_version": "booked_calls.v2.8-naria-navigator-title-20261102",
   "booking_scope": "vp-closers.v1",
   "counted_meetings": 190,
-  "excluded_repeat_candidates": 19,
-  "attribution_reviewed_at": "2026-11-13T05:30:22.650924-08:00",
+  "excluded_repeat_candidates": 20,
+  "attribution_reviewed_at": "2026-11-13T05:45:18.991766-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2268,
@@ -4128,7 +4128,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-13T05:30:22.650924-08:00",
+    "generated_at": "2026-11-13T05:45:18.991766-08:00",
     "counts": {
       "Christian Hartwell": 34,
       "Scott Seymour": 12,
