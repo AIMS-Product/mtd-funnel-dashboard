@@ -377,14 +377,14 @@
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
-      "closed_won": 7,
-      "revenue": 54282.0,
+      "closed_won": 8,
+      "revenue": 63779.0,
       "formats": {
         "show": "—",
         "qualified": "—",
         "close": "—",
-        "revenue": "$54,282",
-        "average": "$7,755",
+        "revenue": "$63,779",
+        "average": "$7,972",
         "qualified_occurred": "—"
       },
       "scheduled_calls": 0,
@@ -494,14 +494,14 @@
       "social_dms": 0,
       "showed": 12,
       "qualified": 7,
-      "closed_won": 1,
-      "revenue": 200.0,
+      "closed_won": 2,
+      "revenue": 9697.0,
       "formats": {
         "show": "70.6%",
         "qualified": "41.2%",
-        "close": "5.9%",
-        "revenue": "$200",
-        "average": "$200",
+        "close": "11.8%",
+        "revenue": "$9,697",
+        "average": "$4,848",
         "qualified_occurred": "41.2%"
       },
       "scheduled_calls": 21,
@@ -671,9 +671,9 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-14T09:15:22.196762-08:00",
-  "source_cutoff": "2026-11-14T09:15:22.196762-08:00",
-  "vendhub_arr": 16792.0,
+  "generated_at": "2026-11-14T09:30:21.189907-08:00",
+  "source_cutoff": "2026-11-14T09:30:21.189907-08:00",
+  "vendhub_arr": 17992.0,
   "progress": {
     "day": 14,
     "days": 30,
@@ -705,7 +705,7 @@
   "booking_scope": "vp-appointments.v2",
   "counted_meetings": 136,
   "excluded_repeat_candidates": 7,
-  "attribution_reviewed_at": "2026-11-14T09:15:22.196762-08:00",
+  "attribution_reviewed_at": "2026-11-14T09:30:21.189907-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 559,
@@ -715,14 +715,14 @@
     "social_dms": 2,
     "showed": 59,
     "qualified": 41,
-    "closed_won": 9,
-    "revenue": 60479.0,
+    "closed_won": 10,
+    "revenue": 69976.0,
     "formats": {
       "show": "67.0%",
       "qualified": "46.6%",
-      "close": "10.2%",
-      "revenue": "$60,479",
-      "average": "$6,720",
+      "close": "11.4%",
+      "revenue": "$69,976",
+      "average": "$6,998",
       "qualified_occurred": "46.6%"
     },
     "scheduled_calls": 108,
@@ -740,8 +740,8 @@
       "social_dms": 0,
       "showed": 14,
       "qualified": 8,
-      "closed_won": 2,
-      "revenue": 17994.0,
+      "closed_won": 3,
+      "revenue": 27491.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
         {
@@ -1097,17 +1097,17 @@
           "social_dms": 0,
           "showed": 1,
           "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 1,
+          "closed_won": 1,
+          "revenue": 9497.0,
           "formats": {
             "show": "100.0%",
             "qualified": "100.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
+            "close": "100.0%",
+            "revenue": "$9,497",
+            "average": "$9,497",
             "qualified_occurred": "100.0%"
           },
+          "scheduled_calls": 1,
           "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
@@ -1178,6 +1178,26 @@
             "qualified_close": "—",
             "revenue": "$17,994",
             "average": "$8,997"
+          }
+        },
+        {
+          "value": "Bronze - $5,997 · Community",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 9497.0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "qualified_booked": "—",
+            "close": "—",
+            "qualified_close": "—",
+            "revenue": "$9,497",
+            "average": "$9,497"
           }
         }
       ],
@@ -1400,8 +1420,8 @@
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
-          "closed_won": 2,
-          "revenue": 17994.0,
+          "closed_won": 3,
+          "revenue": 27491.0,
           "scheduled_calls": 0,
           "formats": {
             "show": "—",
@@ -1444,9 +1464,9 @@
       "formats": {
         "show": "60.9%",
         "qualified": "34.8%",
-        "close": "8.7%",
-        "revenue": "$17,994",
-        "average": "$8,997",
+        "close": "13.0%",
+        "revenue": "$27,491",
+        "average": "$9,164",
         "qualified_occurred": "34.8%"
       },
       "scheduled_calls": 28,
@@ -4141,11 +4161,11 @@
   ],
   "goal_percentages": {
     "bookings": 11,
-    "revenue": 8
+    "revenue": 9
   },
   "arr_display": {
-    "arr": "$16,792",
-    "mrr": "$1,399"
+    "arr": "$17,992",
+    "mrr": "$1,499"
   },
   "scheduled_outcome_basis": "Accepted v2.8 calls scheduled in [Pacific period start, cutoff), with native Completed or No Show outcome; independent of creation date",
   "qualification_evidence": "Current lead flag; the separate reset automation has not been applied",
@@ -4163,7 +4183,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-14T09:15:22.196762-08:00",
+    "generated_at": "2026-11-14T09:30:21.189907-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 12,
@@ -4172,7 +4192,7 @@
       "Joe Vaughan": 8,
       "Shreya Bechra": 1,
       "Luke Herman": 19,
-      "Ariella Irvine": 19,
+      "Ariella Irvine": 18,
       "Oscar Pugh": 1,
       "Joe Dysert": 6
     },
