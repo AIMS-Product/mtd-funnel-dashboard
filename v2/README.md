@@ -1,5 +1,8 @@
 # MTD Funnel V2
 
+November 15 adds the approved Katie/Aspire, Luke Eyouni/Odyssey and
+Christine/Waypoint mappings. The established team report shares these V2 rules.
+
 November 13 alignment adds the approved SteelTrap Apex, Beacon, Pathfinder,
 Nexus, Atlas, Frontier, Trailblazer and Breakthrough title mappings. Naria alone
 is exempt from the temporal 30-day repeat restriction for November 2026 onward;
@@ -10,7 +13,7 @@ closers. The lead's offer must be exactly Vendingpreneurs (VP) or blank under
 the existing VP blank-offer policy. Current Lead Owner does not control booking
 eligibility or booking/outcome closer credit. Explicit other offers are excluded.
 Title/repeat rules remain
-`booked_calls.v2.9-steeltrap-titles-naria-repeat-exemption-20261113`;
+`booked_calls.v2.10-steeltrap-three-title-mappings-20261115`;
 the existing refresh preserves frozen snapshots and their saved scope labels.
 
 V2 is a shadow implementation of the MTD funnel report. Its files and hosted page live under `v2/`; the production report at the repository root is unchanged.
