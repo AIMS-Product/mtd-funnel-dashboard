@@ -1,9 +1,16 @@
 # MTD Funnel V2 calculation rules
 
+## November 15 title additions
+
+Katie Meloche (Aspire), Luke Eyouni (Odyssey) and Christine Ocalan (Waypoint)
+use their approved SteelTrap regexes and provider identities. These mappings
+flow through both MTD V2 and the established team report. Previously finalized
+snapshots retain their saved rules and values.
+
 ## November 13 title and Naria alignment
 
 Current live/new reports use
-`booked_calls.v2.9-steeltrap-titles-naria-repeat-exemption-20261113`.
+`booked_calls.v2.10-steeltrap-three-title-mappings-20261115`.
 Live/new reports use the VP appointment scope described below. Approved SteelTrap title mappings
 are added for Adam (Apex), Claude (Beacon), Helena (Pathfinder), Andrea (Nexus),
 Angel (Atlas), Ariadna (Frontier), Reginald (Trailblazer) and Esther (Breakthrough).

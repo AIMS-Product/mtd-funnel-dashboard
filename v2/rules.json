@@ -1,5 +1,5 @@
 {
-  "version": "booked_calls.v2.9-steeltrap-titles-naria-repeat-exemption-20261113",
+  "version": "booked_calls.v2.10-steeltrap-three-title-mappings-20261115",
   "timezone": "America/Los_Angeles",
   "repeat_days": 30,
   "repeat_boundary": "A new qualifying credit is eligible only when scheduled-start time is strictly more than 720 elapsed hours after the prior non-canceled meeting.",
@@ -380,6 +380,30 @@
       "pattern": "Vendingpreneurs\\ Breakthrough\\ \\-\\ Next\\ Steps",
       "setter_name": "Esther Cohen",
       "setter_user_id": "user_UPyg3oI9KcAWam5xykLT7YmzrbIWri8vHXLYNherkwZ",
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "katie_meloche_vendingpreneurs_aspire_next_steps_booked",
+      "pattern": "Vendingpreneurs\\s+Aspire\\s+-\\s+Next\\s+Steps",
+      "setter_name": "Katie Meloche",
+      "setter_user_id": "user_v9fTG7jTVB8rfZuopqceim99v9DPqeWiUQ1F5BsrbtW",
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "luke_eyouni_vendingpreneurs_odyssey_next_steps_booked",
+      "pattern": "Vendingpreneurs\\s+Odyssey\\s+-\\s+Next\\s+Steps",
+      "setter_name": "Luke Eyouni",
+      "setter_user_id": "user_eXyZA6qGsoF5esS1MWfsHIIAtYfFDE7qsLdPGw9v4I3",
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "christine_ocalan_vendingpreneurs_waypoint_next_steps_booked",
+      "pattern": "Vendingpreneurs\\s+Waypoint\\s+-\\s+Next\\s+Steps",
+      "setter_name": "Christine Ocalan",
+      "setter_user_id": "user_APTYZNwFartZw4wP6nqyXw7R0mbQBwQoUxvjWNiahfV",
       "required_setter": null,
       "historical": false
     }
