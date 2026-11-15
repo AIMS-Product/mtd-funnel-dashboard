@@ -3,7 +3,7 @@
   "month_label": "November 2026",
   "grand": {
     "leads_created": 2075,
-    "booked": 151,
+    "booked": 155,
     "showed": 84,
     "qualified": 57,
     "closed": 15,
@@ -12,7 +12,7 @@
   "groups": {
     "LEAD SOURCES": {
       "leads_created": 1915,
-      "booked": 145,
+      "booked": 149,
       "showed": 79,
       "qualified": 54,
       "closed": 15,
@@ -54,14 +54,14 @@
     },
     "Internal Webinar": {
       "leads_created": 1780,
-      "booked": 20,
-      "book_pct": 1.1,
+      "booked": 22,
+      "book_pct": 1.2,
       "showed": 11,
-      "show_pct": 55.0,
+      "show_pct": 50.0,
       "qualified": 4,
       "qual_pct": 36.4,
       "closed": 1,
-      "cw_pct": 5.0,
+      "cw_pct": 4.5,
       "revenue": 8997.0
     },
     "Unknown (Needs Review)": {
@@ -78,12 +78,24 @@
     },
     "YouTube": {
       "leads_created": 16,
-      "booked": 13,
-      "book_pct": 81.2,
+      "booked": 14,
+      "book_pct": 87.5,
       "showed": 9,
-      "show_pct": 69.2,
+      "show_pct": 64.3,
       "qualified": 5,
       "qual_pct": 55.6,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
+    "Instagram": {
+      "leads_created": 10,
+      "booked": 5,
+      "book_pct": 50.0,
+      "showed": 1,
+      "show_pct": 20.0,
+      "qualified": 0,
+      "qual_pct": 0.0,
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
@@ -99,18 +111,6 @@
       "closed": 1,
       "cw_pct": 33.3,
       "revenue": 5997.0
-    },
-    "Instagram": {
-      "leads_created": 10,
-      "booked": 4,
-      "book_pct": 40.0,
-      "showed": 1,
-      "show_pct": 25.0,
-      "qualified": 0,
-      "qual_pct": 0.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "Website": {
       "leads_created": 5,
