@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 44,
-      "marketing": 44,
+      "bookings": 45,
+      "marketing": 45,
       "lane2": 0,
       "social_dms": 0,
       "showed": 20,
@@ -602,6 +602,29 @@
       "unresolved_calls": 4
     },
     {
+      "value": "Joe Dysert",
+      "bookings": 2,
+      "marketing": 1,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 2,
+      "qualified": 1,
+      "closed_won": 1,
+      "revenue": 8997.0,
+      "formats": {
+        "show": "100.0%",
+        "qualified": "50.0%",
+        "close": "50.0%",
+        "revenue": "$8,997",
+        "average": "$8,997",
+        "qualified_occurred": "50.0%"
+      },
+      "scheduled_calls": 3,
+      "occurred_calls": 2,
+      "no_shows": 0,
+      "unresolved_calls": 1
+    },
+    {
       "value": "Eric Piccione",
       "bookings": 2,
       "marketing": 2,
@@ -623,29 +646,6 @@
       "occurred_calls": 0,
       "no_shows": 0,
       "unresolved_calls": 0
-    },
-    {
-      "value": "Joe Dysert",
-      "bookings": 1,
-      "marketing": 0,
-      "lane2": 1,
-      "social_dms": 0,
-      "showed": 2,
-      "qualified": 1,
-      "closed_won": 1,
-      "revenue": 8997.0,
-      "formats": {
-        "show": "100.0%",
-        "qualified": "50.0%",
-        "close": "50.0%",
-        "revenue": "$8,997",
-        "average": "$8,997",
-        "qualified_occurred": "50.0%"
-      },
-      "scheduled_calls": 3,
-      "occurred_calls": 2,
-      "no_shows": 0,
-      "unresolved_calls": 1
     },
     {
       "value": "Shreya Bechra",
@@ -671,8 +671,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-14T18:45:17.806715-08:00",
-  "source_cutoff": "2026-11-14T18:45:17.806715-08:00",
+  "generated_at": "2026-11-14T19:00:24.464549-08:00",
+  "source_cutoff": "2026-11-14T19:00:24.464549-08:00",
   "vendhub_arr": 17992.0,
   "progress": {
     "day": 14,
@@ -703,14 +703,14 @@
   "period": "2026-11-09 through 2026-11-14 PT",
   "rules_version": "booked_calls.v2.9-steeltrap-titles-naria-repeat-exemption-20261113",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 137,
+  "counted_meetings": 138,
   "excluded_repeat_candidates": 7,
-  "attribution_reviewed_at": "2026-11-14T18:45:17.806715-08:00",
+  "attribution_reviewed_at": "2026-11-14T19:00:24.464549-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 570,
-    "bookings": 137,
-    "marketing": 44,
+    "bookings": 138,
+    "marketing": 45,
     "lane2": 91,
     "social_dms": 2,
     "showed": 59,
@@ -734,8 +734,8 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 178,
-      "bookings": 50,
-      "marketing": 20,
+      "bookings": 51,
+      "marketing": 21,
       "lane2": 30,
       "social_dms": 0,
       "showed": 14,
@@ -746,8 +746,8 @@
       "drilldowns": [
         {
           "value": "nov10",
-          "bookings": 21,
-          "marketing": 17,
+          "bookings": 22,
+          "marketing": 18,
           "lane2": 4,
           "social_dms": 0,
           "showed": 5,
@@ -1204,8 +1204,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 20,
-          "marketing": 20,
+          "bookings": 21,
+          "marketing": 21,
           "lane2": 0,
           "social_dms": 0,
           "showed": 6,
@@ -1456,9 +1456,9 @@
         }
       ],
       "display": {
-        "projected": 107,
+        "projected": 109,
         "goal": 70,
-        "goal_pct": 71,
+        "goal_pct": 73,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -4183,7 +4183,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-14T18:45:17.806715-08:00",
+    "generated_at": "2026-11-14T19:00:24.464549-08:00",
     "counts": {
       "Christian Hartwell": 30,
       "Scott Seymour": 12,
