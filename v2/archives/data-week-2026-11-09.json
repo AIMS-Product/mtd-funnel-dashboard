@@ -671,8 +671,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-15T14:00:22.959073-08:00",
-  "source_cutoff": "2026-11-15T14:00:22.959073-08:00",
+  "generated_at": "2026-11-15T14:15:18.028476-08:00",
+  "source_cutoff": "2026-11-15T14:15:18.028476-08:00",
   "vendhub_arr": 17992.0,
   "progress": {
     "day": 15,
@@ -705,7 +705,7 @@
   "booking_scope": "vp-appointments.v2",
   "counted_meetings": 142,
   "excluded_repeat_candidates": 9,
-  "attribution_reviewed_at": "2026-11-15T14:00:22.959073-08:00",
+  "attribution_reviewed_at": "2026-11-15T14:15:18.028476-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 609,
@@ -734,9 +734,9 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 211,
-      "bookings": 52,
+      "bookings": 51,
       "marketing": 21,
-      "lane2": 31,
+      "lane2": 30,
       "social_dms": 0,
       "showed": 14,
       "qualified": 8,
@@ -857,29 +857,6 @@
           "scheduled_calls": 1,
           "occurred_calls": 1,
           "no_shows": 1,
-          "unresolved_calls": 0
-        },
-        {
-          "value": "Unattributed",
-          "bookings": 2,
-          "marketing": 1,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "0.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "0.0%"
-          },
-          "scheduled_calls": 1,
-          "occurred_calls": 1,
-          "no_shows": 0,
           "unresolved_calls": 0
         },
         {
@@ -1018,6 +995,29 @@
           "scheduled_calls": 1,
           "occurred_calls": 1,
           "no_shows": 1,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "Unattributed",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "0.0%"
+          },
+          "scheduled_calls": 1,
+          "occurred_calls": 1,
+          "no_shows": 0,
           "unresolved_calls": 0
         },
         {
@@ -1246,9 +1246,9 @@
         },
         {
           "value": "Vince Bartolini",
-          "bookings": 6,
+          "bookings": 5,
           "marketing": 0,
-          "lane2": 6,
+          "lane2": 5,
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
@@ -1456,9 +1456,9 @@
         }
       ],
       "display": {
-        "projected": 104,
+        "projected": 102,
         "goal": 70,
-        "goal_pct": 74,
+        "goal_pct": 73,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -2833,9 +2833,9 @@
     {
       "channel": "Instagram",
       "leads_created": 5,
-      "bookings": 8,
+      "bookings": 9,
       "marketing": 0,
-      "lane2": 6,
+      "lane2": 7,
       "social_dms": 2,
       "showed": 6,
       "qualified": 5,
@@ -2845,9 +2845,9 @@
       "drilldowns": [
         {
           "value": "6/23 Call Booking Campaign",
-          "bookings": 3,
+          "bookings": 4,
           "marketing": 0,
-          "lane2": 3,
+          "lane2": 4,
           "social_dms": 0,
           "showed": 1,
           "qualified": 1,
@@ -2986,9 +2986,9 @@
       "setters": [
         {
           "value": "Vince Bartolini",
-          "bookings": 3,
+          "bookings": 4,
           "marketing": 0,
-          "lane2": 3,
+          "lane2": 4,
           "social_dms": 0,
           "showed": 1,
           "qualified": 1,
@@ -3133,7 +3133,7 @@
         }
       ],
       "display": {
-        "projected": 16,
+        "projected": 18,
         "goal": 300,
         "goal_pct": 3,
         "pace": "pace-behind"
@@ -4263,7 +4263,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-15T14:00:22.959073-08:00",
+    "generated_at": "2026-11-15T14:15:18.028476-08:00",
     "counts": {
       "Christian Hartwell": 29,
       "Scott Seymour": 12,
