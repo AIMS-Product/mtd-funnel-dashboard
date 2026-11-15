@@ -117,6 +117,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Esther Cohen",
+      "bookings": 6,
+      "marketing": 0,
+      "lane2": 6,
+      "social_dms": 0,
+      "showed": 2,
+      "qualified": 1,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "66.7%",
+        "qualified": "33.3%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "33.3%"
+      },
+      "scheduled_calls": 3,
+      "occurred_calls": 3,
+      "no_shows": 1,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Adam Linn",
       "bookings": 5,
       "marketing": 0,
@@ -138,29 +161,6 @@
       "occurred_calls": 3,
       "no_shows": 3,
       "unresolved_calls": 2
-    },
-    {
-      "value": "Esther Cohen",
-      "bookings": 5,
-      "marketing": 0,
-      "lane2": 5,
-      "social_dms": 0,
-      "showed": 2,
-      "qualified": 1,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "66.7%",
-        "qualified": "33.3%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "33.3%"
-      },
-      "scheduled_calls": 3,
-      "occurred_calls": 3,
-      "no_shows": 1,
-      "unresolved_calls": 0
     },
     {
       "value": "Ariadna Rufrancos",
@@ -488,9 +488,9 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 27,
+      "bookings": 28,
       "marketing": 6,
-      "lane2": 21,
+      "lane2": 22,
       "social_dms": 0,
       "showed": 12,
       "qualified": 7,
@@ -671,8 +671,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-15T08:30:20.582679-08:00",
-  "source_cutoff": "2026-11-15T08:30:20.582679-08:00",
+  "generated_at": "2026-11-15T08:45:17.532655-08:00",
+  "source_cutoff": "2026-11-15T08:45:17.532655-08:00",
   "vendhub_arr": 17992.0,
   "progress": {
     "day": 15,
@@ -703,15 +703,15 @@
   "period": "2026-11-09 through 2026-11-15 PT",
   "rules_version": "booked_calls.v2.9-steeltrap-titles-naria-repeat-exemption-20261113",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 139,
+  "counted_meetings": 140,
   "excluded_repeat_candidates": 7,
-  "attribution_reviewed_at": "2026-11-15T08:30:20.582679-08:00",
+  "attribution_reviewed_at": "2026-11-15T08:45:17.532655-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 594,
-    "bookings": 139,
+    "leads_created": 595,
+    "bookings": 140,
     "marketing": 46,
-    "lane2": 91,
+    "lane2": 92,
     "social_dms": 2,
     "showed": 59,
     "qualified": 41,
@@ -733,7 +733,7 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 198,
+      "leads_created": 199,
       "bookings": 51,
       "marketing": 21,
       "lane2": 30,
@@ -3944,6 +3944,86 @@
       "unresolved_calls": 0
     },
     {
+      "channel": "VSL",
+      "leads_created": 0,
+      "bookings": 1,
+      "marketing": 0,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0.0,
+      "unrecoverable_booked_leads": 0,
+      "drilldowns": [
+        {
+          "value": "VSL Leads campaign",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        }
+      ],
+      "packages": [],
+      "setters": [
+        {
+          "value": "Esther Cohen",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        }
+      ],
+      "display": {
+        "projected": 2,
+        "goal": 110,
+        "goal_pct": 1,
+        "pace": "pace-behind"
+      },
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 0,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 0
+    },
+    {
       "channel": "LTF - In-House",
       "leads_created": 0,
       "bookings": 0,
@@ -4183,7 +4263,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-15T08:30:20.582679-08:00",
+    "generated_at": "2026-11-15T08:45:17.532655-08:00",
     "counts": {
       "Christian Hartwell": 30,
       "Scott Seymour": 12,
