@@ -347,29 +347,6 @@
       "unresolved_calls": 0
     },
     {
-      "value": "Monde Janzen",
-      "bookings": 3,
-      "marketing": 0,
-      "lane2": 3,
-      "social_dms": 0,
-      "showed": 1,
-      "qualified": 1,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "50.0%",
-        "qualified": "50.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "50.0%"
-      },
-      "scheduled_calls": 3,
-      "occurred_calls": 2,
-      "no_shows": 1,
-      "unresolved_calls": 1
-    },
-    {
       "value": "Andrea Harris",
       "bookings": 2,
       "marketing": 0,
@@ -412,6 +389,29 @@
       },
       "scheduled_calls": 1,
       "occurred_calls": 1,
+      "no_shows": 1,
+      "unresolved_calls": 0
+    },
+    {
+      "value": "Monde Janzen",
+      "bookings": 2,
+      "marketing": 0,
+      "lane2": 2,
+      "social_dms": 0,
+      "showed": 1,
+      "qualified": 1,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "50.0%",
+        "qualified": "50.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "50.0%"
+      },
+      "scheduled_calls": 2,
+      "occurred_calls": 2,
       "no_shows": 1,
       "unresolved_calls": 0
     },
@@ -602,29 +602,6 @@
       "unresolved_calls": 10
     },
     {
-      "value": "Ariella Irvine",
-      "bookings": 46,
-      "marketing": 7,
-      "lane2": 39,
-      "social_dms": 0,
-      "showed": 21,
-      "qualified": 9,
-      "closed_won": 2,
-      "revenue": 9697.0,
-      "formats": {
-        "show": "72.4%",
-        "qualified": "31.0%",
-        "close": "6.9%",
-        "revenue": "$9,697",
-        "average": "$4,848",
-        "qualified_occurred": "31.0%"
-      },
-      "scheduled_calls": 36,
-      "occurred_calls": 29,
-      "no_shows": 8,
-      "unresolved_calls": 7
-    },
-    {
       "value": "Christian Hartwell",
       "bookings": 45,
       "marketing": 16,
@@ -646,6 +623,29 @@
       "occurred_calls": 32,
       "no_shows": 8,
       "unresolved_calls": 3
+    },
+    {
+      "value": "Ariella Irvine",
+      "bookings": 45,
+      "marketing": 7,
+      "lane2": 38,
+      "social_dms": 0,
+      "showed": 21,
+      "qualified": 9,
+      "closed_won": 2,
+      "revenue": 9697.0,
+      "formats": {
+        "show": "72.4%",
+        "qualified": "31.0%",
+        "close": "6.9%",
+        "revenue": "$9,697",
+        "average": "$4,848",
+        "qualified_occurred": "31.0%"
+      },
+      "scheduled_calls": 35,
+      "occurred_calls": 29,
+      "no_shows": 8,
+      "unresolved_calls": 6
     },
     {
       "value": "Scott Seymour",
@@ -763,8 +763,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-16T14:30:32.169019-08:00",
-  "source_cutoff": "2026-11-16T14:30:32.169019-08:00",
+  "generated_at": "2026-11-16T14:45:18.763712-08:00",
+  "source_cutoff": "2026-11-16T14:45:18.763712-08:00",
   "vendhub_arr": 25791.0,
   "progress": {
     "day": 16,
@@ -795,15 +795,15 @@
   "period": "2026-11-01 through 2026-11-16 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 270,
+  "counted_meetings": 269,
   "excluded_repeat_candidates": 21,
-  "attribution_reviewed_at": "2026-11-16T14:30:32.169019-08:00",
+  "attribution_reviewed_at": "2026-11-16T14:45:18.763712-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 2443,
-    "bookings": 270,
+    "leads_created": 2444,
+    "bookings": 269,
     "marketing": 96,
-    "lane2": 168,
+    "lane2": 167,
     "social_dms": 6,
     "showed": 125,
     "qualified": 80,
@@ -817,15 +817,15 @@
       "average": "$6,524",
       "qualified_occurred": "42.6%"
     },
-    "scheduled_calls": 240,
+    "scheduled_calls": 239,
     "occurred_calls": 188,
     "no_shows": 63,
-    "unresolved_calls": 52
+    "unresolved_calls": 51
   },
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1892,
+      "leads_created": 1893,
       "bookings": 89,
       "marketing": 30,
       "lane2": 59,
@@ -1751,15 +1751,15 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 420,
-      "bookings": 61,
+      "bookings": 60,
       "marketing": 6,
-      "lane2": 55,
+      "lane2": 54,
       "social_dms": 0,
       "showed": 32,
       "qualified": 19,
       "closed_won": 2,
       "revenue": 12894.0,
-      "unrecoverable_booked_leads": 60,
+      "unrecoverable_booked_leads": 59,
       "drilldowns": [
         {
           "value": "Unattributed",
@@ -1786,9 +1786,9 @@
         },
         {
           "value": "_____",
-          "bookings": 3,
+          "bookings": 2,
           "marketing": 1,
-          "lane2": 2,
+          "lane2": 1,
           "social_dms": 0,
           "showed": 3,
           "qualified": 1,
@@ -1802,10 +1802,10 @@
             "average": "$6,897",
             "qualified_occurred": "33.3%"
           },
-          "scheduled_calls": 4,
+          "scheduled_calls": 3,
           "occurred_calls": 3,
           "no_shows": 0,
-          "unresolved_calls": 1
+          "unresolved_calls": 0
         },
         {
           "value": "@utm_campaign",
@@ -2197,27 +2197,6 @@
           "unresolved_calls": 0
         },
         {
-          "value": "Monde Janzen",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 2,
-          "formats": {
-            "show": "0.0%",
-            "qualified": "0.0%",
-            "close": "0.0%",
-            "qualified_occurred": "0.0%"
-          },
-          "occurred_calls": 1,
-          "no_shows": 1,
-          "unresolved_calls": 1
-        },
-        {
           "value": "Tara Hall",
           "bookings": 1,
           "marketing": 0,
@@ -2281,6 +2260,27 @@
           "unresolved_calls": 1
         },
         {
+          "value": "Monde Janzen",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "qualified_occurred": "0.0%"
+          },
+          "occurred_calls": 1,
+          "no_shows": 1,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Tony Parton",
           "bookings": 0,
           "marketing": 0,
@@ -2303,7 +2303,7 @@
         }
       ],
       "display": {
-        "projected": 114,
+        "projected": 112,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -2316,10 +2316,10 @@
         "average": "$6,447",
         "qualified_occurred": "42.2%"
       },
-      "scheduled_calls": 56,
+      "scheduled_calls": 55,
       "occurred_calls": 45,
       "no_shows": 13,
-      "unresolved_calls": 11
+      "unresolved_calls": 10
     },
     {
       "channel": "Google Ads",
@@ -5175,10 +5175,10 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-16T14:30:32.169019-08:00",
+    "generated_at": "2026-11-16T14:45:18.763712-08:00",
     "counts": {
       "Christian Hartwell": 29,
-      "Scott Seymour": 12,
+      "Scott Seymour": 13,
       "Robin Perkins": 16,
       "Eric Piccione": 6,
       "Joe Vaughan": 0,
