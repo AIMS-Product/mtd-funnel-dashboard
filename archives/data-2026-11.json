@@ -2,7 +2,7 @@
   "month_key": "2026-11",
   "month_label": "November 2026",
   "grand": {
-    "leads_created": 2195,
+    "leads_created": 2197,
     "booked": 146,
     "showed": 81,
     "qualified": 56,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2015,
+      "leads_created": 2018,
       "booked": 141,
       "showed": 76,
       "qualified": 53,
@@ -19,7 +19,7 @@
       "revenue": 97863.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 180,
+      "leads_created": 179,
       "booked": 5,
       "showed": 5,
       "qualified": 3,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "Reactivation Scrapers": {
+      "leads_created": 28,
+      "booked": 80,
+      "book_pct": 285.7,
+      "showed": 41,
+      "show_pct": 51.2,
+      "qualified": 32,
+      "qual_pct": 78.0,
+      "closed": 8,
+      "cw_pct": 10.0,
+      "revenue": 45981.0
+    },
     "Internal Webinar": {
       "leads_created": 1870,
       "booked": 22,
@@ -39,18 +51,6 @@
       "closed": 1,
       "cw_pct": 4.5,
       "revenue": 8997.0
-    },
-    "Reactivation Scrapers": {
-      "leads_created": 27,
-      "booked": 80,
-      "book_pct": 296.3,
-      "showed": 41,
-      "show_pct": 51.2,
-      "qualified": 32,
-      "qual_pct": 78.0,
-      "closed": 8,
-      "cw_pct": 10.0,
-      "revenue": 45981.0
     },
     "YouTube": {
       "leads_created": 17,
@@ -89,7 +89,7 @@
       "revenue": 18891.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 180,
+      "leads_created": 179,
       "booked": 5,
       "book_pct": 2.8,
       "showed": 5,
@@ -113,9 +113,9 @@
       "revenue": 0.0
     },
     "Website": {
-      "leads_created": 4,
+      "leads_created": 5,
       "booked": 2,
-      "book_pct": 50.0,
+      "book_pct": 40.0,
       "showed": 1,
       "show_pct": 50.0,
       "qualified": 1,
@@ -147,6 +147,18 @@
       "closed": 1,
       "cw_pct": 0,
       "revenue": 8997.0
+    },
+    "X": {
+      "leads_created": 1,
+      "booked": 0,
+      "book_pct": 0.0,
+      "showed": 0,
+      "show_pct": 0,
+      "qualified": 0,
+      "qual_pct": 0,
+      "closed": 0,
+      "cw_pct": 0,
+      "revenue": 0.0
     },
     "Meta Ads": {
       "leads_created": 1,
