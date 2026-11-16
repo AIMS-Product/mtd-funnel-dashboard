@@ -48,6 +48,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Brad Savage",
+      "bookings": 0,
+      "marketing": 0,
+      "lane2": 0,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "scheduled_calls": 1,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 1
+    },
+    {
       "value": "Naria Torres",
       "bookings": 0,
       "marketing": 0,
@@ -188,6 +211,29 @@
       "unresolved_calls": 1
     },
     {
+      "value": "Ariella Irvine",
+      "bookings": 0,
+      "marketing": 0,
+      "lane2": 0,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "scheduled_calls": 1,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 1
+    },
+    {
       "value": "Eric Piccione",
       "bookings": 0,
       "marketing": 0,
@@ -234,8 +280,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-16T11:45:18.109440-08:00",
-  "source_cutoff": "2026-11-16T11:45:18.109440-08:00",
+  "generated_at": "2026-11-16T12:00:36.738305-08:00",
+  "source_cutoff": "2026-11-16T12:00:36.738305-08:00",
   "vendhub_arr": 0.0,
   "progress": {
     "day": 16,
@@ -268,10 +314,10 @@
   "booking_scope": "vp-appointments.v2",
   "counted_meetings": 4,
   "excluded_repeat_candidates": 1,
-  "attribution_reviewed_at": "2026-11-16T11:45:18.109440-08:00",
+  "attribution_reviewed_at": "2026-11-16T12:00:36.738305-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 35,
+    "leads_created": 36,
     "bookings": 4,
     "marketing": 3,
     "lane2": 0,
@@ -288,10 +334,10 @@
       "average": "—",
       "qualified_occurred": "25.0%"
     },
-    "scheduled_calls": 9,
+    "scheduled_calls": 10,
     "occurred_calls": 4,
     "no_shows": 2,
-    "unresolved_calls": 5
+    "unresolved_calls": 6
   },
   "channels": [
     {
@@ -420,7 +466,7 @@
     },
     {
       "channel": "Google Ads",
-      "leads_created": 1,
+      "leads_created": 2,
       "bookings": 1,
       "marketing": 1,
       "lane2": 0,
@@ -449,10 +495,10 @@
             "average": "—",
             "qualified_occurred": "—"
           },
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         }
       ],
       "packages": [],
@@ -477,6 +523,27 @@
           "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 0
+        },
+        {
+          "value": "Brad Savage",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 1
         }
       ],
       "display": {
@@ -493,10 +560,10 @@
         "average": "—",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 0,
+      "scheduled_calls": 1,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "channel": "YouTube",
@@ -580,7 +647,7 @@
     },
     {
       "channel": "Internal Webinar",
-      "leads_created": 28,
+      "leads_created": 29,
       "bookings": 0,
       "marketing": 0,
       "lane2": 0,
@@ -771,7 +838,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 4,
+      "leads_created": 3,
       "bookings": 0,
       "marketing": 0,
       "lane2": 0,
@@ -975,7 +1042,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-16T11:45:18.109440-08:00",
+    "generated_at": "2026-11-16T12:00:36.738305-08:00",
     "counts": {
       "Christian Hartwell": 29,
       "Scott Seymour": 12,

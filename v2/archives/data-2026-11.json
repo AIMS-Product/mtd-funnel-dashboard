@@ -157,10 +157,10 @@
         "average": "—",
         "qualified_occurred": "50.0%"
       },
-      "scheduled_calls": 5,
+      "scheduled_calls": 6,
       "occurred_calls": 4,
       "no_shows": 0,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Esther Cohen",
@@ -619,10 +619,10 @@
         "average": "$4,848",
         "qualified_occurred": "32.1%"
       },
-      "scheduled_calls": 34,
+      "scheduled_calls": 35,
       "occurred_calls": 28,
       "no_shows": 8,
-      "unresolved_calls": 6
+      "unresolved_calls": 7
     },
     {
       "value": "Christian Hartwell",
@@ -763,8 +763,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-16T11:45:18.109440-08:00",
-  "source_cutoff": "2026-11-16T11:45:18.109440-08:00",
+  "generated_at": "2026-11-16T12:00:36.738305-08:00",
+  "source_cutoff": "2026-11-16T12:00:36.738305-08:00",
   "vendhub_arr": 25791.0,
   "progress": {
     "day": 16,
@@ -797,10 +797,10 @@
   "booking_scope": "vp-appointments.v2",
   "counted_meetings": 264,
   "excluded_repeat_candidates": 20,
-  "attribution_reviewed_at": "2026-11-16T11:45:18.109440-08:00",
+  "attribution_reviewed_at": "2026-11-16T12:00:36.738305-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 2424,
+    "leads_created": 2426,
     "bookings": 264,
     "marketing": 94,
     "lane2": 164,
@@ -817,15 +817,15 @@
       "average": "$6,524",
       "qualified_occurred": "43.2%"
     },
-    "scheduled_calls": 234,
+    "scheduled_calls": 235,
     "occurred_calls": 185,
     "no_shows": 62,
-    "unresolved_calls": 49
+    "unresolved_calls": 50
   },
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1878,
+      "leads_created": 1879,
       "bookings": 86,
       "marketing": 30,
       "lane2": 56,
@@ -2300,7 +2300,7 @@
     },
     {
       "channel": "Google Ads",
-      "leads_created": 81,
+      "leads_created": 82,
       "bookings": 35,
       "marketing": 27,
       "lane2": 8,
@@ -2352,10 +2352,10 @@
             "average": "$1,600",
             "qualified_occurred": "37.5%"
           },
-          "scheduled_calls": 12,
+          "scheduled_calls": 13,
           "occurred_calls": 8,
           "no_shows": 4,
-          "unresolved_calls": 4
+          "unresolved_calls": 5
         },
         {
           "value": "24410703799",
@@ -2496,7 +2496,7 @@
           "qualified": 1,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 1,
+          "scheduled_calls": 2,
           "formats": {
             "show": "100.0%",
             "qualified": "100.0%",
@@ -2505,7 +2505,7 @@
           },
           "occurred_calls": 1,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "Helena Seitz",
@@ -2627,10 +2627,10 @@
         "average": "$4,418",
         "qualified_occurred": "60.9%"
       },
-      "scheduled_calls": 31,
+      "scheduled_calls": 32,
       "occurred_calls": 23,
       "no_shows": 7,
-      "unresolved_calls": 8
+      "unresolved_calls": 9
     },
     {
       "channel": "YouTube",
@@ -5085,7 +5085,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-16T11:45:18.109440-08:00",
+    "generated_at": "2026-11-16T12:00:36.738305-08:00",
     "counts": {
       "Christian Hartwell": 29,
       "Scott Seymour": 12,
