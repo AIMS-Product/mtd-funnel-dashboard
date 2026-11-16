@@ -2,13 +2,13 @@
 Report,Team Performance — Closers
 Start Date,2026-11-09
 End Date,2026-11-15
-Generated At,2026-11-15T13:38:01.334884-08:00
+Generated At,2026-11-16T10:07:35.034572-08:00
 Source Snapshot,v2/archives/data-week-2026-11-09.json
-Source SHA-256,17b9543d5423058965009ca5274dbb42482c9db1250df778ffe09e00098708dc
-Source Generated At,2026-11-15T13:35:04.571625-08:00
-Source Cutoff (exclusive),2026-11-15T13:35:04.571625-08:00
+Source SHA-256,c2162533b3f79c68f0f2c6f80c6f0001b16c5256cf4fd2a6b60f7b221856df90
+Source Generated At,2026-11-16T07:54:43.203769-08:00
+Source Cutoff (exclusive),2026-11-16T00:00:00-08:00
 Timezone,America/Los_Angeles
-Booking Rules,booked_calls.v2.10-steeltrap-three-title-mappings-20261115
+Booking Rules,booked_calls.v2.11-jennifer-elevate-20261116
 Closers,Christian Hartwell; Scott Seymour; Robin Perkins; Eric Piccione; Joe Vaughan; Shreya Bechra; Luke Herman; Ariella Irvine; Joe Dysert
 Booked Basis,Calls Occurred: qualifying scheduled calls with native Completed or No Show outcome
 Shown Basis,Native Completed meeting outcome; not First Call Show Up
@@ -16,27 +16,27 @@ Qualified Basis,"Distinct qualified source/lead cohort, allocated once to the ca
 Won / Revenue Basis,Included V2 opportunities by date_won and opportunity owner; independent of meeting dates
 Win Units,Opportunities; Rep/Manager may count distinct owner/lead wins instead
 MTD V2 Booked Difference,MTD V2 Total Booked is creation-date credits; compare this Booked to MTD V2 Calls Occurred
-Pipeline Snapshot,2026-11-15T13:35:04.571625-08:00
+Pipeline Snapshot,2026-11-16T00:00:25.278002-08:00
 Pipeline Basis,"Current open qualified leads owned within trailing 30 days; $7,000 × 20% per lead. Independent of report week."
 Revenue Goal Basis,"Booked (occurred calls) × 13% × $7,000"
 
 ## TEAM KPI TILES
 Tile,Actual,Goal,% of Goal,Status,Numerator,Denominator,Definition
-Team Revenue Closed,"$69,976","$80,990",86%,Below Goal,10,89,"Date-won revenue; goal = occurred calls × 13% × $7,000"
+Team Revenue Closed,"$69,976","$82,810",85%,Below Goal,10,91,"Date-won revenue; goal = occurred calls × 13% × $7,000"
 Team Pipeline,"$161,000","$840,000",19%,Below Goal,115,,"Saved trailing-30-day qualified-owner snapshot × $7,000 × 20%"
-Team Show Rate,67.4%,65.0%,104%,On / Above Goal,60,89,Native Completed ÷ Calls Occurred
-"Team Close Rate (Booked → Closed, Net)",11.2%,13.0%,86%,Below Goal,10,89,Date-won opportunities ÷ Calls Occurred
+Team Show Rate,67.0%,65.0%,103%,On / Above Goal,61,91,Native Completed ÷ Calls Occurred
+"Team Close Rate (Booked → Closed, Net)",11.0%,13.0%,85%,Below Goal,10,91,Date-won opportunities ÷ Calls Occurred
 Team Close Rate (Qualified → Closed),24.4%,20.0%,122%,On / Above Goal,10,41,Secondary ratio: date-won opportunities ÷ qualified leads
 
 ## TEAM COUNTS
 Metric,Value
-Booked,89
-Showed,60
+Booked,91
+Showed,61
 Qualified,41
-Qual Rate (Qualified ÷ Booked),46.1%
+Qual Rate (Qualified ÷ Booked),45.1%
 Open Qualified Opps (Closers),115
 "Pipeline (Gross, before 20%)","$805,000"
-Revenue Goal (Deals Needed),11.6
+Revenue Goal (Deals Needed),11.8
 Closed Won,10
 Avg Deal,"$6,998"
 
@@ -45,19 +45,19 @@ Rep,Revenue,Revenue Goal,% of Rev Goal,Closed Won,Avg Deal,Pipeline,Open Qualifi
 Christian Hartwell,"$17,391","$13,650",127%,3,"$5,797","$40,600",29,15,12,80.0%,12,80.0%,20.0%,25.0%
 Joe Vaughan,"$15,897","$7,280",218%,2,"$7,948","$11,200",8,8,6,75.0%,2,25.0%,25.0%,100.0%
 Ariella Irvine,"$9,697","$15,470",63%,2,"$4,848","$25,200",18,17,12,70.6%,7,41.2%,11.8%,28.6%
-Luke Herman,"$8,997","$14,560",62%,1,"$8,997","$23,800",17,16,9,56.2%,6,37.5%,6.2%,16.7%
+Luke Herman,"$8,997","$15,470",58%,1,"$8,997","$23,800",17,17,10,58.8%,6,35.3%,5.9%,16.7%
 Scott Seymour,"$8,997","$11,830",76%,1,"$8,997","$16,800",12,13,7,53.8%,7,53.8%,7.7%,14.3%
 Joe Dysert,"$8,997","$1,820",494%,1,"$8,997","$8,400",6,2,2,100.0%,1,50.0%,50.0%,100.0%
-Robin Perkins,$0,"$15,470",0%,0,—,"$23,800",17,17,12,70.6%,6,35.3%,0.0%,0.0%
+Robin Perkins,$0,"$16,380",0%,0,—,"$23,800",17,18,12,66.7%,6,33.3%,0.0%,0.0%
 Shreya Bechra,$0,$910,0%,0,—,"$2,800",2,1,0,0.0%,0,0.0%,0.0%,—
 Eric Piccione,$0,$0,—,0,—,"$8,400",6,0,0,—,0,—,—,—
 EXCLUDED — Other / Non-Closer,$0,$0,—,0,—,,,0,0,—,0,—,—,—
-TOTAL,"$69,976","$80,990",86%,10,"$6,998","$161,000",115,89,60,67.4%,41,46.1%,11.2%,24.4%
+TOTAL,"$69,976","$82,810",85%,10,"$6,998","$161,000",115,91,61,67.0%,41,45.1%,11.0%,24.4%
 
 ## RECONCILIATION
 Metric,This Report — Closers,MTD V2 Same Snapshot — All Owners,Other / Non-Closer,Match Including Other
-Booked / Calls Occurred,89,89,0,YES
-Showed,60,60,0,YES
+Booked / Calls Occurred,91,91,0,YES
+Showed,61,61,0,YES
 Qualified,41,41,0,YES
 Closed Won,10,10,0,YES
 Revenue,69976.0,69976.0,0,YES
