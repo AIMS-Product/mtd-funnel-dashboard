@@ -19,10 +19,10 @@
         "average": "—",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 1,
+      "scheduled_calls": 2,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Pearl Sathekge",
@@ -82,16 +82,16 @@
       "revenue": 0,
       "scheduled_calls": 2,
       "formats": {
-        "show": "—",
-        "qualified": "—",
-        "close": "—",
+        "show": "0.0%",
+        "qualified": "0.0%",
+        "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "—"
+        "qualified_occurred": "0.0%"
       },
-      "occurred_calls": 0,
-      "no_shows": 0,
-      "unresolved_calls": 2
+      "occurred_calls": 1,
+      "no_shows": 1,
+      "unresolved_calls": 1
     },
     {
       "value": "Vince Bartolini",
@@ -159,10 +159,10 @@
         "average": "—",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 1,
+      "scheduled_calls": 2,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Eric Piccione",
@@ -199,16 +199,16 @@
       "revenue": 0,
       "scheduled_calls": 2,
       "formats": {
-        "show": "100.0%",
-        "qualified": "100.0%",
+        "show": "50.0%",
+        "qualified": "50.0%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "100.0%"
+        "qualified_occurred": "50.0%"
       },
-      "occurred_calls": 1,
-      "no_shows": 0,
-      "unresolved_calls": 1
+      "occurred_calls": 2,
+      "no_shows": 1,
+      "unresolved_calls": 0
     },
     {
       "value": "Scott Seymour",
@@ -234,8 +234,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-16T10:00:23.790529-08:00",
-  "source_cutoff": "2026-11-16T10:00:23.790529-08:00",
+  "generated_at": "2026-11-16T10:30:38.952513-08:00",
+  "source_cutoff": "2026-11-16T10:30:38.952513-08:00",
   "vendhub_arr": 0.0,
   "progress": {
     "day": 16,
@@ -268,10 +268,10 @@
   "booking_scope": "vp-appointments.v2",
   "counted_meetings": 3,
   "excluded_repeat_candidates": 1,
-  "attribution_reviewed_at": "2026-11-16T10:00:23.790529-08:00",
+  "attribution_reviewed_at": "2026-11-16T10:30:38.952513-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 26,
+    "leads_created": 31,
     "bookings": 3,
     "marketing": 2,
     "lane2": 0,
@@ -281,16 +281,16 @@
     "closed_won": 0,
     "revenue": 0.0,
     "formats": {
-      "show": "100.0%",
-      "qualified": "50.0%",
+      "show": "66.7%",
+      "qualified": "33.3%",
       "close": "0.0%",
       "revenue": "$0",
       "average": "—",
-      "qualified_occurred": "50.0%"
+      "qualified_occurred": "33.3%"
     },
-    "scheduled_calls": 7,
-    "occurred_calls": 2,
-    "no_shows": 0,
+    "scheduled_calls": 8,
+    "occurred_calls": 3,
+    "no_shows": 1,
     "unresolved_calls": 5
   },
   "channels": [
@@ -500,7 +500,7 @@
     },
     {
       "channel": "Internal Webinar",
-      "leads_created": 21,
+      "leads_created": 26,
       "bookings": 0,
       "marketing": 0,
       "lane2": 0,
@@ -544,7 +544,7 @@
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 2,
+          "scheduled_calls": 3,
           "formats": {
             "show": "—",
             "qualified": "—",
@@ -555,7 +555,7 @@
           },
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 2
+          "unresolved_calls": 3
         },
         {
           "value": "oct20",
@@ -569,16 +569,16 @@
           "revenue": 0,
           "scheduled_calls": 1,
           "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
+            "show": "0.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
             "revenue": "$0",
             "average": "—",
-            "qualified_occurred": "—"
+            "qualified_occurred": "0.0%"
           },
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 1
+          "occurred_calls": 1,
+          "no_shows": 1,
+          "unresolved_calls": 0
         },
         {
           "value": "sept22_end_cta",
@@ -616,7 +616,7 @@
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 1,
+          "scheduled_calls": 2,
           "formats": {
             "show": "—",
             "qualified": "—",
@@ -625,7 +625,7 @@
           },
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 1
+          "unresolved_calls": 2
         },
         {
           "value": "Naria Torres",
@@ -660,14 +660,14 @@
           "revenue": 0,
           "scheduled_calls": 2,
           "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
+            "show": "0.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "qualified_occurred": "0.0%"
           },
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 2
+          "occurred_calls": 1,
+          "no_shows": 1,
+          "unresolved_calls": 1
         }
       ],
       "display": {
@@ -677,16 +677,16 @@
         "pace": ""
       },
       "formats": {
-        "show": "100.0%",
+        "show": "50.0%",
         "qualified": "0.0%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
         "qualified_occurred": "0.0%"
       },
-      "scheduled_calls": 5,
-      "occurred_calls": 1,
-      "no_shows": 0,
+      "scheduled_calls": 6,
+      "occurred_calls": 2,
+      "no_shows": 1,
       "unresolved_calls": 4
     },
     {
@@ -815,7 +815,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-16T10:00:23.790529-08:00",
+    "generated_at": "2026-11-16T10:30:38.952513-08:00",
     "counts": {
       "Christian Hartwell": 29,
       "Scott Seymour": 12,
@@ -823,7 +823,7 @@
       "Eric Piccione": 6,
       "Joe Vaughan": 0,
       "Shreya Bechra": 0,
-      "Luke Herman": 16,
+      "Luke Herman": 14,
       "Ariella Irvine": 18,
       "Oscar Pugh": 0,
       "Joe Dysert": 6
