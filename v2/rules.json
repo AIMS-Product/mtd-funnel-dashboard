@@ -1,5 +1,5 @@
 {
-  "version": "booked_calls.v2.10-steeltrap-three-title-mappings-20261115",
+  "version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "timezone": "America/Los_Angeles",
   "repeat_days": 30,
   "repeat_boundary": "A new qualifying credit is eligible only when scheduled-start time is strictly more than 720 elapsed hours after the prior non-canceled meeting.",
@@ -404,6 +404,14 @@
       "pattern": "Vendingpreneurs\\s+Waypoint\\s+-\\s+Next\\s+Steps",
       "setter_name": "Christine Ocalan",
       "setter_user_id": "user_APTYZNwFartZw4wP6nqyXw7R0mbQBwQoUxvjWNiahfV",
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "jennifer_murray_vendingpreneurs_elevate_next_steps_booked",
+      "pattern": "vendingpren[eu]+rs?\\s+elevate\\s*-?\\s*next\\s+steps",
+      "setter_name": "Jennifer Murray",
+      "setter_user_id": "user_cYj9jcC1UVL5XIq6pSiXC1F9Jpl7NsqHdTqKJcmfbvZ",
       "required_setter": null,
       "historical": false
     }
