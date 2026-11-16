@@ -740,15 +740,15 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-15T23:45:17.401695-08:00",
-  "source_cutoff": "2026-11-15T23:45:17.401695-08:00",
+  "generated_at": "2026-11-16T00:00:25.278002-08:00",
+  "source_cutoff": "2026-11-16T00:00:25.278002-08:00",
   "vendhub_arr": 25791.0,
   "progress": {
-    "day": 15,
+    "day": 16,
     "days": 30,
     "working_days": 21,
-    "working_elapsed": 10,
-    "elapsed_pct": 47.6
+    "working_elapsed": 11,
+    "elapsed_pct": 52.4
   },
   "goals": {
     "bookings": 1241,
@@ -769,12 +769,12 @@
       "WWWS": 1
     }
   },
-  "period": "2026-11-01 through 2026-11-15 PT",
+  "period": "2026-11-01 through 2026-11-16 PT",
   "rules_version": "booked_calls.v2.10-steeltrap-three-title-mappings-20261115",
   "booking_scope": "vp-appointments.v2",
   "counted_meetings": 260,
   "excluded_repeat_candidates": 20,
-  "attribution_reviewed_at": "2026-11-15T23:45:17.401695-08:00",
+  "attribution_reviewed_at": "2026-11-16T00:00:25.278002-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2389,
@@ -1684,7 +1684,7 @@
         }
       ],
       "display": {
-        "projected": 176,
+        "projected": 165,
         "goal": 70,
         "goal_pct": 126,
         "pace": "pace-exceed"
@@ -2236,7 +2236,7 @@
         }
       ],
       "display": {
-        "projected": 118,
+        "projected": 111,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -2570,7 +2570,7 @@
         }
       ],
       "display": {
-        "projected": 68,
+        "projected": 64,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -3435,7 +3435,7 @@
         }
       ],
       "display": {
-        "projected": 66,
+        "projected": 62,
         "goal": 132,
         "goal_pct": 25,
         "pace": "pace-behind"
@@ -3779,7 +3779,7 @@
         }
       ],
       "display": {
-        "projected": 34,
+        "projected": 32,
         "goal": 300,
         "goal_pct": 6,
         "pace": "pace-behind"
@@ -4081,7 +4081,7 @@
         }
       ],
       "display": {
-        "projected": 20,
+        "projected": 19,
         "goal": 44,
         "goal_pct": 23,
         "pace": "pace-behind"
@@ -4312,7 +4312,7 @@
         }
       ],
       "display": {
-        "projected": 18,
+        "projected": 17,
         "goal": 100,
         "goal_pct": 9,
         "pace": "pace-behind"
@@ -4946,14 +4946,14 @@
     "kind": "month",
     "month": "2026-11",
     "start": "2026-11-01",
-    "end": "2026-11-15",
+    "end": "2026-11-16",
     "end_exclusive": "2026-12-01",
     "frozen": false,
     "label": "November 2026"
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-15T23:45:17.401695-08:00",
+    "generated_at": "2026-11-16T00:00:25.278002-08:00",
     "counts": {
       "Christian Hartwell": 29,
       "Scott Seymour": 12,
