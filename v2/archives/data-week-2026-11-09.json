@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 47,
-      "marketing": 47,
+      "bookings": 48,
+      "marketing": 48,
       "lane2": 0,
       "social_dms": 0,
       "showed": 22,
@@ -533,6 +533,29 @@
       "unresolved_calls": 7
     },
     {
+      "value": "Christian Hartwell",
+      "bookings": 21,
+      "marketing": 4,
+      "lane2": 17,
+      "social_dms": 0,
+      "showed": 12,
+      "qualified": 12,
+      "closed_won": 3,
+      "revenue": 17391.0,
+      "formats": {
+        "show": "80.0%",
+        "qualified": "80.0%",
+        "close": "20.0%",
+        "revenue": "$17,391",
+        "average": "$5,797",
+        "qualified_occurred": "80.0%"
+      },
+      "scheduled_calls": 15,
+      "occurred_calls": 15,
+      "no_shows": 3,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Scott Seymour",
       "bookings": 21,
       "marketing": 3,
@@ -554,29 +577,6 @@
       "occurred_calls": 13,
       "no_shows": 6,
       "unresolved_calls": 2
-    },
-    {
-      "value": "Christian Hartwell",
-      "bookings": 20,
-      "marketing": 3,
-      "lane2": 17,
-      "social_dms": 0,
-      "showed": 12,
-      "qualified": 12,
-      "closed_won": 3,
-      "revenue": 17391.0,
-      "formats": {
-        "show": "80.0%",
-        "qualified": "80.0%",
-        "close": "20.0%",
-        "revenue": "$17,391",
-        "average": "$5,797",
-        "qualified_occurred": "80.0%"
-      },
-      "scheduled_calls": 15,
-      "occurred_calls": 15,
-      "no_shows": 3,
-      "unresolved_calls": 0
     },
     {
       "value": "Joe Vaughan",
@@ -671,8 +671,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-15T18:45:17.911579-08:00",
-  "source_cutoff": "2026-11-15T18:45:17.911579-08:00",
+  "generated_at": "2026-11-15T19:00:23.683837-08:00",
+  "source_cutoff": "2026-11-15T19:00:23.683837-08:00",
   "vendhub_arr": 17992.0,
   "progress": {
     "day": 15,
@@ -703,14 +703,14 @@
   "period": "2026-11-09 through 2026-11-15 PT",
   "rules_version": "booked_calls.v2.10-steeltrap-three-title-mappings-20261115",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 143,
+  "counted_meetings": 144,
   "excluded_repeat_candidates": 9,
-  "attribution_reviewed_at": "2026-11-15T18:45:17.911579-08:00",
+  "attribution_reviewed_at": "2026-11-15T19:00:23.683837-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 632,
-    "bookings": 143,
-    "marketing": 47,
+    "leads_created": 633,
+    "bookings": 144,
+    "marketing": 48,
     "lane2": 94,
     "social_dms": 2,
     "showed": 61,
@@ -1833,9 +1833,9 @@
     },
     {
       "channel": "Google Ads",
-      "leads_created": 31,
-      "bookings": 18,
-      "marketing": 12,
+      "leads_created": 32,
+      "bookings": 19,
+      "marketing": 13,
       "lane2": 6,
       "social_dms": 0,
       "showed": 7,
@@ -1846,8 +1846,8 @@
       "drilldowns": [
         {
           "value": "23815771816",
-          "bookings": 11,
-          "marketing": 8,
+          "bookings": 12,
+          "marketing": 9,
           "lane2": 3,
           "social_dms": 0,
           "showed": 6,
@@ -1959,8 +1959,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 12,
-          "marketing": 12,
+          "bookings": 13,
+          "marketing": 13,
           "lane2": 0,
           "social_dms": 0,
           "showed": 5,
@@ -2127,7 +2127,7 @@
         }
       ],
       "display": {
-        "projected": 36,
+        "projected": 38,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -4263,7 +4263,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-15T18:45:17.911579-08:00",
+    "generated_at": "2026-11-15T19:00:23.683837-08:00",
     "counts": {
       "Christian Hartwell": 29,
       "Scott Seymour": 12,
