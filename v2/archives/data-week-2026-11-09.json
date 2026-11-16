@@ -370,6 +370,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Jennifer Murray",
+      "bookings": 1,
+      "marketing": 0,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "0.0%",
+        "qualified": "0.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "0.0%"
+      },
+      "scheduled_calls": 1,
+      "occurred_calls": 1,
+      "no_shows": 1,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Marketing / Unassigned",
       "bookings": 0,
       "marketing": 0,
@@ -474,16 +497,16 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "70.6%",
-        "qualified": "35.3%",
+        "show": "66.7%",
+        "qualified": "33.3%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "35.3%"
+        "qualified_occurred": "33.3%"
       },
-      "scheduled_calls": 21,
-      "occurred_calls": 17,
-      "no_shows": 5,
+      "scheduled_calls": 22,
+      "occurred_calls": 18,
+      "no_shows": 6,
       "unresolved_calls": 4
     },
     {
@@ -511,9 +534,9 @@
     },
     {
       "value": "Luke Herman",
-      "bookings": 24,
+      "bookings": 25,
       "marketing": 10,
-      "lane2": 13,
+      "lane2": 14,
       "social_dms": 1,
       "showed": 10,
       "qualified": 6,
@@ -671,7 +694,7 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-16T00:00:25.278002-08:00",
+  "generated_at": "2026-11-16T07:54:43.203769-08:00",
   "source_cutoff": "2026-11-16T00:00:00-08:00",
   "vendhub_arr": 17992.0,
   "progress": {
@@ -701,33 +724,33 @@
     }
   },
   "period": "2026-11-09 through 2026-11-15 PT",
-  "rules_version": "booked_calls.v2.10-steeltrap-three-title-mappings-20261115",
+  "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 145,
+  "counted_meetings": 146,
   "excluded_repeat_candidates": 10,
   "attribution_reviewed_at": "2026-11-16T00:00:00-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 651,
-    "bookings": 145,
+    "bookings": 146,
     "marketing": 49,
-    "lane2": 94,
+    "lane2": 95,
     "social_dms": 2,
     "showed": 61,
     "qualified": 41,
     "closed_won": 10,
     "revenue": 69976.0,
     "formats": {
-      "show": "67.8%",
-      "qualified": "45.6%",
-      "close": "11.1%",
+      "show": "67.0%",
+      "qualified": "45.1%",
+      "close": "11.0%",
       "revenue": "$69,976",
       "average": "$6,998",
-      "qualified_occurred": "45.6%"
+      "qualified_occurred": "45.1%"
     },
-    "scheduled_calls": 112,
-    "occurred_calls": 90,
-    "no_shows": 29,
+    "scheduled_calls": 113,
+    "occurred_calls": 91,
+    "no_shows": 30,
     "unresolved_calls": 22
   },
   "channels": [
@@ -1477,21 +1500,21 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 358,
-      "bookings": 33,
+      "bookings": 34,
       "marketing": 2,
-      "lane2": 31,
+      "lane2": 32,
       "social_dms": 0,
       "showed": 14,
       "qualified": 7,
       "closed_won": 0,
       "revenue": 0.0,
-      "unrecoverable_booked_leads": 32,
+      "unrecoverable_booked_leads": 33,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 31,
+          "bookings": 32,
           "marketing": 2,
-          "lane2": 29,
+          "lane2": 30,
           "social_dms": 0,
           "showed": 11,
           "qualified": 7,
@@ -1791,6 +1814,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Jennifer Murray",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Monde Janzen",
           "bookings": 1,
           "marketing": 0,
@@ -1813,7 +1857,7 @@
         }
       ],
       "display": {
-        "projected": 66,
+        "projected": 68,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -3175,16 +3219,16 @@
           "closed_won": 0,
           "revenue": 0,
           "formats": {
-            "show": "100.0%",
-            "qualified": "50.0%",
+            "show": "66.7%",
+            "qualified": "33.3%",
             "close": "0.0%",
             "revenue": "$0",
             "average": "—",
-            "qualified_occurred": "50.0%"
+            "qualified_occurred": "33.3%"
           },
-          "scheduled_calls": 3,
-          "occurred_calls": 2,
-          "no_shows": 0,
+          "scheduled_calls": 4,
+          "occurred_calls": 3,
+          "no_shows": 1,
           "unresolved_calls": 1
         },
         {
@@ -3388,6 +3432,27 @@
           "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
+        },
+        {
+          "value": "Jennifer Murray",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "qualified_occurred": "0.0%"
+          },
+          "occurred_calls": 1,
+          "no_shows": 1,
+          "unresolved_calls": 0
         }
       ],
       "display": {
@@ -3397,16 +3462,16 @@
         "pace": "pace-behind"
       },
       "formats": {
-        "show": "50.0%",
-        "qualified": "50.0%",
+        "show": "40.0%",
+        "qualified": "40.0%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "50.0%"
+        "qualified_occurred": "40.0%"
       },
-      "scheduled_calls": 6,
-      "occurred_calls": 4,
-      "no_shows": 2,
+      "scheduled_calls": 7,
+      "occurred_calls": 5,
+      "no_shows": 3,
       "unresolved_calls": 2
     },
     {
