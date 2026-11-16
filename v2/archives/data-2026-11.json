@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 90,
-      "marketing": 90,
+      "bookings": 91,
+      "marketing": 91,
       "lane2": 0,
       "social_dms": 0,
       "showed": 46,
@@ -626,8 +626,8 @@
     },
     {
       "value": "Scott Seymour",
-      "bookings": 38,
-      "marketing": 5,
+      "bookings": 39,
+      "marketing": 6,
       "lane2": 31,
       "social_dms": 2,
       "showed": 12,
@@ -740,8 +740,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-15T23:30:18.683338-08:00",
-  "source_cutoff": "2026-11-15T23:30:18.683338-08:00",
+  "generated_at": "2026-11-15T23:45:17.401695-08:00",
+  "source_cutoff": "2026-11-15T23:45:17.401695-08:00",
   "vendhub_arr": 25791.0,
   "progress": {
     "day": 15,
@@ -772,14 +772,14 @@
   "period": "2026-11-01 through 2026-11-15 PT",
   "rules_version": "booked_calls.v2.10-steeltrap-three-title-mappings-20261115",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 259,
+  "counted_meetings": 260,
   "excluded_repeat_candidates": 20,
-  "attribution_reviewed_at": "2026-11-15T23:30:18.683338-08:00",
+  "attribution_reviewed_at": "2026-11-15T23:45:17.401695-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2389,
-    "bookings": 259,
-    "marketing": 90,
+    "bookings": 260,
+    "marketing": 91,
     "lane2": 164,
     "social_dms": 5,
     "showed": 121,
@@ -1704,7 +1704,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 415,
+      "leads_created": 414,
       "bookings": 59,
       "marketing": 6,
       "lane2": 53,
@@ -2590,9 +2590,9 @@
     },
     {
       "channel": "YouTube",
-      "leads_created": 21,
-      "bookings": 32,
-      "marketing": 17,
+      "leads_created": 22,
+      "bookings": 33,
+      "marketing": 18,
       "lane2": 15,
       "social_dms": 0,
       "showed": 22,
@@ -2692,6 +2692,29 @@
           "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 1
+        },
+        {
+          "value": "pokemon",
+          "bookings": 2,
+          "marketing": 1,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
         },
         {
           "value": "start-vending-2025",
@@ -2993,29 +3016,6 @@
           "unresolved_calls": 0
         },
         {
-          "value": "pokemon",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "—"
-          },
-          "scheduled_calls": 0,
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "replace-salary",
           "bookings": 1,
           "marketing": 0,
@@ -3225,8 +3225,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 17,
-          "marketing": 17,
+          "bookings": 18,
+          "marketing": 18,
           "lane2": 0,
           "social_dms": 0,
           "showed": 11,
@@ -3435,9 +3435,9 @@
         }
       ],
       "display": {
-        "projected": 64,
+        "projected": 66,
         "goal": 132,
-        "goal_pct": 24,
+        "goal_pct": 25,
         "pace": "pace-behind"
       },
       "formats": {
@@ -4953,7 +4953,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-15T23:30:18.683338-08:00",
+    "generated_at": "2026-11-15T23:45:17.401695-08:00",
     "counts": {
       "Christian Hartwell": 29,
       "Scott Seymour": 12,
