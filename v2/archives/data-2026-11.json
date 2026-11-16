@@ -35,17 +35,17 @@
       "closed_won": 2,
       "revenue": 12894.0,
       "formats": {
-        "show": "70.4%",
-        "qualified": "59.3%",
-        "close": "7.4%",
+        "show": "67.9%",
+        "qualified": "57.1%",
+        "close": "7.1%",
         "revenue": "$12,894",
         "average": "$6,447",
-        "qualified_occurred": "59.3%"
+        "qualified_occurred": "57.1%"
       },
       "scheduled_calls": 34,
-      "occurred_calls": 27,
-      "no_shows": 8,
-      "unresolved_calls": 7
+      "occurred_calls": 28,
+      "no_shows": 9,
+      "unresolved_calls": 6
     },
     {
       "value": "Rob Maxfield",
@@ -658,17 +658,17 @@
       "closed_won": 2,
       "revenue": 14994.0,
       "formats": {
-        "show": "56.5%",
-        "qualified": "47.8%",
-        "close": "8.7%",
+        "show": "54.2%",
+        "qualified": "45.8%",
+        "close": "8.3%",
         "revenue": "$14,994",
         "average": "$7,497",
-        "qualified_occurred": "47.8%"
+        "qualified_occurred": "45.8%"
       },
       "scheduled_calls": 30,
-      "occurred_calls": 23,
-      "no_shows": 10,
-      "unresolved_calls": 7
+      "occurred_calls": 24,
+      "no_shows": 11,
+      "unresolved_calls": 6
     },
     {
       "value": "Joe Vaughan",
@@ -763,8 +763,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-16T14:00:24.331161-08:00",
-  "source_cutoff": "2026-11-16T14:00:24.331161-08:00",
+  "generated_at": "2026-11-16T14:15:19.069294-08:00",
+  "source_cutoff": "2026-11-16T14:15:19.069294-08:00",
   "vendhub_arr": 25791.0,
   "progress": {
     "day": 16,
@@ -796,11 +796,11 @@
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
   "counted_meetings": 270,
-  "excluded_repeat_candidates": 20,
-  "attribution_reviewed_at": "2026-11-16T14:00:24.331161-08:00",
+  "excluded_repeat_candidates": 21,
+  "attribution_reviewed_at": "2026-11-16T14:15:19.069294-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 2438,
+    "leads_created": 2441,
     "bookings": 270,
     "marketing": 96,
     "lane2": 168,
@@ -810,22 +810,22 @@
     "closed_won": 15,
     "revenue": 97863.0,
     "formats": {
-      "show": "66.8%",
-      "qualified": "42.8%",
+      "show": "66.5%",
+      "qualified": "42.6%",
       "close": "8.0%",
       "revenue": "$97,863",
       "average": "$6,524",
-      "qualified_occurred": "42.8%"
+      "qualified_occurred": "42.6%"
     },
     "scheduled_calls": 240,
-    "occurred_calls": 187,
-    "no_shows": 62,
-    "unresolved_calls": 53
+    "occurred_calls": 188,
+    "no_shows": 63,
+    "unresolved_calls": 52
   },
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 1887,
+      "leads_created": 1890,
       "bookings": 89,
       "marketing": 30,
       "lane2": 59,
@@ -1772,17 +1772,17 @@
           "closed_won": 1,
           "revenue": 5997.0,
           "formats": {
-            "show": "69.2%",
-            "qualified": "43.6%",
-            "close": "2.6%",
+            "show": "67.5%",
+            "qualified": "42.5%",
+            "close": "2.5%",
             "revenue": "$5,997",
             "average": "$5,997",
-            "qualified_occurred": "43.6%"
+            "qualified_occurred": "42.5%"
           },
           "scheduled_calls": 48,
-          "occurred_calls": 39,
-          "no_shows": 12,
-          "unresolved_calls": 9
+          "occurred_calls": 40,
+          "no_shows": 13,
+          "unresolved_calls": 8
         },
         {
           "value": "_____",
@@ -1935,14 +1935,14 @@
           "revenue": 12894.0,
           "scheduled_calls": 13,
           "formats": {
-            "show": "90.0%",
-            "qualified": "60.0%",
-            "close": "20.0%",
-            "qualified_occurred": "60.0%"
+            "show": "81.8%",
+            "qualified": "54.5%",
+            "close": "18.2%",
+            "qualified_occurred": "54.5%"
           },
-          "occurred_calls": 10,
-          "no_shows": 1,
-          "unresolved_calls": 3
+          "occurred_calls": 11,
+          "no_shows": 2,
+          "unresolved_calls": 2
         },
         {
           "value": "Adam Linn",
@@ -2309,17 +2309,17 @@
         "pace": ""
       },
       "formats": {
-        "show": "72.7%",
-        "qualified": "43.2%",
-        "close": "4.5%",
+        "show": "71.1%",
+        "qualified": "42.2%",
+        "close": "4.4%",
         "revenue": "$12,894",
         "average": "$6,447",
-        "qualified_occurred": "43.2%"
+        "qualified_occurred": "42.2%"
       },
       "scheduled_calls": 56,
-      "occurred_calls": 44,
-      "no_shows": 12,
-      "unresolved_calls": 12
+      "occurred_calls": 45,
+      "no_shows": 13,
+      "unresolved_calls": 11
     },
     {
       "channel": "Google Ads",
@@ -5175,7 +5175,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-16T14:00:24.331161-08:00",
+    "generated_at": "2026-11-16T14:15:19.069294-08:00",
     "counts": {
       "Christian Hartwell": 29,
       "Scott Seymour": 12,
