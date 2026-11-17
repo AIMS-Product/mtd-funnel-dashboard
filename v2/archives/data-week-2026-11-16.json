@@ -186,6 +186,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Christine Ocalan",
+      "bookings": 1,
+      "marketing": 0,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 0,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Claude Shany Toussaint",
       "bookings": 1,
       "marketing": 0,
@@ -327,9 +350,9 @@
     },
     {
       "value": "Christian Hartwell",
-      "bookings": 7,
+      "bookings": 8,
       "marketing": 5,
-      "lane2": 1,
+      "lane2": 2,
       "social_dms": 1,
       "showed": 2,
       "qualified": 1,
@@ -464,8 +487,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-17T09:00:27.802232-08:00",
-  "source_cutoff": "2026-11-17T09:00:27.802232-08:00",
+  "generated_at": "2026-11-17T09:15:19.956480-08:00",
+  "source_cutoff": "2026-11-17T09:15:19.956480-08:00",
   "vendhub_arr": 0.0,
   "progress": {
     "day": 17,
@@ -496,15 +519,15 @@
   "period": "2026-11-16 through 2026-11-17 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 23,
-  "excluded_repeat_candidates": 3,
-  "attribution_reviewed_at": "2026-11-17T09:00:27.802232-08:00",
+  "counted_meetings": 24,
+  "excluded_repeat_candidates": 4,
+  "attribution_reviewed_at": "2026-11-17T09:15:19.956480-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 202,
-    "bookings": 23,
+    "leads_created": 203,
+    "bookings": 24,
     "marketing": 8,
-    "lane2": 12,
+    "lane2": 13,
     "social_dms": 3,
     "showed": 10,
     "qualified": 5,
@@ -527,9 +550,9 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 176,
-      "bookings": 7,
+      "bookings": 8,
       "marketing": 1,
-      "lane2": 6,
+      "lane2": 7,
       "social_dms": 0,
       "showed": 4,
       "qualified": 1,
@@ -627,6 +650,29 @@
           "scheduled_calls": 1,
           "occurred_calls": 1,
           "no_shows": 1,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "sept22",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
           "unresolved_calls": 0
         },
         {
@@ -788,6 +834,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Christine Ocalan",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Marketing",
           "bookings": 1,
           "marketing": 1,
@@ -873,9 +940,9 @@
         }
       ],
       "display": {
-        "projected": 12,
+        "projected": 14,
         "goal": 70,
-        "goal_pct": 10,
+        "goal_pct": 11,
         "pace": "pace-behind"
       },
       "formats": {
@@ -893,7 +960,7 @@
     },
     {
       "channel": "Unknown (Needs Review)",
-      "leads_created": 16,
+      "leads_created": 17,
       "bookings": 5,
       "marketing": 0,
       "lane2": 5,
@@ -1992,7 +2059,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-17T09:00:27.802232-08:00",
+    "generated_at": "2026-11-17T09:15:19.956480-08:00",
     "counts": {
       "Christian Hartwell": 30,
       "Scott Seymour": 12,
@@ -2000,7 +2067,7 @@
       "Eric Piccione": 6,
       "Joe Vaughan": 0,
       "Shreya Bechra": 0,
-      "Luke Herman": 15,
+      "Luke Herman": 8,
       "Ariella Irvine": 16,
       "Oscar Pugh": 0,
       "Joe Dysert": 6
