@@ -26,9 +26,9 @@
     },
     {
       "value": "Brad Savage",
-      "bookings": 4,
+      "bookings": 5,
       "marketing": 0,
-      "lane2": 4,
+      "lane2": 5,
       "social_dms": 0,
       "showed": 1,
       "qualified": 0,
@@ -255,6 +255,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Angel Rojo",
+      "bookings": 0,
+      "marketing": 0,
+      "lane2": 0,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "scheduled_calls": 1,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 1
+    },
+    {
       "value": "Helena Seitz",
       "bookings": 0,
       "marketing": 0,
@@ -349,6 +372,29 @@
   ],
   "team": [
     {
+      "value": "Ariella Irvine",
+      "bookings": 9,
+      "marketing": 0,
+      "lane2": 9,
+      "social_dms": 0,
+      "showed": 2,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "50.0%",
+        "qualified": "0.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "0.0%"
+      },
+      "scheduled_calls": 5,
+      "occurred_calls": 4,
+      "no_shows": 2,
+      "unresolved_calls": 1
+    },
+    {
       "value": "Christian Hartwell",
       "bookings": 9,
       "marketing": 5,
@@ -370,29 +416,6 @@
       "occurred_calls": 6,
       "no_shows": 3,
       "unresolved_calls": 2
-    },
-    {
-      "value": "Ariella Irvine",
-      "bookings": 8,
-      "marketing": 0,
-      "lane2": 8,
-      "social_dms": 0,
-      "showed": 2,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "50.0%",
-        "qualified": "0.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "0.0%"
-      },
-      "scheduled_calls": 5,
-      "occurred_calls": 4,
-      "no_shows": 2,
-      "unresolved_calls": 1
     },
     {
       "value": "Robin Perkins",
@@ -435,10 +458,10 @@
         "average": "—",
         "qualified_occurred": "50.0%"
       },
-      "scheduled_calls": 5,
+      "scheduled_calls": 6,
       "occurred_calls": 4,
       "no_shows": 1,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Eric Piccione",
@@ -510,8 +533,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-17T11:00:25.563766-08:00",
-  "source_cutoff": "2026-11-17T11:00:25.563766-08:00",
+  "generated_at": "2026-11-17T11:15:18.189745-08:00",
+  "source_cutoff": "2026-11-17T11:15:18.189745-08:00",
   "vendhub_arr": 0.0,
   "progress": {
     "day": 17,
@@ -542,15 +565,15 @@
   "period": "2026-11-16 through 2026-11-17 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 28,
+  "counted_meetings": 29,
   "excluded_repeat_candidates": 4,
-  "attribution_reviewed_at": "2026-11-17T11:00:25.563766-08:00",
+  "attribution_reviewed_at": "2026-11-17T11:15:18.189745-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 205,
-    "bookings": 28,
+    "bookings": 29,
     "marketing": 8,
-    "lane2": 17,
+    "lane2": 18,
     "social_dms": 3,
     "showed": 12,
     "qualified": 7,
@@ -564,10 +587,10 @@
       "average": "—",
       "qualified_occurred": "33.3%"
     },
-    "scheduled_calls": 31,
+    "scheduled_calls": 32,
     "occurred_calls": 21,
     "no_shows": 9,
-    "unresolved_calls": 10
+    "unresolved_calls": 11
   },
   "channels": [
     {
@@ -1079,10 +1102,10 @@
             "average": "—",
             "qualified_occurred": "57.1%"
           },
-          "scheduled_calls": 7,
+          "scheduled_calls": 8,
           "occurred_calls": 7,
           "no_shows": 3,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         }
       ],
       "packages": [],
@@ -1193,6 +1216,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Angel Rojo",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 1
+        },
+        {
           "value": "Helena Seitz",
           "bookings": 0,
           "marketing": 0,
@@ -1291,10 +1335,10 @@
         "average": "—",
         "qualified_occurred": "57.1%"
       },
-      "scheduled_calls": 7,
+      "scheduled_calls": 8,
       "occurred_calls": 7,
       "no_shows": 3,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "channel": "Instagram",
@@ -1509,6 +1553,130 @@
       "unresolved_calls": 1
     },
     {
+      "channel": "Google Ads",
+      "leads_created": 4,
+      "bookings": 3,
+      "marketing": 2,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 1,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0.0,
+      "unrecoverable_booked_leads": 0,
+      "drilldowns": [
+        {
+          "value": "23805931083",
+          "bookings": 2,
+          "marketing": 1,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "0.0%"
+          },
+          "scheduled_calls": 1,
+          "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "23815771816",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 2,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 2
+        }
+      ],
+      "packages": [],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 2,
+          "marketing": 2,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 2,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 2
+        },
+        {
+          "value": "Brad Savage",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "qualified_occurred": "0.0%"
+          },
+          "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        }
+      ],
+      "display": {
+        "projected": 5,
+        "goal": null,
+        "goal_pct": null,
+        "pace": ""
+      },
+      "formats": {
+        "show": "100.0%",
+        "qualified": "0.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "0.0%"
+      },
+      "scheduled_calls": 3,
+      "occurred_calls": 1,
+      "no_shows": 0,
+      "unresolved_calls": 2
+    },
+    {
       "channel": "YouTube",
       "leads_created": 2,
       "bookings": 3,
@@ -1721,130 +1889,6 @@
       "occurred_calls": 2,
       "no_shows": 0,
       "unresolved_calls": 0
-    },
-    {
-      "channel": "Google Ads",
-      "leads_created": 4,
-      "bookings": 2,
-      "marketing": 2,
-      "lane2": 0,
-      "social_dms": 0,
-      "showed": 1,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0.0,
-      "unrecoverable_booked_leads": 0,
-      "drilldowns": [
-        {
-          "value": "23805931083",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "0.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "0.0%"
-          },
-          "scheduled_calls": 1,
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
-          "value": "23815771816",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "—"
-          },
-          "scheduled_calls": 2,
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 2
-        }
-      ],
-      "packages": [],
-      "setters": [
-        {
-          "value": "Marketing",
-          "bookings": 2,
-          "marketing": 2,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 2,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
-          },
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 2
-        },
-        {
-          "value": "Brad Savage",
-          "bookings": 0,
-          "marketing": 0,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 1,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "0.0%",
-            "close": "0.0%",
-            "qualified_occurred": "0.0%"
-          },
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        }
-      ],
-      "display": {
-        "projected": 4,
-        "goal": null,
-        "goal_pct": null,
-        "pace": ""
-      },
-      "formats": {
-        "show": "100.0%",
-        "qualified": "0.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "0.0%"
-      },
-      "scheduled_calls": 3,
-      "occurred_calls": 1,
-      "no_shows": 0,
-      "unresolved_calls": 2
     },
     {
       "channel": "Website",
@@ -2294,11 +2338,11 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-17T11:00:25.563766-08:00",
+    "generated_at": "2026-11-17T11:15:18.189745-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 13,
-      "Robin Perkins": 17,
+      "Robin Perkins": 18,
       "Eric Piccione": 6,
       "Joe Vaughan": 0,
       "Shreya Bechra": 0,

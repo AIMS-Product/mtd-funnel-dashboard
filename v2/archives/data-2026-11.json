@@ -118,9 +118,9 @@
     },
     {
       "value": "Brad Savage",
-      "bookings": 11,
+      "bookings": 12,
       "marketing": 0,
-      "lane2": 11,
+      "lane2": 12,
       "social_dms": 0,
       "showed": 5,
       "qualified": 2,
@@ -387,10 +387,10 @@
         "average": "—",
         "qualified_occurred": "0.0%"
       },
-      "scheduled_calls": 1,
+      "scheduled_calls": 2,
       "occurred_calls": 1,
       "no_shows": 1,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "value": "Monde Janzen",
@@ -556,6 +556,29 @@
   ],
   "team": [
     {
+      "value": "Ariella Irvine",
+      "bookings": 52,
+      "marketing": 7,
+      "lane2": 45,
+      "social_dms": 0,
+      "showed": 22,
+      "qualified": 9,
+      "closed_won": 1,
+      "revenue": 9497.0,
+      "formats": {
+        "show": "64.7%",
+        "qualified": "26.5%",
+        "close": "2.9%",
+        "revenue": "$9,497",
+        "average": "$9,497",
+        "qualified_occurred": "26.5%"
+      },
+      "scheduled_calls": 39,
+      "occurred_calls": 34,
+      "no_shows": 12,
+      "unresolved_calls": 5
+    },
+    {
       "value": "Robin Perkins",
       "bookings": 52,
       "marketing": 21,
@@ -602,29 +625,6 @@
       "unresolved_calls": 3
     },
     {
-      "value": "Ariella Irvine",
-      "bookings": 51,
-      "marketing": 7,
-      "lane2": 44,
-      "social_dms": 0,
-      "showed": 22,
-      "qualified": 9,
-      "closed_won": 1,
-      "revenue": 9497.0,
-      "formats": {
-        "show": "64.7%",
-        "qualified": "26.5%",
-        "close": "2.9%",
-        "revenue": "$9,497",
-        "average": "$9,497",
-        "qualified_occurred": "26.5%"
-      },
-      "scheduled_calls": 39,
-      "occurred_calls": 34,
-      "no_shows": 12,
-      "unresolved_calls": 5
-    },
-    {
       "value": "Luke Herman",
       "bookings": 47,
       "marketing": 17,
@@ -665,10 +665,10 @@
         "average": "$7,497",
         "qualified_occurred": "48.1%"
       },
-      "scheduled_calls": 32,
+      "scheduled_calls": 33,
       "occurred_calls": 27,
       "no_shows": 11,
-      "unresolved_calls": 5
+      "unresolved_calls": 6
     },
     {
       "value": "Joe Vaughan",
@@ -763,8 +763,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-17T11:00:25.563766-08:00",
-  "source_cutoff": "2026-11-17T11:00:25.563766-08:00",
+  "generated_at": "2026-11-17T11:15:18.189745-08:00",
+  "source_cutoff": "2026-11-17T11:15:18.189745-08:00",
   "vendhub_arr": 25791.0,
   "progress": {
     "day": 17,
@@ -795,15 +795,15 @@
   "period": "2026-11-01 through 2026-11-17 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 286,
+  "counted_meetings": 287,
   "excluded_repeat_candidates": 23,
-  "attribution_reviewed_at": "2026-11-17T11:00:25.563766-08:00",
+  "attribution_reviewed_at": "2026-11-17T11:15:18.189745-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2595,
-    "bookings": 286,
+    "bookings": 287,
     "marketing": 99,
-    "lane2": 179,
+    "lane2": 180,
     "social_dms": 8,
     "showed": 134,
     "qualified": 87,
@@ -817,15 +817,15 @@
       "average": "$6,976",
       "qualified_occurred": "41.6%"
     },
-    "scheduled_calls": 256,
+    "scheduled_calls": 257,
     "occurred_calls": 209,
     "no_shows": 75,
-    "unresolved_calls": 47
+    "unresolved_calls": 48
   },
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 2026,
+      "leads_created": 2027,
       "bookings": 95,
       "marketing": 31,
       "lane2": 64,
@@ -1821,10 +1821,10 @@
             "average": "$5,997",
             "qualified_occurred": "44.7%"
           },
-          "scheduled_calls": 52,
+          "scheduled_calls": 53,
           "occurred_calls": 47,
           "no_shows": 17,
-          "unresolved_calls": 5
+          "unresolved_calls": 6
         },
         {
           "value": "_____",
@@ -2143,7 +2143,7 @@
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 1,
+          "scheduled_calls": 2,
           "formats": {
             "show": "0.0%",
             "qualified": "0.0%",
@@ -2152,7 +2152,7 @@
           },
           "occurred_calls": 1,
           "no_shows": 1,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "Ariadna Rufrancos",
@@ -2358,17 +2358,17 @@
         "average": "$6,447",
         "qualified_occurred": "43.4%"
       },
-      "scheduled_calls": 59,
+      "scheduled_calls": 60,
       "occurred_calls": 53,
       "no_shows": 18,
-      "unresolved_calls": 6
+      "unresolved_calls": 7
     },
     {
       "channel": "Google Ads",
       "leads_created": 84,
-      "bookings": 36,
+      "bookings": 37,
       "marketing": 28,
-      "lane2": 8,
+      "lane2": 9,
       "social_dms": 0,
       "showed": 17,
       "qualified": 14,
@@ -2401,9 +2401,9 @@
         },
         {
           "value": "23805931083",
-          "bookings": 14,
+          "bookings": 15,
           "marketing": 10,
-          "lane2": 4,
+          "lane2": 5,
           "social_dms": 0,
           "showed": 5,
           "qualified": 3,
@@ -2533,9 +2533,9 @@
         },
         {
           "value": "Brad Savage",
-          "bookings": 2,
+          "bookings": 3,
           "marketing": 0,
-          "lane2": 2,
+          "lane2": 3,
           "social_dms": 0,
           "showed": 2,
           "qualified": 1,
@@ -2638,7 +2638,7 @@
         }
       ],
       "display": {
-        "projected": 64,
+        "projected": 65,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -4303,7 +4303,7 @@
     },
     {
       "channel": "Website",
-      "leads_created": 7,
+      "leads_created": 6,
       "bookings": 9,
       "marketing": 5,
       "lane2": 4,
@@ -5222,11 +5222,11 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-17T11:00:25.563766-08:00",
+    "generated_at": "2026-11-17T11:15:18.189745-08:00",
     "counts": {
       "Christian Hartwell": 33,
       "Scott Seymour": 13,
-      "Robin Perkins": 17,
+      "Robin Perkins": 18,
       "Eric Piccione": 6,
       "Joe Vaughan": 0,
       "Shreya Bechra": 0,
