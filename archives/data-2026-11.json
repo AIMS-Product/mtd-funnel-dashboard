@@ -4,8 +4,8 @@
   "grand": {
     "leads_created": 2358,
     "booked": 161,
-    "showed": 88,
-    "qualified": 60,
+    "showed": 89,
+    "qualified": 62,
     "closed": 14,
     "revenue": 97663.0
   },
@@ -13,8 +13,8 @@
     "LEAD SOURCES": {
       "leads_created": 2170,
       "booked": 156,
-      "showed": 83,
-      "qualified": 57,
+      "showed": 84,
+      "qualified": 58,
       "closed": 14,
       "revenue": 97663.0
     },
@@ -22,12 +22,36 @@
       "leads_created": 188,
       "booked": 5,
       "showed": 5,
-      "qualified": 3,
+      "qualified": 4,
       "closed": 0,
       "revenue": 0.0
     }
   },
   "funnels": {
+    "Reactivation Scrapers": {
+      "leads_created": 31,
+      "booked": 90,
+      "book_pct": 290.3,
+      "showed": 46,
+      "show_pct": 51.1,
+      "qualified": 36,
+      "qual_pct": 78.3,
+      "closed": 7,
+      "cw_pct": 7.8,
+      "revenue": 45781.0
+    },
+    "Unknown (Needs Review)": {
+      "leads_created": 188,
+      "booked": 5,
+      "book_pct": 2.7,
+      "showed": 5,
+      "show_pct": 100.0,
+      "qualified": 4,
+      "qual_pct": 80.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Anthony IG": {
       "leads_created": 1,
       "booked": 2,
@@ -39,18 +63,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Reactivation Scrapers": {
-      "leads_created": 31,
-      "booked": 90,
-      "book_pct": 290.3,
-      "showed": 45,
-      "show_pct": 50.0,
-      "qualified": 35,
-      "qual_pct": 77.8,
-      "closed": 7,
-      "cw_pct": 7.8,
-      "revenue": 45781.0
     },
     "Internal Webinar": {
       "leads_created": 2013,
@@ -83,18 +95,6 @@
       "showed": 10,
       "show_pct": 83.3,
       "qualified": 6,
-      "qual_pct": 60.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
-    "Unknown (Needs Review)": {
-      "leads_created": 188,
-      "booked": 5,
-      "book_pct": 2.7,
-      "showed": 5,
-      "show_pct": 100.0,
-      "qualified": 3,
       "qual_pct": 60.0,
       "closed": 0,
       "cw_pct": 0.0,
