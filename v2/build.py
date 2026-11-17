@@ -19,7 +19,7 @@ from zoneinfo import ZoneInfo
 
 import requests
 
-from aggregates import APPOINTMENT_BOOKING_SCOPE, build_breakdowns, vp_appointment_bookings
+from aggregates import APPOINTMENT_BOOKING_SCOPE, build_breakdowns, vp_appointment_bookings, vp_business_line
 
 ROOT = Path(__file__).resolve().parent
 PACIFIC = ZoneInfo("America/Los_Angeles")
@@ -179,6 +179,7 @@ def request_fields(record: dict[str, Any]) -> dict[str, Any]:
         "date_created": record.get("date_created"),
         "status_id": record.get("status_id"),
         "funnel": custom(record, RULES["lead_fields"]["funnel"]),
+        "original_source": custom(record, RULES["lead_fields"]["original_source"]),
         "setter_name": custom(record, RULES["lead_fields"]["setter_name"]),
         "qualified": custom(record, QUALIFIED_FIELD),
         "program_tier": custom(record, PROGRAM_TIER_FIELD),
@@ -190,7 +191,7 @@ def request_fields(record: dict[str, Any]) -> dict[str, Any]:
 
 def fetch_lead(reader: CloseReader, lead_id: str) -> dict[str, Any]:
     fields = ["id", "display_name", "date_created", "status_id", f"custom.{RULES['lead_fields']['funnel']}", f"custom.{RULES['lead_fields']['setter_name']}", f"custom.{QUALIFIED_FIELD}", f"custom.{RULES['lead_fields']['offer']}", f"custom.{PROGRAM_TIER_FIELD}"]
-    fields.extend([f"custom.{VENDHUB_PLAN_FIELD}", f"custom.{LEAD_OWNER_FIELD}"])
+    fields.extend([f"custom.{VENDHUB_PLAN_FIELD}", f"custom.{LEAD_OWNER_FIELD}", f"custom.{RULES['lead_fields']['original_source']}"])
     result = reader.get(f"lead/{lead_id}/", {"_fields": ",".join(fields)})
     return request_fields(result)
 
@@ -221,9 +222,10 @@ def fetch_contacts_created_in_window(reader: CloseReader, start_utc: str, end_ut
 
 def source_resolve(lead: dict[str, Any], contacts: list[dict[str, Any]]) -> tuple[str, str]:
     labels = {label.casefold(): label for label in RULES["marketing_sources"]}
-    current = lead.get("funnel")
-    if current and current.casefold() in labels:
-        return labels[current.casefold()], "lead_funnel_origin"
+    for key, basis in (("original_source", "original_source"), ("funnel", "lead_funnel_origin")):
+        current = lead.get(key)
+        if current and current.casefold() in labels:
+            return labels[current.casefold()], basis
     recognized: set[str] = set()
     unknown = False
     for contact in contacts:
@@ -434,7 +436,7 @@ def fetch_created_leads(reader: CloseReader, start_date: date, as_of: datetime) 
     start_utc, end_utc = utc_window(start_date, as_of)
     query = f'date_created >= "{start_utc}" AND date_created <= "{end_utc}"'
     fields = f"id,display_name,date_created,status_id,custom.{RULES['lead_fields']['funnel']},custom.{RULES['lead_fields']['setter_name']},custom.{QUALIFIED_FIELD},custom.{RULES['lead_fields']['offer']},custom.{PROGRAM_TIER_FIELD}"
-    fields += f",custom.{VENDHUB_PLAN_FIELD},custom.{LEAD_OWNER_FIELD}"
+    fields += f",custom.{VENDHUB_PLAN_FIELD},custom.{LEAD_OWNER_FIELD},custom.{RULES['lead_fields']['original_source']}"
     return reader.pages("lead/", {"query": query, "_fields": fields})
 
 
@@ -499,7 +501,8 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
         and start_bound <= created < end_bound
     ]
     excluded_lead_statuses = set(RULES.get("excluded_lead_status_ids", []))
-    leads_created = [row for row in leads_created if row.get("status_id") not in excluded_lead_statuses]
+    leads_created = [row for row in leads_created if row.get("status_id") not in excluded_lead_statuses
+                     and vp_business_line(custom(row, RULES["lead_fields"]["offer"]))]
     won = fetch_won_opportunities(reader, start_date, as_of)
     lead_ids = {str(m["lead_id"]) for m in candidate_meetings}
     lead_ids.update(str(l["id"]) for l in leads_created if l.get("id"))
@@ -513,14 +516,14 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
     created_by_id = {str(row["id"]): lead_cache[str(row["id"])] for row in leads_created if row.get("id")}
     candidate_lead_ids = {str(row["lead_id"]) for row in candidate_meetings}
     won_lead_ids = {str(row["lead_id"]) for row in won if row.get("lead_id")}
-    # Pull contact attribution for booked leads (campaign/content drilldowns) and
-    # won leads only. The Close contacts list endpoint cannot filter the MTD
-    # creation window or accept a bulk list of lead IDs, so scanning every
-    # unbooked MTD lead would require one API request per lead.
-    # Won leads also need campaign/content attribution for revenue drilldowns.
-    contact_ids = candidate_lead_ids | won_lead_ids
+    # Created leads with no recognized origin use the same all-contact fallback
+    # as booked/won leads. Known origins are authoritative and need no extra read.
+    # Date-filtering contacts would miss contacts moved from older leads.
+    unresolved_created_ids = {lead_id for lead_id, lead in created_by_id.items()
+                              if source_resolve(lead, [])[0] == "Unknown (Needs Review)"}
+    contact_ids = candidate_lead_ids | won_lead_ids | unresolved_created_ids
     contact_cache: dict[str, list[dict[str, Any]]] = defaultdict(list)
-    print(f"Reading contact attribution for {len(contact_ids)} booked or won leads...", flush=True)
+    print(f"Reading contact attribution for {len(contact_ids)} created, booked, or won leads...", flush=True)
     if contact_ids:
         with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
             for lead_id, contacts in zip(sorted(contact_ids), pool.map(lambda lid: fetch_contacts(reader, lid), sorted(contact_ids))):

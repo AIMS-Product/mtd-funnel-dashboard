@@ -33,6 +33,11 @@ def vp_closer_bookings(bookings, users):
     return [row for row in bookings if owner_name(row.get("owner"), users) in VP_BOOKING_CLOSERS]
 
 
+def vp_business_line(value):
+    """Shared offer policy: VP and blanks; explicitly other offers stay out."""
+    return value in (None, "", "Vendingpreneurs (VP)")
+
+
 def vp_appointment_bookings(bookings, users):
     """Scope live bookings to VP offers and attribute them to the meeting user."""
     selected = []
@@ -40,7 +45,7 @@ def vp_appointment_bookings(bookings, users):
         if 'business_line' not in row:
             raise ValueError('VP appointment scope requires the source offer field')
         # The established offer policy reports verified blanks within VP.
-        if row['business_line'] not in (None, '', 'Vendingpreneurs (VP)'):
+        if not vp_business_line(row['business_line']):
             continue
         closer = row.get('appointment_closer')
         if isinstance(closer, str) and users.get(closer) in VP_BOOKING_CLOSERS:
