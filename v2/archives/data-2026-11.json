@@ -163,6 +163,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Pearl Sathekge",
+      "bookings": 8,
+      "marketing": 0,
+      "lane2": 0,
+      "social_dms": 8,
+      "showed": 1,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "25.0%",
+        "qualified": "0.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "0.0%"
+      },
+      "scheduled_calls": 5,
+      "occurred_calls": 4,
+      "no_shows": 3,
+      "unresolved_calls": 1
+    },
+    {
       "value": "Brad Savage",
       "bookings": 7,
       "marketing": 0,
@@ -184,29 +207,6 @@
       "occurred_calls": 5,
       "no_shows": 0,
       "unresolved_calls": 2
-    },
-    {
-      "value": "Pearl Sathekge",
-      "bookings": 7,
-      "marketing": 0,
-      "lane2": 0,
-      "social_dms": 7,
-      "showed": 1,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "25.0%",
-        "qualified": "0.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "0.0%"
-      },
-      "scheduled_calls": 5,
-      "occurred_calls": 4,
-      "no_shows": 3,
-      "unresolved_calls": 1
     },
     {
       "value": "Tara Hall",
@@ -556,6 +556,29 @@
       "unresolved_calls": 7
     },
     {
+      "value": "Christian Hartwell",
+      "bookings": 47,
+      "marketing": 17,
+      "lane2": 29,
+      "social_dms": 1,
+      "showed": 25,
+      "qualified": 19,
+      "closed_won": 4,
+      "revenue": 23388.0,
+      "formats": {
+        "show": "73.5%",
+        "qualified": "55.9%",
+        "close": "11.8%",
+        "revenue": "$23,388",
+        "average": "$5,847",
+        "qualified_occurred": "55.9%"
+      },
+      "scheduled_calls": 37,
+      "occurred_calls": 34,
+      "no_shows": 9,
+      "unresolved_calls": 3
+    },
+    {
       "value": "Luke Herman",
       "bookings": 47,
       "marketing": 17,
@@ -577,29 +600,6 @@
       "occurred_calls": 37,
       "no_shows": 14,
       "unresolved_calls": 9
-    },
-    {
-      "value": "Christian Hartwell",
-      "bookings": 46,
-      "marketing": 17,
-      "lane2": 29,
-      "social_dms": 0,
-      "showed": 25,
-      "qualified": 19,
-      "closed_won": 4,
-      "revenue": 23388.0,
-      "formats": {
-        "show": "73.5%",
-        "qualified": "55.9%",
-        "close": "11.8%",
-        "revenue": "$23,388",
-        "average": "$5,847",
-        "qualified_occurred": "55.9%"
-      },
-      "scheduled_calls": 37,
-      "occurred_calls": 34,
-      "no_shows": 9,
-      "unresolved_calls": 3
     },
     {
       "value": "Ariella Irvine",
@@ -740,8 +740,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-17T06:00:24.886299-08:00",
-  "source_cutoff": "2026-11-17T06:00:24.886299-08:00",
+  "generated_at": "2026-11-17T06:15:18.909311-08:00",
+  "source_cutoff": "2026-11-17T06:15:18.909311-08:00",
   "vendhub_arr": 25791.0,
   "progress": {
     "day": 17,
@@ -772,16 +772,16 @@
   "period": "2026-11-01 through 2026-11-17 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 273,
+  "counted_meetings": 274,
   "excluded_repeat_candidates": 22,
-  "attribution_reviewed_at": "2026-11-17T06:00:24.886299-08:00",
+  "attribution_reviewed_at": "2026-11-17T06:15:18.909311-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2590,
-    "bookings": 273,
+    "bookings": 274,
     "marketing": 98,
     "lane2": 168,
-    "social_dms": 7,
+    "social_dms": 8,
     "showed": 131,
     "qualified": 84,
     "closed_won": 14,
@@ -3505,10 +3505,10 @@
     {
       "channel": "Instagram",
       "leads_created": 13,
-      "bookings": 21,
+      "bookings": 22,
       "marketing": 2,
       "lane2": 12,
-      "social_dms": 7,
+      "social_dms": 8,
       "showed": 7,
       "qualified": 6,
       "closed_won": 0,
@@ -3654,6 +3654,29 @@
           "unresolved_calls": 1
         },
         {
+          "value": "mh-dm-setter",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 1,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "route-builder",
           "bookings": 1,
           "marketing": 0,
@@ -3704,10 +3727,10 @@
       "setters": [
         {
           "value": "Pearl Sathekge",
-          "bookings": 7,
+          "bookings": 8,
           "marketing": 0,
           "lane2": 0,
-          "social_dms": 7,
+          "social_dms": 8,
           "showed": 1,
           "qualified": 0,
           "closed_won": 0,
@@ -3872,7 +3895,7 @@
         }
       ],
       "display": {
-        "projected": 37,
+        "projected": 39,
         "goal": 300,
         "goal_pct": 7,
         "pace": "pace-behind"
@@ -5134,9 +5157,9 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-17T06:00:24.886299-08:00",
+    "generated_at": "2026-11-17T06:15:18.909311-08:00",
     "counts": {
-      "Christian Hartwell": 29,
+      "Christian Hartwell": 30,
       "Scott Seymour": 12,
       "Robin Perkins": 17,
       "Eric Piccione": 6,
