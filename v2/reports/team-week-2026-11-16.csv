@@ -1,7 +1,7 @@
 ## REPORT METADATA
 Report,V2 Team Performance
 Period,2026-11-16 through 2026-11-17 PT
-Generated At,2026-11-17T12:15:18.801423-08:00
+Generated At,2026-11-17T12:30:21.843464-08:00
 Booking Rules,booked_calls.v2.11-jennifer-elevate-20261116
 Booking Scope,VP leads · appointment closer
 Attribution,Booking/show by appointment closer; distinct qualification credit by canonical meeting; won deals/revenue by opportunity owner.
@@ -9,19 +9,19 @@ Qualification,"Distinct qualified source/lead cohort, allocated once to the cano
 
 ## TEAM KPI TILES
 Metric,Actual,Goal
-Closer Revenue,$0,"$29,120"
+Closer Revenue,"$10,347","$29,120"
 Closer Show Rate,59.1%,65.0%
-Closer Close Rate / Occurred,0.0%,13.0%
-Closer Close Rate / Qualified,0.0%,20.0%
-Pipeline,"$138,600","$840,000"
-Pipeline snapshot,2026-11-17T12:15:18.801423-08:00
+Closer Close Rate / Occurred,4.5%,13.0%
+Closer Close Rate / Qualified,14.3%,20.0%
+Pipeline,"$137,200","$840,000"
+Pipeline snapshot,2026-11-17T12:30:21.843464-08:00
 Pipeline basis,"Current open qualified leads owned within trailing 30 days; $7,000 × 20% per lead. Independent of report week."
 
 ## REP BREAKDOWN
 Rep,Booked,Calls Occurred,Showed,Show %,Qualified,Qual %,Closed Won,CW %,Qualified to Close %,Revenue,Avg Deal,Revenue Goal,Pipeline,Open Qualified
 Christian Hartwell,10,6,3,50.0%,2,33.3%,0,0.0%,0.0%,$0,—,"$9,100","$44,800",32
 Scott Seymour,4,4,3,75.0%,2,50.0%,0,0.0%,0.0%,$0,—,"$3,640","$18,200",13
-Robin Perkins,7,2,1,50.0%,1,50.0%,0,0.0%,0.0%,$0,—,"$6,370","$25,200",18
+Robin Perkins,7,2,1,50.0%,1,50.0%,1,50.0%,100.0%,"$10,347","$10,347","$6,370","$23,800",17
 Eric Piccione,2,0,0,—,0,—,0,—,—,$0,—,"$1,820","$8,400",6
 Joe Vaughan,0,0,0,—,0,—,0,—,—,$0,—,$0,$0,0
 Shreya Bechra,0,0,0,—,0,—,0,—,—,$0,—,$0,$0,0
@@ -30,8 +30,8 @@ Ariella Irvine,9,4,2,50.0%,0,0.0%,0,0.0%,—,$0,—,"$8,190","$22,400",16
 Oscar Pugh,0,0,0,—,0,—,0,—,—,$0,—,$0,$0,0
 Joe Dysert,0,0,0,—,0,—,0,—,—,$0,—,$0,"$8,400",6
 Other / Non-Closer,0,0,0,—,0,—,0,—,—,$0,—,$0,—,—
-CLOSERS TOTAL,32,22,13,59.1%,7,31.8%,0,0.0%,0.0%,$0,—,"$29,120","$138,600",99
-ALL V2 TOTAL,32,22,13,59.1%,7,31.8%,0,0.0%,0.0%,$0,—,"$29,120",—,—
+CLOSERS TOTAL,32,22,13,59.1%,7,31.8%,1,4.5%,14.3%,"$10,347","$10,347","$29,120","$137,200",98
+ALL V2 TOTAL,32,22,13,59.1%,7,31.8%,1,4.5%,14.3%,"$10,347","$10,347","$29,120",—,—
 
 ## RECONCILIATION
 Metric,Rep sum including Other,V2 funnel total,Match
@@ -39,5 +39,5 @@ bookings,32,32,YES
 occurred_calls,22,22,YES
 showed,13,13,YES
 qualified,7,7,YES
-closed_won,0,0,YES
-revenue,0,0.0,YES
+closed_won,1,1,YES
+revenue,10347.0,10347.0,YES

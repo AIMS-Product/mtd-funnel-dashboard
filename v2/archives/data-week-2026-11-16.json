@@ -163,6 +163,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Vince Bartolini",
+      "bookings": 1,
+      "marketing": 0,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 2,
+      "qualified": 1,
+      "closed_won": 1,
+      "revenue": 10347.0,
+      "formats": {
+        "show": "66.7%",
+        "qualified": "33.3%",
+        "close": "33.3%",
+        "revenue": "$10,347",
+        "average": "$10,347",
+        "qualified_occurred": "33.3%"
+      },
+      "scheduled_calls": 4,
+      "occurred_calls": 3,
+      "no_shows": 1,
+      "unresolved_calls": 1
+    },
+    {
       "value": "Andrea Harris",
       "bookings": 1,
       "marketing": 0,
@@ -253,29 +276,6 @@
       "occurred_calls": 1,
       "no_shows": 0,
       "unresolved_calls": 0
-    },
-    {
-      "value": "Vince Bartolini",
-      "bookings": 1,
-      "marketing": 0,
-      "lane2": 1,
-      "social_dms": 0,
-      "showed": 2,
-      "qualified": 1,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "66.7%",
-        "qualified": "33.3%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "33.3%"
-      },
-      "scheduled_calls": 4,
-      "occurred_calls": 3,
-      "no_shows": 1,
-      "unresolved_calls": 1
     },
     {
       "value": "Angel Rojo",
@@ -425,14 +425,14 @@
       "social_dms": 2,
       "showed": 1,
       "qualified": 1,
-      "closed_won": 0,
-      "revenue": 0,
+      "closed_won": 1,
+      "revenue": 10347.0,
       "formats": {
         "show": "50.0%",
         "qualified": "50.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
+        "close": "50.0%",
+        "revenue": "$10,347",
+        "average": "$10,347",
         "qualified_occurred": "50.0%"
       },
       "scheduled_calls": 4,
@@ -533,9 +533,9 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-17T12:15:18.801423-08:00",
-  "source_cutoff": "2026-11-17T12:15:18.801423-08:00",
-  "vendhub_arr": 0.0,
+  "generated_at": "2026-11-17T12:30:21.843464-08:00",
+  "source_cutoff": "2026-11-17T12:30:21.843464-08:00",
+  "vendhub_arr": 2998.0,
   "progress": {
     "day": 17,
     "days": 30,
@@ -567,7 +567,7 @@
   "booking_scope": "vp-appointments.v2",
   "counted_meetings": 32,
   "excluded_repeat_candidates": 4,
-  "attribution_reviewed_at": "2026-11-17T12:15:18.801423-08:00",
+  "attribution_reviewed_at": "2026-11-17T12:30:21.843464-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 206,
@@ -577,14 +577,14 @@
     "social_dms": 3,
     "showed": 13,
     "qualified": 7,
-    "closed_won": 0,
-    "revenue": 0.0,
+    "closed_won": 1,
+    "revenue": 10347.0,
     "formats": {
       "show": "59.1%",
       "qualified": "31.8%",
-      "close": "0.0%",
-      "revenue": "$0",
-      "average": "—",
+      "close": "4.5%",
+      "revenue": "$10,347",
+      "average": "$10,347",
       "qualified_occurred": "31.8%"
     },
     "scheduled_calls": 32,
@@ -1372,8 +1372,8 @@
       "social_dms": 3,
       "showed": 0,
       "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0.0,
+      "closed_won": 1,
+      "revenue": 10347.0,
       "unrecoverable_booked_leads": 0,
       "drilldowns": [
         {
@@ -1453,23 +1453,44 @@
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 1,
+          "closed_won": 1,
+          "revenue": 10347.0,
           "formats": {
             "show": "—",
             "qualified": "—",
             "close": "—",
-            "revenue": "$0",
-            "average": "—",
+            "revenue": "$10,347",
+            "average": "$10,347",
             "qualified_occurred": "—"
           },
+          "scheduled_calls": 1,
           "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 1
         }
       ],
-      "packages": [],
+      "packages": [
+        {
+          "value": "Silver - $8,997 · Basic",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 1,
+          "revenue": 10347.0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "qualified_booked": "—",
+            "close": "—",
+            "qualified_close": "—",
+            "revenue": "$10,347",
+            "average": "$10,347"
+          }
+        }
+      ],
       "setters": [
         {
           "value": "Pearl Sathekge",
@@ -1542,8 +1563,8 @@
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
+          "closed_won": 1,
+          "revenue": 10347.0,
           "scheduled_calls": 1,
           "formats": {
             "show": "—",
@@ -1566,8 +1587,8 @@
         "show": "—",
         "qualified": "—",
         "close": "—",
-        "revenue": "$0",
-        "average": "—",
+        "revenue": "$10,347",
+        "average": "$10,347",
         "qualified_occurred": "—"
       },
       "scheduled_calls": 1,
@@ -2360,11 +2381,11 @@
   ],
   "goal_percentages": {
     "bookings": 3,
-    "revenue": 0
+    "revenue": 1
   },
   "arr_display": {
-    "arr": "$0",
-    "mrr": "$0"
+    "arr": "$2,998",
+    "mrr": "$250"
   },
   "scheduled_outcome_basis": "Accepted v2.8 calls scheduled in [Pacific period start, cutoff), with native Completed or No Show outcome; independent of creation date",
   "qualification_evidence": "Current lead flag; the separate reset automation has not been applied",
@@ -2382,11 +2403,11 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-17T12:15:18.801423-08:00",
+    "generated_at": "2026-11-17T12:30:21.843464-08:00",
     "counts": {
       "Christian Hartwell": 32,
       "Scott Seymour": 13,
-      "Robin Perkins": 18,
+      "Robin Perkins": 17,
       "Eric Piccione": 6,
       "Joe Vaughan": 0,
       "Shreya Bechra": 0,
