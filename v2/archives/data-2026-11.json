@@ -19,10 +19,10 @@
         "average": "—",
         "qualified_occurred": "40.8%"
       },
-      "scheduled_calls": 96,
+      "scheduled_calls": 97,
       "occurred_calls": 71,
       "no_shows": 21,
-      "unresolved_calls": 25
+      "unresolved_calls": 26
     },
     {
       "value": "Vince Bartolini",
@@ -439,6 +439,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Katie Meloche",
+      "bookings": 1,
+      "marketing": 0,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 0,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Monde Janzen",
       "bookings": 1,
       "marketing": 0,
@@ -573,10 +596,10 @@
         "average": "$10,347",
         "qualified_occurred": "35.1%"
       },
-      "scheduled_calls": 42,
+      "scheduled_calls": 43,
       "occurred_calls": 37,
       "no_shows": 13,
-      "unresolved_calls": 5
+      "unresolved_calls": 6
     },
     {
       "value": "Christian Hartwell",
@@ -649,9 +672,9 @@
     },
     {
       "value": "Scott Seymour",
-      "bookings": 41,
+      "bookings": 42,
       "marketing": 7,
-      "lane2": 32,
+      "lane2": 33,
       "social_dms": 2,
       "showed": 17,
       "qualified": 14,
@@ -763,8 +786,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-17T13:45:18.125561-08:00",
-  "source_cutoff": "2026-11-17T13:45:18.125561-08:00",
+  "generated_at": "2026-11-17T14:00:21.461562-08:00",
+  "source_cutoff": "2026-11-17T14:00:21.461562-08:00",
   "vendhub_arr": 28789.0,
   "progress": {
     "day": 17,
@@ -795,15 +818,15 @@
   "period": "2026-11-01 through 2026-11-17 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 293,
+  "counted_meetings": 294,
   "excluded_repeat_candidates": 22,
-  "attribution_reviewed_at": "2026-11-17T13:45:18.125561-08:00",
+  "attribution_reviewed_at": "2026-11-17T14:00:21.461562-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2597,
-    "bookings": 293,
+    "bookings": 294,
     "marketing": 98,
-    "lane2": 187,
+    "lane2": 188,
     "social_dms": 8,
     "showed": 137,
     "qualified": 89,
@@ -817,18 +840,18 @@
       "average": "$7,201",
       "qualified_occurred": "41.6%"
     },
-    "scheduled_calls": 259,
+    "scheduled_calls": 260,
     "occurred_calls": 214,
     "no_shows": 77,
-    "unresolved_calls": 45
+    "unresolved_calls": 46
   },
   "channels": [
     {
       "channel": "Internal Webinar",
       "leads_created": 2027,
-      "bookings": 97,
+      "bookings": 98,
       "marketing": 30,
-      "lane2": 67,
+      "lane2": 68,
       "social_dms": 0,
       "showed": 37,
       "qualified": 18,
@@ -1297,6 +1320,29 @@
           "unresolved_calls": 0
         },
         {
+          "value": "aug25",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "july14",
           "bookings": 1,
           "marketing": 0,
@@ -1729,6 +1775,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Katie Meloche",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Marketing / Unassigned",
           "bookings": 0,
           "marketing": 0,
@@ -1751,9 +1818,9 @@
         }
       ],
       "display": {
-        "projected": 171,
+        "projected": 173,
         "goal": 70,
-        "goal_pct": 139,
+        "goal_pct": 140,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -2986,10 +3053,10 @@
             "average": "—",
             "qualified_occurred": "—"
           },
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "hunter",
@@ -3347,7 +3414,7 @@
           "qualified": 7,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 18,
+          "scheduled_calls": 19,
           "formats": {
             "show": "80.0%",
             "qualified": "46.7%",
@@ -3356,7 +3423,7 @@
           },
           "occurred_calls": 15,
           "no_shows": 3,
-          "unresolved_calls": 3
+          "unresolved_calls": 4
         },
         {
           "value": "Naria Torres",
@@ -3562,10 +3629,10 @@
         "average": "$5,697",
         "qualified_occurred": "53.3%"
       },
-      "scheduled_calls": 34,
+      "scheduled_calls": 35,
       "occurred_calls": 30,
       "no_shows": 6,
-      "unresolved_calls": 4
+      "unresolved_calls": 5
     },
     {
       "channel": "Instagram",
@@ -5323,7 +5390,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-17T13:45:18.125561-08:00",
+    "generated_at": "2026-11-17T14:00:21.461562-08:00",
     "counts": {
       "Christian Hartwell": 32,
       "Scott Seymour": 14,
