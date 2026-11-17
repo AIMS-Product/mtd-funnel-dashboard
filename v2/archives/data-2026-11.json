@@ -164,9 +164,9 @@
     },
     {
       "value": "Esther Cohen",
-      "bookings": 9,
+      "bookings": 8,
       "marketing": 0,
-      "lane2": 9,
+      "lane2": 8,
       "social_dms": 0,
       "showed": 2,
       "qualified": 1,
@@ -579,29 +579,6 @@
   ],
   "team": [
     {
-      "value": "Robin Perkins",
-      "bookings": 54,
-      "marketing": 21,
-      "lane2": 30,
-      "social_dms": 3,
-      "showed": 24,
-      "qualified": 13,
-      "closed_won": 1,
-      "revenue": 10347.0,
-      "formats": {
-        "show": "64.9%",
-        "qualified": "35.1%",
-        "close": "2.7%",
-        "revenue": "$10,347",
-        "average": "$10,347",
-        "qualified_occurred": "35.1%"
-      },
-      "scheduled_calls": 43,
-      "occurred_calls": 37,
-      "no_shows": 13,
-      "unresolved_calls": 6
-    },
-    {
       "value": "Christian Hartwell",
       "bookings": 53,
       "marketing": 18,
@@ -623,6 +600,29 @@
       "occurred_calls": 38,
       "no_shows": 12,
       "unresolved_calls": 3
+    },
+    {
+      "value": "Robin Perkins",
+      "bookings": 53,
+      "marketing": 21,
+      "lane2": 29,
+      "social_dms": 3,
+      "showed": 24,
+      "qualified": 13,
+      "closed_won": 1,
+      "revenue": 10347.0,
+      "formats": {
+        "show": "64.9%",
+        "qualified": "35.1%",
+        "close": "2.7%",
+        "revenue": "$10,347",
+        "average": "$10,347",
+        "qualified_occurred": "35.1%"
+      },
+      "scheduled_calls": 43,
+      "occurred_calls": 37,
+      "no_shows": 13,
+      "unresolved_calls": 6
     },
     {
       "value": "Ariella Irvine",
@@ -786,8 +786,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-17T14:00:21.461562-08:00",
-  "source_cutoff": "2026-11-17T14:00:21.461562-08:00",
+  "generated_at": "2026-11-17T14:15:16.821227-08:00",
+  "source_cutoff": "2026-11-17T14:15:16.821227-08:00",
   "vendhub_arr": 28789.0,
   "progress": {
     "day": 17,
@@ -818,15 +818,15 @@
   "period": "2026-11-01 through 2026-11-17 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 294,
+  "counted_meetings": 293,
   "excluded_repeat_candidates": 22,
-  "attribution_reviewed_at": "2026-11-17T14:00:21.461562-08:00",
+  "attribution_reviewed_at": "2026-11-17T14:15:16.821227-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2597,
-    "bookings": 294,
+    "bookings": 293,
     "marketing": 98,
-    "lane2": 188,
+    "lane2": 187,
     "social_dms": 8,
     "showed": 137,
     "qualified": 89,
@@ -1839,21 +1839,21 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 433,
-      "bookings": 67,
+      "bookings": 66,
       "marketing": 6,
-      "lane2": 61,
+      "lane2": 60,
       "social_dms": 0,
       "showed": 36,
       "qualified": 24,
       "closed_won": 2,
       "revenue": 12894.0,
-      "unrecoverable_booked_leads": 66,
+      "unrecoverable_booked_leads": 65,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 62,
+          "bookings": 61,
           "marketing": 4,
-          "lane2": 58,
+          "lane2": 57,
           "social_dms": 0,
           "showed": 31,
           "qualified": 22,
@@ -2117,27 +2117,6 @@
           "unresolved_calls": 0
         },
         {
-          "value": "Esther Cohen",
-          "bookings": 4,
-          "marketing": 0,
-          "lane2": 4,
-          "social_dms": 0,
-          "showed": 2,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 3,
-          "formats": {
-            "show": "66.7%",
-            "qualified": "33.3%",
-            "close": "0.0%",
-            "qualified_occurred": "33.3%"
-          },
-          "occurred_calls": 3,
-          "no_shows": 1,
-          "unresolved_calls": 0
-        },
-        {
           "value": "Claude Shany Toussaint",
           "bookings": 3,
           "marketing": 0,
@@ -2155,6 +2134,27 @@
             "qualified_occurred": "50.0%"
           },
           "occurred_calls": 2,
+          "no_shows": 1,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "Esther Cohen",
+          "bookings": 3,
+          "marketing": 0,
+          "lane2": 3,
+          "social_dms": 0,
+          "showed": 2,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 3,
+          "formats": {
+            "show": "66.7%",
+            "qualified": "33.3%",
+            "close": "0.0%",
+            "qualified_occurred": "33.3%"
+          },
+          "occurred_calls": 3,
           "no_shows": 1,
           "unresolved_calls": 0
         },
@@ -2391,7 +2391,7 @@
         }
       ],
       "display": {
-        "projected": 118,
+        "projected": 116,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -5390,7 +5390,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-17T14:00:21.461562-08:00",
+    "generated_at": "2026-11-17T14:15:16.821227-08:00",
     "counts": {
       "Christian Hartwell": 32,
       "Scott Seymour": 14,
