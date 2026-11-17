@@ -71,6 +71,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Adam Linn",
+      "bookings": 2,
+      "marketing": 0,
+      "lane2": 2,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 1,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 1
+    },
+    {
       "value": "Ariella Irvine",
       "bookings": 2,
       "marketing": 0,
@@ -138,29 +161,6 @@
       "occurred_calls": 2,
       "no_shows": 1,
       "unresolved_calls": 2
-    },
-    {
-      "value": "Adam Linn",
-      "bookings": 1,
-      "marketing": 0,
-      "lane2": 1,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "—",
-        "qualified": "—",
-        "close": "—",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "—"
-      },
-      "scheduled_calls": 1,
-      "occurred_calls": 0,
-      "no_shows": 0,
-      "unresolved_calls": 1
     },
     {
       "value": "Andrea Harris",
@@ -373,9 +373,9 @@
     },
     {
       "value": "Robin Perkins",
-      "bookings": 5,
+      "bookings": 6,
       "marketing": 2,
-      "lane2": 1,
+      "lane2": 2,
       "social_dms": 2,
       "showed": 1,
       "qualified": 1,
@@ -487,8 +487,8 @@
       "unresolved_calls": 0
     }
   ],
-  "generated_at": "2026-11-17T09:30:21.290481-08:00",
-  "source_cutoff": "2026-11-17T09:30:21.290481-08:00",
+  "generated_at": "2026-11-17T09:45:22.698656-08:00",
+  "source_cutoff": "2026-11-17T09:45:22.698656-08:00",
   "vendhub_arr": 0.0,
   "progress": {
     "day": 17,
@@ -519,15 +519,15 @@
   "period": "2026-11-16 through 2026-11-17 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 24,
+  "counted_meetings": 25,
   "excluded_repeat_candidates": 4,
-  "attribution_reviewed_at": "2026-11-17T09:30:21.290481-08:00",
+  "attribution_reviewed_at": "2026-11-17T09:45:22.698656-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 204,
-    "bookings": 24,
+    "bookings": 25,
     "marketing": 8,
-    "lane2": 13,
+    "lane2": 14,
     "social_dms": 3,
     "showed": 10,
     "qualified": 5,
@@ -961,21 +961,21 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 18,
-      "bookings": 5,
+      "bookings": 6,
       "marketing": 0,
-      "lane2": 5,
+      "lane2": 6,
       "social_dms": 0,
       "showed": 2,
       "qualified": 2,
       "closed_won": 0,
       "revenue": 0.0,
-      "unrecoverable_booked_leads": 5,
+      "unrecoverable_booked_leads": 6,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 5,
+          "bookings": 6,
           "marketing": 0,
-          "lane2": 5,
+          "lane2": 6,
           "social_dms": 0,
           "showed": 2,
           "qualified": 2,
@@ -999,9 +999,9 @@
       "setters": [
         {
           "value": "Adam Linn",
-          "bookings": 1,
+          "bookings": 2,
           "marketing": 0,
-          "lane2": 1,
+          "lane2": 2,
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
@@ -1188,7 +1188,7 @@
         }
       ],
       "display": {
-        "projected": 9,
+        "projected": 11,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -2059,7 +2059,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-17T09:30:21.290481-08:00",
+    "generated_at": "2026-11-17T09:45:22.698656-08:00",
     "counts": {
       "Christian Hartwell": 30,
       "Scott Seymour": 12,

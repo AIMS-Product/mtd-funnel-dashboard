@@ -95,9 +95,9 @@
     },
     {
       "value": "Adam Linn",
-      "bookings": 14,
+      "bookings": 15,
       "marketing": 0,
-      "lane2": 14,
+      "lane2": 15,
       "social_dms": 0,
       "showed": 3,
       "qualified": 1,
@@ -579,6 +579,29 @@
       "unresolved_calls": 5
     },
     {
+      "value": "Robin Perkins",
+      "bookings": 51,
+      "marketing": 21,
+      "lane2": 27,
+      "social_dms": 3,
+      "showed": 23,
+      "qualified": 12,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "63.9%",
+        "qualified": "33.3%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "33.3%"
+      },
+      "scheduled_calls": 41,
+      "occurred_calls": 36,
+      "no_shows": 13,
+      "unresolved_calls": 5
+    },
+    {
       "value": "Christian Hartwell",
       "bookings": 50,
       "marketing": 18,
@@ -600,29 +623,6 @@
       "occurred_calls": 34,
       "no_shows": 9,
       "unresolved_calls": 4
-    },
-    {
-      "value": "Robin Perkins",
-      "bookings": 50,
-      "marketing": 21,
-      "lane2": 26,
-      "social_dms": 3,
-      "showed": 23,
-      "qualified": 12,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "63.9%",
-        "qualified": "33.3%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "33.3%"
-      },
-      "scheduled_calls": 41,
-      "occurred_calls": 36,
-      "no_shows": 13,
-      "unresolved_calls": 5
     },
     {
       "value": "Luke Herman",
@@ -763,8 +763,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-17T09:30:21.290481-08:00",
-  "source_cutoff": "2026-11-17T09:30:21.290481-08:00",
+  "generated_at": "2026-11-17T09:45:22.698656-08:00",
+  "source_cutoff": "2026-11-17T09:45:22.698656-08:00",
   "vendhub_arr": 25791.0,
   "progress": {
     "day": 17,
@@ -795,15 +795,15 @@
   "period": "2026-11-01 through 2026-11-17 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 282,
+  "counted_meetings": 283,
   "excluded_repeat_candidates": 23,
-  "attribution_reviewed_at": "2026-11-17T09:30:21.290481-08:00",
+  "attribution_reviewed_at": "2026-11-17T09:45:22.698656-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2594,
-    "bookings": 282,
+    "bookings": 283,
     "marketing": 99,
-    "lane2": 175,
+    "lane2": 176,
     "social_dms": 8,
     "showed": 132,
     "qualified": 84,
@@ -1793,21 +1793,21 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 432,
-      "bookings": 64,
+      "bookings": 65,
       "marketing": 6,
-      "lane2": 58,
+      "lane2": 59,
       "social_dms": 0,
       "showed": 33,
       "qualified": 20,
       "closed_won": 2,
       "revenue": 12894.0,
-      "unrecoverable_booked_leads": 63,
+      "unrecoverable_booked_leads": 64,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 59,
+          "bookings": 60,
           "marketing": 4,
-          "lane2": 55,
+          "lane2": 56,
           "social_dms": 0,
           "showed": 28,
           "qualified": 18,
@@ -1988,9 +1988,9 @@
         },
         {
           "value": "Adam Linn",
-          "bookings": 11,
+          "bookings": 12,
           "marketing": 0,
-          "lane2": 11,
+          "lane2": 12,
           "social_dms": 0,
           "showed": 2,
           "qualified": 1,
@@ -2345,7 +2345,7 @@
         }
       ],
       "display": {
-        "projected": 113,
+        "projected": 115,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -5222,7 +5222,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-17T09:30:21.290481-08:00",
+    "generated_at": "2026-11-17T09:45:22.698656-08:00",
     "counts": {
       "Christian Hartwell": 30,
       "Scott Seymour": 12,
