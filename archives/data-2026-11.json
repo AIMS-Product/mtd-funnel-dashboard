@@ -2,7 +2,7 @@
   "month_key": "2026-11",
   "month_label": "November 2026",
   "grand": {
-    "leads_created": 2352,
+    "leads_created": 2353,
     "booked": 160,
     "showed": 88,
     "qualified": 59,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2162,
+      "leads_created": 2166,
       "booked": 155,
       "showed": 83,
       "qualified": 56,
@@ -19,7 +19,7 @@
       "revenue": 97663.0
     },
     "UNCATEGORIZED": {
-      "leads_created": 190,
+      "leads_created": 187,
       "booked": 5,
       "showed": 5,
       "qualified": 3,
@@ -28,6 +28,30 @@
     }
   },
   "funnels": {
+    "Google Ads": {
+      "leads_created": 79,
+      "booked": 17,
+      "book_pct": 21.5,
+      "showed": 13,
+      "show_pct": 76.5,
+      "qualified": 10,
+      "qual_pct": 76.9,
+      "closed": 3,
+      "cw_pct": 17.6,
+      "revenue": 18891.0
+    },
+    "Internal Webinar": {
+      "leads_created": 2013,
+      "booked": 25,
+      "book_pct": 1.2,
+      "showed": 10,
+      "show_pct": 40.0,
+      "qualified": 3,
+      "qual_pct": 30.0,
+      "closed": 1,
+      "cw_pct": 4.0,
+      "revenue": 8997.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 28,
       "booked": 89,
@@ -40,10 +64,22 @@
       "cw_pct": 7.9,
       "revenue": 45781.0
     },
+    "Linkedin": {
+      "leads_created": 3,
+      "booked": 4,
+      "book_pct": 133.3,
+      "showed": 2,
+      "show_pct": 50.0,
+      "qualified": 1,
+      "qual_pct": 50.0,
+      "closed": 1,
+      "cw_pct": 25.0,
+      "revenue": 5997.0
+    },
     "YouTube": {
-      "leads_created": 17,
+      "leads_created": 19,
       "booked": 12,
-      "book_pct": 70.6,
+      "book_pct": 63.2,
       "showed": 10,
       "show_pct": 83.3,
       "qualified": 6,
@@ -52,22 +88,10 @@
       "cw_pct": 0.0,
       "revenue": 0.0
     },
-    "Internal Webinar": {
-      "leads_created": 2012,
-      "booked": 25,
-      "book_pct": 1.2,
-      "showed": 10,
-      "show_pct": 40.0,
-      "qualified": 3,
-      "qual_pct": 30.0,
-      "closed": 1,
-      "cw_pct": 4.0,
-      "revenue": 8997.0
-    },
     "Website": {
-      "leads_created": 6,
+      "leads_created": 7,
       "booked": 2,
-      "book_pct": 33.3,
+      "book_pct": 28.6,
       "showed": 1,
       "show_pct": 50.0,
       "qualified": 1,
@@ -88,30 +112,6 @@
       "cw_pct": 0.0,
       "revenue": 0.0
     },
-    "Google Ads": {
-      "leads_created": 79,
-      "booked": 17,
-      "book_pct": 21.5,
-      "showed": 13,
-      "show_pct": 76.5,
-      "qualified": 10,
-      "qual_pct": 76.9,
-      "closed": 3,
-      "cw_pct": 17.6,
-      "revenue": 18891.0
-    },
-    "Linkedin": {
-      "leads_created": 3,
-      "booked": 4,
-      "book_pct": 133.3,
-      "showed": 2,
-      "show_pct": 50.0,
-      "qualified": 1,
-      "qual_pct": 50.0,
-      "closed": 1,
-      "cw_pct": 25.0,
-      "revenue": 5997.0
-    },
     "Anthony IG": {
       "leads_created": 1,
       "booked": 2,
@@ -125,9 +125,9 @@
       "revenue": 0.0
     },
     "Unknown (Needs Review)": {
-      "leads_created": 190,
+      "leads_created": 187,
       "booked": 5,
-      "book_pct": 2.6,
+      "book_pct": 2.7,
       "showed": 5,
       "show_pct": 100.0,
       "qualified": 3,
