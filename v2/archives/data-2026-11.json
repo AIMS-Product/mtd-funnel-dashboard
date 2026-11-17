@@ -49,9 +49,9 @@
     },
     {
       "value": "Rob Maxfield",
-      "bookings": 39,
+      "bookings": 38,
       "marketing": 0,
-      "lane2": 39,
+      "lane2": 38,
       "social_dms": 0,
       "showed": 20,
       "qualified": 12,
@@ -579,29 +579,6 @@
   ],
   "team": [
     {
-      "value": "Christian Hartwell",
-      "bookings": 53,
-      "marketing": 18,
-      "lane2": 34,
-      "social_dms": 1,
-      "showed": 26,
-      "qualified": 21,
-      "closed_won": 4,
-      "revenue": 23388.0,
-      "formats": {
-        "show": "68.4%",
-        "qualified": "55.3%",
-        "close": "10.5%",
-        "revenue": "$23,388",
-        "average": "$5,847",
-        "qualified_occurred": "55.3%"
-      },
-      "scheduled_calls": 41,
-      "occurred_calls": 38,
-      "no_shows": 12,
-      "unresolved_calls": 3
-    },
-    {
       "value": "Robin Perkins",
       "bookings": 53,
       "marketing": 21,
@@ -623,6 +600,29 @@
       "occurred_calls": 37,
       "no_shows": 13,
       "unresolved_calls": 6
+    },
+    {
+      "value": "Christian Hartwell",
+      "bookings": 52,
+      "marketing": 18,
+      "lane2": 33,
+      "social_dms": 1,
+      "showed": 26,
+      "qualified": 21,
+      "closed_won": 4,
+      "revenue": 23388.0,
+      "formats": {
+        "show": "68.4%",
+        "qualified": "55.3%",
+        "close": "10.5%",
+        "revenue": "$23,388",
+        "average": "$5,847",
+        "qualified_occurred": "55.3%"
+      },
+      "scheduled_calls": 41,
+      "occurred_calls": 38,
+      "no_shows": 12,
+      "unresolved_calls": 3
     },
     {
       "value": "Ariella Irvine",
@@ -786,8 +786,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-17T14:30:20.688920-08:00",
-  "source_cutoff": "2026-11-17T14:30:20.688920-08:00",
+  "generated_at": "2026-11-17T14:45:25.343422-08:00",
+  "source_cutoff": "2026-11-17T14:45:25.343422-08:00",
   "vendhub_arr": 28789.0,
   "progress": {
     "day": 17,
@@ -818,15 +818,15 @@
   "period": "2026-11-01 through 2026-11-17 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 293,
+  "counted_meetings": 292,
   "excluded_repeat_candidates": 22,
-  "attribution_reviewed_at": "2026-11-17T14:30:20.688920-08:00",
+  "attribution_reviewed_at": "2026-11-17T14:45:25.343422-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 2597,
-    "bookings": 293,
+    "leads_created": 2596,
+    "bookings": 292,
     "marketing": 98,
-    "lane2": 187,
+    "lane2": 186,
     "social_dms": 8,
     "showed": 137,
     "qualified": 89,
@@ -848,10 +848,10 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 2027,
-      "bookings": 99,
+      "leads_created": 2026,
+      "bookings": 98,
       "marketing": 30,
-      "lane2": 69,
+      "lane2": 68,
       "social_dms": 0,
       "showed": 38,
       "qualified": 19,
@@ -861,9 +861,9 @@
       "drilldowns": [
         {
           "value": "nov03",
-          "bookings": 23,
+          "bookings": 22,
           "marketing": 6,
-          "lane2": 17,
+          "lane2": 16,
           "social_dms": 0,
           "showed": 7,
           "qualified": 5,
@@ -1524,9 +1524,9 @@
         },
         {
           "value": "Rob Maxfield",
-          "bookings": 28,
+          "bookings": 27,
           "marketing": 0,
-          "lane2": 28,
+          "lane2": 27,
           "social_dms": 0,
           "showed": 10,
           "qualified": 6,
@@ -1818,9 +1818,9 @@
         }
       ],
       "display": {
-        "projected": 175,
+        "projected": 173,
         "goal": 70,
-        "goal_pct": 141,
+        "goal_pct": 140,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -5679,10 +5679,10 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-17T14:30:20.688920-08:00",
+    "generated_at": "2026-11-17T14:45:25.343422-08:00",
     "counts": {
       "Christian Hartwell": 32,
-      "Scott Seymour": 14,
+      "Scott Seymour": 13,
       "Robin Perkins": 17,
       "Eric Piccione": 6,
       "Joe Vaughan": 0,
