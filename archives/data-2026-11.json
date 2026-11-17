@@ -4,8 +4,8 @@
   "grand": {
     "leads_created": 2358,
     "booked": 161,
-    "showed": 89,
-    "qualified": 63,
+    "showed": 90,
+    "qualified": 64,
     "closed": 14,
     "revenue": 97663.0
   },
@@ -13,8 +13,8 @@
     "LEAD SOURCES": {
       "leads_created": 2170,
       "booked": 156,
-      "showed": 84,
-      "qualified": 59,
+      "showed": 85,
+      "qualified": 60,
       "closed": 14,
       "revenue": 97663.0
     },
@@ -29,16 +29,28 @@
   },
   "funnels": {
     "Reactivation Scrapers": {
-      "leads_created": 31,
+      "leads_created": 32,
       "booked": 90,
-      "book_pct": 290.3,
-      "showed": 46,
-      "show_pct": 51.1,
-      "qualified": 37,
-      "qual_pct": 80.4,
+      "book_pct": 281.2,
+      "showed": 47,
+      "show_pct": 52.2,
+      "qualified": 38,
+      "qual_pct": 80.9,
       "closed": 7,
       "cw_pct": 7.8,
       "revenue": 45781.0
+    },
+    "Anthony IG": {
+      "leads_created": 1,
+      "booked": 2,
+      "book_pct": 200.0,
+      "showed": 1,
+      "show_pct": 50.0,
+      "qualified": 1,
+      "qual_pct": 100.0,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
     },
     "YouTube": {
       "leads_created": 19,
@@ -76,18 +88,6 @@
       "cw_pct": 0.0,
       "revenue": 0.0
     },
-    "Anthony IG": {
-      "leads_created": 1,
-      "booked": 2,
-      "book_pct": 200.0,
-      "showed": 1,
-      "show_pct": 50.0,
-      "qualified": 1,
-      "qual_pct": 100.0,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
-    },
     "Linkedin": {
       "leads_created": 3,
       "booked": 4,
@@ -101,9 +101,9 @@
       "revenue": 5997.0
     },
     "Google Ads": {
-      "leads_created": 81,
+      "leads_created": 80,
       "booked": 17,
-      "book_pct": 21.0,
+      "book_pct": 21.2,
       "showed": 13,
       "show_pct": 76.5,
       "qualified": 10,
