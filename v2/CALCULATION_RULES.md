@@ -220,3 +220,10 @@ python3 v2/refresh.py
 Archive coverage starts October 1, 2026, including the partial October 1–4 week. All intervals use an exclusive Pacific midnight cutoff after their last day, including daylight-saving transitions. Completed periods are finalized once at rollover and retained; the current month/week continue refreshing. Historical periods are reconstructed from current Close records within those windows, including the outcomes and attribution available when rebuilt. They do not reproduce an unavailable historical CRM state. `generated_at` records the actual rebuild time, while `source_cutoff` records the reporting-window boundary.
 
 `build.py` uses read-only Close GET requests. The standalone builder writes private row-level output under `v2/public/`; automated refreshes keep that data in temporary private storage. `publish_shadow.py` whitelists only aggregate values for `v2/index.html` and V2's HTML/JSON archives. Do not publish or commit `v2/public/data.json` or `v2/public/index.html`; they contain lead and meeting details. The current MTD and its archives remain unchanged.
+
+
+## November 17 source and created-lead correction
+
+Live builds count created leads only when the business line is VP or blank, matching the established booking offer policy; explicit other offers are excluded. Existing date and lead-status exclusions remain. Creation does not require a booking or a VP closer assignment.
+
+Source resolution uses the recognized Original Source field first, then recognized legacy Funnel Name DEAL, then the existing all-contact UTM source map and conflict rules. Created leads with unresolved origin receive that fallback even without a booking or win. Known authoritative origins do not require an extra contact request. Original Source and Booked By are separate fields; reactivation is not an acquisition origin. Frozen saved archives retain their original captured values; newly built live periods and exports use the corrected calculation.
