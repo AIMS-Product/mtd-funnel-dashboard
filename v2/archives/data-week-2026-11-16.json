@@ -71,6 +71,29 @@
       "unresolved_calls": 2
     },
     {
+      "value": "Esther Cohen",
+      "bookings": 3,
+      "marketing": 0,
+      "lane2": 3,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "0.0%",
+        "qualified": "0.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "0.0%"
+      },
+      "scheduled_calls": 1,
+      "occurred_calls": 1,
+      "no_shows": 1,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Pearl Sathekge",
       "bookings": 3,
       "marketing": 0,
@@ -118,29 +141,6 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 2,
-      "marketing": 0,
-      "lane2": 2,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "0.0%",
-        "qualified": "0.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "0.0%"
-      },
-      "scheduled_calls": 1,
-      "occurred_calls": 1,
-      "no_shows": 1,
-      "unresolved_calls": 0
-    },
-    {
-      "value": "Esther Cohen",
       "bookings": 2,
       "marketing": 0,
       "lane2": 2,
@@ -372,6 +372,29 @@
   ],
   "team": [
     {
+      "value": "Christian Hartwell",
+      "bookings": 10,
+      "marketing": 5,
+      "lane2": 4,
+      "social_dms": 1,
+      "showed": 3,
+      "qualified": 2,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "50.0%",
+        "qualified": "33.3%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "33.3%"
+      },
+      "scheduled_calls": 8,
+      "occurred_calls": 6,
+      "no_shows": 3,
+      "unresolved_calls": 2
+    },
+    {
       "value": "Ariella Irvine",
       "bookings": 9,
       "marketing": 0,
@@ -393,29 +416,6 @@
       "occurred_calls": 4,
       "no_shows": 2,
       "unresolved_calls": 1
-    },
-    {
-      "value": "Christian Hartwell",
-      "bookings": 9,
-      "marketing": 5,
-      "lane2": 3,
-      "social_dms": 1,
-      "showed": 3,
-      "qualified": 2,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "50.0%",
-        "qualified": "33.3%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "33.3%"
-      },
-      "scheduled_calls": 8,
-      "occurred_calls": 6,
-      "no_shows": 3,
-      "unresolved_calls": 2
     },
     {
       "value": "Robin Perkins",
@@ -533,8 +533,8 @@
       "unresolved_calls": 1
     }
   ],
-  "generated_at": "2026-11-17T11:30:22.871749-08:00",
-  "source_cutoff": "2026-11-17T11:30:22.871749-08:00",
+  "generated_at": "2026-11-17T11:45:17.715340-08:00",
+  "source_cutoff": "2026-11-17T11:45:17.715340-08:00",
   "vendhub_arr": 0.0,
   "progress": {
     "day": 17,
@@ -565,15 +565,15 @@
   "period": "2026-11-16 through 2026-11-17 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 30,
+  "counted_meetings": 31,
   "excluded_repeat_candidates": 4,
-  "attribution_reviewed_at": "2026-11-17T11:30:22.871749-08:00",
+  "attribution_reviewed_at": "2026-11-17T11:45:17.715340-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 205,
-    "bookings": 30,
+    "bookings": 31,
     "marketing": 8,
-    "lane2": 19,
+    "lane2": 20,
     "social_dms": 3,
     "showed": 12,
     "qualified": 7,
@@ -1578,9 +1578,9 @@
     {
       "channel": "Google Ads",
       "leads_created": 4,
-      "bookings": 3,
+      "bookings": 4,
       "marketing": 2,
-      "lane2": 1,
+      "lane2": 2,
       "social_dms": 0,
       "showed": 1,
       "qualified": 0,
@@ -1613,9 +1613,9 @@
         },
         {
           "value": "23815771816",
-          "bookings": 1,
+          "bookings": 2,
           "marketing": 1,
-          "lane2": 0,
+          "lane2": 1,
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
@@ -1678,10 +1678,31 @@
           "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
+        },
+        {
+          "value": "Esther Cohen",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
         }
       ],
       "display": {
-        "projected": 5,
+        "projected": 7,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -2361,7 +2382,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-17T11:30:22.871749-08:00",
+    "generated_at": "2026-11-17T11:45:17.715340-08:00",
     "counts": {
       "Christian Hartwell": 32,
       "Scott Seymour": 13,
