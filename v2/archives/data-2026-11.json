@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 107,
-      "marketing": 107,
+      "bookings": 106,
+      "marketing": 106,
       "lane2": 0,
       "social_dms": 0,
       "showed": 53,
@@ -26,9 +26,9 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 42,
+      "bookings": 44,
       "marketing": 0,
-      "lane2": 42,
+      "lane2": 44,
       "social_dms": 0,
       "showed": 22,
       "qualified": 18,
@@ -717,6 +717,29 @@
       "unresolved_calls": 14
     },
     {
+      "value": "Joe Dysert",
+      "bookings": 9,
+      "marketing": 3,
+      "lane2": 6,
+      "social_dms": 0,
+      "showed": 9,
+      "qualified": 7,
+      "closed_won": 2,
+      "revenue": 11996.0,
+      "formats": {
+        "show": "81.8%",
+        "qualified": "63.6%",
+        "close": "18.2%",
+        "revenue": "$11,996",
+        "average": "$5,998",
+        "qualified_occurred": "63.6%"
+      },
+      "scheduled_calls": 11,
+      "occurred_calls": 11,
+      "no_shows": 2,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Shreya Bechra",
       "bookings": 9,
       "marketing": 4,
@@ -738,29 +761,6 @@
       "occurred_calls": 14,
       "no_shows": 9,
       "unresolved_calls": 2
-    },
-    {
-      "value": "Joe Dysert",
-      "bookings": 8,
-      "marketing": 4,
-      "lane2": 4,
-      "social_dms": 0,
-      "showed": 9,
-      "qualified": 7,
-      "closed_won": 2,
-      "revenue": 11996.0,
-      "formats": {
-        "show": "81.8%",
-        "qualified": "63.6%",
-        "close": "18.2%",
-        "revenue": "$11,996",
-        "average": "$5,998",
-        "qualified_occurred": "63.6%"
-      },
-      "scheduled_calls": 11,
-      "occurred_calls": 11,
-      "no_shows": 2,
-      "unresolved_calls": 0
     },
     {
       "value": "Eric Piccione",
@@ -786,8 +786,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-18T07:45:18.727028-08:00",
-  "source_cutoff": "2026-11-18T07:45:18.727028-08:00",
+  "generated_at": "2026-11-18T08:00:23.709287-08:00",
+  "source_cutoff": "2026-11-18T08:00:23.709287-08:00",
   "vendhub_arr": 28789.0,
   "progress": {
     "day": 18,
@@ -818,15 +818,15 @@
   "period": "2026-11-01 through 2026-11-18 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 300,
+  "counted_meetings": 301,
   "excluded_repeat_candidates": 24,
-  "attribution_reviewed_at": "2026-11-18T07:45:18.727028-08:00",
+  "attribution_reviewed_at": "2026-11-18T08:00:23.709287-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 2303,
-    "bookings": 300,
-    "marketing": 107,
-    "lane2": 185,
+    "leads_created": 2302,
+    "bookings": 301,
+    "marketing": 106,
+    "lane2": 187,
     "social_dms": 8,
     "showed": 142,
     "qualified": 91,
@@ -848,10 +848,10 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 2029,
+      "leads_created": 2028,
       "bookings": 109,
-      "marketing": 38,
-      "lane2": 71,
+      "marketing": 37,
+      "lane2": 72,
       "social_dms": 0,
       "showed": 41,
       "qualified": 20,
@@ -929,29 +929,6 @@
           "unresolved_calls": 1
         },
         {
-          "value": "nov17",
-          "bookings": 6,
-          "marketing": 6,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "—"
-          },
-          "scheduled_calls": 0,
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "July29",
           "bookings": 5,
           "marketing": 0,
@@ -973,6 +950,29 @@
           "occurred_calls": 5,
           "no_shows": 3,
           "unresolved_calls": 1
+        },
+        {
+          "value": "nov17",
+          "bookings": 5,
+          "marketing": 5,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
         },
         {
           "value": "oct27",
@@ -1041,6 +1041,29 @@
           "scheduled_calls": 2,
           "occurred_calls": 2,
           "no_shows": 1,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "Unattributed",
+          "bookings": 3,
+          "marketing": 1,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 2,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "50.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "50.0%"
+          },
+          "scheduled_calls": 2,
+          "occurred_calls": 2,
+          "no_shows": 0,
           "unresolved_calls": 0
         },
         {
@@ -1175,29 +1198,6 @@
             "revenue": "$0",
             "average": "—",
             "qualified_occurred": "100.0%"
-          },
-          "scheduled_calls": 2,
-          "occurred_calls": 2,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
-          "value": "Unattributed",
-          "bookings": 2,
-          "marketing": 1,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 2,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "50.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "50.0%"
           },
           "scheduled_calls": 2,
           "occurred_calls": 2,
@@ -1549,8 +1549,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 38,
-          "marketing": 38,
+          "bookings": 37,
+          "marketing": 37,
           "lane2": 0,
           "social_dms": 0,
           "showed": 15,
@@ -1591,9 +1591,9 @@
         },
         {
           "value": "Vince Bartolini",
-          "bookings": 11,
+          "bookings": 12,
           "marketing": 0,
-          "lane2": 11,
+          "lane2": 12,
           "social_dms": 0,
           "showed": 6,
           "qualified": 4,
@@ -1885,21 +1885,21 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 97,
-      "bookings": 51,
+      "bookings": 52,
       "marketing": 6,
-      "lane2": 45,
+      "lane2": 46,
       "social_dms": 0,
       "showed": 29,
       "qualified": 19,
       "closed_won": 1,
       "revenue": 5997.0,
-      "unrecoverable_booked_leads": 51,
+      "unrecoverable_booked_leads": 52,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 49,
+          "bookings": 50,
           "marketing": 4,
-          "lane2": 45,
+          "lane2": 46,
           "social_dms": 0,
           "showed": 26,
           "qualified": 18,
@@ -2034,9 +2034,9 @@
         },
         {
           "value": "Vince Bartolini",
-          "bookings": 10,
+          "bookings": 11,
           "marketing": 0,
-          "lane2": 10,
+          "lane2": 11,
           "social_dms": 0,
           "showed": 5,
           "qualified": 3,
@@ -2370,7 +2370,7 @@
         }
       ],
       "display": {
-        "projected": 85,
+        "projected": 87,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -5601,7 +5601,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-18T07:45:18.727028-08:00",
+    "generated_at": "2026-11-18T08:00:23.709287-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 13,
