@@ -49,9 +49,9 @@
     },
     {
       "value": "Rob Maxfield",
-      "bookings": 38,
+      "bookings": 39,
       "marketing": 0,
-      "lane2": 38,
+      "lane2": 39,
       "social_dms": 0,
       "showed": 20,
       "qualified": 12,
@@ -232,6 +232,29 @@
       "unresolved_calls": 3
     },
     {
+      "value": "Ariella Irvine",
+      "bookings": 6,
+      "marketing": 0,
+      "lane2": 6,
+      "social_dms": 0,
+      "showed": 1,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "100.0%",
+        "qualified": "0.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "0.0%"
+      },
+      "scheduled_calls": 3,
+      "occurred_calls": 1,
+      "no_shows": 0,
+      "unresolved_calls": 2
+    },
+    {
       "value": "Andrea Harris",
       "bookings": 5,
       "marketing": 0,
@@ -253,29 +276,6 @@
       "occurred_calls": 1,
       "no_shows": 0,
       "unresolved_calls": 0
-    },
-    {
-      "value": "Ariella Irvine",
-      "bookings": 5,
-      "marketing": 0,
-      "lane2": 5,
-      "social_dms": 0,
-      "showed": 1,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "100.0%",
-        "qualified": "0.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "0.0%"
-      },
-      "scheduled_calls": 3,
-      "occurred_calls": 1,
-      "no_shows": 0,
-      "unresolved_calls": 2
     },
     {
       "value": "Tara Hall",
@@ -626,9 +626,9 @@
     },
     {
       "value": "Robin Perkins",
-      "bookings": 55,
+      "bookings": 56,
       "marketing": 21,
-      "lane2": 31,
+      "lane2": 32,
       "social_dms": 3,
       "showed": 27,
       "qualified": 14,
@@ -649,9 +649,9 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 53,
+      "bookings": 54,
       "marketing": 7,
-      "lane2": 45,
+      "lane2": 46,
       "social_dms": 1,
       "showed": 23,
       "qualified": 9,
@@ -809,8 +809,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-18T14:45:17.770741-08:00",
-  "source_cutoff": "2026-11-18T14:45:17.770741-08:00",
+  "generated_at": "2026-11-18T15:00:23.128759-08:00",
+  "source_cutoff": "2026-11-18T15:00:23.128759-08:00",
   "vendhub_arr": 28789.0,
   "progress": {
     "day": 18,
@@ -841,15 +841,15 @@
   "period": "2026-11-01 through 2026-11-18 PT",
   "rules_version": "booked_calls.v2.12-solstice-social-dms-20261118",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 320,
+  "counted_meetings": 322,
   "excluded_repeat_candidates": 30,
-  "attribution_reviewed_at": "2026-11-18T14:45:17.770741-08:00",
+  "attribution_reviewed_at": "2026-11-18T15:00:23.128759-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 2303,
-    "bookings": 320,
+    "leads_created": 2304,
+    "bookings": 322,
     "marketing": 106,
-    "lane2": 203,
+    "lane2": 205,
     "social_dms": 11,
     "showed": 146,
     "qualified": 94,
@@ -1908,21 +1908,21 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 96,
-      "bookings": 53,
+      "bookings": 54,
       "marketing": 6,
-      "lane2": 46,
+      "lane2": 47,
       "social_dms": 1,
       "showed": 29,
       "qualified": 20,
       "closed_won": 1,
       "revenue": 5997.0,
-      "unrecoverable_booked_leads": 53,
+      "unrecoverable_booked_leads": 54,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 51,
+          "bookings": 52,
           "marketing": 4,
-          "lane2": 46,
+          "lane2": 47,
           "social_dms": 1,
           "showed": 26,
           "qualified": 19,
@@ -2078,9 +2078,9 @@
         },
         {
           "value": "Rob Maxfield",
-          "bookings": 7,
+          "bookings": 8,
           "marketing": 0,
-          "lane2": 7,
+          "lane2": 8,
           "social_dms": 0,
           "showed": 6,
           "qualified": 4,
@@ -2414,7 +2414,7 @@
         }
       ],
       "display": {
-        "projected": 88,
+        "projected": 90,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -2434,10 +2434,10 @@
     },
     {
       "channel": "Google Ads",
-      "leads_created": 86,
-      "bookings": 40,
+      "leads_created": 87,
+      "bookings": 41,
       "marketing": 28,
-      "lane2": 12,
+      "lane2": 13,
       "social_dms": 0,
       "showed": 17,
       "qualified": 14,
@@ -2470,9 +2470,9 @@
         },
         {
           "value": "23805931083",
-          "bookings": 15,
+          "bookings": 16,
           "marketing": 10,
-          "lane2": 5,
+          "lane2": 6,
           "social_dms": 0,
           "showed": 5,
           "qualified": 3,
@@ -2666,6 +2666,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Ariella Irvine",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Christine Ocalan",
           "bookings": 1,
           "marketing": 0,
@@ -2772,7 +2793,7 @@
         }
       ],
       "display": {
-        "projected": 67,
+        "projected": 68,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -5693,11 +5714,11 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-18T14:45:17.770741-08:00",
+    "generated_at": "2026-11-18T15:00:23.128759-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 14,
-      "Robin Perkins": 19,
+      "Robin Perkins": 20,
       "Eric Piccione": 0,
       "Joe Vaughan": 0,
       "Shreya Bechra": 0,

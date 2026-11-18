@@ -94,6 +94,29 @@
       "unresolved_calls": 1
     },
     {
+      "value": "Rob Maxfield",
+      "bookings": 5,
+      "marketing": 0,
+      "lane2": 5,
+      "social_dms": 0,
+      "showed": 1,
+      "qualified": 1,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "50.0%",
+        "qualified": "50.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "50.0%"
+      },
+      "scheduled_calls": 4,
+      "occurred_calls": 2,
+      "no_shows": 1,
+      "unresolved_calls": 2
+    },
+    {
       "value": "Ariadna Rufrancos",
       "bookings": 4,
       "marketing": 0,
@@ -117,6 +140,29 @@
       "unresolved_calls": 2
     },
     {
+      "value": "Ariella Irvine",
+      "bookings": 4,
+      "marketing": 0,
+      "lane2": 4,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 1,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 1
+    },
+    {
       "value": "Pearl Sathekge",
       "bookings": 4,
       "marketing": 0,
@@ -138,29 +184,6 @@
       "occurred_calls": 0,
       "no_shows": 0,
       "unresolved_calls": 0
-    },
-    {
-      "value": "Rob Maxfield",
-      "bookings": 4,
-      "marketing": 0,
-      "lane2": 4,
-      "social_dms": 0,
-      "showed": 1,
-      "qualified": 1,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "50.0%",
-        "qualified": "50.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "50.0%"
-      },
-      "scheduled_calls": 4,
-      "occurred_calls": 2,
-      "no_shows": 1,
-      "unresolved_calls": 2
     },
     {
       "value": "Adam Linn",
@@ -207,29 +230,6 @@
       "occurred_calls": 0,
       "no_shows": 0,
       "unresolved_calls": 0
-    },
-    {
-      "value": "Ariella Irvine",
-      "bookings": 3,
-      "marketing": 0,
-      "lane2": 3,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "—",
-        "qualified": "—",
-        "close": "—",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "—"
-      },
-      "scheduled_calls": 1,
-      "occurred_calls": 0,
-      "no_shows": 0,
-      "unresolved_calls": 1
     },
     {
       "value": "Katie Meloche",
@@ -465,9 +465,9 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 15,
+      "bookings": 16,
       "marketing": 1,
-      "lane2": 13,
+      "lane2": 14,
       "social_dms": 1,
       "showed": 3,
       "qualified": 0,
@@ -488,9 +488,9 @@
     },
     {
       "value": "Robin Perkins",
-      "bookings": 12,
+      "bookings": 13,
       "marketing": 2,
-      "lane2": 8,
+      "lane2": 9,
       "social_dms": 2,
       "showed": 5,
       "qualified": 3,
@@ -625,8 +625,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-18T14:45:17.770741-08:00",
-  "source_cutoff": "2026-11-18T14:45:17.770741-08:00",
+  "generated_at": "2026-11-18T15:00:23.128759-08:00",
+  "source_cutoff": "2026-11-18T15:00:23.128759-08:00",
   "vendhub_arr": 2998.0,
   "progress": {
     "day": 18,
@@ -657,15 +657,15 @@
   "period": "2026-11-16 through 2026-11-18 PT",
   "rules_version": "booked_calls.v2.12-solstice-social-dms-20261118",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 73,
+  "counted_meetings": 75,
   "excluded_repeat_candidates": 11,
-  "attribution_reviewed_at": "2026-11-18T14:45:17.770741-08:00",
+  "attribution_reviewed_at": "2026-11-18T15:00:23.128759-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 210,
-    "bookings": 73,
+    "bookings": 75,
     "marketing": 16,
-    "lane2": 51,
+    "lane2": 53,
     "social_dms": 6,
     "showed": 24,
     "qualified": 14,
@@ -1459,21 +1459,21 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 10,
-      "bookings": 11,
+      "bookings": 12,
       "marketing": 0,
-      "lane2": 10,
+      "lane2": 11,
       "social_dms": 1,
       "showed": 6,
       "qualified": 6,
       "closed_won": 0,
       "revenue": 0.0,
-      "unrecoverable_booked_leads": 11,
+      "unrecoverable_booked_leads": 12,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 11,
+          "bookings": 12,
           "marketing": 0,
-          "lane2": 10,
+          "lane2": 11,
           "social_dms": 1,
           "showed": 6,
           "qualified": 6,
@@ -1538,6 +1538,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Rob Maxfield",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 2,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "0.0%",
+            "qualified_occurred": "100.0%"
+          },
+          "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Andrea Harris",
           "bookings": 1,
           "marketing": 0,
@@ -1576,27 +1597,6 @@
             "qualified_occurred": "100.0%"
           },
           "occurred_calls": 2,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
-          "value": "Rob Maxfield",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 1,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "100.0%",
-            "close": "0.0%",
-            "qualified_occurred": "100.0%"
-          },
-          "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
         },
@@ -1728,7 +1728,7 @@
         }
       ],
       "display": {
-        "projected": 18,
+        "projected": 20,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -1749,9 +1749,9 @@
     {
       "channel": "Google Ads",
       "leads_created": 6,
-      "bookings": 7,
+      "bookings": 8,
       "marketing": 2,
-      "lane2": 5,
+      "lane2": 6,
       "social_dms": 0,
       "showed": 1,
       "qualified": 0,
@@ -1761,9 +1761,9 @@
       "drilldowns": [
         {
           "value": "23805931083",
-          "bookings": 3,
+          "bookings": 4,
           "marketing": 1,
-          "lane2": 2,
+          "lane2": 3,
           "social_dms": 0,
           "showed": 1,
           "qualified": 0,
@@ -1874,6 +1874,27 @@
           "unresolved_calls": 2
         },
         {
+          "value": "Ariella Irvine",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Brad Savage",
           "bookings": 1,
           "marketing": 0,
@@ -1917,7 +1938,7 @@
         }
       ],
       "display": {
-        "projected": 12,
+        "projected": 13,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -3153,11 +3174,11 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-18T14:45:17.770741-08:00",
+    "generated_at": "2026-11-18T15:00:23.128759-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 14,
-      "Robin Perkins": 19,
+      "Robin Perkins": 20,
       "Eric Piccione": 0,
       "Joe Vaughan": 0,
       "Shreya Bechra": 0,
