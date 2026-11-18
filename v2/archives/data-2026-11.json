@@ -394,9 +394,9 @@
     },
     {
       "value": "Christine Ocalan",
-      "bookings": 2,
+      "bookings": 1,
       "marketing": 0,
-      "lane2": 2,
+      "lane2": 1,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -764,9 +764,9 @@
     },
     {
       "value": "Eric Piccione",
-      "bookings": 6,
+      "bookings": 5,
       "marketing": 2,
-      "lane2": 4,
+      "lane2": 3,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -786,8 +786,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-18T07:30:22.900278-08:00",
-  "source_cutoff": "2026-11-18T07:30:22.900278-08:00",
+  "generated_at": "2026-11-18T07:45:18.727028-08:00",
+  "source_cutoff": "2026-11-18T07:45:18.727028-08:00",
   "vendhub_arr": 28789.0,
   "progress": {
     "day": 18,
@@ -818,15 +818,15 @@
   "period": "2026-11-01 through 2026-11-18 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 301,
+  "counted_meetings": 300,
   "excluded_repeat_candidates": 24,
-  "attribution_reviewed_at": "2026-11-18T07:30:22.900278-08:00",
+  "attribution_reviewed_at": "2026-11-18T07:45:18.727028-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2303,
-    "bookings": 301,
+    "bookings": 300,
     "marketing": 107,
-    "lane2": 186,
+    "lane2": 185,
     "social_dms": 8,
     "showed": 142,
     "qualified": 91,
@@ -5543,86 +5543,6 @@
       "unresolved_calls": 0
     },
     {
-      "channel": "WWWS",
-      "leads_created": 0,
-      "bookings": 1,
-      "marketing": 0,
-      "lane2": 1,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0.0,
-      "unrecoverable_booked_leads": 0,
-      "drilldowns": [
-        {
-          "value": "Unattributed",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "—"
-          },
-          "scheduled_calls": 0,
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        }
-      ],
-      "packages": [],
-      "setters": [
-        {
-          "value": "Christine Ocalan",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
-          },
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        }
-      ],
-      "display": {
-        "projected": 2,
-        "goal": 1,
-        "goal_pct": 100,
-        "pace": "pace-exceed"
-      },
-      "formats": {
-        "show": "—",
-        "qualified": "—",
-        "close": "—",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "—"
-      },
-      "scheduled_calls": 0,
-      "occurred_calls": 0,
-      "no_shows": 0,
-      "unresolved_calls": 0
-    },
-    {
       "channel": "Mike Newsletter",
       "leads_created": 1,
       "bookings": 0,
@@ -5681,7 +5601,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-18T07:30:22.900278-08:00",
+    "generated_at": "2026-11-18T07:45:18.727028-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 13,
