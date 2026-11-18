@@ -26,9 +26,9 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 48,
+      "bookings": 49,
       "marketing": 0,
-      "lane2": 48,
+      "lane2": 49,
       "social_dms": 0,
       "showed": 22,
       "qualified": 18,
@@ -157,10 +157,10 @@
         "average": "—",
         "qualified_occurred": "25.0%"
       },
-      "scheduled_calls": 4,
+      "scheduled_calls": 5,
       "occurred_calls": 4,
       "no_shows": 2,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "value": "August Young",
@@ -642,10 +642,10 @@
         "average": "$9,497",
         "qualified_occurred": "26.5%"
       },
-      "scheduled_calls": 40,
+      "scheduled_calls": 41,
       "occurred_calls": 34,
       "no_shows": 11,
-      "unresolved_calls": 6
+      "unresolved_calls": 7
     },
     {
       "value": "Luke Herman",
@@ -718,9 +718,9 @@
     },
     {
       "value": "Joe Dysert",
-      "bookings": 11,
+      "bookings": 12,
       "marketing": 3,
-      "lane2": 8,
+      "lane2": 9,
       "social_dms": 0,
       "showed": 9,
       "qualified": 7,
@@ -786,8 +786,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-18T13:15:18.233731-08:00",
-  "source_cutoff": "2026-11-18T13:15:18.233731-08:00",
+  "generated_at": "2026-11-18T13:30:22.725422-08:00",
+  "source_cutoff": "2026-11-18T13:30:22.725422-08:00",
   "vendhub_arr": 28789.0,
   "progress": {
     "day": 18,
@@ -818,15 +818,15 @@
   "period": "2026-11-01 through 2026-11-18 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 314,
+  "counted_meetings": 315,
   "excluded_repeat_candidates": 27,
-  "attribution_reviewed_at": "2026-11-18T13:15:18.233731-08:00",
+  "attribution_reviewed_at": "2026-11-18T13:30:22.725422-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 2304,
-    "bookings": 314,
+    "leads_created": 2305,
+    "bookings": 315,
     "marketing": 106,
-    "lane2": 199,
+    "lane2": 200,
     "social_dms": 9,
     "showed": 146,
     "qualified": 94,
@@ -840,10 +840,10 @@
       "average": "$7,201",
       "qualified_occurred": "42.2%"
     },
-    "scheduled_calls": 270,
+    "scheduled_calls": 271,
     "occurred_calls": 223,
     "no_shows": 77,
-    "unresolved_calls": 47
+    "unresolved_calls": 48
   },
   "channels": [
     {
@@ -1885,21 +1885,21 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 97,
-      "bookings": 52,
+      "bookings": 53,
       "marketing": 6,
-      "lane2": 46,
+      "lane2": 47,
       "social_dms": 0,
       "showed": 30,
       "qualified": 20,
       "closed_won": 1,
       "revenue": 5997.0,
-      "unrecoverable_booked_leads": 52,
+      "unrecoverable_booked_leads": 53,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 50,
+          "bookings": 51,
           "marketing": 4,
-          "lane2": 46,
+          "lane2": 47,
           "social_dms": 0,
           "showed": 27,
           "qualified": 19,
@@ -2012,6 +2012,27 @@
       ],
       "setters": [
         {
+          "value": "Vince Bartolini",
+          "bookings": 12,
+          "marketing": 0,
+          "lane2": 12,
+          "social_dms": 0,
+          "showed": 5,
+          "qualified": 3,
+          "closed_won": 1,
+          "revenue": 5997.0,
+          "scheduled_calls": 8,
+          "formats": {
+            "show": "71.4%",
+            "qualified": "42.9%",
+            "close": "14.3%",
+            "qualified_occurred": "42.9%"
+          },
+          "occurred_calls": 7,
+          "no_shows": 2,
+          "unresolved_calls": 1
+        },
+        {
           "value": "Adam Linn",
           "bookings": 12,
           "marketing": 0,
@@ -2031,27 +2052,6 @@
           "occurred_calls": 7,
           "no_shows": 4,
           "unresolved_calls": 2
-        },
-        {
-          "value": "Vince Bartolini",
-          "bookings": 11,
-          "marketing": 0,
-          "lane2": 11,
-          "social_dms": 0,
-          "showed": 5,
-          "qualified": 3,
-          "closed_won": 1,
-          "revenue": 5997.0,
-          "scheduled_calls": 8,
-          "formats": {
-            "show": "71.4%",
-            "qualified": "42.9%",
-            "close": "14.3%",
-            "qualified_occurred": "42.9%"
-          },
-          "occurred_calls": 7,
-          "no_shows": 2,
-          "unresolved_calls": 1
         },
         {
           "value": "Rob Maxfield",
@@ -2370,7 +2370,7 @@
         }
       ],
       "display": {
-        "projected": 87,
+        "projected": 88,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -2748,7 +2748,7 @@
     },
     {
       "channel": "YouTube",
-      "leads_created": 60,
+      "leads_created": 61,
       "bookings": 36,
       "marketing": 20,
       "lane2": 16,
@@ -5579,10 +5579,10 @@
             "average": "—",
             "qualified_occurred": "—"
           },
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         }
       ],
       "packages": [],
@@ -5597,7 +5597,7 @@
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "formats": {
             "show": "—",
             "qualified": "—",
@@ -5606,7 +5606,7 @@
           },
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         }
       ],
       "display": {
@@ -5623,10 +5623,10 @@
         "average": "—",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 0,
+      "scheduled_calls": 1,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "channel": "Mike Newsletter",
@@ -5687,7 +5687,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-18T13:15:18.233731-08:00",
+    "generated_at": "2026-11-18T13:30:22.725422-08:00",
     "counts": {
       "Christian Hartwell": 32,
       "Scott Seymour": 15,
