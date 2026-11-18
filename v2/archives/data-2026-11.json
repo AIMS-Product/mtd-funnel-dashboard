@@ -232,6 +232,29 @@
       "unresolved_calls": 1
     },
     {
+      "value": "Andrea Harris",
+      "bookings": 5,
+      "marketing": 0,
+      "lane2": 5,
+      "social_dms": 0,
+      "showed": 1,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "100.0%",
+        "qualified": "0.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "0.0%"
+      },
+      "scheduled_calls": 1,
+      "occurred_calls": 1,
+      "no_shows": 0,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Ariella Irvine",
       "bookings": 5,
       "marketing": 0,
@@ -275,29 +298,6 @@
       "scheduled_calls": 6,
       "occurred_calls": 6,
       "no_shows": 4,
-      "unresolved_calls": 0
-    },
-    {
-      "value": "Andrea Harris",
-      "bookings": 4,
-      "marketing": 0,
-      "lane2": 4,
-      "social_dms": 0,
-      "showed": 1,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "100.0%",
-        "qualified": "0.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "0.0%"
-      },
-      "scheduled_calls": 1,
-      "occurred_calls": 1,
-      "no_shows": 0,
       "unresolved_calls": 0
     },
     {
@@ -626,9 +626,9 @@
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 52,
+      "bookings": 53,
       "marketing": 7,
-      "lane2": 45,
+      "lane2": 46,
       "social_dms": 0,
       "showed": 23,
       "qualified": 9,
@@ -786,8 +786,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-18T12:00:23.431379-08:00",
-  "source_cutoff": "2026-11-18T12:00:23.431379-08:00",
+  "generated_at": "2026-11-18T12:15:20.495646-08:00",
+  "source_cutoff": "2026-11-18T12:15:20.495646-08:00",
   "vendhub_arr": 28789.0,
   "progress": {
     "day": 18,
@@ -818,15 +818,15 @@
   "period": "2026-11-01 through 2026-11-18 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 309,
+  "counted_meetings": 310,
   "excluded_repeat_candidates": 25,
-  "attribution_reviewed_at": "2026-11-18T12:00:23.431379-08:00",
+  "attribution_reviewed_at": "2026-11-18T12:15:20.495646-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2302,
-    "bookings": 309,
+    "bookings": 310,
     "marketing": 106,
-    "lane2": 194,
+    "lane2": 195,
     "social_dms": 9,
     "showed": 146,
     "qualified": 94,
@@ -849,9 +849,9 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 2027,
-      "bookings": 114,
+      "bookings": 115,
       "marketing": 37,
-      "lane2": 77,
+      "lane2": 78,
       "social_dms": 0,
       "showed": 41,
       "qualified": 20,
@@ -907,9 +907,9 @@
         },
         {
           "value": "oct20",
-          "bookings": 9,
+          "bookings": 10,
           "marketing": 1,
-          "lane2": 8,
+          "lane2": 9,
           "social_dms": 0,
           "showed": 4,
           "qualified": 2,
@@ -1716,6 +1716,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Andrea Harris",
+          "bookings": 3,
+          "marketing": 0,
+          "lane2": 3,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Tara Hall",
           "bookings": 3,
           "marketing": 0,
@@ -1734,27 +1755,6 @@
           },
           "occurred_calls": 4,
           "no_shows": 3,
-          "unresolved_calls": 0
-        },
-        {
-          "value": "Andrea Harris",
-          "bookings": 2,
-          "marketing": 0,
-          "lane2": 2,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
-          },
-          "occurred_calls": 0,
-          "no_shows": 0,
           "unresolved_calls": 0
         },
         {
@@ -1864,9 +1864,9 @@
         }
       ],
       "display": {
-        "projected": 190,
+        "projected": 192,
         "goal": 70,
-        "goal_pct": 163,
+        "goal_pct": 164,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -5666,7 +5666,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-18T12:00:23.431379-08:00",
+    "generated_at": "2026-11-18T12:15:20.495646-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 15,
