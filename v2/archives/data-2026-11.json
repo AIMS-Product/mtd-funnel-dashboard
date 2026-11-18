@@ -72,9 +72,9 @@
     },
     {
       "value": "Naria Torres",
-      "bookings": 27,
+      "bookings": 26,
       "marketing": 0,
-      "lane2": 27,
+      "lane2": 26,
       "social_dms": 0,
       "showed": 21,
       "qualified": 19,
@@ -741,9 +741,9 @@
     },
     {
       "value": "Joe Dysert",
-      "bookings": 8,
+      "bookings": 7,
       "marketing": 3,
-      "lane2": 5,
+      "lane2": 4,
       "social_dms": 0,
       "showed": 9,
       "qualified": 7,
@@ -786,8 +786,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-17T18:45:16.758745-08:00",
-  "source_cutoff": "2026-11-17T18:45:16.758745-08:00",
+  "generated_at": "2026-11-17T19:00:34.871461-08:00",
+  "source_cutoff": "2026-11-17T19:00:34.871461-08:00",
   "vendhub_arr": 28789.0,
   "progress": {
     "day": 17,
@@ -818,15 +818,15 @@
   "period": "2026-11-01 through 2026-11-17 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 301,
+  "counted_meetings": 300,
   "excluded_repeat_candidates": 23,
-  "attribution_reviewed_at": "2026-11-17T18:45:16.758745-08:00",
+  "attribution_reviewed_at": "2026-11-17T19:00:34.871461-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2300,
-    "bookings": 301,
+    "bookings": 300,
     "marketing": 106,
-    "lane2": 187,
+    "lane2": 186,
     "social_dms": 8,
     "showed": 141,
     "qualified": 91,
@@ -4071,9 +4071,9 @@
     {
       "channel": "Website",
       "leads_created": 7,
-      "bookings": 15,
+      "bookings": 14,
       "marketing": 6,
-      "lane2": 9,
+      "lane2": 8,
       "social_dms": 0,
       "showed": 6,
       "qualified": 5,
@@ -4083,9 +4083,9 @@
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 9,
+          "bookings": 8,
           "marketing": 4,
-          "lane2": 5,
+          "lane2": 4,
           "social_dms": 0,
           "showed": 4,
           "qualified": 3,
@@ -4262,27 +4262,6 @@
           "unresolved_calls": 2
         },
         {
-          "value": "Naria Torres",
-          "bookings": 4,
-          "marketing": 0,
-          "lane2": 4,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 1,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "100.0%",
-            "close": "0.0%",
-            "qualified_occurred": "100.0%"
-          },
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "Vince Bartolini",
           "bookings": 3,
           "marketing": 0,
@@ -4300,6 +4279,27 @@
             "qualified_occurred": "100.0%"
           },
           "occurred_calls": 3,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "Naria Torres",
+          "bookings": 3,
+          "marketing": 0,
+          "lane2": 3,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "0.0%",
+            "qualified_occurred": "100.0%"
+          },
+          "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
         },
@@ -4368,9 +4368,9 @@
         }
       ],
       "display": {
-        "projected": 26,
+        "projected": 25,
         "goal": 100,
-        "goal_pct": 15,
+        "goal_pct": 14,
         "pace": "pace-behind"
       },
       "formats": {
@@ -5681,7 +5681,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-17T18:45:16.758745-08:00",
+    "generated_at": "2026-11-17T19:00:34.871461-08:00",
     "counts": {
       "Christian Hartwell": 32,
       "Scott Seymour": 13,
