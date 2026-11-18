@@ -26,9 +26,9 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 46,
+      "bookings": 47,
       "marketing": 0,
-      "lane2": 46,
+      "lane2": 47,
       "social_dms": 0,
       "showed": 22,
       "qualified": 18,
@@ -164,9 +164,9 @@
     },
     {
       "value": "Esther Cohen",
-      "bookings": 8,
+      "bookings": 9,
       "marketing": 0,
-      "lane2": 8,
+      "lane2": 9,
       "social_dms": 0,
       "showed": 2,
       "qualified": 1,
@@ -187,10 +187,10 @@
     },
     {
       "value": "Pearl Sathekge",
-      "bookings": 8,
+      "bookings": 9,
       "marketing": 0,
       "lane2": 0,
-      "social_dms": 8,
+      "social_dms": 9,
       "showed": 1,
       "qualified": 0,
       "closed_won": 0,
@@ -393,7 +393,7 @@
       "unresolved_calls": 0
     },
     {
-      "value": "Katie Meloche",
+      "value": "Christine Ocalan",
       "bookings": 2,
       "marketing": 0,
       "lane2": 2,
@@ -416,10 +416,10 @@
       "unresolved_calls": 0
     },
     {
-      "value": "Christine Ocalan",
-      "bookings": 1,
+      "value": "Katie Meloche",
+      "bookings": 2,
       "marketing": 0,
-      "lane2": 1,
+      "lane2": 2,
       "social_dms": 0,
       "showed": 0,
       "qualified": 0,
@@ -580,9 +580,9 @@
   "team": [
     {
       "value": "Christian Hartwell",
-      "bookings": 57,
+      "bookings": 58,
       "marketing": 21,
-      "lane2": 35,
+      "lane2": 36,
       "social_dms": 1,
       "showed": 26,
       "qualified": 21,
@@ -603,9 +603,9 @@
     },
     {
       "value": "Robin Perkins",
-      "bookings": 54,
+      "bookings": 55,
       "marketing": 21,
-      "lane2": 30,
+      "lane2": 31,
       "social_dms": 3,
       "showed": 27,
       "qualified": 14,
@@ -649,10 +649,10 @@
     },
     {
       "value": "Luke Herman",
-      "bookings": 47,
+      "bookings": 49,
       "marketing": 17,
-      "lane2": 29,
-      "social_dms": 1,
+      "lane2": 30,
+      "social_dms": 2,
       "showed": 24,
       "qualified": 16,
       "closed_won": 2,
@@ -786,8 +786,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-18T11:15:17.731025-08:00",
-  "source_cutoff": "2026-11-18T11:15:17.731025-08:00",
+  "generated_at": "2026-11-18T11:30:22.817727-08:00",
+  "source_cutoff": "2026-11-18T11:30:22.817727-08:00",
   "vendhub_arr": 28789.0,
   "progress": {
     "day": 18,
@@ -818,16 +818,16 @@
   "period": "2026-11-01 through 2026-11-18 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 305,
+  "counted_meetings": 309,
   "excluded_repeat_candidates": 25,
-  "attribution_reviewed_at": "2026-11-18T11:15:17.731025-08:00",
+  "attribution_reviewed_at": "2026-11-18T11:30:22.817727-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2302,
-    "bookings": 305,
+    "bookings": 309,
     "marketing": 106,
-    "lane2": 191,
-    "social_dms": 8,
+    "lane2": 194,
+    "social_dms": 9,
     "showed": 145,
     "qualified": 93,
     "closed_won": 15,
@@ -849,9 +849,9 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 2027,
-      "bookings": 112,
+      "bookings": 114,
       "marketing": 37,
-      "lane2": 75,
+      "lane2": 77,
       "social_dms": 0,
       "showed": 41,
       "qualified": 20,
@@ -861,9 +861,9 @@
       "drilldowns": [
         {
           "value": "nov03",
-          "bookings": 22,
+          "bookings": 23,
           "marketing": 6,
-          "lane2": 16,
+          "lane2": 17,
           "social_dms": 0,
           "showed": 7,
           "qualified": 5,
@@ -975,6 +975,29 @@
           "unresolved_calls": 1
         },
         {
+          "value": "sept15",
+          "bookings": 5,
+          "marketing": 0,
+          "lane2": 5,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "33.3%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "0.0%"
+          },
+          "scheduled_calls": 3,
+          "occurred_calls": 3,
+          "no_shows": 2,
+          "unresolved_calls": 0
+        },
+        {
           "value": "oct13",
           "bookings": 4,
           "marketing": 0,
@@ -1018,29 +1041,6 @@
           "scheduled_calls": 4,
           "occurred_calls": 4,
           "no_shows": 3,
-          "unresolved_calls": 0
-        },
-        {
-          "value": "sept15",
-          "bookings": 4,
-          "marketing": 0,
-          "lane2": 4,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "33.3%",
-            "qualified": "0.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "0.0%"
-          },
-          "scheduled_calls": 3,
-          "occurred_calls": 3,
-          "no_shows": 2,
           "unresolved_calls": 0
         },
         {
@@ -1591,9 +1591,9 @@
         },
         {
           "value": "Vince Bartolini",
-          "bookings": 14,
+          "bookings": 15,
           "marketing": 0,
-          "lane2": 14,
+          "lane2": 15,
           "social_dms": 0,
           "showed": 6,
           "qualified": 4,
@@ -1696,9 +1696,9 @@
         },
         {
           "value": "Esther Cohen",
-          "bookings": 3,
+          "bookings": 4,
           "marketing": 0,
-          "lane2": 3,
+          "lane2": 4,
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
@@ -1864,9 +1864,9 @@
         }
       ],
       "display": {
-        "projected": 187,
+        "projected": 190,
         "goal": 70,
-        "goal_pct": 160,
+        "goal_pct": 163,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -2391,9 +2391,9 @@
     {
       "channel": "Google Ads",
       "leads_created": 86,
-      "bookings": 37,
+      "bookings": 38,
       "marketing": 28,
-      "lane2": 9,
+      "lane2": 10,
       "social_dms": 0,
       "showed": 17,
       "qualified": 14,
@@ -2469,6 +2469,29 @@
           "occurred_calls": 2,
           "no_shows": 1,
           "unresolved_calls": 1
+        },
+        {
+          "value": "23883800856",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
         }
       ],
       "packages": [
@@ -2578,6 +2601,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Christine Ocalan",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Esther Cohen",
           "bookings": 1,
           "marketing": 0,
@@ -2684,7 +2728,7 @@
         }
       ],
       "display": {
-        "projected": 62,
+        "projected": 63,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -3639,10 +3683,10 @@
     {
       "channel": "Instagram",
       "leads_created": 16,
-      "bookings": 23,
+      "bookings": 24,
       "marketing": 2,
       "lane2": 13,
-      "social_dms": 8,
+      "social_dms": 9,
       "showed": 8,
       "qualified": 7,
       "closed_won": 1,
@@ -3651,10 +3695,10 @@
       "drilldowns": [
         {
           "value": "mh-ig-bio",
-          "bookings": 7,
+          "bookings": 8,
           "marketing": 0,
           "lane2": 1,
-          "social_dms": 6,
+          "social_dms": 7,
           "showed": 1,
           "qualified": 1,
           "closed_won": 0,
@@ -3882,10 +3926,10 @@
       "setters": [
         {
           "value": "Pearl Sathekge",
-          "bookings": 8,
+          "bookings": 9,
           "marketing": 0,
           "lane2": 0,
-          "social_dms": 8,
+          "social_dms": 9,
           "showed": 1,
           "qualified": 0,
           "closed_won": 0,
@@ -4050,7 +4094,7 @@
         }
       ],
       "display": {
-        "projected": 38,
+        "projected": 40,
         "goal": 300,
         "goal_pct": 8,
         "pace": "pace-behind"
@@ -5622,11 +5666,11 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-18T11:15:17.731025-08:00",
+    "generated_at": "2026-11-18T11:30:22.817727-08:00",
     "counts": {
       "Christian Hartwell": 31,
-      "Scott Seymour": 15,
-      "Robin Perkins": 20,
+      "Scott Seymour": 14,
+      "Robin Perkins": 19,
       "Eric Piccione": 0,
       "Joe Vaughan": 0,
       "Shreya Bechra": 0,
