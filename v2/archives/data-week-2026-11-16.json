@@ -42,10 +42,10 @@
         "average": "$10,347",
         "qualified_occurred": "50.0%"
       },
-      "scheduled_calls": 5,
+      "scheduled_calls": 6,
       "occurred_calls": 4,
       "no_shows": 1,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Brad Savage",
@@ -481,10 +481,10 @@
         "average": "$10,347",
         "qualified_occurred": "50.0%"
       },
-      "scheduled_calls": 8,
+      "scheduled_calls": 9,
       "occurred_calls": 6,
       "no_shows": 1,
-      "unresolved_calls": 2
+      "unresolved_calls": 3
     },
     {
       "value": "Scott Seymour",
@@ -602,8 +602,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-18T13:45:19.908002-08:00",
-  "source_cutoff": "2026-11-18T13:45:19.908002-08:00",
+  "generated_at": "2026-11-18T14:00:31.792386-08:00",
+  "source_cutoff": "2026-11-18T14:00:31.792386-08:00",
   "vendhub_arr": 2998.0,
   "progress": {
     "day": 18,
@@ -636,7 +636,7 @@
   "booking_scope": "vp-appointments.v2",
   "counted_meetings": 69,
   "excluded_repeat_candidates": 9,
-  "attribution_reviewed_at": "2026-11-18T13:45:19.908002-08:00",
+  "attribution_reviewed_at": "2026-11-18T14:00:31.792386-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 210,
@@ -656,10 +656,10 @@
       "average": "$10,347",
       "qualified_occurred": "40.0%"
     },
-    "scheduled_calls": 46,
+    "scheduled_calls": 47,
     "occurred_calls": 35,
     "no_shows": 11,
-    "unresolved_calls": 11
+    "unresolved_calls": 12
   },
   "channels": [
     {
@@ -2016,6 +2016,29 @@
           "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
+        },
+        {
+          "value": "vp_setter",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 1
         }
       ],
       "packages": [
@@ -2114,7 +2137,7 @@
           "qualified": 1,
           "closed_won": 1,
           "revenue": 10347.0,
-          "scheduled_calls": 1,
+          "scheduled_calls": 2,
           "formats": {
             "show": "100.0%",
             "qualified": "100.0%",
@@ -2123,7 +2146,7 @@
           },
           "occurred_calls": 1,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         }
       ],
       "display": {
@@ -2140,10 +2163,10 @@
         "average": "$10,347",
         "qualified_occurred": "100.0%"
       },
-      "scheduled_calls": 1,
+      "scheduled_calls": 2,
       "occurred_calls": 1,
       "no_shows": 0,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "channel": "Website",
@@ -3099,9 +3122,9 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-18T13:45:19.908002-08:00",
+    "generated_at": "2026-11-18T14:00:31.792386-08:00",
     "counts": {
-      "Christian Hartwell": 32,
+      "Christian Hartwell": 31,
       "Scott Seymour": 14,
       "Robin Perkins": 19,
       "Eric Piccione": 0,
