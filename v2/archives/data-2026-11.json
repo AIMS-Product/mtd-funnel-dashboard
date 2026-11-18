@@ -226,10 +226,10 @@
         "average": "—",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 1,
+      "scheduled_calls": 2,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Andrea Harris",
@@ -734,10 +734,10 @@
         "average": "$5,998",
         "qualified_occurred": "63.6%"
       },
-      "scheduled_calls": 11,
+      "scheduled_calls": 12,
       "occurred_calls": 11,
       "no_shows": 2,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "value": "Shreya Bechra",
@@ -786,8 +786,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-18T12:15:20.495646-08:00",
-  "source_cutoff": "2026-11-18T12:15:20.495646-08:00",
+  "generated_at": "2026-11-18T12:30:23.439963-08:00",
+  "source_cutoff": "2026-11-18T12:30:23.439963-08:00",
   "vendhub_arr": 28789.0,
   "progress": {
     "day": 18,
@@ -819,11 +819,11 @@
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
   "counted_meetings": 310,
-  "excluded_repeat_candidates": 25,
-  "attribution_reviewed_at": "2026-11-18T12:15:20.495646-08:00",
+  "excluded_repeat_candidates": 27,
+  "attribution_reviewed_at": "2026-11-18T12:30:23.439963-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 2302,
+    "leads_created": 2304,
     "bookings": 310,
     "marketing": 106,
     "lane2": 195,
@@ -840,15 +840,15 @@
       "average": "$7,201",
       "qualified_occurred": "42.3%"
     },
-    "scheduled_calls": 268,
+    "scheduled_calls": 269,
     "occurred_calls": 222,
     "no_shows": 76,
-    "unresolved_calls": 46
+    "unresolved_calls": 47
   },
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 2027,
+      "leads_created": 2028,
       "bookings": 115,
       "marketing": 37,
       "lane2": 78,
@@ -1913,10 +1913,10 @@
             "average": "$5,997",
             "qualified_occurred": "43.2%"
           },
-          "scheduled_calls": 48,
+          "scheduled_calls": 49,
           "occurred_calls": 44,
           "no_shows": 17,
-          "unresolved_calls": 4
+          "unresolved_calls": 5
         },
         {
           "value": "_____",
@@ -2210,7 +2210,7 @@
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "formats": {
             "show": "—",
             "qualified": "—",
@@ -2219,7 +2219,7 @@
           },
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "Brad Savage",
@@ -2383,10 +2383,10 @@
         "average": "$5,997",
         "qualified_occurred": "41.7%"
       },
-      "scheduled_calls": 52,
+      "scheduled_calls": 53,
       "occurred_calls": 48,
       "no_shows": 18,
-      "unresolved_calls": 4
+      "unresolved_calls": 5
     },
     {
       "channel": "Google Ads",
@@ -3682,7 +3682,7 @@
     },
     {
       "channel": "Instagram",
-      "leads_created": 16,
+      "leads_created": 17,
       "bookings": 24,
       "marketing": 2,
       "lane2": 13,
@@ -5666,7 +5666,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-18T12:15:20.495646-08:00",
+    "generated_at": "2026-11-18T12:30:23.439963-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 15,

@@ -26,9 +26,9 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 11,
+      "bookings": 12,
       "marketing": 0,
-      "lane2": 11,
+      "lane2": 12,
       "social_dms": 0,
       "showed": 3,
       "qualified": 2,
@@ -180,10 +180,10 @@
         "average": "—",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 0,
+      "scheduled_calls": 1,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "value": "Ariella Irvine",
@@ -465,9 +465,9 @@
     },
     {
       "value": "Robin Perkins",
-      "bookings": 11,
+      "bookings": 12,
       "marketing": 2,
-      "lane2": 7,
+      "lane2": 8,
       "social_dms": 2,
       "showed": 5,
       "qualified": 3,
@@ -527,10 +527,10 @@
         "average": "—",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 0,
+      "scheduled_calls": 1,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 0
+      "unresolved_calls": 1
     },
     {
       "value": "Eric Piccione",
@@ -602,8 +602,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-18T12:15:20.495646-08:00",
-  "source_cutoff": "2026-11-18T12:15:20.495646-08:00",
+  "generated_at": "2026-11-18T12:30:23.439963-08:00",
+  "source_cutoff": "2026-11-18T12:30:23.439963-08:00",
   "vendhub_arr": 2998.0,
   "progress": {
     "day": 18,
@@ -634,15 +634,15 @@
   "period": "2026-11-16 through 2026-11-18 PT",
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 61,
-  "excluded_repeat_candidates": 8,
-  "attribution_reviewed_at": "2026-11-18T12:15:20.495646-08:00",
+  "counted_meetings": 62,
+  "excluded_repeat_candidates": 9,
+  "attribution_reviewed_at": "2026-11-18T12:30:23.439963-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 208,
-    "bookings": 61,
+    "leads_created": 210,
+    "bookings": 62,
     "marketing": 16,
-    "lane2": 41,
+    "lane2": 42,
     "social_dms": 4,
     "showed": 24,
     "qualified": 14,
@@ -656,15 +656,15 @@
       "average": "$10,347",
       "qualified_occurred": "41.2%"
     },
-    "scheduled_calls": 43,
+    "scheduled_calls": 44,
     "occurred_calls": 34,
     "no_shows": 10,
-    "unresolved_calls": 9
+    "unresolved_calls": 10
   },
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 177,
+      "leads_created": 178,
       "bookings": 33,
       "marketing": 8,
       "lane2": 25,
@@ -1436,21 +1436,21 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 10,
-      "bookings": 9,
+      "bookings": 10,
       "marketing": 0,
-      "lane2": 9,
+      "lane2": 10,
       "social_dms": 0,
       "showed": 7,
       "qualified": 6,
       "closed_won": 0,
       "revenue": 0.0,
-      "unrecoverable_booked_leads": 9,
+      "unrecoverable_booked_leads": 10,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 9,
+          "bookings": 10,
           "marketing": 0,
-          "lane2": 9,
+          "lane2": 10,
           "social_dms": 0,
           "showed": 7,
           "qualified": 6,
@@ -1464,19 +1464,19 @@
             "average": "—",
             "qualified_occurred": "60.0%"
           },
-          "scheduled_calls": 11,
+          "scheduled_calls": 12,
           "occurred_calls": 10,
           "no_shows": 3,
-          "unresolved_calls": 1
+          "unresolved_calls": 2
         }
       ],
       "packages": [],
       "setters": [
         {
           "value": "Vince Bartolini",
-          "bookings": 3,
+          "bookings": 4,
           "marketing": 0,
-          "lane2": 3,
+          "lane2": 4,
           "social_dms": 0,
           "showed": 0,
           "qualified": 0,
@@ -1620,6 +1620,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Ariadna Rufrancos",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 1
+        },
+        {
           "value": "Helena Seitz",
           "bookings": 0,
           "marketing": 0,
@@ -1684,7 +1705,7 @@
         }
       ],
       "display": {
-        "projected": 15,
+        "projected": 17,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -1697,14 +1718,14 @@
         "average": "—",
         "qualified_occurred": "60.0%"
       },
-      "scheduled_calls": 11,
+      "scheduled_calls": 12,
       "occurred_calls": 10,
       "no_shows": 3,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "channel": "Instagram",
-      "leads_created": 4,
+      "leads_created": 5,
       "bookings": 6,
       "marketing": 1,
       "lane2": 1,
@@ -2954,7 +2975,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-18T12:15:20.495646-08:00",
+    "generated_at": "2026-11-18T12:30:23.439963-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 15,
