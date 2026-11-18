@@ -485,6 +485,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Unassigned",
+      "bookings": 1,
+      "marketing": 0,
+      "lane2": 0,
+      "social_dms": 1,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "—",
+        "qualified": "—",
+        "close": "—",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "—"
+      },
+      "scheduled_calls": 0,
+      "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 0
+    },
+    {
       "value": "Marketing / Unassigned",
       "bookings": 0,
       "marketing": 0,
@@ -580,10 +603,10 @@
   "team": [
     {
       "value": "Christian Hartwell",
-      "bookings": 61,
+      "bookings": 62,
       "marketing": 21,
       "lane2": 39,
-      "social_dms": 1,
+      "social_dms": 2,
       "showed": 26,
       "qualified": 21,
       "closed_won": 4,
@@ -786,8 +809,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-18T14:00:31.792386-08:00",
-  "source_cutoff": "2026-11-18T14:00:31.792386-08:00",
+  "generated_at": "2026-11-18T14:14:04.423212-08:00",
+  "source_cutoff": "2026-11-18T14:14:04.423212-08:00",
   "vendhub_arr": 28789.0,
   "progress": {
     "day": 18,
@@ -816,18 +839,18 @@
     }
   },
   "period": "2026-11-01 through 2026-11-18 PT",
-  "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
+  "rules_version": "booked_calls.v2.12-solstice-social-dms-20261118",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 317,
+  "counted_meetings": 318,
   "excluded_repeat_candidates": 27,
-  "attribution_reviewed_at": "2026-11-18T14:00:31.792386-08:00",
+  "attribution_reviewed_at": "2026-11-18T14:14:04.423212-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2304,
-    "bookings": 317,
+    "bookings": 318,
     "marketing": 106,
     "lane2": 202,
-    "social_dms": 9,
+    "social_dms": 10,
     "showed": 146,
     "qualified": 94,
     "closed_won": 15,
@@ -1885,22 +1908,22 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 97,
-      "bookings": 53,
+      "bookings": 54,
       "marketing": 6,
       "lane2": 47,
-      "social_dms": 0,
+      "social_dms": 1,
       "showed": 30,
       "qualified": 20,
       "closed_won": 1,
       "revenue": 5997.0,
-      "unrecoverable_booked_leads": 53,
+      "unrecoverable_booked_leads": 54,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 51,
+          "bookings": 52,
           "marketing": 4,
           "lane2": 47,
-          "social_dms": 0,
+          "social_dms": 1,
           "showed": 27,
           "qualified": 19,
           "closed_won": 1,
@@ -2306,6 +2329,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Unassigned",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 1,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Cassie Caraballo",
           "bookings": 0,
           "marketing": 0,
@@ -2370,7 +2414,7 @@
         }
       ],
       "display": {
-        "projected": 88,
+        "projected": 90,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -5687,7 +5731,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-18T14:00:31.792386-08:00",
+    "generated_at": "2026-11-18T14:14:04.423212-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 14,
