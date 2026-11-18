@@ -44,17 +44,17 @@ Each candidate must have a lead, a valid scheduled start, a creation time in the
 
 The title is matched case-insensitively using the ordered `title_rules` in `rules.json`:
 
-1. The first matching active title-map rule assigns `Lane 2`, except a rule owned by Pearl Sathekge assigns `Social DMs`.
+1. The first matching active title-map rule assigns `Social DMs` when the rule explicitly specifies that bucket or credits Pearl Sathekge. Other mapped rules assign `Lane 2`. Vendingpreneurs Solstice – Next Steps has an explicit Social DMs mapping. Its setter attribution is Unassigned.
 2. A rule with `retired_at_exclusive` is skipped when the meeting's creation time is at or after that timestamp.
 3. If no roster rule matches, the Pearl fallback can assign `Social DMs` only when a contact's UTM source is in `pearl_accepted_utm_sources` and the title matches a `pearl_source_title_patterns` entry.
 4. After those two checks, follow-up titles (`FOLLOWUP`) and non-booking titles (`NON_BOOKING`) are excluded from fallback classification. Otherwise, titles matching a `new_call_patterns` entry assign `Marketing`, unless the Close meeting creator is in `excluded_callers` or `setter_only_callers`.
 5. Cancellation-prefixed titles are excluded by the separate cancellation test above. The exact regular expressions are constants in `build.py` and the approved mappings/pattern lists are in `rules.json`.
 
-The title map takes precedence over the Pearl source fallback and Marketing patterns. Pearl Social DMs are their own booking bucket; they are not included in Lane 2. The title's setter/map determines the booking bucket. Lead source is resolved separately under section 5.
+The title map takes precedence over the Pearl source fallback and Marketing patterns. Social DMs have their own booking bucket. Lead source is resolved separately under section 5.
 
 For a rule with `required_setter`, the builder compares it case-insensitively to the lead's Setter Name custom field. `setter_user_id` is retained as roster provenance but is not a title-match condition. The runtime uses the checked-in title map; it does not fetch a roster file during report generation.
 
-The current map has 47 ordered title rules. None is flagged `historical`; the William Nowak `vending consult call` rule has an exclusive retirement timestamp of October 14, 2026 at 12:00 AM Pacific. The older historical cutoff in `rules.json` therefore does not exclude any current title rule.
+The William Nowak `vending consult call` rule has an exclusive retirement timestamp of October 14, 2026 at 12:00 AM Pacific.
 
 Cancellation removes a candidate and excludes it from the repeat clock if **any** of these is true:
 

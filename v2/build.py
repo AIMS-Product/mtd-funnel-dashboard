@@ -281,6 +281,12 @@ def contact_utm(contacts: list[dict[str, Any]]) -> tuple[str, str]:
     return campaign or "Unattributed", content or "Unattributed"
 
 
+def title_rule_bucket(rule: dict[str, Any]) -> str:
+    if rule.get("bucket") == "Social DMs" or rule.get("setter_name") == RULES["candidate_policy"]["social_dm_setter"]:
+        return "Social DMs"
+    return "Lane 2"
+
+
 def title_bucket(meeting: dict[str, Any], lead: dict[str, Any]) -> tuple[str, str | None, str | None]:
     title = str(meeting.get("title") or "")
     created_at = parse_time(meeting.get("date_created"))
@@ -293,8 +299,7 @@ def title_bucket(meeting: dict[str, Any], lead: dict[str, Any]) -> tuple[str, st
             required = rule.get("required_setter")
             if required and normalized(required) != normalized(lead.get("setter_name")):
                 continue
-            lane_bucket = "Social DMs" if rule.get("setter_name") == RULES["candidate_policy"]["social_dm_setter"] else "Lane 2"
-            return lane_bucket, rule.get("setter_name"), rule.get("key")
+            return title_rule_bucket(rule), rule.get("setter_name"), rule.get("key")
     contact_sources = {
         (custom(contact, RULES["contact_utm_fields"]["source"]) or "").casefold()
         for contact in lead.get("contacts", [])
@@ -323,7 +328,7 @@ def preliminary_bucket(meeting: dict[str, Any]) -> str:
         if rule.get("historical") and created and cutoff and created >= cutoff:
             continue
         if re.search(rule["pattern"], title, re.I):
-            return "Social DMs" if rule.get("setter_name") == RULES["candidate_policy"]["social_dm_setter"] else "Lane 2"
+            return title_rule_bucket(rule)
     if any(re.search(pattern, title, re.I) for pattern in RULES.get("pearl_source_title_patterns", [])):
         return "Social DMs"
     if FOLLOWUP.search(title) or NON_BOOKING.search(title) or CANCEL_TITLE.search(title):
@@ -554,7 +559,8 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
             "booked_at": booked_at.isoformat(), "booked_date_pt": booked_at.astimezone(PACIFIC).date().isoformat(),
             "starts_at": starts_at.isoformat(), "scheduled_date_pt": starts_at.astimezone(PACIFIC).date().isoformat(),
             "status": status, "outcome": outcome or "No outcome", "bucket": bucket,
-            "setter": setter or "Marketing", "rule": rule or "", "channel": channel, "source_basis": source_basis,
+            "setter": setter or ("Marketing" if bucket == "Marketing" else "Unassigned"),
+            "rule": rule or "", "channel": channel, "source_basis": source_basis,
             "attribution_status": attribution_status, "attribution_reason": attribution_reason,
             "utm_campaign": campaign, "utm_content": content,
             "close_url": f"https://app.close.com/lead/{lead_id}/",

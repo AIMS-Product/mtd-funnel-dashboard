@@ -1,5 +1,5 @@
 {
-  "version": "booked_calls.v2.11-jennifer-elevate-20261116",
+  "version": "booked_calls.v2.12-solstice-social-dms-20261118",
   "timezone": "America/Los_Angeles",
   "repeat_days": 30,
   "repeat_boundary": "A new qualifying credit is eligible only when scheduled-start time is strictly more than 720 elapsed hours after the prior non-canceled meeting.",
@@ -404,6 +404,15 @@
       "pattern": "Vendingpreneurs\\s+Waypoint\\s+-\\s+Next\\s+Steps",
       "setter_name": "Christine Ocalan",
       "setter_user_id": "user_APTYZNwFartZw4wP6nqyXw7R0mbQBwQoUxvjWNiahfV",
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "vendingpreneurs_solstice_next_steps_booked",
+      "pattern": "Vendingpreneurs\\s+Solstice\\s+-\\s+Next\\s+Steps\\b",
+      "bucket": "Social DMs",
+      "setter_name": null,
+      "setter_user_id": null,
       "required_setter": null,
       "historical": false
     },

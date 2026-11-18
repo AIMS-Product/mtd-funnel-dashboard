@@ -30,6 +30,16 @@ class TitleRepeatAlignmentTests(unittest.TestCase):
         for title in ('Vendingpreneurs Accelerate - Next Steps', 'Vendingpreneurs Venture - Next Steps'):
             self.assertEqual(build.title_bucket({'title': title}, {})[0], '')
 
+    def test_social_dm_titles_preserve_setter_attribution(self):
+        for title, setter in (
+            ('Vendingpreneurs Next Steps Session', 'Pearl Sathekge'),
+            ('Vendingpreneurs Solstice - Next Steps with Test Prospect and Test Closer', None),
+        ):
+            with self.subTest(title=title):
+                meeting = {'title': title}
+                self.assertEqual(build.preliminary_bucket(meeting), 'Social DMs')
+                self.assertEqual(build.title_bucket(meeting, {})[:2], ('Social DMs', setter))
+
     def rows(self, setter='Naria Torres', created='2026-11-02T15:00:00Z'):
         rule = next(rule for rule in build.RULES['title_rules'] if rule['setter_name'] == setter and not rule.get('retired_at_exclusive'))
         first = dict(id='first', lead_id='lead', date_created=created,
@@ -115,6 +125,10 @@ class TitleRepeatAlignmentTests(unittest.TestCase):
                          date_created='2026-11-12T16:00:00Z', starts_at='2026-11-13T16:00:00Z',
                          status='completed', outcome_id='completed')
                     for i, phrase in enumerate(titles.values())]
+        meetings.append(dict(id='solstice', lead_id='lead_solstice', user_id='user_closer',
+                             title='Vendingpreneurs Solstice - Next Steps with Test Prospect',
+                             date_created='2026-11-14T16:00:00Z', starts_at='2026-11-19T16:00:00Z',
+                             status='upcoming'))
         leads = {meeting['lead_id']: {'id': meeting['lead_id'], 'display_name': 'Test Prospect',
                  f'custom.{build.LEAD_OWNER_FIELD}': 'user_setter',
                  f'custom.{build.RULES["lead_fields"]["offer"]}': 'Vendingpreneurs (VP)',
@@ -147,12 +161,15 @@ class TitleRepeatAlignmentTests(unittest.TestCase):
         with patch.object(build, 'fetch_created_leads', return_value=[]), patch.object(build, 'fetch_won_opportunities', return_value=[]):
             raw = build.build_dataset(reader, reader.cutoff, date(2026, 11, 1))
             scheduled = scheduled_dataset(reader)
-        self.assertEqual({row['setter'] for row in raw['rows']}, set(titles))
+        self.assertEqual({row['setter'] for row in raw['rows']}, set(titles) | {'Unassigned'})
         self.assertEqual(raw['totals']['lane2'], 4)
+        self.assertEqual(raw['totals']['social_dms'], 1)
+        self.assertEqual(len(scheduled['rows']), 4)
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / 'source.json'
             path.write_text(json.dumps(raw))
             data = apply_occurred_mtd(public_data(path), occurred_dataset(scheduled), scheduled)
+        self.assertEqual((data['totals']['bookings'], data['totals']['social_dms']), (5, 1))
         data['pipeline'] = {'counts': dict.fromkeys(ACTIVE_CLOSERS, 0)}
         rows = report_rows(data, date(2026, 11, 1), date(2026, 11, 15),
                            source_label='synthetic', source_hash='synthetic', generated_at=reader.cutoff)
