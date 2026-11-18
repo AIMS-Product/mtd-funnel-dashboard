@@ -3,8 +3,8 @@
   "setters": [
     {
       "value": "Marketing",
-      "bookings": 99,
-      "marketing": 99,
+      "bookings": 100,
+      "marketing": 100,
       "lane2": 0,
       "social_dms": 0,
       "showed": 51,
@@ -26,9 +26,9 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 41,
+      "bookings": 42,
       "marketing": 0,
-      "lane2": 41,
+      "lane2": 42,
       "social_dms": 0,
       "showed": 22,
       "qualified": 18,
@@ -95,9 +95,9 @@
     },
     {
       "value": "Adam Linn",
-      "bookings": 15,
+      "bookings": 14,
       "marketing": 0,
-      "lane2": 15,
+      "lane2": 14,
       "social_dms": 0,
       "showed": 4,
       "qualified": 2,
@@ -301,29 +301,6 @@
       "unresolved_calls": 0
     },
     {
-      "value": "Jennifer Murray",
-      "bookings": 4,
-      "marketing": 0,
-      "lane2": 4,
-      "social_dms": 0,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "0.0%",
-        "qualified": "0.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "0.0%"
-      },
-      "scheduled_calls": 3,
-      "occurred_calls": 3,
-      "no_shows": 3,
-      "unresolved_calls": 0
-    },
-    {
       "value": "Claude Shany Toussaint",
       "bookings": 3,
       "marketing": 0,
@@ -367,6 +344,29 @@
       "scheduled_calls": 2,
       "occurred_calls": 2,
       "no_shows": 2,
+      "unresolved_calls": 0
+    },
+    {
+      "value": "Jennifer Murray",
+      "bookings": 3,
+      "marketing": 0,
+      "lane2": 3,
+      "social_dms": 0,
+      "showed": 0,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "0.0%",
+        "qualified": "0.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "0.0%"
+      },
+      "scheduled_calls": 3,
+      "occurred_calls": 3,
+      "no_shows": 3,
       "unresolved_calls": 0
     },
     {
@@ -580,9 +580,9 @@
   "team": [
     {
       "value": "Christian Hartwell",
-      "bookings": 54,
+      "bookings": 53,
       "marketing": 18,
-      "lane2": 35,
+      "lane2": 34,
       "social_dms": 1,
       "showed": 26,
       "qualified": 21,
@@ -672,8 +672,8 @@
     },
     {
       "value": "Scott Seymour",
-      "bookings": 42,
-      "marketing": 8,
+      "bookings": 43,
+      "marketing": 9,
       "lane2": 32,
       "social_dms": 2,
       "showed": 19,
@@ -786,8 +786,8 @@
       "unresolved_calls": 2
     }
   ],
-  "generated_at": "2026-11-17T17:30:19.177513-08:00",
-  "source_cutoff": "2026-11-17T17:30:19.177513-08:00",
+  "generated_at": "2026-11-17T17:45:17.279567-08:00",
+  "source_cutoff": "2026-11-17T17:45:17.279567-08:00",
   "vendhub_arr": 28789.0,
   "progress": {
     "day": 17,
@@ -819,14 +819,14 @@
   "rules_version": "booked_calls.v2.11-jennifer-elevate-20261116",
   "booking_scope": "vp-appointments.v2",
   "counted_meetings": 294,
-  "excluded_repeat_candidates": 23,
-  "attribution_reviewed_at": "2026-11-17T17:30:19.177513-08:00",
+  "excluded_repeat_candidates": 24,
+  "attribution_reviewed_at": "2026-11-17T17:45:17.279567-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 2297,
+    "leads_created": 2299,
     "bookings": 294,
-    "marketing": 99,
-    "lane2": 187,
+    "marketing": 100,
+    "lane2": 186,
     "social_dms": 8,
     "showed": 140,
     "qualified": 90,
@@ -848,10 +848,10 @@
   "channels": [
     {
       "channel": "Internal Webinar",
-      "leads_created": 2027,
-      "bookings": 102,
+      "leads_created": 2028,
+      "bookings": 101,
       "marketing": 31,
-      "lane2": 71,
+      "lane2": 70,
       "social_dms": 0,
       "showed": 40,
       "qualified": 20,
@@ -1159,29 +1159,6 @@
           "unresolved_calls": 0
         },
         {
-          "value": "aug11",
-          "bookings": 2,
-          "marketing": 0,
-          "lane2": 2,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 1,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "100.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "100.0%"
-          },
-          "scheduled_calls": 1,
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "feb24_end_cta",
           "bookings": 2,
           "marketing": 0,
@@ -1318,6 +1295,29 @@
           "occurred_calls": 0,
           "no_shows": 0,
           "unresolved_calls": 1
+        },
+        {
+          "value": "aug11",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 1,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "100.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "100.0%"
+          },
+          "scheduled_calls": 1,
+          "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
         },
         {
           "value": "aug25",
@@ -1798,27 +1798,6 @@
           "unresolved_calls": 0
         },
         {
-          "value": "Jennifer Murray",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
-          },
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "Katie Meloche",
           "bookings": 1,
           "marketing": 0,
@@ -1862,9 +1841,9 @@
         }
       ],
       "display": {
-        "projected": 180,
+        "projected": 178,
         "goal": 70,
-        "goal_pct": 146,
+        "goal_pct": 144,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -4068,9 +4047,9 @@
     },
     {
       "channel": "Website",
-      "leads_created": 6,
-      "bookings": 14,
-      "marketing": 5,
+      "leads_created": 7,
+      "bookings": 15,
+      "marketing": 6,
       "lane2": 9,
       "social_dms": 0,
       "showed": 6,
@@ -4081,8 +4060,8 @@
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 8,
-          "marketing": 3,
+          "bookings": 9,
+          "marketing": 4,
           "lane2": 5,
           "social_dms": 0,
           "showed": 4,
@@ -4240,8 +4219,8 @@
       "setters": [
         {
           "value": "Marketing",
-          "bookings": 5,
-          "marketing": 5,
+          "bookings": 6,
+          "marketing": 6,
           "lane2": 0,
           "social_dms": 0,
           "showed": 2,
@@ -4366,9 +4345,9 @@
         }
       ],
       "display": {
-        "projected": 25,
+        "projected": 26,
         "goal": 100,
-        "goal_pct": 14,
+        "goal_pct": 15,
         "pace": "pace-behind"
       },
       "formats": {
@@ -4387,9 +4366,9 @@
     {
       "channel": "Meta Ads",
       "leads_created": 1,
-      "bookings": 12,
+      "bookings": 11,
       "marketing": 1,
-      "lane2": 11,
+      "lane2": 10,
       "social_dms": 0,
       "showed": 4,
       "qualified": 3,
@@ -4513,29 +4492,6 @@
           "unresolved_calls": 1
         },
         {
-          "value": "retargeting-lost-crm",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "—"
-          },
-          "scheduled_calls": 0,
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "adset-120250400565610740",
           "bookings": 0,
           "marketing": 0,
@@ -4625,27 +4581,6 @@
           "unresolved_calls": 0
         },
         {
-          "value": "Adam Linn",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 1,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
-          },
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        },
-        {
           "value": "Marketing",
           "bookings": 1,
           "marketing": 1,
@@ -4689,9 +4624,9 @@
         }
       ],
       "display": {
-        "projected": 21,
+        "projected": 19,
         "goal": 44,
-        "goal_pct": 27,
+        "goal_pct": 25,
         "pace": "pace-behind"
       },
       "formats": {
@@ -4710,9 +4645,9 @@
     {
       "channel": "LTF - In-House",
       "leads_created": 0,
-      "bookings": 4,
+      "bookings": 5,
       "marketing": 0,
-      "lane2": 4,
+      "lane2": 5,
       "social_dms": 0,
       "showed": 3,
       "qualified": 1,
@@ -4745,9 +4680,9 @@
         },
         {
           "value": "wescale",
-          "bookings": 1,
+          "bookings": 2,
           "marketing": 0,
-          "lane2": 1,
+          "lane2": 2,
           "social_dms": 0,
           "showed": 1,
           "qualified": 0,
@@ -4792,9 +4727,9 @@
       "setters": [
         {
           "value": "Vince Bartolini",
-          "bookings": 3,
+          "bookings": 4,
           "marketing": 0,
-          "lane2": 3,
+          "lane2": 4,
           "social_dms": 0,
           "showed": 2,
           "qualified": 1,
@@ -4855,7 +4790,7 @@
         }
       ],
       "display": {
-        "projected": 7,
+        "projected": 9,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -5723,7 +5658,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-17T17:30:19.177513-08:00",
+    "generated_at": "2026-11-17T17:45:17.279567-08:00",
     "counts": {
       "Christian Hartwell": 32,
       "Scott Seymour": 13,
@@ -5731,7 +5666,7 @@
       "Eric Piccione": 6,
       "Joe Vaughan": 0,
       "Shreya Bechra": 0,
-      "Luke Herman": 8,
+      "Luke Herman": 7,
       "Ariella Irvine": 16,
       "Oscar Pugh": 0,
       "Joe Dysert": 6
