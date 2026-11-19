@@ -26,9 +26,9 @@
     },
     {
       "value": "Vince Bartolini",
-      "bookings": 55,
+      "bookings": 56,
       "marketing": 0,
-      "lane2": 55,
+      "lane2": 56,
       "social_dms": 0,
       "showed": 24,
       "qualified": 20,
@@ -741,9 +741,9 @@
     },
     {
       "value": "Joe Dysert",
-      "bookings": 17,
+      "bookings": 18,
       "marketing": 3,
-      "lane2": 14,
+      "lane2": 15,
       "social_dms": 0,
       "showed": 9,
       "qualified": 7,
@@ -809,8 +809,8 @@
       "unresolved_calls": 3
     }
   ],
-  "generated_at": "2026-11-19T11:30:22.438084-08:00",
-  "source_cutoff": "2026-11-19T11:30:22.438084-08:00",
+  "generated_at": "2026-11-19T11:45:19.976731-08:00",
+  "source_cutoff": "2026-11-19T11:45:19.976731-08:00",
   "vendhub_arr": 31189.0,
   "progress": {
     "day": 19,
@@ -841,15 +841,15 @@
   "period": "2026-11-01 through 2026-11-19 PT",
   "rules_version": "booked_calls.v2.12-solstice-social-dms-20261118",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 341,
+  "counted_meetings": 342,
   "excluded_repeat_candidates": 34,
-  "attribution_reviewed_at": "2026-11-19T11:30:22.438084-08:00",
+  "attribution_reviewed_at": "2026-11-19T11:45:19.976731-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
-    "leads_created": 2313,
-    "bookings": 341,
+    "leads_created": 2314,
+    "bookings": 342,
     "marketing": 109,
-    "lane2": 219,
+    "lane2": 220,
     "social_dms": 13,
     "showed": 154,
     "qualified": 97,
@@ -2815,7 +2815,7 @@
     },
     {
       "channel": "YouTube",
-      "leads_created": 60,
+      "leads_created": 61,
       "bookings": 39,
       "marketing": 20,
       "lane2": 19,
@@ -4605,9 +4605,9 @@
     {
       "channel": "Meta Ads",
       "leads_created": 1,
-      "bookings": 13,
+      "bookings": 14,
       "marketing": 1,
-      "lane2": 12,
+      "lane2": 13,
       "social_dms": 0,
       "showed": 5,
       "qualified": 4,
@@ -4682,6 +4682,29 @@
           "scheduled_calls": 1,
           "occurred_calls": 1,
           "no_shows": 1,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "6/22 Call Booking Campaign",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
           "unresolved_calls": 0
         },
         {
@@ -4779,9 +4802,9 @@
       "setters": [
         {
           "value": "Vince Bartolini",
-          "bookings": 6,
+          "bookings": 7,
           "marketing": 0,
-          "lane2": 6,
+          "lane2": 7,
           "social_dms": 0,
           "showed": 1,
           "qualified": 2,
@@ -4905,9 +4928,9 @@
         }
       ],
       "display": {
-        "projected": 21,
+        "projected": 22,
         "goal": 44,
-        "goal_pct": 30,
+        "goal_pct": 32,
         "pace": "pace-behind"
       },
       "formats": {
@@ -5756,7 +5779,7 @@
     }
   ],
   "goal_percentages": {
-    "bookings": 27,
+    "bookings": 28,
     "revenue": 16
   },
   "arr_display": {
@@ -5779,7 +5802,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-19T11:30:22.438084-08:00",
+    "generated_at": "2026-11-19T11:45:19.976731-08:00",
     "counts": {
       "Christian Hartwell": 32,
       "Scott Seymour": 14,
