@@ -19,10 +19,10 @@
         "average": "—",
         "qualified_occurred": "38.5%"
       },
-      "scheduled_calls": 105,
+      "scheduled_calls": 106,
       "occurred_calls": 78,
       "no_shows": 22,
-      "unresolved_calls": 27
+      "unresolved_calls": 28
     },
     {
       "value": "Vince Bartolini",
@@ -42,10 +42,10 @@
         "average": "$7,310",
         "qualified_occurred": "57.6%"
       },
-      "scheduled_calls": 38,
+      "scheduled_calls": 40,
       "occurred_calls": 33,
       "no_shows": 10,
-      "unresolved_calls": 5
+      "unresolved_calls": 7
     },
     {
       "value": "Rob Maxfield",
@@ -118,9 +118,9 @@
     },
     {
       "value": "Brad Savage",
-      "bookings": 14,
+      "bookings": 15,
       "marketing": 0,
-      "lane2": 14,
+      "lane2": 15,
       "social_dms": 0,
       "showed": 7,
       "qualified": 2,
@@ -387,8 +387,31 @@
         "average": "—",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 0,
+      "scheduled_calls": 1,
       "occurred_calls": 0,
+      "no_shows": 0,
+      "unresolved_calls": 1
+    },
+    {
+      "value": "Unassigned",
+      "bookings": 3,
+      "marketing": 0,
+      "lane2": 0,
+      "social_dms": 3,
+      "showed": 1,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "100.0%",
+        "qualified": "0.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "0.0%"
+      },
+      "scheduled_calls": 1,
+      "occurred_calls": 1,
       "no_shows": 0,
       "unresolved_calls": 0
     },
@@ -414,29 +437,6 @@
       "occurred_calls": 2,
       "no_shows": 1,
       "unresolved_calls": 0
-    },
-    {
-      "value": "Unassigned",
-      "bookings": 2,
-      "marketing": 0,
-      "lane2": 0,
-      "social_dms": 2,
-      "showed": 0,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "—",
-        "qualified": "—",
-        "close": "—",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "—"
-      },
-      "scheduled_calls": 1,
-      "occurred_calls": 0,
-      "no_shows": 0,
-      "unresolved_calls": 1
     },
     {
       "value": "Christine Ocalan",
@@ -607,20 +607,20 @@
       "marketing": 21,
       "lane2": 41,
       "social_dms": 3,
-      "showed": 28,
+      "showed": 29,
       "qualified": 21,
       "closed_won": 4,
       "revenue": 23388.0,
       "formats": {
-        "show": "70.0%",
-        "qualified": "52.5%",
-        "close": "10.0%",
+        "show": "70.7%",
+        "qualified": "51.2%",
+        "close": "9.8%",
         "revenue": "$23,388",
         "average": "$5,847",
-        "qualified_occurred": "52.5%"
+        "qualified_occurred": "51.2%"
       },
-      "scheduled_calls": 44,
-      "occurred_calls": 40,
+      "scheduled_calls": 45,
+      "occurred_calls": 41,
       "no_shows": 12,
       "unresolved_calls": 4
     },
@@ -642,17 +642,17 @@
         "average": "$10,347",
         "qualified_occurred": "35.7%"
       },
-      "scheduled_calls": 48,
+      "scheduled_calls": 49,
       "occurred_calls": 42,
       "no_shows": 13,
-      "unresolved_calls": 6
+      "unresolved_calls": 7
     },
     {
       "value": "Ariella Irvine",
-      "bookings": 56,
+      "bookings": 58,
       "marketing": 9,
-      "lane2": 46,
-      "social_dms": 1,
+      "lane2": 47,
+      "social_dms": 2,
       "showed": 23,
       "qualified": 9,
       "closed_won": 2,
@@ -711,10 +711,10 @@
         "average": "$7,497",
         "qualified_occurred": "52.9%"
       },
-      "scheduled_calls": 39,
+      "scheduled_calls": 40,
       "occurred_calls": 34,
       "no_shows": 12,
-      "unresolved_calls": 5
+      "unresolved_calls": 6
     },
     {
       "value": "Joe Vaughan",
@@ -757,10 +757,10 @@
         "average": "$5,998",
         "qualified_occurred": "63.6%"
       },
-      "scheduled_calls": 12,
+      "scheduled_calls": 13,
       "occurred_calls": 11,
       "no_shows": 2,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Shreya Bechra",
@@ -809,8 +809,8 @@
       "unresolved_calls": 3
     }
   ],
-  "generated_at": "2026-11-19T09:45:18.029985-08:00",
-  "source_cutoff": "2026-11-19T09:45:18.029985-08:00",
+  "generated_at": "2026-11-19T10:00:24.551305-08:00",
+  "source_cutoff": "2026-11-19T10:00:24.551305-08:00",
   "vendhub_arr": 29989.0,
   "progress": {
     "day": 19,
@@ -841,32 +841,32 @@
   "period": "2026-11-01 through 2026-11-19 PT",
   "rules_version": "booked_calls.v2.12-solstice-social-dms-20261118",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 333,
+  "counted_meetings": 335,
   "excluded_repeat_candidates": 33,
-  "attribution_reviewed_at": "2026-11-19T09:45:18.029985-08:00",
+  "attribution_reviewed_at": "2026-11-19T10:00:24.551305-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2313,
-    "bookings": 333,
+    "bookings": 335,
     "marketing": 109,
-    "lane2": 212,
-    "social_dms": 12,
-    "showed": 150,
+    "lane2": 213,
+    "social_dms": 13,
+    "showed": 151,
     "qualified": 95,
     "closed_won": 16,
     "revenue": 114007.0,
     "formats": {
-      "show": "65.8%",
-      "qualified": "41.7%",
+      "show": "65.9%",
+      "qualified": "41.5%",
       "close": "7.0%",
       "revenue": "$114,007",
       "average": "$7,125",
-      "qualified_occurred": "41.7%"
+      "qualified_occurred": "41.5%"
     },
-    "scheduled_calls": 282,
-    "occurred_calls": 228,
+    "scheduled_calls": 286,
+    "occurred_calls": 229,
     "no_shows": 78,
-    "unresolved_calls": 54
+    "unresolved_calls": 57
   },
   "channels": [
     {
@@ -1245,10 +1245,10 @@
             "average": "—",
             "qualified_occurred": "—"
           },
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "june30_end_cta",
@@ -1792,7 +1792,7 @@
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 0,
+          "scheduled_calls": 1,
           "formats": {
             "show": "—",
             "qualified": "—",
@@ -1801,7 +1801,7 @@
           },
           "occurred_calls": 0,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "Tara Hall",
@@ -1923,10 +1923,10 @@
         "average": "$9,164",
         "qualified_occurred": "25.3%"
       },
-      "scheduled_calls": 95,
+      "scheduled_calls": 96,
       "occurred_calls": 79,
       "no_shows": 36,
-      "unresolved_calls": 16
+      "unresolved_calls": 17
     },
     {
       "channel": "Unknown (Needs Review)",
@@ -1935,7 +1935,7 @@
       "marketing": 6,
       "lane2": 49,
       "social_dms": 1,
-      "showed": 29,
+      "showed": 30,
       "qualified": 20,
       "closed_won": 1,
       "revenue": 5997.0,
@@ -1947,20 +1947,20 @@
           "marketing": 4,
           "lane2": 49,
           "social_dms": 1,
-          "showed": 26,
+          "showed": 27,
           "qualified": 19,
           "closed_won": 1,
           "revenue": 5997.0,
           "formats": {
-            "show": "60.5%",
-            "qualified": "44.2%",
+            "show": "61.4%",
+            "qualified": "43.2%",
             "close": "2.3%",
             "revenue": "$5,997",
             "average": "$5,997",
-            "qualified_occurred": "44.2%"
+            "qualified_occurred": "43.2%"
           },
-          "scheduled_calls": 50,
-          "occurred_calls": 43,
+          "scheduled_calls": 51,
+          "occurred_calls": 44,
           "no_shows": 17,
           "unresolved_calls": 7
         },
@@ -2067,7 +2067,7 @@
           "qualified": 3,
           "closed_won": 1,
           "revenue": 5997.0,
-          "scheduled_calls": 8,
+          "scheduled_calls": 9,
           "formats": {
             "show": "71.4%",
             "qualified": "42.9%",
@@ -2076,7 +2076,7 @@
           },
           "occurred_calls": 7,
           "no_shows": 2,
-          "unresolved_calls": 1
+          "unresolved_calls": 2
         },
         {
           "value": "Adam Linn",
@@ -2336,20 +2336,20 @@
           "marketing": 0,
           "lane2": 0,
           "social_dms": 1,
-          "showed": 0,
+          "showed": 1,
           "qualified": 0,
           "closed_won": 0,
           "revenue": 0,
           "scheduled_calls": 1,
           "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
+            "show": "100.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "qualified_occurred": "0.0%"
           },
-          "occurred_calls": 0,
+          "occurred_calls": 1,
           "no_shows": 0,
-          "unresolved_calls": 1
+          "unresolved_calls": 0
         },
         {
           "value": "Brad Savage",
@@ -2443,24 +2443,24 @@
         "pace": ""
       },
       "formats": {
-        "show": "61.7%",
-        "qualified": "42.6%",
+        "show": "62.5%",
+        "qualified": "41.7%",
         "close": "2.1%",
         "revenue": "$5,997",
         "average": "$5,997",
-        "qualified_occurred": "42.6%"
+        "qualified_occurred": "41.7%"
       },
-      "scheduled_calls": 54,
-      "occurred_calls": 47,
+      "scheduled_calls": 55,
+      "occurred_calls": 48,
       "no_shows": 18,
       "unresolved_calls": 7
     },
     {
       "channel": "Google Ads",
       "leads_created": 91,
-      "bookings": 40,
+      "bookings": 41,
       "marketing": 28,
-      "lane2": 12,
+      "lane2": 13,
       "social_dms": 0,
       "showed": 18,
       "qualified": 14,
@@ -2493,9 +2493,9 @@
         },
         {
           "value": "23805931083",
-          "bookings": 16,
+          "bookings": 17,
           "marketing": 10,
-          "lane2": 6,
+          "lane2": 7,
           "social_dms": 0,
           "showed": 5,
           "qualified": 3,
@@ -2509,10 +2509,10 @@
             "average": "$4,498",
             "qualified_occurred": "33.3%"
           },
-          "scheduled_calls": 13,
+          "scheduled_calls": 14,
           "occurred_calls": 9,
           "no_shows": 4,
-          "unresolved_calls": 4
+          "unresolved_calls": 5
         },
         {
           "value": "24410703799",
@@ -2614,7 +2614,7 @@
           "qualified": 10,
           "closed_won": 0,
           "revenue": 0,
-          "scheduled_calls": 28,
+          "scheduled_calls": 29,
           "formats": {
             "show": "72.2%",
             "qualified": "55.6%",
@@ -2623,13 +2623,13 @@
           },
           "occurred_calls": 18,
           "no_shows": 5,
-          "unresolved_calls": 10
+          "unresolved_calls": 11
         },
         {
           "value": "Brad Savage",
-          "bookings": 3,
+          "bookings": 4,
           "marketing": 0,
-          "lane2": 3,
+          "lane2": 4,
           "social_dms": 0,
           "showed": 2,
           "qualified": 1,
@@ -2795,7 +2795,7 @@
         }
       ],
       "display": {
-        "projected": 63,
+        "projected": 65,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -2808,10 +2808,10 @@
         "average": "$5,577",
         "qualified_occurred": "56.0%"
       },
-      "scheduled_calls": 35,
+      "scheduled_calls": 36,
       "occurred_calls": 25,
       "no_shows": 7,
-      "unresolved_calls": 10
+      "unresolved_calls": 11
     },
     {
       "channel": "YouTube",
@@ -3771,10 +3771,10 @@
     {
       "channel": "Instagram",
       "leads_created": 19,
-      "bookings": 26,
+      "bookings": 27,
       "marketing": 2,
       "lane2": 13,
-      "social_dms": 11,
+      "social_dms": 12,
       "showed": 9,
       "qualified": 8,
       "closed_won": 1,
@@ -3783,10 +3783,10 @@
       "drilldowns": [
         {
           "value": "mh-ig-bio",
-          "bookings": 9,
+          "bookings": 10,
           "marketing": 0,
           "lane2": 1,
-          "social_dms": 8,
+          "social_dms": 9,
           "showed": 1,
           "qualified": 1,
           "closed_won": 0,
@@ -3822,10 +3822,10 @@
             "average": "$10,347",
             "qualified_occurred": "100.0%"
           },
-          "scheduled_calls": 2,
+          "scheduled_calls": 3,
           "occurred_calls": 2,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "book-call",
@@ -4043,7 +4043,7 @@
           "qualified": 3,
           "closed_won": 1,
           "revenue": 10347.0,
-          "scheduled_calls": 3,
+          "scheduled_calls": 4,
           "formats": {
             "show": "100.0%",
             "qualified": "100.0%",
@@ -4052,7 +4052,7 @@
           },
           "occurred_calls": 3,
           "no_shows": 0,
-          "unresolved_calls": 0
+          "unresolved_calls": 1
         },
         {
           "value": "Naria Torres",
@@ -4118,6 +4118,27 @@
           "unresolved_calls": 1
         },
         {
+          "value": "Unassigned",
+          "bookings": 2,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 2,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "Adam Linn",
           "bookings": 1,
           "marketing": 0,
@@ -4179,31 +4200,10 @@
           "occurred_calls": 1,
           "no_shows": 0,
           "unresolved_calls": 0
-        },
-        {
-          "value": "Unassigned",
-          "bookings": 1,
-          "marketing": 0,
-          "lane2": 0,
-          "social_dms": 1,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 0,
-          "formats": {
-            "show": "—",
-            "qualified": "—",
-            "close": "—",
-            "qualified_occurred": "—"
-          },
-          "occurred_calls": 0,
-          "no_shows": 0,
-          "unresolved_calls": 0
         }
       ],
       "display": {
-        "projected": 41,
+        "projected": 43,
         "goal": 300,
         "goal_pct": 9,
         "pace": "pace-behind"
@@ -4216,10 +4216,10 @@
         "average": "$10,347",
         "qualified_occurred": "66.7%"
       },
-      "scheduled_calls": 17,
+      "scheduled_calls": 18,
       "occurred_calls": 12,
       "no_shows": 3,
-      "unresolved_calls": 5
+      "unresolved_calls": 6
     },
     {
       "channel": "Website",
@@ -5716,7 +5716,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-19T09:45:18.029985-08:00",
+    "generated_at": "2026-11-19T10:00:24.551305-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 14,
