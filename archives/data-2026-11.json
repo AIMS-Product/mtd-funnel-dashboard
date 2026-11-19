@@ -2,7 +2,7 @@
   "month_key": "2026-11",
   "month_label": "November 2026",
   "grand": {
-    "leads_created": 2396,
+    "leads_created": 2395,
     "booked": 187,
     "showed": 102,
     "qualified": 70,
@@ -11,7 +11,7 @@
   },
   "groups": {
     "LEAD SOURCES": {
-      "leads_created": 2181,
+      "leads_created": 2180,
       "booked": 181,
       "showed": 97,
       "qualified": 66,
@@ -28,6 +28,18 @@
     }
   },
   "funnels": {
+    "YouTube": {
+      "leads_created": 18,
+      "booked": 14,
+      "book_pct": 77.8,
+      "showed": 11,
+      "show_pct": 78.6,
+      "qualified": 7,
+      "qual_pct": 63.6,
+      "closed": 0,
+      "cw_pct": 0.0,
+      "revenue": 0.0
+    },
     "Reactivation Scrapers": {
       "leads_created": 33,
       "booked": 107,
@@ -39,6 +51,18 @@
       "closed": 9,
       "cw_pct": 8.4,
       "revenue": 62125.0
+    },
+    "Website": {
+      "leads_created": 7,
+      "booked": 3,
+      "book_pct": 42.9,
+      "showed": 1,
+      "show_pct": 33.3,
+      "qualified": 1,
+      "qual_pct": 100.0,
+      "closed": 1,
+      "cw_pct": 33.3,
+      "revenue": 9000.0
     },
     "Google Ads": {
       "leads_created": 85,
@@ -63,18 +87,6 @@
       "closed": 1,
       "cw_pct": 3.4,
       "revenue": 8997.0
-    },
-    "YouTube": {
-      "leads_created": 19,
-      "booked": 14,
-      "book_pct": 73.7,
-      "showed": 11,
-      "show_pct": 78.6,
-      "qualified": 7,
-      "qual_pct": 63.6,
-      "closed": 0,
-      "cw_pct": 0.0,
-      "revenue": 0.0
     },
     "Linkedin": {
       "leads_created": 4,
@@ -111,18 +123,6 @@
       "closed": 0,
       "cw_pct": 0.0,
       "revenue": 0.0
-    },
-    "Website": {
-      "leads_created": 7,
-      "booked": 3,
-      "book_pct": 42.9,
-      "showed": 1,
-      "show_pct": 33.3,
-      "qualified": 1,
-      "qual_pct": 100.0,
-      "closed": 1,
-      "cw_pct": 33.3,
-      "revenue": 9000.0
     },
     "Anthony IG": {
       "leads_created": 1,
