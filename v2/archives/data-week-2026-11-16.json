@@ -35,23 +35,23 @@
       "closed_won": 0,
       "revenue": 0,
       "formats": {
-        "show": "72.2%",
-        "qualified": "16.7%",
+        "show": "68.4%",
+        "qualified": "15.8%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "16.7%"
+        "qualified_occurred": "15.8%"
       },
       "scheduled_calls": 25,
-      "occurred_calls": 18,
-      "no_shows": 5,
-      "unresolved_calls": 7
+      "occurred_calls": 19,
+      "no_shows": 6,
+      "unresolved_calls": 6
     },
     {
       "value": "Rob Maxfield",
-      "bookings": 10,
+      "bookings": 11,
       "marketing": 0,
-      "lane2": 10,
+      "lane2": 11,
       "social_dms": 0,
       "showed": 1,
       "qualified": 1,
@@ -465,9 +465,9 @@
   "team": [
     {
       "value": "Christian Hartwell",
-      "bookings": 27,
+      "bookings": 28,
       "marketing": 8,
-      "lane2": 16,
+      "lane2": 17,
       "social_dms": 3,
       "showed": 8,
       "qualified": 3,
@@ -574,9 +574,9 @@
         "qualified_occurred": "0.0%"
       },
       "scheduled_calls": 3,
-      "occurred_calls": 1,
-      "no_shows": 1,
-      "unresolved_calls": 2
+      "occurred_calls": 2,
+      "no_shows": 2,
+      "unresolved_calls": 1
     },
     {
       "value": "Eric Piccione",
@@ -648,8 +648,8 @@
       "unresolved_calls": 3
     }
   ],
-  "generated_at": "2026-11-19T12:15:15.811500-08:00",
-  "source_cutoff": "2026-11-19T12:15:15.811500-08:00",
+  "generated_at": "2026-11-19T12:30:20.734760-08:00",
+  "source_cutoff": "2026-11-19T12:30:20.734760-08:00",
   "vendhub_arr": 5398.0,
   "progress": {
     "day": 19,
@@ -680,32 +680,32 @@
   "period": "2026-11-16 through 2026-11-19 PT",
   "rules_version": "booked_calls.v2.12-solstice-social-dms-20261118",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 95,
+  "counted_meetings": 96,
   "excluded_repeat_candidates": 15,
-  "attribution_reviewed_at": "2026-11-19T12:15:15.811500-08:00",
+  "attribution_reviewed_at": "2026-11-19T12:30:20.734760-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 220,
-    "bookings": 95,
+    "bookings": 96,
     "marketing": 19,
-    "lane2": 68,
+    "lane2": 69,
     "social_dms": 8,
     "showed": 34,
     "qualified": 17,
     "closed_won": 3,
     "revenue": 22341.0,
     "formats": {
-      "show": "70.8%",
-      "qualified": "35.4%",
-      "close": "6.2%",
+      "show": "69.4%",
+      "qualified": "34.7%",
+      "close": "6.1%",
       "revenue": "$22,341",
       "average": "$7,447",
-      "qualified_occurred": "35.4%"
+      "qualified_occurred": "34.7%"
     },
     "scheduled_calls": 68,
-    "occurred_calls": 48,
-    "no_shows": 14,
-    "unresolved_calls": 20
+    "occurred_calls": 49,
+    "no_shows": 15,
+    "unresolved_calls": 19
   },
   "channels": [
     {
@@ -755,7 +755,7 @@
           "closed_won": 0,
           "revenue": 0,
           "formats": {
-            "show": "50.0%",
+            "show": "33.3%",
             "qualified": "0.0%",
             "close": "0.0%",
             "revenue": "$0",
@@ -763,9 +763,9 @@
             "qualified_occurred": "0.0%"
           },
           "scheduled_calls": 3,
-          "occurred_calls": 2,
-          "no_shows": 1,
-          "unresolved_calls": 1
+          "occurred_calls": 3,
+          "no_shows": 2,
+          "unresolved_calls": 0
         },
         {
           "value": "nov10",
@@ -1286,14 +1286,14 @@
           "revenue": 0,
           "scheduled_calls": 12,
           "formats": {
-            "show": "55.6%",
+            "show": "50.0%",
             "qualified": "0.0%",
             "close": "0.0%",
             "qualified_occurred": "0.0%"
           },
-          "occurred_calls": 9,
-          "no_shows": 4,
-          "unresolved_calls": 3
+          "occurred_calls": 10,
+          "no_shows": 5,
+          "unresolved_calls": 2
         },
         {
           "value": "Rob Maxfield",
@@ -1513,17 +1513,17 @@
         "pace": "pace-exceed"
       },
       "formats": {
-        "show": "55.6%",
-        "qualified": "5.6%",
+        "show": "52.6%",
+        "qualified": "5.3%",
         "close": "0.0%",
         "revenue": "$0",
         "average": "—",
-        "qualified_occurred": "5.6%"
+        "qualified_occurred": "5.3%"
       },
       "scheduled_calls": 28,
-      "occurred_calls": 18,
-      "no_shows": 8,
-      "unresolved_calls": 10
+      "occurred_calls": 19,
+      "no_shows": 9,
+      "unresolved_calls": 9
     },
     {
       "channel": "Unknown (Needs Review)",
@@ -3138,6 +3138,107 @@
       "unresolved_calls": 1
     },
     {
+      "channel": "Linkedin",
+      "leads_created": 1,
+      "bookings": 2,
+      "marketing": 1,
+      "lane2": 1,
+      "social_dms": 0,
+      "showed": 1,
+      "qualified": 0,
+      "closed_won": 0,
+      "revenue": 0.0,
+      "unrecoverable_booked_leads": 0,
+      "drilldowns": [
+        {
+          "value": "book-call",
+          "bookings": 2,
+          "marketing": 1,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "0.0%"
+          },
+          "scheduled_calls": 1,
+          "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        }
+      ],
+      "packages": [],
+      "setters": [
+        {
+          "value": "Marketing",
+          "bookings": 1,
+          "marketing": 1,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "100.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "qualified_occurred": "0.0%"
+          },
+          "occurred_calls": 1,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
+          "value": "Rob Maxfield",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        }
+      ],
+      "display": {
+        "projected": 3,
+        "goal": 10,
+        "goal_pct": 20,
+        "pace": "pace-behind"
+      },
+      "formats": {
+        "show": "100.0%",
+        "qualified": "0.0%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "0.0%"
+      },
+      "scheduled_calls": 1,
+      "occurred_calls": 1,
+      "no_shows": 0,
+      "unresolved_calls": 0
+    },
+    {
       "channel": "LTF - In-House",
       "leads_created": 0,
       "bookings": 1,
@@ -3214,86 +3315,6 @@
       },
       "scheduled_calls": 0,
       "occurred_calls": 0,
-      "no_shows": 0,
-      "unresolved_calls": 0
-    },
-    {
-      "channel": "Linkedin",
-      "leads_created": 1,
-      "bookings": 1,
-      "marketing": 1,
-      "lane2": 0,
-      "social_dms": 0,
-      "showed": 1,
-      "qualified": 0,
-      "closed_won": 0,
-      "revenue": 0.0,
-      "unrecoverable_booked_leads": 0,
-      "drilldowns": [
-        {
-          "value": "book-call",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "0.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "0.0%"
-          },
-          "scheduled_calls": 1,
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        }
-      ],
-      "packages": [],
-      "setters": [
-        {
-          "value": "Marketing",
-          "bookings": 1,
-          "marketing": 1,
-          "lane2": 0,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 1,
-          "formats": {
-            "show": "100.0%",
-            "qualified": "0.0%",
-            "close": "0.0%",
-            "qualified_occurred": "0.0%"
-          },
-          "occurred_calls": 1,
-          "no_shows": 0,
-          "unresolved_calls": 0
-        }
-      ],
-      "display": {
-        "projected": 2,
-        "goal": 10,
-        "goal_pct": 10,
-        "pace": "pace-behind"
-      },
-      "formats": {
-        "show": "100.0%",
-        "qualified": "0.0%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "0.0%"
-      },
-      "scheduled_calls": 1,
-      "occurred_calls": 1,
       "no_shows": 0,
       "unresolved_calls": 0
     },
@@ -3482,7 +3503,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-19T12:15:15.811500-08:00",
+    "generated_at": "2026-11-19T12:30:20.734760-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 14,
@@ -3491,9 +3512,9 @@
       "Joe Vaughan": 0,
       "Shreya Bechra": 0,
       "Luke Herman": 6,
-      "Ariella Irvine": 17,
+      "Ariella Irvine": 16,
       "Oscar Pugh": 0,
-      "Joe Dysert": 6
+      "Joe Dysert": 5
     },
     "basis": "Current open qualified leads owned within trailing 30 days; $7,000 × 20% per lead. Independent of report week."
   }
