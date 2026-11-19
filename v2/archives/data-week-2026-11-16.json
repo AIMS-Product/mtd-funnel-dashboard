@@ -71,6 +71,29 @@
       "unresolved_calls": 0
     },
     {
+      "value": "Rob Maxfield",
+      "bookings": 8,
+      "marketing": 0,
+      "lane2": 8,
+      "social_dms": 0,
+      "showed": 1,
+      "qualified": 1,
+      "closed_won": 0,
+      "revenue": 0,
+      "formats": {
+        "show": "33.3%",
+        "qualified": "33.3%",
+        "close": "0.0%",
+        "revenue": "$0",
+        "average": "—",
+        "qualified_occurred": "33.3%"
+      },
+      "scheduled_calls": 5,
+      "occurred_calls": 3,
+      "no_shows": 2,
+      "unresolved_calls": 2
+    },
+    {
       "value": "Brad Savage",
       "bookings": 7,
       "marketing": 0,
@@ -91,29 +114,6 @@
       "scheduled_calls": 5,
       "occurred_calls": 3,
       "no_shows": 0,
-      "unresolved_calls": 2
-    },
-    {
-      "value": "Rob Maxfield",
-      "bookings": 7,
-      "marketing": 0,
-      "lane2": 7,
-      "social_dms": 0,
-      "showed": 1,
-      "qualified": 1,
-      "closed_won": 0,
-      "revenue": 0,
-      "formats": {
-        "show": "33.3%",
-        "qualified": "33.3%",
-        "close": "0.0%",
-        "revenue": "$0",
-        "average": "—",
-        "qualified_occurred": "33.3%"
-      },
-      "scheduled_calls": 5,
-      "occurred_calls": 3,
-      "no_shows": 2,
       "unresolved_calls": 2
     },
     {
@@ -511,9 +511,9 @@
     },
     {
       "value": "Scott Seymour",
-      "bookings": 12,
+      "bookings": 13,
       "marketing": 4,
-      "lane2": 8,
+      "lane2": 9,
       "social_dms": 0,
       "showed": 9,
       "qualified": 7,
@@ -625,8 +625,8 @@
       "unresolved_calls": 3
     }
   ],
-  "generated_at": "2026-11-19T09:15:22.264663-08:00",
-  "source_cutoff": "2026-11-19T09:15:22.264663-08:00",
+  "generated_at": "2026-11-19T09:30:29.409789-08:00",
+  "source_cutoff": "2026-11-19T09:30:29.409789-08:00",
   "vendhub_arr": 4198.0,
   "progress": {
     "day": 19,
@@ -657,15 +657,15 @@
   "period": "2026-11-16 through 2026-11-19 PT",
   "rules_version": "booked_calls.v2.12-solstice-social-dms-20261118",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 85,
-  "excluded_repeat_candidates": 13,
-  "attribution_reviewed_at": "2026-11-19T09:15:22.264663-08:00",
+  "counted_meetings": 86,
+  "excluded_repeat_candidates": 14,
+  "attribution_reviewed_at": "2026-11-19T09:30:29.409789-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 219,
-    "bookings": 85,
+    "bookings": 86,
     "marketing": 19,
-    "lane2": 59,
+    "lane2": 60,
     "social_dms": 7,
     "showed": 28,
     "qualified": 15,
@@ -688,9 +688,9 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 179,
-      "bookings": 42,
+      "bookings": 43,
       "marketing": 10,
-      "lane2": 32,
+      "lane2": 33,
       "social_dms": 0,
       "showed": 9,
       "qualified": 2,
@@ -975,6 +975,29 @@
           "unresolved_calls": 2
         },
         {
+          "value": "june16_end_cta",
+          "bookings": 1,
+          "marketing": 0,
+          "lane2": 1,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "—"
+          },
+          "scheduled_calls": 0,
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 0
+        },
+        {
           "value": "nov17_end_cta",
           "bookings": 1,
           "marketing": 1,
@@ -1250,6 +1273,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Rob Maxfield",
+          "bookings": 5,
+          "marketing": 0,
+          "lane2": 5,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 4,
+          "formats": {
+            "show": "0.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "qualified_occurred": "0.0%"
+          },
+          "occurred_calls": 2,
+          "no_shows": 2,
+          "unresolved_calls": 2
+        },
+        {
           "value": "Ariadna Rufrancos",
           "bookings": 4,
           "marketing": 0,
@@ -1290,27 +1334,6 @@
           "occurred_calls": 1,
           "no_shows": 1,
           "unresolved_calls": 0
-        },
-        {
-          "value": "Rob Maxfield",
-          "bookings": 4,
-          "marketing": 0,
-          "lane2": 4,
-          "social_dms": 0,
-          "showed": 0,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "scheduled_calls": 4,
-          "formats": {
-            "show": "0.0%",
-            "qualified": "0.0%",
-            "close": "0.0%",
-            "qualified_occurred": "0.0%"
-          },
-          "occurred_calls": 2,
-          "no_shows": 2,
-          "unresolved_calls": 2
         },
         {
           "value": "Ariella Irvine",
@@ -1461,9 +1484,9 @@
         }
       ],
       "display": {
-        "projected": 66,
+        "projected": 68,
         "goal": 70,
-        "goal_pct": 60,
+        "goal_pct": 61,
         "pace": "pace-behind"
       },
       "formats": {
@@ -3350,7 +3373,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-19T09:15:22.264663-08:00",
+    "generated_at": "2026-11-19T09:30:29.409789-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 14,

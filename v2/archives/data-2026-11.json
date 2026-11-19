@@ -49,9 +49,9 @@
     },
     {
       "value": "Rob Maxfield",
-      "bookings": 41,
+      "bookings": 42,
       "marketing": 0,
-      "lane2": 41,
+      "lane2": 42,
       "social_dms": 0,
       "showed": 20,
       "qualified": 12,
@@ -695,9 +695,9 @@
     },
     {
       "value": "Scott Seymour",
-      "bookings": 47,
+      "bookings": 48,
       "marketing": 10,
-      "lane2": 35,
+      "lane2": 36,
       "social_dms": 2,
       "showed": 22,
       "qualified": 18,
@@ -809,8 +809,8 @@
       "unresolved_calls": 3
     }
   ],
-  "generated_at": "2026-11-19T09:15:22.264663-08:00",
-  "source_cutoff": "2026-11-19T09:15:22.264663-08:00",
+  "generated_at": "2026-11-19T09:30:29.409789-08:00",
+  "source_cutoff": "2026-11-19T09:30:29.409789-08:00",
   "vendhub_arr": 29989.0,
   "progress": {
     "day": 19,
@@ -841,15 +841,15 @@
   "period": "2026-11-01 through 2026-11-19 PT",
   "rules_version": "booked_calls.v2.12-solstice-social-dms-20261118",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 332,
-  "excluded_repeat_candidates": 32,
-  "attribution_reviewed_at": "2026-11-19T09:15:22.264663-08:00",
+  "counted_meetings": 333,
+  "excluded_repeat_candidates": 33,
+  "attribution_reviewed_at": "2026-11-19T09:30:29.409789-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2313,
-    "bookings": 332,
+    "bookings": 333,
     "marketing": 109,
-    "lane2": 211,
+    "lane2": 212,
     "social_dms": 12,
     "showed": 150,
     "qualified": 95,
@@ -872,9 +872,9 @@
     {
       "channel": "Internal Webinar",
       "leads_created": 2029,
-      "bookings": 124,
+      "bookings": 125,
       "marketing": 39,
-      "lane2": 85,
+      "lane2": 86,
       "social_dms": 0,
       "showed": 43,
       "qualified": 20,
@@ -1090,6 +1090,29 @@
           "unresolved_calls": 0
         },
         {
+          "value": "june16_end_cta",
+          "bookings": 4,
+          "marketing": 0,
+          "lane2": 4,
+          "social_dms": 0,
+          "showed": 1,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "formats": {
+            "show": "50.0%",
+            "qualified": "0.0%",
+            "close": "0.0%",
+            "revenue": "$0",
+            "average": "—",
+            "qualified_occurred": "0.0%"
+          },
+          "scheduled_calls": 3,
+          "occurred_calls": 2,
+          "no_shows": 1,
+          "unresolved_calls": 1
+        },
+        {
           "value": "Unattributed",
           "bookings": 3,
           "marketing": 1,
@@ -1157,29 +1180,6 @@
           "occurred_calls": 1,
           "no_shows": 1,
           "unresolved_calls": 2
-        },
-        {
-          "value": "june16_end_cta",
-          "bookings": 3,
-          "marketing": 0,
-          "lane2": 3,
-          "social_dms": 0,
-          "showed": 1,
-          "qualified": 0,
-          "closed_won": 0,
-          "revenue": 0,
-          "formats": {
-            "show": "50.0%",
-            "qualified": "0.0%",
-            "close": "0.0%",
-            "revenue": "$0",
-            "average": "—",
-            "qualified_occurred": "0.0%"
-          },
-          "scheduled_calls": 3,
-          "occurred_calls": 2,
-          "no_shows": 1,
-          "unresolved_calls": 1
         },
         {
           "value": "oct06",
@@ -1616,9 +1616,9 @@
         },
         {
           "value": "Rob Maxfield",
-          "bookings": 28,
+          "bookings": 29,
           "marketing": 0,
-          "lane2": 28,
+          "lane2": 29,
           "social_dms": 0,
           "showed": 10,
           "qualified": 6,
@@ -1910,9 +1910,9 @@
         }
       ],
       "display": {
-        "projected": 196,
+        "projected": 197,
         "goal": 70,
-        "goal_pct": 177,
+        "goal_pct": 179,
         "pace": "pace-exceed"
       },
       "formats": {
@@ -5716,7 +5716,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-19T09:15:22.264663-08:00",
+    "generated_at": "2026-11-19T09:30:29.409789-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 14,
