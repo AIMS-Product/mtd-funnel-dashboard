@@ -42,10 +42,10 @@
         "average": "—",
         "qualified_occurred": "13.3%"
       },
-      "scheduled_calls": 19,
+      "scheduled_calls": 20,
       "occurred_calls": 15,
       "no_shows": 5,
-      "unresolved_calls": 4
+      "unresolved_calls": 5
     },
     {
       "value": "Brad Savage",
@@ -573,10 +573,10 @@
         "average": "—",
         "qualified_occurred": "—"
       },
-      "scheduled_calls": 1,
+      "scheduled_calls": 2,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 1
+      "unresolved_calls": 2
     },
     {
       "value": "Luke Herman",
@@ -625,8 +625,8 @@
       "unresolved_calls": 3
     }
   ],
-  "generated_at": "2026-11-19T03:30:21.137319-08:00",
-  "source_cutoff": "2026-11-19T03:30:21.137319-08:00",
+  "generated_at": "2026-11-19T03:45:19.735246-08:00",
+  "source_cutoff": "2026-11-19T03:45:19.735246-08:00",
   "vendhub_arr": 4198.0,
   "progress": {
     "day": 19,
@@ -659,7 +659,7 @@
   "booking_scope": "vp-appointments.v2",
   "counted_meetings": 80,
   "excluded_repeat_candidates": 13,
-  "attribution_reviewed_at": "2026-11-19T03:30:21.137319-08:00",
+  "attribution_reviewed_at": "2026-11-19T03:45:19.735246-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 214,
@@ -679,10 +679,10 @@
       "average": "$8,172",
       "qualified_occurred": "37.5%"
     },
-    "scheduled_calls": 54,
+    "scheduled_calls": 55,
     "occurred_calls": 40,
     "no_shows": 12,
-    "unresolved_calls": 14
+    "unresolved_calls": 15
   },
   "channels": [
     {
@@ -1487,10 +1487,10 @@
             "average": "—",
             "qualified_occurred": "66.7%"
           },
-          "scheduled_calls": 11,
+          "scheduled_calls": 12,
           "occurred_calls": 9,
           "no_shows": 3,
-          "unresolved_calls": 2
+          "unresolved_calls": 3
         }
       ],
       "packages": [],
@@ -1706,6 +1706,27 @@
           "unresolved_calls": 0
         },
         {
+          "value": "Marketing",
+          "bookings": 0,
+          "marketing": 0,
+          "lane2": 0,
+          "social_dms": 0,
+          "showed": 0,
+          "qualified": 0,
+          "closed_won": 0,
+          "revenue": 0,
+          "scheduled_calls": 1,
+          "formats": {
+            "show": "—",
+            "qualified": "—",
+            "close": "—",
+            "qualified_occurred": "—"
+          },
+          "occurred_calls": 0,
+          "no_shows": 0,
+          "unresolved_calls": 1
+        },
+        {
           "value": "Naria Torres",
           "bookings": 0,
           "marketing": 0,
@@ -1741,10 +1762,10 @@
         "average": "—",
         "qualified_occurred": "66.7%"
       },
-      "scheduled_calls": 11,
+      "scheduled_calls": 12,
       "occurred_calls": 9,
       "no_shows": 3,
-      "unresolved_calls": 2
+      "unresolved_calls": 3
     },
     {
       "channel": "Instagram",
@@ -3262,7 +3283,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-19T03:30:21.137319-08:00",
+    "generated_at": "2026-11-19T03:45:19.735246-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 14,
