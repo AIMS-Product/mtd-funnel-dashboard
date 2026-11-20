@@ -49,9 +49,9 @@
     },
     {
       "value": "Rob Maxfield",
-      "bookings": 46,
+      "bookings": 47,
       "marketing": 0,
-      "lane2": 46,
+      "lane2": 47,
       "social_dms": 0,
       "showed": 21,
       "qualified": 12,
@@ -694,6 +694,29 @@
       "unresolved_calls": 10
     },
     {
+      "value": "Scott Seymour",
+      "bookings": 50,
+      "marketing": 10,
+      "lane2": 38,
+      "social_dms": 2,
+      "showed": 26,
+      "qualified": 20,
+      "closed_won": 2,
+      "revenue": 14994.0,
+      "formats": {
+        "show": "66.7%",
+        "qualified": "51.3%",
+        "close": "5.1%",
+        "revenue": "$14,994",
+        "average": "$7,497",
+        "qualified_occurred": "51.3%"
+      },
+      "scheduled_calls": 43,
+      "occurred_calls": 39,
+      "no_shows": 13,
+      "unresolved_calls": 4
+    },
+    {
       "value": "Luke Herman",
       "bookings": 49,
       "marketing": 17,
@@ -715,29 +738,6 @@
       "occurred_calls": 39,
       "no_shows": 15,
       "unresolved_calls": 9
-    },
-    {
-      "value": "Scott Seymour",
-      "bookings": 49,
-      "marketing": 10,
-      "lane2": 37,
-      "social_dms": 2,
-      "showed": 26,
-      "qualified": 20,
-      "closed_won": 2,
-      "revenue": 14994.0,
-      "formats": {
-        "show": "66.7%",
-        "qualified": "51.3%",
-        "close": "5.1%",
-        "revenue": "$14,994",
-        "average": "$7,497",
-        "qualified_occurred": "51.3%"
-      },
-      "scheduled_calls": 43,
-      "occurred_calls": 39,
-      "no_shows": 13,
-      "unresolved_calls": 4
     },
     {
       "value": "Joe Vaughan",
@@ -832,8 +832,8 @@
       "unresolved_calls": 3
     }
   ],
-  "generated_at": "2026-11-19T16:15:19.522125-08:00",
-  "source_cutoff": "2026-11-19T16:15:19.522125-08:00",
+  "generated_at": "2026-11-19T16:30:21.549370-08:00",
+  "source_cutoff": "2026-11-19T16:30:21.549370-08:00",
   "vendhub_arr": 31189.0,
   "progress": {
     "day": 19,
@@ -864,15 +864,15 @@
   "period": "2026-11-01 through 2026-11-19 PT",
   "rules_version": "booked_calls.v2.12-solstice-social-dms-20261118",
   "booking_scope": "vp-appointments.v2",
-  "counted_meetings": 354,
-  "excluded_repeat_candidates": 35,
-  "attribution_reviewed_at": "2026-11-19T16:15:19.522125-08:00",
+  "counted_meetings": 355,
+  "excluded_repeat_candidates": 36,
+  "attribution_reviewed_at": "2026-11-19T16:30:21.549370-08:00",
   "lead_source_note": "Lead source is shown separately from meeting-title booking attribution. Attribution values show aggregate counts only.",
   "totals": {
     "leads_created": 2321,
-    "bookings": 354,
+    "bookings": 355,
     "marketing": 109,
-    "lane2": 230,
+    "lane2": 231,
     "social_dms": 15,
     "showed": 163,
     "qualified": 99,
@@ -1975,21 +1975,21 @@
     {
       "channel": "Unknown (Needs Review)",
       "leads_created": 102,
-      "bookings": 61,
+      "bookings": 62,
       "marketing": 6,
-      "lane2": 54,
+      "lane2": 55,
       "social_dms": 1,
       "showed": 31,
       "qualified": 20,
       "closed_won": 1,
       "revenue": 5997.0,
-      "unrecoverable_booked_leads": 61,
+      "unrecoverable_booked_leads": 62,
       "drilldowns": [
         {
           "value": "Unattributed",
-          "bookings": 59,
+          "bookings": 60,
           "marketing": 4,
-          "lane2": 54,
+          "lane2": 55,
           "social_dms": 1,
           "showed": 28,
           "qualified": 19,
@@ -2145,9 +2145,9 @@
         },
         {
           "value": "Rob Maxfield",
-          "bookings": 10,
+          "bookings": 11,
           "marketing": 0,
-          "lane2": 10,
+          "lane2": 11,
           "social_dms": 0,
           "showed": 6,
           "qualified": 4,
@@ -2502,7 +2502,7 @@
         }
       ],
       "display": {
-        "projected": 96,
+        "projected": 98,
         "goal": null,
         "goal_pct": null,
         "pace": ""
@@ -5934,7 +5934,7 @@
   },
   "metric_version": "calls-occurred.v1",
   "pipeline": {
-    "generated_at": "2026-11-19T16:15:19.522125-08:00",
+    "generated_at": "2026-11-19T16:30:21.549370-08:00",
     "counts": {
       "Christian Hartwell": 31,
       "Scott Seymour": 17,
