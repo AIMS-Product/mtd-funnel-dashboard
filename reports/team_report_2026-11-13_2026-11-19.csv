@@ -1,0 +1,72 @@
+## REPORT METADATA
+Report,Team Performance — Closers
+Start Date,2026-11-13
+End Date,2026-11-19
+Generated At,2026-11-20T13:16:42.336404-08:00
+Source Snapshot,Fresh exact V2 read-only custom-window capture
+Source SHA-256,b2360a88c3ee1e8c274c767c476b16d6d672a0c22ef47d8df12088335ad53c1d
+Source Generated At,2026-11-20T13:16:42.336404-08:00
+Source Cutoff (exclusive),2026-11-20T00:00:00-08:00
+Timezone,America/Los_Angeles
+Booking Rules,booked_calls.v2.13-tara-qa-titles-20261119
+Closers,Christian Hartwell; Scott Seymour; Robin Perkins; Eric Piccione; Joe Vaughan; Shreya Bechra; Luke Herman; Ariella Irvine; Joe Dysert
+Booked Basis,Calls Occurred: qualifying scheduled calls with native Completed or No Show outcome
+Shown Basis,Native Completed meeting outcome; not First Call Show Up
+Qualified Basis,"Distinct qualified source/lead cohort, allocated once to the canonical appointment closer"
+Won / Revenue Basis,Included V2 opportunities by date_won and opportunity owner; independent of meeting dates
+Win Units,Opportunities; Rep/Manager may count distinct owner/lead wins instead
+MTD V2 Booked Difference,MTD V2 Total Booked is creation-date credits; compare this Booked to MTD V2 Calls Occurred
+Pipeline Snapshot,2026-11-20T13:16:42.336404-08:00
+Pipeline Basis,"Current open qualified leads owned within trailing 30 days; $7,000 × 20% per lead. Independent of report week."
+Revenue Goal Basis,"Booked (occurred calls) × 13% × $7,000"
+
+## TEAM KPI TILES
+Tile,Actual,Goal,% of Goal,Status,Numerator,Denominator,Definition
+Team Revenue Closed,"$31,838","$64,610",49%,Below Goal,4,71,"Date-won revenue; goal = occurred calls × 13% × $7,000"
+Team Pipeline,"$127,400","$840,000",15%,Below Goal,91,,"Saved trailing-30-day qualified-owner snapshot × $7,000 × 20%"
+Team Show Rate,71.8%,65.0%,111%,On / Above Goal,51,71,Native Completed ÷ Calls Occurred
+"Team Close Rate (Booked → Closed, Net)",5.6%,13.0%,43%,Below Goal,4,71,Date-won opportunities ÷ Calls Occurred
+Team Close Rate (Qualified → Closed),15.4%,20.0%,77%,Below Goal,4,26,Secondary ratio: date-won opportunities ÷ qualified leads
+
+## TEAM COUNTS
+Metric,Value
+Booked,71
+Showed,51
+Qualified,26
+Qual Rate (Qualified ÷ Booked),36.6%
+Open Qualified Opps (Closers),91
+"Pipeline (Gross, before 20%)","$637,000"
+Revenue Goal (Deals Needed),9.2
+Closed Won,4
+Avg Deal,"$7,960"
+
+## REP BREAKDOWN
+Rep,Revenue,Revenue Goal,% of Rev Goal,Closed Won,Avg Deal,Pipeline,Open Qualified Opps,Booked,Showed,Show %,Qualified,Qual %,"Close % (Booked → Closed, Net)",Close % (Qualified → Closed)
+Ariella Irvine,"$21,491","$6,370",337%,3,"$7,164","$23,800",17,7,5,71.4%,1,14.3%,42.9%,300.0%
+Robin Perkins,"$10,347","$13,650",76%,1,"$10,347","$21,000",15,15,13,86.7%,6,40.0%,6.7%,16.7%
+Scott Seymour,$0,"$17,290",0%,0,—,"$23,800",17,19,14,73.7%,11,57.9%,0.0%,0.0%
+Christian Hartwell,$0,"$13,650",0%,0,—,"$46,200",33,15,10,66.7%,3,20.0%,0.0%,0.0%
+Luke Herman,$0,"$11,830",0%,0,—,"$7,000",5,13,9,69.2%,5,38.5%,0.0%,0.0%
+Joe Dysert,$0,"$1,820",0%,0,—,"$5,600",4,2,0,0.0%,0,0.0%,0.0%,—
+Eric Piccione,$0,$0,—,0,—,$0,0,0,0,—,0,—,—,—
+Joe Vaughan,$0,$0,—,0,—,$0,0,0,0,—,0,—,—,—
+Shreya Bechra,$0,$0,—,0,—,$0,0,0,0,—,0,—,—,—
+EXCLUDED — Other / Non-Closer,$0,$0,—,0,—,,,0,0,—,0,—,—,—
+TOTAL,"$31,838","$64,610",49%,4,"$7,960","$127,400",91,71,51,71.8%,26,36.6%,5.6%,15.4%
+
+## RECONCILIATION
+Metric,This Report — Closers,MTD V2 Same Snapshot — All Owners,Other / Non-Closer,Match Including Other
+Booked / Calls Occurred,71,71,0,YES
+Showed,51,51,0,YES
+Qualified,26,26,0,YES
+Closed Won,4,4,0,YES
+Revenue,31838.0,31838.0,0,YES
+
+## DATA NOTES
+Source selection,Same saved V2 snapshot where available; no independent lead-field booking/show calculation
+Reporting windows,Compare identical start/end dates and Source Cutoff; a weekly report is not the current full MTD
+Excluded roster,Only the nine approved VP closers appear; other owners are audit-only
+Native definition differences,"Win opportunity/lead units, owner scope and trailing-30-day pipeline remain explicitly separate"
+
+## WARNINGS
+None
