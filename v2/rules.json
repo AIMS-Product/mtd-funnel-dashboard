@@ -1,5 +1,5 @@
 {
-  "version": "booked_calls.v2.13-tara-qa-titles-20261119",
+  "version": "booked_calls.v2.14-verified-lane2-titles-20261119",
   "timezone": "America/Los_Angeles",
   "repeat_days": 30,
   "repeat_boundary": "A new qualifying credit is eligible only when scheduled-start time is strictly more than 720 elapsed hours after the prior non-canceled meeting.",
@@ -429,6 +429,46 @@
       "pattern": "vendingpren[eu]+rs?\\s+elevate\\s*-?\\s*next\\s+steps",
       "setter_name": "Jennifer Murray",
       "setter_user_id": "user_cYj9jcC1UVL5XIq6pSiXC1F9Jpl7NsqHdTqKJcmfbvZ",
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "anastasiya_peralaika_vendingpreneurs_meridian_next_steps",
+      "pattern": "\\bvendingpren[eu]+rs?\\s+meridian\\s*[-–—]\\s*next\\s+steps\\b",
+      "setter_name": "Anastasiya Peralaika",
+      "setter_user_id": "user_N3LrWKc23HNmz0BDsKXIP2tUZam8mr77w1TNLMxkAPN",
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "kylee_koerner_vendingpreneurs_vista_next_steps",
+      "pattern": "\\bvendingpren[eu]+rs?\\s+vista\\s*[-–—]\\s*next\\s+steps\\b",
+      "setter_name": "Kylee Koerner",
+      "setter_user_id": "user_wLTGFwSCgdUCzDBm9cv2wZpgatjuFEilgWT82csMWLr",
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "spencer_clark_acquisition_ace_forge_next_steps",
+      "pattern": "\\bacquisition\\s+ace\\s+forge\\s*[-–—]\\s*next\\s+steps\\b",
+      "setter_name": "Spencer Clark",
+      "setter_user_id": "user_mD1nKRwg8HaiIcIqfcTD3uzD7asz7djQrDwTp15BQiW",
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "colin_mcdowell_acquisition_ace_vanguard_next_steps",
+      "pattern": "\\bacquisition\\s+ace\\s+vanguard\\s*[-–—]\\s*next\\s+steps\\b",
+      "setter_name": "Colin McDowell",
+      "setter_user_id": "user_Xw9JWWOlsEFE9pqJPjRPU1CrQcIl0dvBE5ONAwr8mkm",
+      "required_setter": null,
+      "historical": false
+    },
+    {
+      "key": "madalina_mastacaneanu_vendingpreneurs_crest_next_steps",
+      "pattern": "\\bvendingpren[eu]+rs?\\s+crest\\s*[-–—]\\s*next\\s+steps\\b",
+      "setter_name": "Madalina Mastacaneanu",
+      "setter_user_id": "user_3WVNXvhCUtJ9jI3FwwXTnvxHn0A5LeB4DDL2tEvNRgv",
       "required_setter": null,
       "historical": false
     }

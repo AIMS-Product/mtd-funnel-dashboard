@@ -38,6 +38,7 @@ ARR_BY_TIER = {"Bronze - $5,997": 1200.0, "Silver - $8,997": 2998.0, "Scale - $1
 COMPLETED_OUTCOME_ID = "outcome_032Djn4dfeNuEoCunojA7K"
 PAGE_SIZE = 100
 MEETING_FIELDS = "id,lead_id,user_id,title,date_created,starts_at,status,outcome_id,calendar_event_uids,provider_calendar_event_id,provider_calendar_type"
+REPORTING_MEETING_FIELDS = MEETING_FIELDS + ",users,activity_at,ends_at"
 MAX_WORKERS = 5
 REPEAT_WINDOW = timedelta(days=30)
 FOLLOWUP = re.compile(r"follow[-\s]?up|fallow\s+up|\bf/u\b|next\s+steps|reschedul", re.I)
@@ -105,8 +106,7 @@ class CloseReader:
             skip += len(batch)
 
     def meeting_catalog(self) -> list[dict[str, Any]]:
-        fields = MEETING_FIELDS
-        rows = self.pages("activity/meeting/", {"_fields": fields})
+        rows = self.pages("activity/meeting/", {"_fields": REPORTING_MEETING_FIELDS})
         by_id: dict[str, dict[str, Any]] = {}
         for row in rows:
             activity_id = row.get("id")
