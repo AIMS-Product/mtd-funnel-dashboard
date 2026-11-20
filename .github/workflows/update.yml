@@ -63,10 +63,8 @@ jobs:
           )
           PYEOF
 
-      - name: Run dashboard script
-        env:
-          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
-        run: python3 -u fetch_and_build.py
+      - name: Install shared live dashboard viewer
+        run: python3 v2/install_shared_entrypoint.py --output index.html
 
       - name: Commit and push updated dashboard
         run: |

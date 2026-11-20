@@ -369,12 +369,17 @@ def calendar_keys(meeting: dict[str, Any]) -> set[tuple[str, ...]]:
 
 
 def repeat_exempt(candidate: dict[str, Any], meeting: dict[str, Any], history: list[dict[str, Any]]) -> bool:
-    """Naria's temporal exception preserves the shared clock and event deduplication."""
-    policy = RULES.get("repeat_exemption")
-    if not policy or candidate.get("bucket") != "Lane 2":
+    """Apply dated setter exceptions while preserving the shared clock."""
+    if candidate.get("bucket") != "Lane 2":
         return False
     rule = next((rule for rule in RULES["title_rules"] if rule["key"] == candidate.get("rule")), None)
-    if not rule or rule.get("setter_user_id") != policy["setter_user_id"]:
+    if not rule:
+        return False
+    policy = RULES.get("repeat_exemptions", {}).get(rule.get("setter_user_id"))
+    if not policy:
+        return False
+    eligible_rules = policy.get("title_rule_keys")
+    if eligible_rules is not None and rule["key"] not in eligible_rules:
         return False
     if EXPLICIT_FOLLOWUP.search(str(meeting.get("title") or "")):
         return False
@@ -632,7 +637,10 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
         campaign, content = contact_utm(contact_cache.get(lead_id, []))
         plan = lead.get("vendhub_plan")
         accepted_won.append({
-            "lead_id": lead_id, "channel": channel, "revenue": value,
+            "lead_id": lead_id, "opportunity_id": opportunity.get("id"),
+            "lead_name": lead.get("display_name") or "Unknown lead",
+            "date_won": opportunity.get("date_won"),
+            "channel": channel, "revenue": value,
             "utm_campaign": campaign, "utm_content": content,
             "package": (tier or "Unknown") + (f" · {plan}" if plan else ""),
             "setter": lead.get("setter_name") or "Marketing / Unassigned",
@@ -673,7 +681,7 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
         "excluded_repeat_candidates": suppressions.get("within_30_day_episode", 0),
         "lead_source_note": "Lead-created total is complete. Source by channel uses the lead's Close funnel when recognized; contact UTM fallback is loaded for booked and won leads, so unbooked leads without a recognized funnel appear as Unknown (Needs Review). Booking campaign/content drilldowns use contact UTM data.",
         "attribution_reviewed_at": as_of.isoformat(),
-        "rows": counted, "channels": output_rows, "totals": totals,
+        "rows": counted, "channels": output_rows, "totals": totals, "won_rows": accepted_won,
     }
 
 

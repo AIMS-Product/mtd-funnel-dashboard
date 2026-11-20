@@ -49,12 +49,44 @@ class TitleRepeatAlignmentTests(unittest.TestCase):
                            setter=setter, rule=rule['key']) for meeting in (first, later)]
         return candidates, [first, later]
 
-    def test_only_naria_gains_temporal_repeat_credit(self):
+    def test_naria_gains_temporal_repeat_credit(self):
         candidates, meetings = self.rows()
         self.assertEqual(len(build.choose_bucket_credits(candidates, meetings, {})[0]), 2)
         for setter in ('Vince Bartolini', 'Adam Linn', 'Katie Meloche', 'Luke Eyouni', 'Christine Ocalan', 'Jennifer Murray'):
             candidates, meetings = self.rows(setter)
             self.assertEqual(len(build.choose_bucket_credits(candidates, meetings, {})[0]), 1)
+
+    def test_qa_titles_keep_the_correct_setter(self):
+        for title, setter in (
+            ('Navigation', 'Tara Hall'),
+            ('Visionary', 'Tara Hall'),
+            ('Navigator', 'Naria Torres'),
+            ('Pathway', 'Naria Torres'),
+        ):
+            with self.subTest(title=title):
+                meeting = {'title': f'Vendingpreneurs {title} - Next Steps with Test Prospect'}
+                self.assertEqual(build.title_bucket(meeting, {})[:2], ('Lane 2', setter))
+
+    def test_tara_repeat_credit_starts_at_qa_handoff_and_preserves_duplicate_checks(self):
+        for title in ('Navigation', 'Visionary'):
+            for label, created, expected in (
+                ('before handoff', '2026-11-16T07:59:59Z', 1),
+                ('from handoff', '2026-11-16T08:00:00Z', 2),
+                ('same calendar event', '2026-11-16T08:00:00Z', 1),
+                ('explicit follow-up', '2026-11-16T08:00:00Z', 1),
+            ):
+                with self.subTest(title=title, case=label):
+                    candidates, meetings = self.rows('Tara Hall')
+                    meetings[1].update(title=f'Vendingpreneurs {title} - Next Steps', date_created=created,
+                                       starts_at='2026-11-17T15:00:00Z')
+                    if label == 'same calendar event':
+                        for meeting in meetings:
+                            meeting['calendar_event_uids'] = ['same-event']
+                    if label == 'explicit follow-up':
+                        meetings[1]['title'] += ' Follow up'
+                    bucket, setter, key = build.title_bucket(meetings[1], {})
+                    candidates[1].update(bucket=bucket, setter=setter, rule=key)
+                    self.assertEqual(len(build.choose_bucket_credits(candidates, meetings, {})[0]), expected)
 
     def test_display_name_alone_cannot_grant_exception(self):
         candidates, meetings = self.rows('Vince Bartolini')

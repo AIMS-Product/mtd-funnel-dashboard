@@ -35,10 +35,13 @@ jobs:
       - name: Check V2 reporting windows and archive rollover
         run: python3 -m unittest discover -s v2 -p 'test*.py' -q
 
-      - name: Refresh V2 and maintain monthly and weekly archives
+      - name: Render saved archives; live data comes from the shared publisher
         env:
           CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
-        run: python3 -u v2/refresh.py
+        run: python3 -u v2/refresh.py --render-only
+
+      - name: Install shared live dashboard viewer
+        run: python3 v2/install_shared_entrypoint.py
 
       - name: Commit and push only public V2 reports
         shell: bash
