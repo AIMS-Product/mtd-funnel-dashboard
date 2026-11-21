@@ -471,7 +471,8 @@ def safe_money(raw: Any) -> float:
         return 0.0
 
 
-def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date: date | None = None) -> dict[str, Any]:
+def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date: date | None = None,
+                  *, certified_vp_membership=None, reviewed_booking_origins=None) -> dict[str, Any]:
     as_of = as_of or datetime.now(PACIFIC)
     if as_of.tzinfo is None:
         raise ValueError("The source cutoff must include a timezone")
@@ -581,6 +582,10 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
              for row in reader.pages("user/")}
     before_scope_count = len(counted)
     counted = vp_appointment_bookings(counted, users)
+    if certified_vp_membership is not None:
+        from certified_vp_bookings import align_bookings
+        counted = align_bookings(counted, candidate_rows, certified_vp_membership,
+                                 start=start_date, period_cutoff=as_of, reviewed_origins=reviewed_booking_origins)
 
     channel_rows: dict[str, dict[str, Any]] = defaultdict(lambda: {
         "leads_created": 0, "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0,
