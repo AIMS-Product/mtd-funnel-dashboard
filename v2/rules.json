@@ -1,5 +1,5 @@
 {
-  "version": "booked_calls.v2.14-verified-lane2-titles-20261119",
+  "version": "booked_calls.v2.15-independent-vp-owner-period",
   "timezone": "America/Los_Angeles",
   "repeat_days": 30,
   "repeat_boundary": "A new qualifying credit is eligible only when scheduled-start time is strictly more than 720 elapsed hours after the prior non-canceled meeting.",
@@ -648,6 +648,22 @@
         "tara_hall_vendingpreneurs_visionary_next_steps"
       ],
       "basis": "QA staffing handoff to Tara Hall on November 16 Pacific."
+    }
+  },
+  "reviewed_vp_replacements": [
+    {
+      "activity_id_sha256": "9c318d39b5982c21a7b0779435ed8f832b1821cc1e4ea420f92a9b3f22168c5e",
+      "previous_activity_id_sha256": "d90d4b34685a2ca04071b7eedc5970bdbca1556c3362b2341facb0d06aac0de8",
+      "handoff_sms_sha256": "2c33425bcb0736d54bac3ad4fcc764c131f24191db310cb85fe594a6cc44a864",
+      "booking_call_sha256": "27f7dd08c51073bd861a444e04de37f8df5028b3fa5d6a869455590d0baf04d9",
+      "confirmation_sms_sha256": "0d34717a22a1a882ec246731e1c140c8faa5df5b16d3db26a1c751e5ff580fda"
+    }
+  ],
+  "reviewed_vp_booking_dates": {
+    "c03c06041ac17952f76d3684bc64adb576bbab6b793178c50ab0d1a8a95e5474": {
+      "original_booked_at": "2026-11-16T21:00:07.956897Z",
+      "update_date_created": "2026-11-17T18:28:27.490000+00:00",
+      "review_sha256": "ae491e7eff7d803f97520301d3b20d306e499a94a612437f7bdad98fd9c390dd"
     }
   }
 }

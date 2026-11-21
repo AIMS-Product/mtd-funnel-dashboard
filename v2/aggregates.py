@@ -14,6 +14,7 @@ CLOSERS = (
     "Joe Vaughan", "Shreya Bechra", "Luke Herman", "Ariella Irvine",
     "Oscar Pugh", "Joe Dysert",
 )
+HISTORICAL_VP_CLOSER_END = {"Oscar Pugh": "2026-10-23"}
 OTHER_OWNER = "Other / Non-Closer"
 METRICS = ("bookings", "marketing", "lane2", "social_dms", "showed", "qualified", "closed_won", "revenue")
 
@@ -48,7 +49,12 @@ def vp_appointment_bookings(bookings, users):
         if not vp_business_line(row['business_line']):
             continue
         closer = row.get('appointment_closer')
-        if isinstance(closer, str) and users.get(closer) in VP_BOOKING_CLOSERS:
+        name = users.get(closer) if isinstance(closer, str) else None
+        retirement = HISTORICAL_VP_CLOSER_END.get(name)
+        day = row.get('booked_date_pt') or ''
+        historical_outbound = (retirement and '2026-10-01' <= day < retirement
+                               and row.get('bucket') in {'Lane 2', 'Social DMs'})
+        if name in VP_BOOKING_CLOSERS or historical_outbound:
             selected.append({**row, 'owner': closer})
     return selected
 

@@ -78,6 +78,9 @@ class ReportingReader:
     def meeting_history_for_leads(self, lead_ids):
         return [copy.deepcopy(row) for row in self.meetings if row.get('lead_id') in lead_ids]
 
+    def lead_booking_events(self, lead_id):
+        return mtd.CloseReader.lead_booking_events(self, lead_id)
+
 def annotate_qualification(rows):
     """Assign distinct-lead accounting to a stable row; eligibility stays unchanged."""
     first={}

@@ -105,6 +105,10 @@ class CloseReader:
                 raise RuntimeError(f"Empty Close page with has_more=true at {endpoint} offset {skip}")
             skip += len(batch)
 
+    def lead_booking_events(self, lead_id):
+        from vp_booking_history import close_events
+        return close_events(self, lead_id, 'lead')
+
     def meeting_catalog(self) -> list[dict[str, Any]]:
         rows = self.pages("activity/meeting/", {"_fields": REPORTING_MEETING_FIELDS})
         by_id: dict[str, dict[str, Any]] = {}
@@ -471,8 +475,8 @@ def safe_money(raw: Any) -> float:
         return 0.0
 
 
-def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date: date | None = None,
-                  *, certified_vp_membership=None, reviewed_booking_origins=None) -> dict[str, Any]:
+def build_dataset(reader: CloseReader, as_of: datetime | None = None,
+                  start_date: date | None = None) -> dict[str, Any]:
     as_of = as_of or datetime.now(PACIFIC)
     if as_of.tzinfo is None:
         raise ValueError("The source cutoff must include a timezone")
@@ -540,6 +544,8 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
             for lead_id, contacts in zip(sorted(contact_ids), pool.map(lambda lid: fetch_contacts(reader, lid), sorted(contact_ids))):
                 contact_cache[lead_id] = contacts
 
+    from vp_booking_history import active_history, reviewed_booking_date
+
     candidate_rows: list[dict[str, Any]] = []
     for meeting in candidate_meetings:
         lead_id = str(meeting["lead_id"])
@@ -551,6 +557,9 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
         booked_at = parse_time(meeting.get("date_created"))
         starts_at = parse_time(meeting.get("starts_at"))
         if not booked_at or not starts_at:
+            continue
+        booked_at = reviewed_booking_date(RULES, str(meeting['id']), booked_at, parse_time)
+        if not start_bound <= booked_at < end_bound:
             continue
         lead_for_title = {**lead, "contacts": contact_cache[lead_id]}
         bucket, setter, rule = title_bucket(meeting, lead_for_title)
@@ -580,12 +589,17 @@ def build_dataset(reader: CloseReader, as_of: datetime | None = None, start_date
     counted, suppressions = choose_bucket_credits(candidate_rows, meeting_history, outcomes)
     users = {row["id"]: " ".join(filter(None, [row.get("first_name"), row.get("last_name")]))
              for row in reader.pages("user/")}
+    policy = active_history(reader, candidate_rows, counted, users, RULES, LEAD_OWNER_FIELD, as_of, parse_time)
+    if start_date.month != as_of.month:
+        for row in candidate_rows:
+            if row['bucket'] in {'Lane 2', 'Social DMs'}:
+                row['business_line'] = policy.offer_at_booking(row)
+    meeting_history = [meeting for meeting in meeting_history
+                       if not cancellation(meeting, outcomes.get(str(meeting.get('outcome_id') or ''), ''))]
+    counted = policy.apply_reassignments(candidate_rows, meeting_history, counted, as_of,
+                                           reader=reader, rules=RULES, calendar_keys=calendar_keys)
     before_scope_count = len(counted)
     counted = vp_appointment_bookings(counted, users)
-    if certified_vp_membership is not None:
-        from certified_vp_bookings import align_bookings
-        counted = align_bookings(counted, candidate_rows, certified_vp_membership,
-                                 start=start_date, period_cutoff=as_of, reviewed_origins=reviewed_booking_origins)
 
     channel_rows: dict[str, dict[str, Any]] = defaultdict(lambda: {
         "leads_created": 0, "bookings": 0, "marketing": 0, "lane2": 0, "social_dms": 0,

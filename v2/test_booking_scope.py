@@ -112,6 +112,15 @@ class BookingScopeTests(unittest.TestCase):
                 self.assertEqual(vp_appointment_bookings([{**row, 'owner': 'user_closer', 'appointment_closer': closer}], users), [])
         self.assertEqual(row['owner'], 'user_other')
 
+    def test_historical_closer_credit_is_limited_to_the_eligible_outbound_period(self):
+        users = {'user_oscar': 'Oscar Pugh'}
+        row = {'appointment_closer': 'user_oscar', 'owner': 'current_owner',
+               'bucket': 'Lane 2', 'business_line': 'Vendingpreneurs (VP)'}
+        accepted = {**row, 'booked_date_pt': '2026-10-22'}
+        excluded = {**row, 'booked_date_pt': '2026-10-23'}
+        self.assertEqual(vp_appointment_bookings([accepted, excluded], users),
+                         [{**accepted, 'owner': 'user_oscar'}])
+
     def test_exact_vp_offer_and_blank_policy_excludes_other_offers(self):
         users = {'user_closer': 'Scott Seymour'}
         row = {'appointment_closer': 'user_closer', 'owner': None}
