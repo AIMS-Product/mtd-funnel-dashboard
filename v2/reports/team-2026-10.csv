@@ -3,15 +3,15 @@ Report,V2 Team Performance
 Period,2026-10-01 through 2026-10-31 PT
 Generated At,2026-11-01T00:00:23.412460-07:00
 Booking Rules,booked_calls.v2.7-explicit-eduardo-tara-pearl-title-map-20261031
-Booking Scope,VP closer bookings · Lead Owner
-Attribution,Booking/show/qualified by current Lead Owner; won deals/revenue by opportunity owner.
-Qualification,"Distinct qualified booked leads per owner, using the same V2 credits."
+Booking Scope,VP leads · appointment closer
+Attribution,Booking/show by appointment closer; distinct qualification credit by canonical meeting; won deals/revenue by opportunity owner.
+Qualification,"Distinct qualified source/lead cohort, allocated once to the canonical meeting's closer."
 
 ## TEAM KPI TILES
 Metric,Actual,Goal
-Closer Revenue,"$454,414","$438,620"
-Closer Show Rate,48.5%,65.0%
-Closer Close Rate / Booked,12.2%,13.0%
+Closer Revenue,"$454,414","$477,750"
+Closer Show Rate,44.6%,65.0%
+Closer Close Rate / Booked,11.2%,13.0%
 Closer Close Rate / Qualified,30.7%,20.0%
 Pipeline,"$211,400","$840,000"
 Pipeline snapshot,2026-11-01T00:00:23.412460-07:00
@@ -21,21 +21,21 @@ Pipeline basis,"Current open qualified leads owned within trailing 30 days; $7,0
 Rep,Booked,Showed,Show %,Qualified,Qual %,Closed Won,CW %,Qualified to Close %,Revenue,Avg Deal,Revenue Goal,Pipeline,Open Qualified
 Christian Hartwell,73,44,60.3%,40,90.9%,9,12.3%,22.5%,"$56,355","$6,262","$66,430","$46,200",33
 Scott Seymour,57,38,66.7%,28,73.7%,9,15.8%,32.1%,"$88,476","$9,831","$51,870","$19,600",14
-Robin Perkins,62,29,46.8%,27,93.1%,4,6.5%,14.8%,"$32,238","$8,060","$56,420","$32,200",23
+Robin Perkins,60,29,48.3%,27,93.1%,4,6.7%,14.8%,"$32,238","$8,060","$54,600","$32,200",23
 Eric Piccione,49,19,38.8%,19,100.0%,4,8.2%,21.1%,"$32,488","$8,122","$44,590","$25,200",18
-Joe Vaughan,75,32,42.7%,22,68.8%,3,4.0%,13.6%,"$26,500","$8,833","$68,250","$29,400",21
+Joe Vaughan,80,32,40.0%,22,68.8%,3,3.8%,13.6%,"$26,500","$8,833","$72,800","$29,400",21
 Shreya Bechra,7,0,0.0%,0,—,3,42.9%,—,"$19,182","$6,394","$6,370",$0,0
-Luke Herman,88,42,47.7%,39,92.9%,11,12.5%,28.2%,"$83,967","$7,633","$80,080","$25,200",18
-Ariella Irvine,56,21,37.5%,12,57.1%,7,12.5%,58.3%,"$64,482","$9,212","$50,960","$12,600",9
-Oscar Pugh,0,0,—,0,—,3,—,—,"$23,347","$7,782",$0,"$11,200",8
-Joe Dysert,15,9,60.0%,5,55.6%,6,40.0%,120.0%,"$27,379","$4,563","$13,650","$9,800",7
+Luke Herman,87,42,48.3%,39,92.9%,11,12.6%,28.2%,"$83,967","$7,633","$79,170","$25,200",18
+Ariella Irvine,78,21,26.9%,12,57.1%,7,9.0%,58.3%,"$64,482","$9,212","$70,980","$12,600",9
+Oscar Pugh,17,0,0.0%,0,—,3,17.6%,—,"$23,347","$7,782","$15,470","$11,200",8
+Joe Dysert,17,9,52.9%,5,55.6%,6,35.3%,120.0%,"$27,379","$4,563","$15,470","$9,800",7
 Other / Non-Closer,0,0,—,0,—,0,—,—,$0,—,$0,—,—
-CLOSERS TOTAL,482,234,48.5%,192,82.1%,59,12.2%,30.7%,"$454,414","$7,702","$438,620","$211,400",151
-ALL V2 TOTAL,482,234,48.5%,192,82.1%,59,12.2%,30.7%,"$454,414","$7,702","$438,620",—,—
+CLOSERS TOTAL,525,234,44.6%,192,82.1%,59,11.2%,30.7%,"$454,414","$7,702","$477,750","$211,400",151
+ALL V2 TOTAL,525,234,44.6%,192,82.1%,59,11.2%,30.7%,"$454,414","$7,702","$477,750",—,—
 
 ## RECONCILIATION
 Metric,Rep sum including Other,V2 funnel total,Match
-bookings,482,482,YES
+bookings,525,525,YES
 showed,234,234,YES
 qualified,192,192,YES
 closed_won,59,59,YES
