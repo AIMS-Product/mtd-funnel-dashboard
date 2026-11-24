@@ -144,7 +144,7 @@ def match_close_transition(meetings, at, parse_time):
     return matches[0] if len(matches) == 1 else None
 
 
-def booking_transitions(events, history, owner_field, statuses, parse_time, cutoff):
+def booking_transitions(events, history, owner_field, statuses, parse_time, cutoff, *, periods=()):
     handoffs = {}
     rescheduled = set()
     conflicts = set()
@@ -164,6 +164,31 @@ def booking_transitions(events, history, owner_field, statuses, parse_time, cuto
     for meeting in conflicts:
         handoffs.pop(meeting, None)
         rescheduled.discard(meeting)
+    # A setter can route a lead that is already in Call Booked. Use the
+    # owner revision only when it ends a verified reassignment period.
+    reassignments = {current.event_id: previous for previous, current in zip(periods, periods[1:])
+                     if previous.after and not previous.first_assignment}
+    owner_handoffs = {}
+    for created, updated, old, new, event_id, previous, current in revisions(events, owner_field, before=cutoff):
+        period = reassignments.get(event_id)
+        if period is None or not period.at < created <= updated:
+            continue
+        before, after = user_identity(old), user_identity(new)
+        status = current.get('status_label') or statuses.get(current.get('status_id'), '')
+        if before != period.after or not after or before == after or not status.endswith('Call Booked'):
+            continue
+        if field(previous, 'status_id') not in (None, field(current, 'status_id')):
+            continue
+        old_status = previous.get('status_label')
+        if old_status and old_status != status:
+            continue
+        meeting = match_close_transition(history, updated, parse_time)
+        if meeting is None or meeting in handoffs or meeting in conflicts:
+            continue
+        if meeting in owner_handoffs:
+            conflicts.add(meeting)
+        owner_handoffs[meeting] = before, after, event_id
+    handoffs.update((meeting, proof) for meeting, proof in owner_handoffs.items() if meeting not in conflicts)
     return handoffs, rescheduled
 
 
@@ -219,7 +244,7 @@ class BookingHistory:
                 continue
             history_rows = raw_by_lead[row['lead_id']]
             handoffs, rescheduled = booking_transitions(
-                records, history_rows, self.owner_field, self.statuses, self.parse_time, self.as_of)
+                records, history_rows, self.owner_field, self.statuses, self.parse_time, self.as_of, periods=periods)
             if meeting_id in rescheduled:
                 if self.verified_replacement(reader, rules, row, history_rows, selected):
                     selected[meeting_id] = row
