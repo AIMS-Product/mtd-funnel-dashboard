@@ -79,6 +79,17 @@ For each lead with at least one Lane 2 or Social DM candidate, load that lead's 
 
 Thus the clock is a rolling 30 × 24-hour clock anchored to scheduled meeting start, not a calendar-month calculation and not anchored to lead creation or meeting creation. Any non-canceled scheduled meeting for a lead with Lane 2/Social DM candidates starts or advances that clock, even when its title earns no booking credit. A canceled meeting does not start or advance it. A canceled booking loses its candidate credit; a later qualifying replacement can earn credit if eligible under this same episode rule.
 
+### Verified VP reassignment
+
+When Close verifies a new booking-setter ownership period, a prior booking
+outside that period does not suppress the first qualifying booking within it.
+A lead already in Call Booked may have an owner-only handoff immediately before
+its meeting record is created. MTD V2 accepts that handoff when the consecutive
+ownership revisions establish the setter's reassignment and the transfer to the
+appointment closer, and exactly one meeting matches the existing 60-second
+window. The same booking period still cannot earn repeat credit, and follow-up,
+reschedule, duplicate, and cancellation rules continue to apply.
+
 ### Reschedule implementation note
 
 `rules.json` contains `rescheduled_outcome_preserves_original_credit`, but `build.py` does not read that setting directly. In the implementation, a meeting with status `rescheduled` is not an active candidate status; as non-canceled history with a scheduled start, it can still advance the clock. An upcoming candidate is suppressed only when it falls within the rolling 720-hour window. There is no independent blanket rule that suppresses a replacement forever solely because its outcome says `Rescheduled`. This is the exact current code behavior and should be reconciled with the business rule before anyone reimplements that edge case differently.
